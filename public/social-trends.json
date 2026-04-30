@@ -1,56 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-30T03:52:58.912Z",
+  "lastUpdated": "2026-04-30T14:17:46.701Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16374,
+      "totalPosts": 16399,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T03:52:49.091Z"
+      "lastSeen": "2026-04-30T14:17:26.996Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16361,
+      "totalPosts": 16386,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T03:52:51.412Z"
+      "lastSeen": "2026-04-30T14:17:35.495Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16246,
+      "totalPosts": 16271,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T03:52:53.588Z"
+      "lastSeen": "2026-04-30T14:17:39.150Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16437,
+      "totalPosts": 16462,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T03:52:55.805Z"
+      "lastSeen": "2026-04-30T14:17:42.880Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16398,
+      "totalPosts": 16423,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T03:52:57.908Z"
+      "lastSeen": "2026-04-30T14:17:45.697Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "ARIA is inevitable when you work on web accessibility. Here's everything I wish someone told me when I first got started, presented at @webexpo.bsky.social in Prague on May 28th. #a11y webexpo.net/prague2026/s...",
-      "author": "ericwbailey.website",
-      "engagement": 47,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
       "author": "zacharyweeks.bsky.social",
@@ -338,6 +326,18 @@
       "author": "uua.org",
       "engagement": 28,
       "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Please share widely!\n\n#NDIS \n#AusPol\n#SaveOurNDIS \n#DisabilityRights",
+      "author": "caitlinsheahan.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Zeit für eine #Biene auf einer #Bergflockenblume zur #WildflowerHour!\n\nDie Initiative:\nwww.bienen-initiative.ch\n\nDer genaue Initiativtext:\nwww.bienen-initiative.ch/initiative \n\n#bienen #wildbienen #bees #artenschutz #artenvielfalt #biodiversität #naturschutz\n\n#AltText #Accessibility",
+      "author": "vfd.ch",
+      "engagement": 65,
+      "hashtag": "Accessibility"
     }
   ],
   "emergingTopics": [
@@ -350,12 +350,12 @@
       "count": 36
     },
     {
-      "keyword": "a11y",
+      "keyword": "disabilityjustice",
       "count": 27
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 26
+      "keyword": "a11y",
+      "count": 27
     },
     {
       "keyword": "cripthevote",
@@ -398,28 +398,28 @@
       "count": 8
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 6
-    },
-    {
-      "keyword": "refusefascism",
-      "count": 6
-    },
-    {
-      "keyword": "disability",
-      "count": 5
-    },
-    {
       "keyword": "disabilitysky",
-      "count": 5
+      "count": 7
     },
     {
       "keyword": "cripminds",
-      "count": 5
+      "count": 7
     },
     {
       "keyword": "accessibility disabilitysky",
-      "count": 5
+      "count": 7
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 7
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 7
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 6
     }
   ]
 }
