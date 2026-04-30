@@ -2,12 +2,12 @@
 title: Social Media Analytics Dashboard
 layout: page
 permalink: /analytics/social/
-generated: 2026-04-29T04:09:45.386Z
+generated: 2026-04-30T04:12:07.372Z
 ---
 
 # 🧠 Social Media Intelligence Dashboard
 
-**Last Updated:** 2026-04-29, 12:09:45 a.m.
+**Last Updated:** 2026-04-30, 12:12:07 a.m.
 
 ---
 
@@ -21,10 +21,10 @@ generated: 2026-04-29T04:09:45.386Z
 
 | Rank | Topic | Mentions | Source |
 |------|-------|----------|--------|
-| 1 | #accessibility | 44 | emerging |
-| 2 | #disabilityrights | 42 | emerging |
-| 3 | #a11y | 30 | emerging |
-| 4 | #disabilityjustice | 25 | emerging |
+| 1 | #disabilityrights | 44 | emerging |
+| 2 | #accessibility | 36 | emerging |
+| 3 | #a11y | 27 | emerging |
+| 4 | #disabilityjustice | 26 | emerging |
 | 5 | #cripthevote | 25 | emerging |
 
 ### 🔄 Content Improvements
@@ -38,7 +38,7 @@ generated: 2026-04-29T04:09:45.386Z
 
 **Type:** content-strategy
 
-**Description:** Write blog posts about: accessibility, disabilityrights, a11y
+**Description:** Write blog posts about: disabilityrights, accessibility, a11y
 
 **Expected Impact:** High visibility and engagement
 
