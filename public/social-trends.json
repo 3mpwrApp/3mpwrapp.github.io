@@ -1,56 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-29T14:22:52.035Z",
+  "lastUpdated": "2026-04-30T03:52:58.912Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16349,
+      "totalPosts": 16374,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T14:22:34.963Z"
+      "lastSeen": "2026-04-30T03:52:49.091Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16336,
+      "totalPosts": 16361,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T14:22:39.894Z"
+      "lastSeen": "2026-04-30T03:52:51.412Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16221,
+      "totalPosts": 16246,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T14:22:44.074Z"
+      "lastSeen": "2026-04-30T03:52:53.588Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16412,
+      "totalPosts": 16437,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T14:22:47.896Z"
+      "lastSeen": "2026-04-30T03:52:55.805Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16373,
+      "totalPosts": 16398,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T14:22:51.033Z"
+      "lastSeen": "2026-04-30T03:52:57.908Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Speaking of alt text & not being able to see images, here's one of my fave short guides to image description.\n\nIt's written by someone with vision impairment who uses screen readers on the daily. #accessibility #altText #a11y",
-      "author": "ryanpatrickrandall.com",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Yay, here's a free new tool for Rocket Validator I've been working on lately: a Color Contrast Checker for WCAG compliance, powered by LiveView and entirely developed using Tidewave.\n\n#ElixirLang #a11y #accessibility #color\n\nrocketvalidator.com/tools/contra...",
-      "author": "jaimeiniesta.com",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
     {
       "text": "ARIA is inevitable when you work on web accessibility. Here's everything I wish someone told me when I first got started, presented at @webexpo.bsky.social in Prague on May 28th. #a11y webexpo.net/prague2026/s...",
       "author": "ericwbailey.website",
@@ -338,16 +326,28 @@
       "author": "beatlenumber9.bsky.social",
       "engagement": 12,
       "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Please share widely!\n\n#NDIS \n#AusPol\n#SaveOurNDIS \n#DisabilityRights",
+      "author": "caitlinsheahan.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
+      "author": "uua.org",
+      "engagement": 28,
+      "hashtag": "DisabilityJustice"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 42
+      "count": 44
     },
     {
       "keyword": "accessibility",
-      "count": 41
+      "count": 36
     },
     {
       "keyword": "a11y",
@@ -390,26 +390,6 @@
       "count": 9
     },
     {
-      "keyword": "disabilitysky",
-      "count": 8
-    },
-    {
-      "keyword": "cripminds",
-      "count": 8
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 8
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 8
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
-      "count": 8
-    },
-    {
       "keyword": "disabilityrebellion",
       "count": 8
     },
@@ -418,8 +398,28 @@
       "count": 8
     },
     {
-      "keyword": "ada",
+      "keyword": "disabilityjustice nico",
       "count": 6
+    },
+    {
+      "keyword": "refusefascism",
+      "count": 6
+    },
+    {
+      "keyword": "disability",
+      "count": 5
+    },
+    {
+      "keyword": "disabilitysky",
+      "count": 5
+    },
+    {
+      "keyword": "cripminds",
+      "count": 5
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 5
     }
   ]
 }
