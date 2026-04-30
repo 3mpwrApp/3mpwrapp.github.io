@@ -1,0 +1,292 @@
+{
+  "generatedAt": "2026-04-30T20:09:11.289Z",
+  "source": "230,392 tribunal records extracted April 29, 2026",
+  "wsiat": {
+    "yearly": [
+      {
+        "year": 2016,
+        "allowed": 17,
+        "denied": 85,
+        "partial": 34,
+        "total": 3629,
+        "successRate": "0.5"
+      },
+      {
+        "year": 2017,
+        "allowed": 9,
+        "denied": 126,
+        "partial": 31,
+        "total": 4044,
+        "successRate": "0.2"
+      },
+      {
+        "year": 2018,
+        "allowed": 14,
+        "denied": 222,
+        "partial": 28,
+        "total": 4035,
+        "successRate": "0.3"
+      },
+      {
+        "year": 2019,
+        "allowed": 18,
+        "denied": 111,
+        "partial": 14,
+        "total": 2914,
+        "successRate": "0.6"
+      },
+      {
+        "year": 2020,
+        "allowed": 28,
+        "denied": 111,
+        "partial": 18,
+        "total": 2109,
+        "successRate": "1.3"
+      },
+      {
+        "year": 2021,
+        "allowed": 30,
+        "denied": 108,
+        "partial": 26,
+        "total": 2075,
+        "successRate": "1.4"
+      },
+      {
+        "year": 2022,
+        "allowed": 19,
+        "denied": 70,
+        "partial": 17,
+        "total": 2116,
+        "successRate": "0.9"
+      },
+      {
+        "year": 2023,
+        "allowed": 13,
+        "denied": 24,
+        "partial": 17,
+        "total": 1994,
+        "successRate": "0.7"
+      },
+      {
+        "year": 2024,
+        "allowed": 19,
+        "denied": 47,
+        "partial": 19,
+        "total": 1981,
+        "successRate": "1.0"
+      },
+      {
+        "year": 2025,
+        "allowed": 8,
+        "denied": 60,
+        "partial": 9,
+        "total": 1559,
+        "successRate": "0.5"
+      }
+    ],
+    "overall": {
+      "totalDecisions": 98992,
+      "allowed": 726,
+      "denied": 5314,
+      "successRate": "12.0"
+    }
+  },
+  "employers": {
+    "topCities": [
+      {
+        "city": "MISSISSAUGA",
+        "count": 8255,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 8255,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "TORONTO",
+        "count": 5230,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 5230,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "NORTH YORK",
+        "count": 3317,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 3317,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "ETOBICOKE",
+        "count": 2776,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 2776,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "BRAMPTON",
+        "count": 2699,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 2699,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "LONDON",
+        "count": 2369,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 2369,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "MARKHAM",
+        "count": 2271,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 2271,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "SCARBOROUGH",
+        "count": 2239,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 2239,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "CONCORD",
+        "count": 2098,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 2098,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "OTTAWA",
+        "count": 1802,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 1802,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "BURLINGTON",
+        "count": 1723,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 1723,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "WINDSOR",
+        "count": 1445,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 1445,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "OAKVILLE",
+        "count": 1388,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 1388,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "HAMILTON",
+        "count": 1346,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 1346,
+        "cad7": 0,
+        "ratio": "N/A"
+      },
+      {
+        "city": "WOODBRIDGE",
+        "count": 1266,
+        "rebate": 0,
+        "surcharge": null,
+        "neer": 1266,
+        "cad7": 0,
+        "ratio": "N/A"
+      }
+    ],
+    "total": {
+      "employers": 130736,
+      "neer": 91814,
+      "cad7": 38922,
+      "totalRebates": 0,
+      "totalSurcharges": null
+    }
+  },
+  "injuries": [
+    {
+      "injury": "Back/Spine",
+      "count": 15177,
+      "percentage": "15.3"
+    },
+    {
+      "injury": "Hearing Loss",
+      "count": 9650,
+      "percentage": "9.7"
+    },
+    {
+      "injury": "Chronic Pain",
+      "count": 7502,
+      "percentage": "7.6"
+    },
+    {
+      "injury": "Shoulder",
+      "count": 5567,
+      "percentage": "5.6"
+    },
+    {
+      "injury": "Repetitive Strain",
+      "count": 3901,
+      "percentage": "3.9"
+    },
+    {
+      "injury": "Knee",
+      "count": 3324,
+      "percentage": "3.4"
+    },
+    {
+      "injury": "Mental Stress",
+      "count": 1481,
+      "percentage": "1.5"
+    },
+    {
+      "injury": "Fracture",
+      "count": 1120,
+      "percentage": "1.1"
+    },
+    {
+      "injury": "Concussion",
+      "count": 452,
+      "percentage": "0.5"
+    },
+    {
+      "injury": "Amputation",
+      "count": 226,
+      "percentage": "0.2"
+    }
+  ]
+}
