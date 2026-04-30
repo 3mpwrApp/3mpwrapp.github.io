@@ -30,8 +30,11 @@
     "url": "https://canlii.ca/t/k815d",
     "citation": "2024 ONWSIAT 1400 (CanLII)",
     "usage_notes": [
+      "📊 Injury Prevalence: Shoulder Injuries cases represent 6.3% of all WSIAT appeals (6,234 cases analyzed, ranked #4 most common).",
       "This template is for impairment, arthritis, osteoarthritis, shoulder, wrist, strain, sprain cases.",
-      "Key issues addressed: Permanent impairment"
+      "Key issues addressed: Permanent impairment",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -61,7 +64,9 @@
     "url": "https://canlii.ca/t/kk315",
     "citation": "2026 ONWSIAT 62 (CanLII)",
     "usage_notes": [
-      "This template is for strain, sprain cases."
+      "This template is for strain, sprain cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -91,7 +96,9 @@
     "url": "https://canlii.ca/t/k8bqk",
     "citation": "2024 ONWSIAT 1543 (CanLII)",
     "usage_notes": [
-      "This template is for wrist, strain cases."
+      "This template is for wrist, strain cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -121,7 +128,9 @@
     "url": "https://canlii.ca/t/k7gq0",
     "citation": "2024 ONWSIAT 1266 (CanLII)",
     "usage_notes": [
-      "This template is for strain cases."
+      "This template is for strain cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -151,7 +160,9 @@
     "url": "https://canlii.ca/t/k48d3",
     "citation": "2024 ONWSIAT 299 (CanLII)",
     "usage_notes": [
-      "This template is for neck, strain cases."
+      "This template is for neck, strain cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -181,7 +192,10 @@
     "url": "https://canlii.ca/t/k2b16",
     "citation": "2023 ONWSIAT 1794 (CanLII)",
     "usage_notes": [
-      "This template is for low back, strain cases."
+      "📊 Injury Prevalence: Back/Spine Injuries cases represent 15.3% of all WSIAT appeals (15,177 cases analyzed, ranked #1 most common).",
+      "This template is for low back, strain cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   }

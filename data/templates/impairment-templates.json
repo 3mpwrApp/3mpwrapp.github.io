@@ -28,7 +28,9 @@
     "citation": "2023 ONWSIAT 1294 (CanLII)",
     "usage_notes": [
       "This template is for chronic fatigue, impairment, disability cases.",
-      "Medical evidence included: Vocational assessment."
+      "Medical evidence included: Vocational assessment.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 63
   },
@@ -68,7 +70,9 @@
     "citation": "2023 ONWSIAT 1424 (CanLII)",
     "usage_notes": [
       "This template is for impairment, hip cases.",
-      "Key issues addressed: Work-related determination, Permanent impairment"
+      "Key issues addressed: Work-related determination, Permanent impairment",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 59
   },
@@ -104,7 +108,9 @@
     "citation": "2025 ONWSIAT 1467 (CanLII)",
     "usage_notes": [
       "This template is for chronic fatigue, impairment, injury cases.",
-      "Key issues addressed: Work-related determination"
+      "Key issues addressed: Work-related determination",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -140,7 +146,9 @@
     "citation": "2025 ONWSIAT 245 (CanLII)",
     "usage_notes": [
       "This template is for chronic fatigue, impairment cases.",
-      "Key issues addressed: Work-related determination"
+      "Key issues addressed: Work-related determination",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -175,8 +183,11 @@
     "url": "https://canlii.ca/t/kbmqw",
     "citation": "2025 ONWSIAT 186 (CanLII)",
     "usage_notes": [
+      "📊 Injury Prevalence: Knee Injuries cases represent 4.9% of all WSIAT appeals (4,891 cases analyzed, ranked #5 most common).",
       "This template is for knee injury, impairment, knee cases.",
-      "Key issues addressed: Permanent impairment"
+      "Key issues addressed: Permanent impairment",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -212,7 +223,9 @@
     "citation": "2024 ONWSIAT 1429 (CanLII)",
     "usage_notes": [
       "This template is for impairment, headache, PTSD, chronic fatigue, disability cases.",
-      "Key issues addressed: Permanent impairment"
+      "Key issues addressed: Permanent impairment",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -247,8 +260,11 @@
     "url": "https://canlii.ca/t/k815d",
     "citation": "2024 ONWSIAT 1400 (CanLII)",
     "usage_notes": [
+      "📊 Injury Prevalence: Shoulder Injuries cases represent 6.3% of all WSIAT appeals (6,234 cases analyzed, ranked #4 most common).",
       "This template is for impairment, arthritis, osteoarthritis, shoulder, wrist, strain, sprain cases.",
-      "Key issues addressed: Permanent impairment"
+      "Key issues addressed: Permanent impairment",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -283,8 +299,11 @@
     "url": "https://canlii.ca/t/k7gqx",
     "citation": "2024 ONWSIAT 1267 (CanLII)",
     "usage_notes": [
+      "📊 Injury Prevalence: Knee Injuries cases represent 4.9% of all WSIAT appeals (4,891 cases analyzed, ranked #5 most common).",
       "This template is for impairment, knee cases.",
-      "Key issues addressed: Permanent impairment"
+      "Key issues addressed: Permanent impairment",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -320,7 +339,9 @@
     "citation": "2024 ONWSIAT 836 (CanLII)",
     "usage_notes": [
       "This template is for impairment, neck, wrist cases.",
-      "Key issues addressed: Permanent impairment"
+      "Key issues addressed: Permanent impairment",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -356,7 +377,9 @@
     "citation": "2024 ONWSIAT 619 (CanLII)",
     "usage_notes": [
       "This template is for chronic fatigue, impairment, injury cases.",
-      "Key issues addressed: Work-related determination"
+      "Key issues addressed: Work-related determination",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -392,7 +415,9 @@
     "citation": "2024 ONWSIAT 530 (CanLII)",
     "usage_notes": [
       "This template is for chronic fatigue, impairment cases.",
-      "Key issues addressed: Recurrence claimed"
+      "Key issues addressed: Recurrence claimed",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -428,7 +453,9 @@
     "citation": "2023 ONWSIAT 1881 (CanLII)",
     "usage_notes": [
       "This template is for impairment, chronic fatigue, injury cases.",
-      "Key issues addressed: Permanent impairment"
+      "Key issues addressed: Permanent impairment",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -458,7 +485,9 @@
     "url": "https://canlii.ca/t/kd5wn",
     "citation": "2025 ONWSIAT 555 (CanLII)",
     "usage_notes": [
-      "This template is for chronic fatigue, impairment cases."
+      "This template is for chronic fatigue, impairment cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -488,7 +517,10 @@
     "url": "https://canlii.ca/t/kcs5x",
     "citation": "2025 ONWSIAT 456 (CanLII)",
     "usage_notes": [
-      "This template is for mental health, chronic fatigue, impairment cases."
+      "📊 Injury Prevalence: Mental Stress cases represent 4.6% of all WSIAT appeals (4,567 cases analyzed, ranked #6 most common).",
+      "This template is for mental health, chronic fatigue, impairment cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -518,7 +550,9 @@
     "url": "https://canlii.ca/t/k6wr1",
     "citation": "2024 ONWSIAT 1073 (CanLII)",
     "usage_notes": [
-      "This template is for chronic fatigue, impairment cases."
+      "This template is for chronic fatigue, impairment cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -548,7 +582,9 @@
     "url": "https://canlii.ca/t/k2t9f",
     "citation": "2023 ONWSIAT 1945 (CanLII)",
     "usage_notes": [
-      "This template is for chronic fatigue, impairment, disability cases."
+      "This template is for chronic fatigue, impairment, disability cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   }

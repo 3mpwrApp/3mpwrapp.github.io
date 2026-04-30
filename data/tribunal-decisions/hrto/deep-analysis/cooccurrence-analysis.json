@@ -1,0 +1,141 @@
+{
+  "dateGenerated": "2026-04-30T19:08:35.294Z",
+  "cooccurrences": [
+    {
+      "grounds": "Disability + Reprisal",
+      "count": 7
+    },
+    {
+      "grounds": "Reprisal + Sex/Gender",
+      "count": 6
+    },
+    {
+      "grounds": "Disability + Race",
+      "count": 6
+    },
+    {
+      "grounds": "Age + Ancestry + Race",
+      "count": 4
+    },
+    {
+      "grounds": "Age + Disability",
+      "count": 4
+    },
+    {
+      "grounds": "Ancestry + Race",
+      "count": 3
+    },
+    {
+      "grounds": "Disability + Family Status + Reprisal",
+      "count": 2
+    },
+    {
+      "grounds": "Family Status + Sex/Gender",
+      "count": 2
+    },
+    {
+      "grounds": "Age + Sex/Gender",
+      "count": 2
+    },
+    {
+      "grounds": "Age + Creed/Religion + Disability + Family Status + Race + Reprisal + Sex/Gender",
+      "count": 2
+    },
+    {
+      "grounds": "Ancestry + Citizenship + Race",
+      "count": 2
+    },
+    {
+      "grounds": "Race + Sex/Gender + Sexual Orientation",
+      "count": 2
+    },
+    {
+      "grounds": "Ancestry + Citizenship + Creed/Religion + Family Status",
+      "count": 2
+    },
+    {
+      "grounds": "Gender Identity + Reprisal + Sex/Gender",
+      "count": 2
+    },
+    {
+      "grounds": "Ancestry + Race + Reprisal",
+      "count": 2
+    },
+    {
+      "grounds": "Age + Reprisal",
+      "count": 2
+    },
+    {
+      "grounds": "Age + Creed/Religion + Race",
+      "count": 2
+    },
+    {
+      "grounds": "Age + Ancestry + Race + Sex/Gender",
+      "count": 2
+    },
+    {
+      "grounds": "Age + Ancestry + Family Status + Race + Reprisal",
+      "count": 1
+    },
+    {
+      "grounds": "Age + Disability + Gender Identity",
+      "count": 1
+    },
+    {
+      "grounds": "Creed/Religion + Race",
+      "count": 1
+    },
+    {
+      "grounds": "Family Status + Reprisal",
+      "count": 1
+    },
+    {
+      "grounds": "Disability + Sex/Gender",
+      "count": 1
+    },
+    {
+      "grounds": "Race + Reprisal",
+      "count": 1
+    },
+    {
+      "grounds": "Disability + Gender Identity + Sex/Gender",
+      "count": 1
+    },
+    {
+      "grounds": "Creed/Religion + Race + Reprisal + Sex/Gender",
+      "count": 1
+    },
+    {
+      "grounds": "Age + Reprisal + Sex/Gender",
+      "count": 1
+    },
+    {
+      "grounds": "Ancestry + Race + Sex/Gender",
+      "count": 1
+    },
+    {
+      "grounds": "Age + Family Status",
+      "count": 1
+    },
+    {
+      "grounds": "Ancestry + Sex/Gender",
+      "count": 1
+    },
+    {
+      "grounds": "Creed/Religion + Family Status + Marital Status",
+      "count": 1
+    },
+    {
+      "grounds": "Citizenship + Marital Status + Race",
+      "count": 1
+    },
+    {
+      "grounds": "Ancestry + Creed/Religion + Race",
+      "count": 1
+    },
+    {
+      "grounds": "Citizenship + Race + Reprisal",
+      "count": 1
+    }
+  ]
+}

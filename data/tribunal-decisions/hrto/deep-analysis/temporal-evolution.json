@@ -1,0 +1,534 @@
+{
+  "dateGenerated": "2026-04-30T19:08:35.296Z",
+  "byYear": {
+    "2016": {
+      "total": 1389,
+      "success": 6,
+      "failure": 0,
+      "dismissal": 6,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 1306,
+          "success": 6,
+          "failure": 6
+        },
+        "Disability": {
+          "total": 25,
+          "success": 0,
+          "failure": 0
+        },
+        "Age": {
+          "total": 12,
+          "success": 0,
+          "failure": 0
+        },
+        "Gender Identity": {
+          "total": 2,
+          "success": 0,
+          "failure": 0
+        },
+        "Creed/Religion": {
+          "total": 13,
+          "success": 0,
+          "failure": 0
+        },
+        "Reprisal": {
+          "total": 14,
+          "success": 0,
+          "failure": 0
+        },
+        "Race": {
+          "total": 20,
+          "success": 0,
+          "failure": 0
+        },
+        "Family Status": {
+          "total": 5,
+          "success": 0,
+          "failure": 0
+        },
+        "Sex/Gender": {
+          "total": 19,
+          "success": 0,
+          "failure": 0
+        },
+        "Ancestry": {
+          "total": 6,
+          "success": 0,
+          "failure": 0
+        },
+        "Record of Offences": {
+          "total": 1,
+          "success": 0,
+          "failure": 0
+        },
+        "Citizenship": {
+          "total": 2,
+          "success": 0,
+          "failure": 0
+        },
+        "Sexual Orientation": {
+          "total": 1,
+          "success": 0,
+          "failure": 0
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 1317,
+          "success": 6
+        },
+        "Employment": {
+          "total": 48,
+          "success": 0
+        },
+        "Services": {
+          "total": 18,
+          "success": 0
+        },
+        "Housing": {
+          "total": 6,
+          "success": 0
+        }
+      }
+    },
+    "2017": {
+      "total": 2748,
+      "success": 9,
+      "failure": 0,
+      "dismissal": 9,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 2570,
+          "success": 9,
+          "failure": 9
+        },
+        "Disability": {
+          "total": 59,
+          "success": 0,
+          "failure": 0
+        },
+        "Reprisal": {
+          "total": 27,
+          "success": 0,
+          "failure": 0
+        },
+        "Age": {
+          "total": 24,
+          "success": 0,
+          "failure": 0
+        },
+        "Creed/Religion": {
+          "total": 23,
+          "success": 0,
+          "failure": 0
+        },
+        "Gender Identity": {
+          "total": 4,
+          "success": 0,
+          "failure": 0
+        },
+        "Race": {
+          "total": 46,
+          "success": 0,
+          "failure": 0
+        },
+        "Record of Offences": {
+          "total": 4,
+          "success": 0,
+          "failure": 0
+        },
+        "Sex/Gender": {
+          "total": 33,
+          "success": 0,
+          "failure": 0
+        },
+        "Family Status": {
+          "total": 9,
+          "success": 0,
+          "failure": 0
+        },
+        "Ancestry": {
+          "total": 13,
+          "success": 0,
+          "failure": 0
+        },
+        "Sexual Orientation": {
+          "total": 1,
+          "success": 0,
+          "failure": 0
+        },
+        "Citizenship": {
+          "total": 5,
+          "success": 0,
+          "failure": 0
+        },
+        "Marital Status": {
+          "total": 2,
+          "success": 0,
+          "failure": 0
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 2591,
+          "success": 9
+        },
+        "Employment": {
+          "total": 96,
+          "success": 0
+        },
+        "Housing": {
+          "total": 17,
+          "success": 0
+        },
+        "Services": {
+          "total": 44,
+          "success": 0
+        }
+      }
+    },
+    "2018": {
+      "total": 636,
+      "success": 8,
+      "failure": 0,
+      "dismissal": 8,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 620,
+          "success": 8,
+          "failure": 8
+        },
+        "Creed/Religion": {
+          "total": 6,
+          "success": 0,
+          "failure": 0
+        },
+        "Citizenship": {
+          "total": 1,
+          "success": 0,
+          "failure": 0
+        },
+        "Disability": {
+          "total": 4,
+          "success": 0,
+          "failure": 0
+        },
+        "Reprisal": {
+          "total": 2,
+          "success": 0,
+          "failure": 0
+        },
+        "Race": {
+          "total": 3,
+          "success": 0,
+          "failure": 0
+        },
+        "Age": {
+          "total": 2,
+          "success": 0,
+          "failure": 0
+        },
+        "Family Status": {
+          "total": 1,
+          "success": 0,
+          "failure": 0
+        },
+        "Ancestry": {
+          "total": 1,
+          "success": 0,
+          "failure": 0
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 617,
+          "success": 8
+        },
+        "Employment": {
+          "total": 10,
+          "success": 0
+        },
+        "Services": {
+          "total": 7,
+          "success": 0
+        },
+        "Housing": {
+          "total": 2,
+          "success": 0
+        }
+      }
+    },
+    "2019": {
+      "total": 863,
+      "success": 8,
+      "failure": 0,
+      "dismissal": 10,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 851,
+          "success": 8,
+          "failure": 10
+        },
+        "Age": {
+          "total": 5,
+          "success": 0,
+          "failure": 0
+        },
+        "Reprisal": {
+          "total": 3,
+          "success": 0,
+          "failure": 0
+        },
+        "Disability": {
+          "total": 4,
+          "success": 0,
+          "failure": 0
+        },
+        "Sex/Gender": {
+          "total": 1,
+          "success": 0,
+          "failure": 0
+        },
+        "Family Status": {
+          "total": 1,
+          "success": 0,
+          "failure": 0
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 846,
+          "success": 8
+        },
+        "Employment": {
+          "total": 14,
+          "success": 0
+        },
+        "Housing": {
+          "total": 1,
+          "success": 0
+        },
+        "Services": {
+          "total": 2,
+          "success": 0
+        }
+      }
+    },
+    "2020": {
+      "total": 110,
+      "success": 9,
+      "failure": 0,
+      "dismissal": 9,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 106,
+          "success": 9,
+          "failure": 9
+        },
+        "Age": {
+          "total": 4,
+          "success": 0,
+          "failure": 0
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 101,
+          "success": 9
+        },
+        "Employment": {
+          "total": 9,
+          "success": 0
+        }
+      }
+    },
+    "2021": {
+      "total": 106,
+      "success": 7,
+      "failure": 0,
+      "dismissal": 11,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 102,
+          "success": 7,
+          "failure": 11
+        },
+        "Age": {
+          "total": 4,
+          "success": 0,
+          "failure": 0
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 95,
+          "success": 7
+        },
+        "Employment": {
+          "total": 11,
+          "success": 0
+        }
+      }
+    },
+    "2022": {
+      "total": 1323,
+      "success": 7,
+      "failure": 0,
+      "dismissal": 10,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 1322,
+          "success": 7,
+          "failure": 10
+        },
+        "Age": {
+          "total": 1,
+          "success": 0,
+          "failure": 0
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 1313,
+          "success": 7
+        },
+        "Employment": {
+          "total": 10,
+          "success": 0
+        }
+      }
+    },
+    "2023": {
+      "total": 997,
+      "success": 8,
+      "failure": 0,
+      "dismissal": 9,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 995,
+          "success": 8,
+          "failure": 9
+        },
+        "Age": {
+          "total": 2,
+          "success": 0,
+          "failure": 0
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 988,
+          "success": 8
+        },
+        "Employment": {
+          "total": 9,
+          "success": 0
+        }
+      }
+    },
+    "2024": {
+      "total": 1525,
+      "success": 29,
+      "failure": 0,
+      "dismissal": 639,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 1468,
+          "success": 27,
+          "failure": 601
+        },
+        "Age": {
+          "total": 21,
+          "success": 1,
+          "failure": 16
+        },
+        "Gender Identity": {
+          "total": 17,
+          "success": 0,
+          "failure": 13
+        },
+        "Disability": {
+          "total": 13,
+          "success": 0,
+          "failure": 8
+        },
+        "Race": {
+          "total": 2,
+          "success": 0,
+          "failure": 1
+        },
+        "Creed/Religion": {
+          "total": 2,
+          "success": 1,
+          "failure": 0
+        },
+        "Sex/Gender": {
+          "total": 3,
+          "success": 0,
+          "failure": 1
+        },
+        "Family Status": {
+          "total": 1,
+          "success": 0,
+          "failure": 1
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 836,
+          "success": 21
+        },
+        "Employment": {
+          "total": 651,
+          "success": 6
+        },
+        "Services": {
+          "total": 32,
+          "success": 2
+        },
+        "Housing": {
+          "total": 5,
+          "success": 0
+        },
+        "Contracts/Vocational": {
+          "total": 1,
+          "success": 0
+        }
+      }
+    },
+    "2025": {
+      "total": 3354,
+      "success": 20,
+      "failure": 0,
+      "dismissal": 83,
+      "interim": 0,
+      "byGround": {
+        "Unknown": {
+          "total": 3354,
+          "success": 20,
+          "failure": 83
+        }
+      },
+      "bySocialArea": {
+        "Unknown": {
+          "total": 3271,
+          "success": 20
+        },
+        "Employment": {
+          "total": 83,
+          "success": 0
+        }
+      }
+    }
+  }
+}

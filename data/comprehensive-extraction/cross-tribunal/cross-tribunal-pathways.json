@@ -1,0 +1,9 @@
+{
+  "dateExtracted": "2026-04-30T19:13:31.087Z",
+  "pathways": {
+    "wsibToODSP": 0,
+    "wsibToHRTO": 0,
+    "wsiatToONSBT": 0
+  },
+  "notes": "Full linkage analysis requires case text parsing"
+}

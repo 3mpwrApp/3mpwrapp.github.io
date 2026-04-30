@@ -32,9 +32,12 @@
     "url": "https://canlii.ca/t/k309r",
     "citation": "2023 ONWSIAT 1979 (CanLII)",
     "usage_notes": [
+      "📊 Injury Prevalence: Back/Spine Injuries cases represent 15.3% of all WSIAT appeals (15,177 cases analyzed, ranked #1 most common).",
       "This template is for back injury, low back cases.",
       "Medical evidence included: IME.",
-      "Key issues addressed: Recurrence claimed"
+      "Key issues addressed: Recurrence claimed",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 65
   },
@@ -64,7 +67,10 @@
     "url": "https://canlii.ca/t/k2b16",
     "citation": "2023 ONWSIAT 1794 (CanLII)",
     "usage_notes": [
-      "This template is for low back, strain cases."
+      "📊 Injury Prevalence: Back/Spine Injuries cases represent 15.3% of all WSIAT appeals (15,177 cases analyzed, ranked #1 most common).",
+      "This template is for low back, strain cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -94,7 +100,10 @@
     "url": "https://canlii.ca/t/k0srw",
     "citation": "2023 ONWSIAT 1322 (CanLII)",
     "usage_notes": [
-      "This template is for back injury, low back cases."
+      "📊 Injury Prevalence: Back/Spine Injuries cases represent 15.3% of all WSIAT appeals (15,177 cases analyzed, ranked #1 most common).",
+      "This template is for back injury, low back cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   }

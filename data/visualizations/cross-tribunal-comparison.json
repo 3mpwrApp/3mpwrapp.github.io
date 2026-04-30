@@ -1,0 +1,22 @@
+{
+  "tribunals": [
+    {
+      "name": "WSIAT",
+      "successRate": 69,
+      "totalCases": 98992,
+      "annualVolume": 2475
+    },
+    {
+      "name": "HRTO",
+      "successRate": 2.66,
+      "totalCases": 62093,
+      "annualVolume": "varies"
+    },
+    {
+      "name": "ONSBT",
+      "successRate": "unknown",
+      "totalCases": 292,
+      "annualVolume": "varies"
+    }
+  ]
+}

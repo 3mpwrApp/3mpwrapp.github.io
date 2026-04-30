@@ -1,0 +1,187 @@
+---
+layout: default
+---
+
+<article class="guide-content">
+  <header class="guide-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="guide-description">{{ page.description }}</p>
+    {% endif %}
+    {% if page.author %}
+    <p class="guide-meta">
+      <span class="guide-author">By {{ page.author }}</span>
+      {% if page.date %}
+      <span class="guide-date"> • {{ page.date | date: "%B %d, %Y" }}</span>
+      {% endif %}
+    </p>
+    {% endif %}
+  </header>
+
+  <div class="guide-body">
+    {{ content }}
+  </div>
+
+  <footer class="guide-footer">
+    <p><a href="{{ "/guides/" | relative_url }}">← Back to All Guides</a></p>
+  </footer>
+</article>
+
+<style>
+.guide-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--bg-primary, #ffffff);
+  color: var(--text-primary, #1a1a1a);
+  line-height: 1.7;
+}
+
+.guide-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color, #e0e0e0);
+}
+
+.guide-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary, #1a1a1a);
+}
+
+.guide-description {
+  font-size: 1.25rem;
+  color: var(--text-secondary, #4a4a4a);
+  margin: 1rem 0;
+}
+
+.guide-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666666);
+  margin-top: 1rem;
+}
+
+.guide-body {
+  font-size: 1.1rem;
+}
+
+.guide-body h2 {
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary, #1a1a1a);
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+  padding-bottom: 0.5rem;
+}
+
+.guide-body h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary, #2a2a2a);
+}
+
+.guide-body ul, .guide-body ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.guide-body li {
+  margin: 0.5rem 0;
+}
+
+.guide-body blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--accent-color, #667eea);
+  background: var(--bg-secondary, #f5f5f5);
+  color: var(--text-primary, #2a2a2a);
+}
+
+.guide-body code {
+  background: var(--bg-code, #f4f4f4);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.95em;
+  color: var(--text-code, #c7254e);
+}
+
+.guide-body pre {
+  background: var(--bg-code-block, #2d2d2d);
+  color: var(--text-code-block, #f8f8f2);
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.guide-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.guide-body table th,
+.guide-body table td {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  text-align: left;
+}
+
+.guide-body table th {
+  background: var(--bg-table-header, #f5f5f5);
+  font-weight: 600;
+}
+
+.guide-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border-color, #e0e0e0);
+}
+
+.guide-footer a {
+  color: var(--link-color, #667eea);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.guide-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .guide-content {
+    background: var(--bg-primary-dark, #1a1a1a);
+    color: var(--text-primary-dark, #e0e0e0);
+  }
+  
+  .guide-header h1,
+  .guide-body h2,
+  .guide-body h3 {
+    color: var(--text-primary-dark, #e0e0e0);
+  }
+  
+  .guide-description,
+  .guide-meta {
+    color: var(--text-secondary-dark, #b0b0b0);
+  }
+  
+  .guide-body blockquote {
+    background: var(--bg-secondary-dark, #2a2a2a);
+    color: var(--text-primary-dark, #e0e0e0);
+  }
+}
+
+/* Print styles */
+@media print {
+  .guide-content {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .guide-footer {
+    display: none;
+  }
+}
+</style>

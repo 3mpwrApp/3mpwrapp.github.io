@@ -31,7 +31,9 @@
     "citation": "2025 ONWSIAT 1228 (CanLII)",
     "usage_notes": [
       "This template is for rotator cuff, tear cases.",
-      "Key issues addressed: Pre-existing condition"
+      "Key issues addressed: Pre-existing condition",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -61,7 +63,10 @@
     "url": "https://canlii.ca/t/kglt0",
     "citation": "2025 ONWSIAT 1096 (CanLII)",
     "usage_notes": [
-      "This template is for arthritis, osteoarthritis, shoulder, knee, tear cases."
+      "📊 Injury Prevalence: Shoulder Injuries cases represent 6.3% of all WSIAT appeals (6,234 cases analyzed, ranked #4 most common).",
+      "This template is for arthritis, osteoarthritis, shoulder, knee, tear cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -91,7 +96,10 @@
     "url": "https://canlii.ca/t/kfsxw",
     "citation": "2025 ONWSIAT 968 (CanLII)",
     "usage_notes": [
-      "This template is for knee, tear, chronic fatigue, injury cases."
+      "📊 Injury Prevalence: Knee Injuries cases represent 4.9% of all WSIAT appeals (4,891 cases analyzed, ranked #5 most common).",
+      "This template is for knee, tear, chronic fatigue, injury cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -121,7 +129,10 @@
     "url": "https://canlii.ca/t/kdt6k",
     "citation": "2025 ONWSIAT 718 (CanLII)",
     "usage_notes": [
-      "This template is for knee injury, knee, tear cases."
+      "📊 Injury Prevalence: Knee Injuries cases represent 4.9% of all WSIAT appeals (4,891 cases analyzed, ranked #5 most common).",
+      "This template is for knee injury, knee, tear cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -151,7 +162,9 @@
     "url": "https://canlii.ca/t/kcmsb",
     "citation": "2025 ONWSIAT 421 (CanLII)",
     "usage_notes": [
-      "This template is for rotator cuff, tear cases."
+      "This template is for rotator cuff, tear cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -181,7 +194,10 @@
     "url": "https://canlii.ca/t/kbhwk",
     "citation": "2025 ONWSIAT 147 (CanLII)",
     "usage_notes": [
-      "This template is for shoulder, tear cases."
+      "📊 Injury Prevalence: Shoulder Injuries cases represent 6.3% of all WSIAT appeals (6,234 cases analyzed, ranked #4 most common).",
+      "This template is for shoulder, tear cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -211,7 +227,10 @@
     "url": "https://canlii.ca/t/k6wr5",
     "citation": "2024 ONWSIAT 1087 (CanLII)",
     "usage_notes": [
-      "This template is for arthritis, osteoarthritis, knee, meniscus, ankle, tear cases."
+      "📊 Injury Prevalence: Knee Injuries cases represent 4.9% of all WSIAT appeals (4,891 cases analyzed, ranked #5 most common).",
+      "This template is for arthritis, osteoarthritis, knee, meniscus, ankle, tear cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   }

@@ -1,0 +1,45 @@
+# Exclude large raw data files from Cloudflare Pages deployment
+# These files are for local analysis only
+
+# Raw extraction data (too large for Cloudflare Pages 25 MiB limit)
+data/comprehensive-extraction/wsiat/wsiat-ultra-complete.json
+data/comprehensive-extraction/neer/neer-ultra-complete.json
+data/comprehensive-extraction/cad7/cad7-ultra-complete.json
+data/comprehensive-extraction/premium-rates/premium-rates-ultra-complete.json
+
+# HRTO quarterly files (already processed)
+data/comprehensive-extraction/hrto/*.xlsx
+
+# Keep aggregated statistics (small, needed for reference)
+!data/comprehensive-extraction/aggregated-statistics.json
+
+# Node modules and build artifacts
+node_modules/
+.bundle/
+vendor/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Development files
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
+# Git files
+.git/
+.gitignore
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.backup
+*.bak
+*.old

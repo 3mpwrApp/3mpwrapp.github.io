@@ -1,0 +1,104 @@
+{
+  "dateGenerated": "2026-04-30T19:08:35.288Z",
+  "totalCases": 13051,
+  "grounds": [
+    {
+      "ground": "Unknown",
+      "totalCases": 12694,
+      "successCount": 109,
+      "failureCount": 756,
+      "successRate": "0.86%"
+    },
+    {
+      "ground": "Disability",
+      "totalCases": 105,
+      "successCount": 0,
+      "failureCount": 8,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Age",
+      "totalCases": 75,
+      "successCount": 1,
+      "failureCount": 16,
+      "successRate": "1.33%"
+    },
+    {
+      "ground": "Race",
+      "totalCases": 71,
+      "successCount": 0,
+      "failureCount": 1,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Sex/Gender",
+      "totalCases": 56,
+      "successCount": 0,
+      "failureCount": 1,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Reprisal",
+      "totalCases": 46,
+      "successCount": 0,
+      "failureCount": 0,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Creed/Religion",
+      "totalCases": 44,
+      "successCount": 1,
+      "failureCount": 0,
+      "successRate": "2.27%"
+    },
+    {
+      "ground": "Gender Identity",
+      "totalCases": 23,
+      "successCount": 0,
+      "failureCount": 13,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Ancestry",
+      "totalCases": 20,
+      "successCount": 0,
+      "failureCount": 0,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Family Status",
+      "totalCases": 17,
+      "successCount": 0,
+      "failureCount": 1,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Citizenship",
+      "totalCases": 8,
+      "successCount": 0,
+      "failureCount": 0,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Record of Offences",
+      "totalCases": 5,
+      "successCount": 0,
+      "failureCount": 0,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Sexual Orientation",
+      "totalCases": 2,
+      "successCount": 0,
+      "failureCount": 0,
+      "successRate": "0.00%"
+    },
+    {
+      "ground": "Marital Status",
+      "totalCases": 2,
+      "successCount": 0,
+      "failureCount": 0,
+      "successRate": "0.00%"
+    }
+  ]
+}

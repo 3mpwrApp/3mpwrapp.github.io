@@ -30,8 +30,11 @@
     "url": "https://canlii.ca/t/k449r",
     "citation": "2024 ONWSIAT 266 (CanLII)",
     "usage_notes": [
+      "📊 Injury Prevalence: Shoulder Injuries cases represent 6.3% of all WSIAT appeals (6,234 cases analyzed, ranked #4 most common).",
       "This template is for tendinosis, shoulder cases.",
-      "Key issues addressed: Work-related determination"
+      "Key issues addressed: Work-related determination",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   }

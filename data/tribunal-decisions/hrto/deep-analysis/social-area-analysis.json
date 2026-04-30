@@ -1,0 +1,35 @@
+{
+  "dateGenerated": "2026-04-30T19:08:35.292Z",
+  "areas": [
+    {
+      "area": "Unknown",
+      "totalCases": 11975,
+      "successCount": 103,
+      "successRate": "0.86%"
+    },
+    {
+      "area": "Employment",
+      "totalCases": 941,
+      "successCount": 6,
+      "successRate": "0.64%"
+    },
+    {
+      "area": "Services",
+      "totalCases": 103,
+      "successCount": 2,
+      "successRate": "1.94%"
+    },
+    {
+      "area": "Housing",
+      "totalCases": 31,
+      "successCount": 0,
+      "successRate": "0.00%"
+    },
+    {
+      "area": "Contracts/Vocational",
+      "totalCases": 1,
+      "successCount": 0,
+      "successRate": "0.00%"
+    }
+  ]
+}

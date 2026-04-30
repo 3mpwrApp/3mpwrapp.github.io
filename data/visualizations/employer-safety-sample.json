@@ -1,0 +1,407 @@
+{
+  "note": "Full employer safety data requires complete NEER/CAD-7 processing",
+  "sampleEmployers": [
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "Prepared by:  Experience Rating",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "*Data Definitions/Notations:",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "- NEER Data as of December 31",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": " - Issue Year 2017 = Review years 2016",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "- Positive numbers denote surcharges.",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "- Negative numbers denote rebates.",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "Data Source: EIW ( Enterprise Information Warehouse)",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "WSIB Enterprise Information Warehouse as of snapshot date December 31",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "",
+      "": ""
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "Legal Name (WSIB)",
+      "": "Rebate /Surcharge Amount"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BARRIE DIRECT TRANSPORTATION INC",
+      "": "$4"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "MARK HYATT",
+      "": "($183.10)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "CRAIG MANUFACTURING LTD",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "156652 CANADA INC",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "NYCHUK LUMBER LIMITED",
+      "": "($2"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BERNT GILBERTSON ENTERPRISES LIMITED",
+      "": "$132"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BERNT GILBERTSON ENTERPRISES LIMITED",
+      "": "($2.97)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BERNT GILBERTSON ENTERPRISES LIMITED",
+      "": "($1.95)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "MAPLE AUTOMOTIVE CORPORATION",
+      "": "($3"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BRUCE PENINSULA BUILDING CENTRE LTD.",
+      "": "$1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "498503 ONTARIO INC",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LEON DEGAGNE LTD",
+      "": "30"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LEON DEGAGNE LTD",
+      "": "570"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LEON DEGAGNE LTD",
+      "": "685"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LEON DEGAGNE LTD",
+      "": "908"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LAKELAND MULTI-TRADE INC",
+      "": "($2"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LAKELAND MULTI-TRADE INC",
+      "": "$0.05"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "JEMM TRUCK AND TRAILER INC.",
+      "": "($436.80)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "JEMM TRUCK AND TRAILER INC.",
+      "": "$144.40"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "STAR ONE MOTORS INC",
+      "": "($2"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "STAR ONE MOTORS INC",
+      "": "$2"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "PIPEFLO CONTRACTING CORP",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "1469539 ONTARIO INC",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LANMARK",
+      "": "858"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LANMARK",
+      "": "861"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "MITAANJIGAMIING FIRST NATION",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "PSION INC.",
+      "": "$0.00"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "AMERESCO CANADA INC",
+      "": "958"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "CAMERON LANDSCAPING INC.",
+      "": "($710.77)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "CAMERON LANDSCAPING INC.",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "B.E. GREIN LUMBER LIMITED",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "WILLARD G HALLMAN LUMBER LTD",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BUCKLAND CUSTOMS BROKERS LIMITED",
+      "": "($172.66)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BUCKLAND CUSTOMS BROKERS LIMITED",
+      "": "($29.01)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BUCKLAND CUSTOMS BROKERS LIMITED",
+      "": "($752.79)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "SCAFOM CANADA INC.",
+      "": "($681.88)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "756795 ONTARIO LIMITED",
+      "": "($52.11)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "776507 ONTARIO INC.",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "B. & F. SHIER CONTRACTORS LIMITED",
+      "": "($637.18)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "B. & F. SHIER CONTRACTORS LIMITED",
+      "": "($36.74)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "M & R AUTOMATION CANADA INC",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "HENSON & TREGONNING LOGGING LIMITED",
+      "": "$7"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "HENSON & TREGONNING LOGGING LIMITED",
+      "": "($148.90)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "VALCOM CONSULTING GROUP INC",
+      "": "($2"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "W. F. DOMBROSKIE & SONS LOGGING CONTRACTOR LTD.",
+      "": "($4"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "W. F. DOMBROSKIE & SONS LOGGING CONTRACTOR LTD.",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LAVERN HEIDEMAN & SONS LIMITED",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LAVERN HEIDEMAN & SONS LIMITED",
+      "": "$20"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LAVERN HEIDEMAN & SONS LIMITED",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "GENIER BROS TRUCKING LIMITED",
+      "": "($6"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "GENIER BROS TRUCKING LIMITED",
+      "": "($3"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "FIRESTEEL CONTRACTORS LIMITED",
+      "": "$48"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "FIRESTEEL CONTRACTORS LIMITED",
+      "": "$2"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "W A M INDUSTRIES LTD",
+      "": "($5"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "THE PIC GROUP LTD.",
+      "": "($613.20)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "THE PIC GROUP LTD.",
+      "": "($120.02)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "THE PIC GROUP LTD.",
+      "": "$6"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LECOURS LUMBER CO. LIMITED",
+      "": "($105"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "SHUNIAH FOREST PRODUCTS LIMITED",
+      "": "$72"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "HEC CLOUTHIER & SONS INC",
+      "": "($6"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "4053265 CANADA INC.",
+      "": "830"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "THOMAS WOOD DEVELOPMENTS LTD",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "TEMBEC ENTERPRISES INC",
+      "": "($139"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "WEYERHAEUSER COMPANY LIMITED",
+      "": "($2"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "WEYERHAEUSER COMPANY LIMITED",
+      "": "($3.72)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "RESOLUTE FP CANADA INC.",
+      "": "($222"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "KENOGAMI LAKE LUMBER LTD",
+      "": "($6"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "LAWRENZO FOODS LTD.",
+      "": "($4"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "MAURICE MILLER LUMBER LIMITED",
+      "": "($396.76)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "MAURICE MILLER LUMBER LIMITED",
+      "": "($51.07)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "MAURICE MILLER LUMBER LIMITED",
+      "": "$369.38"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "MAURICE MILLER LUMBER LIMITED",
+      "": "$0.00"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "PORTER LUMBER LIMITED",
+      "": "($1"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "OXDRIFT TRACTOR SALES LTD",
+      "": "($902.48)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "OXDRIFT TRACTOR SALES LTD",
+      "": "($80.34)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "HERB SHAW AND SONS LIMITED",
+      "": "($8"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BRANT INSTORE CORPORATION",
+      "": "$42"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "MIDWAY LUMBER MILLS LIMITED",
+      "": "($459.41)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "MIDWAY LUMBER MILLS LIMITED",
+      "": "($36"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "CARSON LAKE LUMBER LTD",
+      "": "$7"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BOIS A LACHANCE LUMBER LIMITED",
+      "": "($301.40)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BOIS A LACHANCE LUMBER LIMITED",
+      "": "($9.22)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "BOIS A LACHANCE LUMBER LIMITED",
+      "": "($552.15)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "ALBERT LAROCQUE LUMBER LIMITED",
+      "": "$0.00"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "ALBERT LAROCQUE LUMBER LIMITED",
+      "": "($577.36)"
+    },
+    {
+      "2017 NEER Bulk Issue Rebate and Surcharge List": "DAPPAR INVESTMENTS INC.",
+      "": "($3"
+    }
+  ],
+  "totalNEEREmployers": 92000,
+  "totalCAD7Employers": 39000
+}

@@ -1,0 +1,29 @@
+{
+  "stages": [
+    {
+      "stage": "Registered Claims",
+      "count": 207735,
+      "rate": 100
+    },
+    {
+      "stage": "Allowed Claims",
+      "count": 66177,
+      "rate": 31.8
+    },
+    {
+      "stage": "Denied Claims",
+      "count": 141558,
+      "rate": 68.2
+    },
+    {
+      "stage": "WSIAT Appeals",
+      "count": 2475,
+      "rate": 1.75
+    },
+    {
+      "stage": "Appeal Gap",
+      "count": 139083,
+      "rate": 98.25
+    }
+  ]
+}

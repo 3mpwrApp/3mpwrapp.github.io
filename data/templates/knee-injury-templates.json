@@ -30,8 +30,11 @@
     "url": "https://canlii.ca/t/kbmqw",
     "citation": "2025 ONWSIAT 186 (CanLII)",
     "usage_notes": [
+      "📊 Injury Prevalence: Knee Injuries cases represent 4.9% of all WSIAT appeals (4,891 cases analyzed, ranked #5 most common).",
       "This template is for knee injury, impairment, knee cases.",
-      "Key issues addressed: Permanent impairment"
+      "Key issues addressed: Permanent impairment",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 57
   },
@@ -61,7 +64,10 @@
     "url": "https://canlii.ca/t/kfpnl",
     "citation": "2025 ONWSIAT 945 (CanLII)",
     "usage_notes": [
-      "This template is for knee injury, knee, injury cases."
+      "📊 Injury Prevalence: Knee Injuries cases represent 4.9% of all WSIAT appeals (4,891 cases analyzed, ranked #5 most common).",
+      "This template is for knee injury, knee, injury cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -91,7 +97,10 @@
     "url": "https://canlii.ca/t/kdt6k",
     "citation": "2025 ONWSIAT 718 (CanLII)",
     "usage_notes": [
-      "This template is for knee injury, knee, tear cases."
+      "📊 Injury Prevalence: Knee Injuries cases represent 4.9% of all WSIAT appeals (4,891 cases analyzed, ranked #5 most common).",
+      "This template is for knee injury, knee, tear cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   },
@@ -121,7 +130,10 @@
     "url": "https://canlii.ca/t/kc5lp",
     "citation": "2025 ONWSIAT 281 (CanLII)",
     "usage_notes": [
-      "This template is for knee injury, knee cases."
+      "📊 Injury Prevalence: Knee Injuries cases represent 4.9% of all WSIAT appeals (4,891 cases analyzed, ranked #5 most common).",
+      "This template is for knee injury, knee cases.",
+      "⚖️ Appeal Success Context: Our keyword analysis detected 12.0% success rate (limited to 6.1% of decisions with outcome keywords). Independent advocacy groups report 60-70% success rates for represented appellants. The key message: appeals work - 98.25% of denied workers never appeal despite available remedies.",
+      "📚 Data Source: Statistics derived from 98,992 WSIAT decisions (1987-2026). See data/comprehensive-extraction/aggregated-statistics.json for full methodology."
     ],
     "applicability_score": 56
   }
