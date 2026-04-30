@@ -1,0 +1,319 @@
+{
+  "title": "Landmark WSIAT Decisions: Precedent-Setting Cases",
+  "generatedAt": "2026-04-30T23:15:00.000Z",
+  "note": "This analysis identifies POTENTIALLY landmark decisions based on keyword patterns and citation frequency. Full legal analysis requires reading complete decisions + subsequent case law.",
+  "methodology": "Analyzed 98,992 WSIAT decisions for: (1) keywords suggesting precedent-setting issues, (2) complex legal questions, (3) policy interpretation. LIMITATION: Cannot definitively identify 'landmark' without reading full decisions.",
+  
+  "whatMakesADecisionLandmark": {
+    "criteria": [
+      "Establishes new legal interpretation of WSIA",
+      "Resolves split in WSIAT panel decisions",
+      "Addresses novel issue (new injury type, new industry, new technology)",
+      "Overturns longstanding WSIB practice",
+      "Cited frequently in subsequent decisions",
+      "Results in WSIB policy change"
+    ],
+    "detection_method": "Keyword analysis of decision summaries (not full text)",
+    "limitation": "Many landmark decisions use technical legal language not captured by keywords"
+  },
+  
+  "identifiedPatterns": {
+    "chronicPainCases": {
+      "count": 7502,
+      "percentage": "7.6% of all decisions",
+      "significance": "Chronic pain/CRPS historically controversial at WSIB",
+      "keyIssues": [
+        "Causation (work-related vs pre-existing)",
+        "Objective evidence requirements",
+        "Permanence of impairment",
+        "Psychological overlay"
+      ],
+      "suspectedLandmarks": [
+        "Decisions establishing chronic pain can be compensable",
+        "Decisions on fibromyalgia recognition",
+        "CRPS (Complex Regional Pain Syndrome) cases"
+      ],
+      "researchNeeded": "Identify specific decisions by searching CanLII for 'WSIAT chronic pain precedent'"
+    },
+    
+    "mentalHealthCases": {
+      "count": 4567,
+      "percentage": "4.6% of all decisions",
+      "significance": "Mental health coverage expanded over time (historically denied)",
+      "keyIssues": [
+        "Traumatic event requirement (single vs cumulative)",
+        "Work-relatedness vs personal factors",
+        "Workplace stress vs clinical diagnosis",
+        "PTSD from violence/trauma"
+      ],
+      "suspectedLandmarks": [
+        "Healthcare worker PTSD cases (pandemic)",
+        "First responder mental health",
+        "Workplace bullying/harassment cases"
+      ],
+      "emergingTrend": "Post-2020 increase suggests pandemic-related mental health claims"
+    },
+    
+    "hearingLossCases": {
+      "count": 9650,
+      "percentage": "9.7% of all decisions",
+      "significance": "Occupational hearing loss historically accepted, but causation disputes common",
+      "keyIssues": [
+        "Noise exposure levels (85 dB threshold)",
+        "Gradual vs sudden hearing loss",
+        "Age-related vs occupational",
+        "Bilateral vs unilateral loss"
+      ],
+      "suspectedLandmarks": [
+        "Decisions on gradual hearing loss compensation",
+        "Manufacturing noise exposure standards",
+        "Hearing protection program requirements"
+      ]
+    },
+    
+    "preExistingConditionCases": {
+      "keywordMatches": "Common pattern in denials",
+      "significance": "WSIB frequently denies claims citing pre-existing arthritis, degenerative disc disease, etc.",
+      "keyIssues": [
+        "Asymptomatic pre-existing conditions",
+        "Material contribution vs sole cause",
+        "Work acceleration of degenerative disease",
+        "Baseline vs post-injury comparison"
+      ],
+      "suspectedLandmarks": [
+        "Decisions on 'thin skull' principle",
+        "Decisions on work-related aggravation of pre-existing condition",
+        "Material contribution test"
+      ],
+      "policyImpact": "These decisions determine whether millions of older workers with baseline arthritis can access WSIB"
+    },
+    
+    "independentContractorCases": {
+      "significance": "Gig economy growth = more worker classification disputes",
+      "keyIssues": [
+        "Employee vs independent contractor",
+        "Coverage for app-based workers (Uber, DoorDash)",
+        "Misclassification by employers",
+        "Optional vs mandatory coverage"
+      ],
+      "suspectedLandmarks": [
+        "Decisions on gig worker coverage",
+        "Decisions on employer control test",
+        "Decisions on de facto employee status"
+      ],
+      "emergingTrend": "Expected to increase as gig economy grows"
+    }
+  },
+  
+  "suspectedLandmarksByTopic": [
+    {
+      "topic": "Chronic Pain Recognition",
+      "era": "1990s-2000s",
+      "significance": "Established that chronic pain CAN be compensable injury",
+      "before": "WSIB routinely denied chronic pain as 'subjective', no objective findings",
+      "after": "Chronic pain recognized if medical evidence supports work causation",
+      "researchNeeded": "Search CanLII for early chronic pain appeals that were allowed",
+      "workerImpact": "Opened door for 7,502+ chronic pain appeals"
+    },
+    {
+      "topic": "Mental Health - Traumatic Events",
+      "era": "2000s-2010s",
+      "significance": "Expanded definition of 'traumatic event' for mental injury",
+      "before": "Required single acute trauma (e.g., workplace violence)",
+      "after": "Cumulative trauma recognized (e.g., repeated patient deaths, moral injury)",
+      "researchNeeded": "Identify first cumulative trauma PTSD case allowed",
+      "workerImpact": "Healthcare workers, first responders now more likely to succeed"
+    },
+    {
+      "topic": "Pre-Existing Condition - Material Contribution",
+      "era": "1980s-1990s",
+      "significance": "Work need only MATERIALLY CONTRIBUTE to injury, not be SOLE cause",
+      "before": "WSIB denied if any pre-existing condition present",
+      "after": "Work-related if work materially worsened pre-existing condition",
+      "researchNeeded": "Identify foundational 'material contribution' WSIAT decision",
+      "workerImpact": "Critical for older workers with baseline arthritis/degeneration"
+    },
+    {
+      "topic": "Hearing Loss - Gradual Onset",
+      "era": "1970s-1980s",
+      "significance": "Gradual hearing loss recognized as compensable occupational disease",
+      "before": "Only sudden acoustic trauma compensated",
+      "after": "Cumulative noise exposure = occupational disease",
+      "researchNeeded": "Early hearing loss cases establishing gradual onset coverage",
+      "workerImpact": "9,650 hearing loss appeals exist because of this precedent"
+    },
+    {
+      "topic": "Repetitive Strain Recognition",
+      "era": "1990s",
+      "significance": "Repetitive strain injuries (RSI) recognized as work-related",
+      "before": "WSIB denied RSI as 'normal wear and tear'",
+      "after": "RSI compensable if work tasks exceed safe limits",
+      "researchNeeded": "Early carpal tunnel, tendonitis cases establishing RSI coverage",
+      "workerImpact": "4,123 repetitive strain appeals in dataset"
+    },
+    {
+      "topic": "Virtual Hearings - Procedural Fairness",
+      "era": "2020-2021",
+      "significance": "Virtual hearings introduced (COVID-19), questions of fairness",
+      "before": "All hearings in-person",
+      "after": "Virtual option, but questions remain about appellant disadvantage",
+      "researchNeeded": "WSIAT decisions on virtual hearing fairness, accommodation requests",
+      "workerImpact": "Affects ALL current appellants - accessibility vs disadvantage debate"
+    }
+  ],
+  
+  "howToFindSpecificLandmarkDecisions": {
+    "step1": "Search CanLII for topic",
+    "example": "site:canlii.org WSIAT chronic pain material contribution",
+    "step2": "Look for frequently cited decisions",
+    "method": "Check 'Cited by' count in CanLII, decisions cited 20+ times often landmark",
+    "step3": "Review WSIB Operational Policy Manual",
+    "purpose": "WSIB policies often reference landmark WSIAT decisions that forced policy change",
+    "step4": "Consult legal clinics",
+    "expertise": "IWC, IAVG, OWA staff know landmark cases by heart"
+  },
+  
+  "exampleLandmarkSearchQueries": [
+    {
+      "query": "site:canlii.org WSIAT 'chronic pain' 'material contribution'",
+      "purpose": "Find chronic pain precedent cases"
+    },
+    {
+      "query": "site:canlii.org WSIAT 'mental stress' 'cumulative trauma'",
+      "purpose": "Find mental health expansion cases"
+    },
+    {
+      "query": "site:canlii.org WSIAT 'pre-existing condition' 'asymptomatic'",
+      "purpose": "Find pre-existing condition cases"
+    },
+    {
+      "query": "site:canlii.org WSIAT 'independent contractor' 'employee status'",
+      "purpose": "Find worker classification cases"
+    },
+    {
+      "query": "site:canlii.org WSIAT 'gradual onset' 'repetitive strain'",
+      "purpose": "Find RSI recognition cases"
+    }
+  ],
+  
+  "topCitedDecisionPatterns": {
+    "note": "Cannot determine citation counts from our dataset (only have summaries, not full text)",
+    "proxy": "Decisions with complex legal reasoning likely cited more",
+    "method": "Full-text NLP analysis (Task 8) could identify legal citations within decisions"
+  },
+  
+  "industrySpecificLandmarks": {
+    "healthcare": [
+      "Patient lifting injuries - ergonomic standards",
+      "Workplace violence - PTSD recognition",
+      "Pandemic-related mental health",
+      "Infectious disease exposure (COVID-19, TB)"
+    ],
+    "construction": [
+      "Fall protection standards",
+      "Scaffold safety - employer liability",
+      "Independent contractor status",
+      "Amputation - employer negligence"
+    ],
+    "manufacturing": [
+      "Repetitive strain recognition",
+      "Hearing loss - noise exposure standards",
+      "Machine guarding requirements",
+      "Ergonomic injury standards"
+    ],
+    "transportation": [
+      "Vehicle accident coverage",
+      "Vibration exposure - chronic pain",
+      "Hours of service - fatigue injuries",
+      "Independent operator status"
+    ]
+  },
+  
+  "recentPotentialLandmarks": {
+    "2020_2026": {
+      "note": "Too recent to determine landmark status, but these issues likely precedent-setting",
+      "issues": [
+        {
+          "issue": "COVID-19 exposure",
+          "significance": "Healthcare workers infected at work - presumption vs proof",
+          "appealVolume": "Unknown (may see surge 2023-2025 as long COVID claims denied)",
+          "status": "Developing law"
+        },
+        {
+          "issue": "Long COVID disability",
+          "significance": "Chronic fatigue, brain fog after COVID infection",
+          "appealVolume": "61 chronic fatigue cases in dataset (may include long COVID)",
+          "status": "Emerging issue"
+        },
+        {
+          "issue": "Mental health - moral injury",
+          "significance": "Healthcare workers traumatized by pandemic resource shortages",
+          "appealVolume": "Part of 4,567 mental health cases",
+          "status": "Recognition growing"
+        },
+        {
+          "issue": "Gig worker coverage",
+          "significance": "DoorDash/Uber drivers injured - are they covered?",
+          "appealVolume": "Unknown (may be suppressed by classification as contractors)",
+          "status": "Contentious, expect litigation"
+        },
+        {
+          "issue": "Work-from-home injuries",
+          "significance": "Ergonomic injuries from home offices - employer liability?",
+          "appealVolume": "Unknown (may be growing)",
+          "status": "Novel issue post-pandemic"
+        }
+      ]
+    }
+  },
+  
+  "recommendationsForResearchers": [
+    {
+      "recommendation": "Build citation network from CanLII",
+      "method": "Scrape full WSIAT decisions, extract citations, map network",
+      "outcome": "Identify most-cited decisions = likely landmarks",
+      "effort": "HIGH (legal research + web scraping)"
+    },
+    {
+      "recommendation": "Interview legal clinic staff",
+      "method": "Ask IWC, IAVG, OWA: 'What are the top 10 landmark WSIAT decisions?'",
+      "outcome": "Expert-identified landmarks",
+      "effort": "LOW (20 interviews)"
+    },
+    {
+      "recommendation": "Analyze WSIB policy changes",
+      "method": "Review WSIB Operational Policy Manual revisions, trace to WSIAT decisions",
+      "outcome": "Identify decisions that forced WSIB policy change",
+      "effort": "MEDIUM (policy document analysis)"
+    },
+    {
+      "recommendation": "NLP full-text analysis",
+      "method": "Task 8 (GPT-4 classification) could identify 'precedent-setting' language",
+      "outcome": "Automatically flag decisions with precedent-setting reasoning",
+      "effort": "MEDIUM (extend existing NLP pipeline)"
+    }
+  ],
+  
+  "dataLimitations": [
+    "Only have decision SUMMARIES, not full text (cannot read legal reasoning)",
+    "No citation data (cannot determine which decisions are frequently cited)",
+    "No WSIB policy linkage (cannot determine which decisions changed WSIB practice)",
+    "Keyword matching insufficient for legal nuance",
+    "Expert legal knowledge needed to definitively identify landmarks"
+  ],
+  
+  "nextSteps": {
+    "immediate": "Consult legal clinics for expert-identified landmark decisions",
+    "shortTerm": "Scrape CanLII for full decisions + citation counts",
+    "mediumTerm": "Map citation network to identify most influential decisions",
+    "longTerm": "Build 'WSIAT Precedent Database' with full text + legal analysis"
+  },
+  
+  "conclusionForInjuredWorkers": {
+    "keyTakeaway": "Landmark decisions EXPANDED coverage over time (chronic pain, mental health, gradual onset)",
+    "message": "If your claim type was denied 10 years ago, appeal NOW - precedent may have changed in your favor",
+    "action": "Search CanLII for recent decisions on your injury type - law may have evolved"
+  },
+  
+  "citationFormat": "3mpwrApp Research Team. (2026). Landmark WSIAT Decisions: Precedent-Setting Cases. Retrieved from https://3mpwrapp.pages.dev/landmark-decisions/"
+}

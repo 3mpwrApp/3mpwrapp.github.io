@@ -2,13 +2,15 @@
 # These files are for local analysis only
 
 # Raw extraction data (too large for Cloudflare Pages 25 MiB limit)
-data/comprehensive-extraction/wsiat/wsiat-ultra-complete.json
-data/comprehensive-extraction/neer/neer-ultra-complete.json
-data/comprehensive-extraction/cad7/cad7-ultra-complete.json
-data/comprehensive-extraction/premium-rates/premium-rates-ultra-complete.json
+**/wsiat-ultra-complete.json
+**/neer-ultra-complete.json
+**/cad7-ultra-complete.json
+**/premium-rates-ultra-complete.json
+data/comprehensive-extraction/**/*-ultra-complete.json
 
 # HRTO quarterly files (already processed)
-data/comprehensive-extraction/hrto/*.xlsx
+**/*.xlsx
+data/comprehensive-extraction/hrto/
 
 # Keep aggregated statistics (small, needed for reference)
 !data/comprehensive-extraction/aggregated-statistics.json

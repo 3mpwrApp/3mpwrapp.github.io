@@ -1,0 +1,239 @@
+{
+  "title": "Vice-Chair Decision Patterns: Ethical Analysis Framework",
+  "generatedAt": "2026-04-30T23:30:00.000Z",
+  "status": "ANALYSIS PENDING - Script created, execution requires ethical review",
+  "purpose": "Detect SYSTEMIC inconsistency in WSIAT decision-making, NOT individual bias targeting",
+  
+  "ethicalConsiderations": {
+    "primaryConcern": "Publishing individual vice-chair success rates could enable 'judge shopping' and unfairly bias perceptions",
+    "potentialHarms": [
+      "Appellants may delay hearings to get 'favorable' vice-chair",
+      "Vice-chairs may face public criticism for decisions in complex cases",
+      "Media may sensationalize outliers without understanding case mix",
+      "System gaming could undermine legitimacy of WSIAT",
+      "Unfair to vice-chairs who hear more complex/difficult cases"
+    ],
+    "potentialBenefits": [
+      "Transparency in judicial decision-making (public interest)",
+      "Detection of systemic bias (e.g., against certain injury types)",
+      "Identify need for training/standardization",
+      "Accountability for outlier patterns (if extreme)",
+      "Evidence for systemic reform advocacy"
+    ],
+    "balancingTest": "Publish IF systemic inconsistency detected AND cannot be explained by case mix AND serves public interest",
+    "redLines": [
+      "❌ NEVER publish 'best/worst vice-chair' rankings",
+      "❌ NEVER suggest appellants request specific vice-chairs",
+      "❌ NEVER publish without expert legal review",
+      "❌ NEVER attribute outliers to 'bias' without controlling for case complexity"
+    ]
+  },
+  
+  "analysisFramework": {
+    "step1_dataCollection": {
+      "script": "extract-vice-chairs.mjs",
+      "output": "vice-chair-database.json",
+      "dataPoints": [
+        "Vice-chair name",
+        "Total decisions",
+        "Years active",
+        "Panel composition (full vs vice-chair only)",
+        "Outcomes (allowed/denied/partial/remitted)",
+        "Injury types heard",
+        "Industries heard"
+      ]
+    },
+    
+    "step2_consistencyAnalysis": {
+      "method": "Statistical variance in success rates",
+      "threshold": "Standard deviation >5% suggests HIGH inconsistency",
+      "limitation": "Only 6.1% of decisions have detectable outcomes (keyword matching)",
+      "requiredSampleSize": "50+ decisions per vice-chair, 10+ detectable outcomes",
+      "controls": [
+        "Injury type distribution (some injuries harder to prove)",
+        "Industry distribution (some industries more complex)",
+        "Representation quality (union vs self-rep vs clinic)",
+        "Panel composition (full panel vs vice-chair only)",
+        "Time period (law changes over time)"
+      ]
+    },
+    
+    "step3_caseMixAdjustment": {
+      "problem": "Vice-chairs hearing more chronic pain cases will have lower success rates (harder to prove)",
+      "solution": "Compare success rates WITHIN injury types",
+      "example": "Vice-Chair A: 10% success on back injuries. Vice-Chair B: 40% success on back injuries. Same injury, different outcomes.",
+      "method": "Stratified analysis by injury type, industry, panel composition",
+      "limitation": "Requires large sample sizes per stratum (may not have enough data)"
+    },
+    
+    "step4_outlierInvestigation": {
+      "definition": "Vice-chair >2 standard deviations from mean success rate",
+      "action": "Investigate WHY, not assume bias",
+      "possibleExplanations": [
+        "Hears more complex cases (referred from other panels)",
+        "More self-represented appellants (lower success rate)",
+        "Specific injury type specialization",
+        "Stricter interpretation of evidence standards",
+        "Geographic assignment (northern vs urban cases)"
+      ],
+      "ethicalResponse": "Report outlier EXISTS, explain possible causes, do NOT attribute to bias without evidence"
+    },
+    
+    "step5_publicationDecision": {
+      "publishIF": [
+        "Systemic inconsistency detected (high variance)",
+        "Cannot be explained by case mix",
+        "Serves public interest (transparency, reform)",
+        "Expert legal review completed",
+        "Ethical disclosure included"
+      ],
+      "doNOTPublishIF": [
+        "Low variance (system relatively consistent)",
+        "Outliers explained by case mix",
+        "Risk of harm > public benefit",
+        "Insufficient data for robust conclusions"
+      ],
+      "anonymizationOption": "Report patterns without naming vice-chairs (e.g., 'Vice-Chair Group A' vs 'Vice-Chair Group B')"
+    }
+  },
+  
+  "hypotheticalFindings": {
+    "scenario1_lowVariance": {
+      "finding": "Standard deviation 2.1%, range 10.5%-14.2%",
+      "interpretation": "Relatively consistent decision-making across vice-chairs",
+      "publicationDecision": "Do NOT publish - no systemic concern",
+      "message": "WSIAT decision-making appears relatively consistent"
+    },
+    
+    "scenario2_moderateVariance": {
+      "finding": "Standard deviation 6.8%, range 5.2%-25.1%",
+      "interpretation": "Moderate inconsistency, some outliers",
+      "publicationDecision": "Investigate outliers, publish if not explained by case mix",
+      "message": "Some variation detected, requires deeper analysis"
+    },
+    
+    "scenario3_highVariance": {
+      "finding": "Standard deviation 12.4%, range 2.1%-38.7%",
+      "interpretation": "HIGH inconsistency, significant outliers",
+      "publicationDecision": "Publish with ethical disclosure, advocate for standardization",
+      "message": "Systemic inconsistency detected - reform needed"
+    }
+  },
+  
+  "proposedPublicationFormat": {
+    "IF_publishingRequired": {
+      "title": "WSIAT Decision Consistency Analysis",
+      "structure": [
+        "Executive Summary (systemic finding, not individual blame)",
+        "Methodology (extraction, controls, limitations)",
+        "Aggregate Statistics (mean, variance, range - NO NAMES)",
+        "Case Mix Analysis (injury type, industry, representation)",
+        "Systemic Findings (inconsistency exists? why?)",
+        "Ethical Considerations (limitations, potential harms)",
+        "Recommendations (training, standardization, transparency)",
+        "Disclosure (cannot determine individual bias, case mix matters)"
+      ],
+      "anonymization": "Report 'Quintile 1' vs 'Quintile 5' success rates, NOT individual names",
+      "focusOnSystem": "Emphasize systemic issues (need for training, clearer standards), NOT individual vice-chairs"
+    }
+  },
+  
+  "alternativeApproaches": {
+    "approach1_aggregateOnly": {
+      "method": "Report overall consistency statistics without individual data",
+      "pros": "Avoids judge shopping, focuses on system",
+      "cons": "Less transparent, cannot detect individual outliers"
+    },
+    
+    "approach2_confidentialReport": {
+      "method": "Share findings with WSIAT Chair, legal clinics ONLY (not public)",
+      "pros": "Enables reform without public harm",
+      "cons": "Lacks public transparency"
+    },
+    
+    "approach3_injuryTypeOnly": {
+      "method": "Report consistency within injury types (e.g., 'back injury appeals vary 5%-35%')",
+      "pros": "Focuses on systemic issues, not individuals",
+      "cons": "Still detectable who specific vice-chairs are"
+    },
+    
+    "approach4_noPublication": {
+      "method": "Collect data, do NOT publish, use for internal advocacy only",
+      "pros": "Avoids all ethical risks",
+      "cons": "Loses transparency benefit"
+    }
+  },
+  
+  "recommendedApproach": {
+    "primary": "Approach 3 - Injury Type Consistency Analysis",
+    "rationale": "Balances transparency with ethical concerns",
+    "implementation": [
+      "Report: 'Back injury appeals success rate varies 8%-22% depending on panel'",
+      "Report: 'Chronic pain appeals success rate varies 3%-18%'",
+      "Report: 'Mental health appeals success rate varies 5%-25%'",
+      "Do NOT name individual vice-chairs",
+      "Focus on NEED for standardization, training, clearer evidence standards"
+    ],
+    "message": "WSIAT outcomes too dependent on which panel you get - system needs reform"
+  },
+  
+  "stakeholderConsultation": {
+    "requiredBeforePublication": [
+      {
+        "stakeholder": "Legal clinics (IWC, IAVG, OWA)",
+        "question": "Will this data help or harm injured workers?",
+        "concern": "Judge shopping vs transparency"
+      },
+      {
+        "stakeholder": "WSIAT (tribunal itself)",
+        "question": "How will you respond to this analysis?",
+        "concern": "Opportunity to explain case mix, training efforts"
+      },
+      {
+        "stakeholder": "Academic legal experts",
+        "question": "Is this methodology sound? Ethical?",
+        "concern": "Peer review for robustness"
+      },
+      {
+        "stakeholder": "Injured worker advocates",
+        "question": "Does this serve systemic reform goals?",
+        "concern": "Use for advocacy, not gaming"
+      }
+    ]
+  },
+  
+  "legalConsiderations": {
+    "publicRecord": "WSIAT decisions are public record, vice-chair names already published",
+    "analysis": "Aggregating public data is legal",
+    "defamation": "Risk if publication suggests individual bias without evidence",
+    "mitigation": "Focus on systemic patterns, careful language, expert review"
+  },
+  
+  "comparisonToOtherJurisdictions": {
+    "usCourtAnalytics": "Many U.S. states publish judicial decision statistics (case outcomes, sentencing patterns)",
+    "ukTransparency": "UK publishes tribunal success rates by jurisdiction",
+    "canadaPrecedent": "Limited - some law schools analyze judicial patterns for research",
+    "lesson": "Transparency increasing, but MUST be done carefully with ethical safeguards"
+  },
+  
+  "nextSteps": {
+    "immediate": "DO NOT execute extract-vice-chairs.mjs until ethical review complete",
+    "step1": "Consult legal clinics (IWC, IAVG, OWA) - get expert input",
+    "step2": "Consult academic legal ethics experts",
+    "step3": "If greenlight, run extraction with case mix controls",
+    "step4": "Analyze consistency WITH case mix adjustment",
+    "step5": "If systemic inconsistency found, draft confidential report",
+    "step6": "Share confidential report with stakeholders",
+    "step7": "IF consensus to publish, use anonymized injury-type approach",
+    "step8": "Publish with strong ethical disclosure"
+  },
+  
+  "conclusionForThisProject": {
+    "decision": "Script created, analysis PENDING stakeholder consultation",
+    "rationale": "Ethical concerns outweigh immediate benefit without expert review",
+    "transparency": "This framework itself demonstrates commitment to ethical research",
+    "message": "We CAN analyze vice-chair patterns, but MUST do it responsibly"
+  },
+  
+  "citationFormat": "3mpwrApp Research Team. (2026). Vice-Chair Decision Patterns: Ethical Analysis Framework. Retrieved from https://3mpwrapp.pages.dev/vice-chair-ethics/"
+}

@@ -1,0 +1,438 @@
+{
+  "generatedAt": "2026-04-30T22:30:00.000Z",
+  "method": "Pattern-based estimation from injury data + Ontario industry statistics",
+  "note": "Full text-mining analysis requires NLP (Task 8). This provides research-informed estimates.",
+  "dataQuality": "estimated",
+  "totalDecisions": 98992,
+  
+  "industries": {
+    "healthcare": {
+      "name": "Healthcare & Social Assistance",
+      "estimatedCases": 19798,
+      "percentage": 20.0,
+      "rateGroup": "863",
+      "topInjuries": [
+        {
+          "type": "back",
+          "cases": 4950,
+          "percentage": 25.0,
+          "reasoning": "Patient lifting, transfers, repositioning"
+        },
+        {
+          "type": "mental",
+          "cases": 3960,
+          "percentage": 20.0,
+          "reasoning": "High stress, violence, compassion fatigue"
+        },
+        {
+          "type": "repetitive",
+          "cases": 2970,
+          "percentage": 15.0,
+          "reasoning": "Repetitive patient care tasks"
+        },
+        {
+          "type": "shoulder",
+          "cases": 1980,
+          "percentage": 10.0,
+          "reasoning": "Overhead reaching, patient handling"
+        },
+        {
+          "type": "knee",
+          "cases": 1584,
+          "percentage": 8.0,
+          "reasoning": "Standing, kneeling during patient care"
+        }
+      ],
+      "appellants": "nurses, PSWs, healthcare aides",
+      "keyRisks": ["patient handling", "workplace violence", "shift work stress"]
+    },
+    
+    "construction": {
+      "name": "Construction",
+      "estimatedCases": 14849,
+      "percentage": 15.0,
+      "rateGroup": "732",
+      "topInjuries": [
+        {
+          "type": "fracture",
+          "cases": 2970,
+          "percentage": 20.0,
+          "reasoning": "Falls, struck-by incidents"
+        },
+        {
+          "type": "back",
+          "cases": 2228,
+          "percentage": 15.0,
+          "reasoning": "Heavy lifting, awkward postures"
+        },
+        {
+          "type": "shoulder",
+          "cases": 1782,
+          "percentage": 12.0,
+          "reasoning": "Overhead work, repetitive motions"
+        },
+        {
+          "type": "knee",
+          "cases": 1485,
+          "percentage": 10.0,
+          "reasoning": "Kneeling, climbing, falls"
+        },
+        {
+          "type": "amputation",
+          "cases": 1188,
+          "percentage": 8.0,
+          "reasoning": "Equipment/machinery incidents"
+        }
+      ],
+      "appellants": "carpenters, laborers, contractors",
+      "keyRisks": ["falls from height", "struck-by", "caught-in/between"]
+    },
+    
+    "manufacturing": {
+      "name": "Manufacturing",
+      "estimatedCases": 13859,
+      "percentage": 14.0,
+      "rateGroup": "401",
+      "topInjuries": [
+        {
+          "type": "repetitive",
+          "cases": 2772,
+          "percentage": 20.0,
+          "reasoning": "Assembly line work, repetitive motions"
+        },
+        {
+          "type": "back",
+          "cases": 2079,
+          "percentage": 15.0,
+          "reasoning": "Lifting, bending, twisting"
+        },
+        {
+          "type": "hearing",
+          "cases": 1940,
+          "percentage": 14.0,
+          "reasoning": "Noise exposure from machinery"
+        },
+        {
+          "type": "amputation",
+          "cases": 1386,
+          "percentage": 10.0,
+          "reasoning": "Machinery/equipment incidents"
+        },
+        {
+          "type": "shoulder",
+          "cases": 1109,
+          "percentage": 8.0,
+          "reasoning": "Repetitive reaching, overhead work"
+        }
+      ],
+      "appellants": "machine operators, assemblers, production workers",
+      "keyRisks": ["machinery", "repetitive strain", "noise exposure"]
+    },
+    
+    "transportation": {
+      "name": "Transportation & Warehousing",
+      "estimatedCases": 11899,
+      "percentage": 12.0,
+      "rateGroup": "651",
+      "topInjuries": [
+        {
+          "type": "back",
+          "cases": 2972,
+          "percentage": 25.0,
+          "reasoning": "Sitting, loading/unloading, lifting"
+        },
+        {
+          "type": "knee",
+          "cases": 1428,
+          "percentage": 12.0,
+          "reasoning": "Getting in/out of vehicles, kneeling"
+        },
+        {
+          "type": "shoulder",
+          "cases": 1190,
+          "percentage": 10.0,
+          "reasoning": "Overhead loading, steering"
+        },
+        {
+          "type": "fracture",
+          "cases": 1071,
+          "percentage": 9.0,
+          "reasoning": "Vehicle accidents, falls"
+        },
+        {
+          "type": "chronic_pain",
+          "cases": 952,
+          "percentage": 8.0,
+          "reasoning": "Vibration, prolonged sitting"
+        }
+      ],
+      "appellants": "truck drivers, warehouse workers, couriers",
+      "keyRisks": ["vehicle accidents", "loading injuries", "vibration exposure"]
+    },
+    
+    "retail": {
+      "name": "Retail Trade",
+      "estimatedCases": 9899,
+      "percentage": 10.0,
+      "rateGroup": "890",
+      "topInjuries": [
+        {
+          "type": "back",
+          "cases": 1980,
+          "percentage": 20.0,
+          "reasoning": "Lifting, stocking, customer service"
+        },
+        {
+          "type": "mental",
+          "cases": 1485,
+          "percentage": 15.0,
+          "reasoning": "Customer conflict, workplace stress"
+        },
+        {
+          "type": "repetitive",
+          "cases": 1188,
+          "percentage": 12.0,
+          "reasoning": "Scanning, stocking, repetitive tasks"
+        },
+        {
+          "type": "knee",
+          "cases": 990,
+          "percentage": 10.0,
+          "reasoning": "Standing, kneeling to stock"
+        },
+        {
+          "type": "shoulder",
+          "cases": 792,
+          "percentage": 8.0,
+          "reasoning": "Reaching, lifting overhead"
+        }
+      ],
+      "appellants": "cashiers, stock clerks, sales associates",
+      "keyRisks": ["customer violence", "repetitive strain", "slips/trips/falls"]
+    },
+    
+    "foodServices": {
+      "name": "Food Services & Accommodation",
+      "estimatedCases": 7919,
+      "percentage": 8.0,
+      "rateGroup": "921",
+      "topInjuries": [
+        {
+          "type": "back",
+          "cases": 1584,
+          "percentage": 20.0,
+          "reasoning": "Lifting, carrying, serving"
+        },
+        {
+          "type": "fracture",
+          "cases": 1188,
+          "percentage": 15.0,
+          "reasoning": "Slips, trips, falls (wet surfaces)"
+        },
+        {
+          "type": "shoulder",
+          "cases": 792,
+          "percentage": 10.0,
+          "reasoning": "Repetitive serving, overhead reaching"
+        },
+        {
+          "type": "mental",
+          "cases": 634,
+          "percentage": 8.0,
+          "reasoning": "Customer conflict, fast-paced environment"
+        },
+        {
+          "type": "repetitive",
+          "cases": 634,
+          "percentage": 8.0,
+          "reasoning": "Repetitive cooking/serving motions"
+        }
+      ],
+      "appellants": "cooks, servers, kitchen staff",
+      "keyRisks": ["slips on wet floors", "burns", "cuts", "customer conflict"]
+    },
+    
+    "publicAdmin": {
+      "name": "Public Administration",
+      "estimatedCases": 6930,
+      "percentage": 7.0,
+      "rateGroup": "951",
+      "topInjuries": [
+        {
+          "type": "mental",
+          "cases": 1733,
+          "percentage": 25.0,
+          "reasoning": "First responder trauma, public conflict"
+        },
+        {
+          "type": "back",
+          "cases": 1040,
+          "percentage": 15.0,
+          "reasoning": "Physical interventions, equipment carrying"
+        },
+        {
+          "type": "hearing",
+          "cases": 832,
+          "percentage": 12.0,
+          "reasoning": "Sirens, gunfire (police/fire)"
+        },
+        {
+          "type": "knee",
+          "cases": 693,
+          "percentage": 10.0,
+          "reasoning": "Running, kneeling, physical interventions"
+        },
+        {
+          "type": "fracture",
+          "cases": 554,
+          "percentage": 8.0,
+          "reasoning": "Physical altercations, accidents"
+        }
+      ],
+      "appellants": "police, firefighters, paramedics, municipal workers",
+      "keyRisks": ["trauma exposure", "violence", "critical incidents"]
+    },
+    
+    "education": {
+      "name": "Educational Services",
+      "estimatedCases": 4950,
+      "percentage": 5.0,
+      "rateGroup": "931",
+      "topInjuries": [
+        {
+          "type": "mental",
+          "cases": 1237,
+          "percentage": 25.0,
+          "reasoning": "Student behavior, workload stress"
+        },
+        {
+          "type": "back",
+          "cases": 742,
+          "percentage": 15.0,
+          "reasoning": "Lifting children, classroom setup"
+        },
+        {
+          "type": "repetitive",
+          "cases": 495,
+          "percentage": 10.0,
+          "reasoning": "Computer work, writing"
+        },
+        {
+          "type": "knee",
+          "cases": 396,
+          "percentage": 8.0,
+          "reasoning": "Kneeling with young children"
+        },
+        {
+          "type": "shoulder",
+          "cases": 297,
+          "percentage": 6.0,
+          "reasoning": "Overhead reaching, carrying materials"
+        }
+      ],
+      "appellants": "teachers, educational assistants, daycare workers",
+      "keyRisks": ["student violence", "stress", "repetitive tasks"]
+    },
+    
+    "agriculture": {
+      "name": "Agriculture & Forestry",
+      "estimatedCases": 2970,
+      "percentage": 3.0,
+      "rateGroup": "141",
+      "topInjuries": [
+        {
+          "type": "fracture",
+          "cases": 594,
+          "percentage": 20.0,
+          "reasoning": "Machinery accidents, falls"
+        },
+        {
+          "type": "amputation",
+          "cases": 445,
+          "percentage": 15.0,
+          "reasoning": "Farm equipment incidents"
+        },
+        {
+          "type": "back",
+          "cases": 445,
+          "percentage": 15.0,
+          "reasoning": "Heavy lifting, awkward postures"
+        },
+        {
+          "type": "shoulder",
+          "cases": 297,
+          "percentage": 10.0,
+          "reasoning": "Repetitive overhead work"
+        },
+        {
+          "type": "hearing",
+          "cases": 267,
+          "percentage": 9.0,
+          "reasoning": "Equipment noise exposure"
+        }
+      ],
+      "appellants": "farmers, farm workers, loggers",
+      "keyRisks": ["machinery", "falls", "animals", "weather exposure"]
+    },
+    
+    "unknown": {
+      "name": "Unknown/Multiple/Other",
+      "estimatedCases": 5919,
+      "percentage": 6.0,
+      "rateGroup": null,
+      "topInjuries": [
+        {
+          "type": "back",
+          "cases": 888,
+          "percentage": 15.0,
+          "reasoning": "Common across all industries"
+        },
+        {
+          "type": "chronic_pain",
+          "cases": 710,
+          "percentage": 12.0,
+          "reasoning": "Develops over time"
+        },
+        {
+          "type": "mental",
+          "cases": 592,
+          "percentage": 10.0,
+          "reasoning": "Workplace stress"
+        },
+        {
+          "type": "shoulder",
+          "cases": 474,
+          "percentage": 8.0,
+          "reasoning": "Repetitive motions"
+        },
+        {
+          "type": "knee",
+          "cases": 474,
+          "percentage": 8.0,
+          "reasoning": "Standing, kneeling"
+        }
+      ],
+      "appellants": "mixed/unspecified",
+      "keyRisks": "varies"
+    }
+  },
+  
+  "summary": {
+    "totalEstimatedCases": 98992,
+    "industriesTracked": 10,
+    "dataSource": "Ontario workplace injury statistics + extracted injury patterns",
+    "methodology": "Proportional allocation based on: (1) Ontario labour force distribution, (2) Historical WSIB claim rates by sector, (3) Injury pattern analysis from 98,992 decisions",
+    "limitations": [
+      "Industry assignments are estimated, not extracted from full decision text",
+      "Actual industry distributions may vary ±5 percentage points",
+      "Full text-mining analysis (NLP) needed for precise industry linkage",
+      "Use for pattern identification and guide creation, not precise case prediction"
+    ]
+  },
+  
+  "nextSteps": {
+    "task12": "Create industry-specific appeal guides using these correlations",
+    "task8": "NLP analysis will provide actual industry mentions from decision text",
+    "validation": "Compare NLP results to these estimates to validate methodology"
+  }
+}
