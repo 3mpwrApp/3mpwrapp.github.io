@@ -1,0 +1,30 @@
+{
+  "totalDecisions": 11430,
+  "classified": 50,
+  "lastBatchNumber": 1,
+  "batches": [
+    {
+      "batchNumber": 1,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T00:52:38.384Z",
+      "summary": {
+        "totalClassified": 50,
+        "outcomes": {
+          "allowed": 6,
+          "denied": 1,
+          "partial": 6,
+          "remitted": 0,
+          "other": 10,
+          "unclear": 27
+        },
+        "confidenceLevels": {
+          "high": 10,
+          "medium": 9,
+          "low": 31
+        },
+        "methodology": "Classification based on keyword pattern analysis only. Keywords are topics extracted from decisions, not full decision text. HIGH confidence only for procedural decisions ('extension', 'reconsideration', 'access') and explicit outcome keywords ('compensable', 'non-compensable'). MEDIUM confidence for strong occupational disease indicators or explicit 'entitlement for' phrasing. LOW confidence for most substantive decisions where keywords are ambiguous. To achieve true accuracy, full decision text analysis required."
+      }
+    }
+  ],
+  "startedAt": "2026-05-01T00:36:33.774Z"
+}
