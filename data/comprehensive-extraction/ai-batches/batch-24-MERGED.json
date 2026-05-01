@@ -1,0 +1,1808 @@
+{
+  "batchNumber": 24,
+  "startIndex": 1700,
+  "endIndex": 1900,
+  "classifiedAt": "2026-05-01T02:35:00.000Z",
+  "decisions": [
+    {
+      "index": 1700,
+      "caseNumber": "1146/20",
+      "year": 2020,
+      "date": "2020-10-13",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show pre-existing shoulder condition + massive rotator cuff tear, but no outcome indicated"
+    },
+    {
+      "index": 1701,
+      "caseNumber": "1008/20",
+      "year": 2020,
+      "date": "2020-10-13",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show loss of earning (LOE) impairment quantum discussion, but no outcome indicated"
+    },
+    {
+      "index": 1702,
+      "caseNumber": "1153/20",
+      "year": 2020,
+      "date": "2020-10-13",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition analysis (carpal tunnel + obesity + diabetes) - outcome uncertain from keywords"
+    },
+    {
+      "index": 1703,
+      "caseNumber": "793/20",
+      "year": 2020,
+      "date": "2020-10-14",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing varicose veins + venous insufficiency - keywords show condition analysis, no outcome"
+    },
+    {
+      "index": 1704,
+      "caseNumber": "728/20",
+      "year": 2020,
+      "date": "2020-10-14",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords about pre-injury average earnings calculation (dependent contractor) - administrative issue, no injury outcome"
+    },
+    {
+      "index": 1705,
+      "caseNumber": "1060/20",
+      "year": 2020,
+      "date": "2020-10-14",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show colorectal cancer + hernia + colostomy conditions, but no outcome indicated"
+    },
+    {
+      "index": 1706,
+      "caseNumber": "1210/16R2",
+      "year": 2020,
+      "date": "2020-10-14",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Driver loader ankle impairment + temporary partial disability - keywords show topic, no outcome"
+    },
+    {
+      "index": 1707,
+      "caseNumber": "1127/20",
+      "year": 2020,
+      "date": "2020-10-14",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Benefits + earnings + temporary work disruption + ankle - administrative/benefits discussion, no outcome"
+    },
+    {
+      "index": 1708,
+      "caseNumber": "1119/20",
+      "year": 2020,
+      "date": "2020-10-15",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + degenerative changes + biceps tendon - analyzing pre-existing, no outcome"
+    },
+    {
+      "index": 1709,
+      "caseNumber": "1059/20",
+      "year": 2020,
+      "date": "2020-10-15",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show chronic pain + medical treatment discussion, but no outcome indicated"
+    },
+    {
+      "index": 1710,
+      "caseNumber": "1123/20",
+      "year": 2020,
+      "date": "2020-10-15",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + 'greater severity than a normal' - employer argument language, outcome uncertain"
+    },
+    {
+      "index": 1711,
+      "caseNumber": "362/20",
+      "year": 2020,
+      "date": "2020-10-15",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Keywords focus on 'proof + onus + bears the burden + proving' - legal procedural issue about burden of proof"
+    },
+    {
+      "index": 1712,
+      "caseNumber": "810/20",
+      "year": 2020,
+      "date": "2020-10-15",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Short-term average earnings + recalculation + long-term average earnings - administrative issue, no injury outcome"
+    },
+    {
+      "index": 1713,
+      "caseNumber": "1157/20",
+      "year": 2020,
+      "date": "2020-10-16",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing degenerative changes + severity analysis - pre-existing condition analysis, outcome uncertain"
+    },
+    {
+      "index": 1714,
+      "caseNumber": "1137/20",
+      "year": 2020,
+      "date": "2020-10-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords about appointments + work + attend physiotherapy + treatment - benefits issue, no outcome"
+    },
+    {
+      "index": 1715,
+      "caseNumber": "964/20",
+      "year": 2020,
+      "date": "2020-10-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Recurrence within two-year period + benefits - recurrence analysis, outcome uncertain"
+    },
+    {
+      "index": 1716,
+      "caseNumber": "1125/20",
+      "year": 2020,
+      "date": "2020-10-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show calcific tendonitis + shoulder + thumb injury, but no outcome indicated"
+    },
+    {
+      "index": 1717,
+      "caseNumber": "1134/20",
+      "year": 2020,
+      "date": "2020-10-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Impairment + external rotation + deterioration - impairment analysis, no outcome indicated"
+    },
+    {
+      "index": 1718,
+      "caseNumber": "1047/20",
+      "year": 2020,
+      "date": "2020-10-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show fibromyalgia + chronic pain + shoulder + cervical, but no outcome indicated"
+    },
+    {
+      "index": 1719,
+      "caseNumber": "1165/20",
+      "year": 2020,
+      "date": "2020-10-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Congestive heart + coronary artery disease + pleural plaques significantly contributed to death - causation analysis, outcome uncertain"
+    },
+    {
+      "index": 1720,
+      "caseNumber": "792/20",
+      "year": 2020,
+      "date": "2020-10-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder + entitlement + overhead + overuse - entitlement discussion, outcome uncertain"
+    },
+    {
+      "index": 1721,
+      "caseNumber": "956/20",
+      "year": 2020,
+      "date": "2020-10-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show disc protrusion + nerve root + lumbar injury, but no outcome indicated"
+    },
+    {
+      "index": 1722,
+      "caseNumber": "1072/19",
+      "year": 2020,
+      "date": "2020-10-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Catch basin + employer + accident + benefits under the insurance plan - coverage issue, outcome uncertain"
+    },
+    {
+      "index": 1723,
+      "caseNumber": "992/20",
+      "year": 2020,
+      "date": "2020-10-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Impairment + chronic pain + significant deterioration + rating - impairment analysis, no outcome"
+    },
+    {
+      "index": 1724,
+      "caseNumber": "3132/18R2",
+      "year": 2020,
+      "date": "2020-10-19",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R2' = second reconsideration + keywords mention 'stated that the worker' - reconsideration procedural decision"
+    },
+    {
+      "index": 1725,
+      "caseNumber": "807/20",
+      "year": 2020,
+      "date": "2020-10-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show entitlement for right wrist + data entry clerk + mouse + finger, but no outcome indicated"
+    },
+    {
+      "index": 1726,
+      "caseNumber": "949/20",
+      "year": 2020,
+      "date": "2020-10-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Ability to earn minimum wage + pre-accident earnings + entitled to partial benefits - benefit calculation, outcome uncertain"
+    },
+    {
+      "index": 1727,
+      "caseNumber": "3272/17",
+      "year": 2020,
+      "date": "2020-10-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show gauntlet brace + wrist + shoulder + neck conditions, but no outcome indicated"
+    },
+    {
+      "index": 1728,
+      "caseNumber": "1062/20",
+      "year": 2020,
+      "date": "2020-10-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Home modifications + basement + main floor + space - benefits issue (home modifications), no outcome"
+    },
+    {
+      "index": 1729,
+      "caseNumber": "1141/20",
+      "year": 2020,
+      "date": "2020-10-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show modified duties + return to work + benefits, but no outcome indicated"
+    },
+    {
+      "index": 1730,
+      "caseNumber": "984/20",
+      "year": 2020,
+      "date": "2020-10-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Hammersmith + pre-injury earnings + shipper receiver + pre-accident earnings - earnings calculation, no injury outcome"
+    },
+    {
+      "index": 1731,
+      "caseNumber": "1167/20",
+      "year": 2020,
+      "date": "2020-10-20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show neck + brake pads + pain + shoulder conditions, but no outcome indicated"
+    },
+    {
+      "index": 1732,
+      "caseNumber": "1051/20",
+      "year": 2020,
+      "date": "2020-10-20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show autoscrubber + shoulder + incident + rotator cuff tears, but no outcome indicated"
+    },
+    {
+      "index": 1733,
+      "caseNumber": "1164/20",
+      "year": 2020,
+      "date": "2020-10-20",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + disc + pre-existing conditions - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1734,
+      "caseNumber": "1083/20",
+      "year": 2020,
+      "date": "2020-10-21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords about work + psychological + recover his pre-injury earnings + benefits, outcome uncertain"
+    },
+    {
+      "index": 1735,
+      "caseNumber": "868/20",
+      "year": 2020,
+      "date": "2020-10-21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show carpal tunnel syndrome + job duties + vibration + hand, but no outcome indicated"
+    },
+    {
+      "index": 1736,
+      "caseNumber": "1166/20",
+      "year": 2020,
+      "date": "2020-10-22",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show heart attack + chickens + physical exertion + cardiac, but no outcome indicated"
+    },
+    {
+      "index": 1737,
+      "caseNumber": "1117/20I",
+      "year": 2020,
+      "date": "2020-10-22",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'I' = interim decision + keywords about syncope + episode + ambulance - procedural interim issue"
+    },
+    {
+      "index": 1738,
+      "caseNumber": "1024/19R",
+      "year": 2020,
+      "date": "2020-10-22",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R' = reconsideration + keywords mention suitability + representative - reconsideration procedural"
+    },
+    {
+      "index": 1739,
+      "caseNumber": "829/20",
+      "year": 2020,
+      "date": "2020-10-22",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show supraspinatus tendon tear + shoulder + cartilage loss + humeral, but no outcome indicated"
+    },
+    {
+      "index": 1740,
+      "caseNumber": "1108/20E",
+      "year": 2020,
+      "date": "2020-10-22",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'E' = extension decision + keywords 'time limit + delay' - time extension procedural"
+    },
+    {
+      "index": 1741,
+      "caseNumber": "2830/18",
+      "year": 2020,
+      "date": "2020-10-22",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show shoulder + calcific tendonitis + doctor + supervisor, but no outcome indicated"
+    },
+    {
+      "index": 1742,
+      "caseNumber": "2939/18",
+      "year": 2020,
+      "date": "2020-10-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show shoulder + sorting + full-time hours + work, but no outcome indicated"
+    },
+    {
+      "index": 1743,
+      "caseNumber": "1176/20",
+      "year": 2020,
+      "date": "2020-10-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords about based on entry-level wages + shoulder + benefits + surgery, outcome uncertain"
+    },
+    {
+      "index": 1744,
+      "caseNumber": "1113/20",
+      "year": 2020,
+      "date": "2020-10-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show osteopath + labral tear + shoulder + impairment, but no outcome indicated"
+    },
+    {
+      "index": 1745,
+      "caseNumber": "1183/20",
+      "year": 2020,
+      "date": "2020-10-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show loss + occupational exposure to noise + ear + sensorineural, but no outcome indicated"
+    },
+    {
+      "index": 1746,
+      "caseNumber": "1082/20",
+      "year": 2020,
+      "date": "2020-10-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Significant temporary deterioration + market re-entry + worker suffers significant deterioration - deterioration analysis, outcome uncertain"
+    },
+    {
+      "index": 1747,
+      "caseNumber": "846/20",
+      "year": 2020,
+      "date": "2020-10-26",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder injury + benefits for psychotraumatic disability + accident - entitlement analysis, outcome uncertain"
+    },
+    {
+      "index": 1748,
+      "caseNumber": "3/19R",
+      "year": 2020,
+      "date": "2020-10-26",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R' = reconsideration + keywords mention 'ongoing entitlement + reconsideration + weight + representative' - reconsideration procedural"
+    },
+    {
+      "index": 1749,
+      "caseNumber": "2797/18",
+      "year": 2020,
+      "date": "2020-10-26",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show robber + training + video + gun (traumatic event), but no outcome indicated"
+    },
+    {
+      "index": 1750,
+      "caseNumber": "715/20",
+      "year": 2020,
+      "date": "2020-10-26",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show modified work + employer + job + dusting, but no outcome indicated"
+    },
+    {
+      "index": 1751,
+      "caseNumber": "693/18R2",
+      "year": 2020,
+      "date": "2020-10-26",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R2' = second reconsideration + keywords mention modified + work + neck - reconsideration procedural"
+    },
+    {
+      "index": 1752,
+      "caseNumber": "1182/20",
+      "year": 2020,
+      "date": "2020-10-26",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show shoulder + partial thickness tear + supraspinatus + ongoing, but no outcome indicated"
+    },
+    {
+      "index": 1753,
+      "caseNumber": "1107/20E",
+      "year": 2020,
+      "date": "2020-10-26",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'E' = extension decision + keywords 'time limit + extension' - time extension procedural"
+    },
+    {
+      "index": 1754,
+      "caseNumber": "1109/20",
+      "year": 2020,
+      "date": "2020-10-27",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'access + file + released to the employer + information' - file access procedural issue"
+    },
+    {
+      "index": 1755,
+      "caseNumber": "1106/20E",
+      "year": 2020,
+      "date": "2020-10-27",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'E' = extension decision + keywords 'time extension + time limit' - time extension procedural"
+    },
+    {
+      "index": 1756,
+      "caseNumber": "1081/20",
+      "year": 2020,
+      "date": "2020-10-27",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee + benefits + significant temporary deterioration + period expires - deterioration analysis, outcome uncertain"
+    },
+    {
+      "index": 1757,
+      "caseNumber": "697/20",
+      "year": 2020,
+      "date": "2020-10-27",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show return to work + pain + elbow + pre-accident, but no outcome indicated"
+    },
+    {
+      "index": 1758,
+      "caseNumber": "773/20",
+      "year": 2020,
+      "date": "2020-10-27",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show return to work + family doctor + accident + pain, but no outcome indicated"
+    },
+    {
+      "index": 1759,
+      "caseNumber": "1105/20",
+      "year": 2020,
+      "date": "2020-10-27",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + employer + recovery + access - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1760,
+      "caseNumber": "1124/20",
+      "year": 2020,
+      "date": "2020-10-28",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing conditions + sprain strain + disc bulge + injury - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1761,
+      "caseNumber": "978/20",
+      "year": 2020,
+      "date": "2020-10-29",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Traffic controller + return to work + modified job + suitable - job suitability analysis, outcome uncertain"
+    },
+    {
+      "index": 1762,
+      "caseNumber": "1190/20",
+      "year": 2020,
+      "date": "2020-10-29",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'time limit + offset + disability benefits + extension' - time extension procedural issue"
+    },
+    {
+      "index": 1763,
+      "caseNumber": "1135/20",
+      "year": 2020,
+      "date": "2020-10-29",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show neck + migraine condition + work-related injury + cervical, but no outcome indicated"
+    },
+    {
+      "index": 1764,
+      "caseNumber": "715/17",
+      "year": 2020,
+      "date": "2020-10-29",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "French keywords: stationnement des sous-traitants + contractor parking lot - jurisdictional/coverage issue, outcome uncertain"
+    },
+    {
+      "index": 1765,
+      "caseNumber": "919/20",
+      "year": 2020,
+      "date": "2020-10-29",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show concussion + consciousness + injury + student, but no outcome indicated"
+    },
+    {
+      "index": 1766,
+      "caseNumber": "655/20",
+      "year": 2020,
+      "date": "2020-10-29",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show physiotherapist + driving + work + neck, but no outcome indicated"
+    },
+    {
+      "index": 1767,
+      "caseNumber": "1133/20",
+      "year": 2020,
+      "date": "2020-10-29",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show lens implant + iris surgery + eye + health care, but no outcome indicated"
+    },
+    {
+      "index": 1768,
+      "caseNumber": "1420/17R2",
+      "year": 2020,
+      "date": "2020-10-29",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R2' = second reconsideration + keywords 'clarification + misstatement + request' - reconsideration clarification procedural"
+    },
+    {
+      "index": 1769,
+      "caseNumber": "1199/20E",
+      "year": 2020,
+      "date": "2020-10-30",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'E' = extension decision + keywords 'six-month statutory time-limit + time extension + delay' - time extension procedural"
+    },
+    {
+      "index": 1770,
+      "caseNumber": "1014/20",
+      "year": 2020,
+      "date": "2020-10-30",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show psychotraumatic disability + work-related injury + depression, but no outcome indicated"
+    },
+    {
+      "index": 1771,
+      "caseNumber": "1148/20",
+      "year": 2020,
+      "date": "2020-10-30",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show low back condition + low back pain + job duties + injury, but no outcome indicated"
+    },
+    {
+      "index": 1772,
+      "caseNumber": "841/20",
+      "year": 2020,
+      "date": "2020-10-30",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show shoulder + personal work-related injury + tear + rotator cuff, but no outcome indicated"
+    },
+    {
+      "index": 1773,
+      "caseNumber": "1221/20E",
+      "year": 2020,
+      "date": "2020-10-30",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'E' = extension decision + keywords 'form + time limit + time extension + delay' - time extension procedural"
+    },
+    {
+      "index": 1774,
+      "caseNumber": "1191/20",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'time limit + voice mail + representative + employer' - time limit procedural issue"
+    },
+    {
+      "index": 1775,
+      "caseNumber": "1201/20",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show foot stress fracture + work + disablement + walking, but no outcome indicated"
+    },
+    {
+      "index": 1776,
+      "caseNumber": "656/20",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show eye + diplopia + right-sided visual + vision, but no outcome indicated"
+    },
+    {
+      "index": 1777,
+      "caseNumber": "21/20R",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R' = reconsideration + keywords 'reconsideration + decision-making process + prior to the release' - reconsideration procedural"
+    },
+    {
+      "index": 1778,
+      "caseNumber": "292/20",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "French keywords: travailleur + lésion indemnisable + symptômes + hernies discales - injury discussion, outcome uncertain"
+    },
+    {
+      "index": 1779,
+      "caseNumber": "48/20R",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R' = reconsideration + keywords 'reconsideration + decision-making process + prior to the release' - reconsideration procedural"
+    },
+    {
+      "index": 1780,
+      "caseNumber": "1021/20",
+      "year": 2020,
+      "date": "2020-11-03",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show psychotraumatic disability + impairment + anxiety + pain, but no outcome indicated"
+    },
+    {
+      "index": 1781,
+      "caseNumber": "1098/20I",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'I' = interim decision + keywords about 'transitional provisions + mental stress provisions' - procedural interim issue"
+    },
+    {
+      "index": 1782,
+      "caseNumber": "95/20",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + work-related injury + low + work-related permanent impairment - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1783,
+      "caseNumber": "1185/20",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show trimming + trees + accident employer + injury, but no outcome indicated"
+    },
+    {
+      "index": 1784,
+      "caseNumber": "1200/20",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show recurrence + low + injury + proposed resolution, but no outcome indicated"
+    },
+    {
+      "index": 1785,
+      "caseNumber": "1206/20",
+      "year": 2020,
+      "date": "2020-11-02",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'time limit + knee + return to her pre-injury job + employer' - time limit procedural issue"
+    },
+    {
+      "index": 1786,
+      "caseNumber": "130/19R",
+      "year": 2020,
+      "date": "2020-11-03",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R' = reconsideration + keywords 'supplement + pre-injury earnings + reconsideration' - reconsideration procedural"
+    },
+    {
+      "index": 1787,
+      "caseNumber": "854/20",
+      "year": 2020,
+      "date": "2020-11-03",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show employer + accident + incident + co-worker, but no outcome indicated"
+    },
+    {
+      "index": 1788,
+      "caseNumber": "1037/20",
+      "year": 2020,
+      "date": "2020-11-03",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'time limit + objection + benefits + six-month time' - time limit procedural issue"
+    },
+    {
+      "index": 1789,
+      "caseNumber": "1203/20",
+      "year": 2020,
+      "date": "2020-11-03",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + knee + deterioration + redetermination - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1790,
+      "caseNumber": "818/20",
+      "year": 2020,
+      "date": "2020-11-03",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show psychological + impairment + power tools + functioning, but no outcome indicated"
+    },
+    {
+      "index": 1791,
+      "caseNumber": "1222/20",
+      "year": 2020,
+      "date": "2020-11-04",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show measurements + shoulder + hip + injury, but no outcome indicated"
+    },
+    {
+      "index": 1792,
+      "caseNumber": "1155/20",
+      "year": 2020,
+      "date": "2020-11-04",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Earnings basis + recalculation + injury + average earnings - earnings calculation, no injury outcome"
+    },
+    {
+      "index": 1793,
+      "caseNumber": "1045/20",
+      "year": 2020,
+      "date": "2020-11-04",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show piriformis syndrome + work + injury + impairment, but no outcome indicated"
+    },
+    {
+      "index": 1794,
+      "caseNumber": "947/20",
+      "year": 2020,
+      "date": "2020-11-04",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show upper extremity + arm + shoulder + secondary condition, but no outcome indicated"
+    },
+    {
+      "index": 1795,
+      "caseNumber": "1159/20",
+      "year": 2020,
+      "date": "2020-11-04",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show neck + shoulder + pain + arm, but no outcome indicated"
+    },
+    {
+      "index": 1796,
+      "caseNumber": "1193/20",
+      "year": 2020,
+      "date": "2020-11-04",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show antalgic gait + aircast + ankle + pain, but no outcome indicated"
+    },
+    {
+      "index": 1797,
+      "caseNumber": "1219/20",
+      "year": 2020,
+      "date": "2020-11-04",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show accident + pain + memo + stated that the worker + work, but no outcome indicated"
+    },
+    {
+      "index": 1798,
+      "caseNumber": "751/20",
+      "year": 2020,
+      "date": "2020-11-05",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show sexual assault + gunpoint + phone + report (traumatic event), but no outcome indicated"
+    },
+    {
+      "index": 1799,
+      "caseNumber": "1040/20",
+      "year": 2020,
+      "date": "2020-11-05",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show fibromyalgia + impairment + psychological + assessment, but no outcome indicated"
+    },
+    {
+      "index": 1800,
+      "caseNumber": "1196/20",
+      "year": 2020,
+      "date": "2020-11-05",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Employer + taxi + independent operators + drivers + classification - coverage/classification issue, outcome uncertain"
+    },
+    {
+      "index": 1801,
+      "caseNumber": "901/20",
+      "year": 2020,
+      "date": "2020-11-05",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show sexual assault + traumatic mental stress + psychological + evidence, but no outcome indicated"
+    },
+    {
+      "index": 1802,
+      "caseNumber": "441/20",
+      "year": 2020,
+      "date": "2020-11-05",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show resignation + firefighter + stress + benefits, but no outcome indicated"
+    },
+    {
+      "index": 1803,
+      "caseNumber": "965/20",
+      "year": 2020,
+      "date": "2020-11-05",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'time limit + non-organic condition + six-month time + extension' - time extension procedural"
+    },
+    {
+      "index": 1804,
+      "caseNumber": "844/20",
+      "year": 2020,
+      "date": "2020-11-06",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show compensable + low + accident + clinical, but no outcome indicated"
+    },
+    {
+      "index": 1805,
+      "caseNumber": "933/20",
+      "year": 2020,
+      "date": "2020-11-06",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show shoulder + pain + upper + neck, but no outcome indicated"
+    },
+    {
+      "index": 1806,
+      "caseNumber": "1175/20",
+      "year": 2020,
+      "date": "2020-11-06",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show degenerative changes + pain + spine + injury, but no outcome indicated"
+    },
+    {
+      "index": 1807,
+      "caseNumber": "1211/20",
+      "year": 2020,
+      "date": "2020-11-06",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show dog + tracking + cardiac + heart attack, but no outcome indicated"
+    },
+    {
+      "index": 1808,
+      "caseNumber": "1212/20",
+      "year": 2020,
+      "date": "2020-11-06",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Disability benefits + offset + non-work-related injuries + work-related - offset calculation, outcome uncertain"
+    },
+    {
+      "index": 1809,
+      "caseNumber": "2101/19",
+      "year": 2020,
+      "date": "2020-11-06",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show loss + presbycusis + frequencies + noise, but no outcome indicated"
+    },
+    {
+      "index": 1810,
+      "caseNumber": "1149/20",
+      "year": 2020,
+      "date": "2020-11-06",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show bilateral upper extremities + ulnar nerve + duties + numbness, but no outcome indicated"
+    },
+    {
+      "index": 1811,
+      "caseNumber": "838/19R",
+      "year": 2020,
+      "date": "2020-11-06",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R' = reconsideration + keywords 'hip + reconsideration + metal-on-metal implant' - reconsideration procedural"
+    },
+    {
+      "index": 1812,
+      "caseNumber": "822/20",
+      "year": 2020,
+      "date": "2020-11-06",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show thoracic spine + low + chiropractic + treatment, but no outcome indicated"
+    },
+    {
+      "index": 1813,
+      "caseNumber": "1116/20",
+      "year": 2020,
+      "date": "2020-11-09",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show pain + work + heavy equipment operator + impairment, but no outcome indicated"
+    },
+    {
+      "index": 1814,
+      "caseNumber": "1035/20",
+      "year": 2020,
+      "date": "2020-11-09",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'time limit + intent to object + extension + learning' - time extension procedural"
+    },
+    {
+      "index": 1815,
+      "caseNumber": "1260/20",
+      "year": 2020,
+      "date": "2020-11-09",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + employer + proposed resolution + shoulder - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1816,
+      "caseNumber": "1162/20",
+      "year": 2020,
+      "date": "2020-11-09",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show meat + elbow tendinitis + duties + wrapped, but no outcome indicated"
+    },
+    {
+      "index": 1817,
+      "caseNumber": "1208/20",
+      "year": 2020,
+      "date": "2020-11-09",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show pain + bilateral hand + hands + exertional compartment syndrome, but no outcome indicated"
+    },
+    {
+      "index": 1818,
+      "caseNumber": "1209/20",
+      "year": 2020,
+      "date": "2020-11-09",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show custodian + noise exposure + snow blower + auto body repairer, but no outcome indicated"
+    },
+    {
+      "index": 1819,
+      "caseNumber": "1128/20",
+      "year": 2020,
+      "date": "2020-11-10",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show tibial plateau fracture + knee + accident + trailer hitch, but no outcome indicated"
+    },
+    {
+      "index": 1820,
+      "caseNumber": "1837/19",
+      "year": 2020,
+      "date": "2020-11-10",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show shoulder + rotator cuff tendinopathy + calcific tendonitis + wave machine, but no outcome indicated"
+    },
+    {
+      "index": 1821,
+      "caseNumber": "1024/20",
+      "year": 2020,
+      "date": "2020-11-10",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show work-related left knee injury + gait + uninjured + leg, but no outcome indicated"
+    },
+    {
+      "index": 1822,
+      "caseNumber": "1239/20",
+      "year": 2020,
+      "date": "2020-11-10",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pension + disability + average unskilled worker + medical examiners + rating - pension calculation, no injury outcome"
+    },
+    {
+      "index": 1823,
+      "caseNumber": "1204/20",
+      "year": 2020,
+      "date": "2020-11-10",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show employer + modified work + suitable + regular, but no outcome indicated"
+    },
+    {
+      "index": 1824,
+      "caseNumber": "904/20",
+      "year": 2020,
+      "date": "2020-11-12",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show knee + low + return to work + injury, but no outcome indicated"
+    },
+    {
+      "index": 1825,
+      "caseNumber": "371/20R",
+      "year": 2020,
+      "date": "2020-11-12",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R' = reconsideration + keywords 'clarification request + redetermination' - reconsideration clarification procedural"
+    },
+    {
+      "index": 1826,
+      "caseNumber": "1144/20",
+      "year": 2020,
+      "date": "2020-11-12",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Shoulder + pre-existing condition + work-related injury + work - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1827,
+      "caseNumber": "2370/18R2",
+      "year": 2020,
+      "date": "2020-11-12",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R2' = second reconsideration + keywords 'supplement + caseworker + vocational' - reconsideration procedural"
+    },
+    {
+      "index": 1828,
+      "caseNumber": "955/20",
+      "year": 2020,
+      "date": "2020-11-12",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show psychotraumatic disability + anxiety + impairment + mild, but no outcome indicated"
+    },
+    {
+      "index": 1829,
+      "caseNumber": "715/11R2",
+      "year": 2020,
+      "date": "2020-11-12",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R2' = second reconsideration + keywords 'evidence + report + reconsideration request' - reconsideration procedural"
+    },
+    {
+      "index": 1830,
+      "caseNumber": "1156/20",
+      "year": 2020,
+      "date": "2020-11-12",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + shoulder + posterior inferior + laxity - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1831,
+      "caseNumber": "2885/18",
+      "year": 2020,
+      "date": "2020-11-13",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show shoulder + neck + pain + steel, but no outcome indicated"
+    },
+    {
+      "index": 1832,
+      "caseNumber": "1814/19",
+      "year": 2020,
+      "date": "2020-11-13",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Shoulder + accident + pre-existing degenerative + pain - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1833,
+      "caseNumber": "3658/17I",
+      "year": 2020,
+      "date": "2020-11-13",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'I' = interim decision + keywords 'testimony + traumatic mental stress + representative' - procedural interim issue"
+    },
+    {
+      "index": 1834,
+      "caseNumber": "1241/20",
+      "year": 2020,
+      "date": "2020-11-13",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + injury + low + skull - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1835,
+      "caseNumber": "1118/20",
+      "year": 2020,
+      "date": "2020-11-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show frozen shoulder + labral + work + accident, but no outcome indicated"
+    },
+    {
+      "index": 1836,
+      "caseNumber": "2834/18",
+      "year": 2020,
+      "date": "2020-11-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pre-existing arthritis + paranoid psychosis + shock + entitled to benefits - entitlement discussion, outcome uncertain"
+    },
+    {
+      "index": 1837,
+      "caseNumber": "928/20",
+      "year": 2020,
+      "date": "2020-11-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show accident employer + rotator cuff + shoulder + ladder, but no outcome indicated"
+    },
+    {
+      "index": 1838,
+      "caseNumber": "1210/20",
+      "year": 2020,
+      "date": "2020-11-16",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing psychological + work + depression + anxiety - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1839,
+      "caseNumber": "831/20",
+      "year": 2020,
+      "date": "2020-11-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Offset + disability benefits + hydrocele + non-work-related injuries - offset calculation, outcome uncertain"
+    },
+    {
+      "index": 1840,
+      "caseNumber": "1624/19R",
+      "year": 2020,
+      "date": "2020-11-16",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R' = reconsideration + keywords 'discitis + reconsideration + process + compensable' - reconsideration procedural"
+    },
+    {
+      "index": 1841,
+      "caseNumber": "1228/20I",
+      "year": 2020,
+      "date": "2020-11-16",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'I' = interim decision + keywords 'newspapers + independent operator + employer + contractors' - procedural interim coverage issue"
+    },
+    {
+      "index": 1842,
+      "caseNumber": "1136/20",
+      "year": 2020,
+      "date": "2020-11-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show shoulder + injury + restrictions + pushing, but no outcome indicated"
+    },
+    {
+      "index": 1843,
+      "caseNumber": "1123/19",
+      "year": 2020,
+      "date": "2020-11-16",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show coworker + accident + ladder + low, but no outcome indicated"
+    },
+    {
+      "index": 1844,
+      "caseNumber": "1277/20",
+      "year": 2020,
+      "date": "2020-11-17",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show myofascial pain syndrome + disruption + low back pain + injury, but no outcome indicated"
+    },
+    {
+      "index": 1845,
+      "caseNumber": "764/16",
+      "year": 2020,
+      "date": "2020-11-17",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show low back pain + injury + evidence + symptoms, but no outcome indicated"
+    },
+    {
+      "index": 1846,
+      "caseNumber": "1818/18R2",
+      "year": 2020,
+      "date": "2020-11-17",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R2' = second reconsideration + keywords 'reconsideration request + reconsideration on its own motion + video surveillance' - reconsideration procedural"
+    },
+    {
+      "index": 1847,
+      "caseNumber": "1036/20",
+      "year": 2020,
+      "date": "2020-11-17",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'wife + request for an re-assessment + six-month time limit + object' - time limit procedural issue"
+    },
+    {
+      "index": 1848,
+      "caseNumber": "1297/20",
+      "year": 2020,
+      "date": "2020-11-17",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + employer + pre-existing conditions + severity - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1849,
+      "caseNumber": "1360/17R2",
+      "year": 2020,
+      "date": "2020-11-17",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R2' = second reconsideration + keywords 'ear + loss + noise exposure' - reconsideration procedural"
+    },
+    {
+      "index": 1850,
+      "caseNumber": "1275/20",
+      "year": 2020,
+      "date": "2020-11-17",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show low back pain + liftgate + accident + injury, but no outcome indicated"
+    },
+    {
+      "index": 1851,
+      "caseNumber": "397/20",
+      "year": 2020,
+      "date": "2020-11-17",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show sexual dysfunction + low + permanent disability + pension, but no outcome indicated"
+    },
+    {
+      "index": 1852,
+      "caseNumber": "1025/20",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show elbow + cubital tunnel syndrome + nerve + ulnar, but no outcome indicated"
+    },
+    {
+      "index": 1853,
+      "caseNumber": "1263/20",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show bilateral shoulder calcific tendonitis + wrist + synovial cyst + epicondylitis, but no outcome indicated"
+    },
+    {
+      "index": 1854,
+      "caseNumber": "1981/19",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "French/English keywords: travailleur + worker + douleur + genou + psychotraumatic disability, but no outcome indicated"
+    },
+    {
+      "index": 1855,
+      "caseNumber": "1295/20",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing right shoulder condition + unspool + employer + major pre-existing condition - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1856,
+      "caseNumber": "1269/20",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Benefits for chronic mental stress + wear bullet-proof vests + work-related stressor + entitled to benefits for chronic - entitlement discussion, outcome uncertain"
+    },
+    {
+      "index": 1857,
+      "caseNumber": "1233/20",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show migraine headaches + job duties + neck + significant contributing factor, but no outcome indicated"
+    },
+    {
+      "index": 1858,
+      "caseNumber": "1831/19I",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'I' = interim decision + keywords 'electrocution + brain injury + apathy + accident' - procedural interim issue"
+    },
+    {
+      "index": 1859,
+      "caseNumber": "1231/20",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show bilateral shoulders + cervical + upper + assessors, but no outcome indicated"
+    },
+    {
+      "index": 1860,
+      "caseNumber": "320/19",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show groin + aisle + injury + abdominal wall, but no outcome indicated"
+    },
+    {
+      "index": 1861,
+      "caseNumber": "1029/20",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show recurrence + injury + compatibility + pain, but no outcome indicated"
+    },
+    {
+      "index": 1862,
+      "caseNumber": "1266/20",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + lateral epicondylitis + bilateral + greater severity than a normal - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1863,
+      "caseNumber": "3806/17",
+      "year": 2020,
+      "date": "2020-11-18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show knee + earnings + glazier + glass, but no outcome indicated"
+    },
+    {
+      "index": 1864,
+      "caseNumber": "1138/20",
+      "year": 2020,
+      "date": "2020-11-19",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + disc + injury + severity - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1865,
+      "caseNumber": "1304/20",
+      "year": 2020,
+      "date": "2020-11-19",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition + knee + injury + accident - pre-existing analysis, outcome uncertain"
+    },
+    {
+      "index": 1866,
+      "caseNumber": "2021/17R3",
+      "year": 2020,
+      "date": "2020-11-19",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R3' = third reconsideration + keywords 'work-related injury + entitlement for the recognition + psychological' - reconsideration procedural"
+    },
+    {
+      "index": 1867,
+      "caseNumber": "623/20",
+      "year": 2020,
+      "date": "2020-11-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show blood pressure + stroke + migraine + vascular risk factors, but no outcome indicated"
+    },
+    {
+      "index": 1868,
+      "caseNumber": "1015/20",
+      "year": 2020,
+      "date": "2020-11-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show tooth + teeth + dental + restoration, but no outcome indicated"
+    },
+    {
+      "index": 1869,
+      "caseNumber": "870/20",
+      "year": 2020,
+      "date": "2020-11-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show accident + work-related injury + pain + anxiety, but no outcome indicated"
+    },
+    {
+      "index": 1870,
+      "caseNumber": "873/20",
+      "year": 2020,
+      "date": "2020-11-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show modified duties + lower back pain + permanent impairment + supervisor, but no outcome indicated"
+    },
+    {
+      "index": 1871,
+      "caseNumber": "1313/20",
+      "year": 2020,
+      "date": "2020-11-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show return to gainful employment + proposed resolution + injury + psychological, but no outcome indicated"
+    },
+    {
+      "index": 1872,
+      "caseNumber": "1279/20",
+      "year": 2020,
+      "date": "2020-11-19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show forklift + degenerative disc disease + pain + low, but no outcome indicated"
+    },
+    {
+      "index": 1873,
+      "caseNumber": "1299/20",
+      "year": 2020,
+      "date": "2020-11-20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder + surgery + benefits + indicated that the worker + lifting - surgery/benefits discussion, outcome uncertain"
+    },
+    {
+      "index": 1874,
+      "caseNumber": "1054/20",
+      "year": 2020,
+      "date": "2020-11-20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show pain + labour market re-entry + injury + entitlement, but no outcome indicated"
+    },
+    {
+      "index": 1875,
+      "caseNumber": "859/20",
+      "year": 2020,
+      "date": "2020-11-20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show ventral hernia + enterocutaneous fistula + accident + initial entitlement, but no outcome indicated"
+    },
+    {
+      "index": 1876,
+      "caseNumber": "948/20",
+      "year": 2020,
+      "date": "2020-11-20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show psychotraumatic disability + entry level wages + anxiety + benefits, but no outcome indicated"
+    },
+    {
+      "index": 1877,
+      "caseNumber": "1034/20",
+      "year": 2020,
+      "date": "2020-11-20",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'six-month time limit + delay + entitlement + objection' - time limit procedural issue"
+    },
+    {
+      "index": 1878,
+      "caseNumber": "1296/20I",
+      "year": 2020,
+      "date": "2020-11-23",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'I' = interim decision + keywords 'request for an adjournment + representative + carpal tunnel syndrome' - procedural interim adjournment issue"
+    },
+    {
+      "index": 1879,
+      "caseNumber": "1131/20",
+      "year": 2020,
+      "date": "2020-11-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show medical cannabis + neuropathic pain + health care + policy, but no outcome indicated"
+    },
+    {
+      "index": 1880,
+      "caseNumber": "1230/20",
+      "year": 2020,
+      "date": "2020-11-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show ring trigger finger as causally + injury + hand + accident, but no outcome indicated"
+    },
+    {
+      "index": 1881,
+      "caseNumber": "1302/20",
+      "year": 2020,
+      "date": "2020-11-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show vocational rehabilitation program + carpal tunnel + pension + pre-accident earnings, but no outcome indicated"
+    },
+    {
+      "index": 1882,
+      "caseNumber": "938/20",
+      "year": 2020,
+      "date": "2020-11-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "French/English keywords: épaule gauche + accident indemnisable + travailleur + shoulder, but no outcome indicated"
+    },
+    {
+      "index": 1883,
+      "caseNumber": "987/20",
+      "year": 2020,
+      "date": "2020-11-23",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show surgery + pain + earnings + work, but no outcome indicated"
+    },
+    {
+      "index": 1884,
+      "caseNumber": "1489/18R2",
+      "year": 2020,
+      "date": "2020-11-24",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R2' = second reconsideration + keywords 'benefits + reconsideration request + restrictions' - reconsideration procedural"
+    },
+    {
+      "index": 1885,
+      "caseNumber": "1330/20",
+      "year": 2020,
+      "date": "2020-11-24",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show proposed resolution + psychological + noted + impairment, but no outcome indicated"
+    },
+    {
+      "index": 1886,
+      "caseNumber": "3274/17",
+      "year": 2020,
+      "date": "2020-11-24",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show ear + noise exposure + loss + thresholds, but no outcome indicated"
+    },
+    {
+      "index": 1887,
+      "caseNumber": "1324/20I",
+      "year": 2020,
+      "date": "2020-11-24",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'I' = interim decision + keywords 'attend + representative + inactive + cervical thoracic lumbar spine' - procedural interim issue"
+    },
+    {
+      "index": 1888,
+      "caseNumber": "1303/20",
+      "year": 2020,
+      "date": "2020-11-24",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show incidents + students + mental stress + medical, but no outcome indicated"
+    },
+    {
+      "index": 1889,
+      "caseNumber": "950/20",
+      "year": 2020,
+      "date": "2020-11-24",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Long-term rate + short-term average earnings + recalculation period + long-term earnings - earnings calculation, no injury outcome"
+    },
+    {
+      "index": 1890,
+      "caseNumber": "1215/20",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Keywords focus on 'post-traumatic stress disorder + psychotraumatic entitlement + time limit to object + extension' - time extension procedural"
+    },
+    {
+      "index": 1891,
+      "caseNumber": "1218/20I",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'I' = interim decision + keywords 'employer + time period under consideration + medical reporting' - procedural interim issue"
+    },
+    {
+      "index": 1892,
+      "caseNumber": "994/20",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Motor vehicle accident + substantial connection to the province + non-resident worker + truck - jurisdictional issue, outcome uncertain"
+    },
+    {
+      "index": 1893,
+      "caseNumber": "1236/20",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show anxiety + part-time work + panic attacks + injury, but no outcome indicated"
+    },
+    {
+      "index": 1894,
+      "caseNumber": "1288/20",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show low back strain + permanent impairment + disc herniation + injury, but no outcome indicated"
+    },
+    {
+      "index": 1895,
+      "caseNumber": "1325/20",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show scanner + carpal tunnel + traps + bilateral, but no outcome indicated"
+    },
+    {
+      "index": 1896,
+      "caseNumber": "1198/20",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show employer + retire + rating + work, but no outcome indicated"
+    },
+    {
+      "index": 1897,
+      "caseNumber": "951/20",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show limp + antalgic gait + knee replacement + osteoarthritis, but no outcome indicated"
+    },
+    {
+      "index": 1898,
+      "caseNumber": "1265/20",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show pain + psychological + exceptional circumstances + disc, but no outcome indicated"
+    },
+    {
+      "index": 1899,
+      "caseNumber": "20/19R",
+      "year": 2020,
+      "date": "2020-11-25",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Case number ends with 'R' = reconsideration + keywords 'reconsideration + knee + entitlement + prior menisci damage identified' - reconsideration procedural"
+    }
+  ]
+}

@@ -22,11 +22,15 @@ const MASTER_FILE = 'data/comprehensive-extraction/wsiat-classified.json';
 function findLatestClassifiedBatch() {
   const batchDir = path.join(__dirname, '..', BATCH_DIR);
   const files = fs.readdirSync(batchDir)
-    .filter(f => f.includes('-CLASSIFIED.json'))
-    .sort();
+    .filter(f => f.includes('-MERGED.json'))
+    .sort((a, b) => {
+      const numA = parseInt(a.match(/batch-(\d+)/)?.[1] || '0');
+      const numB = parseInt(b.match(/batch-(\d+)/)?.[1] || '0');
+      return numA - numB;
+    });
   
   if (files.length === 0) {
-    console.log('❌ No CLASSIFIED batches found. Did you classify a batch yet?');
+    console.log('❌ No MERGED batches found. Did you classify a batch yet?');
     console.log('   Run: node scripts/prepare-ai-batch.mjs to create a batch first\n');
     process.exit(1);
   }

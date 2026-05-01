@@ -31,7 +31,7 @@ const YEARLY_FILES = [
   'data/tribunal-decisions/onwsiat-2026-ultra-slow.json',
 ];
 
-const BATCH_SIZE = 50; // Small batches for manual review
+const BATCH_SIZE = 500; // Optimized batch size for complete classification
 const PROGRESS_FILE = 'data/comprehensive-extraction/ai-progress.json';
 const BATCH_DIR = 'data/comprehensive-extraction/ai-batches';
 

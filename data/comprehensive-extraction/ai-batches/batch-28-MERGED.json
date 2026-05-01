@@ -1,0 +1,2966 @@
+{
+  "batchNumber": 28,
+  "decisions": [
+    {
+      "index": 2722,
+      "caseNumber": "556/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Keywords show work-related injury with pre-existing osteoarthritis, but no clear outcome indicators"
+    },
+    {
+      "index": 2723,
+      "caseNumber": "1255/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified duties and benefits mentioned, but no outcome determination"
+    },
+    {
+      "index": 2724,
+      "caseNumber": "617/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Policy/administrative matter about backdating allowances"
+    },
+    {
+      "index": 2725,
+      "caseNumber": "1323/20",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Retroactive adjustment for pre-existing condition liability"
+    },
+    {
+      "index": 2726,
+      "caseNumber": "510/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychotraumatic disability and depression mentioned, no clear outcome"
+    },
+    {
+      "index": 2727,
+      "caseNumber": "323/18R3",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R3 suffix indicates third reconsideration - procedural"
+    },
+    {
+      "index": 2728,
+      "caseNumber": "648/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Parking lot accident, benefits under insurance plan mentioned"
+    },
+    {
+      "index": 2729,
+      "caseNumber": "469/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Substantial work-related stressor, workload mentioned"
+    },
+    {
+      "index": 2730,
+      "caseNumber": "1011/16R2",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R2 suffix indicates second reconsideration - procedural"
+    },
+    {
+      "index": 2731,
+      "caseNumber": "1502/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pre-injury earnings and rating issues, no clear outcome"
+    },
+    {
+      "index": 2732,
+      "caseNumber": "1465/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Impairment and psychotraumatic disability quantum issues"
+    },
+    {
+      "index": 2733,
+      "caseNumber": "555/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Retired worker, modified work, entitlement to benefits"
+    },
+    {
+      "index": 2734,
+      "caseNumber": "559/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified work for concussion and neck strain"
+    },
+    {
+      "index": 2735,
+      "caseNumber": "205/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Traumatic brain injury and psychotraumatic disability"
+    },
+    {
+      "index": 2736,
+      "caseNumber": "1361/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder injury entitlement, no clear outcome"
+    },
+    {
+      "index": 2737,
+      "caseNumber": "19/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Trigger finger and carpal tunnel syndrome"
+    },
+    {
+      "index": 2738,
+      "caseNumber": "23/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Telehandler accident, employer mentioned"
+    },
+    {
+      "index": 2739,
+      "caseNumber": "37/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Hernia benefits and proposed resolution"
+    },
+    {
+      "index": 2740,
+      "caseNumber": "588/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder, headaches, compensable accident"
+    },
+    {
+      "index": 2741,
+      "caseNumber": "423/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain, bilateral shoulder, psychotraumatic disability"
+    },
+    {
+      "index": 2742,
+      "caseNumber": "656/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Ankle strain injury and disablement"
+    },
+    {
+      "index": 2743,
+      "caseNumber": "1474/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Return to work and modified duties"
+    },
+    {
+      "index": 2744,
+      "caseNumber": "540/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychotraumatic disability and noise intolerance"
+    },
+    {
+      "index": 2745,
+      "caseNumber": "397/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Tinnitus and post-concussive syndrome"
+    },
+    {
+      "index": 2746,
+      "caseNumber": "578/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Benefits and proposed resolution"
+    },
+    {
+      "index": 2747,
+      "caseNumber": "582/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychotraumatic disability and anxiety impairment"
+    },
+    {
+      "index": 2748,
+      "caseNumber": "277/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Accident with neck pain and shoulder"
+    },
+    {
+      "index": 2749,
+      "caseNumber": "2032/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder and carts accident"
+    },
+    {
+      "index": 2750,
+      "caseNumber": "536/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Foot self-care and swelling"
+    },
+    {
+      "index": 2751,
+      "caseNumber": "1469/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Employability and lock-in date benefits"
+    },
+    {
+      "index": 2752,
+      "caseNumber": "618/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Carpal tunnel syndrome from repetitive work"
+    },
+    {
+      "index": 2753,
+      "caseNumber": "1484/20I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - procedural"
+    },
+    {
+      "index": 2754,
+      "caseNumber": "726/15R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - procedural"
+    },
+    {
+      "index": 2755,
+      "caseNumber": "655/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pre-existing wrist condition and accident"
+    },
+    {
+      "index": 2756,
+      "caseNumber": "1467/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Biceps and knee modified duties"
+    },
+    {
+      "index": 2757,
+      "caseNumber": "482/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Hearing loss and noise exposure"
+    },
+    {
+      "index": 2758,
+      "caseNumber": "110/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Labour market re-entry and entry-level wage"
+    },
+    {
+      "index": 2759,
+      "caseNumber": "1473/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Benefits and plant closure affecting return to work"
+    },
+    {
+      "index": 2760,
+      "caseNumber": "612/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Disc protrusion and pain benefits"
+    },
+    {
+      "index": 2761,
+      "caseNumber": "653/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Neck permanent disability and soft tissue"
+    },
+    {
+      "index": 2762,
+      "caseNumber": "31/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder rotator cuff tear and knee accident"
+    },
+    {
+      "index": 2763,
+      "caseNumber": "667/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Bilateral shoulder redetermination and deterioration"
+    },
+    {
+      "index": 2764,
+      "caseNumber": "593/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder and elbow injury with duties"
+    },
+    {
+      "index": 2765,
+      "caseNumber": "339/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Surgery entitlement for wrist impairment"
+    },
+    {
+      "index": 2766,
+      "caseNumber": "583/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee and low pain deterioration"
+    },
+    {
+      "index": 2767,
+      "caseNumber": "16/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder return to work and psychotraumatic disability"
+    },
+    {
+      "index": 2768,
+      "caseNumber": "508/21",
+      "outcome": "partial",
+      "confidence": "medium",
+      "reasoning": "Proposed resolution mentions elemental service job category and minimum wage earnings"
+    },
+    {
+      "index": 2769,
+      "caseNumber": "661/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Grapple skidder injury and low regular duties"
+    },
+    {
+      "index": 2770,
+      "caseNumber": "581/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain reported during grocery shopping"
+    },
+    {
+      "index": 2771,
+      "caseNumber": "95/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Typing injury and earnings/hand issues"
+    },
+    {
+      "index": 2772,
+      "caseNumber": "676/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Impairment and bilateral knee condition"
+    },
+    {
+      "index": 2773,
+      "caseNumber": "690/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - procedural"
+    },
+    {
+      "index": 2774,
+      "caseNumber": "215/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified work offered by employer"
+    },
+    {
+      "index": 2775,
+      "caseNumber": "1470/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Hand-arm vibration and blanching"
+    },
+    {
+      "index": 2776,
+      "caseNumber": "43/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Ankle pre-existing condition with ongoing injury"
+    },
+    {
+      "index": 2777,
+      "caseNumber": "353/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Thresholds and ear hearing loss"
+    },
+    {
+      "index": 2778,
+      "caseNumber": "303/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Chronic pain and return to work"
+    },
+    {
+      "index": 2779,
+      "caseNumber": "3904/17",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder rotator cuff partial thickness tear"
+    },
+    {
+      "index": 2780,
+      "caseNumber": "495/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - procedural"
+    },
+    {
+      "index": 2781,
+      "caseNumber": "545/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Foot accident with pre-existing condition"
+    },
+    {
+      "index": 2782,
+      "caseNumber": "489/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder rotator cuff tear requiring surgery"
+    },
+    {
+      "index": 2783,
+      "caseNumber": "157/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Traumatic mental stress with substantial work-related stressor - possible entitlement"
+    },
+    {
+      "index": 2784,
+      "caseNumber": "176/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Breast condition - mastitis and abscess"
+    },
+    {
+      "index": 2785,
+      "caseNumber": "509/21",
+      "outcome": "partial",
+      "confidence": "medium",
+      "reasoning": "Keywords mention benefits offset by two-thirds"
+    },
+    {
+      "index": 2786,
+      "caseNumber": "1253/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain and significant deterioration"
+    },
+    {
+      "index": 2787,
+      "caseNumber": "57/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Disc herniation and pain"
+    },
+    {
+      "index": 2788,
+      "caseNumber": "679/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - procedural adjournment"
+    },
+    {
+      "index": 2789,
+      "caseNumber": "192/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pepper spray lachrymator exposure"
+    },
+    {
+      "index": 2790,
+      "caseNumber": "304/19R2",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R2 suffix indicates second reconsideration - procedural"
+    },
+    {
+      "index": 2791,
+      "caseNumber": "126/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Cost relief for moderate pre-existing condition"
+    },
+    {
+      "index": 2792,
+      "caseNumber": "230/20R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - procedural"
+    },
+    {
+      "index": 2793,
+      "caseNumber": "1466/20",
+      "outcome": "allowed",
+      "confidence": "medium",
+      "reasoning": "Keywords state 'entitled to full benefits' for asthma from scented air fresheners"
+    },
+    {
+      "index": 2794,
+      "caseNumber": "123/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Kneeling welder with bilateral knee chondromalacia"
+    },
+    {
+      "index": 2795,
+      "caseNumber": "688/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Work and injury with reach truck"
+    },
+    {
+      "index": 2796,
+      "caseNumber": "552/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Earnings and labour market re-entry"
+    },
+    {
+      "index": 2797,
+      "caseNumber": "622/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Pre-existing calcific tendinosis liability determination"
+    },
+    {
+      "index": 2798,
+      "caseNumber": "705/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Short-term layoff and knee tendon issues"
+    },
+    {
+      "index": 2799,
+      "caseNumber": "244/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain symptoms and compensable accident"
+    },
+    {
+      "index": 2800,
+      "caseNumber": "494/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee accident and tear with graft"
+    },
+    {
+      "index": 2801,
+      "caseNumber": "62/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Earnings during incarceration - sedentary work"
+    },
+    {
+      "index": 2802,
+      "caseNumber": "597/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee injury from door accident"
+    },
+    {
+      "index": 2803,
+      "caseNumber": "121/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Ankle work-related injury and ligament"
+    },
+    {
+      "index": 2804,
+      "caseNumber": "187/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychological condition and panic attacks"
+    },
+    {
+      "index": 2805,
+      "caseNumber": "511/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Bus driver part-time work and proposed resolution"
+    },
+    {
+      "index": 2806,
+      "caseNumber": "122/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Recurrence preventing return to pre-injury work"
+    },
+    {
+      "index": 2807,
+      "caseNumber": "104/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - procedural"
+    },
+    {
+      "index": 2808,
+      "caseNumber": "345/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder tears and subscapularis impairment"
+    },
+    {
+      "index": 2809,
+      "caseNumber": "1334/19R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - procedural"
+    },
+    {
+      "index": 2810,
+      "caseNumber": "936/20",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Disc bulge with pre-existing spondylolisthesis"
+    },
+    {
+      "index": 2811,
+      "caseNumber": "642/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Neck work impairment and shoulder"
+    },
+    {
+      "index": 2812,
+      "caseNumber": "1322/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Ankle pain for dispatcher/truck driver"
+    },
+    {
+      "index": 2813,
+      "caseNumber": "660/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Chiropractic treatment preventing return to pre-injury"
+    },
+    {
+      "index": 2814,
+      "caseNumber": "579/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Neck and shoulder machine radiculopathy"
+    },
+    {
+      "index": 2815,
+      "caseNumber": "487/19",
+      "outcome": "partial",
+      "confidence": "medium",
+      "reasoning": "Keywords state 'worker is entitled' to benefits for permanent impairment"
+    },
+    {
+      "index": 2816,
+      "caseNumber": "289/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Wrist and shoulder rotator cuff issues"
+    },
+    {
+      "index": 2817,
+      "caseNumber": "2217/15R5",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R5 suffix indicates fifth reconsideration - procedural overpayment/jurisdiction"
+    },
+    {
+      "index": 2818,
+      "caseNumber": "77/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder injury accident with frames"
+    },
+    {
+      "index": 2819,
+      "caseNumber": "740/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Entry-level wage and labour market re-entry"
+    },
+    {
+      "index": 2820,
+      "caseNumber": "125/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Non-permanent employment benefits and average earnings"
+    },
+    {
+      "index": 2821,
+      "caseNumber": "124/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychotraumatic disability impairment and depression"
+    },
+    {
+      "index": 2822,
+      "caseNumber": "702/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Time limit extension for plan and weekly wage"
+    },
+    {
+      "index": 2823,
+      "caseNumber": "742/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - adjournment procedural"
+    },
+    {
+      "index": 2824,
+      "caseNumber": "668/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee bilateral chondromalacia patella for flooring installer"
+    },
+    {
+      "index": 2825,
+      "caseNumber": "529/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing type acromion with rotator cuff tear and recovery"
+    },
+    {
+      "index": 2826,
+      "caseNumber": "748/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing lateral meniscus knee impairment"
+    },
+    {
+      "index": 2827,
+      "caseNumber": "147/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Mild shoulder bursitis condition and accident"
+    },
+    {
+      "index": 2828,
+      "caseNumber": "100/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Crewman shoulder digging with small biceps effusion"
+    },
+    {
+      "index": 2829,
+      "caseNumber": "728/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pre-injury earnings and labour market re-entry"
+    },
+    {
+      "index": 2830,
+      "caseNumber": "3273/17",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Cubital tunnel syndrome bilateral from solar panels work"
+    },
+    {
+      "index": 2831,
+      "caseNumber": "1470/17",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Security guard stopped working - earnings issues"
+    },
+    {
+      "index": 2832,
+      "caseNumber": "203/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee earning capacity and pre-injury earnings"
+    },
+    {
+      "index": 2833,
+      "caseNumber": "206/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Pre-existing conditions and secondary condition vasculitis - administrative"
+    },
+    {
+      "index": 2834,
+      "caseNumber": "272/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Thumb metacarpal carpal tunnel and osteoarthritis"
+    },
+    {
+      "index": 2835,
+      "caseNumber": "757/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - agenda procedural"
+    },
+    {
+      "index": 2836,
+      "caseNumber": "514/21",
+      "outcome": "partial",
+      "confidence": "high",
+      "reasoning": "Keywords explicitly state 'worker has entitlement to partial' and 'ability to earn minimum' wages"
+    },
+    {
+      "index": 2837,
+      "caseNumber": "1923/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Neck pain and spine accident"
+    },
+    {
+      "index": 2838,
+      "caseNumber": "692/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee pain osteoarthritis work-related injury"
+    },
+    {
+      "index": 2839,
+      "caseNumber": "751/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Employer classification - lumber yard business classification issue"
+    },
+    {
+      "index": 2840,
+      "caseNumber": "279/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain and injury with functional restrictions"
+    },
+    {
+      "index": 2841,
+      "caseNumber": "246/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Employer retroactive adjustment and relief - administrative"
+    },
+    {
+      "index": 2842,
+      "caseNumber": "366/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Wrist wage loss disability supplement"
+    },
+    {
+      "index": 2843,
+      "caseNumber": "443/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Entitlement for psychotraumatic disability and shoulder injury"
+    },
+    {
+      "index": 2844,
+      "caseNumber": "1168/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Low back pain work-related accident continued"
+    },
+    {
+      "index": 2845,
+      "caseNumber": "737/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing chronic regional pain syndrome with anxiety"
+    },
+    {
+      "index": 2846,
+      "caseNumber": "695/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Employer exposure to asbestos disease"
+    },
+    {
+      "index": 2847,
+      "caseNumber": "2189/18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain work-related injury and psychotraumatic disability"
+    },
+    {
+      "index": 2848,
+      "caseNumber": "132/21R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - hip surgery procedural"
+    },
+    {
+      "index": 2849,
+      "caseNumber": "646/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Amputation foot long-term average earnings"
+    },
+    {
+      "index": 2850,
+      "caseNumber": "694/21E",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "E suffix indicates time limit extension - procedural delay"
+    },
+    {
+      "index": 2851,
+      "caseNumber": "684/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain injury hip organic"
+    },
+    {
+      "index": 2852,
+      "caseNumber": "415/21",
+      "outcome": "allowed",
+      "confidence": "medium",
+      "reasoning": "Keywords state 'worker is entitled to full' benefits"
+    },
+    {
+      "index": 2853,
+      "caseNumber": "441/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychological impairment anxiety and pain"
+    },
+    {
+      "index": 2854,
+      "caseNumber": "438/21",
+      "outcome": "partial",
+      "confidence": "high",
+      "reasoning": "Keywords mention 'worker is entitled to full' for permanent impairment and 'partial benefits based on self-employment'"
+    },
+    {
+      "index": 2855,
+      "caseNumber": "475/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Impairment psychotraumatic disability with noise intolerance"
+    },
+    {
+      "index": 2856,
+      "caseNumber": "693/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Labour market re-entry and tinnitus entitlement"
+    },
+    {
+      "index": 2857,
+      "caseNumber": "483/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Work injury shoulder and psychotraumatic disability"
+    },
+    {
+      "index": 2858,
+      "caseNumber": "94/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Accident with manifold instruments and trays"
+    },
+    {
+      "index": 2859,
+      "caseNumber": "734/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - entitlement procedural"
+    },
+    {
+      "index": 2860,
+      "caseNumber": "73/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Arm work deburring modified"
+    },
+    {
+      "index": 2861,
+      "caseNumber": "2104/19R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - rating procedural"
+    },
+    {
+      "index": 2862,
+      "caseNumber": "439/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing knee condition with impairment rating"
+    },
+    {
+      "index": 2863,
+      "caseNumber": "659/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Surviving spouses labour market re-entry assessment - administrative"
+    },
+    {
+      "index": 2864,
+      "caseNumber": "1252/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder customer service benefits earning minimum wage"
+    },
+    {
+      "index": 2865,
+      "caseNumber": "652/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Return to work knee labour market re-entry"
+    },
+    {
+      "index": 2866,
+      "caseNumber": "138/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Heavy equipment operator suitable functional abilities"
+    },
+    {
+      "index": 2867,
+      "caseNumber": "576/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Low back pain entitlement injury disruption"
+    },
+    {
+      "index": 2868,
+      "caseNumber": "1203/20R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - knee deterioration procedural"
+    },
+    {
+      "index": 2869,
+      "caseNumber": "231/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Return to work labour market re-entry with boss/employer issues"
+    },
+    {
+      "index": 2870,
+      "caseNumber": "279/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Orthopaedic footwear with custom orthotics for foot"
+    },
+    {
+      "index": 2871,
+      "caseNumber": "1886/12",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Neck cervical spine shoulder injury"
+    },
+    {
+      "index": 2872,
+      "caseNumber": "172/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing conditions worker employer accident"
+    },
+    {
+      "index": 2873,
+      "caseNumber": "703/21E",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "E suffix indicates time limit extension - six-month statutory delay procedural"
+    },
+    {
+      "index": 2874,
+      "caseNumber": "1251/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Unable to perform any work with impairment chronic pain"
+    },
+    {
+      "index": 2875,
+      "caseNumber": "557/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Rotator cuff tear pump truck shoulder pain"
+    },
+    {
+      "index": 2876,
+      "caseNumber": "771/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition and disability with prolonged recovery"
+    },
+    {
+      "index": 2877,
+      "caseNumber": "319/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Report symptoms cognitive doctor"
+    },
+    {
+      "index": 2878,
+      "caseNumber": "169/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Competitively unemployable machine operator"
+    },
+    {
+      "index": 2879,
+      "caseNumber": "696/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder physiotherapist permanent impairment functional"
+    },
+    {
+      "index": 2880,
+      "caseNumber": "440/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Knee amputation snow removal policy laundry services - administrative"
+    },
+    {
+      "index": 2881,
+      "caseNumber": "382/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Chronic pain fibromyalgia soft tissue injuries hip"
+    },
+    {
+      "index": 2882,
+      "caseNumber": "1056/17R2",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R2 suffix indicates second reconsideration - threshold test procedural"
+    },
+    {
+      "index": 2883,
+      "caseNumber": "855/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Suitable part-time basis skills wrist"
+    },
+    {
+      "index": 2884,
+      "caseNumber": "689/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Accident work consciousness doctor"
+    },
+    {
+      "index": 2885,
+      "caseNumber": "1171/20I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - intervenors batch procedural"
+    },
+    {
+      "index": 2886,
+      "caseNumber": "1169/20I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - intervenors batch procedural"
+    },
+    {
+      "index": 2887,
+      "caseNumber": "2308/18R2",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R2 suffix indicates second reconsideration - psychotraumatic disability procedural"
+    },
+    {
+      "index": 2888,
+      "caseNumber": "1172/20I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - intervenors batch procedural"
+    },
+    {
+      "index": 2889,
+      "caseNumber": "1262/20",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Pre-existing condition employer retroactive adjustment cost relief - administrative"
+    },
+    {
+      "index": 2890,
+      "caseNumber": "1170/20I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - intervenors batch procedural"
+    },
+    {
+      "index": 2891,
+      "caseNumber": "766/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Post-concussion syndrome injury wrist fracture consciousness"
+    },
+    {
+      "index": 2892,
+      "caseNumber": "797/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Time limit extension for employer - hands onset disablement"
+    },
+    {
+      "index": 2893,
+      "caseNumber": "796/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Employer time limit extension for knee"
+    },
+    {
+      "index": 2894,
+      "caseNumber": "285/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain degenerative disc disease contemporaneous complaints"
+    },
+    {
+      "index": 2895,
+      "caseNumber": "173/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Thickness tear tears rotator cuff shoulder"
+    },
+    {
+      "index": 2896,
+      "caseNumber": "681/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Hip superior lateral acetabulum injury knee"
+    },
+    {
+      "index": 2897,
+      "caseNumber": "137/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Soft tissue injuries work entitlement to benefits contusions"
+    },
+    {
+      "index": 2898,
+      "caseNumber": "768/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Sternoclavicular joint thoracic outlet syndrome cervical diagnosis"
+    },
+    {
+      "index": 2899,
+      "caseNumber": "334/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing ankylosing spondylitis accident lumbar spine"
+    },
+    {
+      "index": 2900,
+      "caseNumber": "794/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Employer medical records redactions cost relief - administrative"
+    },
+    {
+      "index": 2901,
+      "caseNumber": "337/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee accident clinical work-related injury"
+    },
+    {
+      "index": 2902,
+      "caseNumber": "266/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Antalgic gait cyst hip knee"
+    },
+    {
+      "index": 2903,
+      "caseNumber": "649/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Wrist rating significant deterioration impairment"
+    },
+    {
+      "index": 2904,
+      "caseNumber": "683/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Low back pain psychotraumatic disability depression impairment"
+    },
+    {
+      "index": 2905,
+      "caseNumber": "1228/20",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Independent operator newspapers worker employer - employment status determination"
+    },
+    {
+      "index": 2906,
+      "caseNumber": "722/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Lumbar spine work low injury"
+    },
+    {
+      "index": 2907,
+      "caseNumber": "424/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychotraumatic disability dizziness cognitive headaches"
+    },
+    {
+      "index": 2908,
+      "caseNumber": "189/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - left elbow entitlement procedural"
+    },
+    {
+      "index": 2909,
+      "caseNumber": "605/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder injury work-related injury arm secondary"
+    },
+    {
+      "index": 2910,
+      "caseNumber": "428/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Non-permanent employment layoff long-term earnings seasonal"
+    },
+    {
+      "index": 2911,
+      "caseNumber": "442/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Pre-existing condition employer retroactive adjustment severity relief - administrative"
+    },
+    {
+      "index": 2912,
+      "caseNumber": "76/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Hearing loss noise exposure school bus audiologist"
+    },
+    {
+      "index": 2913,
+      "caseNumber": "543/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Low back pain injury work clinical"
+    },
+    {
+      "index": 2914,
+      "caseNumber": "2253/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee condition low back condition limp pain"
+    },
+    {
+      "index": 2915,
+      "caseNumber": "146/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Disruption injury chronic pain entitlement"
+    },
+    {
+      "index": 2916,
+      "caseNumber": "754/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Entitlement to a time extension for accident employer injury"
+    },
+    {
+      "index": 2917,
+      "caseNumber": "719/21E",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "E suffix indicates time limit extension - delay procedural"
+    },
+    {
+      "index": 2918,
+      "caseNumber": "736/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychological impairment labour market re-entry training"
+    },
+    {
+      "index": 2919,
+      "caseNumber": "707/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder benefits return to work pain"
+    },
+    {
+      "index": 2920,
+      "caseNumber": "801/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Ankle modified work low impairment"
+    },
+    {
+      "index": 2921,
+      "caseNumber": "811/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Redactions employer insect bites psychological - administrative"
+    },
+    {
+      "index": 2922,
+      "caseNumber": "616/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Wrongful dismissal injury historic trade-off - legal/administrative issue"
+    },
+    {
+      "index": 2923,
+      "caseNumber": "625/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Pre-existing condition employer cost relief retroactive adjustment - administrative"
+    },
+    {
+      "index": 2924,
+      "caseNumber": "664/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Vertigo concussion accident injury"
+    },
+    {
+      "index": 2925,
+      "caseNumber": "327/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Injury recurrence significant deterioration low"
+    },
+    {
+      "index": 2926,
+      "caseNumber": "530/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder overhead rotator cuff partial thickness tear"
+    },
+    {
+      "index": 2927,
+      "caseNumber": "459/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee condition out-of-province training chondromalacia kneeling"
+    },
+    {
+      "index": 2928,
+      "caseNumber": "273/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Tear shoulder cart accident"
+    },
+    {
+      "index": 2929,
+      "caseNumber": "2201/19R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - pension reassessment threshold test procedural"
+    },
+    {
+      "index": 2930,
+      "caseNumber": "454/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified duties video surveillance employer work"
+    },
+    {
+      "index": 2931,
+      "caseNumber": "621/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Thumb osteoarthritis neck compensable accident hyperextension"
+    },
+    {
+      "index": 2932,
+      "caseNumber": "553/21E",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "E suffix indicates time extension - eight-month delay procedural"
+    },
+    {
+      "index": 2933,
+      "caseNumber": "584/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Rating impairment redetermination spinal"
+    },
+    {
+      "index": 2934,
+      "caseNumber": "832/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Employer entitlement to retroactive adjustment pre-existing condition - administrative"
+    },
+    {
+      "index": 2935,
+      "caseNumber": "760/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Chronic pain fibromyalgia injury benefits"
+    },
+    {
+      "index": 2936,
+      "caseNumber": "117/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Diagnosis panic attacks psychotraumatic disability impairment"
+    },
+    {
+      "index": 2937,
+      "caseNumber": "825/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Injections knee physiotherapy treatments injury"
+    },
+    {
+      "index": 2938,
+      "caseNumber": "210/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Benefits low labour market impairment"
+    },
+    {
+      "index": 2939,
+      "caseNumber": "50/20R2",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R2 suffix indicates second reconsideration - earnings basis procedural"
+    },
+    {
+      "index": 2940,
+      "caseNumber": "2097/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Lung cancer asbestos exposure study"
+    },
+    {
+      "index": 2941,
+      "caseNumber": "837/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Knee time extension - procedural"
+    },
+    {
+      "index": 2942,
+      "caseNumber": "784/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Medial humeral epicondylitis accident employer date"
+    },
+    {
+      "index": 2943,
+      "caseNumber": "815/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing obesity pulmonary embolism recovery"
+    },
+    {
+      "index": 2944,
+      "caseNumber": "252/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Medical marijuana pain pre-existing conditions nausea"
+    },
+    {
+      "index": 2945,
+      "caseNumber": "1952/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pre-injury job neck perform essential duties accident"
+    },
+    {
+      "index": 2946,
+      "caseNumber": "408/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Osteoporosis compression fractures bone density - pre-existing condition"
+    },
+    {
+      "index": 2947,
+      "caseNumber": "816/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Degenerative changes injury supplementary benefits lumbar spine"
+    },
+    {
+      "index": 2948,
+      "caseNumber": "512/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Low ongoing proposed resolution injury"
+    },
+    {
+      "index": 2949,
+      "caseNumber": "824/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Pre-existing condition greater severity liable to develop disability - administrative determination"
+    },
+    {
+      "index": 2950,
+      "caseNumber": "1163/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Filters low back injury front-line manager work-related injuring process"
+    },
+    {
+      "index": 2951,
+      "caseNumber": "749/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Seniors unit workload substantial work-related victims - stress case"
+    },
+    {
+      "index": 2952,
+      "caseNumber": "762/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-accident impairment work-related accident dog employer"
+    },
+    {
+      "index": 2953,
+      "caseNumber": "761/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Chiropractor lower back pain hospital injury"
+    },
+    {
+      "index": 2954,
+      "caseNumber": "704/21E",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "E suffix indicates time extension - six-month statutory time limit procedural"
+    },
+    {
+      "index": 2955,
+      "caseNumber": "1143/20I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - interpreter procedural"
+    },
+    {
+      "index": 2956,
+      "caseNumber": "238/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Wrist scapholunate entitlement work"
+    },
+    {
+      "index": 2957,
+      "caseNumber": "842/21",
+      "outcome": "partial",
+      "confidence": "high",
+      "reasoning": "Keywords state 'earning minimum wage' and 'worker is entitled to partial' with labour market re-entry"
+    },
+    {
+      "index": 2958,
+      "caseNumber": "823/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition work-related injury disease shoulder knee"
+    },
+    {
+      "index": 2959,
+      "caseNumber": "223/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Degrees cervical compensable permanent impairment flexion"
+    },
+    {
+      "index": 2960,
+      "caseNumber": "643/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified duties remain off work elbow recommended"
+    },
+    {
+      "index": 2961,
+      "caseNumber": "822/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Statutory accident benefits insurer - backhoe excavator administrative claim determination"
+    },
+    {
+      "index": 2962,
+      "caseNumber": "1080/20R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - bowstringing grip strength procedural"
+    },
+    {
+      "index": 2963,
+      "caseNumber": "364/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Lunch employment accident activity"
+    },
+    {
+      "index": 2964,
+      "caseNumber": "636/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Silicosis pulmonary function lobe lymph"
+    },
+    {
+      "index": 2965,
+      "caseNumber": "607/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified work physiotherapist work re-integration benefits"
+    },
+    {
+      "index": 2966,
+      "caseNumber": "309/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Rotator cuff tear tendinosis elbow medial epicondylitis"
+    },
+    {
+      "index": 2967,
+      "caseNumber": "1309/20",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition platform workplace accident disc bulge"
+    },
+    {
+      "index": 2968,
+      "caseNumber": "221/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain recurrence psychotraumatic disability injury"
+    },
+    {
+      "index": 2969,
+      "caseNumber": "709/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Pre-existing shoulder condition cost relief accident - administrative"
+    },
+    {
+      "index": 2970,
+      "caseNumber": "650/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Reclassification employer classification premium adjustments rate group - administrative"
+    },
+    {
+      "index": 2971,
+      "caseNumber": "211/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain report shoulder work"
+    },
+    {
+      "index": 2972,
+      "caseNumber": "1103/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder rotator cuff tear salt bags accident"
+    },
+    {
+      "index": 2973,
+      "caseNumber": "841/19R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - clarification request minimum wage procedural"
+    },
+    {
+      "index": 2974,
+      "caseNumber": "183/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Adenocarcinoma diesel exhaust esophageal cancer particulate"
+    },
+    {
+      "index": 2975,
+      "caseNumber": "875/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Exceptional circumstances rating entitlement compensable"
+    },
+    {
+      "index": 2976,
+      "caseNumber": "370/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee ankle brace entitlement"
+    },
+    {
+      "index": 2977,
+      "caseNumber": "347/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Work wrist labour market work-related injury"
+    },
+    {
+      "index": 2978,
+      "caseNumber": "753/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Employer return to work modified work suitable"
+    },
+    {
+      "index": 2979,
+      "caseNumber": "375/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Trigger finger cups mushrooms ring finger"
+    },
+    {
+      "index": 2980,
+      "caseNumber": "821/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Lumbar sprain streetcar operator mechanical low back pain"
+    },
+    {
+      "index": 2981,
+      "caseNumber": "869/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Work accident low back pain medical"
+    },
+    {
+      "index": 2982,
+      "caseNumber": "1282/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Cancer exposure asbestos acetaldehyde"
+    },
+    {
+      "index": 2983,
+      "caseNumber": "795/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Low back pain recurrence clinical injury"
+    },
+    {
+      "index": 2984,
+      "caseNumber": "650/20R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - threshold test process procedural"
+    },
+    {
+      "index": 2985,
+      "caseNumber": "481/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Neck knee injury surgery"
+    },
+    {
+      "index": 2986,
+      "caseNumber": "849/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Disc herniation time limit surgery time extension - procedural"
+    },
+    {
+      "index": 2987,
+      "caseNumber": "852/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - entitlement for cervical radiculopathy procedural"
+    },
+    {
+      "index": 2988,
+      "caseNumber": "825/21",
+      "outcome": "partial",
+      "confidence": "medium",
+      "reasoning": "Keywords mention 'permanent work disruption' and 'part-time basis' with benefits"
+    },
+    {
+      "index": 2989,
+      "caseNumber": "792/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified duties pre-injury earnings return to work injuries"
+    },
+    {
+      "index": 2990,
+      "caseNumber": "119/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder condition trailers rotator cuff osteoarthritis"
+    },
+    {
+      "index": 2991,
+      "caseNumber": "629/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Attendant due to work-related arrears date injury disease"
+    },
+    {
+      "index": 2992,
+      "caseNumber": "587/21E",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "E suffix indicates time extension - delay tinnitus procedural"
+    },
+    {
+      "index": 2993,
+      "caseNumber": "2034/18R2",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R2 suffix indicates second reconsideration - herniation significant contributing factor procedural"
+    },
+    {
+      "index": 2994,
+      "caseNumber": "838/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - entitlement wrist bilateral procedural"
+    },
+    {
+      "index": 2995,
+      "caseNumber": "805/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Pre-existing condition relief pre-accident disability accident - administrative"
+    },
+    {
+      "index": 2996,
+      "caseNumber": "802/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Brachial neuritis symptoms onset furniture"
+    },
+    {
+      "index": 2997,
+      "caseNumber": "860/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Independent operator truck brother work - employment status determination"
+    },
+    {
+      "index": 2998,
+      "caseNumber": "1423/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain fibromyalgia modified duties disruption"
+    },
+    {
+      "index": 2999,
+      "caseNumber": "870/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Knee pre-accident impairment work pain"
+    },
+    {
+      "index": 3000,
+      "caseNumber": "235/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Ankle leg pain lower"
+    },
+    {
+      "index": 3001,
+      "caseNumber": "854/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee medial meniscus chondromalacia patella degenerative"
+    },
+    {
+      "index": 3002,
+      "caseNumber": "843/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Audiogram presbycusis hearing loss noise"
+    },
+    {
+      "index": 3003,
+      "caseNumber": "139/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Benefits review escalated pre-injury wages post-injury entry-level wages - administrative calculation"
+    },
+    {
+      "index": 3004,
+      "caseNumber": "631/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Elbow epicondylitis psychotraumatic disability neuritis"
+    },
+    {
+      "index": 3005,
+      "caseNumber": "297/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition work-related injury disease shuttle driver impairment"
+    },
+    {
+      "index": 3006,
+      "caseNumber": "887/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition work-related injury disease knee replacement surgery impairment"
+    },
+    {
+      "index": 3007,
+      "caseNumber": "312/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Dock door accident inspections facility"
+    },
+    {
+      "index": 3008,
+      "caseNumber": "615/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Work-related injury film industry labour market work"
+    },
+    {
+      "index": 3009,
+      "caseNumber": "660/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder supplementary benefits entitled to interest payment"
+    },
+    {
+      "index": 3010,
+      "caseNumber": "587/20R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - interest policy payments date delayed procedural"
+    },
+    {
+      "index": 3011,
+      "caseNumber": "202/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Erection penile impairment erectile dysfunction"
+    },
+    {
+      "index": 3012,
+      "caseNumber": "883/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Offset disability benefits work-related injury entitlement"
+    },
+    {
+      "index": 3013,
+      "caseNumber": "810/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition rating impairment shoulder"
+    },
+    {
+      "index": 3014,
+      "caseNumber": "891/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Substantial work-related stressor benefits for chronic mental stress employer harassment"
+    },
+    {
+      "index": 3015,
+      "caseNumber": "772/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition impairment rating work-related permanent impairment"
+    },
+    {
+      "index": 3016,
+      "caseNumber": "626/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Psychotraumatic benefits injury withdraws - withdrawal procedural"
+    },
+    {
+      "index": 3017,
+      "caseNumber": "907/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pars interarticularis fractures spondylolisthesis stenosis low"
+    },
+    {
+      "index": 3018,
+      "caseNumber": "915/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Boxes injury sprain low"
+    },
+    {
+      "index": 3019,
+      "caseNumber": "799/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Worker is competitively unemployable surgery transferable skills benefits"
+    },
+    {
+      "index": 3020,
+      "caseNumber": "685/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder rotator cuff tear strain degenerative"
+    },
+    {
+      "index": 3021,
+      "caseNumber": "906/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Earnings benefits offset recurrence"
+    },
+    {
+      "index": 3022,
+      "caseNumber": "338/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Hips knees bilateral knee"
+    },
+    {
+      "index": 3023,
+      "caseNumber": "354/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Travailleur worker douleur benefits for psychotraumatic disability"
+    },
+    {
+      "index": 3024,
+      "caseNumber": "590/21E",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "E suffix indicates time extension - widow six-month statutory death procedural"
+    },
+    {
+      "index": 3025,
+      "caseNumber": "735/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Exposure smoking respirable dust fumes"
+    },
+    {
+      "index": 3026,
+      "caseNumber": "862/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Plantar fibroma plantar fasciitis foot ankle"
+    },
+    {
+      "index": 3027,
+      "caseNumber": "586/21E",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "E suffix indicates time extension - delay permanent impairment procedural"
+    },
+    {
+      "index": 3028,
+      "caseNumber": "2133/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Work-related injury disease lumbar strain entitlement wrist"
+    },
+    {
+      "index": 3029,
+      "caseNumber": "413/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Injury foot layoff unistrut"
+    },
+    {
+      "index": 3030,
+      "caseNumber": "306/19R3",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R3 suffix indicates third reconsideration - gas stations garage business procedural"
+    },
+    {
+      "index": 3031,
+      "caseNumber": "387/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Window washing squeegee duties cervicothoracic facet syndrome neck"
+    },
+    {
+      "index": 3032,
+      "caseNumber": "237/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain restrictions hour non-compensable"
+    },
+    {
+      "index": 3033,
+      "caseNumber": "663/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Noise exposure hearing loss presbycusis audiogram"
+    },
+    {
+      "index": 3034,
+      "caseNumber": "204/20R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - threshold test procedural"
+    },
+    {
+      "index": 3035,
+      "caseNumber": "31/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Chute jams employer machine"
+    },
+    {
+      "index": 3036,
+      "caseNumber": "627/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Ankle talonavicular redetermination worker has entitlement impairment"
+    },
+    {
+      "index": 3037,
+      "caseNumber": "758/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified work injury return to work benefits"
+    },
+    {
+      "index": 3038,
+      "caseNumber": "628/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Employer return to work layoff entitlement"
+    },
+    {
+      "index": 3039,
+      "caseNumber": "363/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Ankle slip significant deterioration injury"
+    },
+    {
+      "index": 3040,
+      "caseNumber": "708/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing anxiety employer psychological"
+    },
+    {
+      "index": 3041,
+      "caseNumber": "919/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing tear rotator cuff recovery"
+    },
+    {
+      "index": 3042,
+      "caseNumber": "1269/20R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - stress routine work-related stressor procedural"
+    },
+    {
+      "index": 3043,
+      "caseNumber": "235/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Neck injury wrist pain"
+    },
+    {
+      "index": 3044,
+      "caseNumber": "327/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Degenerative disc disease low back pain work strain"
+    },
+    {
+      "index": 3045,
+      "caseNumber": "808/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Hip knee meniscal tear pain osteoarthritis"
+    },
+    {
+      "index": 3046,
+      "caseNumber": "569/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Episodic neurological disorders bruxism tooth caries"
+    },
+    {
+      "index": 3047,
+      "caseNumber": "657/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain psychological work hand"
+    },
+    {
+      "index": 3048,
+      "caseNumber": "1733/18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Right-sided sciatica leg low back injury neuropathy"
+    },
+    {
+      "index": 3049,
+      "caseNumber": "518/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing rotator cuff shoulder employer"
+    },
+    {
+      "index": 3050,
+      "caseNumber": "889/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Calcific tendonitis shoulder bursitis overhead"
+    },
+    {
+      "index": 3051,
+      "caseNumber": "323/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder rotator cuff degenerative symptoms"
+    },
+    {
+      "index": 3052,
+      "caseNumber": "352/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Executive director knife incident mental stress"
+    },
+    {
+      "index": 3053,
+      "caseNumber": "630/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Reported intermittent left knee pain injury foot"
+    },
+    {
+      "index": 3054,
+      "caseNumber": "691/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified work employer suitable benefits"
+    },
+    {
+      "index": 3055,
+      "caseNumber": "745/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychological impairment headaches hydrotherapy"
+    },
+    {
+      "index": 3056,
+      "caseNumber": "422/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Employer withdrawal preliminary converted request - procedural"
+    },
+    {
+      "index": 3057,
+      "caseNumber": "1414/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Annular tears describes pain low"
+    },
+    {
+      "index": 3058,
+      "caseNumber": "733/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Foot gait hip injury"
+    },
+    {
+      "index": 3059,
+      "caseNumber": "185/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Accident shoulder entitled to benefits injury"
+    },
+    {
+      "index": 3060,
+      "caseNumber": "763/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Knee condition pre-existing condition benefits knee surgery"
+    },
+    {
+      "index": 3061,
+      "caseNumber": "598/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Neck elbow symptoms trigger finger"
+    },
+    {
+      "index": 3062,
+      "caseNumber": "82/18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder cervical spine symptoms radiculopathy"
+    },
+    {
+      "index": 3063,
+      "caseNumber": "743/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Symptoms work shoulder psychotraumatic disability"
+    },
+    {
+      "index": 3064,
+      "caseNumber": "418/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Entitled to claim benefits truck independent operator accident"
+    },
+    {
+      "index": 3065,
+      "caseNumber": "826/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Elbow epicondylitis work clinical entry"
+    },
+    {
+      "index": 3066,
+      "caseNumber": "931/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Pre-existing calcific tendinosis severity liable to develop disability - administrative determination"
+    },
+    {
+      "index": 3067,
+      "caseNumber": "939/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Permanent impairment playing soccer entitlement work-related injury"
+    },
+    {
+      "index": 3068,
+      "caseNumber": "59/17",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Worker stated video stroller impairment ladder"
+    },
+    {
+      "index": 3069,
+      "caseNumber": "1011/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Firing compensable injury fired benefits"
+    },
+    {
+      "index": 3070,
+      "caseNumber": "378/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Pre-existing condition greater severity than normal accident disability - administrative determination"
+    },
+    {
+      "index": 3071,
+      "caseNumber": "942/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing tear medial meniscus knee posterior horn"
+    },
+    {
+      "index": 3072,
+      "caseNumber": "790/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Thoracic outlet syndrome symptoms carpal tunnel syndrome disc bulge"
+    },
+    {
+      "index": 3073,
+      "caseNumber": "93/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition work-related injury disease shoulder neck"
+    },
+    {
+      "index": 3074,
+      "caseNumber": "759/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Modified duties work benefits pain"
+    },
+    {
+      "index": 3075,
+      "caseNumber": "1274/18R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - entry-level wages evidence procedural"
+    },
+    {
+      "index": 3076,
+      "caseNumber": "300/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Ultrasound tears shoulder health care benefits"
+    },
+    {
+      "index": 3077,
+      "caseNumber": "944/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing symptomatic hemorrhoid impairment rectal rating"
+    },
+    {
+      "index": 3078,
+      "caseNumber": "308/19R2",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R2 suffix indicates second reconsideration - wrist pre-existing procedural"
+    },
+    {
+      "index": 3079,
+      "caseNumber": "392/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Psychotraumatic disability wrist worker is competitively unemployable permanent impairment depression"
+    },
+    {
+      "index": 3080,
+      "caseNumber": "723/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Garage van conversion insulated modifications"
+    },
+    {
+      "index": 3081,
+      "caseNumber": "516/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Non-work related psychological traffic incident work"
+    },
+    {
+      "index": 3082,
+      "caseNumber": "697/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition total hip replacement work-related injury surgery"
+    },
+    {
+      "index": 3083,
+      "caseNumber": "929/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Compensable surgery non-compensable benefits work"
+    },
+    {
+      "index": 3084,
+      "caseNumber": "930/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Earnings labour market re-entry hour psychotraumatic disability"
+    },
+    {
+      "index": 3085,
+      "caseNumber": "228/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Disc herniation neck nerve root irritation duties"
+    },
+    {
+      "index": 3086,
+      "caseNumber": "954/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - building contractor air quality redactions procedural"
+    },
+    {
+      "index": 3087,
+      "caseNumber": "1539/19I2",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I2 suffix indicates second interim decision - adjournment recurrence procedural"
+    },
+    {
+      "index": 3088,
+      "caseNumber": "953/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - building contractor air quality redactions procedural"
+    },
+    {
+      "index": 3089,
+      "caseNumber": "445/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Competitively unemployable entry level wages earnings labour market re-entry"
+    },
+    {
+      "index": 3090,
+      "caseNumber": "638/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Injury symptoms work entitlement"
+    },
+    {
+      "index": 3091,
+      "caseNumber": "909/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing conditions non-compensable injury wrist"
+    },
+    {
+      "index": 3092,
+      "caseNumber": "720/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Medical return to work modified suitable"
+    },
+    {
+      "index": 3093,
+      "caseNumber": "923/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain low back strain permanent impairment treatment"
+    },
+    {
+      "index": 3094,
+      "caseNumber": "920/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Low work psychotraumatic disability injury"
+    },
+    {
+      "index": 3095,
+      "caseNumber": "1151/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Overhead press modified duties shoulder employer"
+    },
+    {
+      "index": 3096,
+      "caseNumber": "1425/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Exposure symptoms asthma report"
+    },
+    {
+      "index": 3097,
+      "caseNumber": "963/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Psychotraumatic disability symptoms impairment treatment"
+    },
+    {
+      "index": 3098,
+      "caseNumber": "1976/18",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Rotator cuff gate pin bilateral shoulder"
+    },
+    {
+      "index": 3099,
+      "caseNumber": "933/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing concussions psychological severity"
+    },
+    {
+      "index": 3100,
+      "caseNumber": "589/21E",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "E suffix indicates time extension - anxiety delay procedural"
+    },
+    {
+      "index": 3101,
+      "caseNumber": "322/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain report shoulder impairment"
+    },
+    {
+      "index": 3102,
+      "caseNumber": "895/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing wrist candies tenosynovitis"
+    },
+    {
+      "index": 3103,
+      "caseNumber": "888/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Travailleuse pied gauche worker accident foot"
+    },
+    {
+      "index": 3104,
+      "caseNumber": "977/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Employment long-term care facility personal injury by accident activity"
+    },
+    {
+      "index": 3105,
+      "caseNumber": "547/21",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Sensitive health care employer prejudicial - redaction/privacy issue"
+    },
+    {
+      "index": 3106,
+      "caseNumber": "2181/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Cellphone application employer accident testimony"
+    },
+    {
+      "index": 3107,
+      "caseNumber": "429/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Disc herniation modified duties accident employer entitlement to benefits"
+    },
+    {
+      "index": 3108,
+      "caseNumber": "1067/20R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - non-compensable conditions offset procedural"
+    },
+    {
+      "index": 3109,
+      "caseNumber": "839/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Suitable worker is competitively unemployable restrictions benefits skills"
+    },
+    {
+      "index": 3110,
+      "caseNumber": "574/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Light delivery driver suitability wage labour market re-entry"
+    },
+    {
+      "index": 3111,
+      "caseNumber": "788/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Internet installer bilateral hip injury benefits earnings"
+    },
+    {
+      "index": 3112,
+      "caseNumber": "639/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Impairment psychotraumatic disability arm cognitive"
+    },
+    {
+      "index": 3113,
+      "caseNumber": "464/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Stated low employer injury"
+    },
+    {
+      "index": 3114,
+      "caseNumber": "991/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Employer cost relief experience rating window - administrative"
+    },
+    {
+      "index": 3115,
+      "caseNumber": "513/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Proposed resolution mild rating psychiatric"
+    },
+    {
+      "index": 3116,
+      "caseNumber": "951/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Entitlement to benefits shoulder surgery termination accident period"
+    },
+    {
+      "index": 3117,
+      "caseNumber": "269/21",
+      "outcome": "partial",
+      "confidence": "high",
+      "reasoning": "Keywords explicitly mention 'partial benefits' with hours work suitable"
+    },
+    {
+      "index": 3118,
+      "caseNumber": "248/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Low back injury pre-existing condition non-economic loss work-related injury"
+    },
+    {
+      "index": 3119,
+      "caseNumber": "865/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Long-term average earnings long-term earnings basis work union provided"
+    },
+    {
+      "index": 3120,
+      "caseNumber": "256/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder pain accident injury"
+    },
+    {
+      "index": 3121,
+      "caseNumber": "75/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - mental stress student traumatic procedural"
+    },
+    {
+      "index": 3122,
+      "caseNumber": "515/21",
+      "outcome": "partial",
+      "confidence": "high",
+      "reasoning": "Keywords state 'worker is entitled to partial' and 'full-time employment earning minimum wage' with heavy equipment"
+    },
+    {
+      "index": 3123,
+      "caseNumber": "260/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Supraspinatus tendon interstitial tears shoulder escalator checker work-related injury"
+    },
+    {
+      "index": 3124,
+      "caseNumber": "407/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - agreement settlement rescind procedural"
+    },
+    {
+      "index": 3125,
+      "caseNumber": "817/21",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing condition work-related injury disease bilateral knees impairment"
+    },
+    {
+      "index": 3126,
+      "caseNumber": "519/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Impairment rating anxiety pain"
+    },
+    {
+      "index": 3127,
+      "caseNumber": "214/19",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Incident low injury entitlement"
+    },
+    {
+      "index": 3128,
+      "caseNumber": "462/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Employer classification policy premiums reclassification - administrative"
+    },
+    {
+      "index": 3129,
+      "caseNumber": "1589/19",
+      "outcome": "unclear",
+      "confidence": "medium",
+      "reasoning": "Pre-existing low permanent aggravation degenerative benefits"
+    },
+    {
+      "index": 3130,
+      "caseNumber": "645/21",
+      "outcome": "partial",
+      "confidence": "high",
+      "reasoning": "Keywords mention 'impairment' 'psychotraumatic disability' 'lock-in date' 'entitled to partial benefits based'"
+    },
+    {
+      "index": 3131,
+      "caseNumber": "480/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Shoulder forklift bursitis tear"
+    },
+    {
+      "index": 3132,
+      "caseNumber": "798/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Hip impairment degrees pain"
+    },
+    {
+      "index": 3133,
+      "caseNumber": "370/20R",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "R suffix indicates reconsideration - restriction student threshold test procedural"
+    },
+    {
+      "index": 3134,
+      "caseNumber": "326/20",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Knee injury tear meniscal"
+    },
+    {
+      "index": 3135,
+      "caseNumber": "985/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - entitlement adjournment extension procedural"
+    },
+    {
+      "index": 3136,
+      "caseNumber": "958/21I",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "I suffix indicates interim decision - redetermination shoulder offset bilateral procedural"
+    },
+    {
+      "index": 3137,
+      "caseNumber": "134/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Symptoms post-concussive syndrome injury concussions"
+    },
+    {
+      "index": 3138,
+      "caseNumber": "916/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Carpal tunnel hand palmar cutaneous neuroma companion"
+    },
+    {
+      "index": 3139,
+      "caseNumber": "923/03",
+      "outcome": "other",
+      "confidence": "medium",
+      "reasoning": "Mediation reconsideration will withdrawal - procedural"
+    },
+    {
+      "index": 3140,
+      "caseNumber": "946/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Injury symptoms trapezius diagnosis"
+    },
+    {
+      "index": 3141,
+      "caseNumber": "432/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Significant deterioration wrist shoulder distal radius"
+    },
+    {
+      "index": 3142,
+      "caseNumber": "793/21",
+      "outcome": "other",
+      "confidence": "high",
+      "reasoning": "Pre-existing condition prolonged enhanced degenerative changes disability employer - administrative"
+    },
+    {
+      "index": 3143,
+      "caseNumber": "357/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Pain knees fibromyalgia knee"
+    },
+    {
+      "index": 3144,
+      "caseNumber": "844/21",
+      "outcome": "unclear",
+      "confidence": "low",
+      "reasoning": "Case number visible but keywords cut off"
+    }
+  ]
+}

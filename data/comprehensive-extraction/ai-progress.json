@@ -1,7 +1,7 @@
 {
   "totalDecisions": 11430,
-  "classified": 50,
-  "lastBatchNumber": 1,
+  "classified": 2722,
+  "lastBatchNumber": 27,
   "batches": [
     {
       "batchNumber": 1,
@@ -24,6 +24,162 @@
         },
         "methodology": "Classification based on keyword pattern analysis only. Keywords are topics extracted from decisions, not full decision text. HIGH confidence only for procedural decisions ('extension', 'reconsideration', 'access') and explicit outcome keywords ('compensable', 'non-compensable'). MEDIUM confidence for strong occupational disease indicators or explicit 'entitlement for' phrasing. LOW confidence for most substantive decisions where keywords are ambiguous. To achieve true accuracy, full decision text analysis required."
       }
+    },
+    {
+      "batchNumber": 2,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:17:08.880Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 3,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:21:44.187Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 4,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:23:53.605Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 5,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:26:05.284Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 6,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:28:31.057Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 7,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:30:37.759Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 8,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:36:17.078Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 9,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:38:26.389Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 10,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:40:02.930Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 11,
+      "decisionsClassified": 50,
+      "mergedAt": "2026-05-01T01:41:06.817Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 12,
+      "decisionsClassified": 75,
+      "mergedAt": "2026-05-01T01:43:38.515Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 13,
+      "decisionsClassified": 75,
+      "mergedAt": "2026-05-01T01:48:20.106Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 14,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T01:52:33.460Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 15,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T01:54:08.552Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 16,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T01:57:28.045Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 17,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T02:04:51.881Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 18,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T02:07:20.860Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 19,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T02:09:20.988Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 20,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T02:13:53.718Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 21,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T02:18:11.043Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 22,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T02:20:53.949Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 23,
+      "decisionsClassified": 100,
+      "mergedAt": "2026-05-01T02:23:46.549Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 24,
+      "decisionsClassified": 200,
+      "mergedAt": "2026-05-01T02:33:46.499Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 25,
+      "decisionsClassified": 200,
+      "mergedAt": "2026-05-01T02:51:28.118Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 26,
+      "decisionsClassified": 200,
+      "mergedAt": "2026-05-01T02:57:09.017Z",
+      "summary": null
+    },
+    {
+      "batchNumber": 27,
+      "decisionsClassified": 422,
+      "mergedAt": "2026-05-01T03:13:56.779Z",
+      "summary": null
     }
   ],
   "startedAt": "2026-05-01T00:36:33.774Z"
