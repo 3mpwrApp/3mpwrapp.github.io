@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-30T14:17:46.701Z",
+  "lastUpdated": "2026-05-01T13:45:10.977Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16399,
+      "totalPosts": 16424,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T14:17:26.996Z"
+      "lastSeen": "2026-05-01T13:45:02.940Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16386,
+      "totalPosts": 16411,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T14:17:35.495Z"
+      "lastSeen": "2026-05-01T13:45:04.851Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16271,
+      "totalPosts": 16296,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T14:17:39.150Z"
+      "lastSeen": "2026-05-01T13:45:06.640Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16462,
+      "totalPosts": 16487,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T14:17:42.880Z"
+      "lastSeen": "2026-05-01T13:45:08.298Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16423,
+      "totalPosts": 16448,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-30T14:17:45.697Z"
+      "lastSeen": "2026-05-01T13:45:09.973Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
-      "author": "zacharyweeks.bsky.social",
-      "engagement": 47,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Received my postal vote so sharing my Substack, originally commissioned by @bylinetimes.bsky.social Please share too, know that the right-wing are never friends of disabled people.\n#DisabledPeopleAgainstFascism\n#StandUpToRacism\n#DisabilityRights\n#Writerlife\n\npennypepper.substack.com/p/the-tainte...",
-      "author": "penpep.bsky.social",
-      "engagement": 34,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 27,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Speaking of alt text & not being able to see images, here's one of my fave short guides to image description.\n\nIt's written by someone with vision impairment who uses screen readers on the daily. #accessibility #altText #a11y",
-      "author": "ryanpatrickrandall.com",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Yay, here's a free new tool for Rocket Validator I've been working on lately: a Color Contrast Checker for WCAG compliance, powered by LiveView and entirely developed using Tidewave.\n\n#ElixirLang #a11y #accessibility #color\n\nrocketvalidator.com/tools/contra...",
-      "author": "jaimeiniesta.com",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
       "author": "zacharyweeks.bsky.social",
@@ -338,63 +302,103 @@
       "author": "vfd.ch",
       "engagement": 65,
       "hashtag": "Accessibility"
+    },
+    {
+      "text": "From @criprights.bsky.social \n\n#NDIS     #DisabilityRights",
+      "author": "anonymoussewerrat.bsky.social",
+      "engagement": 28,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Please share widely!\n\n#NDIS \n#AusPol\n#SaveOurNDIS \n#DisabilityRights",
+      "author": "caitlinsheahan.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
+      "author": "uua.org",
+      "engagement": 38,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I'm so tired.\n\n#a11y #Accessibility",
+      "author": "vale.rocks",
+      "engagement": 25,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Sometimes alt text it's helpful for describing things in images that the rest of us are just not familiar with (due to cultural differences or whatnot). \n\nI have read the alt text of images countless times and it was the alt text that has helped me understand the purpose of the image. ☺️\n\n#a11y FTW",
+      "author": "sarasoueidan.com",
+      "engagement": 24,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I'm so tired.\n\n#a11y #Accessibility",
+      "author": "vale.rocks",
+      "engagement": 25,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 44
+      "count": 45
     },
     {
       "keyword": "accessibility",
-      "count": 36
+      "count": 42
+    },
+    {
+      "keyword": "a11y",
+      "count": 30
     },
     {
       "keyword": "disabilityjustice",
       "count": 27
     },
     {
-      "keyword": "a11y",
-      "count": 27
-    },
-    {
       "keyword": "cripthevote",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "altcitizen",
-      "count": 21
+      "count": 22
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 19
+      "count": 21
     },
     {
       "keyword": "virtual",
-      "count": 16
+      "count": 15
     },
     {
       "keyword": "nokings3",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "nokings2026",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "nokings",
-      "count": 12
+      "count": 11
+    },
+    {
+      "keyword": "disabilityrebellion",
+      "count": 10
+    },
+    {
+      "keyword": "disabilityrights disabilityrebellion",
+      "count": 10
     },
     {
       "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
-      "keyword": "disabilityrebellion",
-      "count": 8
-    },
-    {
-      "keyword": "disabilityrights disabilityrebellion",
+      "keyword": "disability",
       "count": 8
     },
     {
@@ -416,10 +420,6 @@
     {
       "keyword": "cripminds disabilityjustice",
       "count": 7
-    },
-    {
-      "keyword": "digitalaccessibility",
-      "count": 6
     }
   ]
 }
