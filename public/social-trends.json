@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-02T03:37:00.123Z",
+  "lastUpdated": "2026-05-02T13:38:34.035Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16449,
+      "totalPosts": 16474,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-02T03:36:50.312Z"
+      "lastSeen": "2026-05-02T13:38:23.573Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16436,
+      "totalPosts": 16461,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-02T03:36:52.534Z"
+      "lastSeen": "2026-05-02T13:38:25.734Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16321,
+      "totalPosts": 16346,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-02T03:36:55.106Z"
+      "lastSeen": "2026-05-02T13:38:28.647Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16512,
+      "totalPosts": 16537,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-02T03:36:57.038Z"
+      "lastSeen": "2026-05-02T13:38:30.773Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16473,
+      "totalPosts": 16498,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-02T03:36:59.119Z"
+      "lastSeen": "2026-05-02T13:38:33.032Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 27,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "If you would like to listen to \"Laser Eyes Ain't Everything,\" a YouTube recording of Effie reading her work is here: \n\nwww.youtube.com/watch?v=5T5W...\n\nCongrats, Effie! I'm so proud of you. My hero!\n\n#HugoAwards #ShortStory #Fiction #Disability #NEISVoid #Accessibility \n\n3/3",
-      "author": "rubyslippahs.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I'm often asked after my talks, \"How do I get started with accessibility?\" because there's so much information that some just don't know where to start. I've put together a list of role-based resources to serve as a starting point. \n\nrightbadcode.com/accessibilit...\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Today's big task: adding screen reader support to the tutorial. This involved writing an entire parallel set of tutorial texts, which not only tell the player what to do, but give them the context to understand what's going on.\n#a11y #indiedev #indiegame",
-      "author": "byobattleship.bsky.social",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I'm often asked after my talks, \"How do I get started with accessibility?\" because there's so much information that some just don't know where to start. I've put together a list of role-based resources to serve as a starting point. \n\nrightbadcode.com/accessibilit...\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
-      "author": "zacharyweeks.bsky.social",
-      "engagement": 47,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 27,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "I'm pretty sick of hearing people say they don't provide alt text and exclude people with disabilities so they can mildly inconvenience AI companies.\n\nvale.rocks/micros/20260...\n\n#a11y #Accessibility #AltText",
       "author": "vale.rocks",
@@ -338,27 +290,75 @@
       "author": "vale.rocks",
       "engagement": 40,
       "hashtag": "A11y"
+    },
+    {
+      "text": "The Trump Administration Aims to Penalize Disabled Adults Who Live With Their Families www.propublica.org/article/trum... \n\n#DOGE #OMB #SSA #SocialSecurity #DisabilityRights #HumanRights",
+      "author": "wolverinebear.bsky.social",
+      "engagement": 82,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "From @criprights.bsky.social \n\n#NDIS     #DisabilityRights",
+      "author": "anonymoussewerrat.bsky.social",
+      "engagement": 29,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Please share widely!\n\n#NDIS \n#AusPol\n#SaveOurNDIS \n#DisabilityRights",
+      "author": "caitlinsheahan.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
+      "author": "uua.org",
+      "engagement": 38,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "[1/5]\n\nI heard about AccessibilityFirewall.com, promising “No code changes. No overlay. No JavaScript.” It uses “edge” in the same way the Overlay Community Group does.\n\nRed flag emoji.\n\nSo I ran it through its own “Live Remediation Engine”:\nwebcraft.inc#audit-section\n\nHmmm…\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "[1/5]\n\nI heard about AccessibilityFirewall.com, promising “No code changes. No overlay. No JavaScript.” It uses “edge” in the same way the Overlay Community Group does.\n\nRed flag emoji.\n\nSo I ran it through its own “Live Remediation Engine”:\nwebcraft.inc#audit-section\n\nHmmm…\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Sometimes alt text it's helpful for describing things in images that the rest of us are just not familiar with (due to cultural differences or whatnot). \n\nI have read the alt text of images countless times and it was the alt text that has helped me understand the purpose of the image. ☺️\n\n#a11y FTW",
+      "author": "sarasoueidan.com",
+      "engagement": 33,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Hey #accessibility #a11y #inclusiveDesign folks: you still have until the end of this month (31 May 2026) to propose a presentations for this year's #id24 in September inclusivedesign24.org/2026/\n\nReminder: as it's a global event, we'd also be delighted to have talks in languages other than English.",
+      "author": "inclusivedesign24.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 45
+      "count": 46
     },
     {
       "keyword": "accessibility",
-      "count": 42
+      "count": 45
     },
     {
       "keyword": "a11y",
       "count": 29
     },
     {
-      "keyword": "cripthevote",
-      "count": 26
+      "keyword": "disabilityjustice",
+      "count": 27
     },
     {
-      "keyword": "disabilityjustice",
+      "keyword": "cripthevote",
       "count": 26
     },
     {
@@ -398,28 +398,28 @@
       "count": 9
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 7
-    },
-    {
-      "keyword": "ux",
-      "count": 7
-    },
-    {
-      "keyword": "disability",
-      "count": 6
-    },
-    {
       "keyword": "disabilitysky",
-      "count": 6
+      "count": 8
     },
     {
       "keyword": "cripminds",
-      "count": 6
+      "count": 8
     },
     {
       "keyword": "accessibility disabilitysky",
-      "count": 6
+      "count": 8
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 8
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 8
+    },
+    {
+      "keyword": "inclusivedesign",
+      "count": 8
     }
   ]
 }
