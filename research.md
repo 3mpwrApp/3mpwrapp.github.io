@@ -1076,7 +1076,7 @@ description: Interactive data visualizations and research tools analyzing tribun
         <td style="padding: 0.75rem; text-align: right;">74 (0.1%)</td>
         <td style="padding: 0.75rem; text-align: right;">575 (0.6%)</td>
         <td style="padding: 0.75rem; text-align: right;">98,343 (99.3%)</td>
-        <td style="padding: 0.75rem;"><small>65-73% worker success rate (official) - 1987-2026</small></td>
+        <td style="padding: 0.75rem;"><small>89.1% worker success rate (official subset analysis) - 2020-2026</small></td>
       </tr>
       <tr>
         <td style="padding: 0.75rem;"><strong>HRTO</strong><br><small>Human rights complaints</small></td>
