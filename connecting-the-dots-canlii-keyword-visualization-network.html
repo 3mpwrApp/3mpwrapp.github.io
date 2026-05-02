@@ -871,11 +871,15 @@
         }
 
         function buildNetwork(scope, province, focusKeyword, threshold) {
-            // Clear existing
+            // Clear existing - force complete removal
             g.selectAll("*").remove();
+            svg.selectAll(".temp-element").remove(); // Clean up any orphaned elements
 
             const nodes = new Map();
             const links = [];
+            
+            // Debug logging
+            console.log(`Building network: scope=${scope}, province=${province}, focusKeyword=${focusKeyword}, threshold=${threshold}`);
 
             // Individual tribunal views
             if (['wsiat', 'hrto', 'onsbt', 'onwsib'].includes(scope)) {
@@ -889,8 +893,9 @@
                 const tribunalData = ontarioConnectionData.ontario;
                 const keywordMap = tribunalData.tribunalKeywords[tribunalKey] || {};
                 
-                // For individual tribunal views, use a lower effective threshold to ensure visibility
-                const effectiveThreshold = Math.min(threshold, 10);
+                // For individual tribunal views, use a much lower threshold to ensure visibility
+                // Force at least 1 to show even small keywords
+                const effectiveThreshold = Math.min(threshold, 1);
 
                 // Add tribunal node
                 nodes.set(tribunalKey, {
@@ -1037,6 +1042,13 @@
             }
 
             const nodesArray = Array.from(nodes.values());
+            
+            // Debug logging - check for duplicate tribunals
+            const tribunalNodes = nodesArray.filter(n => n.category === 'tribunal');
+            const provinceNodes = nodesArray.filter(n => n.category === 'province');
+            console.log(`Total nodes: ${nodesArray.length}, Tribunal nodes: ${tribunalNodes.length}, Province nodes: ${provinceNodes.length}`);
+            console.log('Tribunal node IDs:', tribunalNodes.map(n => n.id));
+            console.log('Links:', links.length);
 
             // Update statistics
             updateStats(nodesArray, links);
