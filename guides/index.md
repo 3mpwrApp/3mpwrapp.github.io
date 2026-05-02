@@ -5,6 +5,60 @@ description: "Evidence-based guides for WSIAT appeals. Based on analysis of 98,9
 permalink: /guides/
 ---
 
+<style>
+  /* Ensure guide boxes are readable in all modes */
+  div[style*="background: #f0f9ff"] {
+    background: #f0f9ff !important;
+    color: #000000 !important;
+  }
+  
+  div[style*="background: #f0f9ff"] a {
+    background: #0066cc !important;
+    color: #ffffff !important;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    div[style*="background: #f0f9ff"] {
+      background: #1e3a5f !important;
+      color: #ffffff !important;
+      border-left-color: #4a9eff !important;
+    }
+    
+    div[style*="background: #f0f9ff"] a {
+      background: #4a9eff !important;
+      color: #000000 !important;
+    }
+  }
+  
+  @media (prefers-contrast: high) {
+    div[style*="background: #f0f9ff"] {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border: 3px solid #000000 !important;
+    }
+    
+    div[style*="background: #f0f9ff"] a {
+      background: #000000 !important;
+      color: #ffffff !important;
+      border: 2px solid #000000 !important;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+    div[style*="background: #f0f9ff"] {
+      background: #000000 !important;
+      color: #ffffff !important;
+      border: 3px solid #ffffff !important;
+    }
+    
+    div[style*="background: #f0f9ff"] a {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border: 2px solid #ffffff !important;
+    }
+  }
+</style>
+
 # WSIAT Appeal Guides
 
 **Evidence-based guides built from 98,992 WSIAT decisions analyzed (1987-2026)**
