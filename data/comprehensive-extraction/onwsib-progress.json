@@ -1,0 +1,28 @@
+{
+  "totalDecisions": 431,
+  "classified": 431,
+  "lastBatchNumber": 5,
+  "batches": [
+    {
+      "batchNumber": 1,
+      "mergedAt": "2026-05-02T00:45:50.992Z"
+    },
+    {
+      "batchNumber": 2,
+      "mergedAt": "2026-05-02T00:45:52.307Z"
+    },
+    {
+      "batchNumber": 3,
+      "mergedAt": "2026-05-02T00:45:53.673Z"
+    },
+    {
+      "batchNumber": 4,
+      "mergedAt": "2026-05-02T00:45:55.012Z"
+    },
+    {
+      "batchNumber": 5,
+      "mergedAt": "2026-05-02T00:45:56.155Z"
+    }
+  ],
+  "startedAt": "2026-05-02T00:45:49.459Z"
+}

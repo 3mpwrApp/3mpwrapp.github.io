@@ -1,0 +1,1208 @@
+{
+  "batchNumber": 2,
+  "startIndex": 100,
+  "endIndex": 200,
+  "createdAt": "2026-05-02T00:45:51.457Z",
+  "decisions": [
+    {
+      "index": 100,
+      "caseNumber": "2022canlii89423",
+      "year": 2022,
+      "date": "2022-07-06",
+      "title": "20220105 (Re)",
+      "keywords": [
+        "worker — hip — knee — xx — work-related"
+      ],
+      "url": "https://canlii.ca/t/js5mq",
+      "docketNumber": "20220105"
+    },
+    {
+      "index": 101,
+      "caseNumber": "2022canlii99432",
+      "year": 2022,
+      "date": "2022-07-04",
+      "title": "20220109 (Re)",
+      "keywords": [
+        "worker — psychotraumatic disability — hip — work-related injury — pain"
+      ],
+      "url": "https://canlii.ca/t/jsnr6",
+      "docketNumber": "20220109"
+    },
+    {
+      "index": 102,
+      "caseNumber": "2022canlii89433",
+      "year": 2022,
+      "date": "2022-06-30",
+      "title": "20220103 (Re)",
+      "keywords": [
+        "supervising psychologist — injury employer — entitlement to ptosis — worker representative — return-to-work"
+      ],
+      "url": "https://canlii.ca/t/js5mn",
+      "docketNumber": "20220103"
+    },
+    {
+      "index": 103,
+      "caseNumber": "2022canlii74711",
+      "year": 2022,
+      "date": "2022-06-30",
+      "title": "20220088 (Re)",
+      "keywords": [
+        "worker — chronic pain — elbow fracture — neck — injury"
+      ],
+      "url": "https://canlii.ca/t/jrj4d",
+      "docketNumber": "20220088"
+    },
+    {
+      "index": 104,
+      "caseNumber": "2022canlii74707",
+      "year": 2022,
+      "date": "2022-06-30",
+      "title": "20220087 (Re)",
+      "keywords": [
+        "worker — temporary work disruption — full benefits — shutdown — work-related injury"
+      ],
+      "url": "https://canlii.ca/t/jrj4c",
+      "docketNumber": "20220087"
+    },
+    {
+      "index": 105,
+      "caseNumber": "2022canlii89430",
+      "year": 2022,
+      "date": "2022-06-29",
+      "title": "20220097 (Re)",
+      "keywords": [
+        "pre-existing condition — ankle — worker — all-terrain vehicle — fracture"
+      ],
+      "url": "https://canlii.ca/t/js5mg",
+      "docketNumber": "20220097"
+    },
+    {
+      "index": 106,
+      "caseNumber": "2022canlii74701",
+      "year": 2022,
+      "date": "2022-06-21",
+      "title": "20220084 (Re)",
+      "keywords": [
+        "bilateral adhesive otitis media — worker — barotrauma exposures with cage descents — ears — ascents"
+      ],
+      "url": "https://canlii.ca/t/jrj49",
+      "docketNumber": "20220084"
+    },
+    {
+      "index": 107,
+      "caseNumber": "2022canlii74709",
+      "year": 2022,
+      "date": "2022-06-17",
+      "title": "20220083 (Re)",
+      "keywords": [
+        "worker — entitlement — psychological — benefits — ankle"
+      ],
+      "url": "https://canlii.ca/t/jrj48",
+      "docketNumber": "20220083"
+    },
+    {
+      "index": 108,
+      "caseNumber": "2022canlii68188",
+      "year": 2022,
+      "date": "2022-06-17",
+      "title": "20220073 (Re)",
+      "keywords": [
+        "worker — pre-existing condition — knee — pre-injury duties — work"
+      ],
+      "url": "https://canlii.ca/t/jr41w",
+      "docketNumber": "20220073"
+    },
+    {
+      "index": 109,
+      "caseNumber": "2022canlii54934",
+      "year": 2022,
+      "date": "2022-06-17",
+      "title": "20220055 (Re)",
+      "keywords": [
+        "worker — rotator cuff tear — due to a pre-existing condition — work incident — enhanced"
+      ],
+      "url": "https://canlii.ca/t/jpz5j",
+      "docketNumber": "20220055"
+    },
+    {
+      "index": 110,
+      "caseNumber": "2022canlii74702",
+      "year": 2022,
+      "date": "2022-06-16",
+      "title": "20220081 (Re)",
+      "keywords": [
+        "worker — surgeries — work-related right shoulder — full benefits — earnings"
+      ],
+      "url": "https://canlii.ca/t/jrj46",
+      "docketNumber": "20220081"
+    },
+    {
+      "index": 111,
+      "caseNumber": "2022canlii74708",
+      "year": 2022,
+      "date": "2022-06-15",
+      "title": "20220089 (Re)",
+      "keywords": [
+        "worker — pots — dish soap — chemical — shows it causes skin irritation"
+      ],
+      "url": "https://canlii.ca/t/jrj4f",
+      "docketNumber": "20220089"
+    },
+    {
+      "index": 112,
+      "caseNumber": "2022canlii68184",
+      "year": 2022,
+      "date": "2022-06-15",
+      "title": "20220077 (Re)",
+      "keywords": [
+        "worker — pre-existing left shoulder glenohumeral osteoarthritis — work-related injury — work-related lower back sprain strain — replacement surgery"
+      ],
+      "url": "https://canlii.ca/t/jr421",
+      "docketNumber": "20220077"
+    },
+    {
+      "index": 113,
+      "caseNumber": "2022canlii99433",
+      "year": 2022,
+      "date": "2022-06-14",
+      "title": "20220111 (Re)",
+      "keywords": [
+        "worker — witness — work-related accident — knee — employer"
+      ],
+      "url": "https://canlii.ca/t/jsnr8",
+      "docketNumber": "20220111"
+    },
+    {
+      "index": 114,
+      "caseNumber": "2022canlii89428",
+      "year": 2022,
+      "date": "2022-06-09",
+      "title": "20220096 (Re)",
+      "keywords": [
+        "avascular necrosis — pre-existing condition — worker — hip — smoking"
+      ],
+      "url": "https://canlii.ca/t/js5mf",
+      "docketNumber": "20220096"
+    },
+    {
+      "index": 115,
+      "caseNumber": "2022canlii89426",
+      "year": 2022,
+      "date": "2022-06-08",
+      "title": "20220094 (Re)",
+      "keywords": [
+        "worker — work disruption — return to work — benefits — permanent"
+      ],
+      "url": "https://canlii.ca/t/js5mc",
+      "docketNumber": "20220094"
+    },
+    {
+      "index": 116,
+      "caseNumber": "2022canlii89431",
+      "year": 2022,
+      "date": "2022-06-03",
+      "title": "20220095 (Re)",
+      "keywords": [
+        "worker — low — following the work disruption — impairment — work-related injury disease"
+      ],
+      "url": "https://canlii.ca/t/js5md",
+      "docketNumber": "20220095"
+    },
+    {
+      "index": 117,
+      "caseNumber": "2022canlii68187",
+      "year": 2022,
+      "date": "2022-06-03",
+      "title": "20220078 (Re)",
+      "keywords": [
+        "low back pain — injury — chronic pain — worker reported — disruption"
+      ],
+      "url": "https://canlii.ca/t/jr422",
+      "docketNumber": "20220078"
+    },
+    {
+      "index": 118,
+      "caseNumber": "2022canlii74706",
+      "year": 2022,
+      "date": "2022-05-30",
+      "title": "20220092 (Re)",
+      "keywords": [
+        "hypertrophic cardiomyopathy — pre-existing condition — worker — cost relief — severity"
+      ],
+      "url": "https://canlii.ca/t/jrj4h",
+      "docketNumber": "20220092"
+    },
+    {
+      "index": 119,
+      "caseNumber": "2022canlii54952",
+      "year": 2022,
+      "date": "2022-05-29",
+      "title": "20220059 (Re)",
+      "keywords": [
+        "worker — symptoms — exposures — masks — employer"
+      ],
+      "url": "https://canlii.ca/t/jpz5n",
+      "docketNumber": "20220059"
+    },
+    {
+      "index": 120,
+      "caseNumber": "2022canlii68191",
+      "year": 2022,
+      "date": "2022-05-26",
+      "title": "20220076 (Re)",
+      "keywords": [
+        "nerve root compression — worker — bilateral — symptoms — entitlement"
+      ],
+      "url": "https://canlii.ca/t/jr420",
+      "docketNumber": "20220076"
+    },
+    {
+      "index": 121,
+      "caseNumber": "2022canlii68186",
+      "year": 2022,
+      "date": "2022-05-26",
+      "title": "20220072 (Re)",
+      "keywords": [
+        "return to work — infection — benefits — employer — full"
+      ],
+      "url": "https://canlii.ca/t/jr41v",
+      "docketNumber": "20220072"
+    },
+    {
+      "index": 122,
+      "caseNumber": "2022canlii54925",
+      "year": 2022,
+      "date": "2022-05-20",
+      "title": "20220054 (Re)",
+      "keywords": [
+        "worker — shoulder — modified work — work-related injury — employer"
+      ],
+      "url": "https://canlii.ca/t/jpz5h",
+      "docketNumber": "20220054"
+    },
+    {
+      "index": 123,
+      "caseNumber": "2022canlii74704",
+      "year": 2022,
+      "date": "2022-05-19",
+      "title": "20220082 (Re)",
+      "keywords": [
+        "worker — benefits — work — pain — strain"
+      ],
+      "url": "https://canlii.ca/t/jrj47",
+      "docketNumber": "20220082"
+    },
+    {
+      "index": 124,
+      "caseNumber": "2022canlii68181",
+      "year": 2022,
+      "date": "2022-05-16",
+      "title": "20220071 (Re)",
+      "keywords": [
+        "tooth — worker — teeth — facial — dentist"
+      ],
+      "url": "https://canlii.ca/t/jr41t",
+      "docketNumber": "20220071"
+    },
+    {
+      "index": 125,
+      "caseNumber": "2022canlii68185",
+      "year": 2022,
+      "date": "2022-05-11",
+      "title": "20220079 (Re)",
+      "keywords": [
+        "worker — fifth distal phalanx — soft tissues distal — modified — medical evidence"
+      ],
+      "url": "https://canlii.ca/t/jr423",
+      "docketNumber": "20220079"
+    },
+    {
+      "index": 126,
+      "caseNumber": "2022canlii54923",
+      "year": 2022,
+      "date": "2022-05-11",
+      "title": "20220063 (Re)",
+      "keywords": [
+        "forehead — taste — impairment — report indicated the worker — cognitive"
+      ],
+      "url": "https://canlii.ca/t/jpz5s",
+      "docketNumber": "20220063"
+    },
+    {
+      "index": 127,
+      "caseNumber": "2022canlii68182",
+      "year": 2022,
+      "date": "2022-05-10",
+      "title": "20220070 (Re)",
+      "keywords": [
+        "worker — work-related injury — duties — lower back injury — initial entitlement to benefits"
+      ],
+      "url": "https://canlii.ca/t/jr41s",
+      "docketNumber": "20220070"
+    },
+    {
+      "index": 128,
+      "caseNumber": "2022canlii54953",
+      "year": 2022,
+      "date": "2022-05-10",
+      "title": "20220060 (Re)",
+      "keywords": [
+        "worker — work on the scheduled shift — hours lost time from work — pre-injury worksite — work-related lower"
+      ],
+      "url": "https://canlii.ca/t/jpz5p",
+      "docketNumber": "20220060"
+    },
+    {
+      "index": 129,
+      "caseNumber": "2022canlii44783",
+      "year": 2022,
+      "date": "2022-05-05",
+      "title": "20220050 (Re)",
+      "keywords": [
+        "shoulder — worker — pre-existing condition — pre-accident state — dislocation"
+      ],
+      "url": "https://canlii.ca/t/jph04",
+      "docketNumber": "20220050"
+    },
+    {
+      "index": 130,
+      "caseNumber": "2022canlii68180",
+      "year": 2022,
+      "date": "2022-05-04",
+      "title": "20220075 (Re)",
+      "keywords": [
+        "worker — xx xx per hour — partial benefits — voluntarily under-employed — high-level wages"
+      ],
+      "url": "https://canlii.ca/t/jr41z",
+      "docketNumber": "20220075"
+    },
+    {
+      "index": 131,
+      "caseNumber": "2022canlii54920",
+      "year": 2022,
+      "date": "2022-05-03",
+      "title": "20220062 (Re)",
+      "keywords": [
+        "worker — gym — work-related injuries — post-concussion syndrome — videos"
+      ],
+      "url": "https://canlii.ca/t/jpz5r",
+      "docketNumber": "20220062"
+    },
+    {
+      "index": 132,
+      "caseNumber": "2022canlii54917",
+      "year": 2022,
+      "date": "2022-05-02",
+      "title": "20220057 (Re)",
+      "keywords": [
+        "worker — work-related injury — co-worker — employer — table"
+      ],
+      "url": "https://canlii.ca/t/jpz5l",
+      "docketNumber": "20220057"
+    },
+    {
+      "index": 133,
+      "caseNumber": "2022canlii68189",
+      "year": 2022,
+      "date": "2022-05-01",
+      "title": "20220074 (Re)",
+      "keywords": [
+        "worker — knee injury — initial entitlement — accident — employer"
+      ],
+      "url": "https://canlii.ca/t/jr41x",
+      "docketNumber": "20220074"
+    },
+    {
+      "index": 134,
+      "caseNumber": "2022canlii54928",
+      "year": 2022,
+      "date": "2022-04-29",
+      "title": "20220061 (Re)",
+      "keywords": [
+        "non-permanent employment — worker — permanent — xxx xx — earnings"
+      ],
+      "url": "https://canlii.ca/t/jpz5q",
+      "docketNumber": "20220061"
+    },
+    {
+      "index": 135,
+      "caseNumber": "2022canlii44786",
+      "year": 2022,
+      "date": "2022-04-29",
+      "title": "20220045 (Re)",
+      "keywords": [
+        "program — earnings — return to work — worker representative — psychological"
+      ],
+      "url": "https://canlii.ca/t/jph00",
+      "docketNumber": "20220045"
+    },
+    {
+      "index": 136,
+      "caseNumber": "2022canlii68179",
+      "year": 2022,
+      "date": "2022-04-28",
+      "title": "20220068 (Re)",
+      "keywords": [
+        "pre-existing condition — extensor carpi ulnaris tendon — orthopaedic surgeon — worker — wrist"
+      ],
+      "url": "https://canlii.ca/t/jr41q",
+      "docketNumber": "20220068"
+    },
+    {
+      "index": 137,
+      "caseNumber": "2022canlii44781",
+      "year": 2022,
+      "date": "2022-04-28",
+      "title": "20220051 (Re)",
+      "keywords": [
+        "worker — mental stress policies — traumatic — harassment — events"
+      ],
+      "url": "https://canlii.ca/t/jph05",
+      "docketNumber": "20220051"
+    },
+    {
+      "index": 138,
+      "caseNumber": "2022canlii54933",
+      "year": 2022,
+      "date": "2022-04-25",
+      "title": "20220058 (Re)",
+      "keywords": [
+        "substantial work-related stressor — worker — traumatic — mental stress — threats"
+      ],
+      "url": "https://canlii.ca/t/jpz5m",
+      "docketNumber": "20220058"
+    },
+    {
+      "index": 139,
+      "caseNumber": "2022canlii44784",
+      "year": 2022,
+      "date": "2022-04-22",
+      "title": "20220041 (Re)",
+      "keywords": [
+        "worker — injury — accident — arm — co-worker"
+      ],
+      "url": "https://canlii.ca/t/jpgzw",
+      "docketNumber": "20220041"
+    },
+    {
+      "index": 140,
+      "caseNumber": "2022canlii44782",
+      "year": 2022,
+      "date": "2022-04-21",
+      "title": "20220048 (Re)",
+      "keywords": [
+        "pre-existing condition — knee — indicated the worker — return to work — patellofemoral compartment"
+      ],
+      "url": "https://canlii.ca/t/jph02",
+      "docketNumber": "20220048"
+    },
+    {
+      "index": 141,
+      "caseNumber": "2022canlii74700",
+      "year": 2022,
+      "date": "2022-04-20",
+      "title": "20220086 (Re)",
+      "keywords": [
+        "worker — knee — foot — low average to mid average — antalgic gait"
+      ],
+      "url": "https://canlii.ca/t/jrj4b",
+      "docketNumber": "20220086"
+    },
+    {
+      "index": 142,
+      "caseNumber": "2022canlii68190",
+      "year": 2022,
+      "date": "2022-04-20",
+      "title": "20220069 (Re)",
+      "keywords": [
+        "worker — work-related injury disease — general labour market — temporary work disruption — pre-injury earnings"
+      ],
+      "url": "https://canlii.ca/t/jr41r",
+      "docketNumber": "20220069"
+    },
+    {
+      "index": 143,
+      "caseNumber": "2022canlii44780",
+      "year": 2022,
+      "date": "2022-04-20",
+      "title": "20220046 (Re)",
+      "keywords": [
+        "worker — criminal charges — traumatic — student — mental stress injury"
+      ],
+      "url": "https://canlii.ca/t/jph01",
+      "docketNumber": "20220046"
+    },
+    {
+      "index": 144,
+      "caseNumber": "2022canlii54921",
+      "year": 2022,
+      "date": "2022-04-19",
+      "title": "20220053 (Re)",
+      "keywords": [
+        "worker — psychological — entitlement to generalized anxiety disorder — impairment — ketamine"
+      ],
+      "url": "https://canlii.ca/t/jpz5g",
+      "docketNumber": "20220053"
+    },
+    {
+      "index": 145,
+      "caseNumber": "2022canlii44778",
+      "year": 2022,
+      "date": "2022-04-12",
+      "title": "20220043 (Re)",
+      "keywords": [
+        "worker — driving — ability to drive — change — modified"
+      ],
+      "url": "https://canlii.ca/t/jpgzx",
+      "docketNumber": "20220043"
+    },
+    {
+      "index": 146,
+      "caseNumber": "2022canlii33323",
+      "year": 2022,
+      "date": "2022-04-04",
+      "title": "20220036 (Re)",
+      "keywords": [
+        "worker — employer — termination — suitable work — work-related injury"
+      ],
+      "url": "https://canlii.ca/t/jnx0m",
+      "docketNumber": "20220036"
+    },
+    {
+      "index": 147,
+      "caseNumber": "2022canlii74699",
+      "year": 2022,
+      "date": "2022-03-25",
+      "title": "20220090 (Re)",
+      "keywords": [
+        "rotator cuff tear — worker — shoulder — full-thickness tear — supraspinatus tendon"
+      ],
+      "url": "https://canlii.ca/t/jrj4g",
+      "docketNumber": "20220090"
+    },
+    {
+      "index": 148,
+      "caseNumber": "2022canlii33324",
+      "year": 2022,
+      "date": "2022-03-23",
+      "title": "20220027 (Re)",
+      "keywords": [
+        "worker — neck — concussion — impairment — ongoing"
+      ],
+      "url": "https://canlii.ca/t/jnx0d",
+      "docketNumber": "20220027"
+    },
+    {
+      "index": 149,
+      "caseNumber": "2022canlii33318",
+      "year": 2022,
+      "date": "2022-03-23",
+      "title": "20220029 (Re)",
+      "keywords": [
+        "wrist — injury — indicated the worker — hand — significant deterioration"
+      ],
+      "url": "https://canlii.ca/t/jnx0g",
+      "docketNumber": "20220029"
+    },
+    {
+      "index": 150,
+      "caseNumber": "2022canlii33321",
+      "year": 2022,
+      "date": "2022-03-17",
+      "title": "20220034 (Re)",
+      "keywords": [
+        "worker — muscular effort — hernia was pre-existing — surgery — work-related"
+      ],
+      "url": "https://canlii.ca/t/jnx0k",
+      "docketNumber": "20220034"
+    },
+    {
+      "index": 151,
+      "caseNumber": "2022canlii44789",
+      "year": 2022,
+      "date": "2022-03-10",
+      "title": "20220044 (Re)",
+      "keywords": [
+        "entitlement to a recurrence — worker representative — incident — disc — regular job duties"
+      ],
+      "url": "https://canlii.ca/t/jpgzz",
+      "docketNumber": "20220044"
+    },
+    {
+      "index": 152,
+      "caseNumber": "2022canlii33319",
+      "year": 2022,
+      "date": "2022-03-10",
+      "title": "20220035 (Re)",
+      "keywords": [
+        "pre-existing condition — curtains — severity — cost relief — worker"
+      ],
+      "url": "https://canlii.ca/t/jnx0l",
+      "docketNumber": "20220035"
+    },
+    {
+      "index": 153,
+      "caseNumber": "2022canlii99426",
+      "year": 2022,
+      "date": "2022-03-09",
+      "title": "20220119 (Re)",
+      "keywords": [
+        "worker — graduated return to work plan — specialty clinic — entitled to benefits — shoulder"
+      ],
+      "url": "https://canlii.ca/t/jsnrg",
+      "docketNumber": "20220119"
+    },
+    {
+      "index": 154,
+      "caseNumber": "2022canlii44785",
+      "year": 2022,
+      "date": "2022-03-07",
+      "title": "20220049 (Re)",
+      "keywords": [
+        "concussion — indicates the worker — return to work — neck — headaches"
+      ],
+      "url": "https://canlii.ca/t/jph03",
+      "docketNumber": "20220049"
+    },
+    {
+      "index": 155,
+      "caseNumber": "2022canlii44787",
+      "year": 2022,
+      "date": "2022-03-03",
+      "title": "20220040 (Re)",
+      "keywords": [
+        "worker — low back pain — beyond the usual healing time — injury — chronic"
+      ],
+      "url": "https://canlii.ca/t/jpgzv",
+      "docketNumber": "20220040"
+    },
+    {
+      "index": 156,
+      "caseNumber": "2022canlii33327",
+      "year": 2022,
+      "date": "2022-03-03",
+      "title": "20220028 (Re)",
+      "keywords": [
+        "worker — virus — contracting — distancing — protocols"
+      ],
+      "url": "https://canlii.ca/t/jnx0f",
+      "docketNumber": "20220028"
+    },
+    {
+      "index": 157,
+      "caseNumber": "2022canlii33328",
+      "year": 2022,
+      "date": "2022-03-02",
+      "title": "20220037 (Re)",
+      "keywords": [
+        "worker — communicator — employed as a first responder — anxiety — symptoms"
+      ],
+      "url": "https://canlii.ca/t/jnx0n",
+      "docketNumber": "20220037"
+    },
+    {
+      "index": 158,
+      "caseNumber": "2022canlii33326",
+      "year": 2022,
+      "date": "2022-02-28",
+      "title": "20220033 (Re)",
+      "keywords": [
+        "worker — toes — work-related injury — antalgic gait — foot"
+      ],
+      "url": "https://canlii.ca/t/jnx0j",
+      "docketNumber": "20220033"
+    },
+    {
+      "index": 159,
+      "caseNumber": "2022canlii21320",
+      "year": 2022,
+      "date": "2022-02-25",
+      "title": "20220023 (Re)",
+      "keywords": [
+        "pre-existing condition — rotator cuff tears — worker — degenerative changes — shoulder"
+      ],
+      "url": "https://canlii.ca/t/jn8pm",
+      "docketNumber": "20220023"
+    },
+    {
+      "index": 160,
+      "caseNumber": "2022canlii21324",
+      "year": 2022,
+      "date": "2022-02-23",
+      "title": "20220019 (Re)",
+      "keywords": [
+        "friable — airborne asbestos — buildings — exposure — mesothelioma"
+      ],
+      "url": "https://canlii.ca/t/jn8ph",
+      "docketNumber": "20220019"
+    },
+    {
+      "index": 161,
+      "caseNumber": "2022canlii19205",
+      "year": 2022,
+      "date": "2022-02-22",
+      "title": "20220017 (Re)",
+      "keywords": [
+        "worker — employer — harassment — manager — termination"
+      ],
+      "url": "https://canlii.ca/t/jn5gw",
+      "docketNumber": "20220017"
+    },
+    {
+      "index": 162,
+      "caseNumber": "2022canlii21319",
+      "year": 2022,
+      "date": "2022-02-16",
+      "title": "20220022 (Re)",
+      "keywords": [
+        "worker — device — mobility — hobby — trialed"
+      ],
+      "url": "https://canlii.ca/t/jn8pl",
+      "docketNumber": "20220022"
+    },
+    {
+      "index": 163,
+      "caseNumber": "2022canlii21325",
+      "year": 2022,
+      "date": "2022-02-14",
+      "title": "20220021 (Re)",
+      "keywords": [
+        "worker — entitlement to seronegative rheumatoid arthritis — symptoms — inflammatory arthritis — viral"
+      ],
+      "url": "https://canlii.ca/t/jn8pk",
+      "docketNumber": "20220021"
+    },
+    {
+      "index": 164,
+      "caseNumber": "2022canlii33329",
+      "year": 2022,
+      "date": "2022-02-12",
+      "title": "20220030 (Re)",
+      "keywords": [
+        "pre-existing condition — worker — pre-existing psychological — cost relief — recovery from the compensable"
+      ],
+      "url": "https://canlii.ca/t/jnx0h",
+      "docketNumber": "20220030"
+    },
+    {
+      "index": 165,
+      "caseNumber": "2022canlii33325",
+      "year": 2022,
+      "date": "2022-02-11",
+      "title": "20220024 (Re)",
+      "keywords": [
+        "worker — pre-existing condition — shoulder partial tear — employer — trays"
+      ],
+      "url": "https://canlii.ca/t/jnx0b",
+      "docketNumber": "20220024"
+    },
+    {
+      "index": 166,
+      "caseNumber": "2022canlii33320",
+      "year": 2022,
+      "date": "2022-02-11",
+      "title": "20220025 (Re)",
+      "keywords": [
+        "worker — injury — jackhammer — disc herniation — pain"
+      ],
+      "url": "https://canlii.ca/t/jnx0c",
+      "docketNumber": "20220025"
+    },
+    {
+      "index": 167,
+      "caseNumber": "2022canlii19201",
+      "year": 2022,
+      "date": "2022-02-08",
+      "title": "20220015 (Re)",
+      "keywords": [
+        "worker — entitlement to medical cannabis — designated condition — policy — therapeutic"
+      ],
+      "url": "https://canlii.ca/t/jn5gt",
+      "docketNumber": "20220015"
+    },
+    {
+      "index": 168,
+      "caseNumber": "2022canlii21323",
+      "year": 2022,
+      "date": "2022-02-07",
+      "title": "20220018 (Re)",
+      "keywords": [
+        "worker — specialty clinic — psychological — impairment — rating"
+      ],
+      "url": "https://canlii.ca/t/jn8pg",
+      "docketNumber": "20220018"
+    },
+    {
+      "index": 169,
+      "caseNumber": "2022canlii19202",
+      "year": 2022,
+      "date": "2022-02-07",
+      "title": "20220016 (Re)",
+      "keywords": [
+        "worker — modified duties — work — functional abilities — offer"
+      ],
+      "url": "https://canlii.ca/t/jn5gv",
+      "docketNumber": "20220016"
+    },
+    {
+      "index": 170,
+      "caseNumber": "2022canlii44777",
+      "year": 2022,
+      "date": "2022-02-04",
+      "title": "20220038 (Re)",
+      "keywords": [
+        "worker — pre-existing condition — low blood sugar — acute subarachnoid hemorrhage — injury"
+      ],
+      "url": "https://canlii.ca/t/jpgzt",
+      "docketNumber": "20220038"
+    },
+    {
+      "index": 171,
+      "caseNumber": "2022canlii21318",
+      "year": 2022,
+      "date": "2022-02-03",
+      "title": "20220020 (Re)",
+      "keywords": [
+        "company — executive officer — organization — shares — optional"
+      ],
+      "url": "https://canlii.ca/t/jn8pj",
+      "docketNumber": "20220020"
+    },
+    {
+      "index": 172,
+      "caseNumber": "2022canlii21317",
+      "year": 2022,
+      "date": "2022-01-31",
+      "title": "20220013 (Re)",
+      "keywords": [
+        "worker — work-related injury — upper extremity — cervical spine — pain"
+      ],
+      "url": "https://canlii.ca/t/jn8pd",
+      "docketNumber": "20220013"
+    },
+    {
+      "index": 173,
+      "caseNumber": "2022canlii8149",
+      "year": 2022,
+      "date": "2022-01-24",
+      "title": "20220012 (Re)",
+      "keywords": [
+        "parking lot — snow removal contract — crew — building — weather"
+      ],
+      "url": "https://canlii.ca/t/jm99s",
+      "docketNumber": "20220012"
+    },
+    {
+      "index": 174,
+      "caseNumber": "2022canlii8155",
+      "year": 2022,
+      "date": "2022-01-17",
+      "title": "20220010 (Re)",
+      "keywords": [
+        "plantar fasciitis — worker — bilateral — ankle — foot"
+      ],
+      "url": "https://canlii.ca/t/jm99q",
+      "docketNumber": "20220010"
+    },
+    {
+      "index": 175,
+      "caseNumber": "2022canlii3827",
+      "year": 2022,
+      "date": "2022-01-07",
+      "title": "20220003 (Re)",
+      "keywords": [
+        "questionnaire — work — employer representative — audit — status"
+      ],
+      "url": "https://canlii.ca/t/jm0kx",
+      "docketNumber": "20220003"
+    },
+    {
+      "index": 176,
+      "caseNumber": "2022canlii8151",
+      "year": 2022,
+      "date": "2022-01-05",
+      "title": "20220011 (Re)",
+      "keywords": [
+        "pre-existing condition — obesity — pre-accident disability — tongs — https"
+      ],
+      "url": "https://canlii.ca/t/jm99r",
+      "docketNumber": "20220011"
+    },
+    {
+      "index": 177,
+      "caseNumber": "2023canlii138774",
+      "year": 2023,
+      "date": "2023-12-20",
+      "title": "20240003 (Re)",
+      "keywords": [
+        "worker — non-economic loss benefit — labour market re-entry — plan — elbow"
+      ],
+      "url": "https://canlii.ca/t/k3zj2",
+      "docketNumber": "20240003"
+    },
+    {
+      "index": 178,
+      "caseNumber": "2023canlii138798",
+      "year": 2023,
+      "date": "2023-12-13",
+      "title": "20240011 (Re)",
+      "keywords": [
+        "infection — shoulder — pulmonary embolism — indicated the worker — neck"
+      ],
+      "url": "https://canlii.ca/t/k40b4",
+      "docketNumber": "20240011"
+    },
+    {
+      "index": 179,
+      "caseNumber": "2023canlii138776",
+      "year": 2023,
+      "date": "2023-12-12",
+      "title": "20240005 (Re)",
+      "keywords": [
+        "occupational exposures — silica — worker — studies — airborne droplet"
+      ],
+      "url": "https://canlii.ca/t/k3zj4",
+      "docketNumber": "20240005"
+    },
+    {
+      "index": 180,
+      "caseNumber": "2023canlii138773",
+      "year": 2023,
+      "date": "2023-12-11",
+      "title": "20240007 (Re)",
+      "keywords": [
+        "worker — stressors — work — work-related injury — significant deterioration"
+      ],
+      "url": "https://canlii.ca/t/k3zj6",
+      "docketNumber": "20240007"
+    },
+    {
+      "index": 181,
+      "caseNumber": "2023canlii122916",
+      "year": 2023,
+      "date": "2023-11-30",
+      "title": "20230137 (Re)",
+      "keywords": [
+        "worker — traumatic mental stress — chronic mental stress — supervisor — transitional provisions"
+      ],
+      "url": "https://canlii.ca/t/k1xc2",
+      "docketNumber": "20230137"
+    },
+    {
+      "index": 182,
+      "caseNumber": "2023canlii138801",
+      "year": 2023,
+      "date": "2023-11-27",
+      "title": "20240017 (Re)",
+      "keywords": [
+        "worker — work-related low back injury — accident — benefits for a psychotraumatic disability — pain"
+      ],
+      "url": "https://canlii.ca/t/k40b9",
+      "docketNumber": "20240017"
+    },
+    {
+      "index": 183,
+      "caseNumber": "2023canlii122873",
+      "year": 2023,
+      "date": "2023-11-27",
+      "title": "20230144 (Re)",
+      "keywords": [
+        "worker — causally linked to the work-related — upper thigh — wound — operational policy"
+      ],
+      "url": "https://canlii.ca/t/k1xc9",
+      "docketNumber": "20230144"
+    },
+    {
+      "index": 184,
+      "caseNumber": "2023canlii122949",
+      "year": 2023,
+      "date": "2023-11-24",
+      "title": "20230142 (Re)",
+      "keywords": [
+        "worker — minimum wage — review — entry-level earnings — hour"
+      ],
+      "url": "https://canlii.ca/t/k1xc7",
+      "docketNumber": "20230142"
+    },
+    {
+      "index": 185,
+      "caseNumber": "2023canlii122906",
+      "year": 2023,
+      "date": "2023-11-21",
+      "title": "20230136 (Re)",
+      "keywords": [
+        "worker — significant deterioration — work-related condition — lumbar spine — benefits"
+      ],
+      "url": "https://canlii.ca/t/k1xc1",
+      "docketNumber": "20230136"
+    },
+    {
+      "index": 186,
+      "caseNumber": "2023canlii122885",
+      "year": 2023,
+      "date": "2023-11-20",
+      "title": "20230143 (Re)",
+      "keywords": [
+        "elbow biceps tendon insertion strain — biceps tendon insertion strain injury — worker reached maximum medical recovery — work-related injury disease — permanent impairment"
+      ],
+      "url": "https://canlii.ca/t/k1xc8",
+      "docketNumber": "20230143"
+    },
+    {
+      "index": 187,
+      "caseNumber": "2023canlii122945",
+      "year": 2023,
+      "date": "2023-11-17",
+      "title": "20230138 (Re)",
+      "keywords": [
+        "colon cancer — ammonia — creosote — worker — workplace exposures"
+      ],
+      "url": "https://canlii.ca/t/k1xc3",
+      "docketNumber": "20230138"
+    },
+    {
+      "index": 188,
+      "caseNumber": "2023canlii138800",
+      "year": 2023,
+      "date": "2023-11-14",
+      "title": "20240016 (Re)",
+      "keywords": [
+        "worker — impairment — rating — disability benefits — daily living"
+      ],
+      "url": "https://canlii.ca/t/k40b8",
+      "docketNumber": "20240016"
+    },
+    {
+      "index": 189,
+      "caseNumber": "2023canlii122884",
+      "year": 2023,
+      "date": "2023-11-14",
+      "title": "20230139 (Re)",
+      "keywords": [
+        "insurable earnings — employer — workers — premium adjustments — revision"
+      ],
+      "url": "https://canlii.ca/t/k1xc4",
+      "docketNumber": "20230139"
+    },
+    {
+      "index": 190,
+      "caseNumber": "2023canlii112867",
+      "year": 2023,
+      "date": "2023-11-09",
+      "title": "20230132 (Re)",
+      "keywords": [
+        "small high-grade partial thickness tear — worker — clinical — rotator cuff tendinitis — upper arm bruise contusion type"
+      ],
+      "url": "https://canlii.ca/t/k1f80",
+      "docketNumber": "20230132"
+    },
+    {
+      "index": 191,
+      "caseNumber": "2023canlii122927",
+      "year": 2023,
+      "date": "2023-11-03",
+      "title": "20230135 (Re)",
+      "keywords": [
+        "vaccine — worker — vaccination — employer — pandemic"
+      ],
+      "url": "https://canlii.ca/t/k1xc0",
+      "docketNumber": "20230135"
+    },
+    {
+      "index": 192,
+      "caseNumber": "2023canlii122895",
+      "year": 2023,
+      "date": "2023-11-02",
+      "title": "20230133 (Re)",
+      "keywords": [
+        "worker — work-related injury — radio-frequency ablation injections — spondylolisthesis — impairment"
+      ],
+      "url": "https://canlii.ca/t/k1xbx",
+      "docketNumber": "20230133"
+    },
+    {
+      "index": 193,
+      "caseNumber": "2023canlii122877",
+      "year": 2023,
+      "date": "2023-11-02",
+      "title": "20230134 (Re)",
+      "keywords": [
+        "worker — work — knee — employer — chondrosis"
+      ],
+      "url": "https://canlii.ca/t/k1xbz",
+      "docketNumber": "20230134"
+    },
+    {
+      "index": 194,
+      "caseNumber": "2023canlii138775",
+      "year": 2023,
+      "date": "2023-11-01",
+      "title": "20240002 (Re)",
+      "keywords": [
+        "worker — initial entitlement for lung cancer — knockdown — peak concentrations for short durations — daily average exposure"
+      ],
+      "url": "https://canlii.ca/t/k3zj1",
+      "docketNumber": "20240002"
+    },
+    {
+      "index": 195,
+      "caseNumber": "2023canlii112866",
+      "year": 2023,
+      "date": "2023-10-30",
+      "title": "20230129 (Re)",
+      "keywords": [
+        "worker — employment — lunch break — course — activity"
+      ],
+      "url": "https://canlii.ca/t/k1f7w",
+      "docketNumber": "20230129"
+    },
+    {
+      "index": 196,
+      "caseNumber": "2023canlii112871",
+      "year": 2023,
+      "date": "2023-10-25",
+      "title": "20230131 (Re)",
+      "keywords": [
+        "worker — neck — upper trapezius — forehead — tendinosis"
+      ],
+      "url": "https://canlii.ca/t/k1f7z",
+      "docketNumber": "20230131"
+    },
+    {
+      "index": 197,
+      "caseNumber": "2023canlii112864",
+      "year": 2023,
+      "date": "2023-10-18",
+      "title": "20230128 (Re)",
+      "keywords": [
+        "worker — work — sedentary office duties — using crutches to ambulate — foot sprain injury"
+      ],
+      "url": "https://canlii.ca/t/k1f7v",
+      "docketNumber": "20230128"
+    },
+    {
+      "index": 198,
+      "caseNumber": "2023canlii122891",
+      "year": 2023,
+      "date": "2023-10-17",
+      "title": "20230140 (Re)",
+      "keywords": [
+        "worker — work — benefits for central serous retinopathy — blepharitis — gland dysfunction"
+      ],
+      "url": "https://canlii.ca/t/k1xc5",
+      "docketNumber": "20230140"
+    },
+    {
+      "index": 199,
+      "caseNumber": "2023canlii112863",
+      "year": 2023,
+      "date": "2023-10-13",
+      "title": "20230130 (Re)",
+      "keywords": [
+        "worker — time limit — six-month deadline — shoulder injury — benefits"
+      ],
+      "url": "https://canlii.ca/t/k1f7x",
+      "docketNumber": "20230130"
+    }
+  ]
+}

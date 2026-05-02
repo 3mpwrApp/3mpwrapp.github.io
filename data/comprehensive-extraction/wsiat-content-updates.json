@@ -1,0 +1,216 @@
+{
+  "statistics": {
+    "total": 11430,
+    "byOutcome": {
+      "partial": 65,
+      "allowed": 285,
+      "unclear": 8806,
+      "other": 2151,
+      "denied": 43,
+      "remitted": 80
+    },
+    "byConfidence": {
+      "low": 6206,
+      "medium": 3081,
+      "high": 2143
+    },
+    "byYear": {
+      "2020": {
+        "total": 2077,
+        "allowed": 8,
+        "denied": 1,
+        "partial": 11,
+        "remitted": 0,
+        "other": 443,
+        "unclear": 1614
+      },
+      "2021": {
+        "total": 1207,
+        "allowed": 27,
+        "denied": 6,
+        "partial": 3,
+        "remitted": 8,
+        "other": 209,
+        "unclear": 954
+      },
+      "2022": {
+        "total": 2091,
+        "allowed": 54,
+        "denied": 10,
+        "partial": 5,
+        "remitted": 19,
+        "other": 321,
+        "unclear": 1682
+      },
+      "2023": {
+        "total": 1571,
+        "allowed": 53,
+        "denied": 3,
+        "partial": 9,
+        "remitted": 13,
+        "other": 279,
+        "unclear": 1214
+      },
+      "2024": {
+        "total": 1971,
+        "allowed": 63,
+        "denied": 11,
+        "partial": 7,
+        "remitted": 22,
+        "other": 366,
+        "unclear": 1502
+      },
+      "2025": {
+        "total": 1522,
+        "allowed": 58,
+        "denied": 12,
+        "partial": 15,
+        "remitted": 15,
+        "other": 320,
+        "unclear": 1102
+      },
+      "2026": {
+        "total": 146,
+        "allowed": 20,
+        "denied": 0,
+        "partial": 2,
+        "remitted": 3,
+        "other": 41,
+        "unclear": 80
+      }
+    },
+    "workerWins": 350,
+    "workerLosses": 43,
+    "procedural": 2151,
+    "unclear": 8806
+  },
+  "generatedAt": "2026-05-01T23:54:10.371Z",
+  "markdown": {
+    "outcomeTable": "| Outcome | Count | Percentage |\n|---------|-------|------------|\n| Unclear | 8,806 | 77.0% |\n| Other | 2,151 | 18.8% |\n| Allowed | 285 | 2.5% |\n| Remitted | 80 | 0.7% |\n| Partial | 65 | 0.6% |\n| Denied | 43 | 0.4% |\n| **TOTAL** | **11,430** | **100%** |",
+    "yearlyBreakdown": "| Year | Total | Allowed | Partial | Denied | Remitted | Other | Unclear | Win Rate |\n|------|-------|---------|---------|--------|----------|-------|---------|----------|\n| 2020 | 2077 | 8 | 11 | 1 | 0 | 443 | 1614 | 95.0% |\n| 2021 | 1207 | 27 | 3 | 6 | 8 | 209 | 954 | 83.3% |\n| 2022 | 2091 | 54 | 5 | 10 | 19 | 321 | 1682 | 85.5% |\n| 2023 | 1571 | 53 | 9 | 3 | 13 | 279 | 1214 | 95.4% |\n| 2024 | 1971 | 63 | 7 | 11 | 22 | 366 | 1502 | 86.4% |\n| 2025 | 1522 | 58 | 15 | 12 | 15 | 320 | 1102 | 85.9% |\n| 2026 | 146 | 20 | 2 | 0 | 3 | 41 | 80 | 100.0% |",
+    "keyStats": "**Key Statistics from 11,430 Classified Decisions:**\n\n- **Worker Wins:** 350 (3.1% of total)\n  - Allowed: 285\n  - Partial: 65\n\n- **Worker Losses:** 43 (0.4% of total)\n\n- **Remitted (sent back):** 80 (0.7%)\n\n- **Procedural/Other:** 2,151 (18.8%)\n\n- **Unclear Outcomes:** 8,806 (77.0%)\n\n- **Worker Win Rate (clear outcomes):** 89.1% (350 / 393)\n\n**Confidence Levels:**\n- low: 6,206 (54.3%)\n- medium: 3,081 (27.0%)\n- high: 2,143 (18.7%)",
+    "visualizationData": {
+      "outcomes": [
+        {
+          "outcome": "partial",
+          "count": 65,
+          "percentage": 0.6
+        },
+        {
+          "outcome": "allowed",
+          "count": 285,
+          "percentage": 2.5
+        },
+        {
+          "outcome": "unclear",
+          "count": 8806,
+          "percentage": 77
+        },
+        {
+          "outcome": "other",
+          "count": 2151,
+          "percentage": 18.8
+        },
+        {
+          "outcome": "denied",
+          "count": 43,
+          "percentage": 0.4
+        },
+        {
+          "outcome": "remitted",
+          "count": 80,
+          "percentage": 0.7
+        }
+      ],
+      "confidence": [
+        {
+          "level": "low",
+          "count": 6206,
+          "percentage": 54.3
+        },
+        {
+          "level": "medium",
+          "count": 3081,
+          "percentage": 27
+        },
+        {
+          "level": "high",
+          "count": 2143,
+          "percentage": 18.7
+        }
+      ],
+      "timeline": [
+        {
+          "year": 2020,
+          "total": 2077,
+          "allowed": 8,
+          "denied": 1,
+          "partial": 11,
+          "remitted": 0,
+          "other": 443,
+          "unclear": 1614
+        },
+        {
+          "year": 2021,
+          "total": 1207,
+          "allowed": 27,
+          "denied": 6,
+          "partial": 3,
+          "remitted": 8,
+          "other": 209,
+          "unclear": 954
+        },
+        {
+          "year": 2022,
+          "total": 2091,
+          "allowed": 54,
+          "denied": 10,
+          "partial": 5,
+          "remitted": 19,
+          "other": 321,
+          "unclear": 1682
+        },
+        {
+          "year": 2023,
+          "total": 1571,
+          "allowed": 53,
+          "denied": 3,
+          "partial": 9,
+          "remitted": 13,
+          "other": 279,
+          "unclear": 1214
+        },
+        {
+          "year": 2024,
+          "total": 1971,
+          "allowed": 63,
+          "denied": 11,
+          "partial": 7,
+          "remitted": 22,
+          "other": 366,
+          "unclear": 1502
+        },
+        {
+          "year": 2025,
+          "total": 1522,
+          "allowed": 58,
+          "denied": 12,
+          "partial": 15,
+          "remitted": 15,
+          "other": 320,
+          "unclear": 1102
+        },
+        {
+          "year": 2026,
+          "total": 146,
+          "allowed": 20,
+          "denied": 0,
+          "partial": 2,
+          "remitted": 3,
+          "other": 41,
+          "unclear": 80
+        }
+      ]
+    }
+  }
+}

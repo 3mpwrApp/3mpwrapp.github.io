@@ -1,0 +1,380 @@
+{
+  "batchNumber": 5,
+  "startIndex": 400,
+  "endIndex": 431,
+  "createdAt": "2026-05-02T00:45:55.463Z",
+  "decisions": [
+    {
+      "index": 400,
+      "caseNumber": "2025canlii123898",
+      "year": 2025,
+      "date": "2025-04-08",
+      "title": "20250064 (Re)",
+      "keywords": [
+        "pre-injury work — perform the essential duties — breached their re-employment obligation — obligation to re-employ — employment"
+      ],
+      "url": "https://canlii.ca/t/kgs9w",
+      "docketNumber": "20250064"
+    },
+    {
+      "index": 401,
+      "caseNumber": "2025canlii111690",
+      "year": 2025,
+      "date": "2025-04-08",
+      "title": "20250040 (Re)",
+      "keywords": [
+        "emphysema — worker — connective tissue disease — boilers — employment exposure to asbestos"
+      ],
+      "url": "https://canlii.ca/t/kg7xn",
+      "docketNumber": "20250040"
+    },
+    {
+      "index": 402,
+      "caseNumber": "2025canlii111672",
+      "year": 2025,
+      "date": "2025-04-08",
+      "title": "20250057 (Re)",
+      "keywords": [
+        "transferrable skills — functional abilities — identified — pre-injury earnings to the greatest — work"
+      ],
+      "url": "https://canlii.ca/t/kg7z7",
+      "docketNumber": "20250057"
+    },
+    {
+      "index": 403,
+      "caseNumber": "2025canlii111688",
+      "year": 2025,
+      "date": "2025-03-31",
+      "title": "20250050 (Re)",
+      "keywords": [
+        "worker — earnings benefits — modified duties — return to work — entitled to full loss"
+      ],
+      "url": "https://canlii.ca/t/kg7z0",
+      "docketNumber": "20250050"
+    },
+    {
+      "index": 404,
+      "caseNumber": "2025canlii111684",
+      "year": 2025,
+      "date": "2025-03-26",
+      "title": "20250049 (Re)",
+      "keywords": [
+        "pre-existing condition — work-related injury disease — symptoms — pain — medical"
+      ],
+      "url": "https://canlii.ca/t/kg7xz",
+      "docketNumber": "20250049"
+    },
+    {
+      "index": 405,
+      "caseNumber": "2025canlii111685",
+      "year": 2025,
+      "date": "2025-03-24",
+      "title": "20250043 (Re)",
+      "keywords": [
+        "re-employment obligation — worker — employer representative — termination — foreman"
+      ],
+      "url": "https://canlii.ca/t/kg7xr",
+      "docketNumber": "20250043"
+    },
+    {
+      "index": 406,
+      "caseNumber": "2025canlii111681",
+      "year": 2025,
+      "date": "2025-03-19",
+      "title": "20250044 (Re)",
+      "keywords": [
+        "worker — cardiac arrest — heart — beach — firefighter"
+      ],
+      "url": "https://canlii.ca/t/kg7xs",
+      "docketNumber": "20250044"
+    },
+    {
+      "index": 407,
+      "caseNumber": "2025canlii111674",
+      "year": 2025,
+      "date": "2025-03-18",
+      "title": "202500037 (Re)",
+      "keywords": [
+        "worker — employed as a first responder — diagnosed — significant contributing factor — entitlement"
+      ],
+      "url": "https://canlii.ca/t/kg7xk",
+      "docketNumber": "202500037"
+    },
+    {
+      "index": 408,
+      "caseNumber": "2025canlii111686",
+      "year": 2025,
+      "date": "2025-03-17",
+      "title": "20250052 (Re)",
+      "keywords": [
+        "worker — entitlement to medical cannabis — conventional treatments — neuropathic pain — trialed"
+      ],
+      "url": "https://canlii.ca/t/kg7z2",
+      "docketNumber": "20250052"
+    },
+    {
+      "index": 409,
+      "caseNumber": "2025canlii111675",
+      "year": 2025,
+      "date": "2025-03-17",
+      "title": "20250041 (Re)",
+      "keywords": [
+        "worker — psychologist — pre-approved vacation — work — treatment"
+      ],
+      "url": "https://canlii.ca/t/kg7xp",
+      "docketNumber": "20250041"
+    },
+    {
+      "index": 410,
+      "caseNumber": "2025canlii111678",
+      "year": 2025,
+      "date": "2025-03-11",
+      "title": "20250042 (Re)",
+      "keywords": [
+        "worker — return to work — work-related injury — country — treatment"
+      ],
+      "url": "https://canlii.ca/t/kg7xq",
+      "docketNumber": "20250042"
+    },
+    {
+      "index": 411,
+      "caseNumber": "2025canlii111691",
+      "year": 2025,
+      "date": "2025-03-03",
+      "title": "20250053 (Re)",
+      "keywords": [
+        "intracranial hypotension — leak — worker — headache — dog"
+      ],
+      "url": "https://canlii.ca/t/kg7z3",
+      "docketNumber": "20250053"
+    },
+    {
+      "index": 412,
+      "caseNumber": "2025canlii111680",
+      "year": 2025,
+      "date": "2025-02-28",
+      "title": "20250046 (Re)",
+      "keywords": [
+        "anterolisthesis — worker — neck — impairment — deterioration"
+      ],
+      "url": "https://canlii.ca/t/kg7xv",
+      "docketNumber": "20250046"
+    },
+    {
+      "index": 413,
+      "caseNumber": "2025canlii39057",
+      "year": 2025,
+      "date": "2025-02-28",
+      "title": "20250036 (Re)",
+      "keywords": [
+        "worker — post-concussion syndrome — concussion — headaches — work-related injury"
+      ],
+      "url": "https://canlii.ca/t/kbwhm",
+      "docketNumber": "20250036"
+    },
+    {
+      "index": 414,
+      "caseNumber": "2025canlii111669",
+      "year": 2025,
+      "date": "2025-02-27",
+      "title": "20250039 (Re)",
+      "keywords": [
+        "worker — chemical burn — puddle — pre-existing diabetes — knee amputation"
+      ],
+      "url": "https://canlii.ca/t/kg7xm",
+      "docketNumber": "20250039"
+    },
+    {
+      "index": 415,
+      "caseNumber": "2025canlii111682",
+      "year": 2025,
+      "date": "2025-02-25",
+      "title": "20250038 (Re)",
+      "keywords": [
+        "worker — student — mental stress — indicated — anxiety"
+      ],
+      "url": "https://canlii.ca/t/kg7xl",
+      "docketNumber": "20250038"
+    },
+    {
+      "index": 416,
+      "caseNumber": "2025canlii39098",
+      "year": 2025,
+      "date": "2025-02-19",
+      "title": "20250028 (Re)",
+      "keywords": [
+        "employer — benefits — retire — work-related injury — psychologist"
+      ],
+      "url": "https://canlii.ca/t/kbwhc",
+      "docketNumber": "20250028"
+    },
+    {
+      "index": 417,
+      "caseNumber": "2025canlii24858",
+      "year": 2025,
+      "date": "2025-02-18",
+      "title": "20250022 (Re)",
+      "keywords": [
+        "worker — wrist carpal tunnel syndrome injury — long-haul truck driver — steering wheel — duties as a long-haul truck"
+      ],
+      "url": "https://canlii.ca/t/kb7mr",
+      "docketNumber": "20250022"
+    },
+    {
+      "index": 418,
+      "caseNumber": "2025canlii111676",
+      "year": 2025,
+      "date": "2025-02-13",
+      "title": "20250047 (Re)",
+      "keywords": [
+        "worker — substantial work-related stressor — chronic mental stress — parent — acute adjustment disorder"
+      ],
+      "url": "https://canlii.ca/t/kg7xw",
+      "docketNumber": "20250047"
+    },
+    {
+      "index": 419,
+      "caseNumber": "2025canlii39113",
+      "year": 2025,
+      "date": "2025-02-12",
+      "title": "20250025 (Re)",
+      "keywords": [
+        "work-related left ankle foot injury — impairment resulting from the work-related — worker reached — joints associated with the injury — assessors"
+      ],
+      "url": "https://canlii.ca/t/kbwh8",
+      "docketNumber": "20250025"
+    },
+    {
+      "index": 420,
+      "caseNumber": "2025canlii24857",
+      "year": 2025,
+      "date": "2025-02-12",
+      "title": "20250024 (Re)",
+      "keywords": [
+        "work-related left ankle foot injury — impairment resulting from the work-related — worker reached — joints associated with the injury — assessors"
+      ],
+      "url": "https://canlii.ca/t/kb7mt",
+      "docketNumber": "20250024"
+    },
+    {
+      "index": 421,
+      "caseNumber": "2025canlii39102",
+      "year": 2025,
+      "date": "2025-02-06",
+      "title": "20250035 (Re)",
+      "keywords": [
+        "work-related left little finger laceration — herpes simplex virus — worker — diagnosed herpetic whitlow — resulted from his work-related"
+      ],
+      "url": "https://canlii.ca/t/kbwhl",
+      "docketNumber": "20250035"
+    },
+    {
+      "index": 422,
+      "caseNumber": "2025canlii24860",
+      "year": 2025,
+      "date": "2025-02-05",
+      "title": "20250021 (Re)",
+      "keywords": [
+        "earnings — employment doing private car deliveries — long-term rate was calculated correctly — electronics weighing — transporting books"
+      ],
+      "url": "https://canlii.ca/t/kb7mq",
+      "docketNumber": "20250021"
+    },
+    {
+      "index": 423,
+      "caseNumber": "2025canlii111670",
+      "year": 2025,
+      "date": "2025-02-03",
+      "title": "20250045 (Re)",
+      "keywords": [
+        "worker — personal injury by accident — employer — occurred — entitlement"
+      ],
+      "url": "https://canlii.ca/t/kg7xt",
+      "docketNumber": "20250045"
+    },
+    {
+      "index": 424,
+      "caseNumber": "2025canlii39090",
+      "year": 2025,
+      "date": "2025-01-31",
+      "title": "20250029 (Re)",
+      "keywords": [
+        "worker — updated entry-level wages — full-time hours — lock-in — post-injury earnings"
+      ],
+      "url": "https://canlii.ca/t/kbwhd",
+      "docketNumber": "20250029"
+    },
+    {
+      "index": 425,
+      "caseNumber": "2025canlii39071",
+      "year": 2025,
+      "date": "2025-01-30",
+      "title": "20250027 (Re)",
+      "keywords": [
+        "degrees — in-between values — range — rating for their neck injury — pre-existing condition"
+      ],
+      "url": "https://canlii.ca/t/kbwhb",
+      "docketNumber": "20250027"
+    },
+    {
+      "index": 426,
+      "caseNumber": "2025canlii39126",
+      "year": 2025,
+      "date": "2025-01-27",
+      "title": "20250033 (Re)",
+      "keywords": [
+        "worker — work-related stressor — knife — appropriately diagnosed mental stress injury — incident"
+      ],
+      "url": "https://canlii.ca/t/kbwhj",
+      "docketNumber": "20250033"
+    },
+    {
+      "index": 427,
+      "caseNumber": "2025canlii39099",
+      "year": 2025,
+      "date": "2025-01-27",
+      "title": "20250026 (Re)",
+      "keywords": [
+        "worker — dizziness — vestibular — benign paroxysmal positional vertigo — nausea"
+      ],
+      "url": "https://canlii.ca/t/kbwh9",
+      "docketNumber": "20250026"
+    },
+    {
+      "index": 428,
+      "caseNumber": "2025canlii39083",
+      "year": 2025,
+      "date": "2025-01-24",
+      "title": "20250030 (Re)",
+      "keywords": [
+        "register — premium adjustments — account — business — wrote to the employer"
+      ],
+      "url": "https://canlii.ca/t/kbwhf",
+      "docketNumber": "20250030"
+    },
+    {
+      "index": 429,
+      "caseNumber": "2025canlii111679",
+      "year": 2025,
+      "date": "2025-01-17",
+      "title": "20250048 (Re)",
+      "keywords": [
+        "worker — significant deterioration — benefits — co-operating — work-related left knee"
+      ],
+      "url": "https://canlii.ca/t/kg7xx",
+      "docketNumber": "20250048"
+    },
+    {
+      "index": 430,
+      "caseNumber": "2025canlii39125",
+      "year": 2025,
+      "date": "2025-01-03",
+      "title": "20250031 (Re)",
+      "keywords": [
+        "worker — work-related right knee — crutches — recurrence — modified work duties"
+      ],
+      "url": "https://canlii.ca/t/kbwhg",
+      "docketNumber": "20250031"
+    }
+  ]
+}

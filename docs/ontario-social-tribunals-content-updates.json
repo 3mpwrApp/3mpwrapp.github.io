@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "generatedAt": "2026-05-02T00:48:06.792Z",
+    "tribunals": [
+      "ONSBT",
+      "ONWSIB"
+    ],
+    "totalDecisions": 14729
+  },
+  "onsbt": {
+    "overallStats": {
+      "total": 14298,
+      "clearOutcomes": 8071,
+      "workerWins": 7983,
+      "winRate": 98.9
+    },
+    "outcomeDistribution": [
+      {
+        "outcome": "allowed",
+        "count": 7983,
+        "percentage": 55.8
+      },
+      {
+        "outcome": "other",
+        "count": 1321,
+        "percentage": 9.2
+      },
+      {
+        "outcome": "unclear",
+        "count": 4906,
+        "percentage": 34.3
+      },
+      {
+        "outcome": "denied",
+        "count": 88,
+        "percentage": 0.6
+      }
+    ],
+    "yearlyBreakdown": [
+      {
+        "year": 2020,
+        "total": 2347,
+        "outcomes": {
+          "allowed": 1587,
+          "other": 188,
+          "unclear": 563,
+          "denied": 9
+        }
+      },
+      {
+        "year": 2021,
+        "total": 1857,
+        "outcomes": {
+          "allowed": 1182,
+          "unclear": 500,
+          "other": 168,
+          "denied": 7
+        }
+      },
+      {
+        "year": 2022,
+        "total": 1854,
+        "outcomes": {
+          "allowed": 1103,
+          "unclear": 554,
+          "other": 186,
+          "denied": 11
+        }
+      },
+      {
+        "year": 2023,
+        "total": 2025,
+        "outcomes": {
+          "unclear": 645,
+          "allowed": 1174,
+          "other": 200,
+          "denied": 6
+        }
+      },
+      {
+        "year": 2024,
+        "total": 947,
+        "outcomes": {
+          "unclear": 429,
+          "allowed": 473,
+          "other": 45
+        }
+      },
+      {
+        "year": 2025,
+        "total": 4168,
+        "outcomes": {
+          "other": 419,
+          "allowed": 1768,
+          "unclear": 1965,
+          "denied": 16
+        }
+      },
+      {
+        "year": 2026,
+        "total": 1100,
+        "outcomes": {
+          "denied": 39,
+          "allowed": 696,
+          "other": 115,
+          "unclear": 250
+        }
+      }
+    ]
+  },
+  "onwsib": {
+    "overallStats": {
+      "total": 431,
+      "clearOutcomes": 12,
+      "workerWins": 10,
+      "winRate": 83.3
+    },
+    "outcomeDistribution": [
+      {
+        "outcome": "unclear",
+        "count": 413,
+        "percentage": 95.8
+      },
+      {
+        "outcome": "allowed",
+        "count": 1,
+        "percentage": 0.2
+      },
+      {
+        "outcome": "partial",
+        "count": 8,
+        "percentage": 1.9
+      },
+      {
+        "outcome": "denied",
+        "count": 2,
+        "percentage": 0.5
+      },
+      {
+        "outcome": "remitted",
+        "count": 1,
+        "percentage": 0.2
+      },
+      {
+        "outcome": "other",
+        "count": 6,
+        "percentage": 1.4
+      }
+    ],
+    "yearlyBreakdown": [
+      {
+        "year": 2021,
+        "total": 28,
+        "outcomes": {
+          "unclear": 26,
+          "allowed": 1,
+          "partial": 1
+        }
+      },
+      {
+        "year": 2022,
+        "total": 149,
+        "outcomes": {
+          "unclear": 144,
+          "denied": 1,
+          "partial": 3,
+          "remitted": 1
+        }
+      },
+      {
+        "year": 2023,
+        "total": 120,
+        "outcomes": {
+          "unclear": 114,
+          "partial": 1,
+          "other": 5
+        }
+      },
+      {
+        "year": 2024,
+        "total": 73,
+        "outcomes": {
+          "unclear": 70,
+          "partial": 3
+        }
+      },
+      {
+        "year": 2025,
+        "total": 61,
+        "outcomes": {
+          "unclear": 59,
+          "denied": 1,
+          "other": 1
+        }
+      }
+    ]
+  },
+  "visualizationSuggestions": [
+    {
+      "type": "comparison-bar",
+      "title": "Ontario Tribunals: Outcome Distribution Comparison",
+      "description": "Side-by-side comparison of WSIAT, ONSBT, and ONWSIB outcome rates"
+    },
+    {
+      "type": "pie-chart",
+      "title": "ONSBT Outcome Distribution (2020-2026)",
+      "description": "Breakdown of 13,798 ONSBT social benefits decisions"
+    },
+    {
+      "type": "timeline",
+      "title": "Year-by-Year Trends: Social Benefits vs. Workplace Injury",
+      "description": "Compare ONSBT and ONWSIB trends over time"
+    }
+  ]
+}
