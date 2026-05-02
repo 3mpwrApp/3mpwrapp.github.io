@@ -9,7 +9,7 @@ excerpt: "Comprehensive analysis of 13,798 ONSBT tribunal decisions over seven y
 
 ## Overview: The Data Landscape
 
-From 2020 through 2026, the Ontario Social Benefits Tribunal (ONSBT) recorded **13,798 published decisions** across disability eligibility appeals, overpayment disputes, and regulatory compliance matters. This analysis examines what that dataset reveals—and, critically, what it obscures—about access to justice for people with disabilities navigating Ontario's social benefits system.
+From 2020 through 2026, the Ontario Social Benefits Tribunal (ONSBT) recorded **14,298 published decisions** across disability eligibility appeals, overpayment disputes, and regulatory compliance matters. This analysis examines what that dataset reveals—and, critically, what it obscures—about access to justice for people with disabilities navigating Ontario's social benefits system.
 
 **⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 13,798 cases individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
 
@@ -24,7 +24,7 @@ From 2020 through 2026, the Ontario Social Benefits Tribunal (ONSBT) recorded **
 | 2024 | 948 | 53% decline (incomplete year or data gap?) |
 | 2025 | 4,168 | 339% spike |
 | 2026 | 1,100 | Partial year |
-| **TOTAL** | **13,798** | |
+| **TOTAL** | **14,298** | |
 
 **Key Observation**: The 2025 spike (4,168 cases) is anomalous and requires investigation. Possible explanations include:
 - Policy change driving increased appeals

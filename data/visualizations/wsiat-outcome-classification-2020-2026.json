@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "title": "WSIAT Outcome Classification (2020-2026)",
+    "description": "Keyword-based classification of 11,430 WSIAT tribunal decisions using pattern matching",
+    "totalDecisions": 11430,
+    "dateRange": "2020-2026",
+    "generatedAt": "2026-05-01T00:00:00.000Z",
+    "methodology": "Keyword-based pattern matching with confidence levels (high/medium/low)",
+    "limitations": "77% of decisions have unclear outcomes despite classification attempts. Outcomes inferred from keywords, not manually reviewed.",
+    "dataSource": "CanLII Ontario WSIAT decisions"
+  },
+  "overallStats": {
+    "total": 11430,
+    "workerWins": 350,
+    "workerLosses": 43,
+    "remitted": 80,
+    "procedural": 2151,
+    "unclear": 8806,
+    "clearOutcomes": 393,
+    "winRate": 89.1,
+    "winRateNote": "Calculated from 393 decisions with clear outcomes (allowed + partial vs denied)"
+  },
+  "outcomeDistribution": [
+    { "outcome": "Unclear", "count": 8806, "percentage": 77.0, "description": "No clear outcome language detected" },
+    { "outcome": "Other (Procedural)", "count": 2151, "percentage": 18.8, "description": "Reconsiderations, withdrawals, time disputes, adjournments" },
+    { "outcome": "Allowed", "count": 285, "percentage": 2.5, "description": "Appeal fully allowed, entitlement granted" },
+    { "outcome": "Remitted", "count": 80, "percentage": 0.7, "description": "Sent back to WSIB for reconsideration" },
+    { "outcome": "Partial", "count": 65, "percentage": 0.6, "description": "Appeal partially allowed" },
+    { "outcome": "Denied", "count": 43, "percentage": 0.4, "description": "Appeal denied, WSIB decision upheld" }
+  ],
+  "confidenceDistribution": [
+    { "level": "Low", "count": 6206, "percentage": 54.3, "description": "Injury/medical terms without clear resolution" },
+    { "level": "Medium", "count": 3081, "percentage": 27.0, "description": "Implied outcomes from decision language" },
+    { "level": "High", "count": 2143, "percentage": 18.7, "description": "Explicit outcome language (appeal allowed/denied)" }
+  ],
+  "yearlyBreakdown": [
+    {
+      "year": 2020,
+      "total": 2077,
+      "allowed": 8,
+      "partial": 11,
+      "denied": 1,
+      "remitted": 0,
+      "other": 443,
+      "unclear": 1614,
+      "clearOutcomes": 20,
+      "wins": 19,
+      "winRate": 95.0
+    },
+    {
+      "year": 2021,
+      "total": 1207,
+      "allowed": 27,
+      "partial": 3,
+      "denied": 6,
+      "remitted": 8,
+      "other": 209,
+      "unclear": 954,
+      "clearOutcomes": 36,
+      "wins": 30,
+      "winRate": 83.3
+    },
+    {
+      "year": 2022,
+      "total": 2091,
+      "allowed": 54,
+      "partial": 5,
+      "denied": 10,
+      "remitted": 19,
+      "other": 321,
+      "unclear": 1682,
+      "clearOutcomes": 69,
+      "wins": 59,
+      "winRate": 85.5
+    },
+    {
+      "year": 2023,
+      "total": 1571,
+      "allowed": 53,
+      "partial": 9,
+      "denied": 3,
+      "remitted": 13,
+      "other": 279,
+      "unclear": 1214,
+      "clearOutcomes": 65,
+      "wins": 62,
+      "winRate": 95.4
+    },
+    {
+      "year": 2024,
+      "total": 1971,
+      "allowed": 63,
+      "partial": 7,
+      "denied": 11,
+      "remitted": 22,
+      "other": 366,
+      "unclear": 1502,
+      "clearOutcomes": 81,
+      "wins": 70,
+      "winRate": 86.4
+    },
+    {
+      "year": 2025,
+      "total": 1522,
+      "allowed": 58,
+      "partial": 15,
+      "denied": 12,
+      "remitted": 15,
+      "other": 320,
+      "unclear": 1102,
+      "clearOutcomes": 85,
+      "wins": 73,
+      "winRate": 85.9
+    },
+    {
+      "year": 2026,
+      "total": 146,
+      "allowed": 20,
+      "partial": 2,
+      "denied": 0,
+      "remitted": 3,
+      "other": 41,
+      "unclear": 80,
+      "clearOutcomes": 22,
+      "wins": 22,
+      "winRate": 100.0
+    }
+  ],
+  "visualizationSuggestions": {
+    "pieChart": {
+      "title": "WSIAT Outcome Distribution (2020-2026)",
+      "data": "outcomeDistribution",
+      "colorScheme": {
+        "Unclear": "#9CA3AF",
+        "Other (Procedural)": "#60A5FA",
+        "Allowed": "#34D399",
+        "Remitted": "#FBBF24",
+        "Partial": "#A78BFA",
+        "Denied": "#F87171"
+      }
+    },
+    "barChart": {
+      "title": "Worker Win Rate by Year",
+      "data": "yearlyBreakdown",
+      "xAxis": "year",
+      "yAxis": "winRate",
+      "color": "#10B981"
+    },
+    "stackedBarChart": {
+      "title": "Yearly Outcome Breakdown",
+      "data": "yearlyBreakdown",
+      "stacks": ["allowed", "partial", "denied", "remitted", "other", "unclear"]
+    },
+    "confidenceLevels": {
+      "title": "Classification Confidence Distribution",
+      "data": "confidenceDistribution",
+      "type": "donut"
+    }
+  },
+  "keyInsights": [
+    "89.1% worker win rate from clear outcomes (350 wins / 393 decisions)",
+    "77% of decisions have unclear outcomes despite keyword classification",
+    "Consistent 85-95% win rate across all years (2020-2026)",
+    "Only 43 denials detected vs 350 wins (8.1x more wins than losses)",
+    "18.8% of cases are procedural matters (not substantive appeals)",
+    "54.3% of classifications have low confidence (ambiguous language)"
+  ],
+  "dataFiles": {
+    "master": "data/comprehensive-extraction/wsiat-classified.json",
+    "progress": "data/comprehensive-extraction/ai-progress.json",
+    "contentUpdates": "data/comprehensive-extraction/wsiat-content-updates.json"
+  }
+}

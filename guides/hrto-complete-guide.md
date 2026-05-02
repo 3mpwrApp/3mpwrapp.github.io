@@ -13,13 +13,18 @@ layout: guide
 
 ## Executive Summary
 
-**HRTO Success Rate: 2.66%** (Applications proceeding to full hearing)
-- **Total Applications Received (2016-2025):** 62,093
-- **Interim Decisions:** 5,420
-- **Final Decisions:** 4,208
-- **Withdrawn/Abandoned:** 52,465 (84.5%)
+**HRTO Success Rate: 12.7%** from clear outcomes in 9,268 recent decisions (2020-2026)
+- **Total Decisions Classified:** 9,268
+- **Allowed (Discrimination Found):** 503 (5.4%)
+- **Settled (Consent Orders):** 221 (2.4%)
+- **Denied (Dismissed):** 902 (9.7%)
+- **Abandoned (Failed to Attend/Email Issues):** 4,073 (43.9%)
+- **Other (Procedural/Jurisdictional):** 1,065 (11.5%)
+- **Unclear:** 2,504 (27.0%)
 
-**Key Insight:** Most applications resolve through settlement (not counted in final decisions). Low "success" rate misleading - many achieve goals through mediation.
+**Win Rate Calculation:** (Allowed + Settled) / (Clear Outcomes) = 724 / 5,699 = 12.7%
+
+**Key Insight:** HRTO has dramatically lower success rates than workplace tribunals (WSIAT 89.1%, ONWSIB 83.3%, ONSBT 98.9%). High abandonment rate (43.9%) suggests systemic access barriers including email notification failures and complex procedures.
 
 ---
 

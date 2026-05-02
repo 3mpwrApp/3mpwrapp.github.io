@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ONSBT 2020-2026: Tiered Outcome Classification and Audit Confidence Update"
-subtitle: "13,798 decisions reviewed with confirmed/probable/unresolved tiers and tribunal-level confidence intervals"
+subtitle: "14,298 decisions reviewed with confirmed/probable/unresolved tiers and tribunal-level confidence intervals"
 date: 2026-04-26
 author: Lissa Beaulieu (Founder, 3mpwrApp) & GitHub Copilot
 categories: [community-updates, research, access-to-justice]
@@ -20,7 +20,7 @@ The **Ontario Social Benefits Tribunal (ONSBT)** hears appeals from people denie
 - Faces benefit cuts due to overpayment allegations
 - Gets their disability status verified or denied
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 13,798 cases individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 14,298 cases individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
 
 ## The ODSP Poverty Crisis Context
 
@@ -57,7 +57,7 @@ Every ONSBT denial keeps someone in severe poverty or forces them onto even-lowe
 
 ## Dataset Overview
 
-**13,798 ONSBT decisions (2020-2026)** analyzed from CanLII public records.
+**14,298 ONSBT decisions (2020-2026)** analyzed from CanLII public records.
 
 ## Top Issues in ONSBT Cases (Keyword Analysis)
 
@@ -78,7 +78,7 @@ Every ONSBT denial keeps someone in severe poverty or forces them onto even-lowe
 
 ## Tiered Snapshot
 
-From 13,798 ONSBT decisions:
+From 14,298 ONSBT decisions:
 
 - **Tier A (confirmed):** 494 (3.6%)
 - **Tier B (probable):** 3,251 (23.6%)
