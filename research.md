@@ -298,48 +298,103 @@ description: Interactive data visualizations and research tools analyzing tribun
   /* Dark Mode Support */
   @media (prefers-color-scheme: dark) {
     .tool-card {
-      background: #1a1a1a;
-      color: #e0e0e0;
-      border-color: #444;
+      background: #1a1a1a !important;
+      color: #e0e0e0 !important;
+      border-color: #444 !important;
     }
     
     .tool-card h3,
     .tool-card h4 {
-      color: #ffffff;
+      color: #ffffff !important;
     }
     
     .tool-card p,
     .tool-card li {
-      color: #d0d0d0;
+      color: #d0d0d0 !important;
     }
     
     .tool-card a {
-      color: #4DB8FF;
+      color: #4DB8FF !important;
     }
     
     .tool-card:hover {
-      border-color: #667eea;
-      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      border-color: #667eea !important;
+      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3) !important;
     }
     
     .category-box {
-      background: #2a2a2a;
-      color: #e0e0e0;
+      background: #2a2a2a !important;
+      color: #e0e0e0 !important;
     }
     
     .category-box a {
-      color: #4DB8FF;
+      color: #4DB8FF !important;
+    }
+    
+    /* Override inline styles in dark mode */
+    p[style*="color: #666"],
+    small[style*="color: #666"],
+    h3[style*="color: #666"] {
+      color: #b0b0b0 !important;
+    }
+    
+    div[style*="background: #fff3e0"] {
+      background: #2d2416 !important;
+      color: #e0e0e0 !important;
+      border-left-color: #ff9800 !important;
     }
   }
   
   /* High Contrast Mode */
   @media (prefers-contrast: high) {
     .tool-card {
-      border: 3px solid currentColor;
+      border: 3px solid currentColor !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+    }
+    
+    .tool-card h3,
+    .tool-card h4,
+    .tool-card p,
+    .tool-card li {
+      color: #000000 !important;
     }
     
     .tool-badge {
-      border: 2px solid white;
+      border: 2px solid white !important;
+    }
+    
+    p[style*="color: #666"],
+    small[style*="color: #666"],
+    h3[style*="color: #666"] {
+      color: #000000 !important;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+    .tool-card {
+      background: #000000 !important;
+      color: #ffffff !important;
+      border: 3px solid #ffffff !important;
+    }
+    
+    .tool-card h3,
+    .tool-card h4,
+    .tool-card p,
+    .tool-card li {
+      color: #ffffff !important;
+    }
+    
+    p[style*="color: #666"],
+    small[style*="color: #666"],
+    h3[style*="color: #666"] {
+      color: #ffffff !important;
+    }
+    
+    div[style*="background: #fff3e0"] {
+      background: #000000 !important;
+      color: #ffffff !important;
+      border: 3px solid #ffffff !important;
     }
   }
   
