@@ -1,8 +1,8 @@
 # Campaign Optimization Report
 
-**Generated:** 2026-05-03T21:31:11.314Z
+**Generated:** 2026-05-03T21:36:19.061Z
 
-**Data Period:** Last 18 days
+**Data Period:** Last 19 days
 
 ---
 
@@ -79,7 +79,7 @@
 - Change: 0.00
 
 ### injured-workers-day-rallies-2026
-- Posts: +6 this week
+- Posts: +9 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
