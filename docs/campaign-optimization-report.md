@@ -1,8 +1,8 @@
 # Campaign Optimization Report
 
-**Generated:** 2026-04-26T21:32:37.440Z
+**Generated:** 2026-05-03T21:31:11.314Z
 
-**Data Period:** Last 11 days
+**Data Period:** Last 18 days
 
 ---
 
@@ -44,22 +44,42 @@
 - Change: 0.00
 
 ### day-of-mourning-2026
-- Posts: +15 this week
+- Posts: +18 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### family-matters-april25
-- Posts: +15 this week
+- Posts: +18 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### injured-workers-day-2026
-- Posts: +15 this week
+- Posts: +18 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### wsib-changes-april29
-- Posts: +15 this week
+- Posts: +18 this week
+- Engagement: ➡️ Stable
+- Change: 0.00
+
+### bill105-campaign
+- Posts: +18 this week
+- Engagement: ➡️ Stable
+- Change: 0.00
+
+### iavgo-day-of-mourning
+- Posts: +18 this week
+- Engagement: ➡️ Stable
+- Change: 0.00
+
+### windsor-day-of-mourning
+- Posts: +18 this week
+- Engagement: ➡️ Stable
+- Change: 0.00
+
+### injured-workers-day-rallies-2026
+- Posts: +6 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
