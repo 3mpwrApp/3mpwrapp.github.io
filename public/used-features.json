@@ -25,7 +25,8 @@
     "CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide)",
     "Return to Work Accommodation Letter",
     "Resilience Points (Gamified Wellness)",
-    "Multi-Device Sync: Access Anywhere (Optional)"
+    "Multi-Device Sync: Access Anywhere (Optional)",
+    "Evidence Flywheel: Your Wins Power Community Templates"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -53,6 +54,6 @@
     "Spoon Theory and the Design Language We Built Around It",
     "Building in Public: Why Transparency Is Non-Negotiable for Us"
   ],
-  "rotationIndex": 4,
+  "rotationIndex": 5,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
