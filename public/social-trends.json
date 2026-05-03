@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-03T03:59:44.715Z",
+  "lastUpdated": "2026-05-03T13:40:20.535Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16499,
+      "totalPosts": 16524,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-03T03:59:33.098Z"
+      "lastSeen": "2026-05-03T13:40:08.409Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16486,
+      "totalPosts": 16511,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-03T03:59:35.687Z"
+      "lastSeen": "2026-05-03T13:40:11.638Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16371,
+      "totalPosts": 16396,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-03T03:59:38.538Z"
+      "lastSeen": "2026-05-03T13:40:15.044Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16562,
+      "totalPosts": 16587,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-03T03:59:41.198Z"
+      "lastSeen": "2026-05-03T13:40:17.281Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16523,
+      "totalPosts": 16548,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-03T03:59:43.712Z"
+      "lastSeen": "2026-05-03T13:40:19.531Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Unfortunately, #Saros is part of a repeating cycle of inaccessible sci-fi experiences from Housemarque. Read my initial impressions thanks to a free review code below:\n\nwww.sightlesskombat.com/the-cycle-co...\n#A11Y #Ad #Accessibility #PlayStation #PS5",
-      "author": "sightlesskombat.com",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I'm pretty sick of hearing people say they don't provide alt text and exclude people with disabilities so they can mildly inconvenience AI companies.\n\nvale.rocks/micros/20260...\n\n#a11y #Accessibility #AltText",
-      "author": "vale.rocks",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Today's big task: adding screen reader support to the tutorial. This involved writing an entire parallel set of tutorial texts, which not only tell the player what to do, but give them the context to understand what's going on.\n#a11y #indiedev #indiegame",
-      "author": "byobattleship.bsky.social",
-      "engagement": 16,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 30,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Unfortunately, #Saros is part of a repeating cycle of inaccessible sci-fi experiences from Housemarque. Read my initial impressions thanks to a free review code below:\n\nwww.sightlesskombat.com/the-cycle-co...\n#A11Y #Ad #Accessibility #PlayStation #PS5",
-      "author": "sightlesskombat.com",
-      "engagement": 16,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I'm pretty sick of hearing people say they don't provide alt text and exclude people with disabilities so they can mildly inconvenience AI companies.\n\nvale.rocks/micros/20260...\n\n#a11y #Accessibility #AltText",
-      "author": "vale.rocks",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Today's big task: adding screen reader support to the tutorial. This involved writing an entire parallel set of tutorial texts, which not only tell the player what to do, but give them the context to understand what's going on.\n#a11y #indiedev #indiegame",
-      "author": "byobattleship.bsky.social",
-      "engagement": 16,
-      "hashtag": "A11y"
-    },
     {
       "text": "Unfortunately, #Saros is part of a repeating cycle of inaccessible sci-fi experiences from Housemarque. Read my initial impressions thanks to a free review code below:\n\nwww.sightlesskombat.com/the-cycle-co...\n#A11Y #Ad #Accessibility #PlayStation #PS5",
       "author": "sightlesskombat.com",
@@ -338,20 +296,62 @@
       "author": "inclusivedesign24.bsky.social",
       "engagement": 11,
       "hashtag": "A11y"
+    },
+    {
+      "text": "Cruelty can be the only logical reason behind cutting aids to adults with severe autism. #pinks #resist #disabilityrights  #autism #eugenics #medicaidcuts #socialsecurityCUTS",
+      "author": "aliceknew.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "The Trump Administration Aims to Penalize Disabled Adults Who Live With Their Families www.propublica.org/article/trum... \n\n#DOGE #OMB #SSA #SocialSecurity #DisabilityRights #HumanRights",
+      "author": "wolverinebear.bsky.social",
+      "engagement": 83,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "From @criprights.bsky.social \n\n#NDIS     #DisabilityRights",
+      "author": "anonymoussewerrat.bsky.social",
+      "engagement": 29,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
+      "author": "uua.org",
+      "engagement": 38,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "[1/5]\n\nI heard about AccessibilityFirewall.com, promising “No code changes. No overlay. No JavaScript.” It uses “edge” in the same way the Overlay Community Group does.\n\nRed flag emoji.\n\nSo I ran it through its own “Live Remediation Engine”:\nwebcraft.inc#audit-section\n\nHmmm…\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Sometimes alt text it's helpful for describing things in images that the rest of us are just not familiar with (due to cultural differences or whatnot). \n\nI have read the alt text of images countless times and it was the alt text that has helped me understand the purpose of the image. ☺️\n\n#a11y FTW",
+      "author": "sarasoueidan.com",
+      "engagement": 32,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Hey #accessibility #a11y #inclusiveDesign folks: you still have until the end of this month (31 May 2026) to propose a presentations for this year's #id24 in September inclusivedesign24.org/2026/\n\nReminder: as it's a global event, we'd also be delighted to have talks in languages other than English.",
+      "author": "inclusivedesign24.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 46
+      "count": 45
     },
     {
       "keyword": "accessibility",
-      "count": 44
+      "count": 45
     },
     {
       "keyword": "a11y",
-      "count": 28
+      "count": 29
     },
     {
       "keyword": "disabilityjustice",
@@ -394,32 +394,32 @@
       "count": 10
     },
     {
+      "keyword": "inclusivedesign",
+      "count": 9
+    },
+    {
       "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
-      "keyword": "ux",
-      "count": 8
-    },
-    {
-      "keyword": "a11y accessibility",
-      "count": 8
-    },
-    {
-      "keyword": "inclusivedesign",
-      "count": 8
-    },
-    {
-      "keyword": "ada",
-      "count": 7
-    },
-    {
-      "keyword": "disabilityjustice nico",
-      "count": 7
-    },
-    {
       "keyword": "disabilitysky",
-      "count": 7
+      "count": 8
+    },
+    {
+      "keyword": "cripminds",
+      "count": 8
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 8
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 8
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 8
     }
   ]
 }
