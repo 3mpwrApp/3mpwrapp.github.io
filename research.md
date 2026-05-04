@@ -755,7 +755,7 @@ description: Interactive data visualizations and research tools analyzing tribun
         <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Finding #1: Appeals Work (But Outcomes Are Hidden)</h3>
         <p style="margin: 0; font-size: 1.05rem;"><strong>The Data:</strong> Analyzed 98,992 WSIAT decisions (1987-2026). Keyword matching detected 726 allowed vs 5,314 denied (12.0% detected success rate), but 93,952 decisions (94.9%) lack clear outcome keywords.</p>
         <p style="margin: 0.5rem 0 0; color: #666;"><strong>What This Means:</strong> Real success rate unknown due to 91.8% outcome gap in public data. Independent research suggests 60-70% range. Most workers don't know appeals work.</p>
-        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/guides/wsiat-complete-guide/">Read WSIAT Appeal Guide</a> | <a href="/_templates/pre-existing-appeal/">Use Winning Template</a></p>
+        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/guides/wsiat-complete-guide/">Read WSIAT Appeal Guide</a> | <a href="/templates/pre-existing-appeal/">Use Winning Template</a></p>
       </div>
     </div>
 
@@ -765,7 +765,7 @@ description: Interactive data visualizations and research tools analyzing tribun
         <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Finding #2: "Pre-Existing Condition" = Systematic Tactic</h3>
         <p style="margin: 0; font-size: 1.05rem;"><strong>The Data:</strong> 13.3% of all denials cite pre-existing (1,522 cases analyzed, 95% CI: 12.7-13.9%). Top injury types in 98,992 decisions: Back/Spine 15,177 (15.3%), Hearing Loss 9,650 (9.7%), Chronic Pain 7,502 (7.6%).</p>
         <p style="margin: 0.5rem 0 0; color: #666;"><strong>What This Means:</strong> It's not bad luck—it's a pattern. WSIB uses "you were already hurt" to deny 1 in 8 claims. Back injuries are most common target.</p>
-        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/_knowledge_base/pre-existing-conditions/">Recognize the Tactic</a> | <a href="/_templates/pre-existing-appeal/">Fight Back with Template</a></p>
+        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/knowledge-base/pre-existing-conditions/">Recognize the Tactic</a> | <a href="/templates/pre-existing-appeal/">Fight Back with Template</a></p>
       </div>
     </div>
 
@@ -836,8 +836,8 @@ description: Interactive data visualizations and research tools analyzing tribun
       <p style="margin: 0 0 1rem; color: #333;">You got denied. You need a strategy now.</p>
       <ul style="margin: 0 0 0 1.2rem; color: #333;">
         <li><a href="/guides/wsiat-complete-guide/">WSIAT Appeal Guide</a> (10,000+ words)</li>
-        <li><a href="/_templates/pre-existing-appeal/">Pre-Existing Template</a></li>
-        <li><a href="/_templates/chronic-pain-appeal/">Chronic Pain Template</a></li>
+        <li><a href="/templates/pre-existing-appeal/">Pre-Existing Template</a></li>
+        <li><a href="/templates/chronic-pain-appeal/">Chronic Pain Template</a></li>
       </ul>
     </div>
 
@@ -845,7 +845,7 @@ description: Interactive data visualizations and research tools analyzing tribun
       <h3 style="margin: 0 0 0.75rem; font-size: 1.2rem;">🔍 I Want to Understand Patterns</h3>
       <p style="margin: 0 0 1rem; color: #333;">See the tactics. Know what you're up against.</p>
       <ul style="margin: 0 0 0 1.2rem; color: #333;">
-        <li><a href="/_knowledge_base/pre-existing-conditions/">Pre-Existing Tactics Explained</a></li>
+        <li><a href="/knowledge-base/pre-existing-conditions/">Pre-Existing Tactics Explained</a></li>
         <li><a href="/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/">WSIB Manipulation Patterns</a></li>
         <li><a href="#in-depth-findings">Deep Research Findings</a></li>
       </ul>
