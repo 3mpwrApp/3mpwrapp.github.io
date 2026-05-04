@@ -13,7 +13,7 @@ excerpt: "The reasoning behind implementing AES-256-GCM encryption in 3mpwrApp a
 
 * * *
 
-We encrypt at the level we do because we understand what a data breach means for someone with a disability. It is not just personal embarrassment Ã¢â‚¬â€ it can mean an insurer accessing evidence that undermines an active claim. It can mean an employer learning about a condition the worker hasn't disclosed.
+We encrypt at the level we do because we understand what a data breach means for someone with a disability. It is not just personal embarrassment - it can mean an insurer accessing evidence that undermines an active claim. It can mean an employer learning about a condition the worker hasn't disclosed.
 
 AES-256-GCM gives us both encryption (data cannot be read) and authentication (data has not been tampered with). It is the standard that people and organizations who genuinely need security use.
 
@@ -26,7 +26,7 @@ Our 721 tests include a dedicated security suite that verifies not just "does th
 - AES-256-GCM is the same encryption standard used in financial services
 - All Evidence Locker entries and sensitive data encrypted at rest on-device
 - 721 security tests verify encryption is correctly implemented throughout
-- Key management is on-device Ã¢â‚¬â€ we never hold your encryption keys
+- Key management is on-device - we never hold your encryption keys
 - Zero-knowledge design: even we cannot read your data
 
 * * *
@@ -41,7 +41,7 @@ Our 721 tests include a dedicated security suite that verifies not just "does th
 
 ## What We Learned
 
-- A disability data breach can cost someone their benefits claim Ã¢â‚¬â€ the stakes are not just personal
+- A disability data breach can cost someone their benefits claim - the stakes are not just personal
 - Military-grade encryption was a baseline requirement, not an aspirational achievement
 - Open, verifiable security claims are more trustworthy than marketing language
 
@@ -49,8 +49,8 @@ Our 721 tests include a dedicated security suite that verifies not just "does th
 
 ## Follow Our Development
 
-We believe in building in public Ã¢â‚¬â€ the community we serve has been failed by opaque institutions too many times.
+We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
-- Ã¢Â­Â [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
-- Ã°Å¸Â§Âª [Join Beta Testing](/app-waitlist/)
-- Ã°Å¸â€™Â¬ [Community Discussion](/community/)
+-  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
+-  [Join Beta Testing](/app-waitlist/)
+- ' [Community Discussion](/community/)

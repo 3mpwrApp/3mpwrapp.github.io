@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Update â€” Week 45 (2025)
+title: Weekly Update - Week 45 (2025)
 date: 2025-11-03 09:00:00 +0000
 tags: [weekly, updates]
 categories: [updates]
@@ -9,7 +9,7 @@ excerpt: This week's updates to 3mpwrApp features, content, and improvements.
 
 Here's what changed this week, in simple terms:
 
-## âœ¨ New Features
+##  New Features
 
 - Daily feature article - 2025-11-02
 - Daily feature article - 2025-11-01
@@ -24,7 +24,7 @@ Here's what changed this week, in simple terms:
 - Upgrade accessibility: Add comprehensive ARIA labels (aria-label, role, aria-labelledby), tabindex for keyboard navigation on feature boxes, landmark regions, and descriptive link labels across Community, Campaigns, and Connect pages
 - Daily feature article - 2025-10-27
 
-## ðŸš€ Improvements
+##  Improvements
 
 - Add enhanced focus indicators, fix language attributes, and repair FAQ file
 - Add accessibility improvements: skip links, focus indicators, emoji ARIA, landmarks
@@ -40,7 +40,7 @@ Here's what changed this week, in simple terms:
 - Merge remote changes with local accessibility improvements
 - Comprehensive accessibility & UX improvements across entire site
 
-## ðŸ› Bug Fixes
+##  Bug Fixes
 
 - Post to social media AFTER deployment
 - Color contrast violation on homepage progress indicator
@@ -52,7 +52,7 @@ Here's what changed this week, in simple terms:
 - EMERGENCY FIX: Revert dropdown navigation - restore flat menu list
 - Set dark mode as default in CSS variables
 
-## ðŸ“š Documentation
+##  Documentation
 
 - Add comprehensive translation system README with all documentation
 - Add comprehensive UX/UI consistency improvements and WCAG compliance documentation
@@ -64,6 +64,6 @@ Here's what changed this week, in simple terms:
 
 * * *
 
-ðŸ“¬ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
+ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
 
-ðŸ” See all updates: [What's New](/whats-new/)
+ See all updates: [What's New](/whats-new/)

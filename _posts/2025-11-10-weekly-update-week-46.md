@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Update â€” Week 46 (2025)
+title: Weekly Update - Week 46 (2025)
 date: 2025-11-10 09:00:00 +0000
 tags: [weekly, updates]
 categories: [updates]
@@ -9,7 +9,7 @@ excerpt: This week's updates to 3mpwrApp features, content, and improvements.
 
 Here's what changed this week, in simple terms:
 
-## âœ¨ New Features
+##  New Features
 
 - Add 3mpwrApp logo to key areas across website
 - Add 'Organized by: Every Canadian Counts' with website link to home page featured campaign section
@@ -29,13 +29,13 @@ Here's what changed this week, in simple terms:
 - Daily feature article - 2025-11-04
 - Daily feature article - 2025-11-03
 
-## ðŸš€ Improvements
+##  Improvements
 
 - Fix all white box WCAG 2.2 AAA issues on campaigns page - improved contrast for info-box, info-box-bordered, info-box-light in light/dark modes, moved events to separate page
 - Fix campaign box WCAG 2.2 AAA accessibility - improved text contrast and visibility
 - Enhance social sharing: Add robust error handling, copy button, accessibility labels
 
-## ðŸ› Bug Fixes
+##  Bug Fixes
 
 - CRITICAL FIX: Force all text to pure black with !important - campaigns section was completely unreadable (white on white). Added explicit color: #000000 !important to all text elements, backgrounds, buttons, and dynamic content for maximum visibility and WCAG AAA++ compliance
 - Add rake gem for google-protobuf compilation
@@ -50,14 +50,14 @@ Here's what changed this week, in simple terms:
 - Resolve all 9 W3C HTML5 validation errors - 0 errors, full compliance
 - Standardize all social media URLs to use /blog/ path
 
-## ðŸ“š Documentation
+##  Documentation
 
 - Comprehensive site-wide interlinking and table of contents for all major pages
 - Add Facebook Group and Axe DevTools update summary
 - Add final deployment status report
 - Add commit and sync completion summary
 
-## ðŸ¤– Behind the Scenes
+##  Behind the Scenes
 
 - Remove large report file
 - Remove large accessibility audit files and add to .gitignore
@@ -65,6 +65,6 @@ Here's what changed this week, in simple terms:
 
 * * *
 
-ðŸ“¬ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
+ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
 
-ðŸ” See all updates: [What's New](/whats-new/)
+ See all updates: [What's New](/whats-new/)

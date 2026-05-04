@@ -13,11 +13,11 @@ excerpt: "The technical and ethical reasoning behind choosing React Native as th
 
 * * *
 
-When we started 3mpwrApp, we had a hard constraint: the framework had to support real, deep accessibility Ã¢â‚¬â€ VoiceOver, TalkBack, Switch Access, and the full spectrum of assistive technology Ã¢â‚¬â€ from day one, not as an afterthought.
+When we started 3mpwrApp, we had a hard constraint: the framework had to support real, deep accessibility - VoiceOver, TalkBack, Switch Access, and the full spectrum of assistive technology - from day one, not as an afterthought.
 
 React Native was the answer because it exposes the native accessibility APIs of both iOS and Android directly. A web-based hybrid approach would have meant fighting the underlying layer. React Native meant working with it.
 
-The Expo ecosystem accelerated this enormously. Expo Router's file-based navigation is inherently screen-reader-transparent. The community has deep accessibility expertise. We didn't have to build the foundations Ã¢â‚¬â€ we stood on good ones.
+The Expo ecosystem accelerated this enormously. Expo Router's file-based navigation is inherently screen-reader-transparent. The community has deep accessibility expertise. We didn't have to build the foundations - we stood on good ones.
 
 * * *
 
@@ -49,8 +49,8 @@ The Expo ecosystem accelerated this enormously. Expo Router's file-based navigat
 
 ## Follow Our Development
 
-We believe in building in public Ã¢â‚¬â€ the community we serve has been failed by opaque institutions too many times.
+We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
-- Ã¢Â­Â [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
-- Ã°Å¸Â§Âª [Join Beta Testing](/app-waitlist/)
-- Ã°Å¸â€™Â¬ [Community Discussion](/community/)
+-  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
+-  [Join Beta Testing](/app-waitlist/)
+- ' [Community Discussion](/community/)

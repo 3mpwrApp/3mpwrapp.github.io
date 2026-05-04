@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Update â€” Week 4 (2026)
+title: Weekly Update - Week 4 (2026)
 date: 2026-01-19 09:00:00 +0000
 tags: [weekly, updates]
 categories: [updates]
@@ -9,7 +9,7 @@ excerpt: This week's updates to 3mpwrApp features, content, and improvements.
 
 Here's what changed this week, in simple terms:
 
-## âœ¨ New Features
+##  New Features
 
 - Agent feature update Jan 2026: integrated user guide v4.4, 60+ features, 8-week spotlight rotation, segment personalization
 - Make Disability Bulletin the top highlight and focus curation on disability/vulnerable communities
@@ -44,12 +44,12 @@ Here's what changed this week, in simple terms:
 - Daily feature article - 2026-01-13
 - Daily feature article - 2026-01-12
 
-## ðŸš€ Improvements
+##  Improvements
 
 - Implement Complexity Mode & AAA compliance enhancements
 - Fix GDrive OAuth: Add COOP headers, fix redirects, improve callback page
 
-## ðŸ› Bug Fixes
+##  Bug Fixes
 
 - Add duplicate article detection to curation system
 - Update Google Form ID for theme song poll
@@ -89,17 +89,17 @@ Here's what changed this week, in simple terms:
 - Restore polling mechanism in Google Drive OAuth callback for implicit flow
 - Ensure _routes.json is deployed to exclude gdrive-callback from cloudflare functions
 
-## ðŸ“š Documentation
+##  Documentation
 
 - Add comprehensive session summary for Jan 15, 2026 work
 - Update website with January 15 Week 3 PowerTools content
 
-## ðŸ¤– Behind the Scenes
+##  Behind the Scenes
 
 - Remove carousel CSS (250+ lines) and add app tour styles
 
 * * *
 
-ðŸ“¬ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
+ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
 
-ðŸ” See all updates: [What's New](/whats-new/)
+ See all updates: [What's New](/whats-new/)

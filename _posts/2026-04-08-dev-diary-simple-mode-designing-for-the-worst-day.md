@@ -4,7 +4,7 @@ title: "Dev Diary: Simple Mode: Designing for the Worst Day"
 date: 2026-04-08 00:00:00 +0000
 tags: [dev-diary-updates, development, behind-the-scenes]
 categories: [dev-diary-updates]
-excerpt: "The design thinking behind Simple Mode â€” how a single piece of community feedback became one of 3mpwrApp's most important features"
+excerpt: "The design thinking behind Simple Mode - how a single piece of community feedback became one of 3mpwrApp's most important features"
 ---
 
 # Dev Diary: Simple Mode: Designing for the Worst Day
@@ -15,18 +15,18 @@ excerpt: "The design thinking behind Simple Mode â€” how a single piece of 
 
 The feature request that became Simple Mode came from a community member who told us: "I want to use your app but when I'm actually sick, it's too much to navigate." That single sentence became a product brief.
 
-We did not want to build a stripped-down "lite" version that patronized users with cognitive disabilities. We wanted a mode â€” something that respects that the same person can have vastly different capacity on different days without requiring them to reinstall anything.
+We did not want to build a stripped-down "lite" version that patronized users with cognitive disabilities. We wanted a mode - something that respects that the same person can have vastly different capacity on different days without requiring them to reinstall anything.
 
-The five features in Simple Mode â€” Evidence Locker quick-add, Crisis Resources, Symptom Log, Benefits Deadline Alerts, and Energy Check-in â€” were chosen by the community in a direct vote. That is the version of Simple Mode that shipped.
+The five features in Simple Mode - Evidence Locker quick-add, Crisis Resources, Symptom Log, Benefits Deadline Alerts, and Energy Check-in - were chosen by the community in a direct vote. That is the version of Simple Mode that shipped.
 
 ---
 
 ## Technical Details
 
 - Simple Mode originated from a direct community request about cognitive load during flares
-- Five core features selected by community vote â€” not by the dev team alone
+- Five core features selected by community vote - not by the dev team alone
 - One-tap switching from full interface to Simple Mode at any time
-- All features remain installed â€” Simple Mode hides, never deletes
+- All features remain installed - Simple Mode hides, never deletes
 - Remembers your last Simple Mode state on reopen
 
 ---
@@ -49,8 +49,8 @@ The five features in Simple Mode â€” Evidence Locker quick-add, Crisis Reso
 
 ## Follow Our Development
 
-We believe in building in public â€” the community we serve has been failed by opaque institutions too many times.
+We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
-- â­ [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
-- ðŸ§ª [Join Beta Testing](/app-waitlist/)
-- ðŸ’¬ [Community Discussion](/community/)
+-  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
+-  [Join Beta Testing](/app-waitlist/)
+-  [Community Discussion](/community/)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Update â€” Week 50 (2025)
+title: Weekly Update - Week 50 (2025)
 date: 2025-12-08 09:00:00 +0000
 tags: [weekly, updates]
 categories: [updates]
@@ -9,7 +9,7 @@ excerpt: This week's updates to 3mpwrApp features, content, and improvements.
 
 Here's what changed this week, in simple terms:
 
-## âœ¨ New Features
+##  New Features
 
 - Daily feature article - 2025-12-07
 - Daily feature article - 2025-12-06
@@ -24,6 +24,6 @@ Here's what changed this week, in simple terms:
 
 * * *
 
-ðŸ“¬ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
+ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
 
-ðŸ” See all updates: [What's New](/whats-new/)
+ See all updates: [What's New](/whats-new/)

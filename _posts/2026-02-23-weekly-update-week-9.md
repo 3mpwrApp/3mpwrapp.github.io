@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Update â€” Week 9 (2026)
+title: Weekly Update - Week 9 (2026)
 date: 2026-02-23 09:00:00 +0000
 tags: [weekly, updates]
 categories: [updates]
@@ -11,6 +11,6 @@ Here's what changed this week, in simple terms:
 
 * * *
 
-ðŸ“¬ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
+ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
 
-ðŸ” See all updates: [What's New](/whats-new/)
+ See all updates: [What's New](/whats-new/)

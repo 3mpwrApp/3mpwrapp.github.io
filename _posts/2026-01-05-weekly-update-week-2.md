@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Update â€” Week 2 (2026)
+title: Weekly Update - Week 2 (2026)
 date: 2026-01-05 09:00:00 +0000
 tags: [weekly, updates]
 categories: [updates]
@@ -9,7 +9,7 @@ excerpt: This week's updates to 3mpwrApp features, content, and improvements.
 
 Here's what changed this week, in simple terms:
 
-## âœ¨ New Features
+##  New Features
 
 - Daily feature article - 2026-01-04
 - Add Google Drive OAuth callback handler for 3mpwr app
@@ -32,12 +32,12 @@ Here's what changed this week, in simple terms:
 - Daily feature article - 2025-12-30
 - Daily feature article - 2025-12-29
 
-## ðŸš€ Improvements
+##  Improvements
 
 - Merge remote changes with local readability improvements
 - Merge remote main: Keep enhanced content curator.json with 6-tier scoring
 
-## ðŸ› Bug Fixes
+##  Bug Fixes
 
 - Switch to disabilitybulletin.jpg and remove duplicate issue1 image
 - Update Disability Bulletin image path to use absolute path instead of relative_url filter
@@ -54,11 +54,11 @@ Here's what changed this week, in simple terms:
 - Improve 'Follow These Voices' carousel readability in dark mode
 - Remove Alumni title from Speakers School, improve carousel readability on homepage and community page
 
-## ðŸ“š Documentation
+##  Documentation
 
 - Add comprehensive GitHub Workflow and PR Analysis - 12 workflows, daily automation, accessibility compliance
 
-## ðŸ¤– Behind the Scenes
+##  Behind the Scenes
 
 - Cache bust to force full page rebuild on Cloudflare Pages
 - Add Disability Bulletin Issue #1 cover image
@@ -69,6 +69,6 @@ Here's what changed this week, in simple terms:
 
 * * *
 
-ðŸ“¬ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
+ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
 
-ðŸ” See all updates: [What's New](/whats-new/)
+ See all updates: [What's New](/whats-new/)

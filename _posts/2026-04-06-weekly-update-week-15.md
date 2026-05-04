@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week 15 — Building 3mpwrApp in the Open
+title: Week 15  Building 3mpwrApp in the Open
 date: 2026-04-06 09:00:00 +0000
 tags: [weekly, updates, transparency]
 categories: [updates]
@@ -9,15 +9,15 @@ excerpt: This week's progress on 3mpwrApp. Real-time updates from a founder who 
 
 I'm an injured worker who built 3mpwrApp because I fell through the cracks. Every week, I share what I'm building and why it matters to you.
 
-This is **Week 15 of 2026**—here's what happened:
+This is **Week 15 of 2026**here's what happened:
 
 ## This Week's Journey
 
-I'm building 3mpwrApp in public—showing you every step, every decision, every improvement as they happen. This is Phase 1 of beta testing, where you're getting familiar with what I'm creating for our community.
+I'm building 3mpwrApp in publicshowing you every step, every decision, every improvement as they happen. This is Phase 1 of beta testing, where you're getting familiar with what I'm creating for our community.
 
 Here's what I shipped this week and why it matters to you:
 
-## ✨ New Features
+##  New Features
 
 **149 templates for injured workers - Mission Critical**
 
@@ -75,7 +75,7 @@ Why I built this: This makes 3mpwrApp more powerful for disability advocates, in
 
 Why I built this: You deserve to know how everything works. Clear documentation means no guessing, no frustration.
 
-## 🐛 Fixes
+##  Fixes
 
 I fixed these issues because they were getting in your way:
 
@@ -86,7 +86,7 @@ I fixed these issues because they were getting in your way:
 - Remove profanity from flywheels blog post + add content guidelines
 - Resolve Jekyll build failures blocking Cloudflare deployments
 - Update proposal - clarify cost, add TBDIWSG history, expand to 3-phase plan
-- Update flywheels blog URL (April 1 → March 31)
+- Update flywheels blog URL (April 1  March 31)
 - Move flywheels blog post to March 31 (actual presentation date)
 - Make flywheels posts educational/concept-focused + Add WCB data collection guide
 - Exclude screenshots from Jekyll build + add Cloudflare/GitHub security docs
@@ -119,7 +119,7 @@ I fixed these issues because they were getting in your way:
 - Force visibility of campaigns section with CSS overrides
 - Campaigns page JavaScript + add Day of Mourning event
 
-## 📚 Documentation
+##  Documentation
 
 Making 3mpwrApp easier to understand:
 
@@ -132,7 +132,7 @@ Making 3mpwrApp easier to understand:
 - Add Firebase crash notification to axios security communications
 - Add March 31st Thunder Bay presentation script - 60min comprehensive guide for TBDIWSG event
 
-## 🤖 Behind the Scenes
+##  Behind the Scenes
 
 These automation improvements make development faster so I can ship features to you sooner:
 
@@ -147,11 +147,10 @@ These automation improvements make development faster so I can ship features to 
 
 ## What's Next
 
-I'm listening. If you're testing 3mpwrApp and something doesn't work, tell me. If you have ideas, share them. This app exists because I fell through the cracks—I'm building it so you don't have to.
+I'm listening. If you're testing 3mpwrApp and something doesn't work, tell me. If you have ideas, share them. This app exists because I fell through the cracksI'm building it so you don't have to.
 
-📬 [Get updates in your inbox](/newsletter/)
+ [Get updates in your inbox](/newsletter/)
 
-🔍 [See all weekly updates](/whats-new/)
+ [See all weekly updates](/whats-new/)
 
-💬 [Join the beta testing community](https://3mpwrapp.pages.dev/beta/)
-
+ [Join the beta testing community](https://3mpwrapp.pages.dev/beta/)

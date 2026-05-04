@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week 13 â€” Building 3mpwrApp in the Open
+title: Week 13 - Building 3mpwrApp in the Open
 date: 2026-03-23 09:00:00 +0000
 tags: [weekly, updates, transparency]
 categories: [updates]
@@ -9,15 +9,15 @@ excerpt: This week's progress on 3mpwrApp. Real-time updates from a founder who 
 
 I'm an injured worker who built 3mpwrApp because I fell through the cracks. Every week, I share what I'm building and why it matters to you.
 
-This is **Week 13 of 2026**â€”here's what happened:
+This is **Week 13 of 2026**-here's what happened:
 
 ## This Week's Journey
 
-I'm building 3mpwrApp in publicâ€”showing you every step, every decision, every improvement as they happen. This is Phase 1 of beta testing, where you're getting familiar with what I'm creating for our community.
+I'm building 3mpwrApp in public-showing you every step, every decision, every improvement as they happen. This is Phase 1 of beta testing, where you're getting familiar with what I'm creating for our community.
 
 Here's what I shipped this week and why it matters to you:
 
-## âœ¨ New Features
+##  New Features
 
 **100% accessibility compliance - ALL pages legible in Light/Dark/High Contrast**
 
@@ -39,20 +39,20 @@ Why I built this: I'm building this to last. More tests mean fewer bugs, which m
 
 Why I built this: This makes 3mpwrApp more powerful for disability advocates, injured workers, and their families.
 
-## ðŸ› Fixes
+##  Fixes
 
 I fixed these issues because they were getting in your way:
 
 - Remove game background images (Ascendant Continuum)
 - Update URLs from backup domain (github.io) to primary domain (pages.dev)
 
-## ðŸ“š Documentation
+##  Documentation
 
 Making 3mpwrApp easier to understand:
 
 - Complete accessibility mission report - 100% compliance achieved
 
-## ðŸ¤– Behind the Scenes
+##  Behind the Scenes
 
 These automation improvements make development faster so I can ship features to you sooner:
 
@@ -62,10 +62,10 @@ These automation improvements make development faster so I can ship features to 
 
 ## What's Next
 
-I'm listening. If you're testing 3mpwrApp and something doesn't work, tell me. If you have ideas, share them. This app exists because I fell through the cracksâ€”I'm building it so you don't have to.
+I'm listening. If you're testing 3mpwrApp and something doesn't work, tell me. If you have ideas, share them. This app exists because I fell through the cracks-I'm building it so you don't have to.
 
-ðŸ“¬ [Get updates in your inbox](/newsletter/)
+ [Get updates in your inbox](/newsletter/)
 
-ðŸ” [See all weekly updates](/whats-new/)
+ [See all weekly updates](/whats-new/)
 
-ðŸ’¬ [Join the beta testing community](https://3mpwrapp.pages.dev/beta/)
+ [Join the beta testing community](https://3mpwrapp.pages.dev/beta/)

@@ -4,7 +4,7 @@ title: "Dev Diary: Building Indigenous Language Support: What We Learned"
 date: 2026-04-24 00:00:00 +0000
 tags: [dev-diary-updates, development, behind-the-scenes]
 categories: [dev-diary-updates]
-excerpt: "The challenges and lessons from building Indigenous language capability into 3mpwrApp â€” and why community partnership was non-negotiable"
+excerpt: "The challenges and lessons from building Indigenous language capability into 3mpwrApp - and why community partnership was non-negotiable"
 ---
 
 # Dev Diary: Building Indigenous Language Support: What We Learned
@@ -17,7 +17,7 @@ When we first discussed Indigenous language support, our instinct was to use mac
 
 What we built instead was a framework for community-verified translations, with Indigenous language reviewers as genuine partners. The process was slower. The result was right.
 
-The technical challenges were real â€” syllabic font rendering, right-to-left text handling, character encoding edge cases. Each one was worth solving, because the people who most need this app deserve to use it in their own language.
+The technical challenges were real - syllabic font rendering, right-to-left text handling, character encoding edge cases. Each one was worth solving, because the people who most need this app deserve to use it in their own language.
 
 ---
 
@@ -41,7 +41,7 @@ The technical challenges were real â€” syllabic font rendering, right-to-le
 
 ## What We Learned
 
-- Language is not just communication â€” it is identity, culture, and safety
+- Language is not just communication - it is identity, culture, and safety
 - Technology that excludes Indigenous languages participates in their erasure
 - Partnership rather than extraction: language support built with communities, not about them
 
@@ -49,8 +49,8 @@ The technical challenges were real â€” syllabic font rendering, right-to-le
 
 ## Follow Our Development
 
-We believe in building in public â€” the community we serve has been failed by opaque institutions too many times.
+We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
-- â­ [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
-- ðŸ§ª [Join Beta Testing](/app-waitlist/)
-- ðŸ’¬ [Community Discussion](/community/)
+-  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
+-  [Join Beta Testing](/app-waitlist/)
+-  [Community Discussion](/community/)

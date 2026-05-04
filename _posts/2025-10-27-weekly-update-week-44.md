@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Update â€” Week 44 (2025)
+title: Weekly Update - Week 44 (2025)
 date: 2025-10-27 09:00:00 +0000
 tags: [weekly, updates]
 categories: [updates]
@@ -9,7 +9,7 @@ excerpt: This week's updates to 3mpwrApp features, content, and improvements.
 
 Here's what changed this week, in simple terms:
 
-## âœ¨ New Features
+##  New Features
 
 - Upgrade What's New page with dynamic animations
 - Upgrade Feedback page with celebration design
@@ -28,8 +28,8 @@ Here's what changed this week, in simple terms:
 - Create 3 separate colored message boxes with expanded content - 25 encouragements, 25 real website features, 25 verified Canadian disability facts
 - Fix button spacing & add magical features preview section
 - Clean up strategic pages + add 28 mind-blowing feature ideas
-- ðŸ“š Content Series: Diverse Feature Articles for Blog Rotation
-- ðŸ“ Feature Article: World-First Accessibility Innovations
+-  Content Series: Diverse Feature Articles for Blog Rotation
+-  Feature Article: World-First Accessibility Innovations
 - Add grassroots messaging, emphasize free forever model, clarify feature articles
 - Clarify feature articles are about disability topics, not app features; emphasize app is completely free
 - Comprehensive legal documentation update for Phase 1 Closed Beta - Update Terms of Service v3.0 with complete medical, legal, financial, AI, crisis disclaimers - Add comprehensive Community Guidelines with moderation and reporting - Create dedicated Legal Disclaimers page with all 10 disclaimers - Update Privacy Policy v3.0 with latest features and service providers - Update Data Ownership Statement v2.0 with technical verification - Update Privacy Controls with service provider transparency - Add legal disclaimers to Features page and User Guide - All documentation aligned with beta launch requirements
@@ -44,7 +44,7 @@ Here's what changed this week, in simple terms:
 - Add Delete Account link to footer menu for Google Play compliance
 - Restore feature highlight post about energy forecasting
 
-## ðŸš€ Improvements
+##  Improvements
 
 - Phase 1 priority enhancements: FAQ objections, crisis resources, app waitlist, accessibility statement, sitemap
 - Add comprehensive summary of inclusivity improvements
@@ -54,12 +54,12 @@ Here's what changed this week, in simple terms:
 - Add comprehensive legal/privacy interlinking across entire website - Add Legal & Privacy section to homepage with all 6 legal docs - Add Privacy & Data Ownership section to About page with disclaimers - Add legal links to Contact, Roadmap, Accessibility, Beta Guide pages - Reorganize footer with grouped legal links (Legal & Privacy, Help & Support, Accessibility, Resources) - Create consistent cross-linking between all legal documents - All pages now link to: Terms, Privacy, Data Ownership, Privacy Controls, Community Guidelines, Legal Disclaimers - Improved navigation and discoverability of legal information
 - Improve beta sign-up button color contrast for WCAG AA compliance
 
-## ðŸ› Bug Fixes
+##  Bug Fixes
 
 - Add ARIA attributes for accessibility
 - Add debug logging to dependency installation
 
-## ðŸ“š Documentation
+##  Documentation
 
 - Add CI failures analysis and deployment timeline
 - Add comprehensive site-wide UX upgrade summary
@@ -75,13 +75,13 @@ Here's what changed this week, in simple terms:
 - Add auto-learninging system completion summary
 - Update privacy policy and add data ownership statement from app documentation
 
-## ðŸ¤– Behind the Scenes
+##  Behind the Scenes
 
 - Complete website updates: Connect page, Rep Tracker, automation systems
 - Add comprehensive social media automation setup guide
 
 * * *
 
-ðŸ“¬ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
+ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
 
-ðŸ” See all updates: [What's New](/whats-new/)
+ See all updates: [What's New](/whats-new/)

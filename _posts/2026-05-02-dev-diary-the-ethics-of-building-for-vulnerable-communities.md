@@ -23,17 +23,17 @@ Community co-design is not a checkbox. It is how we figure out what to build in 
 
 ## Technical Details
 
-- Users are often in adversarial systems â€” insurers, employers, government â€” while using this app
-- Data ethics go beyond PIPEDA compliance â€” they require genuine respect for user vulnerability
+- Users are often in adversarial systems - insurers, employers, government - while using this app
+- Data ethics go beyond PIPEDA compliance - they require genuine respect for user vulnerability
 - Community co-design is mandatory, not a PR exercise
-- We are honest about what the app can and cannot do â€” we never oversell
+- We are honest about what the app can and cannot do - we never oversell
 - The "always free" commitment is an ethical stance, not a startup strategy
 
 ---
 
 ## In Practice
 
-- We never imply that 3mpwrApp replaces legal advice â€” we direct users to human experts
+- We never imply that 3mpwrApp replaces legal advice - we direct users to human experts
 - Community members sit on our informal advisory group and directly shape the roadmap
 - We are public about feature limitations alongside feature capabilities
 
@@ -43,14 +43,14 @@ Community co-design is not a checkbox. It is how we figure out what to build in 
 
 - Building for vulnerable communities amplifies the harm of getting things wrong
 - Co-design is the difference between a tool built for a community and one built about them
-- "Free" as a business model can still extract value â€” our commitment is to never do that
+- "Free" as a business model can still extract value - our commitment is to never do that
 
 ---
 
 ## Follow Our Development
 
-We believe in building in public â€” the community we serve has been failed by opaque institutions too many times.
+We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
-- â­ [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
-- ðŸ§ª [Join Beta Testing](/app-waitlist/)
-- ðŸ’¬ [Community Discussion](/community/)
+-  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
+-  [Join Beta Testing](/app-waitlist/)
+-  [Community Discussion](/community/)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Update â€” Week 3 (2026)
+title: Weekly Update - Week 3 (2026)
 date: 2026-01-12 09:00:00 +0000
 tags: [weekly, updates]
 categories: [updates]
@@ -9,7 +9,7 @@ excerpt: This week's updates to 3mpwrApp features, content, and improvements.
 
 Here's what changed this week, in simple terms:
 
-## âœ¨ New Features
+##  New Features
 
 - Daily feature article - 2026-01-11
 - Daily feature article - 2026-01-10
@@ -21,16 +21,16 @@ Here's what changed this week, in simple terms:
 - Update beta redirect and features page with January 2026 updates
 - Daily feature article - 2026-01-05
 
-## ðŸ› Bug Fixes
+##  Bug Fixes
 
 - Add Mastodon character limit truncation to prevent 422 validation errors
 
-## ðŸ“š Documentation
+##  Documentation
 
 - Update website with January 2026 infrastructure fixes and production-ready status
 
 * * *
 
-ðŸ“¬ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
+ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
 
-ðŸ” See all updates: [What's New](/whats-new/)
+ See all updates: [What's New](/whats-new/)
