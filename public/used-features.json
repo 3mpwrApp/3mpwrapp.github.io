@@ -26,7 +26,9 @@
     "Return to Work Accommodation Letter",
     "Resilience Points (Gamified Wellness)",
     "Multi-Device Sync: Access Anywhere (Optional)",
-    "Evidence Flywheel: Your Wins Power Community Templates"
+    "Evidence Flywheel: Your Wins Power Community Templates",
+    "Medical Evidence Request Letter",
+    "Chronic Fatigue Management: Energy Banking for Crashes"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -35,7 +37,8 @@
     "Writing an Effective Demand Letter with 3mpwrApp",
     "Tracking Symptoms for Doctors and Legal Appointments",
     "Using Spoon Theory to Manage Your Energy Day-to-Day",
-    "Protecting Your Privacy: Local-First Architecture Explained"
+    "Protecting Your Privacy: Local-First Architecture Explained",
+    "Getting Crisis Support Through 3mpwrApp"
   ],
   "devDiaries": [
     "Why We Chose React Native: Accessibility Over Everything",
@@ -55,6 +58,6 @@
     "Building in Public: Why Transparency Is Non-Negotiable for Us",
     "Collective Advocacy: Why Individual Coping Is Not Enough"
   ],
-  "rotationIndex": 6,
+  "rotationIndex": 1,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }

@@ -44,6 +44,17 @@ class FeaturePoster {
     };
   }
 
+  toPlainAscii(text) {
+    return String(text || '')
+      .replace(/\u2014|\u2013/g, '-')
+      .replace(/\u2192/g, '->')
+      .replace(/\u2022/g, '-')
+      .replace(/[\u00A0]/g, ' ')
+      .normalize('NFKD')
+      .replace(/[^\x00-\x7F]/g, '')
+      .replace(/\s+$/gm, '');
+  }
+
   /**
    * Load daily feature social content
    */
@@ -91,7 +102,7 @@ class FeaturePoster {
     }
 
     try {
-      console.log('📤 Posting to Mastodon...');
+      console.log('Posting to Mastodon...');
 
       const instance = this.config.mastodon.instance.replace(/^https?:\/\//, '');
       const url = new URL(`https://${instance}/api/v1/statuses`);
@@ -115,21 +126,22 @@ class FeaturePoster {
       const hookLine = (content.shortPost || content.longPost || '').split('\n')[0].substring(0, 120);
       // Build full body — hook + feature + description excerpt + URL + tags
       const descLine = (content.longPost || '').split('\n').slice(1).join(' ').replace(/\s+/g, ' ').trim();
-      let statusText = `${hookLine}\n\n✨ ${featureName}\n\n${descLine}\n\n${articleUrl}\n\n${tags}`;
+      let statusText = `${hookLine}\n\nFeature Spotlight: ${featureName}\n\n${descLine}\n\n${articleUrl}\n\n${tags}`;
       if (statusText.length > MASTO_LIMIT) {
         // Trim the description excerpt to fit
         const fixedParts = `\n\n✨ ${featureName}\n\n`;
         const suffix = `\n\n${articleUrl}\n\n${tags}`;
         const budget = MASTO_LIMIT - hookLine.length - fixedParts.length - suffix.length - 3;
         const trimmedDesc = budget > 20 ? descLine.substring(0, budget) + '...' : '';
-        statusText = `${hookLine}${fixedParts}${trimmedDesc}${suffix}`;
+        statusText = `${hookLine}${fixedParts.replace('✨ ', 'Feature Spotlight: ')}${trimmedDesc}${suffix}`;
       }
       if (statusText.length > MASTO_LIMIT) {
         // Last resort: shorten hook too
         const suffix = `\n\n${articleUrl}\n\n${tags}`;
         const maxHook = MASTO_LIMIT - suffix.length - featureName.length - 10;
-        statusText = `${hookLine.substring(0, Math.max(20, maxHook))}...\n\n✨ ${featureName}${suffix}`;
+        statusText = `${hookLine.substring(0, Math.max(20, maxHook))}...\n\nFeature Spotlight: ${featureName}${suffix}`;
       }
+      statusText = this.toPlainAscii(statusText);
 
       const postData = {
         status: statusText,
@@ -141,14 +153,14 @@ class FeaturePoster {
 
       if (response.statusCode === 200 || response.statusCode === 201) {
         const postUrl = response.body.url || response.body.uri || '';
-        console.log(`✅ Mastodon posted: ${postUrl}`);
+        console.log(`Mastodon posted: ${postUrl}`);
         return { success: true, message: 'Posted successfully', url: postUrl };
       } else {
-        console.error(`❌ Mastodon error: ${response.statusCode}`);
+        console.error(`Mastodon error: ${response.statusCode}`);
         return { success: false, message: `HTTP ${response.statusCode}: ${JSON.stringify(response.body)}` };
       }
     } catch (err) {
-      console.error(`❌ Mastodon error: ${err.message}`);
+      console.error(`Mastodon error: ${err.message}`);
       return { success: false, message: err.message };
     }
   }
@@ -164,7 +176,7 @@ class FeaturePoster {
     }
 
     try {
-      console.log('📤 Posting to Discord...');
+      console.log('Posting to Discord...');
 
       const webhookUrl = new URL(this.config.discord.webhookUrl);
 
@@ -184,8 +196,8 @@ class FeaturePoster {
         url: readArticleUrl,
         color: 0x6366f1,
         fields: [
-          { name: '📖 Read Article', value: readArticleUrl, inline: false },
-          { name: '📰 Blog', value: BLOG_URL, inline: false }
+          { name: 'Read Article', value: readArticleUrl, inline: false },
+          { name: 'Blog', value: BLOG_URL, inline: false }
         ],
         footer: { text: '3mpwr App • app-announcements' },
         timestamp: new Date().toISOString()
@@ -209,15 +221,15 @@ class FeaturePoster {
       const response = await this.httpsRequest(options, payload);
 
       if (response.statusCode === 200 || response.statusCode === 204) {
-        console.log('✅ Discord posted to #app-announcements');
+        console.log('Discord posted to #app-announcements');
         return { success: true, message: 'Posted to Discord' };
       } else {
-        console.error(`❌ Discord error: ${response.statusCode}`);
-        return { success: false, message: `HTTP ${response.statusCode}` };
+        console.error(`Discord error: ${response.statusCode}. Check DISCORD_WEBHOOK_URL.`);
+        return { success: false, message: `HTTP ${response.statusCode} (check DISCORD_WEBHOOK_URL)` };
       }
     } catch (err) {
-      console.error(`❌ Discord error: ${err.message}`);
-      return { success: false, message: err.message };
+      console.error(`Discord error: ${err.message}. Check DISCORD_WEBHOOK_URL.`);
+      return { success: false, message: `${err.message} (check DISCORD_WEBHOOK_URL)` };
     }
   }
 
@@ -248,7 +260,7 @@ class FeaturePoster {
         return response.body;
       }
 
-      throw new Error(`Login failed: ${response.statusCode}`);
+      throw new Error(`Login failed: ${response.statusCode} (check BLUESKY_HANDLE and BLUESKY_PASSWORD app password)`);
     } catch (err) {
       throw new Error(`Bluesky login error: ${err.message}`);
     }
@@ -263,7 +275,7 @@ class FeaturePoster {
     }
 
     try {
-      console.log('📤 Posting to Bluesky...');
+      console.log('Posting to Bluesky...');
 
       // Login first
       const session = await this.blueskyLogin();
@@ -276,17 +288,19 @@ class FeaturePoster {
       const tags = '#3mpwrApp #DisabilityRights';
       const articleUrl = content.url;
       // Base template: hook \n\n ✨ name \n\n url \n\n tags
-      let postText = `${hookLine}\n\n✨ ${featureName}\n\n${articleUrl}\n\n${tags}`;
+      let postText = `${hookLine}\n\nFeature Spotlight: ${featureName}\n\n${articleUrl}\n\n${tags}`;
       if (postText.length > BSKY_LIMIT) {
         // Trim hook further to make it fit
         const excess = postText.length - BSKY_LIMIT;
         const trimmedHook = hookLine.substring(0, Math.max(10, hookLine.length - excess - 3)) + '...';
-        postText = `${trimmedHook}\n\n✨ ${featureName}\n\n${articleUrl}\n\n${tags}`;
+        postText = `${trimmedHook}\n\nFeature Spotlight: ${featureName}\n\n${articleUrl}\n\n${tags}`;
       }
       if (postText.length > BSKY_LIMIT) {
         // Last resort: trim the whole thing
         postText = postText.substring(0, BSKY_LIMIT - 3) + '...';
       }
+
+      postText = this.toPlainAscii(postText);
 
       const options = {
         method: 'POST',
@@ -312,14 +326,14 @@ class FeaturePoster {
 
       if (response.statusCode === 200 || response.statusCode === 201) {
         const postUrl = `https://bsky.app/profile/${this.config.bluesky.handle}/post/${response.body.uri.split('/').pop()}`;
-        console.log(`✅ Bluesky posted: ${postUrl}`);
+        console.log(`Bluesky posted: ${postUrl}`);
         return { success: true, message: 'Posted successfully', url: postUrl };
       } else {
-        console.error(`❌ Bluesky error: ${response.statusCode}`);
-        return { success: false, message: `HTTP ${response.statusCode}: ${JSON.stringify(response.body)}` };
+        console.error(`Bluesky error: ${response.statusCode}`);
+        return { success: false, message: `HTTP ${response.statusCode}: ${JSON.stringify(response.body)} (check app password)` };
       }
     } catch (err) {
-      console.error(`❌ Bluesky error: ${err.message}`);
+      console.error(`Bluesky error: ${err.message}`);
       return { success: false, message: err.message };
     }
   }
@@ -355,40 +369,40 @@ class FeaturePoster {
    * Post to all platforms
    */
   async postAll() {
-    console.log('\n📱 POSTING DAILY FEATURE TO SOCIAL MEDIA\n');
-    console.log('═══════════════════════════════════════════════════════\n');
+    console.log('\nPOSTING DAILY FEATURE TO SOCIAL MEDIA\n');
+    console.log('-------------------------------------------------------\n');
 
     // Load content
     const content = this.loadSocialContent();
-    console.log(`🌟 Feature: ${content.feature}`);
-    console.log(`📅 Date: ${content.date}`);
-    console.log(`🔗 URL: ${content.url}\n`);
+    console.log(`Feature: ${content.feature}`);
+    console.log(`Date: ${content.date}`);
+    console.log(`URL: ${content.url}\n`);
 
     // Verify URL is accessible — retry up to 3 times with 30s gaps before falling back
     const BLOG_FALLBACK = 'https://3mpwrapp.pages.dev/blog/';
     const originalArticleUrl = content.url;
-    console.log('🔍 Verifying article URL is accessible...');
+    console.log('Verifying article URL is accessible...');
     let isAccessible = await this.verifyUrl(content.url);
 
     if (!isAccessible) {
-      console.warn(`⚠️  Article URL not live yet: ${content.url}`);
+      console.warn(`Article URL not live yet: ${content.url}`);
       for (let attempt = 1; attempt <= 3 && !isAccessible; attempt++) {
-        console.log(`⏳ Retry ${attempt}/3 — waiting 30s...`);
+        console.log(`Retry ${attempt}/3 - waiting 30s...`);
         await this.sleep(30000);
         isAccessible = await this.verifyUrl(content.url);
-        if (isAccessible) console.log(`✅ Article came live on retry ${attempt}!\n`);
+        if (isAccessible) console.log(`Article came live on retry ${attempt}.\n`);
       }
     }
 
     if (!isAccessible) {
-      console.warn(`❌ Article URL still 404 after retries. Using blog fallback for all platforms.`);
+      console.warn(`Article URL still 404 after retries. Using blog fallback for all platforms.`);
       console.warn(`   Original URL (for reference): ${originalArticleUrl}\n`);
       // Replace URL everywhere so no platform posts a dead link
       content.url = BLOG_FALLBACK;
       if (content.shortPost) content.shortPost = content.shortPost.replace(/https?:\/\/\S+/g, BLOG_FALLBACK);
       if (content.longPost) content.longPost = content.longPost.replace(/https?:\/\/\S+/g, BLOG_FALLBACK);
     } else {
-      console.log('✅ Article URL verified accessible!\n');
+      console.log('Article URL verified accessible.\n');
     }
 
     // Post to Mastodon
@@ -406,14 +420,14 @@ class FeaturePoster {
     this.saveResults(content);
 
     // Summary
-    console.log('\n═══════════════════════════════════════════════════════\n');
-    console.log('📊 POSTING SUMMARY:\n');
-    console.log(`Mastodon: ${this.results.mastodon.success ? '✅ Success' : '❌ Failed'}`);
+    console.log('\n-------------------------------------------------------\n');
+    console.log('POSTING SUMMARY:\n');
+    console.log(`Mastodon: ${this.results.mastodon.success ? 'Success' : 'Failed'}`);
     if (this.results.mastodon.url) console.log(`  ${this.results.mastodon.url}`);
-    console.log(`Bluesky: ${this.results.bluesky.success ? '✅ Success' : '❌ Failed'}`);
+    console.log(`Bluesky: ${this.results.bluesky.success ? 'Success' : 'Failed'}`);
     if (this.results.bluesky.url) console.log(`  ${this.results.bluesky.url}`);
-    console.log(`Discord: ${this.results.discord.success ? '✅ Success' : '❌ Failed'}`);
-    console.log('\n═══════════════════════════════════════════════════════\n');
+    console.log(`Discord: ${this.results.discord.success ? 'Success' : 'Failed'}`);
+    console.log('\n-------------------------------------------------------\n');
 
     return this.results;
   }
@@ -431,7 +445,7 @@ class FeaturePoster {
     };
 
     fs.writeFileSync(this.resultsPath, JSON.stringify(results, null, 2), 'utf-8');
-    console.log(`\n💾 Results saved: ${this.resultsPath}`);
+    console.log(`\nResults saved: ${this.resultsPath}`);
   }
 
   /**
@@ -446,7 +460,7 @@ class FeaturePoster {
 if (require.main === module) {
   const poster = new FeaturePoster();
   poster.postAll().catch(err => {
-    console.error(`\n❌ Fatal error: ${err.message}\n`);
+    console.error(`\nFatal error: ${err.message}\n`);
     process.exit(1);
   });
 }

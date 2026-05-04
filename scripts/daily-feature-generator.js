@@ -2341,6 +2341,7 @@ class DailyFeatureGenerator {
     // Track content rotation state
     this.usedFeaturesPath = path.join(process.cwd(), 'public', 'used-features.json');
     this.usedFeatures = this.loadUsedFeatures();
+    this.publishedFeatureNames = this.loadPublishedFeatureNames();
   }
 
   loadUsedFeatures() {
@@ -2367,22 +2368,75 @@ class DailyFeatureGenerator {
     fs.writeFileSync(this.usedFeaturesPath, JSON.stringify(this.usedFeatures, null, 2), 'utf-8');
   }
 
+  normalizeFeatureName(name) {
+    return String(name || '')
+      .toLowerCase()
+      .replace(/^feature spotlight:\s*/i, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  loadPublishedFeatureNames() {
+    const published = new Set();
+    if (!fs.existsSync(this.postsDir)) {
+      return published;
+    }
+
+    const files = fs.readdirSync(this.postsDir)
+      .filter(name => name.includes('feature-spotlight') && name.endsWith('.md'));
+
+    for (const file of files) {
+      try {
+        const source = fs.readFileSync(path.join(this.postsDir, file), 'utf-8');
+        const titleMatch = source.match(/^title:\s*"Feature Spotlight:\s*(.+)"\s*$/m);
+        if (titleMatch && titleMatch[1]) {
+          published.add(this.normalizeFeatureName(titleMatch[1]));
+        }
+      } catch {
+        // Skip unreadable file and continue.
+      }
+    }
+
+    return published;
+  }
+
+  toPlainAscii(text) {
+    return String(text || '')
+      .replace(/\u2014|\u2013/g, '-')
+      .replace(/\u2192/g, '->')
+      .replace(/\u2022/g, '-')
+      .replace(/[\u00A0]/g, ' ')
+      .normalize('NFKD')
+      .replace(/[^\x00-\x7F]/g, '')
+      .replace(/[ \t]{2,}/g, ' ')
+      .replace(/\n{3,}/g, '\n\n')
+      .replace(/^\s+/gm, '')
+      .replace(/\s+$/gm, '')
+      .trim();
+  }
+
   /**
    * Select next feature to write about (rotating through all features)
    * UPDATED: Randomized selection, no auto-reset (true no-repeats policy)
    */
   selectFeature() {
-    // Find features not yet used (deduplicated by name)
+    // Do not spotlight features that are not yet live.
+    const blockedFeatureSpotlights = new Set([
+      'Nova Scotia Income Assistance: Disability'
+    ]);
+
+    // Find features not yet used and not already published.
     let availableFeatures = this.features.filter(
       f => !this.usedFeatures.features.includes(f.name)
+        && !blockedFeatureSpotlights.has(f.name)
+        && !this.publishedFeatureNames.has(this.normalizeFeatureName(f.name))
     );
 
     // NO AUTO-RESET: Stop generating when all features exhausted
     if (availableFeatures.length === 0) {
-      console.log('🎉 ALL 100 FEATURES COVERED! No repeats.');
-      console.log('📝 To continue: Expand features array with new content.');
-      console.log('💡 Consider: New provincial programs, letter templates, or feature updates.');
-      throw new Error('All features exhausted - content library expansion needed');
+      console.log('All feature spotlights are already covered. No repeats generated.');
+      console.log('To continue: add net-new features or run non-feature content types.');
+      throw new Error('All feature spotlights exhausted - duplicate prevention active');
     }
 
     // RANDOMIZED SELECTION (no longer sequential)
@@ -2478,11 +2532,21 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     });
 
     content += `\n---\n\n## How It Works\n\n`;
-    content += `Here are real examples of how you can use ${feature.name}:\n\n`;
+    content += `Example scenario (illustrative only):\n\n`;
+    content += `An injured worker is preparing an appeal while managing medical appointments and family responsibilities. They use ${feature.name} to reduce one major barrier so their limited energy can go toward decisions that affect outcomes.\n\n`;
+    content += `Practical ways this feature can be used:\n\n`;
 
     feature.examples.forEach((example, index) => {
       content += `${index + 1}. ${example}\n`;
     });
+
+    content += `\n---\n\n## Flywheel Integration\n\n`;
+    content += `Flywheel Stage(s): Varies by use case across Data Collection, Analysis / Pattern Recognition, Knowledge Base, Templates / Guides, Visualizations, and Real-World Impact.\n\n`;
+    content += `Input -> Process -> Output -> Downstream effect:\n`;
+    content += `- Input: A real barrier faced by an injured worker, disabled person, family member, or advocate.\n`;
+    content += `- Process: ${feature.name} structures the work so key steps are easier to complete.\n`;
+    content += `- Output: Clearer documentation, decisions, or coordination artifacts.\n`;
+    content += `- Downstream effect: Better guidance, stronger case preparation, and improved outcomes in complex systems.\n`;
 
     content += `\n---\n\n## Why ${feature.name} Matters\n\n`;
 
@@ -2492,25 +2556,26 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
 
     content += `\n---\n\n## Getting Started\n\n`;
     content += `Ready to try ${feature.name}? Here's how to get started:\n\n`;
-    content += `1. **Download the app** - Available on iOS and Android (coming soon)\n`;
+    content += `1. **Open 3mpwrApp** - Start here: https://3mpwrapp.pages.dev/\n`;
     content += `2. **Complete setup** - Takes just 5 minutes\n`;
     content += `3. **Find the feature** - Look for "${feature.name}" in your app\n`;
     content += `4. **Follow the guide** - In-app tutorials walk you through each step\n\n`;
 
     content += `---\n\n## Learn More\n\n`;
     content += `For complete information about ${feature.name} and all other features:\n\n`;
-    content += `- ðŸ“– [Read the Complete User Guide](/user-guide/#${feature.userGuideSection})\n`;
-    content += `- ✨ [Explore All Features](/features/)\n`;
-    content += `- ðŸ§ª [Join Beta Testing](/beta/)\n`;
-    content += `- ðŸ“¬ [Subscribe to Updates](/newsletter/)\n\n`;
+    content += `- [Read the Complete User Guide](/user-guide/#${feature.userGuideSection})\n`;
+    content += `- [Explore All Features](/features/)\n`;
+    content += `- [Join Beta Testing](/beta/)\n`;
+    content += `- [Subscribe to Updates](/newsletter/)\n\n`;
 
     content += `---\n\n## About 3mpwrApp\n\n`;
-    content += `3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.\n\n`;
+    content += `3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources - all designed with accessibility, privacy, and cultural respect at the core.\n\n`;
     content += `**All features are:**\n`;
-    content += `- âœ… Fully accessible (WCAG 2.2 AA+)\n`;
-    content += `- ðŸ”’ Privacy-first (local-first architecture)\n`;
-    content += `- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)\n`;
-    content += `- ðŸŒ Culturally inclusive (Indigenous languages supported)\n`;
+    content += `- Fully accessible (WCAG 2.2 AA+)\n`;
+    content += `- Privacy-first (local-first architecture)\n`;
+    content += `- Canadian-focused (all provinces/territories)\n`;
+    content += `- Culturally inclusive (Indigenous languages supported)\n`;
+    content += `\nThis is one part of the 3mpwrApp flywheel. As more experiences are captured and analyzed, they feed into a growing knowledge base-powering guides, templates, and visual tools that help injured workers, the disability community, families, and advocates navigate complex systems and avoid being overlooked.\n`;
 
     return content;
   }
@@ -2618,7 +2683,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     try {
       hookData = viralHooks.getRandomHook(contentItem.category);
     } catch {
-      hookData = { hook: 'ðŸ‘‡ This changes everything for disability rights:', cta: 'Read more' };
+      hookData = { hook: 'A practical update for disability rights:', cta: 'Read more' };
     }
     const monthlyTheme = viralHooks.getMonthlyTheme();
 
@@ -2626,16 +2691,17 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     const randomCta = ctaOptions[Math.floor(Math.random() * ctaOptions.length)]
       .replace('{link}', fullUrl);
 
-    // Type-specific emoji + label
-    const typeEmoji = { feature: '✨', tutorial: 'ðŸ“–', devDiary: 'ðŸ”§', lore: 'ðŸ’¡', devUpdate: '🚀' }[contentType] || '✨';
     const typeLabel = { feature: 'Feature Spotlight', tutorial: 'Tutorial', devDiary: 'Dev Diary', lore: 'From Our Team', devUpdate: 'Dev Update' }[contentType] || 'Feature Spotlight';
 
-    const desc = contentItem.description || '';
-    const highlights = contentItem.highlights || [];
+    const hook = this.toPlainAscii(hookData.hook || 'A practical update for disability rights:');
+    const desc = this.toPlainAscii(contentItem.description || '');
+    const highlights = (contentItem.highlights || []).map(h => this.toPlainAscii(h));
+    const name = this.toPlainAscii(contentItem.name || '3mpwrApp update');
+    const cta = this.toPlainAscii(hookData.cta || 'Read more');
 
-    const shortPost = `${hookData.hook}
+    const shortPost = `${hook}
 
-${typeEmoji} ${typeLabel}: ${contentItem.name}
+  ${typeLabel}: ${name}
 
 ${desc.substring(0, 120)}${desc.length > 120 ? '...' : ''}
 
@@ -2643,18 +2709,18 @@ ${randomCta}
 
 #3mpwrApp #DisabilityRights #Accessibility`;
 
-    const longPost = `${hookData.hook}
+    const longPost = `${hook}
 
-${typeEmoji} ${typeLabel}: ${contentItem.name}
+  ${typeLabel}: ${name}
 
 ${desc}
 
-ðŸ”‘ Key points:
+  Key points:
 ${highlights.slice(0, 3).map(h => `• ${h}`).join('\n')}
 
-${hookData.cta} â†’ ${fullUrl}
+  ${cta} -> ${fullUrl}
 
-ðŸ“° More on the blog: ${BLOG_URL}
+  More on the blog: ${BLOG_URL}
 
 #3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #${monthlyTheme.theme.replace(/\s+/g, '')}`;
 
@@ -2690,14 +2756,14 @@ ${hookData.cta} â†’ ${fullUrl}
     const xPost = truncatePost(shortPost, 280); // X/Twitter: 280 chars
 
     return {
-      shortPost,
-      longPost,
-      mastodonPost,
-      blueskyPost,
-      xPost,
+      shortPost: this.toPlainAscii(shortPost),
+      longPost: this.toPlainAscii(longPost),
+      mastodonPost: this.toPlainAscii(mastodonPost),
+      blueskyPost: this.toPlainAscii(blueskyPost),
+      xPost: this.toPlainAscii(xPost),
       url: fullUrl,
       blogUrl: BLOG_URL,
-      hookUsed: hookData.hook,
+      hookUsed: hook,
       emotion: hookData.emotion,
       monthlyTheme: monthlyTheme.theme
     };
@@ -2710,7 +2776,7 @@ ${hookData.cta} â†’ ${fullUrl}
     const selected = this.selectContent();
     const { type: contentType, item: contentItem } = selected;
 
-    console.log(`\nðŸŒŸ Generating Daily Content [${contentType}]: ${contentItem.name}\n`);
+    console.log(`\nGenerating daily content [${contentType}]: ${contentItem.name}\n`);
     this.saveUsedFeatures();
 
     const dateStr = new Date().toISOString().split('T')[0];
@@ -2719,8 +2785,6 @@ ${hookData.cta} â†’ ${fullUrl}
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
 
-    // Category path mapping (drives both filename and Jekyll URL)
-    const catPath = { feature: 'features', tutorial: 'tutorials', devDiary: 'dev-diary', lore: 'community', devUpdate: 'updates' }[contentType] || 'features';
     const typePrefix = { feature: 'feature-spotlight', tutorial: 'tutorial', devDiary: 'dev-diary', lore: 'community', devUpdate: 'dev-update' }[contentType] || 'feature-spotlight';
 
     const filename = `${dateStr}-${typePrefix}-${slug}.md`;
@@ -2740,10 +2804,11 @@ ${hookData.cta} â†’ ${fullUrl}
       articleContent = this.generateArticleContent(contentItem);
     }
 
-    fs.writeFileSync(filepath, articleContent, 'utf-8');
-    console.log(`âœ… Created: ${filepath}`);
+    const cleanArticleContent = this.toPlainAscii(articleContent);
+    fs.writeFileSync(filepath, cleanArticleContent, 'utf-8');
+    console.log(`Created: ${filepath}`);
 
-    const articleUrl = `/${catPath}/${year}/${month}/${day}/${typePrefix}-${slug}/`;
+    const articleUrl = `/blog/${year}/${month}/${day}/${typePrefix}-${slug}/`;
     const social = this.generateSocialPost(contentItem, articleUrl, contentType);
 
     const socialPath = path.join(process.cwd(), 'public', 'daily-feature-social.json');
@@ -2757,7 +2822,7 @@ ${hookData.cta} â†’ ${fullUrl}
       articlePath: filepath
     }, null, 2), 'utf-8');
 
-    console.log(`ðŸ“± Social post ready: ${socialPath}`);
+    console.log(`Social post ready: ${socialPath}`);
 
     return { feature: contentItem.name, contentType, filepath, articleUrl, social };
   }
@@ -2768,13 +2833,13 @@ if (require.main === module) {
   const generator = new DailyFeatureGenerator();
   const result = generator.generateDailyFeature();
 
-  console.log('\nâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•\n');
-  console.log(`ðŸŒŸ Daily feature article generated!`);
-  console.log(`ðŸ“ Feature: ${result.feature}`);
-  console.log(`ðŸ“„ Article: ${result.filepath}`);
-  console.log(`ðŸ”— URL: ${result.articleUrl}`);
-  console.log(`\nðŸ“± Social post ready for auto-posting`);
-  console.log('\nâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•\n');
+  console.log('\n------------------------------------------------------------\n');
+  console.log('Daily feature article generated.');
+  console.log(`Feature: ${result.feature}`);
+  console.log(`Article: ${result.filepath}`);
+  console.log(`URL: ${result.articleUrl}`);
+  console.log('\nSocial post ready for auto-posting');
+  console.log('\n------------------------------------------------------------\n');
 }
 
 module.exports = DailyFeatureGenerator;
