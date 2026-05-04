@@ -130,7 +130,7 @@ Using issue-slice data across all four Ontario tribunals:
 - **Tier B:** 1 case
 - **Tier C:** 30 cases (96.8% unresolved)
 
-**Comparison:** Pre-existing condition arguments are used in 13.3% of WSIAT cases (1,522 cases) but only 7.2% at ONWSIB. This may suggest WSIB filters out or resolves pre-existing arguments internally before they reach the appeals stage.
+**Comparison:** Pre-existing condition arguments are used in 13.3% of WSIAT cases (1,519 cases) but only 7.2% at ONWSIB. This may suggest WSIB filters out or resolves pre-existing arguments internally before they reach the appeals stage.
 
 ### Chronic Pain Cases at ONWSIB
 - **4 cases** with chronic pain keywords (0.9% of ONWSIB dataset)

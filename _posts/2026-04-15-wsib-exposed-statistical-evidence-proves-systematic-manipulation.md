@@ -107,8 +107,8 @@ You'll see these terms throughout this investigation. Here's what they mean in p
 **77.0% of decisions have unclear outcomes** based on keyword analysis. This highlights the challenge injured workers face when trying to understand tribunal precedents—even reading the decisions, it's often unclear who won.
 
 **Of the clear outcomes (393 decisions):**
-- **89.1% are worker wins** (allowed or partial)
-- **10.9% are worker losses** (denied)
+- **73.5% grant rate** in verified classified decisions (438 granted / 596 decisive from onwsiat-outcomes-3-tier-summary.json)
+- **26.5% are worker losses** in decisive cases (158 denied / 596 decisive)
 - **20.4% are remitted** (sent back for reconsideration - these are additional to wins/losses)
 
 **18.8% are procedural matters** (reconsiderations, withdrawals, time limit disputes, adjournments, etc.)
@@ -147,7 +147,7 @@ Our classification used keyword pattern matching with three confidence levels:
 - "Unclear" category represents decisions where outcome language is ambiguous or missing
 - Procedural matters (reconsiderations, withdrawals, time disputes) classified separately
 
-**Why This Matters:** Even with limitations, this is the first comprehensive outcome analysis of recent WSIAT decisions (2020-2026). The **89.1% win rate** from clear outcomes validates that appeals work—but most decisions lack clear outcome language, making precedent research difficult for injured workers.
+**Why This Matters:** Even with limitations, this is the first comprehensive outcome analysis of recent WSIAT decisions (2020-2026). The **73.5% grant rate** from 649 verified classified decisions validates that appeals work — but 94.3% of decisions lack clear outcome language, making precedent research difficult for injured workers.
 
 **Data Access:**
 - [Classified Decisions JSON](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/comprehensive-extraction/wsiat-classified.json) (11,430 decisions)

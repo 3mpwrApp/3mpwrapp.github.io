@@ -70,14 +70,14 @@ Here are real examples of how you can use CanLII Database: Ontario WSIB & HRTO C
 
 | Tribunal | Cases Analyzed | Win Rate | Key Finding |
 |----------|----------------|----------|-------------|
-| **WSIAT** (Ontario) | 11,430 | **89.1%*** | 89.1% from 393 clear outcomes (2020-2026 classified) |
+| **WSIAT** (Ontario) | 11,430 | **73.5%*** | 73.5% from 649 classified decisions (438 granted, 158 denied — 2020-2026 CanLII subset) |
 | **ONSBT** (Ontario Benefits) | 14,298 | **98.9%** | 98.9% from 8,071 clear outcomes - highest clarity (56.4%) |
 | **ONWSIB** (WSIB Internal) | 431 | **83.3%** | 83.3% from 12 clear outcomes - 95.8% unclear |
 | **BCWCAT** (BC) | 7,916 | **86.4%** | Strong odds with proper medical evidence |
 | **Other Tribunals** | 77,718 | **84.1%** | Consistently high success rates |
 | **HRTO** (Human Rights) | 9,269 | ~varies | High abandonment (73.5%), but winnable |
 
-<small>*WSIAT 89.1% rate from keyword-based classification; official stats show 60-70% overall success</small>
+<small>*WSIAT 73.5% grant rate from 649 classified decisions (onwsiat-outcomes-3-tier-summary.json); official stats show 60-70% overall success. 94.3% of decisions unresolved.</small>
 
 **May 1, 2026 Update:** Complete classification now available for Ontario social tribunals:
 - **ONSBT (Social Benefits Tribunal):** 14,298 decisions analyzed (2020-2026) - 55.8% explicitly allowed, only 0.6% denied

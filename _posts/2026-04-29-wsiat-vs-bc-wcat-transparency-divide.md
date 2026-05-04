@@ -37,7 +37,7 @@ excerpt: "Ontario's WSIAT publishes 98,992 decisions (1987-2026) with searchable
 
 ## May 1, 2026 Classification Update
 
-**📅 UPDATE: May 1, 2026** - Completed keyword-based classification of 11,430 WSIAT decisions (2020-2026). **Worker win rate: 89.1%** from 393 clear outcomes (350 wins, 43 denials). 77% of decisions have unclear outcomes despite classification attempts, highlighting the challenge of understanding tribunal precedents. Data shows consistent 85-95% yearly win rates, validating that WSIAT appeals work. Full classification methodology: [WSIAT Classification Results](/research/)
+**📅 UPDATE: May 1, 2026** - Completed keyword-based classification of 11,430 WSIAT decisions (2020-2026). **Verified grant rate: 73.5%** from 649 classified decisions (438 granted, 158 denied, 30 deferred). 94.3% of 11,430 decisions are unresolved (Tier C), highlighting the challenge of understanding tribunal precedents. Source: onwsiat-outcomes-3-tier-summary.json. Full methodology: [WSIAT Classification Results](/research/)
 
 ---
 
