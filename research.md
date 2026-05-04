@@ -632,23 +632,37 @@ description: Interactive data visualizations and research tools analyzing tribun
      INLINE TEXT STYLES - Responsive color for all modes
      ============================================================================ */
   
-  /* Light mode - #666 is fine */
-  p[style*="color: #666"],
-  small[style*="color: #666"] {
-    /* Default is #666 */
-  }
+  /* Light mode - #666 and #333 are acceptable */
   
-  /* Dark Mode - Lighten gray text */
+  /* Dark Mode - Lighten ALL gray text elements */
   @media (prefers-color-scheme: dark) {
+    /* Override color: #666 (gray) - hard to read in dark mode */
     p[style*="color: #666"],
     small[style*="color: #666"],
-    h3[style*="color: #666"] {
+    h3[style*="color: #666"],
+    h4[style*="color: #666"],
+    div[style*="color: #666"],
+    span[style*="color: #666"],
+    li[style*="color: #666"],
+    ul[style*="color: #666"] {
       color: #cccccc !important;
     }
     
+    /* Override color: #333 (dark gray) - also hard to read in dark mode */
     p[style*="color: #333"],
-    span[style*="color: #333"] {
+    small[style*="color: #333"],
+    h3[style*="color: #333"],
+    h4[style*="color: #333"],
+    div[style*="color: #333"],
+    span[style*="color: #333"],
+    li[style*="color: #333"],
+    ul[style*="color: #333"] {
       color: #d0d0d0 !important;
+    }
+    
+    /* Override low-opacity rgba colors */
+    [style*="rgba(255,255,255,0.3)"] {
+      background: rgba(255,255,255,0.5) !important;
     }
   }
   
@@ -657,8 +671,19 @@ description: Interactive data visualizations and research tools analyzing tribun
     p[style*="color: #666"],
     small[style*="color: #666"],
     h3[style*="color: #666"],
+    h4[style*="color: #666"],
+    div[style*="color: #666"],
+    span[style*="color: #666"],
+    li[style*="color: #666"],
+    ul[style*="color: #666"],
     p[style*="color: #333"],
-    span[style*="color: #333"] {
+    small[style*="color: #333"],
+    h3[style*="color: #333"],
+    h4[style*="color: #333"],
+    div[style*="color: #333"],
+    span[style*="color: #333"],
+    li[style*="color: #333"],
+    ul[style*="color: #333"] {
       color: #000000 !important;
     }
   }
@@ -667,8 +692,19 @@ description: Interactive data visualizations and research tools analyzing tribun
     p[style*="color: #666"],
     small[style*="color: #666"],
     h3[style*="color: #666"],
+    h4[style*="color: #666"],
+    div[style*="color: #666"],
+    span[style*="color: #666"],
+    li[style*="color: #666"],
+    ul[style*="color: #666"],
     p[style*="color: #333"],
-    span[style*="color: #333"] {
+    small[style*="color: #333"],
+    h3[style*="color: #333"],
+    h4[style*="color: #333"],
+    div[style*="color: #333"],
+    span[style*="color: #333"],
+    li[style*="color: #333"],
+    ul[style*="color: #333"] {
       color: #ffffff !important;
     }
   }
