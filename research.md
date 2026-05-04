@@ -728,7 +728,7 @@ description: Interactive data visualizations and research tools analyzing tribun
     <strong style="color: #004d99;">How we handle data:</strong>
     &nbsp;✅ <strong>Proven data</strong> clearly labelled
     &nbsp;·&nbsp;⚠️ <strong>Inferred patterns</strong> disclosed upfront
-    &nbsp;·&nbsp;🔢 <strong>Win rates are estimated</strong> from classified decisions only — 94.9% of decisions lack clear outcome keywords, making published rates a model artifact of incomplete public data, not confirmed outcomes
+    &nbsp;·&nbsp;🔢 <strong>Win rates are estimated</strong> from classified decisions only — 93.9% of all 98,992 WSIAT decisions lack clear outcome keywords, making published rates a model artifact of incomplete public data, not confirmed outcomes
     &nbsp;·&nbsp;📖 <strong>All code and data open source</strong>
     &nbsp;— <a href="/research-data-sources/" style="font-weight: 600;">See full methodology →</a>
   </p>
@@ -832,7 +832,7 @@ description: Interactive data visualizations and research tools analyzing tribun
         <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Appeals Work — But WSIB Hides How Often</h3>
         <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 98,992 WSIAT decisions analyzed (1987–2026). Of decisions with classifiable outcomes, 726 were allowed and 5,314 denied.</p>
         <div style="margin: 0.6rem 0; font-size: 0.9rem; background: #fff3cd; border-left: 3px solid #f9a825; padding: 0.6rem 0.9rem; border-radius: 4px; line-height: 1.6;">
-          <strong>⚠️ Model Artifact — Read Before Citing:</strong> 93,952 decisions (94.9%) lack clear outcome keywords. The 12.0% detected rate reflects predicted classification from incomplete public data only — not a representative sample of all outcomes. Independent research places real success rates at 60–70%. <a href="/research-data-sources/">See methodology.</a>
+          <strong>⚠️ Model Artifact — Read Before Citing:</strong> 92,952 decisions (93.9%) lack clear outcome keywords in the full 98,992-decision dataset. The 12.0% detected rate (726 allowed / 5,314 denied) reflects keyword matching only — not a representative sample of all outcomes. Our 2020-2026 CanLII subset analysis (11,430 decisions) shows 73.5% grant rate in confirmed classified decisions, with 91.8% of decisions unresolved. Independent research places overall WSIAT success rates at 60–70%. <a href="/research-data-sources/">See methodology.</a>
         </div>
         <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/guides/wsiat-complete-guide/">Read WSIAT Appeal Guide</a> | <a href="/templates/pre-existing-appeal/">Use a Template</a></p>
       </div>
@@ -842,7 +842,7 @@ description: Interactive data visualizations and research tools analyzing tribun
       <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">🎯</div>
       <div>
         <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">"Pre-Existing Condition" Is a Systematic Tactic — Not Bad Luck</h3>
-        <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 13.3% of analyzed denials cite pre-existing condition (1,522 cases, 95% CI: 12.7–13.9%). Back/Spine injuries are the most common target at 15.3% of all 98,992 decisions.</p>
+        <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 13.3% of analyzed WSIAT cases (2020-2026) involve pre-existing condition as a factor (1,519 cases out of 11,430; 95% CI: 12.7–13.9%). Back/Spine injuries are the most common injury type at 15.3% of all 98,992 decisions.</p>
         <p style="margin: 0.5rem 0 0; color: #666;">1 in 8 claims denied this way. If this happened to you, you're not alone — and it's contestable.</p>
         <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/knowledge-base/pre-existing-conditions/">Recognize the Tactic</a> | <a href="/templates/pre-existing-appeal/">Fight Back with Template</a></p>
       </div>
@@ -960,23 +960,28 @@ description: Interactive data visualizations and research tools analyzing tribun
     <tbody>
       <tr>
         <td style="padding: 0.75rem;"><strong>1987-1999</strong></td>
-        <td style="padding: 0.75rem; text-align: right;">19,878</td>
+        <td style="padding: 0.75rem; text-align: right;">20,208</td>
         <td style="padding: 0.75rem;"><small>DecNum, Date, Keywords, Summary</small></td>
       </tr>
       <tr>
         <td style="padding: 0.75rem;"><strong>2000-2009</strong></td>
-        <td style="padding: 0.75rem; text-align: right;">31,980</td>
+        <td style="padding: 0.75rem; text-align: right;">31,928</td>
         <td style="padding: 0.75rem;"><small>DecNum, Date, Keywords, Summary</small></td>
       </tr>
       <tr>
         <td style="padding: 0.75rem;"><strong>2010-2019</strong></td>
-        <td style="padding: 0.75rem; text-align: right;">28,576</td>
+        <td style="padding: 0.75rem; text-align: right;">31,691</td>
         <td style="padding: 0.75rem;"><small>DecNum, Date, Keywords, Summary</small></td>
       </tr>
       <tr>
         <td style="padding: 0.75rem;"><strong>2020-2026</strong></td>
-        <td style="padding: 0.75rem; text-align: right;">14,165</td>
+        <td style="padding: 0.75rem; text-align: right;">10,772</td>
         <td style="padding: 0.75rem;"><small>DecNum, Date, Keywords, Summary</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;"><em>Unknown year</em></td>
+        <td style="padding: 0.75rem; text-align: right;"><em>4,393</em></td>
+        <td style="padding: 0.75rem;"><small><em>Date field unparseable in source CSV</em></small></td>
       </tr>
       <tr style="font-weight: bold; background: #f5f5f5;">
         <td style="padding: 0.75rem;"><strong>TOTAL</strong></td>
@@ -1151,12 +1156,12 @@ description: Interactive data visualizations and research tools analyzing tribun
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 0.75rem;"><strong>WSIAT</strong><br><small>Workers' comp appeals</small></td>
-        <td style="padding: 0.75rem; text-align: right;">98,992</td>
-        <td style="padding: 0.75rem; text-align: right;">74 (0.1%)</td>
-        <td style="padding: 0.75rem; text-align: right;">575 (0.6%)</td>
-        <td style="padding: 0.75rem; text-align: right;">98,343 (99.3%)</td>
-        <td style="padding: 0.75rem;"><small>89.1% worker success rate (official subset analysis) - 2020-2026</small></td>
+        <td style="padding: 0.75rem;"><strong>WSIAT</strong><br><small>Workers' comp appeals<br>(2020-2026 CanLII subset)</small></td>
+        <td style="padding: 0.75rem; text-align: right;">11,430</td>
+        <td style="padding: 0.75rem; text-align: right;">74 (0.6%)</td>
+        <td style="padding: 0.75rem; text-align: right;">575 (5.0%)</td>
+        <td style="padding: 0.75rem; text-align: right;">10,781 (94.3%)</td>
+        <td style="padding: 0.75rem;"><small>73.5% grant rate in 649 classified decisions (Tier A+B). Full dataset: 98,992 decisions (1987-2026). 91.8% of CanLII subset outcomes unresolved.</small></td>
       </tr>
       <tr>
         <td style="padding: 0.75rem;"><strong>HRTO</strong><br><small>Human rights complaints</small></td>
@@ -1459,7 +1464,7 @@ description: Interactive data visualizations and research tools analyzing tribun
   </p>
 
   <ul style="margin-left: 1.5rem; color: #334155;">
-    <li><strong>WSIAT (Ontario Workers' Comp):</strong> 100% success rate in our predictive model—but this reflects data limitations, not actual tribunal decisions. Comprehensive classification of 11,430 WSIAT decisions (2020-2026) shows 89.1% worker success rate.</li>
+    <li><strong>WSIAT (Ontario Workers' Comp):</strong> 100% prediction rate in our NLP model—but this reflects data limitations, not actual tribunal decisions. Our Tier A+B classification of 649 resolved WSIAT decisions (2020-2026 CanLII subset) shows a <strong>73.5% grant rate</strong>. The full dataset outcome gap (93.9% unresolved) prevents a definitive population-level rate.</li>
     <li><strong>BCWCAT (BC Workers' Comp):</strong> 86.4% win rate—strong odds if you're prepared with medical evidence.</li>
     <li><strong>Other Tribunals:</strong> 84.1% win rate across mixed jurisdictions—consistently high success rates.</li>
     <li><strong>HRTO (Human Rights):</strong> High abandonment rate (14% of all cases) suggests procedural challenges—but if you persist, success is possible.</li>
@@ -1700,7 +1705,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
       <h4 style="margin: 0 0 0.5rem; color: white;">Step 3: You Use Tools</h4>
       <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
         Read the guides. Use the templates. Fight your appeal. 
-        You have 89.1% chance of winning at WSIAT.
+        Our data shows 73.5% grant rate in resolved WSIAT decisions — and most workers never even appeal.
       </p>
     </div>
 
