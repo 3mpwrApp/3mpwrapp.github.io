@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-04T03:56:43.550Z",
+  "lastUpdated": "2026-05-04T14:22:06.910Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16549,
+      "totalPosts": 16574,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T03:56:35.683Z"
+      "lastSeen": "2026-05-04T14:21:57.722Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16536,
+      "totalPosts": 16561,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T03:56:37.295Z"
+      "lastSeen": "2026-05-04T14:21:59.700Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16421,
+      "totalPosts": 16446,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T03:56:38.996Z"
+      "lastSeen": "2026-05-04T14:22:01.649Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16612,
+      "totalPosts": 16637,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T03:56:40.771Z"
+      "lastSeen": "2026-05-04T14:22:03.702Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16573,
+      "totalPosts": 16598,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T03:56:42.548Z"
+      "lastSeen": "2026-05-04T14:22:05.907Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "RFK: “What’s wrong with you people? Don’t you know how you’re supposed to treat loved ones? They’re like cars, you just get a new one, if the old one gets broken!” #DisabilityRights",
-      "author": "beatlenumber9.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "LLMs hallucinate WCAG criteria, invent issues, and can't touch a live DOM. An AI accessibility audit isn't cutting corners; it's counterfeit expertise. Human testers still own this work.\n\nafixt.com/beware-of-...\n\n#DigitalAccessibility #A11y #WCAG #DigitalInclusion #ResponsibleAI #AI",
-      "author": "deconspray.bsky.social",
-      "engagement": 33,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "RFK: “What’s wrong with you people? Don’t you know how you’re supposed to treat loved ones? They’re like cars, you just get a new one, if the old one gets broken!” #DisabilityRights",
-      "author": "beatlenumber9.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "RFK: “What’s wrong with you people? Don’t you know how you’re supposed to treat loved ones? They’re like cars, you just get a new one, if the old one gets broken!” #DisabilityRights",
-      "author": "beatlenumber9.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Please share widely!\n\n#NDIS \n#AusPol\n#SaveOurNDIS \n#DisabilityRights",
-      "author": "caitlinsheahan.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
-      "author": "uua.org",
-      "engagement": 28,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Please share widely!\n\n#NDIS \n#AusPol\n#SaveOurNDIS \n#DisabilityRights",
-      "author": "caitlinsheahan.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Zeit für eine #Biene auf einer #Bergflockenblume zur #WildflowerHour!\n\nDie Initiative:\nwww.bienen-initiative.ch\n\nDer genaue Initiativtext:\nwww.bienen-initiative.ch/initiative \n\n#bienen #wildbienen #bees #artenschutz #artenvielfalt #biodiversität #naturschutz\n\n#AltText #Accessibility",
       "author": "vfd.ch",
@@ -338,6 +296,48 @@
       "author": "sarasoueidan.com",
       "engagement": 32,
       "hashtag": "A11y"
+    },
+    {
+      "text": "DEIA is making skateboarding accessible to ALL kids who want to share! #pinks #disabilityrights #DEI",
+      "author": "aliceknew.bsky.social",
+      "engagement": 18,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Cruelty can be the only logical reason behind cutting aids to adults with severe autism. #pinks #resist #disabilityrights  #autism #eugenics #medicaidcuts #socialsecurityCUTS",
+      "author": "aliceknew.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "The Trump Administration Aims to Penalize Disabled Adults Who Live With Their Families www.propublica.org/article/trum... \n\n#DOGE #OMB #SSA #SocialSecurity #DisabilityRights #HumanRights",
+      "author": "wolverinebear.bsky.social",
+      "engagement": 89,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
+      "author": "uua.org",
+      "engagement": 38,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Sharing \"Star Wars\" images on this \"May The Fourth\"? Don't forget alt text! Alt text is crucial for people who are blind, who have low vision, and others who use screen readers.\n\n#MayTheFourth #MayTheFourthBeWithYou #MayThe4thBeWithYou #MayThe4th #StarWarsDay #StarWars #a11y",
+      "author": "a11yawareness.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Hey literally every dev, did you know you can make #OpenGraph #OG images accessible with ?\n\n<meta property=\"og:image:alt\" content=\"A short descriptive phrase\" />\n\nstandards.scangov.org/ogimagealt/\n\n#A11y #Accessibility #ATproto",
+      "author": "renderg.host",
+      "engagement": 22,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "[1/5]\n\nI heard about AccessibilityFirewall.com, promising “No code changes. No overlay. No JavaScript.” It uses “edge” in the same way the Overlay Community Group does.\n\nRed flag emoji.\n\nSo I ran it through its own “Live Remediation Engine”:\nwebcraft.inc#audit-section\n\nHmmm…\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
@@ -350,15 +350,15 @@
       "count": 44
     },
     {
+      "keyword": "a11y",
+      "count": 27
+    },
+    {
       "keyword": "cripthevote",
       "count": 26
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
-    },
-    {
-      "keyword": "a11y",
       "count": 26
     },
     {
@@ -394,7 +394,23 @@
       "count": 10
     },
     {
-      "keyword": "inclusivedesign",
+      "keyword": "disabilitysky",
+      "count": 9
+    },
+    {
+      "keyword": "cripminds",
+      "count": 9
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 9
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 9
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
       "count": 9
     },
     {
@@ -402,23 +418,7 @@
       "count": 9
     },
     {
-      "keyword": "disabilitysky",
-      "count": 8
-    },
-    {
-      "keyword": "cripminds",
-      "count": 8
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 8
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 8
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
+      "keyword": "ux",
       "count": 8
     }
   ]
