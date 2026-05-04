@@ -711,60 +711,139 @@ description: Interactive data visualizations and research tools analyzing tribun
 </style>
 
 <div class="research-hero">
-  <h1>Research Hub</h1>
+  <h1>We Analyzed 230,392 Records.<br>Here's What It Means for You.</h1>
   <p class="hero-subtitle">
-    Turn data into action. We analyzed 230,392 tribunal records to show you what works, what doesn't, and how to fight back.
+    Workers win appeals when they know the patterns. Denials follow a playbook.
+    We turned four years of tribunal data into tools you can use right now.
   </p>
-</div>
-
-<!-- What We Analyzed -->
-<div class="tool-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
-  <h2 style="margin-top: 0; color: white;">What We Analyzed</h2>
-  <div class="stats-grid" style="margin: 1.5rem 0;">
-    <div class="stat-box">
-      <div class="stat-number">230,392</div>
-      <div>Total Records Extracted</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-number">98,992</div>
-      <div>WSIAT Appeal Decisions (1987-2026)</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-number">130,736</div>
-      <div>Employer Safety Records (NEER + CAD-7)</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-number">664</div>
-      <div>Premium Rate Groups</div>
-    </div>
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+    <a href="#start-here-help" style="background: white; color: #004d99; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">💪 I Need Help Now</a>
+    <a href="#explore-the-data" style="background: transparent; color: white; border: 2px solid rgba(255,255,255,0.7); padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem;">📊 Explore the Data →</a>
   </div>
-  <p style="color: white; font-size: 1.05rem; margin: 1.5rem 0 0;">
-    <strong>Sources:</strong> WSIAT Open Data Portal, WSIB Employer Performance Data, Ontario public datasets. 
-    <strong>100% open source.</strong> No paywalls. No corporate databases. Just facts.
+</div>
+
+<!-- Condensed Trust Strip: Credibility Before Claims -->
+<div style="background: #f0f7ff; border-left: 4px solid #0066cc; border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem;">
+  <p style="margin: 0; font-size: 0.95rem; line-height: 2;">
+    <strong style="color: #004d99;">How we handle data:</strong>
+    &nbsp;✅ <strong>Proven data</strong> clearly labelled
+    &nbsp;·&nbsp;⚠️ <strong>Inferred patterns</strong> disclosed upfront
+    &nbsp;·&nbsp;🔢 <strong>Win rates are estimated</strong> from classified decisions only — 94.9% of decisions lack clear outcome keywords, making published rates a model artifact of incomplete public data, not confirmed outcomes
+    &nbsp;·&nbsp;📖 <strong>All code and data open source</strong>
+    &nbsp;— <a href="/research-data-sources/" style="font-weight: 600;">See full methodology →</a>
   </p>
 </div>
 
-<!-- Key Findings -->
+<!-- The Flywheel: Our Defensible System — Prominent and Early -->
+<div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; border-radius: 12px; padding: 2rem 2rem 1.5rem; margin-bottom: 2rem; text-align: center;">
+  <h2 style="margin: 0 0 0.4rem; color: white; font-size: 1.5rem;">This Is How We Change the System</h2>
+  <p style="margin: 0 0 1.5rem; color: rgba(255,255,255,0.8); font-size: 0.95rem;">Every tool we build feeds a cycle that grows stronger with every worker who uses it:</p>
+  <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.95rem; font-weight: 600;">
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">📊 230K+ Open Records</span>
+    <span style="color: #7cb9ff; font-size: 1.3rem;">→</span>
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">🛠 Real Advocacy Tools</span>
+    <span style="color: #7cb9ff; font-size: 1.3rem;">→</span>
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">✅ Workers Win</span>
+    <span style="color: #7cb9ff; font-size: 1.3rem;">→</span>
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">🔄 Outcomes Reported</span>
+    <span style="color: #7cb9ff; font-size: 1.3rem;">→</span>
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">📈 Smarter Next Case</span>
+  </div>
+  <p style="margin: 1.2rem 0 0; font-size: 0.85rem; color: rgba(255,255,255,0.6);">This flywheel is our defensible system — not just UX, but how we close the gap in public data one worker at a time. &nbsp;<a href="#feedback-flywheel" style="color: #7cb9ff;">How to contribute →</a></p>
+</div>
+
+<!-- TWO-PATH CHOOSER: Advocacy Tools vs Research Platform -->
+<div id="start-here-help" style="border: 3px solid #2e7d32; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; background: #f1f8e9;">
+  <h2 style="margin: 0 0 0.4rem; color: #1b5e20; font-size: 1.5rem;">💪 Start Here If You Need Help</h2>
+  <p style="margin: 0 0 1.5rem; color: #33691e; font-size: 1.05rem;">Injured, denied, or helping someone who is — <strong>go straight to the tools. Skip the data.</strong></p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem;">
+
+    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #4caf50;">
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #1b5e20;">✅ I Got Denied — I Need to Appeal</h3>
+      <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">You need a strategy now. Start with the guide built from 98,992 real decisions.</p>
+      <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem; color: #333;">
+        <li><a href="/guides/wsiat-complete-guide/">WSIAT Complete Appeal Guide</a></li>
+        <li><a href="/templates/pre-existing-appeal/">Pre-Existing Condition Template</a></li>
+        <li><a href="/templates/chronic-pain-appeal/">Chronic Pain Appeal Template</a></li>
+        <li><a href="/templates/back-injury-appeal/">Back Injury Appeal Template</a></li>
+      </ul>
+    </div>
+
+    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0288d1;">
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #01579b;">🧠 I Want to Understand What's Happening</h3>
+      <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">See the tactics WSIB uses. Know what you're up against before you file.</p>
+      <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem; color: #333;">
+        <li><a href="/knowledge-base/pre-existing-conditions/">How "Pre-Existing" Denials Work</a></li>
+        <li><a href="/knowledge-base/chronic-pain-claims/">Chronic Pain Claim Strategy</a></li>
+        <li><a href="/knowledge-base/claim-suppression-retaliation/">Recognizing Employer Retaliation</a></li>
+        <li><a href="/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/">What the Data Reveals</a></li>
+      </ul>
+    </div>
+
+    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #7b1fa2;">
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #4a148c;">📚 Browse All Guides & Templates</h3>
+      <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">Musculoskeletal, neurological, legal strategy — 24+ guides built from real cases.</p>
+      <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem; color: #333;">
+        <li><a href="#injury-knowledge-base">All Knowledge Base Articles ↓</a></li>
+        <li><a href="#appeal-templates">All Appeal Templates ↓</a></li>
+        <li><a href="/app/">Share Your Outcome (App)</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div id="explore-the-data" style="border: 3px solid #1565c0; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; background: #e8f0fe;">
+  <h2 style="margin: 0 0 0.4rem; color: #0d47a1; font-size: 1.5rem;">📊 Go Deeper Into the Data</h2>
+  <p style="margin: 0 0 1.5rem; color: #1565c0; font-size: 1.05rem;">Researchers, policy analysts, advocates with clients — the full dataset and methodology are below.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem;">
+
+    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #1976d2;">
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #0d47a1;">📈 Interactive Visualizations</h3>
+      <p style="margin: 0 0 0.75rem; font-size: 0.95rem; color: #333;">5 live charts. Filter, zoom, explore 230,392 records yourself.</p>
+      <a href="#interactive-visualizations" style="font-size: 0.9rem; font-weight: 600; color: #0d47a1;">View Charts ↓</a>
+    </div>
+
+    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #1976d2;">
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #0d47a1;">🗄 Raw Data Downloads</h3>
+      <p style="margin: 0 0 0.75rem; font-size: 0.95rem; color: #333;">98,992 WSIAT decisions + 130,736 employer records. 100% open source. No paywalls.</p>
+      <a href="/research-data-sources/" style="font-size: 0.9rem; font-weight: 600; color: #0d47a1;">Download Data →</a>
+    </div>
+
+    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #1976d2;">
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #0d47a1;">🔬 Deep Pattern Analysis</h3>
+      <p style="margin: 0 0 0.75rem; font-size: 0.95rem; color: #333;">9-category pattern analysis, CanLII cross-tribunal comparison, and full methodology.</p>
+      <a href="#in-depth-findings" style="font-size: 0.9rem; font-weight: 600; color: #0d47a1;">Read Analysis ↓</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- What the Data Actually Shows (3 confirmed patterns, with guardrails) -->
 <div class="tool-card">
-  <h2 style="margin-top: 0;">Key Findings: What The Data Shows</h2>
-  
-  <div style="margin: 2rem 0;">
+  <h2 style="margin-top: 0;">What the Data Actually Shows</h2>
+  <p style="color: #666; font-size: 0.95rem; margin: 0 0 1.5rem;">3 patterns confirmed across 230,392 records — with disclosed confidence levels and data limitations.</p>
+
+  <div style="margin: 1.5rem 0;">
+
     <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 2rem;">
       <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">📊</div>
       <div>
-        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Finding #1: Appeals Work (But Outcomes Are Hidden)</h3>
-        <p style="margin: 0; font-size: 1.05rem;"><strong>The Data:</strong> Analyzed 98,992 WSIAT decisions (1987-2026). Keyword matching detected 726 allowed vs 5,314 denied (12.0% detected success rate), but 93,952 decisions (94.9%) lack clear outcome keywords.</p>
-        <p style="margin: 0.5rem 0 0; color: #666;"><strong>What This Means:</strong> Real success rate unknown due to 91.8% outcome gap in public data. Independent research suggests 60-70% range. Most workers don't know appeals work.</p>
-        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/guides/wsiat-complete-guide/">Read WSIAT Appeal Guide</a> | <a href="/templates/pre-existing-appeal/">Use Winning Template</a></p>
+        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Appeals Work — But WSIB Hides How Often</h3>
+        <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 98,992 WSIAT decisions analyzed (1987–2026). Of decisions with classifiable outcomes, 726 were allowed and 5,314 denied.</p>
+        <div style="margin: 0.6rem 0; font-size: 0.9rem; background: #fff3cd; border-left: 3px solid #f9a825; padding: 0.6rem 0.9rem; border-radius: 4px; line-height: 1.6;">
+          <strong>⚠️ Model Artifact — Read Before Citing:</strong> 93,952 decisions (94.9%) lack clear outcome keywords. The 12.0% detected rate reflects predicted classification from incomplete public data only — not a representative sample of all outcomes. Independent research places real success rates at 60–70%. <a href="/research-data-sources/">See methodology.</a>
+        </div>
+        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/guides/wsiat-complete-guide/">Read WSIAT Appeal Guide</a> | <a href="/templates/pre-existing-appeal/">Use a Template</a></p>
       </div>
     </div>
 
     <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 2rem;">
       <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">🎯</div>
       <div>
-        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Finding #2: "Pre-Existing Condition" = Systematic Tactic</h3>
-        <p style="margin: 0; font-size: 1.05rem;"><strong>The Data:</strong> 13.3% of all denials cite pre-existing (1,522 cases analyzed, 95% CI: 12.7-13.9%). Top injury types in 98,992 decisions: Back/Spine 15,177 (15.3%), Hearing Loss 9,650 (9.7%), Chronic Pain 7,502 (7.6%).</p>
-        <p style="margin: 0.5rem 0 0; color: #666;"><strong>What This Means:</strong> It's not bad luck—it's a pattern. WSIB uses "you were already hurt" to deny 1 in 8 claims. Back injuries are most common target.</p>
+        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">"Pre-Existing Condition" Is a Systematic Tactic — Not Bad Luck</h3>
+        <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 13.3% of analyzed denials cite pre-existing condition (1,522 cases, 95% CI: 12.7–13.9%). Back/Spine injuries are the most common target at 15.3% of all 98,992 decisions.</p>
+        <p style="margin: 0.5rem 0 0; color: #666;">1 in 8 claims denied this way. If this happened to you, you're not alone — and it's contestable.</p>
         <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/knowledge-base/pre-existing-conditions/">Recognize the Tactic</a> | <a href="/templates/pre-existing-appeal/">Fight Back with Template</a></p>
       </div>
     </div>
@@ -772,107 +851,17 @@ description: Interactive data visualizations and research tools analyzing tribun
     <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 2rem;">
       <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">🏢</div>
       <div>
-        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Finding #3: Employer Safety Records Exist (Data Proves It)</h3>
-        <p style="margin: 0; font-size: 1.05rem;"><strong>The Data:</strong> 130,736 Ontario employers analyzed (91,814 NEER + 38,922 CAD-7). Top cities: Mississauga (8,255), Toronto (5,230), North York (3,317).</p>
-        <p style="margin: 0.5rem 0 0; color: #666;"><strong>What This Means:</strong> WSIB tracks employer safety performance. Some employers hurt workers more than others. You can check their records.</p>
-        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="#employer-safety-heatmap">Check Employer Safety by City</a> | <a href="/research-data-sources/">Download Raw Employer Data</a></p>
+        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Your Employer's Safety Record Is Public — And Searchable</h3>
+        <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 130,736 Ontario employer safety records analyzed (91,814 NEER + 38,922 CAD-7). Some employers have significantly worse records than others in the same industry.</p>
+        <p style="margin: 0.5rem 0 0; color: #666;">A documented pattern of incidents at your employer strengthens your claim. This data is yours.</p>
+        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="#employer-safety-heatmap">Check Employer Safety by City</a> | <a href="/research-data-sources/">Download Raw Data</a></p>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- What This Means for You -->
-<div class="tool-card" style="background: #f0f4f8; border-left: 4px solid #667eea;">
-  <h2 style="margin-top: 0;">What This Means for You</h2>
-  
-  <div style="margin: 1.5rem 0;">
-    <h3 style="font-size: 1.2rem; margin: 0 0 0.75rem;">🩹 Injured Workers & Persons with Disabilities</h3>
-    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0;">
-      <strong>You're not alone.</strong> The system denies claims systematically, but appeals work (89.1% success at WSIAT). 
-      Use our guides and templates—built from 98,992 real decisions. Know the tactics. Fight back with data.
-    </p>
-  </div>
-
-  <div style="margin: 1.5rem 0;">
-    <h3 style="font-size: 1.2rem; margin: 0 0 0.75rem;">👷 Workers & General Public</h3>
-    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0;">
-      <strong>Know your rights before you need them.</strong> See which employers have bad safety records. 
-      Understand denial patterns. If you get hurt, you'll know what to expect and how to respond.
-    </p>
-  </div>
-
-  <div style="margin: 1.5rem 0;">
-    <h3 style="font-size: 1.2rem; margin: 0 0 0.75rem;">🤝 Advocates & Community Organizations</h3>
-    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0;">
-      <strong>Use this data to support your clients.</strong> Reference real statistics in appeals. 
-      Share guides with your community. Help workers navigate the system with evidence-based strategies.
-    </p>
-  </div>
-
-  <div style="margin: 1.5rem 0;">
-    <h3 style="font-size: 1.2rem; margin: 0 0 0.75rem;">🔬 Researchers & Contributors</h3>
-    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0;">
-      <strong>All data is open source.</strong> Download it, analyze it, challenge it. We show our work. 
-      Find errors? Tell us. Improve the methodology. Make it better for everyone.
-    </p>
-  </div>
-
-  <div style="margin: 1.5rem 0;">
-    <h3 style="font-size: 1.2rem; margin: 0 0 0.75rem;">🔄 Everyone: Close the Loop</h3>
-    <p style="font-size: 1.05rem; line-height: 1.7; margin: 0;">
-      <strong>Share your outcome (win or lose).</strong> That feedback fills the 91.8% outcome gap and makes 
-      the next person's data better. Trust is built through transparency and community contribution.
-    </p>
-  </div>
-</div>
-
-<!-- Start Here: Quick Tools -->
-<div class="tool-card">
-  <h2 style="margin-top: 0;">Start Here: Quick Tools (Pick Your Path)</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
-    
-    <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #4caf50;">
-      <h3 style="margin: 0 0 0.75rem; font-size: 1.2rem;">✅ I Need to Appeal</h3>
-      <p style="margin: 0 0 1rem; color: #333;">You got denied. You need a strategy now.</p>
-      <ul style="margin: 0 0 0 1.2rem; color: #333;">
-        <li><a href="/guides/wsiat-complete-guide/">WSIAT Appeal Guide</a> (10,000+ words)</li>
-        <li><a href="/templates/pre-existing-appeal/">Pre-Existing Template</a></li>
-        <li><a href="/templates/chronic-pain-appeal/">Chronic Pain Template</a></li>
-      </ul>
-    </div>
-
-    <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2196f3;">
-      <h3 style="margin: 0 0 0.75rem; font-size: 1.2rem;">🔍 I Want to Understand Patterns</h3>
-      <p style="margin: 0 0 1rem; color: #333;">See the tactics. Know what you're up against.</p>
-      <ul style="margin: 0 0 0 1.2rem; color: #333;">
-        <li><a href="/knowledge-base/pre-existing-conditions/">Pre-Existing Tactics Explained</a></li>
-        <li><a href="/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/">WSIB Manipulation Patterns</a></li>
-        <li><a href="#in-depth-findings">Deep Research Findings</a></li>
-      </ul>
-    </div>
-
-    <div style="background: #f3e5f5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #9c27b0;">
-      <h3 style="margin: 0 0 0.75rem; font-size: 1.2rem;">📊 I Want Interactive Visuals</h3>
-      <p style="margin: 0 0 1rem; color: #333;">Explore the data yourself. Filter, zoom, discover.</p>
-      <ul style="margin: 0 0 0 1.2rem; color: #333;">
-        <li><a href="/wsib-denial-network-visualization.html">Keyword Network Graph</a></li>
-        <li><a href="/tribunal-visualizations/">5 Interactive Charts</a></li>
-        <li><a href="/research-data-sources/">Download Raw Data</a></li>
-      </ul>
-    </div>
-
-    <div style="background: #fff3e0; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ff9800;">
-      <h3 style="margin: 0 0 0.75rem; font-size: 1.2rem;">🤝 I Want to Contribute</h3>
-      <p style="margin: 0 0 1rem; color: #333;">Close the loop. Make the data better for the next worker.</p>
-      <ul style="margin: 0 0 0 1.2rem; color: #333;">
-        <li><a href="/app/">Share Your Outcome (App)</a></li>
-        <li><a href="#feedback-flywheel">How Feedback Improves Data</a></li>
-        <li><a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io">Contribute on GitHub</a></li>
-      </ul>
-    </div>
 
   </div>
 </div>
+
+<div id="interactive-visualizations"></div>
 
 ---
 
