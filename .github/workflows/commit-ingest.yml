@@ -1,0 +1,48 @@
+name: Commit Ingest To Weekly Queue
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts --no-audit --fund=false
+
+      - name: Ingest commits to queue and update What is New
+        run: node scripts/commit-ingest.js
+
+      - name: Validate routing and deduplication
+        run: node scripts/validate-content.js
+
+      - name: Commit queue and feed changes
+        run: |
+          git config --local user.email "empowrapp08162025@gmail.com"
+          git config --local user.name "3mpwrApp Content Bot"
+
+          git add data/weekly-queue.json _whats_new/ || true
+          if git diff --staged --quiet; then
+            echo "No queue changes to commit"
+            exit 0
+          fi
+
+          git commit -m "chore(automation): ingest commits into weekly queue and whats new"
+          git push origin main

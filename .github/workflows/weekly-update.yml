@@ -1,6 +1,6 @@
 name: Weekly Update Post
 
-# Generate weekly update summary
+# Generate one weekly recap summary
 # Runs every Monday at 9 AM UTC
 
 on:
@@ -25,7 +25,7 @@ concurrency:
 
 jobs:
   weekly_update:
-    name: Generate Weekly Update
+    name: Generate Weekly Recap
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -37,14 +37,7 @@ jobs:
         with:
           ref: main
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0  # Need full history for git log
-      
-      - name: Checkout app repo for What's New data
-        uses: actions/checkout@v4
-        with:
-          repository: 'S0vryn9-C011ect1ve/empowrapp-main'
-          path: 'empowrapp-app'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -55,9 +48,12 @@ jobs:
       - name: Install dependencies
         run: npm ci --ignore-scripts --no-audit --fund=false
 
-      - name: Generate weekly update
+      - name: Validate content policy
+        run: node scripts/validate-content.js
+
+      - name: Generate weekly recap from queue
         run: |
-          echo "📝 Generating weekly update post..."
+          echo "Generating weekly recap post..."
           node scripts/weekly-update-generator-v2.js
 
       - name: Commit update
@@ -65,16 +61,16 @@ jobs:
           git config --local user.email "empowrapp08162025@gmail.com"
           git config --local user.name "3mpwrApp Content Bot"
           
-          git add _posts/ _whats_new/ || true
+          git add _posts/ data/weekly-queue.json data/weekly-queue-archive/ || true
           
           if git diff --staged --quiet; then
-            echo "✅ No changes to commit"
+            echo "No changes to commit"
             exit 0
           fi
           
           WEEK=$(date -u +%V)
           YEAR=$(date -u +%Y)
-          git commit -m "feat(blog): Weekly update - Week $WEEK ($YEAR)"
+          git commit -m "feat(blog): weekly recap - week $WEEK ($YEAR)"
           git push origin main
 
       - name: Create summary
@@ -83,14 +79,12 @@ jobs:
           WEEK=$(date -u +%V)
           YEAR=$(date -u +%Y)
           
-          echo "# 📅 Weekly Update - Week $WEEK ($YEAR)" >> $GITHUB_STEP_SUMMARY
+          echo "# Weekly Update - Week $WEEK ($YEAR)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Generated:** $(date -u +"%Y-%m-%d %H:%M UTC")" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           
-          # Show recent commits
-          echo "**Recent commits:**" >> $GITHUB_STEP_SUMMARY
-          git log --since="7 days ago" --pretty=format:"- %s" >> $GITHUB_STEP_SUMMARY || echo "No commits in past week" >> $GITHUB_STEP_SUMMARY
+          echo "**Recent commits in queue were processed into a single weekly recap.**" >> $GITHUB_STEP_SUMMARY
 
       - name: Upload artifacts
         if: always()
@@ -98,6 +92,6 @@ jobs:
         with:
           name: weekly-update-${{ github.run_id }}
           path: |
-            _posts/*weekly-update*.md
-            _whats_new/*updates.md
+            _posts/*weekly-recap*.md
+            data/weekly-queue-archive/*.json
           retention-days: 30

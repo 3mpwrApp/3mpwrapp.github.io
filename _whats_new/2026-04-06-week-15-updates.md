@@ -2,6 +2,8 @@
 layout: whats_new
 title: Week 15 Updates (2026)
 date: 2026-04-06
+content_type: commit-summary
+week: 15
 ---
 
 ## This Week's Journey

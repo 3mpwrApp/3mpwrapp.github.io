@@ -1,0 +1,55 @@
+content_types:
+  commit-summary:
+    description: "Raw system events shown in the live What's New feed."
+    source: "git commit metadata"
+    destination: "_whats_new"
+    frequency: "continuous"
+    narrative: false
+
+  dev-recap:
+    description: "Technical work translated into clear language for weekly summary use."
+    source: "weekly queue aggregation"
+    destination: "blog weekly recaps"
+    frequency: "weekly"
+    narrative: true
+
+  weekly-recap:
+    description: "Canonical public weekly development narrative."
+    source: "weekly queue"
+    destination: "/blog/#weekly-recaps"
+    frequency: "one per week"
+    narrative: true
+
+  community:
+    description: "Announcements, events, and public engagement updates."
+    source: "community editorial"
+    destination: "community section"
+    frequency: "as needed"
+    narrative: true
+
+  feature-spotlight:
+    description: "Feature-focused educational content."
+    source: "editorial"
+    destination: "blog features"
+    frequency: "as needed"
+    narrative: true
+
+  tutorial:
+    description: "How-to content for users and supporters."
+    source: "editorial"
+    destination: "blog tutorials"
+    frequency: "as needed"
+    narrative: true
+
+  daily-curation:
+    description: "Daily curated news and trend highlights."
+    source: "curation workflows"
+    destination: "daily highlights"
+    frequency: "daily"
+    narrative: true
+
+routing_rules:
+  - "Dev updates must not be published as standalone community narratives."
+  - "Weekly development narrative must publish only to /blog/#weekly-recaps."
+  - "What's New is a live feed and must not contain long-form weekly narrative posts."
+  - "Only one weekly recap post may exist per ISO week."

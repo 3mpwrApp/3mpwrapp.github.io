@@ -100,7 +100,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 <p class="section-description">Every Monday, we compile the week's most important updates, new features, improvements, and fixes into one easy-to-read recap. See detailed changelog on our <a href="{{ '/whats-new' | relative_url }}">What's New</a> page. Perfect for staying up-to-date on what's changed!</p>
 
-{% assign weekly_recaps = site.posts | where_exp: 'p', "p.tags contains 'weekly'" %}
+{% assign weekly_recaps = site.posts | where_exp: 'p', "p.categories contains 'weekly-recap'" %}
 {% if weekly_recaps and weekly_recaps.size > 0 %}
 <div class="posts-grid">
   {% for post in weekly_recaps limit:4 %}
@@ -128,7 +128,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 <div class="posts-list">
   {% assign community_post_count = 0 %}
   {% for post in site.posts limit:50 %}
-    {% unless post.tags contains 'highlights' or post.tags contains 'weekly' or post.tags contains 'features' or post.tags contains 'spotlight' %}
+    {% unless post.tags contains 'highlights' or post.tags contains 'weekly' or post.tags contains 'features' or post.tags contains 'spotlight' or post.categories contains 'dev-diary-updates' or post.categories contains 'weekly-recap' %}
       {% assign community_post_count = community_post_count | plus: 1 %}
       <article class="post-item">
         <h3 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>

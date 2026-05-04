@@ -4,14 +4,12 @@ name: Content Curator (Unified)
 # Consolidates: curator.yml, weekly-curator.yml, weekly-blog.yml
 # 
 # Daily: Curates and posts content 1x/day (12 PM UTC - after daily-feature at 10 AM)
-# Weekly: Generates summary post every Monday at 9 AM UTC
+# Weekly recap generation is handled by weekly-update.yml
 
 on:
   schedule:
     # Daily curation - 1x per day (reduced from 2x)
     - cron: '0 12 * * *'   # 12:00 PM UTC - After daily-feature (10 AM)
-    # Weekly summary - Every Monday at 9 AM UTC
-    - cron: '0 9 * * 1'    # Monday 9:00 AM UTC
     
   workflow_dispatch:
     inputs:
@@ -22,7 +20,6 @@ on:
         type: choice
         options:
           - daily
-          - weekly
       force_publish:
         description: 'Force publish low-score items'
         required: false
@@ -210,74 +207,4 @@ jobs:
           path: |
             public/curation-latest.json
             public/posting-results.json
-          retention-days: 7
-
-  # Weekly Summary Post
-  weekly_summary:
-    name: Weekly Summary Post
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    permissions:
-      contents: write
-    
-    steps:
-      - name: Check if Monday 9 AM UTC (weekly time)
-        id: check_time
-        run: |
-          hour=$(date -u +%H)
-          day=$(date -u +%u)
-          if [ "$day" -eq 1 ] && [ "$hour" -ge 9 ] && [ "$hour" -lt 10 ]; then
-            echo "is_weekly_time=true" >> $GITHUB_OUTPUT
-            echo "✅ It's Monday 9 AM UTC - running weekly summary"
-          elif [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ "${{ github.event.inputs.mode }}" == "weekly" ]; then
-            echo "is_weekly_time=true" >> $GITHUB_OUTPUT
-            echo "✅ Manual weekly mode triggered"
-          else
-            echo "is_weekly_time=false" >> $GITHUB_OUTPUT
-            echo "⏭️ Not weekly time - skipping"
-            exit 0
-          fi
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Generate weekly post
-        run: |
-          echo "📝 Generating weekly summary post..."
-          node scripts/generate-weekly-post.js
-
-      - name: Commit weekly post
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'actions@users.noreply.github.com'
-          
-          git add _posts/*weekly*.md || true
-          
-          if git diff --cached --quiet; then
-            echo '✅ No weekly post changes to commit'
-            exit 0
-          fi
-          
-          git commit -m 'feat(blog): Weekly summary post - automated update'
-          git push origin main || echo '⚠️ No changes to push'
-
-      - name: Create summary
-        if: always()
-        run: |
-          echo "# 📝 Weekly Summary - $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "✅ Weekly summary post generated and committed" >> $GITHUB_STEP_SUMMARY
-
-      - name: Upload artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: weekly-post-${{ github.run_id }}
-          path: _posts/*weekly*.md
           retention-days: 7
