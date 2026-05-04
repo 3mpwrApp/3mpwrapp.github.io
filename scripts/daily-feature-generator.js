@@ -2808,7 +2808,15 @@ ${highlights.slice(0, 3).map(h => `• ${h}`).join('\n')}
     fs.writeFileSync(filepath, cleanArticleContent, 'utf-8');
     console.log(`Created: ${filepath}`);
 
-    const articleUrl = `/blog/${year}/${month}/${day}/${typePrefix}-${slug}/`;
+    const urlBaseByType = {
+      feature: 'features',
+      tutorial: 'tutorials',
+      devDiary: 'dev-diary',
+      lore: 'community',
+      devUpdate: 'updates'
+    };
+    const urlBase = urlBaseByType[contentType] || 'features';
+    const articleUrl = `/${urlBase}/${year}/${month}/${day}/${typePrefix}-${slug}/`;
     const social = this.generateSocialPost(contentItem, articleUrl, contentType);
 
     const socialPath = path.join(process.cwd(), 'public', 'daily-feature-social.json');
