@@ -75,7 +75,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 <p class="section-description">Explore 3mpwrApp features, the app itself, and our website tools. From Evidence Locker and Letter Generator to community features and accessibility innovations—discover how our platform helps you advocate for your rights, navigate systems, and connect with your community.</p>
 
-{% assign feature_articles = site.posts | where_exp: 'p', "p.tags contains 'features' or p.tags contains 'spotlight'" %}
+{% assign feature_articles = site.posts | where_exp: 'p', "p.tags contains 'spotlight'" %}
 {% if feature_articles and feature_articles.size > 0 %}
 <div class="posts-grid">
   {% for post in feature_articles %}

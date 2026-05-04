@@ -444,12 +444,12 @@ We will NEVER:
 
 **If you use this data:**
 
-> 3mpwrApp Research Team. (2026). *Comprehensive Analysis of 98,992 WSIAT Workplace Injury Appeal Decisions (1987-2026)*. Retrieved from https://3mpwrapp.pages.dev/data-limitations/
+> 3mpwrApp Research. (2026). *Comprehensive Analysis of 98,992 WSIAT Workplace Injury Appeal Decisions (1987-2026)*. Retrieved from https://3mpwrapp.pages.dev/data-limitations/
 
 **BibTeX:**
 ```bibtex
 @misc{3mpwrapp2026wsiat,
-  author = {{3mpwrApp Research Team}},
+  author = {3mpwrApp Research},
   title = {Comprehensive Analysis of 98,992 WSIAT Workplace Injury Appeal Decisions (1987-2026)},
   year = {2026},
   url = {https://3mpwrapp.pages.dev/data-limitations/},
