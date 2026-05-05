@@ -1,0 +1,83 @@
+{
+  "bcest": {
+    "completed": [],
+    "failed": [
+      {
+        "caseId": "2026bcest32",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest31",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest30",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest29",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest28",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest27",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest26",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest25",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest24",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest23",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest22",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest21",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest20",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest19",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest18",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest17",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest16",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest15",
+        "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      }
+    ],
+    "lastBatch": 0,
+    "lastUpdate": "2026-05-05T06:16:24.764Z",
+    "completedCount": 0,
+    "failedCount": 18
+  }
+}

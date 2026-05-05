@@ -37,6 +37,8 @@ const BATCH_SIZE = 750;  // Cases per batch
 const BATCH_PAUSE_MIN = 5 * 60 * 1000;  // 5 minutes
 const BATCH_PAUSE_MAX = 10 * 60 * 1000; // 10 minutes
 const SEARCH_BATCH_SIZE = 50; // API search results per page
+let MAX_SEARCH_PAGES = Number.POSITIVE_INFINITY; // Optional CLI cap per search term
+let MAX_CASES = Number.POSITIVE_INFINITY; // Optional CLI cap for case extraction
 
 // ===== HYBRID APPROACH: Recent cases first =====
 const RECENT_ONLY = true;   // Enable date filtering for Phase 1 (pilot launch)
@@ -84,6 +86,18 @@ const TRIBUNALS = {
     "database": "bcwcat",
     "jurisdiction": "BC",
     "search_terms": ["chronic pain", "PTSD", "back injury", "disability"]
+  },
+  "bcest": {
+    "name": "Employment Standards Tribunal (BC)",
+    "database": "bcest",
+    "jurisdiction": "BC",
+    "search_terms": ["wages", "overtime", "termination", "employment standards", "compensation"]
+  },
+  "bclrb": {
+    "name": "Labour Relations Board (BC)",
+    "database": "bclrb",
+    "jurisdiction": "BC",
+    "search_terms": ["union", "collective agreement", "dismissal", "labour practice", "accommodation"]
   },
   "bcca": {
     "name": "British Columbia Court of Appeal",
@@ -463,7 +477,7 @@ function extractJudgeReasoning(text) {
   const sections = [];
   
   const reasoningPatterns = [
-    /(?:REASONS?|ANALYSIS|DISCUSSION):?\s+([\s\S]{500,3000}?)(?:\n\n|CONCLUSION|DECISION)/i,
+    /(?:REASONS?|ANALYSIS|DISCUSSION):?\s+([\s\S]{500,3000}?)(?:\n\n|CONCLUSION|DECISION)/gi,
     /(?:The (?:panel|tribunal|court|I))\s+(?:find|conclude|determine)s?\s+that\s+([\s\S]{200,1000}?)(?:\.|;|\n\n)/gi
   ];
   
@@ -948,8 +962,14 @@ async function scrapeTribunalBatched(tribunalId, config) {
     console.log(`  Searching: "${searchTerm}"`);
     let offset = 0;
     let hasMore = true;
+    let searchPages = 0;
     
     while (hasMore) {
+      if (searchPages >= MAX_SEARCH_PAGES) {
+        console.log(`    Reached search page cap (${MAX_SEARCH_PAGES}) for this term`);
+        break;
+      }
+
       try {
         const results = await searchCanLII(config.database, searchTerm, offset);
         
@@ -966,6 +986,7 @@ async function scrapeTribunalBatched(tribunalId, config) {
         
         console.log(`    Found ${results.results.length} cases (offset ${offset})`);
         offset += SEARCH_BATCH_SIZE;
+        searchPages += 1;
         
         await randomDelay();
         
@@ -981,11 +1002,14 @@ async function scrapeTribunalBatched(tribunalId, config) {
   }
   
   const totalCases = allCaseIds.size;
-  const newCases = Array.from(allCaseIds).filter(id => !completedSet.has(id));
+  const discoveredNewCases = Array.from(allCaseIds).filter(id => !completedSet.has(id));
+  const newCases = Number.isFinite(MAX_CASES)
+    ? discoveredNewCases.slice(0, MAX_CASES)
+    : discoveredNewCases;
   
   console.log(`\n✅ Discovery complete: ${totalCases} total cases`);
   console.log(`📋 Already completed: ${completedSet.size}`);
-  console.log(`🆕 New cases to scrape: ${newCases.length}\n`);
+  console.log(`🆕 New cases to scrape: ${newCases.length}${Number.isFinite(MAX_CASES) ? ` (capped from ${discoveredNewCases.length})` : ''}\n`);
   
   if (newCases.length === 0) {
     console.log('✅ All cases already scraped!\n');
@@ -1185,9 +1209,27 @@ async function main() {
       targetTribunals = tribunalsArg.split(',').map(t => t.trim());
     }
   }
+
+  if (args.includes('--max-search-pages')) {
+    const pageCapArg = args[args.indexOf('--max-search-pages') + 1];
+    const parsedCap = Number.parseInt(pageCapArg, 10);
+    if (Number.isFinite(parsedCap) && parsedCap > 0) {
+      MAX_SEARCH_PAGES = parsedCap;
+    }
+  }
+
+  if (args.includes('--max-cases')) {
+    const maxCasesArg = args[args.indexOf('--max-cases') + 1];
+    const parsedCases = Number.parseInt(maxCasesArg, 10);
+    if (Number.isFinite(parsedCases) && parsedCases > 0) {
+      MAX_CASES = parsedCases;
+    }
+  }
   
   console.log(`\n📋 Target Tribunals: ${targetTribunals.join(', ')}`);
-  console.log(`📊 Total: ${targetTribunals.length} tribunals\n`);
+  console.log(`📊 Total: ${targetTribunals.length} tribunals`);
+  console.log(`📄 Search page cap per term: ${Number.isFinite(MAX_SEARCH_PAGES) ? MAX_SEARCH_PAGES : 'none'}`);
+  console.log(`🧪 Max cases to extract: ${Number.isFinite(MAX_CASES) ? MAX_CASES : 'none'}\n`);
   
   const allDecisions = [];
   

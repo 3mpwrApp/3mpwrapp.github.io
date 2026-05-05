@@ -4,8 +4,8 @@
  * Posts Disability Bulletin promotions to social media
  * 
  * Publication: Disability Bulletin
- * Status: Issue 1 out of 2 - Issue 2 coming soon
- * Link: https://t.co/7vtI7QecTg
+ * Status: Issue 2 NOW AVAILABLE
+ * Link: https://linktr.ee/thedisabilitybulletin
  * 
  * Features:
  * - Rotates through prepared promotional posts
@@ -21,7 +21,7 @@ const path = require('path');
 const https = require('https');
 
 // Campaign details
-const BULLETIN_URL = 'https://t.co/7vtI7QecTg';
+const BULLETIN_URL = 'https://linktr.ee/thedisabilitybulletin';
 
 // State file to track which post was used last
 const STATE_FILE = path.join(__dirname, '../.github/state/disability-bulletin-state.json');
@@ -29,60 +29,60 @@ const STATE_FILE = path.join(__dirname, '../.github/state/disability-bulletin-st
 // Post templates
 const POSTS = [
   {
-    mastodon: `📰 Disability Bulletin - Issue 1 of 2 is OUT!
+    mastodon: `📰 Disability Bulletin - Issue 2 is OUT NOW!
 
 Important updates, resources, and advocacy news for the disability community.
 
-Issue 2 coming soon!
+Both issues now available!
 
-Read Issue 1: ${BULLETIN_URL}
+Read now: ${BULLETIN_URL}
 
 Stay informed. Stay connected. Stay empowered.
 
 #DisabilityRights #DisabilityBulletin #AccessToInformation`,
-    bluesky: `📰 Disability Bulletin Issue 1 is OUT!
+    bluesky: `📰 Disability Bulletin Issue 2 is OUT NOW!
 
 Updates, resources & advocacy news for the disability community.
 
-Issue 2 coming soon!
+Both issues available!
 
 Read: ${BULLETIN_URL}
 
 #DisabilityRights #DisabilityBulletin`,
-    discord: `**📰 Disability Bulletin - Issue 1 OUT NOW!**
+    discord: `**📰 Disability Bulletin - Issue 2 OUT NOW!**
 
 Important updates, resources, and advocacy news for the disability community.
 
-**Status**: Issue 1 of 2 published
-**Next**: Issue 2 coming soon!
+**Status**: Issue 2 now published!
+**Both issues**: Available to read
 
-🔗 Read Issue 1: ${BULLETIN_URL}
+🔗 Read now: ${BULLETIN_URL}
 
 Stay informed, connected, and empowered! 💪`
   },
   {
-    mastodon: `✨ NEW: Disability Bulletin Issue 1
+    mastodon: `✨ NEW: Disability Bulletin Issue 2
 
 Your source for disability rights news, policy updates, and community resources.
 
-📖 Issue 1: Now available
-📖 Issue 2: Coming soon
+📖 Issue 1: Available
+📖 Issue 2: NOW AVAILABLE
 
 Stay ahead of the issues that matter to YOU.
 
 Read now: ${BULLETIN_URL}
 
 #DisabilityAdvocacy #DisabilityCommunity #StayInformed`,
-    bluesky: `✨ Disability Bulletin Issue 1
+    bluesky: `✨ Disability Bulletin Issue 2 OUT NOW!
 
 Disability rights news, policy updates & resources.
 
-Issue 2 coming soon!
+Both issues available!
 
 Read: ${BULLETIN_URL}
 
 #DisabilityAdvocacy #StayInformed`,
-    discord: `**✨ NEW: Disability Bulletin Issue 1**
+    discord: `**✨ NEW: Disability Bulletin Issue 2**
 
 Your source for:
 • Disability rights news
@@ -90,38 +90,38 @@ Your source for:
 • Community resources
 • Advocacy tools
 
-**Issue 1**: Available now
-**Issue 2**: Coming soon
+**Issue 1**: Available
+**Issue 2**: NOW AVAILABLE
 
 🔗 ${BULLETIN_URL}`
   },
   {
     mastodon: `📬 Have you read the Disability Bulletin yet?
 
-Issue 1 of 2 is packed with:
+Issue 2 is OUT NOW and packed with:
 ✅ Disability rights updates
 ✅ Policy changes you need to know
 ✅ Community resources
 ✅ Advocacy opportunities
 
-Issue 2 on the way!
+Both issues available!
 
-Read Issue 1: ${BULLETIN_URL}
+Read now: ${BULLETIN_URL}
 
 #Disability #DisabilityBulletin #CommunityResources`,
-    bluesky: `📬 Disability Bulletin Issue 1
+    bluesky: `📬 Disability Bulletin Issue 2 OUT NOW!
 
 ✅ Rights updates
 ✅ Policy changes
 ✅ Resources
 ✅ Advocacy opportunities
 
-Issue 2 coming soon!
+Both issues available!
 
 ${BULLETIN_URL}
 
 #Disability #DisabilityBulletin`,
-    discord: `**📬 Disability Bulletin Issue 1**
+    discord: `**📬 Disability Bulletin Issue 2 OUT NOW!**
 
 Packed with:
 ✅ Rights updates
@@ -129,14 +129,14 @@ Packed with:
 ✅ Community resources
 ✅ Advocacy opportunities
 
-Issue 2 coming soon!
+Both issues available!
 
 🔗 ${BULLETIN_URL}`
   },
   {
     mastodon: `🔔 Don't miss the Disability Bulletin!
 
-Issue 1: Essential reading for disability community members, advocates, and allies.
+Issue 2: Essential reading for disability community members, advocates, and allies.
 
 Covers the latest in:
 • Legislation & policy
@@ -144,23 +144,23 @@ Covers the latest in:
 • Resources & support
 • Advocacy wins
 
-Issue 2 coming soon!
+Both issues available!
 
 ${BULLETIN_URL}
 
 #DisabilityRights #Advocacy #CommunitySupport`,
-    bluesky: `🔔 Don't miss Disability Bulletin Issue 1!
+    bluesky: `🔔 Don't miss Disability Bulletin Issue 2!
 
 Latest in legislation, policy, resources & advocacy wins.
 
-Issue 2 coming soon!
+Both issues available!
 
 ${BULLETIN_URL}
 
 #DisabilityRights #Advocacy`,
     discord: `**🔔 Don't Miss the Disability Bulletin!**
 
-**Issue 1** - Essential reading for disability community members, advocates & allies.
+**Issue 2** - Essential reading for disability community members, advocates & allies.
 
 **Covers:**
 • Legislation & policy
@@ -175,10 +175,10 @@ ${BULLETIN_URL}
 
 The Disability Bulletin keeps you informed about the issues impacting the disability community.
 
-Issue 1 of 2: Available now
-Issue 2: Publishing soon
+Issue 1: Available
+Issue 2: OUT NOW
 
-Stay in the loop. Read Issue 1:
+Stay in the loop. Read now:
 ${BULLETIN_URL}
 
 Share with your network!
@@ -188,8 +188,8 @@ Share with your network!
 
 Disability Bulletin keeps you informed.
 
-Issue 1: Available now
-Issue 2: Coming soon
+Issue 1: Available
+Issue 2: OUT NOW
 
 ${BULLETIN_URL}
 
@@ -200,39 +200,39 @@ Share with your network!
 
 The Disability Bulletin keeps you informed about issues impacting the disability community.
 
-**Issue 1**: Available now
-**Issue 2**: Publishing soon
+**Issue 1**: Available
+**Issue 2**: OUT NOW
 
 Stay in the loop!
 
 🔗 ${BULLETIN_URL}`
   },
   {
-    mastodon: `📊 Disability Bulletin - Issue 1 of 2
+    mastodon: `📊 Disability Bulletin - Issue 2 OUT NOW
 
 Data-driven insights, policy analysis, and community updates for the disability rights movement.
 
-What's inside Issue 1:
+What's inside Issue 2:
 • Recent policy changes
 • Advocacy campaigns
 • Resource guides
 • Community spotlights
 
-Issue 2 in development!
+Both issues available!
 
 ${BULLETIN_URL}
 
 #DisabilityData #PolicyAnalysis #DisabilityBulletin`,
-    bluesky: `📊 Disability Bulletin Issue 1
+    bluesky: `📊 Disability Bulletin Issue 2 OUT NOW
 
 Data-driven insights, policy analysis & community updates.
 
-Issue 2 coming soon!
+Both issues available!
 
 ${BULLETIN_URL}
 
 #DisabilityData #PolicyAnalysis`,
-    discord: `**📊 Disability Bulletin - Issue 1**
+    discord: `**📊 Disability Bulletin - Issue 2 OUT NOW**
 
 Data-driven insights for the disability rights movement.
 
@@ -242,7 +242,7 @@ Data-driven insights for the disability rights movement.
 • Resource guides
 • Community spotlights
 
-Issue 2 in development!
+Both issues available!
 
 🔗 ${BULLETIN_URL}`
   }
