@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-04T14:22:06.910Z",
+  "lastUpdated": "2026-05-05T03:37:18.072Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16574,
+      "totalPosts": 16599,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T14:21:57.722Z"
+      "lastSeen": "2026-05-05T03:37:08.883Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16561,
+      "totalPosts": 16586,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T14:21:59.700Z"
+      "lastSeen": "2026-05-05T03:37:10.914Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16446,
+      "totalPosts": 16471,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T14:22:01.649Z"
+      "lastSeen": "2026-05-05T03:37:13.036Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16637,
+      "totalPosts": 16662,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T14:22:03.702Z"
+      "lastSeen": "2026-05-05T03:37:15.093Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16598,
+      "totalPosts": 16623,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-04T14:22:05.907Z"
+      "lastSeen": "2026-05-05T03:37:17.069Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Zeit für eine #Biene auf einer #Bergflockenblume zur #WildflowerHour!\n\nDie Initiative:\nwww.bienen-initiative.ch\n\nDer genaue Initiativtext:\nwww.bienen-initiative.ch/initiative \n\n#bienen #wildbienen #bees #artenschutz #artenvielfalt #biodiversität #naturschutz\n\n#AltText #Accessibility",
-      "author": "vfd.ch",
-      "engagement": 65,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "From @criprights.bsky.social \n\n#NDIS     #DisabilityRights",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 28,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Please share widely!\n\n#NDIS \n#AusPol\n#SaveOurNDIS \n#DisabilityRights",
-      "author": "caitlinsheahan.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
-      "author": "uua.org",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I'm so tired.\n\n#a11y #Accessibility",
-      "author": "vale.rocks",
-      "engagement": 25,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Sometimes alt text it's helpful for describing things in images that the rest of us are just not familiar with (due to cultural differences or whatnot). \n\nI have read the alt text of images countless times and it was the alt text that has helped me understand the purpose of the image. ☺️\n\n#a11y FTW",
-      "author": "sarasoueidan.com",
-      "engagement": 24,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I'm so tired.\n\n#a11y #Accessibility",
-      "author": "vale.rocks",
-      "engagement": 25,
-      "hashtag": "A11y"
-    },
     {
       "text": "The Trump Administration Aims to Penalize Disabled Adults Who Live With Their Families www.propublica.org/article/trum... \n\n#DOGE #OMB #SSA #SocialSecurity #DisabilityRights #HumanRights",
       "author": "wolverinebear.bsky.social",
@@ -338,6 +296,48 @@
       "author": "aardrian.bsky.social",
       "engagement": 11,
       "hashtag": "A11y"
+    },
+    {
+      "text": "You’ve been told disabled people are the problem. You weren’t told who paid to put that idea in your head. \n\n#NDIS #NDISAustralia #DisabilityRights #MSWarrior #AusPol #VoteGREENS #Albo #Albanese",
+      "author": "twitter-exile.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "DEIA is making skateboarding accessible to ALL kids who want to share! #pinks #disabilityrights #DEI",
+      "author": "aliceknew.bsky.social",
+      "engagement": 18,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Cruelty can be the only logical reason behind cutting aids to adults with severe autism. #pinks #resist #disabilityrights  #autism #eugenics #medicaidcuts #socialsecurityCUTS",
+      "author": "aliceknew.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
+      "author": "uua.org",
+      "engagement": 38,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I'm working on a blog post series about mobile #accessibility for May. 1st article: 4 iOS display settings to check your app with\n\nracheleditullio.com/blog/2026/05...",
+      "author": "racheled.bsky.social",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Sharing \"Star Wars\" images on this \"May The Fourth\"? Don't forget alt text! Alt text is crucial for people who are blind, who have low vision, and others who use screen readers.\n\n#MayTheFourth #MayTheFourthBeWithYou #MayThe4thBeWithYou #MayThe4th #StarWarsDay #StarWars #a11y",
+      "author": "a11yawareness.bsky.social",
+      "engagement": 43,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Hey literally every dev, did you know you can make #OpenGraph #OG images accessible with ?\n\n<meta property=\"og:image:alt\" content=\"A short descriptive phrase\" />\n\nstandards.scangov.org/ogimagealt/\n\n#A11y #Accessibility #ATproto",
+      "author": "renderg.host",
+      "engagement": 22,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
@@ -347,27 +347,27 @@
     },
     {
       "keyword": "accessibility",
-      "count": 44
-    },
-    {
-      "keyword": "a11y",
-      "count": 27
-    },
-    {
-      "keyword": "cripthevote",
-      "count": 26
+      "count": 39
     },
     {
       "keyword": "disabilityjustice",
       "count": 26
     },
     {
+      "keyword": "a11y",
+      "count": 26
+    },
+    {
+      "keyword": "cripthevote",
+      "count": 25
+    },
+    {
       "keyword": "altcitizen",
-      "count": 22
+      "count": 21
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 21
+      "count": 20
     },
     {
       "keyword": "virtual",
@@ -386,31 +386,15 @@
       "count": 11
     },
     {
-      "keyword": "disabilityrebellion",
+      "keyword": "disability",
       "count": 10
+    },
+    {
+      "keyword": "disabilityrebellion",
+      "count": 9
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 10
-    },
-    {
-      "keyword": "disabilitysky",
-      "count": 9
-    },
-    {
-      "keyword": "cripminds",
-      "count": 9
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 9
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 9
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
       "count": 9
     },
     {
@@ -418,8 +402,24 @@
       "count": 9
     },
     {
-      "keyword": "ux",
-      "count": 8
+      "keyword": "disabled people",
+      "count": 7
+    },
+    {
+      "keyword": "ndis",
+      "count": 6
+    },
+    {
+      "keyword": "disabilitysky",
+      "count": 6
+    },
+    {
+      "keyword": "cripminds",
+      "count": 6
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 6
     }
   ]
 }
