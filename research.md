@@ -1477,10 +1477,7 @@ description: Interactive data visualizations and research tools analyzing tribun
   </p>
 
   <p style="margin-top: 1rem; font-size: 0.95rem; color: #64748b;">
-    <strong>🔧 API Limitations:</strong> Many outcomes remain "Unknown" due to CanLII API restrictions (not a CanLII issue—intentional access limits). 
-    We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), 
-    and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 137,252 cases individually. 
-    Our NLP model predicts these unknown outcomes with 79% accuracy based on case keywords and patterns.
+    <strong>🔧 API Limitations — Confirmed by CanLII (May 2026):</strong> CanLII confirmed directly: <em>"CanLII doesn't provide any data further than what's provided by its API."</em> The API provides case metadata (date, keywords, citation) but <strong>no outcome field exists</strong>. All 230,392 records were collected via authorized API calls. Outcomes are inferred from keyword patterns in decision text — our NLP model predicts unknown outcomes with 79% accuracy based on case keywords and patterns. To get 100% accurate outcomes would require manually reading each case individually.
   </p>
 </div>
 

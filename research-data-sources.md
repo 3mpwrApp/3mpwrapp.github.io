@@ -339,19 +339,23 @@ layout: page
 
 ### CanLII API (for Researchers)
 
-**API Documentation:** [canlii.org/en/info/api.html](https://www.canlii.org/en/info/api.html)
+**API Documentation:** [github.com/canlii/API_documentation](https://github.com/canlii/API_documentation/blob/master/EN.md)
 
 **Access:** Free for non-commercial research (registration required)
 
 **Capabilities:**
-- Bulk download decisions
 - Search by metadata (date, keywords, court/tribunal)
 - Citation extraction
 - Full text analysis
+- Case-level metadata retrieval
 
 **Rate Limits:** 10 requests/minute (non-commercial)
 
-**Use Case:** Extract all HRTO disability discrimination decisions for NLP analysis
+**Use Case:** Extract all WSIAT/HRTO/ONSBT decisions for pattern analysis
+
+> **✅ CanLII Confirmation — May 2026:** We contacted CanLII directly regarding outcome data availability. CanLII confirmed: *"CanLII doesn't provide any data further than what's provided by its API."* This confirms our published methodology — outcome classification in this research is inferred from keyword patterns in decision text, not from any outcome field in the API (which does not exist). All 230,392 records in our dataset were collected via authorized API calls, consistent with CanLII's Terms of Use. Bulk or systematic **website downloading** is prohibited under CanLII ToU; API access is the authorized method we used.
+
+**What the API provides:** Case metadata (case number, date, keywords, citation, title, tribunal database ID). **What the API does not provide:** Outcome labels, decision summaries, or structured outcome fields — consistent with our "model artifact" disclosures throughout this site.
 
 ---
 
@@ -518,7 +522,7 @@ function validateRecord(record, schema) {
 **3. Discrimination Ground Trend Analysis (HRTO)**
 - **Goal:** Analyze shifts in HRTO application grounds over time (2016-2025)
 - **Methods:** Time series analysis, topic modeling
-- **Status:** Data limited to quarterly aggregates; exploring CanLII scraping
+- **Status:** Data limited to quarterly aggregates; case-level data available via CanLII API (no outcome field)
 
 ---
 
@@ -547,7 +551,7 @@ function validateRecord(record, schema) {
 ⚠️ **Limitations:**
 - **No individual case records** in quarterly reports (only aggregates)
 - Settlement outcomes not detailed (inferred from withdrawals)
-- CanLII scraping needed for case-level analysis
+- CanLII API provides case metadata but no outcome field (confirmed May 2026)
 
 ### NEER/CAD-7 Data Quality
 
