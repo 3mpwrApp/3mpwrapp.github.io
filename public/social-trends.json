@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-05T14:15:43.032Z",
+  "lastUpdated": "2026-05-06T03:53:28.186Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16624,
-      "recentPosts": 25,
+      "totalPosts": 16648,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-05-05T14:15:31.824Z"
+      "lastSeen": "2026-05-06T03:53:20.380Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16611,
+      "totalPosts": 16636,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-05T14:15:34.385Z"
+      "lastSeen": "2026-05-06T03:53:22.023Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16496,
+      "totalPosts": 16521,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-05T14:15:37.073Z"
+      "lastSeen": "2026-05-06T03:53:23.780Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16687,
+      "totalPosts": 16712,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-05T14:15:39.915Z"
+      "lastSeen": "2026-05-06T03:53:25.426Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16648,
+      "totalPosts": 16673,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-05T14:15:42.029Z"
+      "lastSeen": "2026-05-06T03:53:27.183Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "From @criprights.bsky.social \n\n#NDIS     #DisabilityRights",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 29,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Please share widely!\n\n#NDIS \n#AusPol\n#SaveOurNDIS \n#DisabilityRights",
-      "author": "caitlinsheahan.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
-      "author": "uua.org",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "[1/5]\n\nI heard about AccessibilityFirewall.com, promising “No code changes. No overlay. No JavaScript.” It uses “edge” in the same way the Overlay Community Group does.\n\nRed flag emoji.\n\nSo I ran it through its own “Live Remediation Engine”:\nwebcraft.inc#audit-section\n\nHmmm…\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "[1/5]\n\nI heard about AccessibilityFirewall.com, promising “No code changes. No overlay. No JavaScript.” It uses “edge” in the same way the Overlay Community Group does.\n\nRed flag emoji.\n\nSo I ran it through its own “Live Remediation Engine”:\nwebcraft.inc#audit-section\n\nHmmm…\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Sometimes alt text it's helpful for describing things in images that the rest of us are just not familiar with (due to cultural differences or whatnot). \n\nI have read the alt text of images countless times and it was the alt text that has helped me understand the purpose of the image. ☺️\n\n#a11y FTW",
-      "author": "sarasoueidan.com",
-      "engagement": 33,
-      "hashtag": "A11y"
-    },
     {
       "text": "Hey #accessibility #a11y #inclusiveDesign folks: you still have until the end of this month (31 May 2026) to propose a presentations for this year's #id24 in September inclusivedesign24.org/2026/\n\nReminder: as it's a global event, we'd also be delighted to have talks in languages other than English.",
       "author": "inclusivedesign24.bsky.social",
@@ -338,24 +302,60 @@
       "author": "renderg.host",
       "engagement": 24,
       "hashtag": "A11y"
+    },
+    {
+      "text": "#MTPol #Montana #DisabilityRights #Section504",
+      "author": "gailwaldby.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "You’ve been told disabled people are the problem. You weren’t told who paid to put that idea in your head. \n\n#NDIS #NDISAustralia #DisabilityRights #MSWarrior #AusPol #VoteGREENS #Albo #Albanese",
+      "author": "twitter-exile.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "I was our district lead for MTSS muttered systems of support for student. I studied behavior supports for the last 10 years of my career. So much damage is done to kids needing best practice in behavior supports. #pinks #SPED #disabilityrights #autismspectrum #IDEA",
+      "author": "aliceknew.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
+      "author": "uua.org",
+      "engagement": 38,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Really good read!\n\n“The text mode lie: why modern TUIs are a nightmare for accessibility” by Casey Reeves \n\nxogium.me/the-text-mod...\n\n#tui #a11y",
+      "author": "pawelgrzybek.com",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Josh Turek in the Iowa State Senate Democratic Primary debate said the first bill he'd introduce in the Senate would be to push a bill that would end subminimum wage for disabled people. #CripTheVote",
+      "author": "juliametraux.bsky.social",
+      "engagement": 107,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 45
+      "count": 44
     },
     {
       "keyword": "accessibility",
-      "count": 39
+      "count": 37
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "a11y",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "cripthevote",
@@ -363,11 +363,11 @@
     },
     {
       "keyword": "altcitizen",
-      "count": 21
+      "count": 20
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 20
+      "count": 19
     },
     {
       "keyword": "virtual",
@@ -398,28 +398,28 @@
       "count": 9
     },
     {
-      "keyword": "disabilitysky",
+      "keyword": "disabled people",
       "count": 8
+    },
+    {
+      "keyword": "disabilitysky",
+      "count": 7
     },
     {
       "keyword": "cripminds",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "accessibility disabilitysky",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "disabilitysky cripminds",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "cripminds disabilityjustice",
-      "count": 8
-    },
-    {
-      "keyword": "digitalaccessibility",
-      "count": 8
+      "count": 7
     }
   ]
 }
