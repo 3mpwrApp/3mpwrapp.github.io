@@ -1,0 +1,14 @@
+﻿npm : npm ERR! Missing script: "test:ci"
+At line:1 char:1
++ npm run test:ci 2>&1 | Out-File "test-ci-results.txt" -Encoding utf8
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm ERR! Missing script: "test:ci 
+   ":String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+npm ERR! 
+npm ERR! To see a list of scripts, run:
+npm ERR!   npm run
+
+npm ERR! A complete log of this run can be found in: C:\Users\bookw\AppData\Loc
+al\npm-cache\_logs\2026-05-05T22_57_53_782Z-debug-0.log

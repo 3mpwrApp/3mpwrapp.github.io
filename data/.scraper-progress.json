@@ -1,6 +1,119 @@
 {
   "bcest": {
-    "completed": [],
+    "completed": [
+      "2026bcest14",
+      "2026bcest13",
+      "2026bcest12",
+      "2026bcest11",
+      "2026bcest9",
+      "2026bcest10",
+      "2026bcest8",
+      "2026bcest7",
+      "2026bcest6",
+      "2026bcest5",
+      "2026bcest4",
+      "2026bcest3",
+      "2026bcest2",
+      "2026bcest1",
+      "2025bcest155",
+      "2025bcest154",
+      "2025bcest153",
+      "2025bcest152",
+      "2025bcest151",
+      "2025bcest150",
+      "2025bcest149",
+      "2025bcest148",
+      "2025bcest147",
+      "2025bcest146",
+      "2025bcest145",
+      "2025bcest144",
+      "2025bcest143",
+      "2025bcest142",
+      "2025bcest141",
+      "2025bcest140",
+      "2025bcest139",
+      "2025bcest138",
+      "2025bcest137",
+      "2025bcest136",
+      "2025bcest135",
+      "2025bcest134",
+      "2025bcest133",
+      "2025bcest132",
+      "2025bcest131",
+      "2025bcest130",
+      "2025bcest129",
+      "2025bcest128",
+      "2025bcest127",
+      "2025bcest126",
+      "2025bcest125",
+      "2025bcest124",
+      "2025bcest123",
+      "2025bcest122",
+      "2025bcest121",
+      "2025bcest120",
+      "2025bcest119",
+      "2025bcest118",
+      "2025bcest117",
+      "2025bcest116",
+      "2025bcest115",
+      "2025bcest114",
+      "2025bcest113",
+      "2025bcest112",
+      "2025bcest111",
+      "2025bcest110",
+      "2025bcest109",
+      "2025bcest108",
+      "2025bcest107",
+      "2025bcest106",
+      "2025bcest105",
+      "2025bcest104",
+      "2025bcest103",
+      "2025bcest102",
+      "2025bcest101",
+      "2025bcest99",
+      "2025bcest100",
+      "2025bcest98",
+      "2025bcest97",
+      "2025bcest96",
+      "2025bcest95",
+      "2025bcest94",
+      "2025bcest93",
+      "2025bcest92",
+      "2025bcest91",
+      "2025bcest90",
+      "2025bcest89",
+      "2025bcest88",
+      "2025bcest87",
+      "2025bcest86",
+      "2025bcest85",
+      "2025bcest84",
+      "2025bcest83",
+      "2025bcest82",
+      "2025bcest81",
+      "2025bcest80",
+      "2025bcest79",
+      "2025bcest78",
+      "2025bcest77",
+      "2025bcest76",
+      "2025bcest75",
+      "2025bcest74",
+      "2025bcest73",
+      "2025bcest72",
+      "2025bcest71",
+      "2025bcest70",
+      "2025bcest69",
+      "2025bcest68",
+      "2025bcest67",
+      "2025bcest66",
+      "2025bcest65",
+      "2025bcest64",
+      "2025bcest63",
+      "2025bcest62",
+      "2025bcest61",
+      "2025bcest60",
+      "2025bcest59",
+      "2025bcest58"
+    ],
     "failed": [
       {
         "caseId": "2026bcest32",
@@ -73,11 +186,83 @@
       {
         "caseId": "2026bcest15",
         "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      },
+      {
+        "caseId": "2026bcest32",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest31",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest30",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest29",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest28",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest27",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest26",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest25",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest24",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest23",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest22",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest21",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest20",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest19",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest18",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest17",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest16",
+        "reason": "No HTML content"
+      },
+      {
+        "caseId": "2026bcest15",
+        "reason": "No HTML content"
       }
     ],
     "lastBatch": 0,
-    "lastUpdate": "2026-05-05T06:16:24.764Z",
-    "completedCount": 0,
-    "failedCount": 18
+    "lastUpdate": "2026-05-06T04:43:44.489Z",
+    "completedCount": 112,
+    "failedCount": 36
   }
 }
