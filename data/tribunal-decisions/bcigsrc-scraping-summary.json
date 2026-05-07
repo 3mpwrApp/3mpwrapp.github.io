@@ -1,0 +1,59 @@
+{
+  "database": "bcigsrc",
+  "jurisdiction": "British Columbia",
+  "years": [
+    {
+      "year": 2020,
+      "totalCases": 0,
+      "outcomes": {},
+      "topOutcomes": []
+    },
+    {
+      "year": 2021,
+      "totalCases": 0,
+      "outcomes": {},
+      "topOutcomes": []
+    },
+    {
+      "year": 2022,
+      "totalCases": 0,
+      "outcomes": {},
+      "topOutcomes": []
+    },
+    {
+      "year": 2023,
+      "totalCases": 0,
+      "outcomes": {},
+      "topOutcomes": []
+    },
+    {
+      "year": 2024,
+      "totalCases": 0,
+      "outcomes": {},
+      "topOutcomes": []
+    },
+    {
+      "year": 2025,
+      "totalCases": 0,
+      "outcomes": {},
+      "topOutcomes": []
+    },
+    {
+      "year": 2026,
+      "totalCases": 0,
+      "outcomes": {},
+      "topOutcomes": []
+    }
+  ],
+  "totalCases": 0,
+  "scrapedAt": "2026-05-07T05:35:01.047Z",
+  "files": [
+    "bcigsrc-2020-complete.json",
+    "bcigsrc-2021-complete.json",
+    "bcigsrc-2022-complete.json",
+    "bcigsrc-2023-complete.json",
+    "bcigsrc-2024-complete.json",
+    "bcigsrc-2025-complete.json",
+    "bcigsrc-2026-complete.json"
+  ]
+}
