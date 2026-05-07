@@ -4,7 +4,7 @@
  * Posts for Injured Workers Day 2026 rallies
  * 
  * Theme: Stop the Cuts to Workers Comp - Justice for Injured Workers
- * Events: Thunder Bay (May 29), Toronto Queens Park (June 1), Hamilton (June 1)
+ * Events: Thunder Bay (May 29), Toronto Queens Park (June 1), Hamilton (June 1), London (June 1)
  * Posts 3x per week through June 1
  */
 
@@ -33,6 +33,7 @@ Stop the Cuts to Workers Comp!
 📅 May 29: Thunder Bay City Hall, 10 AM
 📅 June 1: Toronto Queens Park, 11 AM
 📅 June 1: Hamilton City Hall, 11 AM
+📅 June 1: London Victoria Park (NW), 1 PM
 
 Injured workers across Ontario are standing up against benefit cuts and demanding JUSTICE.
 
@@ -49,6 +50,7 @@ Injured Workers Day rallies happening across Ontario:
 🔥 Thunder Bay - May 29, 10 AM (City Hall)
 🔥 Toronto - June 1, 11 AM (Queens Park)
 🔥 Hamilton - June 1, 11 AM (City Hall)
+🔥 London - June 1, 1 PM (Victoria Park NW)
 
 We demand an end to cuts to workers compensation. Stand with injured workers!
 
@@ -65,6 +67,7 @@ After decades of cuts, injured workers are fighting back.
 Join rallies at:
 📍 Toronto Queens Park - 11 AM
 📍 Hamilton City Hall - 11 AM
+📍 London Victoria Park NW - 1 PM
 📍 Thunder Bay City Hall - May 29, 10 AM
 
 Stop the Cuts to Workers Comp!
@@ -84,6 +87,7 @@ TIME TO FIGHT BACK:
 • Thunder Bay: May 29, 10 AM (City Hall)
 • Toronto: June 1, 11 AM (Queens Park)
 • Hamilton: June 1, 11 AM (City Hall)
+• London: June 1, 1 PM (Victoria Park NW)
 
 Join the movement for justice!
 
@@ -95,11 +99,12 @@ Info: thunderbayinjuredworkers.com
     variant: 5,
     text: `✊ Injured Workers Day - Mark Your Calendar!
 
-Three powerful rallies demanding justice:
+Four powerful rallies demanding justice:
 
 May 29 @ 10 AM: Thunder Bay City Hall
 June 1 @ 11 AM: Toronto Queens Park
 June 1 @ 11 AM: Hamilton City Hall
+June 1 @ 1 PM: London Victoria Park NW
 
 Stop the Cuts to Workers Comp!
 
@@ -118,6 +123,7 @@ Across Ontario, injured workers are rallying against benefit cuts:
 🗓️ Thunder Bay: May 29, 10 AM
 🗓️ Toronto: June 1, 11 AM
 🗓️ Hamilton: June 1, 11 AM
+🗓️ London: June 1, 1 PM
 
 We demand justice, not cuts!
 
@@ -136,6 +142,7 @@ Injured Workers Day rallies - Stop the Cuts to Workers Comp
 📌 Thunder Bay City Hall - May 29, 10 AM
 📌 Queens Park, Toronto - June 1, 11 AM
 📌 Hamilton City Hall - June 1, 11 AM
+📌 Victoria Park NW, London - June 1, 1 PM
 
 Every voice matters. Every worker matters.
 
@@ -155,6 +162,7 @@ Injured Workers Day 2026:
 • May 29: Thunder Bay (10 AM, City Hall)
 • June 1: Toronto (11 AM, Queens Park)
 • June 1: Hamilton (11 AM, City Hall)
+• June 1: London (1 PM, Victoria Park NW)
 
 Stand with us. Stop the cuts.
 
