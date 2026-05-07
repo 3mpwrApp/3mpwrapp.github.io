@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated": "2026-05-06T04:23:10.156Z",
+  "generated": "2026-05-07T04:23:26.316Z",
   "insights": {
-    "timestamp": "2026-05-06T04:23:10.125Z",
+    "timestamp": "2026-05-07T04:23:26.285Z",
     "performance": {},
     "recommendations": [
       {
         "type": "content-strategy",
         "priority": "high",
         "title": "Create Content on Trending Topics",
-        "description": "Write blog posts about: disabilityrights, accessibility, disabilityjustice",
+        "description": "Write blog posts about: disabilityrights, accessibility, a11y",
         "expectedImpact": "High visibility and engagement",
         "action": "Generate blog posts using agent-blog-production.js with these topics"
       }
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-05-06T04:23:10.131Z",
+      "lastUpdated": "2026-05-07T04:23:26.292Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -29,7 +29,7 @@
           "hashtags": [
             "disabilityrights",
             "accessibility",
-            "disabilityjustice"
+            "a11y"
           ],
           "expectedImpact": "Increased reach"
         }
@@ -39,22 +39,22 @@
       "currentTrending": [
         {
           "tag": "disabilityrights",
-          "mentions": 44,
+          "mentions": 43,
           "source": "emerging"
         },
         {
           "tag": "accessibility",
-          "mentions": 37,
-          "source": "emerging"
-        },
-        {
-          "tag": "disabilityjustice",
-          "mentions": 25,
+          "mentions": 43,
           "source": "emerging"
         },
         {
           "tag": "a11y",
-          "mentions": 25,
+          "mentions": 28,
+          "source": "emerging"
+        },
+        {
+          "tag": "disabilityjustice",
+          "mentions": 26,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-05-06T04:23:10.134Z",
+      "lastUpdated": "2026-05-07T04:23:26.296Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-05-06T04:23:10.131Z",
+    "lastUpdated": "2026-05-07T04:23:26.292Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -92,7 +92,7 @@
         "hashtags": [
           "disabilityrights",
           "accessibility",
-          "disabilityjustice"
+          "a11y"
         ],
         "expectedImpact": "Increased reach"
       }
@@ -102,22 +102,22 @@
     "currentTrending": [
       {
         "tag": "disabilityrights",
-        "mentions": 44,
+        "mentions": 43,
         "source": "emerging"
       },
       {
         "tag": "accessibility",
-        "mentions": 37,
-        "source": "emerging"
-      },
-      {
-        "tag": "disabilityjustice",
-        "mentions": 25,
+        "mentions": 43,
         "source": "emerging"
       },
       {
         "tag": "a11y",
-        "mentions": 25,
+        "mentions": 28,
+        "source": "emerging"
+      },
+      {
+        "tag": "disabilityjustice",
+        "mentions": 26,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-05-06T04:23:10.134Z",
+    "lastUpdated": "2026-05-07T04:23:26.296Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
