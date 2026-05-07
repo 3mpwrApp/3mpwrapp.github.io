@@ -41,7 +41,8 @@
     "Simple Mode: Designing for the Worst Day",
     "From 0 to 721 Tests: Our TDD Story",
     "Building Indigenous Language Support: What We Learned",
-    "The Ethics of Building for Vulnerable Communities"
+    "The Ethics of Building for Vulnerable Communities",
+    "Why 3mpwrApp Will Always Be Free"
   ],
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built",
@@ -52,6 +53,6 @@
     "Building in Public: Why Transparency Is Non-Negotiable for Us",
     "Collective Advocacy: Why Individual Coping Is Not Enough"
   ],
-  "rotationIndex": 3,
+  "rotationIndex": 4,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
