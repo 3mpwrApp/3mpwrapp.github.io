@@ -1,0 +1,105 @@
+{
+  "database": "bcest",
+  "jurisdiction": "British Columbia",
+  "years": [
+    {
+      "year": 2020,
+      "totalCases": 149,
+      "outcomes": {
+        "Unknown": 129,
+        "Reconsideration": 20
+      },
+      "topOutcomes": [
+        "Unknown: 129",
+        "Reconsideration: 20"
+      ]
+    },
+    {
+      "year": 2021,
+      "totalCases": 106,
+      "outcomes": {
+        "Unknown": 90,
+        "Reconsideration": 14,
+        "Settled/Withdrawn": 2
+      },
+      "topOutcomes": [
+        "Unknown: 90",
+        "Reconsideration: 14",
+        "Settled/Withdrawn: 2"
+      ]
+    },
+    {
+      "year": 2022,
+      "totalCases": 78,
+      "outcomes": {
+        "Unknown": 66,
+        "Reconsideration": 12
+      },
+      "topOutcomes": [
+        "Unknown: 66",
+        "Reconsideration: 12"
+      ]
+    },
+    {
+      "year": 2023,
+      "totalCases": 116,
+      "outcomes": {
+        "Unknown": 107,
+        "Reconsideration": 9
+      },
+      "topOutcomes": [
+        "Unknown: 107",
+        "Reconsideration: 9"
+      ]
+    },
+    {
+      "year": 2024,
+      "totalCases": 119,
+      "outcomes": {
+        "Reconsideration": 12,
+        "Unknown": 107
+      },
+      "topOutcomes": [
+        "Unknown: 107",
+        "Reconsideration: 12"
+      ]
+    },
+    {
+      "year": 2025,
+      "totalCases": 65,
+      "outcomes": {
+        "Unknown": 57,
+        "Reconsideration": 7,
+        "Costs Decision": 1
+      },
+      "topOutcomes": [
+        "Unknown: 57",
+        "Reconsideration: 7",
+        "Costs Decision: 1"
+      ]
+    },
+    {
+      "year": 2026,
+      "totalCases": 32,
+      "outcomes": {
+        "Unknown": 29,
+        "Reconsideration": 3
+      },
+      "topOutcomes": [
+        "Unknown: 29",
+        "Reconsideration: 3"
+      ]
+    }
+  ],
+  "totalCases": 665,
+  "scrapedAt": "2026-05-07T04:13:18.838Z",
+  "files": [
+    "bcest-2020-complete.json",
+    "bcest-2021-complete.json",
+    "bcest-2022-complete.json",
+    "bcest-2023-complete.json",
+    "bcest-2024-complete.json",
+    "bcest-2025-complete.json",
+    "bcest-2026-complete.json"
+  ]
+}
