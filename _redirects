@@ -1,3 +1,8 @@
+# Redirect old domains to new primary domain (301 permanent redirects)
+https://3mpwrapp.pages.dev/* https://3mpwrapp.ca/:splat 301!
+https://3mpwrapp.github.io/* https://3mpwrapp.ca/:splat 301!
+https://www.3mpwrapp.ca/* https://3mpwrapp.ca/:splat 301!
+
 # Exclude auth callbacks from SPA redirect
 /gdrive-callback /gdrive-callback/index.html 200
 /gdrive-callback.html /gdrive-callback/index.html 200
