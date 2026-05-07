@@ -15,7 +15,6 @@
 const fs = require('fs');
 const path = require('path');
 const siteConfig = require('./site-config');
-const viralHooks = require('./viral-hooks-config');
 
 class DailyFeatureGenerator {
   constructor() {
@@ -2402,6 +2401,10 @@ class DailyFeatureGenerator {
 
   toPlainAscii(text) {
     return String(text || '')
+      .replace(/â€”|â€“/g, '-')
+      .replace(/â€™/g, "'")
+      .replace(/â€œ|â€\x9d|â€"/g, '"')
+      .replace(/â€¦/g, '...')
       .replace(/\u2014|\u2013/g, '-')
       .replace(/\u2192/g, '->')
       .replace(/\u2022/g, '-')
@@ -2678,51 +2681,20 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     const BLOG_URL = `${siteConfig.url}/blog`;
     const fullUrl = `${siteConfig.url}${articleUrl}`;
 
-    // Get viral hook â€” fall back gracefully if category not in hooks library
-    let hookData;
-    try {
-      hookData = viralHooks.getRandomHook(contentItem.category);
-    } catch {
-      hookData = { hook: 'A practical update for disability rights:', cta: 'Read more' };
-    }
-    const monthlyTheme = viralHooks.getMonthlyTheme();
-
-    const ctaOptions = viralHooks.CTA_LIBRARY.feature_spotlight;
-    const randomCta = ctaOptions[Math.floor(Math.random() * ctaOptions.length)]
-      .replace('{link}', fullUrl);
-
     const typeLabel = { feature: 'Feature Spotlight', tutorial: 'Tutorial', devDiary: 'Dev Diary', lore: 'From Our Team', devUpdate: 'Dev Update' }[contentType] || 'Feature Spotlight';
 
-    const hook = this.toPlainAscii(hookData.hook || 'A practical update for disability rights:');
-    const desc = this.toPlainAscii(contentItem.description || '');
-    const highlights = (contentItem.highlights || []).map(h => this.toPlainAscii(h));
-    const name = this.toPlainAscii(contentItem.name || '3mpwrApp update');
-    const cta = this.toPlainAscii(hookData.cta || 'Read more');
+    const cleanSocialLine = (input) => this.toPlainAscii(input)
+      .replace(/\s+a\s+an\b/gi, ' an')
+      .replace(/\s+a\s+a\b/gi, ' a')
+      .replace(/\s+/g, ' ')
+      .trim();
 
-    const shortPost = `${hook}
+    const name = cleanSocialLine(contentItem.name || '3mpwrApp update');
+    const desc = cleanSocialLine(contentItem.description || 'New update from 3mpwrApp.');
+    const summary = desc.length > 160 ? `${desc.substring(0, 157)}...` : desc;
 
-  ${typeLabel}: ${name}
-
-${desc.substring(0, 120)}${desc.length > 120 ? '...' : ''}
-
-${randomCta}
-
-#3mpwrApp #DisabilityRights #Accessibility`;
-
-    const longPost = `${hook}
-
-  ${typeLabel}: ${name}
-
-${desc}
-
-  Key points:
-${highlights.slice(0, 3).map(h => `• ${h}`).join('\n')}
-
-  ${cta} -> ${fullUrl}
-
-  More on the blog: ${BLOG_URL}
-
-#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #${monthlyTheme.theme.replace(/\s+/g, '')}`;
+    const shortPost = `${typeLabel}: ${name}\n${summary}\nRead article: ${fullUrl}`;
+    const longPost = `${typeLabel}: ${name}\n${desc}\nRead article: ${fullUrl}`;
 
     // Helper function to truncate to character limit while preserving hashtags
     const truncatePost = (text, limit) => {
@@ -2763,9 +2735,9 @@ ${highlights.slice(0, 3).map(h => `• ${h}`).join('\n')}
       xPost: this.toPlainAscii(xPost),
       url: fullUrl,
       blogUrl: BLOG_URL,
-      hookUsed: hook,
-      emotion: hookData.emotion,
-      monthlyTheme: monthlyTheme.theme
+      hookUsed: '',
+      emotion: 'neutral',
+      monthlyTheme: ''
     };
   }
 

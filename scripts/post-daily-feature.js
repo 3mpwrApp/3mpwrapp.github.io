@@ -46,6 +46,10 @@ class FeaturePoster {
 
   toPlainAscii(text) {
     return String(text || '')
+      .replace(/â€”|â€“/g, '-')
+      .replace(/â€™/g, "'")
+      .replace(/â€œ|â€\x9d|â€"/g, '"')
+      .replace(/â€¦/g, '...')
       .replace(/\u2014|\u2013/g, '-')
       .replace(/\u2192/g, '->')
       .replace(/\u2022/g, '-')
@@ -117,29 +121,11 @@ class FeaturePoster {
         }
       };
 
-      // Build a smart Mastodon post — URL and hashtags are never cut off
+      // Use generated clean social copy with direct article URL.
       const MASTO_LIMIT = 500;
-      const articleUrl = content.url || '';
-      const tags = '#3mpwrApp #DisabilityRights #Accessibility';
-      const featureName = (content.feature || '').substring(0, 80);
-      // Use the hook line (first line of shortPost) as the opening
-      const hookLine = (content.shortPost || content.longPost || '').split('\n')[0].substring(0, 120);
-      // Build full body — hook + feature + description excerpt + URL + tags
-      const descLine = (content.longPost || '').split('\n').slice(1).join(' ').replace(/\s+/g, ' ').trim();
-      let statusText = `${hookLine}\n\nFeature Spotlight: ${featureName}\n\n${descLine}\n\n${articleUrl}\n\n${tags}`;
+      let statusText = this.toPlainAscii(content.mastodonPost || content.longPost || content.shortPost || `Feature Spotlight: ${content.feature}\nRead article: ${content.url || ''}`);
       if (statusText.length > MASTO_LIMIT) {
-        // Trim the description excerpt to fit
-        const fixedParts = `\n\n✨ ${featureName}\n\n`;
-        const suffix = `\n\n${articleUrl}\n\n${tags}`;
-        const budget = MASTO_LIMIT - hookLine.length - fixedParts.length - suffix.length - 3;
-        const trimmedDesc = budget > 20 ? descLine.substring(0, budget) + '...' : '';
-        statusText = `${hookLine}${fixedParts.replace('✨ ', 'Feature Spotlight: ')}${trimmedDesc}${suffix}`;
-      }
-      if (statusText.length > MASTO_LIMIT) {
-        // Last resort: shorten hook too
-        const suffix = `\n\n${articleUrl}\n\n${tags}`;
-        const maxHook = MASTO_LIMIT - suffix.length - featureName.length - 10;
-        statusText = `${hookLine.substring(0, Math.max(20, maxHook))}...\n\nFeature Spotlight: ${featureName}${suffix}`;
+        statusText = `${statusText.substring(0, MASTO_LIMIT - 3).trim()}...`;
       }
       statusText = this.toPlainAscii(statusText);
 
@@ -281,22 +267,10 @@ class FeaturePoster {
       const session = await this.blueskyLogin();
       const url = new URL(`${this.config.bluesky.pds}/xrpc/com.atproto.repo.createRecord`);
 
-      // Bluesky hard limit: 300 graphemes. Build a compact post that always fits.
+      // Bluesky hard limit: 300 graphemes.
       const BSKY_LIMIT = 300;
-      const hookLine = (content.shortPost || '').split('\n')[0].substring(0, 80);
-      const featureName = (content.feature || '').substring(0, 60);
-      const tags = '#3mpwrApp #DisabilityRights';
-      const articleUrl = content.url;
-      // Base template: hook \n\n ✨ name \n\n url \n\n tags
-      let postText = `${hookLine}\n\nFeature Spotlight: ${featureName}\n\n${articleUrl}\n\n${tags}`;
+      let postText = this.toPlainAscii(content.blueskyPost || content.shortPost || `Feature Spotlight: ${content.feature}\nRead article: ${content.url || ''}`);
       if (postText.length > BSKY_LIMIT) {
-        // Trim hook further to make it fit
-        const excess = postText.length - BSKY_LIMIT;
-        const trimmedHook = hookLine.substring(0, Math.max(10, hookLine.length - excess - 3)) + '...';
-        postText = `${trimmedHook}\n\nFeature Spotlight: ${featureName}\n\n${articleUrl}\n\n${tags}`;
-      }
-      if (postText.length > BSKY_LIMIT) {
-        // Last resort: trim the whole thing
         postText = postText.substring(0, BSKY_LIMIT - 3) + '...';
       }
 
@@ -378,8 +352,7 @@ class FeaturePoster {
     console.log(`Date: ${content.date}`);
     console.log(`URL: ${content.url}\n`);
 
-    // Verify URL is accessible — retry up to 3 times with 30s gaps before falling back
-    const BLOG_FALLBACK = 'https://3mpwrapp.pages.dev/blog/';
+    // Verify URL is accessible — retry up to 3 times with 30s gaps.
     const originalArticleUrl = content.url;
     console.log('Verifying article URL is accessible...');
     let isAccessible = await this.verifyUrl(content.url);
@@ -395,12 +368,13 @@ class FeaturePoster {
     }
 
     if (!isAccessible) {
-      console.warn(`Article URL still 404 after retries. Using blog fallback for all platforms.`);
-      console.warn(`   Original URL (for reference): ${originalArticleUrl}\n`);
-      // Replace URL everywhere so no platform posts a dead link
-      content.url = BLOG_FALLBACK;
-      if (content.shortPost) content.shortPost = content.shortPost.replace(/https?:\/\/\S+/g, BLOG_FALLBACK);
-      if (content.longPost) content.longPost = content.longPost.replace(/https?:\/\/\S+/g, BLOG_FALLBACK);
+      console.warn(`Article URL still 404 after retries. Posting cancelled to avoid sending a non-working link.`);
+      console.warn(`   Required article URL: ${originalArticleUrl}\n`);
+      this.results.mastodon = { success: false, message: 'Skipped: article URL not live', url: '' };
+      this.results.bluesky = { success: false, message: 'Skipped: article URL not live', url: '' };
+      this.results.discord = { success: false, message: 'Skipped: article URL not live' };
+      this.saveResults(content);
+      return this.results;
     } else {
       console.log('Article URL verified accessible.\n');
     }
