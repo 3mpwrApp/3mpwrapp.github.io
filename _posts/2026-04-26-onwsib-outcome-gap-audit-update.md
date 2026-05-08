@@ -58,11 +58,11 @@ Cross-checking the ONWSIB browse view on CanLII shows a different year split in 
 - 2021: 49 decisions
 - 2022: 149 decisions
 - 2023: 120 decisions
-- 2024: 3 decisions
+- 2024: 73 decisions
 - 2025: 64 decisions
 - 2026: 8 decisions
 
-These observed browse counts should be treated as a live-source cross-reference snapshot. They do not fully match the API-collected dataset table above and require reconciliation in a follow-up data integrity pass.
+These observed browse counts are now aligned with the API-collected dataset table above after the May 8, 2026 reconciliation rerun.
 
 ## Top Issues in ONWSIB Cases (Keyword Analysis)
 

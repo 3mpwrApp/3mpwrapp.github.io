@@ -35,7 +35,7 @@ const OBSERVED_COUNTS = {
   2021: 49,
   2022: 149,
   2023: 120,
-  2024: 3,
+  2024: 73,
   2025: 64,
   2026: 8
 };
@@ -51,6 +51,7 @@ function parseYears() {
 }
 
 const YEARS = parseYears();
+const FORCE_RESCRAPE = process.env.ONWSIB_FORCE_RESCRAPE === '1';
 
 // Ensure output directory exists
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -200,18 +201,24 @@ function httpsGet(url) {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
+        if (data.includes('QUOTA_EXCE') || data.includes('THROTTLED') || data.includes('quota')) {
+          reject(new Error('QUOTA_EXCEEDED'));
+          return;
+        }
+
         try {
           const parsed = JSON.parse(data);
           
           // 🆕 Detect CanLII quota exceeded
-          if (parsed.error && parsed.error.includes('QUOTA')) {
+          if (parsed.error && (parsed.error.includes('QUOTA') || parsed.error.includes('THROTTLED') || parsed.error.includes('quota'))) {
             reject(new Error('QUOTA_EXCEEDED'));
+            return;
           } else {
             resolve(parsed);
           }
         } catch (e) {
           // Check if it's a quota error in malformed JSON
-          if (data.includes('QUOTA_EXCE') || data.includes('quota')) {
+          if (data.includes('QUOTA_EXCE') || data.includes('THROTTLED') || data.includes('quota')) {
             reject(new Error('QUOTA_EXCEEDED'));
           } else {
             console.error(`  ⚠️  JSON parse error: ${e.message}`);
@@ -626,20 +633,28 @@ async function scrapeYear(year) {
   
   const outputFile = path.join(OUTPUT_DIR, `onwsib-${year}-complete.json`);
   const progressFile = path.join(OUTPUT_DIR, `.progress-onwsib-${year}.json`);
+  const existingDecisions = fs.existsSync(outputFile) && !FORCE_RESCRAPE
+    ? JSON.parse(fs.readFileSync(outputFile, 'utf8'))
+    : [];
   
   // Check if already completed
-  if (fs.existsSync(outputFile)) {
-    const existing = JSON.parse(fs.readFileSync(outputFile, 'utf8'));
-    console.log(`✓ ${year} already scraped: ${existing.length} cases`);
+  if (fs.existsSync(outputFile) && !FORCE_RESCRAPE) {
+    console.log(`✓ ${year} already scraped: ${existingDecisions.length} cases`);
     console.log(`  To re-scrape, delete: ${outputFile}`);
-    return existing;
+    return existingDecisions;
+  }
+
+  if (fs.existsSync(outputFile) && FORCE_RESCRAPE) {
+    console.log(`♻️  Force re-scrape enabled for ${year}`);
   }
   
   // Load progress if exists
   let progress = { completed: [], failed: [] };
-  if (fs.existsSync(progressFile)) {
+  if (fs.existsSync(progressFile) && !FORCE_RESCRAPE) {
     progress = JSON.parse(fs.readFileSync(progressFile, 'utf8'));
     console.log(`📂 Resuming: ${progress.completed.length} completed, ${progress.failed.length} failed`);
+  } else if (fs.existsSync(progressFile) && FORCE_RESCRAPE) {
+    console.log(`🧹 Ignoring saved progress for ${year}; refetching all selected cases`);
   }
   
   // Step 1: Get case list
@@ -652,8 +667,11 @@ async function scrapeYear(year) {
   }
   
   // Step 2: Fetch full text for each case
-  const decisions = [];
-  const completedIds = new Set(progress.completed);
+  const decisionsById = new Map(existingDecisions.map((decision) => [decision.case_id, decision]));
+  const completedIds = new Set([
+    ...progress.completed,
+    ...existingDecisions.map((decision) => decision.case_id)
+  ]);
   
   console.log(`\n📄 Fetching full text for ${caseList.length} cases...`);
   
@@ -684,11 +702,17 @@ async function scrapeYear(year) {
         const decisionYear = parsed.decision_date ? parseInt(parsed.decision_date.substring(0, 4)) : null;
         if (decisionYear && (decisionYear < 2020 || decisionYear > 2026)) {
           console.log(`    ⏭️  Skipping ${caseId} - decision year ${decisionYear} outside 2020-2026 range`);
-          progress.completed.push(caseId);
+          if (!completedIds.has(caseId)) {
+            progress.completed.push(caseId);
+            completedIds.add(caseId);
+          }
           continue;
         }
-        decisions.push(parsed);
-        progress.completed.push(caseId);
+        decisionsById.set(parsed.case_id, parsed);
+        if (!completedIds.has(caseId)) {
+          progress.completed.push(caseId);
+          completedIds.add(caseId);
+        }
         
         // Log disabilities found
         if (parsed.has_disability_ground) {
@@ -715,7 +739,7 @@ async function scrapeYear(year) {
         console.log('🚫 CanLII API QUOTA EXCEEDED');
         console.log('⚠️ '.repeat(35));
         console.log('\n📊 Progress Update:');
-        console.log(`  ✅ Successfully collected: ${decisions.length} cases`);
+        console.log(`  ✅ Successfully collected: ${decisionsById.size} cases`);
         console.log(`  📁 Progress saved to: ${progressFile}`);
         console.log(`  ⏸️  Stopped at: ${i + 1}/${caseList.length} (${progress_pct}%)`);
         console.log('\n⏰ Next Steps:');
@@ -729,9 +753,9 @@ async function scrapeYear(year) {
         
         // Save what we have so far
         fs.writeFileSync(progressFile, JSON.stringify(progress, null, 2));
-        if (decisions.length > 0) {
+        if (decisionsById.size > 0) {
           const partialFile = outputFile.replace('.json', '-PARTIAL.json');
-          fs.writeFileSync(partialFile, JSON.stringify(decisions, null, 2));
+          fs.writeFileSync(partialFile, JSON.stringify(Array.from(decisionsById.values()), null, 2));
           console.log(`💾 Partial results saved to: ${partialFile}`);
         }
         
@@ -742,6 +766,16 @@ async function scrapeYear(year) {
       progress.failed.push(caseId);
     }
   }
+
+  const decisions = caseList
+    .map((caseData, index) => {
+      let caseId = caseData.caseId;
+      if (typeof caseId === 'object' && caseId !== null) {
+        caseId = caseId.en || caseId.fr || `case_${index}`;
+      }
+      return decisionsById.get(caseId);
+    })
+    .filter(Boolean);
   
   // Save final output
   fs.writeFileSync(outputFile, JSON.stringify(decisions, null, 2));

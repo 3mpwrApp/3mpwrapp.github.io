@@ -1,53 +1,9 @@
 {
-  "scrape_date": "2026-04-26T20:45:54.689Z",
+  "scrape_date": "2026-05-08T18:43:33.646Z",
   "years": [
-    2020,
-    2021,
-    2022,
-    2023,
-    2024,
-    2025,
-    2026
+    2024
   ],
   "stats": [
-    {
-      "year": 2020,
-      "total": 0,
-      "disability_cases": 0,
-      "with_full_text": 0,
-      "outcomes": {},
-      "duration_minutes": "0.0"
-    },
-    {
-      "year": 2021,
-      "total": 28,
-      "disability_cases": 0,
-      "with_full_text": 0,
-      "outcomes": {
-        "Unknown": 28
-      },
-      "duration_minutes": "7.1"
-    },
-    {
-      "year": 2022,
-      "total": 149,
-      "disability_cases": 0,
-      "with_full_text": 0,
-      "outcomes": {
-        "Unknown": 149
-      },
-      "duration_minutes": "37.6"
-    },
-    {
-      "year": 2023,
-      "total": 120,
-      "disability_cases": 0,
-      "with_full_text": 0,
-      "outcomes": {
-        "Unknown": 120
-      },
-      "duration_minutes": "30.6"
-    },
     {
       "year": 2024,
       "total": 73,
@@ -57,26 +13,8 @@
         "Unknown": 73
       },
       "duration_minutes": "18.4"
-    },
-    {
-      "year": 2025,
-      "total": 61,
-      "disability_cases": 0,
-      "with_full_text": 0,
-      "outcomes": {
-        "Unknown": 61
-      },
-      "duration_minutes": "15.4"
-    },
-    {
-      "year": 2026,
-      "total": 0,
-      "disability_cases": 0,
-      "with_full_text": 0,
-      "outcomes": {},
-      "duration_minutes": "0.0"
     }
   ],
-  "total_cases": 431,
+  "total_cases": 73,
   "total_disability_cases": 0
 }

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-07T21:27:07.552Z",
+  "generated_at": "2026-05-08T18:44:33.711Z",
   "mode": "coverage-audit",
   "totals": {
-    "local_total": 431,
-    "observed_total": 393,
-    "net_gap": -38
+    "local_total": 463,
+    "observed_total": 463,
+    "net_gap": 0
   },
   "by_year": [
     {
@@ -16,10 +16,10 @@
     },
     {
       "year": 2021,
-      "local_count": 28,
+      "local_count": 49,
       "observed_canlii_count": 49,
-      "gap": 21,
-      "status": "missing-local-records"
+      "gap": 0,
+      "status": "aligned"
     },
     {
       "year": 2022,
@@ -38,23 +38,23 @@
     {
       "year": 2024,
       "local_count": 73,
-      "observed_canlii_count": 3,
-      "gap": -70,
-      "status": "local-exceeds-observed"
+      "observed_canlii_count": 73,
+      "gap": 0,
+      "status": "aligned"
     },
     {
       "year": 2025,
-      "local_count": 61,
+      "local_count": 64,
       "observed_canlii_count": 64,
-      "gap": 3,
-      "status": "missing-local-records"
+      "gap": 0,
+      "status": "aligned"
     },
     {
       "year": 2026,
-      "local_count": 0,
+      "local_count": 8,
       "observed_canlii_count": 8,
-      "gap": 8,
-      "status": "missing-local-records"
+      "gap": 0,
+      "status": "aligned"
     }
   ]
 }
