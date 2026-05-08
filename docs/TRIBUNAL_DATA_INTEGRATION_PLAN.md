@@ -55,7 +55,7 @@ empowrapp-new/
         │   ├── top-issues.json             # Person with disability 75.9%, etc.
         │   └── odsp-poverty-context.json   # $1,368 ODSP vs $2,200 rent crisis
         ├── onwsib/
-        │   ├── summary.json                # 431 decisions, 95.4% unresolved
+        │   ├── summary.json                # 463 decisions, 95.7% unresolved
         │   ├── top-issues.json             # Worker 80%, work-related injury 12.1%
         │   └── three-stage-system.json     # WSIB→ONWSIB→WSIAT pathway
         ├── wsiat/
@@ -121,7 +121,7 @@ empowrapp-new/app/(tabs)/resources/
 ├── tribunal-research.tsx          # Main tribunal research landing page
 ├── tribunal-comparison.tsx        # Cross-tribunal comparison (replaces old WSIB-only)
 ├── onsbt-analysis.tsx             # ONSBT 13,798 decisions + ODSP poverty
-├── onwsib-analysis.tsx            # ONWSIB 431 decisions + 3-stage system
+├── onwsib-analysis.tsx            # ONWSIB 463 decisions + 3-stage system
 ├── wsiat-analysis.tsx             # WSIAT 11,430 decisions (UPDATE existing)
 └── hrto-analysis.tsx              # HRTO 9,269 decisions + email crisis
 ```
@@ -225,7 +225,7 @@ export default function TribunalNetworkScreen() {
 **UI Layer:**
 - [ ] Create `tribunal-research.tsx` (main hub)
 - [ ] Create `onsbt-analysis.tsx` (13,798 decisions)
-- [ ] Create `onwsib-analysis.tsx` (431 decisions)
+- [ ] Create `onwsib-analysis.tsx` (463 decisions)
 - [ ] Update `wsib-appeals.tsx` (11,430 not 1,204)
 - [ ] Create `hrto-analysis.tsx` (9,269 decisions)
 - [ ] Create `tribunal-comparison.tsx` (cross-tribunal)

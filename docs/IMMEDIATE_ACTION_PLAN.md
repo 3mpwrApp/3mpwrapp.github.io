@@ -197,7 +197,7 @@ Contains:
 - **WSIAT**: 11,430 → **95,298 decisions** (+733%)
 - **HRTO**: 9,269 decisions → **validated against 39 quarterly reports**
 - **ONSBT**: 13,798 decisions → **enriched with 57 years of caseload context**
-- **ONWSIB**: 431 decisions (maintain current level, low priority)
+- **ONWSIB**: 463 decisions (maintain current level, low priority)
 
 ### Classification Rates
 - **WSIAT**: 5.7% → **25%+** (using official keywords)

@@ -17,18 +17,15 @@
 
 ---
 
-### ONWSIB: 431 Decisions Analyzed (2021-2025)
+### ONWSIB: 463 Decisions Analyzed (2020-2026)
 
 **Outcome Distribution:**
 
 | Outcome | Count | Percentage |
 |---------|-------|------------|
-| unclear | 413 | 95.8% |
-| partial | 8 | 1.9% |
-| other | 6 | 1.4% |
-| denied | 2 | 0.5% |
-| allowed | 1 | 0.2% |
-| remitted | 1 | 0.2% |
+| unresolved | 443 | 95.7% |
+| tier-b probable | 19 | 4.1% |
+| tier-a confirmed | 1 | 0.2% |
 
 **Key Finding:** 95.7% of the ONWSIB archive remains unresolved in public records; the visible classified subset shows an 89.5% worker-favourable snapshot, but that is not a system-wide success rate.
 

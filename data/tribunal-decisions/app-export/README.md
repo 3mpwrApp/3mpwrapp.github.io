@@ -7,7 +7,7 @@ Authors: Lissa Beaulieu (Founder, 3mpwrApp) & GitHub Copilot
 
 - **tribunal-comparison.json** - Summary of all 4 tribunals with Tier A/B/C breakdown
 - **onsbt-analysis.json** - ONSBT 13,798 decisions + ODSP poverty context
-- **onwsib-analysis.json** - ONWSIB 431 decisions + 3-stage system explanation
+- **onwsib-analysis.json** - ONWSIB 463 decisions + 3-stage system explanation
 - **issue-slices.json** - Cross-tribunal issue analysis (chronic pain, pre-existing, entitlement)
 
 ## Usage in App
@@ -34,6 +34,6 @@ All data derived from CanLII tribunal decisions (2020-2026):
 - WSIAT: 11,430 decisions
 - HRTO: 9,269 decisions  
 - ONSBT: 13,798 decisions
-- ONWSIB: 431 decisions
+- ONWSIB: 463 decisions
 
-Total: 35,928 tribunal decisions analyzed.
+Total: 35,960 tribunal decisions analyzed.

@@ -102,7 +102,7 @@ node scripts/export-unknown-for-notebooklm.js onwsib 25
 
 ## 📊 **COMPLETE WORKFLOW FOR ALL TRIBUNALS**
 
-### **1. ONWSIB (Highest Priority - 95.4% Unknown)**
+### **1. ONWSIB (Highest Priority - 95.7% Unresolved Public Outcomes)**
 
 ```bash
 # Step 1: Fetch full text (120 decisions)
@@ -115,7 +115,7 @@ node scripts/re-extract-outcomes-with-notebooklm-patterns.js onwsib 2023
 cat docs/outcome-reextraction-report-2026-04-29.md
 ```
 
-**Expected:** 95.4% → ~70% Unknown (25% improvement, ~30 decisions classified)
+**Expected:** 95.7% → ~70% unresolved (25% improvement, ~30 decisions classified)
 
 ---
 

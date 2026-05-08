@@ -73,10 +73,10 @@ Strict evidence table (confirmed/probable/unresolved):
   - Overpayment allegations: 739 (5.4%)
   - Substantial impairment test: 6,813 cases (49.4%)
 
-- **ONWSIB (WSIB Internal Reviews):** Tier A 1 (0.2%), Tier B 19 (4.4%), Tier C 411 (95.4%)
+- **ONWSIB (WSIB Internal Reviews):** Tier A 1 (0.2%), Tier B 19 (4.1%), Tier C 443 (95.7%)
   - 89.5% probable grant rate (17 of 19 Tier B outcomes)
   - Work-related injury: 52 cases (12.1%)
-  - Pre-existing condition: 29 cases (6.7%)
+   - Pre-existing condition: 31 cases (6.7%)
   - Knee/shoulder injuries most common (4.9% and 4.2%)
   - Very limited public data availability
 

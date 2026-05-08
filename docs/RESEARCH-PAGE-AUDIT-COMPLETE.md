@@ -29,7 +29,7 @@
   - ℹ️ Kept: "100% in predictive model" with disclaimer explaining it's a data limitation + added correct 89.1% stat
 
 - **ONSBT Statistics:** Already correct (98.9%)
-- **ONWSIB Statistics:** Already correct (83.3%)
+- **ONWSIB Statistics:** Corrected to classified-only framing (463 total, 95.7% unresolved, 89.5% classified-only snapshot)
 - **HRTO Statistics:** Already correct (12.7% with 43.9% abandonment)
 
 ### 3. Link Functionality ⚠️

@@ -192,7 +192,7 @@ NotebookLM categorized outcome indicators by **explicitness:**
 |----------|----------------|---------|-----------|
 | WSIAT | ~11,000 | ~10,373 | 94.3% |
 | ONSBT | ~800 | ~763 | 95.4% |
-| ONWSIB | ~450 | ~429 | 95.4% |
+| ONWSIB | 463 | 443 | 95.7% |
 | ONHRT | ~200 | ~200 | 100% (new) |
 
 ### **After Re-extraction (Projected):**
@@ -286,7 +286,7 @@ NotebookLM categorized outcome indicators by **explicitness:**
 ## 💡 SUCCESS CRITERIA
 
 ✅ **Phase 1 Complete When:**
-- ONWSIB Unknown rate drops from 95.4% to ~70%
+- ONWSIB Unknown rate drops from 95.7% to ~70%
 - WSIAT Unknown rate drops from 94.3% to 50-60%
 - ONSBT Unknown rate drops from 95.4% to 40-50%
 - False positive rate < 5% (validated via sampling)

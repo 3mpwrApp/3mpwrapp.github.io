@@ -140,7 +140,7 @@ We have **34,928 tribunal decisions** from CanLII. We've now discovered **offici
 
 ---
 
-### 1.4 ONWSIB (431 Decisions in CanLII)
+### 1.4 ONWSIB (463 Decisions in CanLII)
 
 **Official Data Available:**
 - ✅ **WSIB Summarized Claim Data**: 2002-2025 aggregated statistics (check availability)
@@ -151,7 +151,7 @@ We have **34,928 tribunal decisions** from CanLII. We've now discovered **offici
 **Validation Pathways:**
 
 #### A. Limited Direct Validation (Small Dataset)
-- **Current**: 431 decisions (4.6% classified = 20 with known outcomes)
+- **Current**: 463 decisions (4.3% classified = 20 with known outcomes)
 - **Challenge**: ONWSIB dataset is too small for statistical validation
 - **Strategy**: Focus on **enrichment** rather than validation
 
@@ -160,7 +160,7 @@ We have **34,928 tribunal decisions** from CanLII. We've now discovered **offici
   - Annual claim volumes by injury type
   - Average benefit amounts
   - Claim duration statistics
-- **Enrichment**: Add temporal context to all 431 decisions
+- **Enrichment**: Add temporal context to all 463 decisions
   - Example: Decision in 2023 → Tag with "2023: 71,781 claims filed, $1.88B benefits paid"
 
 #### C. Low Priority for Expansion
@@ -168,7 +168,7 @@ We have **34,928 tribunal decisions** from CanLII. We've now discovered **offici
 - **Most significant cases** escalate to WSIAT (where we have 95,298 decisions)
 - **Recommendation**: Use ONWSIB decisions as **contextual examples** but focus scraping efforts on WSIAT
 
-**Immediate Win:** Document the claim-to-appeal pipeline (Initial WSIB decision → ONWSIB review → WSIAT appeal) → Use 431 ONWSIB decisions as "middle-stage" examples in guides.
+**Immediate Win:** Document the claim-to-appeal pipeline (Initial WSIB decision → ONWSIB review → WSIAT appeal) → Use 463 ONWSIB decisions as "middle-stage" examples in guides.
 
 ---
 
@@ -299,7 +299,7 @@ We have **34,928 tribunal decisions** from CanLII. We've now discovered **offici
     ↓ [Est. 30-40% disputed]
 ~4,000 WSIB Disputes/Appeals
     ↓ [ONWSIB review]
-431 ONWSIB Decisions (in CanLII)
+463 ONWSIB Decisions (in CanLII)
     ↓ [Further appeals]
 ~5,000 WSIAT Decisions/Year
     ↓ [Cumulative 2002-2026]

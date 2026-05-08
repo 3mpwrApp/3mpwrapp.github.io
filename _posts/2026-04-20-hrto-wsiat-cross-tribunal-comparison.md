@@ -38,7 +38,7 @@ Current strict evidence table snapshots:
 
 - WSIAT: Tier A 74 (0.6%), Tier B 575 (5.0%), Tier C 10,781 (94.3%)
 - HRTO: Tier A 4,618 (49.8%), Tier B 1 (0.0%), Tier C 4,650 (50.2%)
-- **ONWSIB (internal WSIB review):** Tier A 1 (0.2%), Tier B 19 (4.4%), Tier C 411 (95.4%)
+- **ONWSIB (internal WSIB review):** Tier A 1 (0.2%), Tier B 19 (4.1%), Tier C 443 (95.7%)
 - **ONSBT (ODSP/OW appeals):** Tier A 494 (3.6%), Tier B 3,251 (23.6%), Tier C 10,053 (72.9%)
 
 **Context:** ONWSIB represents internal WSIB reviews (before WSIAT appeals), while ONSBT represents ODSP disability determination appeals. All four tribunals now use the same tiered evidence framework for transparent outcome reporting.
@@ -180,24 +180,24 @@ Before an injured worker reaches WSIAT (the independent appeals tribunal analyze
 
 **New Data: ONWSIB Analysis (2020-2026)**
 
-We analyzed **431 ONWSIB internal review decisions** from the same period and found:
+We analyzed **463 ONWSIB internal review decisions** from the same period and found:
 
 | Metric | ONWSIB (Internal Review) | WSIAT (Independent Appeal) |
 |--------|--------------------------|----------------------------|
-| **Total Cases Analyzed** | 431 | 11,430 |
+| **Total Cases Analyzed** | 463 | 11,430 |
 | **Tier A (confirmed outcomes)** | 1 (0.2%) | 74 (0.6%) |
-| **Tier B (probable outcomes)** | 19 (4.4%) | 575 (5.0%) |
-| **Tier C (unresolved)** | 411 (95.4%) | 10,781 (94.3%) |
+| **Tier B (probable outcomes)** | 19 (4.1%) | 575 (5.0%) |
+| **Tier C (unresolved)** | 443 (95.7%) | 10,781 (94.3%) |
 | **Probable Grant Rate (Tier B)** | 89.5% (17/19) | ~65-73% (official) |
-| **Pre-Existing Condition Cases** | 29 (6.7%) | 1,519 (13.3%) |
+| **Pre-Existing Condition Cases** | 31 (6.7%) | 1,519 (13.3%) |
 | **Data Availability** | Very limited public records | Moderate CanLII coverage |
 
 **Key Findings:**
 
-1. **ONWSIB has even less public data than WSIAT** - 95.4% unresolved vs 94.3%
+1. **ONWSIB has even less public data than WSIAT** - 95.7% unresolved vs 94.3%
 2. **Pre-existing condition arguments appear earlier in the process** - 6.7% at ONWSIB vs 13.3% at WSIAT, suggesting WSIB uses this denial reason from the start
 3. **Small sample suggests high grant rate at internal review** - 17 of 19 probable outcomes are grants (89.5%), meaning WSIB does catch some of its own errors
-4. **Most workers skip ONWSIB entirely** - Only 431 public decisions vs 11,430 at WSIAT suggests most workers don't trust WSIB to overturn its own decisions
+4. **Most workers skip ONWSIB entirely** - Only 463 public decisions vs 11,430 at WSIAT suggests most workers don't trust WSIB to overturn its own decisions
 
 ---
 
@@ -205,7 +205,7 @@ We analyzed **431 ONWSIB internal review decisions** from the same period and fo
 
 **Using keyword-based classification (similar to WSIAT methodology), we analyzed all available decisions:**
 
-**ONWSIB (Internal WSIB Reviews - 431 decisions, 2021-2025):**
+**ONWSIB (Internal WSIB Reviews - 463 decisions, 2020-2026):**
 
 | Outcome | Count | Percentage |
 |---------|-------|------------|
@@ -251,7 +251,7 @@ We analyzed **431 ONWSIB internal review decisions** from the same period and fo
 
 - **Strategic decision:** Should you do ONWSIB internal review or go straight to WSIAT?
   - **Pro:** 89.5% probable grant rate suggests WSIB does reverse some decisions
-  - **Con:** 95.4% unresolved rate means we can't verify system-wide outcomes
+   - **Con:** 95.7% unresolved rate means we can't verify system-wide outcomes
   - **Reality:** Most workers skip ONWSIB because they don't trust WSIB reviewing itself
   
 - **Pre-existing condition battles start at WSIB** - If you have any prior injury, WSIB will argue it's pre-existing from day one
@@ -264,7 +264,7 @@ We analyzed **431 ONWSIB internal review decisions** from the same period and fo
 
 | Tribunal | Purpose | Unresolved Rate | Success Rate (Known) |
 |----------|---------|-----------------|----------------------|
-| **ONWSIB** | WSIB internal review | 95.4% | 89.5% (probable, 19 cases) |
+| **ONWSIB** | WSIB internal review | 95.7% | 89.5%* (classified-only, 20 visible outcomes) |
 | **WSIAT** | Independent workers' comp appeals | 94.3% | 65-73% (official) |
 | **ONSBT** | ODSP disability determination | 72.9% | 67.4% (classified) |
 | **HRTO** | Human rights complaints | 50.2% | 0.7% (most abandoned) |
