@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-07T14:37:46.352Z",
+  "lastUpdated": "2026-05-08T03:42:28.648Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16720,
+      "totalPosts": 16744,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-05-07T14:37:39.953Z"
+      "lastSeen": "2026-05-08T03:42:19.522Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16711,
+      "totalPosts": 16736,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-07T14:37:41.160Z"
+      "lastSeen": "2026-05-08T03:42:21.443Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16595,
+      "totalPosts": 16620,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-07T14:37:42.625Z"
+      "lastSeen": "2026-05-08T03:42:23.516Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16787,
+      "totalPosts": 16812,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-07T14:37:44.064Z"
+      "lastSeen": "2026-05-08T03:42:25.641Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16748,
+      "totalPosts": 16773,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-07T14:37:45.348Z"
+      "lastSeen": "2026-05-08T03:42:27.644Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "2.8k followers?!!!!🥳🎉🎉🎉 Thank you all so much!\n\nI'm posting #indiegamedev progress here for our dark fantasy and #horror VN Catalyst: Blind Faith!🩸🔥\n\nYou can also expect a flood of branching #gamedesign, #art, #accessibility, #programming, #writing, memes & hype for other things we love!❤️🧡💛💚💙💜",
-      "author": "just-write-studios.itch.io",
-      "engagement": 27,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "[1/5]\n\nI heard about AccessibilityFirewall.com, promising “No code changes. No overlay. No JavaScript.” It uses “edge” in the same way the Overlay Community Group does.\n\nRed flag emoji.\n\nSo I ran it through its own “Live Remediation Engine”:\nwebcraft.inc#audit-section\n\nHmmm…\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Sometimes alt text it's helpful for describing things in images that the rest of us are just not familiar with (due to cultural differences or whatnot). \n\nI have read the alt text of images countless times and it was the alt text that has helped me understand the purpose of the image. ☺️\n\n#a11y FTW",
-      "author": "sarasoueidan.com",
-      "engagement": 32,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "DEIA is making skateboarding accessible to ALL kids who want to share! #pinks #disabilityrights #DEI",
-      "author": "aliceknew.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Cruelty can be the only logical reason behind cutting aids to adults with severe autism. #pinks #resist #disabilityrights  #autism #eugenics #medicaidcuts #socialsecurityCUTS",
-      "author": "aliceknew.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "The Trump Administration Aims to Penalize Disabled Adults Who Live With Their Families www.propublica.org/article/trum... \n\n#DOGE #OMB #SSA #SocialSecurity #DisabilityRights #HumanRights",
-      "author": "wolverinebear.bsky.social",
-      "engagement": 89,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
-      "author": "uua.org",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Sharing \"Star Wars\" images on this \"May The Fourth\"? Don't forget alt text! Alt text is crucial for people who are blind, who have low vision, and others who use screen readers.\n\n#MayTheFourth #MayTheFourthBeWithYou #MayThe4thBeWithYou #MayThe4th #StarWarsDay #StarWars #a11y",
       "author": "a11yawareness.bsky.social",
@@ -338,24 +296,66 @@
       "author": "juliametraux.bsky.social",
       "engagement": 115,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#MTPol #Montana #DisabilityRights #Section504",
+      "author": "gailwaldby.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "You’ve been told disabled people are the problem. You weren’t told who paid to put that idea in your head. \n\n#NDIS #NDISAustralia #DisabilityRights #MSWarrior #AusPol #VoteGREENS #Albo #Albanese",
+      "author": "twitter-exile.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "-putting others out of house and home.\n\nIt does not mean taking away #accessibility from other disabled people. If we cannot support each others ability to navigate an already hostile world, how do we expect to survive?\n\nWe cannot ignore the interdependence of the world we live in.-",
+      "author": "ruesparks.bsky.social",
+      "engagement": 17,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "\"We aren’t asking for favors; we are demanding the basic dignity of a usable interface.\" #a11y accessaces.com/beyond-furio...",
+      "author": "ericwbailey.website",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Trying to explain the WCAG 2 conformance model to a WCAG testing team in as few words as possible.\n\n(Ref if unknown to you: www.w3.org/WAI/WCAG22/U...)\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Read it for free: Accessibility For Everyone by @laurakalbag.com. \n\nh/t @sekai.co.uk.\n\naccessibilityforeveryone.site #a11y #BooksNeverDie #ABookApart",
+      "author": "zeldman.bsky.social",
+      "engagement": 33,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Josh Turek in the Iowa State Senate Democratic Primary debate said the first bill he'd introduce in the Senate would be to push a bill that would end subminimum wage for disabled people. #CripTheVote",
+      "author": "juliametraux.bsky.social",
+      "engagement": 115,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
-      "keyword": "accessibility",
-      "count": 46
+      "keyword": "disabilityrights",
+      "count": 44
     },
     {
-      "keyword": "disabilityrights",
-      "count": 43
+      "keyword": "accessibility",
+      "count": 41
     },
     {
       "keyword": "a11y",
-      "count": 28
+      "count": 26
     },
     {
       "keyword": "disabilityjustice",
-      "count": 27
+      "count": 25
     },
     {
       "keyword": "cripthevote",
@@ -386,23 +386,7 @@
       "count": 11
     },
     {
-      "keyword": "disabilitysky",
-      "count": 9
-    },
-    {
-      "keyword": "cripminds",
-      "count": 9
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 9
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 9
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
+      "keyword": "disabled people",
       "count": 9
     },
     {
@@ -418,8 +402,24 @@
       "count": 9
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 7
+      "keyword": "disability",
+      "count": 8
+    },
+    {
+      "keyword": "disabilitysky",
+      "count": 6
+    },
+    {
+      "keyword": "cripminds",
+      "count": 6
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 6
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 6
     }
   ]
 }
