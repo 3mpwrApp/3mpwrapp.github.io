@@ -29,7 +29,8 @@
     "Evidence Flywheel: Your Wins Power Community Templates",
     "Medical Evidence Request Letter",
     "Chronic Fatigue Management: Energy Banking for Crashes",
-    "Accommodation Request Tracker: Never Let Them Ghost You"
+    "Accommodation Request Tracker: Never Let Them Ghost You",
+    "PEI Social Assistance for Persons with Disabilities"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively"
@@ -53,6 +54,6 @@
     "Building in Public: Why Transparency Is Non-Negotiable for Us",
     "Collective Advocacy: Why Individual Coping Is Not Enough"
   ],
-  "rotationIndex": 4,
+  "rotationIndex": 5,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
