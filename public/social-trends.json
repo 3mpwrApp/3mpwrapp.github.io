@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-08T03:42:28.648Z",
+  "lastUpdated": "2026-05-08T14:08:15.964Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16744,
+      "totalPosts": 16768,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T03:42:19.522Z"
+      "lastSeen": "2026-05-08T14:08:03.829Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16736,
+      "totalPosts": 16761,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T03:42:21.443Z"
+      "lastSeen": "2026-05-08T14:08:06.626Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16620,
+      "totalPosts": 16645,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T03:42:23.516Z"
+      "lastSeen": "2026-05-08T14:08:09.124Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16812,
+      "totalPosts": 16837,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T03:42:25.641Z"
+      "lastSeen": "2026-05-08T14:08:12.222Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16773,
+      "totalPosts": 16798,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T03:42:27.644Z"
+      "lastSeen": "2026-05-08T14:08:14.960Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Sharing \"Star Wars\" images on this \"May The Fourth\"? Don't forget alt text! Alt text is crucial for people who are blind, who have low vision, and others who use screen readers.\n\n#MayTheFourth #MayTheFourthBeWithYou #MayThe4thBeWithYou #MayThe4th #StarWarsDay #StarWars #a11y",
-      "author": "a11yawareness.bsky.social",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Hey literally every dev, did you know you can make #OpenGraph #OG images accessible with ?\n\n<meta property=\"og:image:alt\" content=\"A short descriptive phrase\" />\n\nstandards.scangov.org/ogimagealt/\n\n#A11y #Accessibility #ATproto",
-      "author": "renderg.host",
-      "engagement": 22,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "[1/5]\n\nI heard about AccessibilityFirewall.com, promising “No code changes. No overlay. No JavaScript.” It uses “edge” in the same way the Overlay Community Group does.\n\nRed flag emoji.\n\nSo I ran it through its own “Live Remediation Engine”:\nwebcraft.inc#audit-section\n\nHmmm…\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "You’ve been told disabled people are the problem. You weren’t told who paid to put that idea in your head. \n\n#NDIS #NDISAustralia #DisabilityRights #MSWarrior #AusPol #VoteGREENS #Albo #Albanese",
-      "author": "twitter-exile.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "DEIA is making skateboarding accessible to ALL kids who want to share! #pinks #disabilityrights #DEI",
-      "author": "aliceknew.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Cruelty can be the only logical reason behind cutting aids to adults with severe autism. #pinks #resist #disabilityrights  #autism #eugenics #medicaidcuts #socialsecurityCUTS",
-      "author": "aliceknew.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
       "author": "uua.org",
@@ -338,6 +302,42 @@
       "author": "juliametraux.bsky.social",
       "engagement": 115,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#MTPol #Montana #DisabilityRights #Section504",
+      "author": "gailwaldby.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "You’ve been told disabled people are the problem. You weren’t told who paid to put that idea in your head. \n\n#NDIS #NDISAustralia #DisabilityRights #MSWarrior #AusPol #VoteGREENS #Albo #Albanese",
+      "author": "twitter-exile.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "\"We aren’t asking for favors; we are demanding the basic dignity of a usable interface.\" #a11y accessaces.com/beyond-furio...",
+      "author": "ericwbailey.website",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Trying to explain the WCAG 2 conformance model to a WCAG testing team in as few words as possible.\n\n(Ref if unknown to you: www.w3.org/WAI/WCAG22/U...)\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Read it for free: Accessibility For Everyone by @laurakalbag.com. \n\nh/t @sekai.co.uk.\n\naccessibilityforeveryone.site #a11y #BooksNeverDie #ABookApart",
+      "author": "zeldman.bsky.social",
+      "engagement": 36,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Josh Turek in the Iowa State Senate Democratic Primary debate said the first bill he'd introduce in the Senate would be to push a bill that would end subminimum wage for disabled people. #CripTheVote",
+      "author": "juliametraux.bsky.social",
+      "engagement": 115,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 41
+      "count": 44
     },
     {
       "keyword": "a11y",
@@ -386,10 +386,6 @@
       "count": 11
     },
     {
-      "keyword": "disabled people",
-      "count": 9
-    },
-    {
       "keyword": "disabilityrebellion",
       "count": 9
     },
@@ -402,8 +398,20 @@
       "count": 9
     },
     {
-      "keyword": "disability",
+      "keyword": "inclusion",
       "count": 8
+    },
+    {
+      "keyword": "disabled people",
+      "count": 7
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 7
+    },
+    {
+      "keyword": "ada",
+      "count": 6
     },
     {
       "keyword": "disabilitysky",
@@ -411,14 +419,6 @@
     },
     {
       "keyword": "cripminds",
-      "count": 6
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 6
-    },
-    {
-      "keyword": "disabilitysky cripminds",
       "count": 6
     }
   ]
