@@ -81,7 +81,7 @@ Discover how 3mpwrApp's AI-powered energy prediction helps you plan your day...
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 
-https://3mpwrapp.pages.dev/2025-10-20-3mpwrapp-feature/
+https://3mpwrapp.ca/2025-10-20-3mpwrapp-feature/
 ```
 
 ---
@@ -132,11 +132,11 @@ https://3mpwrapp.pages.dev/2025-10-20-3mpwrapp-feature/
 ## 🔗 Blog Post URLs
 
 ```
-Feature: https://3mpwrapp.pages.dev/2025-10-20-3mpwrapp-feature/
-How-To: https://3mpwrapp.pages.dev/2025-10-22-3mpwrapp-howto/
-Beta Testing: https://3mpwrapp.pages.dev/2025-10-20-3mpwrapp-community/
-Accessibility: https://3mpwrapp.pages.dev/2025-10-22-3mpwrapp-accessibility/
-Tools: https://3mpwrapp.pages.dev/2025-10-20-3mpwrapp-roundup/
+Feature: https://3mpwrapp.ca/2025-10-20-3mpwrapp-feature/
+How-To: https://3mpwrapp.ca/2025-10-22-3mpwrapp-howto/
+Beta Testing: https://3mpwrapp.ca/2025-10-20-3mpwrapp-community/
+Accessibility: https://3mpwrapp.ca/2025-10-22-3mpwrapp-accessibility/
+Tools: https://3mpwrapp.ca/2025-10-20-3mpwrapp-roundup/
 ```
 
 ---

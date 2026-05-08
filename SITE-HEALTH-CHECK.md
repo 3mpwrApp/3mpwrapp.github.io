@@ -51,7 +51,7 @@ description: Who we are and how 3mpowr App helps injured workers and persons wit
 
 ### ✓ `_config.yml`
 - **Status:** GOOD ✅
-- URL correct: `https://3mpwrapp.pages.dev`
+- URL correct: `https://3mpwrapp.ca`
 - All settings proper
 
 ---
@@ -93,7 +93,7 @@ description: Who we are and how 3mpowr App helps injured workers and persons wit
 - **Why broken:** Built from corrupted commit
 
 ### What to Use
-- **URL:** `https://3mpwrapp.pages.dev`
+- **URL:** `https://3mpwrapp.ca`
 - **Type:** Production deployment
 - **Status:** Will work once fixes are pushed
 
@@ -185,7 +185,7 @@ description: Who we are and how 3mpowr App helps injured workers and persons wit
 - **Status:** Has corrupted user-guide.md (needs rebuild)
 
 ### On Cloudflare
-- **Production:** `https://3mpwrapp.pages.dev`
+- **Production:** `https://3mpwrapp.ca`
 - **Status:** Building from commit 1995316 (corrupted)
 - **Preview deployments:** Multiple (including 7314eccf)
 
@@ -201,7 +201,7 @@ description: Who we are and how 3mpowr App helps injured workers and persons wit
 ## ✅ Success Criteria
 
 **Site is fixed when you can:**
-1. ✅ Visit `https://3mpwrapp.pages.dev` and see full homepage
+1. ✅ Visit `https://3mpwrapp.ca` and see full homepage
 2. ✅ Click "User Guide" and see the complete guide (no 404)
 3. ✅ Click "About" and see the about page
 4. ✅ Cookie banner appears and works
@@ -213,7 +213,7 @@ description: Who we are and how 3mpowr App helps injured workers and persons wit
 ## 📝 Next Steps After Fix
 
 1. **Wait 8 minutes** for deployment + cache
-2. **Test in incognito:** `https://3mpwrapp.pages.dev`
+2. **Test in incognito:** `https://3mpwrapp.ca`
 3. **If working:** 
    - Complete Google Search Console verification
    - Set up Cloudflare Web Analytics

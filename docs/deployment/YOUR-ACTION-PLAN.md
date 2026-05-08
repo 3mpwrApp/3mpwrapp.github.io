@@ -71,7 +71,7 @@ It should look like:
 2. Sign up (free, no card)
 3. Add monitors:
    - `https://3mpwrapp.github.io`
-   - `https://3mpwrapp.pages.dev` (after Cloudflare setup)
+   - `https://3mpwrapp.ca` (after Cloudflare setup)
    - `https://3mpwrapp.github.io/user-guide/`
 4. Set alert email
 5. Create public status page (free subdomain)

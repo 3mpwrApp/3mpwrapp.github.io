@@ -302,7 +302,7 @@ ACTION: Challenge or Block
 ### "Security header not showing in curl"
 - **Cause**: Header defined in `_headers` but not deployed
 - **Fix**: Redeploy site (commit + push triggers Cloudflare Pages build)
-- **Verify**: `curl -I https://3mpwrapp.pages.dev`
+- **Verify**: `curl -I https://3mpwrapp.ca`
 
 ### "Site showing 'Checking your browser' challenge"
 - **Cause**: Bot Fight Mode enabled (or "I'm Under Attack" mode)

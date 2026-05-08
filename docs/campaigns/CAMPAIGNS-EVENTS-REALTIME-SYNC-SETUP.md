@@ -187,7 +187,7 @@ async function loadEvents() {
 
 1. **Open in Browser:**
    ```
-   https://3mpwrapp.pages.dev/campaigns/
+   https://3mpwrapp.ca/campaigns/
    ```
 
 2. **Expected Behavior:**
@@ -206,7 +206,7 @@ async function loadEvents() {
 
 1. **Open in Browser:**
    ```
-   https://3mpwrapp.pages.dev/events/
+   https://3mpwrapp.ca/events/
    ```
 
 2. **Expected Behavior:**

@@ -521,7 +521,7 @@ By accessing or using 3mpwrApp's website, progressive web app, or services, you 
 
 **Email**: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)  
 **Response Time**: 24-48 hours  
-**Website**: [https://3mpwrapp.pages.dev](https://3mpwrapp.pages.dev)  
+**Website**: [https://3mpwrapp.ca](https://3mpwrapp.ca)  
 **Organization**: 3mpwrApp  
 **Location**: Toronto, ON, Canada
 

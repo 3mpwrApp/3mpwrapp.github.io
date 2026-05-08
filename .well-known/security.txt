@@ -5,10 +5,10 @@
 Contact: mailto:empowrapp08162025@gmail.com
 Expires: 2026-10-27T00:00:00.000Z
 Preferred-Languages: en, fr
-Canonical: https://3mpwrapp.pages.dev/.well-known/security.txt
+Canonical: https://3mpwrapp.ca/.well-known/security.txt
 
 # Security Policy and Guidelines
-Policy: https://3mpwrapp.pages.dev/privacy/
+Policy: https://3mpwrapp.ca/privacy/
 
 # Acknowledgments
 # We appreciate responsible disclosure and will acknowledge security researchers

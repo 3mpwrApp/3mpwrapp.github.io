@@ -10,7 +10,7 @@
 ## ✅ SSL/TLS VERIFICATION (15 minutes)
 
 ### Certificate Check
-- [ ] Navigate to https://3mpwrapp.pages.dev
+- [ ] Navigate to https://3mpwrapp.ca
 - [ ] Click padlock icon
 - [ ] Verify "Connection is secure"
 - [ ] Check certificate details:
@@ -44,7 +44,7 @@
 
 ### Check Headers Method 2: Online Tool
 - Use: https://securityheaders.com
-- Enter: https://3mpwrapp.pages.dev
+- Enter: https://3mpwrapp.ca
 - Review all security headers
 
 ### Content-Security-Policy (CSP)
@@ -92,7 +92,7 @@
 1. Open DevTools Console
 2. Run test:
 ```javascript
-fetch('https://3mpwrapp.pages.dev/api/curation-latest.json')
+fetch('https://3mpwrapp.ca/api/curation-latest.json')
   .then(r => {
     console.log('Status:', r.status);
     console.log('Headers:');
@@ -309,7 +309,7 @@ Use these free online tools:
 
 **Option 1: OWASP ZAP**
 - Download: https://www.zaproxy.org/
-- Run basic scan against https://3mpwrapp.pages.dev
+- Run basic scan against https://3mpwrapp.ca
 - Review findings
 
 **Option 2: Nikto**

@@ -61,11 +61,11 @@ Value: 3.1.0
 3. Wait 2-4 minutes for first build
 4. Should see: **"Success! Your project has been deployed!"**
 
-**Your new URL:** `https://3mpwrapp.pages.dev`
+**Your new URL:** `https://3mpwrapp.ca`
 
 ### 6. Verify Deployment
 
-1. Click the URL: `https://3mpwrapp.pages.dev`
+1. Click the URL: `https://3mpwrapp.ca`
 2. Site should load exactly like GitHub Pages version
 3. Test a few pages:
    - Homepage
@@ -77,7 +77,7 @@ Value: 3.1.0
 
 Open PowerShell and run:
 ```powershell
-curl -I https://3mpwrapp.pages.dev
+curl -I https://3mpwrapp.ca
 ```
 
 **You should see:**
@@ -318,7 +318,7 @@ If over 10 minutes:
 
 **You now have TWO production sites:**
 1. `https://3mpwrapp.github.io` (GitHub Pages)
-2. `https://3mpwrapp.pages.dev` (Cloudflare Pages)
+2. `https://3mpwrapp.ca` (Cloudflare Pages)
 
 Both update automatically on every `git push`! 🚀
 

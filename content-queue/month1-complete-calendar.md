@@ -29,7 +29,7 @@ Most apps collect data and sell it.
 
 Lived Experience → Data → Insight → Action
 
-Full diagram: https://3mpwrapp.pages.dev/#flywheels
+Full diagram: https://3mpwrapp.ca/#flywheels
 
 What do you think? Does this resonate?
 
@@ -43,10 +43,10 @@ What do you think? Does this resonate?
 ```
 📚 Everything You Need (100% Free)
 
-Crisis hotlines → https://3mpwrapp.pages.dev/crisis-resources
-Legal guides → https://3mpwrapp.pages.dev/resources
-Community events → https://3mpwrapp.pages.dev/events
-Accommodation templates → https://3mpwrapp.pages.dev/features/letter-generator
+Crisis hotlines → https://3mpwrapp.ca/crisis-resources
+Legal guides → https://3mpwrapp.ca/resources
+Community events → https://3mpwrapp.ca/events
+Accommodation templates → https://3mpwrapp.ca/features/letter-generator
 
 No login required. No paywalls. No BS.
 
@@ -72,7 +72,7 @@ That's when I realized: the system requires cognitive capacity that disabled peo
 
 So I built 3mpwrApp—tools designed for hard days, not just good ones.
 
-Free forever: https://3mpwrapp.pages.dev
+Free forever: https://3mpwrapp.ca
 
 #WSIB #ODSP #CPPDisability #InjuredWorker #DisabilityJustice
 
@@ -96,7 +96,7 @@ No. The system is designed to overwhelm you.
 
 You're not disorganized. The system is hostile.
 
-Always free: https://3mpwrapp.pages.dev/features/evidence-locker
+Always free: https://3mpwrapp.ca/features/evidence-locker
 
 #DisabilityRights #WSIB #ODSP #LegalTools #EvidenceManagement
 ```
@@ -121,7 +121,7 @@ Why it matters:
 
 Also: Beta testers just started onboarding for 3mpwrApp (disability rights tools)!
 
-Building in public: https://3mpwrapp.pages.dev/blog
+Building in public: https://3mpwrapp.ca/blog
 
 #BuildInPublic #DisabilityTech #AccessibilityFirst #OpenSource
 ```
@@ -139,7 +139,7 @@ Miss this deadline = appeal automatically dismissed.
 
 3mpwrApp's Benefits Tracker sends reminders 30 days before deadlines.
 
-Never miss another one: https://3mpwrapp.pages.dev/features/benefits-tracker
+Never miss another one: https://3mpwrapp.ca/features/benefits-tracker
 
 #WSIB #WorkersComp #Ontario #LegalTips #DeadlineAlert
 ```
@@ -189,7 +189,7 @@ If you have chronic illness/pain, you know "spoons" = energy units.
 
 Built BY spoonies, FOR spoonies.
 
-Try it: https://3mpwrapp.pages.dev/features/spoon-theory
+Try it: https://3mpwrapp.ca/features/spoon-theory
 
 How do YOU manage energy with chronic illness?
 
@@ -239,7 +239,7 @@ Most apps say "accessible."
 ⏸️ Need-a-break button (pause everything, no data loss)
 🔥 Pain flare mode (voice control, larger text, fewer clicks)
 
-See all features: https://3mpwrapp.pages.dev/accessibility
+See all features: https://3mpwrapp.ca/accessibility
 
 What accessibility feature do you WISH apps had?
 
@@ -263,7 +263,7 @@ ODSP calculates from employment START date. Reporting late = automatic overpayme
 
 3mpwrApp's Benefits Tracker: set "Income Reporting" reminder for Day 1 of new job.
 
-https://3mpwrapp.pages.dev/features/benefits-tracker
+https://3mpwrapp.ca/features/benefits-tracker
 
 #ODSP #Ontario #DisabilityBenefits #IncomeReporting #LegalTips
 ```
@@ -288,7 +288,7 @@ Export PDF for doctors/adjudicators.
 
 Works offline. Private. Always free.
 
-https://3mpwrapp.pages.dev/features/pain-tracker
+https://3mpwrapp.ca/features/pain-tracker
 
 What tools help YOU track chronic pain?
 
@@ -317,7 +317,7 @@ Next: Extracting patterns + building search tool.
 
 This is what collective knowledge looks like.
 
-Building in public: https://3mpwrapp.pages.dev/blog
+Building in public: https://3mpwrapp.ca/blog
 
 #BuildInPublic #CanLII #LegalTech #AccessToJustice
 ```
@@ -338,7 +338,7 @@ Next Week:
 🔜 Crisis Resources feature tutorial
 🔜 More CanLII discoveries
 
-Building 3mpwrApp in public: https://3mpwrapp.pages.dev/blog
+Building 3mpwrApp in public: https://3mpwrapp.ca/blog
 
 #BuildInPublic #DisabilityTech #WeeklyRecap
 ```
@@ -392,7 +392,7 @@ Export med list for ER visits (crucial for safety).
 
 Works offline. Private. Free.
 
-https://3mpwrapp.pages.dev/features/medication-manager
+https://3mpwrapp.ca/features/medication-manager
 
 What's your med tracking struggle?
 
@@ -416,7 +416,7 @@ I missed deadlines. Lost evidence. Felt invisible.
 
 So I built tools for hard days—not just good ones.
 
-Read the full story: https://3mpwrapp.pages.dev/blog/why-i-built-3mpwrapp
+Read the full story: https://3mpwrapp.ca/blog/why-i-built-3mpwrapp
 
 Have you felt this way navigating disability systems?
 
@@ -440,7 +440,7 @@ Don't self-reject.
 
 3mpwrApp's Benefits Tracker guides you through eligibility.
 
-https://3mpwrapp.pages.dev/features/benefits-tracker
+https://3mpwrapp.ca/features/benefits-tracker
 
 #CPPDisability #DisabilityBenefits #Canada #LegalTips
 ```
@@ -464,7 +464,7 @@ Every provincial + national crisis line now works offline. Zero login required.
 
 Built for the moments that matter most.
 
-Try it: https://3mpwrapp.pages.dev/features/crisis-resources
+Try it: https://3mpwrapp.ca/features/crisis-resources
 
 #BuildInPublic #MentalHealth #CrisisSupport #AccessibilityFirst
 ```
@@ -537,7 +537,7 @@ We wrote the templates. You fill in the blanks.
 
 22 letters. 100% free. Plain language.
 
-https://3mpwrapp.pages.dev/features/letter-generator
+https://3mpwrapp.ca/features/letter-generator
 
 What letter are you dreading writing?
 
@@ -584,7 +584,7 @@ Filter by:
 
 Add YOUR events (free, no registration required).
 
-https://3mpwrapp.pages.dev/events
+https://3mpwrapp.ca/events
 
 What events should we add?
 
@@ -613,7 +613,7 @@ Protect your privacy while getting support.
 
 3mpwrApp's Letter Generator has 5 accommodation templates.
 
-https://3mpwrapp.pages.dev/features/letter-generator
+https://3mpwrapp.ca/features/letter-generator
 
 #WorkplaceRights #Accommodation #Privacy #DisabilityRights
 ```
@@ -638,7 +638,7 @@ Export calendar file (sync to phone).
 
 Brain fog? We remember for you.
 
-https://3mpwrapp.pages.dev/features/appointment-tracker
+https://3mpwrapp.ca/features/appointment-tracker
 
 How many doctors are you juggling?
 
@@ -684,7 +684,7 @@ Next Week:
 🔜 More Pro Tips (HRTO, workplace rights)
 🔜 Community Spotlight (if we get user stories!)
 
-Building 3mpwrApp in public: https://3mpwrapp.pages.dev/blog
+Building 3mpwrApp in public: https://3mpwrapp.ca/blog
 
 #BuildInPublic #DisabilityTech #WeeklyRecap
 ```
@@ -713,7 +713,7 @@ Why it works:
 • Never lose critical documents
 • Works 100% offline
 
-Free: https://3mpwrapp.pages.dev/features/evidence-locker
+Free: https://3mpwrapp.ca/features/evidence-locker
 
 Questions?
 
@@ -727,10 +727,10 @@ Questions?
 ```
 📚 Legal Resources Hub (100% Free)
 
-WSIB guides → https://3mpwrapp.pages.dev/resources#wsib
-ODSP guides → https://3mpwrapp.pages.dev/resources#odsp
-CPP-D guides → https://3mpwrapp.pages.dev/resources#cppd
-HRTO guides → https://3mpwrapp.pages.dev/resources#hrto
+WSIB guides → https://3mpwrapp.ca/resources#wsib
+ODSP guides → https://3mpwrapp.ca/resources#odsp
+CPP-D guides → https://3mpwrapp.ca/resources#cppd
+HRTO guides → https://3mpwrapp.ca/resources#hrto
 
 Plain language. No legal jargon. Always up-to-date.
 
@@ -763,7 +763,7 @@ Discrimination timeline:
 
 3mpwrApp's Benefits Tracker: deadline tracking for all systems.
 
-https://3mpwrapp.pages.dev/features/benefits-tracker
+https://3mpwrapp.ca/features/benefits-tracker
 
 #HRTO #HumanRights #Ontario #LegalTips #Discrimination
 ```
@@ -788,7 +788,7 @@ Export timeline for doctors/lawyers/adjudicators.
 
 Works offline. Private. Free.
 
-https://3mpwrapp.pages.dev/features/symptom-diary
+https://3mpwrapp.ca/features/symptom-diary
 
 Do you track symptoms? How?
 
@@ -865,7 +865,7 @@ Built BY community, FOR community.
 
 100% free. Always.
 
-Try it: https://3mpwrapp.pages.dev
+Try it: https://3mpwrapp.ca
 
 Questions? Ask below 👇
 
@@ -892,7 +892,7 @@ Export PDF case summary for lawyers.
 
 Works offline. Encrypted. Free.
 
-https://3mpwrapp.pages.dev/features/case-notes
+https://3mpwrapp.ca/features/case-notes
 
 What's your case organization struggle?
 
@@ -937,7 +937,7 @@ Is it accessible? YES. AAA compliant.
 Who built this? An injured worker (lived experience).
 Can I use it offline? YES. 100% offline-first.
 
-All answers: https://3mpwrapp.pages.dev/faq
+All answers: https://3mpwrapp.ca/faq
 
 What other questions should we add?
 
@@ -968,7 +968,7 @@ Ask your doctor to document HOW your condition affects WHAT you can do.
 
 3mpwrApp's Symptom Diary tracks functional capacity.
 
-https://3mpwrapp.pages.dev/features/symptom-diary
+https://3mpwrapp.ca/features/symptom-diary
 
 #MedicalEvidence #DisabilityBenefits #Documentation #Advocacy
 ```
@@ -994,7 +994,7 @@ Helps with:
 • Income reporting accuracy (ODSP)
 • Budgeting for bad months
 
-Free: https://3mpwrapp.pages.dev/features/budget-planner
+Free: https://3mpwrapp.ca/features/budget-planner
 
 How do you stretch disability income?
 
@@ -1021,7 +1021,7 @@ Filter by:
 ✅ Year (2020-2026)
 ✅ Keywords (search full text)
 
-Beta access: https://3mpwrapp.pages.dev/legal-search
+Beta access: https://3mpwrapp.ca/legal-search
 
 This is collective knowledge in action.
 
@@ -1046,7 +1046,7 @@ Next Week:
 🔜 Community Spotlight (first user story?)
 🔜 More CanLII discoveries
 
-Building 3mpwrApp in public: https://3mpwrapp.pages.dev/blog
+Building 3mpwrApp in public: https://3mpwrapp.ca/blog
 
 #BuildInPublic #WeeklyRecap #DisabilityTech
 ```
@@ -1076,7 +1076,7 @@ No browser extensions required.
 
 Works on ANY device, ANY browser.
 
-Try it: https://3mpwrapp.pages.dev (top-right corner)
+Try it: https://3mpwrapp.ca (top-right corner)
 
 What accessibility feature changes your life?
 
@@ -1101,7 +1101,7 @@ So I built the tools I needed.
 
 Now they're yours. Free. Forever.
 
-Read the full story: https://3mpwrapp.pages.dev/about
+Read the full story: https://3mpwrapp.ca/about
 
 What tool do YOU wish existed?
 
@@ -1128,7 +1128,7 @@ Miss these = automatic dismissal (rare exceptions).
 
 3mpwrApp's Benefits Tracker: reminders for ALL systems.
 
-https://3mpwrapp.pages.dev/features/benefits-tracker
+https://3mpwrapp.ca/features/benefits-tracker
 
 Which system are you navigating?
 
@@ -1154,7 +1154,7 @@ Checklist:
 
 Export PDF checklist.
 
-Free: https://3mpwrapp.pages.dev/features/hearing-prep
+Free: https://3mpwrapp.ca/features/hearing-prep
 
 What's your biggest hearing anxiety?
 
@@ -1231,7 +1231,7 @@ Export PDF for therapist/psychiatrist.
 
 Private. Offline. Free.
 
-https://3mpwrapp.pages.dev/features/crisis-safety-plan
+https://3mpwrapp.ca/features/crisis-safety-plan
 
 Do you have a safety plan?
 
@@ -1258,7 +1258,7 @@ We DO:
 ✅ Let you delete EVERYTHING anytime
 ✅ Explain this in plain language
 
-Read full policy: https://3mpwrapp.pages.dev/privacy
+Read full policy: https://3mpwrapp.ca/privacy
 
 Questions? Ask below.
 
@@ -1310,7 +1310,7 @@ Helps us prioritize what to create more of.
 
 Fill in blanks. Export PDF. Done.
 
-Free: https://3mpwrapp.pages.dev/features/letter-generator
+Free: https://3mpwrapp.ca/features/letter-generator
 
 Which letter template do you need most?
 
@@ -1343,7 +1343,7 @@ Assertive ≠ aggressive.
 
 3mpwrApp has 15+ advocacy scripts.
 
-https://3mpwrapp.pages.dev/resources/advocacy-scripts
+https://3mpwrapp.ca/resources/advocacy-scripts
 
 #SelfAdvocacy #DisabilityRights #Scripts #Communication
 ```
@@ -1367,7 +1367,7 @@ Prevents crashes. Sustainable productivity.
 
 Works offline. Free.
 
-https://3mpwrapp.pages.dev/features/pacing-timer
+https://3mpwrapp.ca/features/pacing-timer
 
 How do YOU pace energy?
 
@@ -1400,7 +1400,7 @@ What's next:
 
 Thank you for building with us. 🧡
 
-https://3mpwrapp.pages.dev
+https://3mpwrapp.ca
 
 #BuildInPublic #Milestone #Month1 #DisabilityTech #Gratitude
 ```
@@ -1423,7 +1423,7 @@ Month 2 Preview:
 
 Thanks for an amazing first month.
 
-Building 3mpwrApp: https://3mpwrapp.pages.dev/blog
+Building 3mpwrApp: https://3mpwrapp.ca/blog
 
 #BuildInPublic #WeeklyRecap #Month1Complete
 ```
@@ -1478,7 +1478,7 @@ Technical: IndexedDB + Service Workers + Encryption
 
 Your data. Your device. Your control.
 
-https://3mpwrapp.pages.dev/features/offline-mode
+https://3mpwrapp.ca/features/offline-mode
 
 #OfflineFirst #Privacy #Accessibility #TechForGood
 ```
@@ -1510,7 +1510,7 @@ This is just the beginning.
 
 Month 2 starts tomorrow. Join us.
 
-https://3mpwrapp.pages.dev
+https://3mpwrapp.ca
 
 #Gratitude #Community #DisabilityJustice #ThankYou #BuildTogether
 ```
@@ -1539,7 +1539,7 @@ Week 7-8:
 
 Stay tuned.
 
-Building 3mpwrApp: https://3mpwrapp.pages.dev/blog
+Building 3mpwrApp: https://3mpwrapp.ca/blog
 
 #Month2 #Roadmap #BuildInPublic #DisabilityTech #WhatsNext
 ```
@@ -1606,7 +1606,7 @@ Building 3mpwrApp: https://3mpwrapp.pages.dev/blog
 Before automating ANY post:
 
 ✅ **Personalization:** Replace [YEAR], [WSIB/ODSP/CPP-D], etc. with your actual story  
-✅ **Links work:** Test all https://3mpwrapp.pages.dev URLs  
+✅ **Links work:** Test all https://3mpwrapp.ca URLs  
 ✅ **Visual assets:** Confirm flywheels diagram exists, upload when needed  
 ✅ **Hashtags:** Max 4-5 per post (avoid spam appearance)  
 ✅ **Character count:** Bluesky 300, Mastodon 500 (smart truncate handles this)  

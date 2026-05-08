@@ -612,8 +612,8 @@ My shoulder injury is an occupational disease caused by [cumulative trauma from 
 
 **3mpwrApp Resources:**
 - Knowledge base: [Shoulder Injury Guide](../knowledge-base/shoulder-rotator-cuff-claims.md)
-- Research: [WSIB Exposed - Statistical Evidence](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
-- Keyword decoder: [Decode Your Denial Letter](https://3mpwrapp.pages.dev/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/)
+- Research: [WSIB Exposed - Statistical Evidence](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+- Keyword decoder: [Decode Your Denial Letter](https://3mpwrapp.ca/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/)
 
 **Email us:** empowrapp08162025@gmail.com
 

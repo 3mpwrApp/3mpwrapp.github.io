@@ -574,8 +574,8 @@ npm audit fix
 Contact: mailto:security@3mpwrapp.ca
 Expires: 2026-10-27T00:00:00.000Z
 Preferred-Languages: en, fr
-Canonical: https://3mpwrapp.pages.dev/.well-known/security.txt
-Policy: https://3mpwrapp.pages.dev/security-policy
+Canonical: https://3mpwrapp.ca/.well-known/security.txt
+Policy: https://3mpwrapp.ca/security-policy
 ```
 
 ---

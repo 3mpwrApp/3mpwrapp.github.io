@@ -836,7 +836,7 @@ textstat index.md
 lychee **/*.md
 
 # Accessibility scanner
-pa11y https://3mpwrapp.pages.dev/
+pa11y https://3mpwrapp.ca/
 ```
 
 ---

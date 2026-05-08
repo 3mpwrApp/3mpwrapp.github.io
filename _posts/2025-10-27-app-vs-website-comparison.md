@@ -335,7 +335,7 @@ Most users find both valuable for different purposes.
 ## Getting Started
 
 ### Try the Website First (No Commitment)
-1. Visit [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev)
+1. Visit [3mpwrapp.pages.dev](https://3mpwrapp.ca)
 2. Explore resources, try accessibility features
 3. Join a community forum if you'd like
 4. Decide if you want the app later

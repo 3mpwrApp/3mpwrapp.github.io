@@ -310,7 +310,7 @@ Based on analysis of 98,992 WSIAT decisions:
 ### Peer Support
 - **Threads of Life:** Support for workplace injury survivors
 - **Facebook Groups:** "Ontario Healthcare Workers WSIB Support"
-- **3mpwrApp Community:** [Join here](https://3mpwrapp.pages.dev/community/)
+- **3mpwrApp Community:** [Join here](https://3mpwrapp.ca/community/)
 
 ---
 
@@ -318,8 +318,8 @@ Based on analysis of 98,992 WSIAT decisions:
 
 1. **Get this guide:** [Download PDF](../guides/healthcare-wsiat-guide.pdf) (coming soon)
 2. **Find templates:** [Healthcare Templates](../data/templates/) - filter by your injury type
-3. **Join community:** [3mpwrApp Community](https://3mpwrapp.pages.dev/community/) - connect with other healthcare workers
-4. **Get representation:** [Find free legal help](https://3mpwrapp.pages.dev/resources/legal-clinics/)
+3. **Join community:** [3mpwrApp Community](https://3mpwrapp.ca/community/) - connect with other healthcare workers
+4. **Get representation:** [Find free legal help](https://3mpwrapp.ca/resources/legal-clinics/)
 5. **Share your story:** Help improve this guide with your experience
 
 ---

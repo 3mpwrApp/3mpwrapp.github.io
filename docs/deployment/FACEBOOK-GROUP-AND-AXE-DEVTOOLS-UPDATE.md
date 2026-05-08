@@ -70,20 +70,20 @@ Both requested changes have been successfully implemented, tested, and deployed 
 
 ### Test Homepage
 ```bash
-npx axe https://3mpwrapp.pages.dev/
+npx axe https://3mpwrapp.ca/
 ```
 
 ### Test Specific Pages
 ```bash
-npx axe https://3mpwrapp.pages.dev/about/
-npx axe https://3mpwrapp.pages.dev/features/
-npx axe https://3mpwrapp.pages.dev/user-guide/
-npx axe https://3mpwrapp.pages.dev/accessibility/
+npx axe https://3mpwrapp.ca/about/
+npx axe https://3mpwrapp.ca/features/
+npx axe https://3mpwrapp.ca/user-guide/
+npx axe https://3mpwrapp.ca/accessibility/
 ```
 
 ### Generate Report
 ```bash
-npx axe https://3mpwrapp.pages.dev/ --json > accessibility-report.json
+npx axe https://3mpwrapp.ca/ --json > accessibility-report.json
 ```
 
 ### Browser Extension
@@ -216,7 +216,7 @@ After deployment, verify:
 - [ ] Footer has Facebook Group icon link
 - [ ] Connect page lists Facebook Group
 - [ ] French connect page updated
-- [ ] Axe CLI works: `npx axe https://3mpwrapp.pages.dev/`
+- [ ] Axe CLI works: `npx axe https://3mpwrapp.ca/`
 - [ ] Browser extension installed (optional)
 - [ ] No accessibility regressions
 
@@ -236,8 +236,8 @@ After deployment, verify:
 
 ## 📞 Next Steps
 
-1. Verify changes on live site (https://3mpwrapp.pages.dev/)
-2. Test with Axe CLI: `npx axe https://3mpwrapp.pages.dev/`
+1. Verify changes on live site (https://3mpwrapp.ca/)
+2. Test with Axe CLI: `npx axe https://3mpwrapp.ca/`
 3. Install browser extension for manual testing
 4. Review AXE-DEVTOOLS-SETUP-GUIDE.md for advanced usage
 5. Run accessibility checks on key pages

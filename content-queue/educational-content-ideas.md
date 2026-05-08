@@ -31,7 +31,7 @@ Here's how:
 
 Lived Experience → Data → Insight → Action
 
-Full diagram: https://3mpwrapp.pages.dev/#flywheels
+Full diagram: https://3mpwrapp.ca/#flywheels
 
 What do you think? Does this resonate?
 
@@ -212,7 +212,7 @@ Why it works:
 • You never lose critical documents
 • Works 100% offline (no internet required)
 
-Free forever: https://3mpwrapp.pages.dev/features/evidence-locker
+Free forever: https://3mpwrapp.ca/features/evidence-locker
 
 Questions about organizing evidence? Ask below 👇
 
@@ -233,7 +233,7 @@ If you have chronic illness/pain, you know "spoons" = energy units.
 
 Built BY spoonies, FOR spoonies.
 
-Try it: https://3mpwrapp.pages.dev/features/spoon-theory
+Try it: https://3mpwrapp.ca/features/spoon-theory
 
 How do YOU manage energy with chronic illness?
 
@@ -251,10 +251,10 @@ How do YOU manage energy with chronic illness?
 ```
 📚 Everything You Need (100% Free)
 
-Crisis hotlines → https://3mpwrapp.pages.dev/crisis-resources
-Legal guides → https://3mpwrapp.pages.dev/resources
-Community events → https://3mpwrapp.pages.dev/events
-Accommodation templates → https://3mpwrapp.pages.dev/features/letter-generator
+Crisis hotlines → https://3mpwrapp.ca/crisis-resources
+Legal guides → https://3mpwrapp.ca/resources
+Community events → https://3mpwrapp.ca/events
+Accommodation templates → https://3mpwrapp.ca/features/letter-generator
 
 No login required. No paywalls. No BS.
 
@@ -273,7 +273,7 @@ I missed deadlines. Lost evidence. Felt invisible.
 
 So I built tools for hard days—not just good ones.
 
-Read the full story: https://3mpwrapp.pages.dev/blog/why-i-built-3mpwrapp
+Read the full story: https://3mpwrapp.ca/blog/why-i-built-3mpwrapp
 
 Have you felt this way navigating disability systems?
 
@@ -291,7 +291,7 @@ Most apps say "accessible."
 ⏸️ Need-a-break button (pause everything, no data loss)
 🔥 Pain flare mode (voice control, larger text, fewer clicks)
 
-See all features: https://3mpwrapp.pages.dev/accessibility
+See all features: https://3mpwrapp.ca/accessibility
 
 What accessibility feature do you WISH apps had?
 

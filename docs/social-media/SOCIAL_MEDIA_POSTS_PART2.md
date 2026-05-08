@@ -37,8 +37,8 @@ Combined with Part 1's completed images 1-33, you have **99 + 318 = 417 posts** 
 ### Image 67: Research Tab Overview
 **Filename**: `researchtab3mpwrapp.png`  
 **Alt Text**: Research tab showcasing legal research tools, case law database, and disability rights documentation - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#research  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#research  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (487 chars):
 Research Tab = Legal research without law degree 📚⚖️
@@ -53,7 +53,7 @@ Research Tab = Legal research without law degree 📚⚖️
 
 From beginner guides to advanced legal research. Cited. Searchable. Updated monthly.
 
-Start researching → https://3mpwrapp.pages.dev/user-guide/#research?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research
+Start researching → https://3mpwrapp.ca/user-guide/#research?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research
 
 #LegalResearch #DisabilityRights
 
@@ -64,7 +64,7 @@ Case law. Precedents. Policy analysis. Government resources. UN rights framework
 
 All organized. All cited. All accessible →
 
-Research → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research
+Research → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research
 
 #LegalResearch
 
@@ -73,7 +73,7 @@ Need precedent law for your case? Research tab finds similar cases, winning argu
 
 Law library in your pocket. Free →
 
-Research → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research
+Research → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research
 
 #LegalResearch
 
@@ -82,8 +82,8 @@ Research → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_mediu
 ### Image 68: External Resources
 **Filename**: `researchtabexternalresources3mpwrapp.png`  
 **Alt Text**: External resources directory linking to government agencies, legal clinics, and disability advocacy organizations - 3mpwrApp Research  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#external-resources  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#external-resources  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (492 chars):
 External Resources = Vetted organizations you can trust 🔗✅
@@ -99,7 +99,7 @@ External Resources = Vetted organizations you can trust 🔗✅
 
 All links verified monthly. Descriptions explain WHAT they do and WHO they help.
 
-Connect to help → https://3mpwrapp.pages.dev/user-guide/#external-resources?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=external_resources
+Connect to help → https://3mpwrapp.ca/user-guide/#external-resources?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=external_resources
 
 #DisabilityResources #LegalAid
 
@@ -110,22 +110,22 @@ Connect to help → https://3mpwrapp.pages.dev/user-guide/#external-resources?ut
 
 External Resources = Vetted directory →
 
-Find help → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=external
+Find help → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=external
 
 **X/Twitter** (277 chars):
 200+ vetted organizations. Legal clinics. Advocacy groups. Government agencies. Financial aid programs.
 
 Stop Googling. Use curated directory →
 
-Find resources → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=external
+Find resources → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=external
 
 ---
 
 ### Image 69: Master Research Index
 **Filename**: `researchtabmasterresearchindex3mpwrapp.png`  
 **Alt Text**: Master research index organizing 1,000+ articles, case law, and legal resources by topic - 3mpwrApp Research  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#research-index  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#research-index  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (489 chars):
 Master Research Index = 1,000+ resources. Zero chaos 📚🗂️
@@ -143,7 +143,7 @@ Each resource tagged: Beginner/Intermediate/Advanced, Province-specific, Legal p
 
 Find what you need in 30 seconds.
 
-Browse index → https://3mpwrapp.pages.dev/user-guide/#research-index?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research_index
+Browse index → https://3mpwrapp.ca/user-guide/#research-index?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research_index
 
 #LegalResearch
 
@@ -154,22 +154,22 @@ Workers comp. Human rights. Employment law. Disability rights. Medical-legal. Pr
 
 Find anything in 30 seconds →
 
-Search index → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research_index
+Search index → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research_index
 
 **X/Twitter** (274 chars):
 Legal research = usually hours. With Master Research Index = 30 seconds 📚
 
 1,000+ resources tagged by topic, province, complexity level. Find precedents, guides, case law instantly →
 
-Search → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=index
+Search → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=index
 
 ---
 
 ### Image 70: Research Library
 **Filename**: `researchtabresearchlibrary3mpwrapp.png`  
 **Alt Text**: Research library with case law database, legal precedents, and scholarly articles on disability rights - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#research-library  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#research-library  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (495 chars):
 Research Library = Deep legal research tools 📖⚖️
@@ -188,7 +188,7 @@ Each case summary includes:
 
 Advanced research made accessible.
 
-Explore library → https://3mpwrapp.pages.dev/user-guide/#research-library?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research_library
+Explore library → https://3mpwrapp.ca/user-guide/#research-library?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=research_library
 
 #CaseLaw #Precedent
 
@@ -197,7 +197,7 @@ Explore library → https://3mpwrapp.pages.dev/user-guide/#research-library?utm_
 
 "Show me cases about chronic pain denied then approved" → 47 results, all summarized →
 
-Research library → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
+Research library → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
 
 #LegalResearch
 
@@ -208,15 +208,15 @@ Research Library: "Here are 12 similar cases that WON" 📖
 
 Case law database searchable by topic, province, injury type →
 
-Search → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
+Search → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
 
 ---
 
 ### Image 71: UNCRPD Framework & Application Guide
 **Filename**: `researchtabuncrpdframeworknapplicationguide3mpwrapp.png`  
 **Alt Text**: UN Convention on Rights of Persons with Disabilities framework application guide - 3mpwrApp Research  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#uncrpd  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#uncrpd  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (497 chars):
 UNCRPD = Your UN-backed legal foundation 🇺🇳♿
@@ -234,7 +234,7 @@ Canada ratified it. That means YOUR rights are protected under international law
 
 Your employer denies accommodation? UNCRPD Article 27 says that's discrimination.
 
-Know your global rights → https://3mpwrapp.pages.dev/user-guide/#uncrpd?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=uncrpd
+Know your global rights → https://3mpwrapp.ca/user-guide/#uncrpd?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=uncrpd
 
 #UNCRPD #DisabilityRights #InternationalLaw
 
@@ -243,7 +243,7 @@ Canada signed the UN disability rights treaty. That means YOU have international
 
 UNCRPD guide explains how to USE it in your case. Article by article. Plain language →
 
-Learn UNCRPD → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=uncrpd
+Learn UNCRPD → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=uncrpd
 
 #DisabilityRights
 
@@ -252,7 +252,7 @@ Your rights aren't just Canadian. They're GLOBAL 🇺🇳
 
 UN disability rights convention guide shows how to cite international law in your appeals. Article 27. Article 5. Article 9.
 
-Legal foundation → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=uncrpd
+Legal foundation → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=uncrpd
 
 ---
 
@@ -261,8 +261,8 @@ Legal foundation → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&u
 ### Image 72: Campaigns Tab - Active Campaigns
 **Filename**: `campaignstab3mpwrapp.png`  
 **Alt Text**: Active campaigns dashboard showing ongoing disability rights advocacy campaigns and policy change initiatives - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#campaigns  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#campaigns  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (494 chars):
 Campaigns Tab = Collective power in action 📢💪
@@ -282,7 +282,7 @@ Each campaign shows:
 
 Change happens when we organize.
 
-Join campaign → https://3mpwrapp.pages.dev/user-guide/#campaigns?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=campaigns
+Join campaign → https://3mpwrapp.ca/user-guide/#campaigns?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=campaigns
 
 #CollectiveAction #Organizing
 
@@ -291,7 +291,7 @@ Join campaign → https://3mpwrapp.pages.dev/user-guide/#campaigns?utm_source=ma
 
 Campaigns tab = Find your fight. Join forces. Change policy →
 
-Organize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=campaigns
+Organize → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=campaigns
 
 #SolidarityForever
 
@@ -302,7 +302,7 @@ Organize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_mediu
 
 Campaigns tab shows active organizing efforts. Join one. Start one. Build power →
 
-Organize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=campaigns
+Organize → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=campaigns
 
 #Organizing
 
@@ -311,8 +311,8 @@ Organize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_mediu
 ### Image 73: Create Campaign
 **Filename**: `createcampaigncampaignstab3mpwrapp.png`  
 **Alt Text**: Create campaign wizard for starting new disability rights advocacy campaigns and organizing collective action - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#create-campaign  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#create-campaign  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (491 chars):
 Create Campaign = Organize change in 10 minutes 📢🛠️
@@ -328,7 +328,7 @@ Create Campaign = Organize change in 10 minutes 📢🛠️
 
 50-user threshold unlocks coordinated legal action features.
 
-Build your movement → https://3mpwrapp.pages.dev/user-guide/#create-campaign?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_campaign
+Build your movement → https://3mpwrapp.ca/user-guide/#create-campaign?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_campaign
 
 #CommunityOrganizing #Solidarity
 
@@ -339,7 +339,7 @@ You're not. Create campaign. Find the others. Organize →
 
 Campaign builder walks you through it. 10 minutes to launch 📢
 
-Start organizing → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_campaign
+Start organizing → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_campaign
 
 **X/Twitter** (279 chars):
 Angry? Organize. App makes it easy 📢
@@ -348,7 +348,7 @@ Define goal → Find similar cases → Invite members → Launch campaign → Ch
 
 50-user threshold = full legal coordination tools unlocked →
 
-Start campaign → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_campaign
+Start campaign → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_campaign
 
 ---
 
@@ -357,8 +357,8 @@ Start campaign → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm
 ### Image 74-75: Events Tab Overview
 **Filenames**: `eventstab13mpwrapp.png`, `eventstab23mpwrapp.png`  
 **Alt Text**: Events calendar showing disability rights workshops, support group meetings, legal clinics, and advocacy trainings - 3mpwrApp Community  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#events  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#events  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (496 chars):
 Events Tab = Never miss a workshop, support group, or legal clinic 📅✨
@@ -375,7 +375,7 @@ Filter by: Date, Location (virtual/in-person), Topic, Province.
 
 Stay connected. Stay informed.
 
-Browse events → https://3mpwrapp.pages.dev/user-guide/#events?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=events
+Browse events → https://3mpwrapp.ca/user-guide/#events?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=events
 
 #CommunityEvents #DisabilityAdvocacy
 
@@ -386,7 +386,7 @@ Legal clinic with disability lawyer, April 3
 
 Events tab = Community calendar for disabled people →
 
-Find events → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=events
+Find events → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=events
 
 **X/Twitter** (276 chars):
 "When's the next legal clinic?" → Events calendar has 40+ upcoming  
@@ -394,7 +394,7 @@ Find events → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_me
 
 Community events organized for YOU →
 
-Browse → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=events
+Browse → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=events
 
 #Community
 
@@ -403,8 +403,8 @@ Browse → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=
 ### Image 76: Events Calendar - Month View
 **Filename**: `eventscalendar3mpwrapp1.png`  
 **Alt Text**: Monthly calendar view of disability community events with color-coded categories - 3mpwrApp Events  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#calendar-view  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#calendar-view  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (486 chars):
 Calendar View = See your month at a glance 📅🎨
@@ -425,7 +425,7 @@ Accessible venue = ♿ icon
 
 Plan your month. Never miss support.
 
-View calendar → https://3mpwrapp.pages.dev/user-guide/#calendar-view?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=calendar_month
+View calendar → https://3mpwrapp.ca/user-guide/#calendar-view?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=calendar_month
 
 #EventPlanning #Community
 
@@ -440,7 +440,7 @@ Purple = social
 
 Plan participation →
 
-See calendar → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=calendar
+See calendar → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=calendar
 
 **X/Twitter** (275 chars):
 Monday: Legal clinic (virtual)  
@@ -450,15 +450,15 @@ Saturday: Social meetup
 
 Calendar view = Your disability community month at a glance 📅
 
-Plan → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=calendar
+Plan → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=calendar
 
 ---
 
 ### Image 77: Events Calendar - Week View
 **Filename**: `eventscalendar3mpwrapp2.png`  
 **Alt Text**: Weekly calendar view showing detailed event schedule with time slots and event descriptions - 3mpwrApp Events  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#calendar-week  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#calendar-week  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (482 chars):
 Week View = Plan your advocacy schedule ⏰📅
@@ -479,7 +479,7 @@ Smart features:
 
 Manage your week. Respect your energy.
 
-Plan week → https://3mpwrapp.pages.dev/user-guide/#calendar-week?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=calendar_week
+Plan week → https://3mpwrapp.ca/user-guide/#calendar-week?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=calendar_week
 
 #SpoonTheory #EventPacing
 
@@ -490,7 +490,7 @@ Calendar that understands chronic illness pacing 📅💚
 
 Smart scheduling →
 
-Plan week → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=week_view
+Plan week → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=week_view
 
 #ChronicIllness #Pacing
 
@@ -499,7 +499,7 @@ App: "You scheduled 3 events Tuesday. That's a high-energy day. Want to move one
 
 Calendar that respects spoon theory 📅🥄
 
-Smart planning → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=week_view
+Smart planning → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=week_view
 
 #SpoonTheory
 
@@ -508,8 +508,8 @@ Smart planning → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm
 ### Image 78: Filter Events
 **Filename**: `eventstabfilterevents3mpwrapp.png`  
 **Alt Text**: Event filtering interface with options for location, category, accessibility needs, and virtual/in-person - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#filter-events  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#filter-events  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (494 chars):
 Filter Events = Find exactly what you need 🔍📅
@@ -525,7 +525,7 @@ Filter Events = Find exactly what you need 🔍📅
 
 Find events that fit YOUR needs. No barriers.
 
-Filter & browse → https://3mpwrapp.pages.dev/user-guide/#filter-events?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=filter_events
+Filter & browse → https://3mpwrapp.ca/user-guide/#filter-events?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=filter_events
 
 #AccessibleEvents #DisabilityCommunity
 
@@ -534,7 +534,7 @@ Filter & browse → https://3mpwrapp.pages.dev/user-guide/#filter-events?utm_sou
 
 Filter events by accessibility needs. Actually works →
 
-Find events → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=filter
+Find events → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=filter
 
 #AccessibleEvents #A11y
 
@@ -544,7 +544,7 @@ Results: 8 events match all criteria ✅
 
 Filter that respects ALL accessibility needs →
 
-Search events → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=filter
+Search events → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=filter
 
 #A11y
 
@@ -553,8 +553,8 @@ Search events → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_
 ### Image 79: Create Event
 **Filename**: `eventstabscreateevent3mpwrapp.png`  
 **Alt Text**: Create event form for organizing community events, support groups, workshops, and advocacy actions - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#create-event  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#create-event  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (498 chars):
 Create Event = Build community. Organize support 📅🛠️
@@ -570,7 +570,7 @@ Create Event = Build community. Organize support 📅🛠️
 
 Starting a support group? The app helps you organize.
 
-Create event → https://3mpwrapp.pages.dev/user-guide/#create-event?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_event
+Create event → https://3mpwrapp.ca/user-guide/#create-event?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_event
 
 #CommunityOrganizing #DisabilityCommunity
 
@@ -581,7 +581,7 @@ Event creator walks you through it. Date. Format. Accessibility. Invites. Done �
 
 Organize your community →
 
-Create → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_event
+Create → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_event
 
 #SupportGroups
 
@@ -590,7 +590,7 @@ Start a support group? Create an event. App helps you organize, invite members, 
 
 Community organizing made easy 📅
 
-Create event → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_event
+Create event → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=create_event
 
 #Organizing
 
@@ -601,8 +601,8 @@ Create event → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_m
 ### Image 80: Community Hub Main
 **Filename**: `communityhubtab3mpwrapp.png`  
 **Alt Text**: Community Hub main dashboard with discussion forums, support groups, peer matching, and Discord integration - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#community-hub  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#community-hub  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (496 chars):
 Community Hub = Find your people 💚🤝
@@ -620,7 +620,7 @@ Algorithmically matched. Community moderated. Privacy-first.
 
 You're not alone.
 
-Join community → https://3mpwrapp.pages.dev/user-guide/#community-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=community_hub
+Join community → https://3mpwrapp.ca/user-guide/#community-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=community_hub
 
 #DisabilityCommunity #PeerSupport #MutualAid
 
@@ -631,7 +631,7 @@ Community Hub → 47 people matched. Same battle. Real advice. Zero BS 💚
 
 Find your people →
 
-Join community → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=community_hub
+Join community → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=community_hub
 
 #DisabilityCommunity
 
@@ -642,7 +642,7 @@ Community Hub = Forums + Support groups + Peer matching + Discord chat
 
 You're not alone →
 
-Find people → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=community_hub
+Find people → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=community_hub
 
 #Community
 
@@ -651,8 +651,8 @@ Find people → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_me
 ### Image 81-82: Community Tab (Discussion Forums & Support Groups)
 **Filenames**: `communitytab13mpwrapp.png`, `communitytab23mpwrapp.png`  
 **Alt Text**: Community discussion forums and support groups organized by topic, province, and disability type - 3mpwrApp Community  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#forums-groups  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#forums-groups  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (491 chars):
 **Discussion Forums** = Ask. Answer. Learn 💬📚
@@ -674,7 +674,7 @@ Find people → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_me
 
 Ask questions. Share wins. Learn from each other.
 
-Join conversations → https://3mpwrapp.pages.dev/user-guide/#forums-groups?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forums_groups
+Join conversations → https://3mpwrapp.ca/user-guide/#forums-groups?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forums_groups
 
 #PeerSupport #Forums
 
@@ -685,7 +685,7 @@ Discussion forums for quick questions. Support groups for ongoing solidarity �
 
 Find your thread →
 
-Join → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forums_groups
+Join → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forums_groups
 
 #DisabilityCommunity
 
@@ -694,15 +694,15 @@ Join → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=so
 
 Support groups for ongoing connection. Forums for quick questions →
 
-Join → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forums_groups
+Join → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forums_groups
 
 ---
 
 ### Image 83: Discord Integration
 **Filename**: `communitytab3discord3mpwrapp.png`  
 **Alt Text**: Discord server integration for real-time chat and community engagement with 3mpwrApp users - Community Hub  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#discord  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#discord  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (488 chars):
 Discord Integration = Real-time community chat 💬⚡
@@ -718,7 +718,7 @@ Discord Integration = Real-time community chat 💬⚡
 
 1,200+ members. Moderated 24/7. Safe space enforced.
 
-Join Discord → https://3mpwrapp.pages.dev/user-guide/#discord?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=discord
+Join Discord → https://3mpwrapp.ca/user-guide/#discord?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=discord
 
 #DiscordCommunity #RealTimeSupport
 
@@ -727,7 +727,7 @@ Need immediate feedback? Discord server = 1,200+ members online now 💬
 
 Ask questions. Share wins. Crisis support. Real-time connection →
 
-Join Discord → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=discord
+Join Discord → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=discord
 
 #Community #Discord
 
@@ -736,15 +736,15 @@ Join Discord → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_m
 
 Community that actually shows up →
 
-Join Discord → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=discord
+Join Discord → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=discord
 
 ---
 
 ### Image 84: Beta Testers Chat
 **Filename**: `testerschatcommunitytab3mpwrapp.png`  
 **Alt Text**: Beta testers-only chat channel for feedback, bug reports, and feature discussions - 3mpwrApp Community  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#beta-chat  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#how-to-join-beta-testing
+**User Guide**: https://3mpwrapp.ca/user-guide/#beta-chat  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#how-to-join-beta-testing
 
 **Mastodon** (494 chars):
 Beta Testers Chat = Shape the app with us 🧪💬
@@ -760,7 +760,7 @@ Beta Testers Chat = Shape the app with us 🧪💬
 
 Your feedback builds the app. 19 testers so far. Join us.
 
-Be a beta tester → https://3mpwrapp.pages.dev/beta-guide/#how-to-join-beta-testing?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=beta_chat
+Be a beta tester → https://3mpwrapp.ca/beta-guide/#how-to-join-beta-testing?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=beta_chat
 
 #BetaTesting #ProductDevelopment
 
@@ -769,7 +769,7 @@ Beta testers requested Dark Mode 2.0. We built it in 48 hours. That's how fast w
 
 Beta chat = Direct line to developers →
 
-Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=beta_chat
+Join beta → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=beta_chat
 
 #BetaTesting
 
@@ -778,7 +778,7 @@ Found a bug? Report it in Beta Chat. Dev fixes it same day. That's the power of 
 
 Your feedback shapes the app →
 
-Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=beta_chat
+Join beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=beta_chat
 
 #BetaTesting
 
@@ -789,8 +789,8 @@ Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medi
 ### Image 85-87: Avatar Selection
 **Filenames**: `Profile-Avatar-1.png`, `Profile-Avatar-2.png`, `Profile-Avatar-3.png`  
 **Alt Text**: Customizable avatar selection with diverse disability representation and identity options - 3mpwrApp Profile  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#profile-avatar  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#profile-avatar  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (496 chars):
 Avatar Selection = Represent yourself 🎨👤
@@ -808,7 +808,7 @@ Or upload your own photo. Or use initials. Or go anonymous.
 
 Your identity. Your choice.
 
-Customize profile → https://3mpwrapp.pages.dev/user-guide/#profile-avatar?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=avatar
+Customize profile → https://3mpwrapp.ca/user-guide/#profile-avatar?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=avatar
 
 #Representation #Inclusion
 
@@ -819,7 +819,7 @@ Representation that actually includes YOU 🎨
 
 Customize →
 
-Select avatar → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=avatar
+Select avatar → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=avatar
 
 #DisabilityRep
 
@@ -828,7 +828,7 @@ Select avatar → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_
 
 FINALLY see yourself represented 🎨
 
-Choose avatar → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=avatar
+Choose avatar → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=avatar
 
 #Representation
 
@@ -837,8 +837,8 @@ Choose avatar → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_
 ### Image 88-91: Setup Profile Steps
 **Filenames**: `SetupProfile-1-RoleANDWellnessToolsPreferences.png`, `SetupProfile-2-AdvocacyNeeds.png`, `SetupProfile-3-AccessibilityAccomodationsANDEnergyPatterns.png`, `SetupProfile-4-PushNotificationsANDReminders-SaveProfile.png`  
 **Alt Text**: Four-step profile setup wizard collecting role, wellness preferences, advocacy needs, accessibility requirements, energy patterns, and notification settings - 3mpwrApp onboarding  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#profile-setup  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#how-to-join-beta-testing
+**User Guide**: https://3mpwrapp.ca/user-guide/#profile-setup  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#how-to-join-beta-testing
 
 **Mastodon** (498 chars):
 Setup Profile = Personalization in 4 steps ⚙️✨
@@ -859,7 +859,7 @@ Setup Profile = Personalization in 4 steps ⚙️✨
 
 App adapts to YOUR answers.
 
-Complete setup → https://3mpwrapp.pages.dev/user-guide/#profile-setup?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=profile_setup
+Complete setup → https://3mpwrapp.ca/user-guide/#profile-setup?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=profile_setup
 
 #Personalization #Onboarding
 
@@ -870,7 +870,7 @@ Role. Advocacy goals. Accessibility. Notifications.
 
 Answer 12 questions → App personalizes everything →
 
-Setup profile → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=profile_setup
+Setup profile → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=profile_setup
 
 #Personalization
 
@@ -879,7 +879,7 @@ Setup profile → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_
 
 Tell us your role, goals, accessibility needs, notification preferences. App adapts to YOU →
 
-Setup profile → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=profile_setup
+Setup profile → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=profile_setup
 
 #Onboarding
 
@@ -888,8 +888,8 @@ Setup profile → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_
 ### Image 92-93: Emergency Wallet Cards
 **Filenames**: `emergencywalletcard-1.png`, `emergencywalletcard-2-emergencycontacts.png`  
 **Alt Text**: Printable emergency wallet cards with medical information, emergency contacts, and disability accommodations - 3mpwrApp Profile safety tools  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#emergency-cards  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#original-priority-features
+**User Guide**: https://3mpwrapp.ca/user-guide/#emergency-cards  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#original-priority-features
 
 **Mastodon** (497 chars):
 Emergency Wallet Cards = Critical info when you can't speak 🆘🪪
@@ -909,7 +909,7 @@ Emergency Wallet Cards = Critical info when you can't speak 🆘🪪
 
 Print. Laminate. Keep in wallet. First responders know how to help you.
 
-Generate cards → https://3mpwrapp.pages.dev/user-guide/#emergency-cards?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=emergency_cards
+Generate cards → https://3mpwrapp.ca/user-guide/#emergency-cards?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=emergency_cards
 
 #DisabilitySafety #EmergencyPrep
 
@@ -920,7 +920,7 @@ Medical info + emergency contacts. Printable. Laminatable. Life-saving →
 
 Generate card →
 
-Create → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=emergency_cards
+Create → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=emergency_cards
 
 #Safety
 
@@ -931,15 +931,15 @@ Medical needs. Medications. Allergies. Emergency contacts. Communication accommo
 
 Print it. Carry it. Stay safe →
 
-Generate → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=emergency_cards
+Generate → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=emergency_cards
 
 ---
 
 ### Image 94: Wellness Check-In
 **Filename**: `wellnesscheckin.png`  
 **Alt Text**: Daily wellness check-in prompt tracking mood, pain, energy, and overall wellbeing - 3mpwrApp Profile  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#wellness-checkin  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#wellness-checkin  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (493 chars):
 Wellness Check-In = 30 seconds to track your day 💚📊
@@ -956,7 +956,7 @@ Wellness Check-In = 30 seconds to track your day 💚📊
 
 AI detects patterns. You understand triggers. Data empowers you.
 
-Track wellness → https://3mpwrapp.pages.dev/user-guide/#wellness-checkin?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=checkin
+Track wellness → https://3mpwrapp.ca/user-guide/#wellness-checkin?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=checkin
 
 #WellnessTracking #ChronicIllness #SpoonTheory
 
@@ -969,7 +969,7 @@ Patterns revealed. Triggers identified 📊
 
 Track wellness →
 
-Check in → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=checkin
+Check in → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=checkin
 
 #ChronicIllness
 
@@ -980,7 +980,7 @@ Over time = pattern: "Mondays always bad after Sunday family dinners"
 
 Data-driven self-awareness →
 
-Track it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=checkin
+Track it → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=checkin
 
 #SpoonTheory
 
@@ -991,8 +991,8 @@ Track it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_mediu
 ### Image 95: Settings General - Language & Notifications
 **Filename**: `Settings1-LanguageNotification.png`  
 **Alt Text**: General settings for language selection and notification preferences - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#settings  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#settings  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (484 chars):
 Settings = Control everything ⚙️🎛️
@@ -1007,7 +1007,7 @@ Settings = Control everything ⚙️🎛️
 
 Customize how the app communicates with you.
 
-Adjust settings → https://3mpwrapp.pages.dev/user-guide/#settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=settings_general
+Adjust settings → https://3mpwrapp.ca/user-guide/#settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=settings_general
 
 #AppSettings #Personalization
 
@@ -1016,7 +1016,7 @@ Control notifications. Change language. Set quiet hours ⚙️
 
 Stop 3am wellness check-in pings. Get deadline alerts only. Weekly digest instead of constant pings →
 
-Customize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=settings_general
+Customize → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=settings_general
 
 #Settings
 
@@ -1025,15 +1025,15 @@ Notifications overwhelming you? Settings → Quiet Hours. Only urgent deadline a
 
 Full control over how app communicates →
 
-Settings → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=settings
+Settings → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=settings
 
 ---
 
 ### Image 96: Quiet Hours & Alert Types
 **Filename**: `Settings2-QuietHoursAlertTypes.png`  
 **Alt Text**: Quiet hours schedule and alert type customization to reduce notification overwhelm - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#quiet-hours  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#quiet-hours  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (492 chars):
 Quiet Hours = Boundaries for your brain 🔕🧠
@@ -1053,7 +1053,7 @@ Quiet Hours = Boundaries for your brain 🔕🧠
 
 Protect your peace. App respects YOUR schedule.
 
-Set quiet hours → https://3mpwrapp.pages.dev/user-guide/#quiet-hours?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quiet_hours
+Set quiet hours → https://3mpwrapp.ca/user-guide/#quiet-hours?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quiet_hours
 
 #Boundaries #NotificationManagement
 
@@ -1064,7 +1064,7 @@ App respects YOUR boundaries now 🔕
 
 Customize alerts →
 
-Set quiet hours → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quiet_hours
+Set quiet hours → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quiet_hours
 
 #Boundaries
 
@@ -1073,15 +1073,15 @@ Wellness reminder at 2am? NEVER AGAIN 🔕
 
 Quiet Hours silences non-urgent notifications. Deadlines still alert. Everything else waits →
 
-Set boundaries → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quiet_hours
+Set boundaries → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quiet_hours
 
 ---
 
 ### Image 97: Push Notification Types & Complexity Modes
 **Filename**: `Settings3-PushNotificationTypes-ComplexityModes.png`  
 **Alt Text**: Detailed push notification type controls and complexity mode settings - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#notification-types  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#notification-types  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (495 chars):
 Notification Types = Granular. Specific. YOUR choice 🎛️
@@ -1100,7 +1100,7 @@ Toggle each ON/OFF individually. Frequency control (instant, daily digest, weekl
 
 **Complexity mode preview** visible here too (Simple/Power).
 
-Precision control → https://3mpwrapp.pages.dev/user-guide/#notification-types?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=notification_types
+Precision control → https://3mpwrapp.ca/user-guide/#notification-types?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=notification_types
 
 #Customization
 
@@ -1109,22 +1109,22 @@ Want deadline alerts but NO community notifications? Toggle off 6 categories, le
 
 11 notification types. Individual control. Your inbox, your rules →
 
-Customize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=notification_types
+Customize → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=notification_types
 
 **X/Twitter** (278 chars):
 11 notification types. Toggle each on/off. Set frequency (instant, daily, weekly) ⚙️
 
 Stop notification chaos. Precision control →
 
-Settings → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=notification_types
+Settings → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=notification_types
 
 ---
 
 ### Image 98-99: Complexity Modes (Bad Day Mode, Simple Mode, Standard Mode, Power User Mode)
 **Filenames**: `Settings-ComplexityModes1-BadDayModeANDSimpleMode.png`, `Settings-ComplexityModes2- StandardANDPowerUserMode.png`  
 **Alt Text**: Four complexity modes adapting interface to user's cognitive capacity and experience level - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#complexity-modes  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#original-priority-features
+**User Guide**: https://3mpwrapp.ca/user-guide/#complexity-modes  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#original-priority-features
 
 **Mastodon** (497 chars):
 Complexity Modes = Interface adapts to YOUR brain 🧠⚙️
@@ -1140,7 +1140,7 @@ Switch modes ANYTIME based on energy, experience, cognitive capacity.
 
 App flexibility FOR disabled people BY disabled people.
 
-Switch modes → https://3mpwrapp.pages.dev/user-guide/#complexity-modes?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complexity_modes
+Switch modes → https://3mpwrapp.ca/user-guide/#complexity-modes?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complexity_modes
 
 #CognitiveAccessibility #UniversalDesign
 
@@ -1151,7 +1151,7 @@ Feeling better? Standard Mode unlocks full features 🧠
 
 Interface adapts to YOU →
 
-Switch modes → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complexity_modes
+Switch modes → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complexity_modes
 
 **X/Twitter** (277 chars):
 Bad day = 3 buttons max  
@@ -1161,15 +1161,15 @@ Expert = Power User Mode 🧠
 
 Interface that respects YOUR capacity TODAY →
 
-Switch modes → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complexity_modes
+Switch modes → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complexity_modes
 
 ---
 
 ### Image 100-105: Advanced Accessibility Settings (6 screens)
 **Filenames**: `AdvancedAccessibility1.png` through `AdvancedAccessibility-6.png`  
 **Alt Text**: Comprehensive accessibility settings including text size, contrast, motion, screen reader, voice control, and switch control - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#accessibility  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#accessibility-testing
+**User Guide**: https://3mpwrapp.ca/user-guide/#accessibility  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#accessibility-testing
 
 **Mastodon** (498 chars):
 Advanced Accessibility = WCAG AAA compliant + more 🎯♿
@@ -1184,7 +1184,7 @@ Advanced Accessibility = WCAG AAA compliant + more 🎯♿
 
 Accessible BY DEFAULT. Customizable beyond standard.
 
-Explore accessibility → https://3mpwrapp.pages.dev/user-guide/#accessibility?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advanced_a11y
+Explore accessibility → https://3mpwrapp.ca/user-guide/#accessibility?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advanced_a11y
 
 #A11y #AccessibleDesign
 
@@ -1193,7 +1193,7 @@ Explore accessibility → https://3mpwrapp.pages.dev/user-guide/#accessibility?u
 
 Accessible BY DEFAULT. Customizable beyond →
 
-Settings → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advanced_a11y
+Settings → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advanced_a11y
 
 #A11y
 
@@ -1205,15 +1205,15 @@ Photosensitive? Motion controls
 
 30+ settings ♿
 
-Accessibility → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=a11y
+Accessibility → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=a11y
 
 ---
 
 ### Image 106-111: Advanced Security (6 screens)
 **Filenames**: `AdvancedSecurity1-Overview.png` through `AdvancedSecurity6-Emergency.png`  
 **Alt Text**: Advanced security settings including authentication, encryption, privacy controls, audit logs, and emergency access - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#security  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#security  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (496 chars):
 Advanced Security = Military-grade protection 🔒🛡️
@@ -1229,7 +1229,7 @@ Advanced Security = Military-grade protection 🔒🛡️
 
 Your data. YOUR control.
 
-Secure it → https://3mpwrapp.pages.dev/user-guide/#security?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advanced_security
+Secure it → https://3mpwrapp.ca/user-guide/#security?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advanced_security
 
 #Privacy #DataSecurity #Encryption
 
@@ -1240,7 +1240,7 @@ Emergency access = Trusted contact gets access IF you're unconscious/incapacitat
 
 Military-grade security →
 
-Secure → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advanced_security
+Secure → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advanced_security
 
 **X/Twitter** (279 chars):
 Your medical evidence encrypted so even WE can't see it 🔒  
@@ -1250,15 +1250,15 @@ One-tap delete everything
 
 Privacy-first security →
 
-Lock it down → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=security
+Lock it down → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=security
 
 ---
 
 ### Image 112-115: BYOC (Bring Your Own Cloud) - Connected & Disconnected States
 **Filenames**: `BYOC-Disconnected1.png`, `BYOC-Disconnected2.png`, `BYOC-Connected1.png`, `BYOC-Connected2.png`  
 **Alt Text**: Bring Your Own Cloud settings showing connection states for Google Drive, Dropbox, and iCloud integration - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#byoc  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#advanced-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#byoc  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#advanced-powertools
 
 **Mastodon** (493 chars):
 BYOC = Your cloud. Your control ☁️🔧
@@ -1276,7 +1276,7 @@ Connect: Google Drive, Dropbox, iCloud, OneDrive
 
 You own your data. Literally.
 
-Connect cloud → https://3mpwrapp.pages.dev/user-guide/#byoc?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=byoc
+Connect cloud → https://3mpwrapp.ca/user-guide/#byoc?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=byoc
 
 #DataSovereignty #PrivacyFirst #CloudStorage
 
@@ -1287,7 +1287,7 @@ Google Drive. Dropbox. iCloud. OneDrive. Evidence syncs to YOUR account with YOU
 
 True data ownership →
 
-Connect → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=byoc
+Connect → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=byoc
 
 #Privacy #DataSovereignty
 
@@ -1296,7 +1296,7 @@ Evidence Vault → Syncs to YOUR Google Drive with YOUR encryption 🔒
 
 Not our cloud. YOUR cloud. Your keys. Your data. Full portability →
 
-BYOC setup → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=byoc
+BYOC setup → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=byoc
 
 #PrivacyFirst
 
@@ -1305,8 +1305,8 @@ BYOC setup → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_med
 ### Image 116-117: Cognitive Accessibility
 **Filenames**: `CognitiveAccessibility1.png`, `CognitiveAccessibility2.png`  
 **Alt Text**: Cognitive accessibility settings for people with brain fog, ADHD, memory issues, and executive dysfunction - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#cognitive-accessibility  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#accessibility-testing
+**User Guide**: https://3mpwrapp.ca/user-guide/#cognitive-accessibility  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#accessibility-testing
 
 **Mastodon** (498 chars):
 Cognitive Accessibility = Designed for brain fog, ADHD, memory issues 🧠✨
@@ -1322,7 +1322,7 @@ Cognitive Accessibility = Designed for brain fog, ADHD, memory issues 🧠✨
 
 Brain-friendly BY DESIGN.
 
-Enable cognitive support → https://3mpwrapp.pages.dev/user-guide/#cognitive-accessibility?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive_a11y
+Enable cognitive support → https://3mpwrapp.ca/user-guide/#cognitive-accessibility?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive_a11y
 
 #CognitiveAccessibility #ADHD #BrainFog #ExecutiveDysfunction
 
@@ -1333,7 +1333,7 @@ Brain fog? Simplified language + contextual hints on every screen
 
 Cognitive accessibility →
 
-Enable → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive_a11y
+Enable → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive_a11y
 
 **X/Twitter** (278 chars):
 Brain fog = app speaks Grade 6 level  
@@ -1341,15 +1341,15 @@ ADHD = focus mode hides distractions
 Memory issues = non-judgmental reminders  
 Executive dysfunction = tasks broken into tiny steps 🧠
 
-Cognitive support → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive
+Cognitive support → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive
 
 ---
 
 ### Image 118-119: Cognitive Comfort
 **Filenames**: `CognitiveComfort1.png`, `CognitiveComfort2.png`  
 **Alt Text**: Cognitive comfort settings reducing mental load, notification overwhelm, and decision fatigue - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#cognitive-comfort  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#accessibility-testing
+**User Guide**: https://3mpwrapp.ca/user-guide/#cognitive-comfort  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#accessibility-testing
 
 **Mastodon** (491 chars):
 Cognitive Comfort = Reduce mental load, decision fatigue 😌🧠
@@ -1365,7 +1365,7 @@ Cognitive Comfort = Reduce mental load, decision fatigue 😌🧠
 
 Make the app EASIER on your brain.
 
-Enable comfort mode → https://3mpwrapp.pages.dev/user-guide/#cognitive-comfort?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive_comfort
+Enable comfort mode → https://3mpwrapp.ca/user-guide/#cognitive-comfort?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive_comfort
 
 #MentalLoad #DecisionFatigue #CognitiveAccessibility
 
@@ -1376,22 +1376,22 @@ Low-stimulation design. Calm colors. Affirming language 💚
 
 Cognitive comfort →
 
-Enable → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive_comfort
+Enable → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cognitive_comfort
 
 **X/Twitter** (278 chars):
 Too many choices = decision fatigue. Comfort mode = 3-5 options max per screen 😌
 
 Notification batching. Energy-aware prompts. Smart defaults. Less mental load 🧠
 
-Enable comfort → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=comfort
+Enable comfort → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=comfort
 
 ---
 
 ### Image 120: Cultural Safety - Cultural Profile Setup
 **Filename**: `CulturalSafety1-CulturalProfileSetup.png`  
 **Alt Text**: Cultural safety profile setup for Indigenous users, racialized communities, and cultural accommodations - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#cultural-safety  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#cultural-safety  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (497 chars):
 Cultural Safety = Designed FOR marginalized communities 🌍✊
@@ -1408,7 +1408,7 @@ App language adapts: "family support" not just "caregiver," community-first fram
 
 Respectful. Responsive. Representative.
 
-Setup profile → https://3mpwrapp.pages.dev/user-guide/#cultural-safety?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cultural_safety
+Setup profile → https://3mpwrapp.ca/user-guide/#cultural-safety?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cultural_safety
 
 #CulturalSafety #IndigenousRights #BIPOC
 
@@ -1417,14 +1417,14 @@ Indigenous? App uses community-first language, acknowledges systemic barriers, c
 
 Cultural safety = design choice, not afterthought →
 
-Setup profile → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cultural_safety
+Setup profile → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cultural_safety
 
 **X/Twitter** (278 chars):
 App asks pronouns. Respects chosen name. Adapts language for Indigenous users. Connects BIPOC to culturally safe resources 🌍
 
 Cultural safety built-in →
 
-Setup → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cultural_safety
+Setup → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=cultural_safety
 
 #Inclusion
 
@@ -1433,8 +1433,8 @@ Setup → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=s
 ### Image 121-126: Neurodivergent Support (6 screens)
 **Filenames**: `NeurodivergentSupport1.png` through `NeurodivergentSupport6.png`  
 **Alt Text**: Comprehensive neurodivergent support settings for autism, ADHD, sensory sensitivities, and executive function - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#neurodivergent-support  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#accessibility-testing
+**User Guide**: https://3mpwrapp.ca/user-guide/#neurodivergent-support  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#accessibility-testing
 
 **Mastodon** (499 chars):
 Neurodivergent Support = Autism, ADHD, sensory, executive function 🧠🌈
@@ -1450,7 +1450,7 @@ Neurodivergent Support = Autism, ADHD, sensory, executive function 🧠🌈
 
 Built WITH neurodivergent advocates.
 
-Explore settings → https://3mpwrapp.pages.dev/user-guide/#neurodivergent-support?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=neurodivergent_support
+Explore settings → https://3mpwrapp.ca/user-guide/#neurodivergent-support?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=neurodivergent_support
 
 #ActuallyAutistic #ADHD #Neurodivergent
 
@@ -1461,7 +1461,7 @@ ADHD? Focus timers. Hyperfocus alerts ("You've been working 3 hours, take a brea
 
 Neurodivergent support →
 
-Enable → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=neurodivergent
+Enable → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=neurodivergent
 
 **X/Twitter** (277 chars):
 Autism = literal language, social scripts, routine tracking 🧩  
@@ -1470,15 +1470,15 @@ Sensory = full customization 🎨
 
 Neurodivergent-friendly →
 
-Settings → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=neurodivergent
+Settings → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=neurodivergent
 
 ---
 
 ### Image 127: Evidence Encryption & Background Sync
 **Filename**: `EvidenceEncryptionSync2-BackgroundSync.png`  
 **Alt Text**: Evidence vault encryption status and automatic background sync settings - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#evidence-encryption  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#original-priority-features
+**User Guide**: https://3mpwrapp.ca/user-guide/#evidence-encryption  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#original-priority-features
 
 **Mastodon** (494 chars):
 Evidence Encryption = Military-grade protection 🔐📸
@@ -1494,7 +1494,7 @@ Evidence Encryption = Military-grade protection 🔐📸
 
 Your evidence. Encrypted. Synced. Secure.
 
-Manage encryption → https://3mpwrapp.pages.dev/user-guide/#evidence-encryption?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_encryption
+Manage encryption → https://3mpwrapp.ca/user-guide/#evidence-encryption?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_encryption
 
 #DataSecurity #Encryption #EvidenceVault
 
@@ -1503,7 +1503,7 @@ Evidence vault syncs in background. WiFi-only option saves data. Encrypted end-t
 
 Your photos never leave your control →
 
-Manage sync → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_encryption
+Manage sync → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_encryption
 
 #Privacy
 
@@ -1512,15 +1512,15 @@ Evidence auto-syncs encrypted to cloud. WiFi-only mode. Manual mode for paranoid
 
 Conflict resolution when you edit on 2 devices. Secure background sync →
 
-Settings → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_encryption
+Settings → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_encryption
 
 ---
 
 ### Image 128: More Settings - Accessibility, Text Size, Preferred Resource Format
 **Filename**: `MoreSettings1-Accessibility-TextSize-PreferredResourceFormat.png`  
 **Alt Text**: Additional settings for text size, preferred content format, and quick accessibility toggles - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#more-settings  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#more-settings  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (486 chars):
 More Settings = Fine-tune everything ⚙️🔧
@@ -1535,7 +1535,7 @@ More Settings = Fine-tune everything ⚙️🔧
 
 Customize interface to YOUR preferences.
 
-More settings → https://3mpwrapp.pages.dev/user-guide/#more-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=more_settings
+More settings → https://3mpwrapp.ca/user-guide/#more-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=more_settings
 
 #Customization #Accessibility
 
@@ -1546,7 +1546,7 @@ Cellular data limited? Hide heavy content on mobile network
 
 Full customization →
 
-More settings → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=more_settings
+More settings → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=more_settings
 
 **X/Twitter** (278 chars):
 Text size: 8 levels  
@@ -1556,15 +1556,15 @@ Quick accessibility toggles ⚙️
 
 Fine-tune app →
 
-More settings → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=more_settings
+More settings → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=more_settings
 
 ---
 
 ### Image 129: More Settings - Quick Settings, Cultural & Language
 **Filename**: `MoreSettings2-QuickSettings-CulturalANDLanguage.png`  
 **Alt Text**: Quick settings panel and cultural/language preferences - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#quick-settings  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#quick-settings  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (492 chars):
 Quick Settings = One-tap adjustments ⚡⚙️
@@ -1585,7 +1585,7 @@ Quick Settings = One-tap adjustments ⚡⚙️
 
 Fast adjustments when you need them.
 
-Quick settings → https://3mpwrapp.pages.dev/user-guide/#quick-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_settings
+Quick settings → https://3mpwrapp.ca/user-guide/#quick-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_settings
 
 #QuickAccess #CulturalSafety
 
@@ -1594,7 +1594,7 @@ Quick Settings = swipe down, toggle dark mode, switch to Bad Day Mode, silence a
 
 Fast adjustments without digging through menus →
 
-Quick access → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_settings
+Quick access → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_settings
 
 #UX
 
@@ -1605,15 +1605,15 @@ Notifications overwhelming → One-tap Quiet Mode 🔕
 
 Quick settings →
 
-Access → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_settings
+Access → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_settings
 
 ---
 
 ### Image 130: More Settings - Privacy/Security, Require Passcode Feature
 **Filename**: `MoreSettings3-PrivacySecurity-RequirePasscodeFeature.png`  
 **Alt Text**: Privacy and security settings with passcode requirement options - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#privacy-security  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#privacy-security  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (495 chars):
 Privacy & Security = Lock it down 🔒🛡️
@@ -1629,7 +1629,7 @@ Privacy & Security = Lock it down 🔒🛡️
 
 Protect sensitive information from prying eyes (employer, family, strangers on bus).
 
-Lock it down → https://3mpwrapp.pages.dev/user-guide/#privacy-security?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=privacy_security
+Lock it down → https://3mpwrapp.ca/user-guide/#privacy-security?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=privacy_security
 
 #Privacy #DataProtection
 
@@ -1638,7 +1638,7 @@ Require passcode every time you open app. Evidence Vault needs SECOND passcode f
 
 Blur app when switching (so coworker can't read over shoulder) →
 
-Lock down → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=privacy_security
+Lock down → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=privacy_security
 
 #Privacy
 
@@ -1647,15 +1647,15 @@ Passcode on launch. Biometric unlock. Privacy screen (blurs app when switching).
 
 Protect medical info from prying eyes →
 
-Security → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=privacy_security
+Security → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=privacy_security
 
 ---
 
 ### Image 131: More Settings - Auto-Lock, Analytics, Error Reporting, Search History, Data Management
 **Filename**: `MoreSettings4-AutoLockTimeout-Analytics-ErrorReporting-SaveSearchHistory-DataManagement.png`  
 **Alt Text**: Advanced settings for auto-lock timeout, analytics opt-out, crash reporting, search history, and data management - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#data-management  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#data-management  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (497 chars):
 Data Management = Transparency. Control. Consent 📊🔓
@@ -1673,7 +1673,7 @@ Data Management = Transparency. Control. Consent 📊🔓
 
 We collect ONLY what you consent to. Full transparency docs linked.
 
-Manage data → https://3mpwrapp.pages.dev/user-guide/#data-management?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=data_management
+Manage data → https://3mpwrapp.ca/user-guide/#data-management?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=data_management
 
 #DataPrivacy #Consent #Transparency
 
@@ -1684,7 +1684,7 @@ Export all your data (JSON/CSV/PDF). Delete account with 30-day recovery window 
 
 Full control →
 
-Manage → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=data_management
+Manage → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=data_management
 
 #Privacy
 
@@ -1695,7 +1695,7 @@ Export all data. Clear cache. Delete account (30-day recovery) 🗑️
 
 Full data control →
 
-Manage → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=data_management
+Manage → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=data_management
 
 #Privacy
 
@@ -1704,8 +1704,8 @@ Manage → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=
 ### Image 132: More Settings - Help & Support
 **Filename**: `MoreSettings6-HelpANDSupport.png`  
 **Alt Text**: Help and support options including FAQs, tutorials, contact support, and community forums - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#help-support  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#how-to-join-beta-testing
+**User Guide**: https://3mpwrapp.ca/user-guide/#help-support  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#how-to-join-beta-testing
 
 **Mastodon** (491 chars):
 Help & Support = Humans behind the app 💚🤝
@@ -1722,7 +1722,7 @@ Help & Support = Humans behind the app 💚🤝
 
 Real people. Real responses. We're building this WITH you.
 
-Get help → https://3mpwrapp.pages.dev/user-guide/#help-support?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=help_support
+Get help → https://3mpwrapp.ca/user-guide/#help-support?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=help_support
 
 #CustomerSupport #CommunityDriven
 
@@ -1731,7 +1731,7 @@ Stuck? FAQs, video tutorials, user guide, community forums available 💚
 
 Still stuck? Email support. Humans respond within 48 hours (24hrs for beta testers) →
 
-Get help → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=help_support
+Get help → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=help_support
 
 #Support
 
@@ -1740,15 +1740,15 @@ FAQs. Video tutorials. Community forums. Email support (24-48hr). Bug reports (2
 
 Real humans. Real help →
 
-Get support → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=help_support
+Get support → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=help_support
 
 ---
 
 ### Image 133-134: More Settings - Troubleshooting & Help
 **Filenames**: `MoreSettings7-TroubleshootingANDHelp1.png`, `MoreSettings8-TroubleshootingANDHelp2.png`  
 **Alt Text**: Troubleshooting guides for common app issues and technical problems - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#troubleshooting  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#reporting-bugs
+**User Guide**: https://3mpwrapp.ca/user-guide/#troubleshooting  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#reporting-bugs
 
 **Mastodon** (494 chars):
 Troubleshooting = Fix it yourself (or report it) 🔧🐛
@@ -1764,7 +1764,7 @@ Troubleshooting = Fix it yourself (or report it) 🔧🐛
 
 Each issue has step-by-step solution. Still broken? "Report This Issue" button on every troubleshooting screen.
 
-Fix problems → https://3mpwrapp.pages.dev/user-guide/#troubleshooting?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=troubleshooting
+Fix problems → https://3mpwrapp.ca/user-guide/#troubleshooting?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=troubleshooting
 
 #TechSupport #BugFixes
 
@@ -1773,7 +1773,7 @@ App crashing? Troubleshooting guide walks you through fixes 🔧
 
 Still broken after troubleshooting? "Report Issue" button sends logs directly to devs →
 
-Fix or report → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=troubleshooting
+Fix or report → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=troubleshooting
 
 #BugFixes
 
@@ -1783,15 +1783,15 @@ Sync problems. Photo uploads. Notifications. Crashes. Forgotten passcodes.
 
 Still broken? Report button on every screen →
 
-Troubleshoot → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=troubleshooting
+Troubleshoot → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=troubleshooting
 
 ---
 
 ### Image 135: More Settings - Terms & Policies
 **Filename**: `MoreSettings9-TermsANDPolicies.png`  
 **Alt Text**: Legal links to terms of service, privacy policy, disclaimers, and license information - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#legal  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#transparency
+**User Guide**: https://3mpwrapp.ca/user-guide/#legal  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#transparency
 
 **Mastodon** (489 chars):
 Terms & Policies = Boring but important 📜✅
@@ -1810,7 +1810,7 @@ Terms & Policies = Boring but important 📜✅
 
 Read once during onboarding. Reference anytime. Updated? You're notified.
 
-Review policies → https://3mpwrapp.pages.dev/user-guide/#legal?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal
+Review policies → https://3mpwrapp.ca/user-guide/#legal?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal
 
 #Transparency #LegalDocs
 
@@ -1819,7 +1819,7 @@ Review policies → https://3mpwrapp.pages.dev/user-guide/#legal?utm_source=mast
 
 Updated terms? App notifies you, shows what changed →
 
-Read legal docs → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal
+Read legal docs → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal
 
 #Transparency
 
@@ -1828,15 +1828,15 @@ Privacy policy. Terms. Disclaimers (medical, legal, financial, AI, crisis). All 
 
 What changed? App shows diffs when policies update →
 
-Legal docs → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal
+Legal docs → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal
 
 ---
 
 ### Image 136: Troubleshooting & Help - Common Issues
 **Filename**: `TroubleshootingANDHelp1-CommonIssues.png`  
 **Alt Text**: Common technical issues troubleshooting guide with step-by-step solutions - 3mpwrApp Settings  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#common-issues  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#reporting-bugs
+**User Guide**: https://3mpwrapp.ca/user-guide/#common-issues  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#reporting-bugs
 
 **Mastodon** (496 chars):
 Common Issues = Self-service fixes 🔧✅
@@ -1853,7 +1853,7 @@ Common Issues = Self-service fixes 🔧✅
 
 Each with screenshots, step-by-step. Still stuck? Contact support button.
 
-Fix issues → https://3mpwrapp.pages.dev/user-guide/#common-issues?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=common_issues
+Fix issues → https://3mpwrapp.ca/user-guide/#common-issues?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=common_issues
 
 #Troubleshooting #TechSupport
 
@@ -1864,7 +1864,7 @@ Sync. Crashes. Uploads. Notifications. Passcodes. Screen readers. Performance.
 
 Self-service solutions →
 
-Troubleshoot → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=common_issues
+Troubleshoot → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=common_issues
 
 #TechSupport
 
@@ -1876,7 +1876,7 @@ Notifications off? → iOS settings 🔧
 
 Step-by-step fixes →
 
-Troubleshoot → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=common_issues
+Troubleshoot → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=common_issues
 
 ---
 
@@ -1885,8 +1885,8 @@ Troubleshoot → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_m
 ### Image 137: 1st Screen Upon Launch
 **Filename**: `1stscreenuponlaunch3mpwrApp.png`  
 **Alt Text**: First launch welcome screen introducing 3mpwrApp to new users - Onboarding  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#getting-started  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#getting-started  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (491 chars):
 First Launch = Welcome to 3mpwrApp 🎉
@@ -1901,7 +1901,7 @@ First Launch = Welcome to 3mpwrApp 🎉
 
 First impressions matter. Ours says: You belong here. We got you.
 
-Join 3mpwrApp → https://3mpwrapp.pages.dev/beta-guide/#how-to-join-beta-testing?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_launch
+Join 3mpwrApp → https://3mpwrapp.ca/beta-guide/#how-to-join-beta-testing?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_launch
 
 #Welcome #Onboarding #DisabilityCommunity
 
@@ -1912,7 +1912,7 @@ First screen says: "You're not alone" 💚
 
 "Get Started" → onboarding begins →
 
-Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_launch
+Join beta → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_launch
 
 #Welcome
 
@@ -1921,7 +1921,7 @@ First screen you see: "You're not alone. We're here to help." 💚
 
 Welcome to 3mpwrApp. Built FOR you. BY people like you →
 
-Get started → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_launch
+Get started → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_launch
 
 #Welcome
 
@@ -1930,8 +1930,8 @@ Get started → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_me
 ### Image 138-144: Welcome to 3mpwrApp - Let's Get Started (7 tutorial steps)
 **Filenames**: `Welcometo3mpwrAppLetsGetStarted1.png` through `Welcometo3mpwrAppLetsGetStarted7.png`  
 **Alt Text**: Seven-step welcome tutorial introducing key features and navigation - 3mpwrApp Onboarding  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#tutorial  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#tutorial  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (498 chars):
 Welcome Tutorial = 7 steps to master the app 📚✨
@@ -1948,7 +1948,7 @@ Welcome Tutorial = 7 steps to master the app 📚✨
 
 Visual walkthrough. Skip button on every screen. Replay tutorial from Settings.
 
-Learn the app → https://3mpwrapp.pages.dev/user-guide/#tutorial?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial
+Learn the app → https://3mpwrapp.ca/user-guide/#tutorial?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial
 
 #Onboarding #Tutorial #UserExperience
 
@@ -1959,7 +1959,7 @@ Home. Advocacy. Wellness. Community. Resources. Settings. You're ready! 🎉
 
 Start learning →
 
-Tutorial → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial
+Tutorial → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial
 
 #Onboarding
 
@@ -1968,7 +1968,7 @@ Tutorial → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_mediu
 
 Skip anytime. Replay later from Settings. Visual walkthrough of every feature →
 
-Get started → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial
+Get started → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial
 
 #Tutorial
 
@@ -1977,8 +1977,8 @@ Get started → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_me
 ### Image 145: Detailed Review - Welcome to 3mpwrApp
 **Filename**: `1welcometo3mpwrappDetailedReview.png`  
 **Alt Text**: Detailed app feature overview and review for new users - 3mpwrApp Onboarding  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#features  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#features  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (494 chars):
 Detailed Review = Deep dive into what the app does 📖🔍
@@ -1994,7 +1994,7 @@ Detailed Review = Deep dive into what the app does 📖🔍
 
 Everything explained. Everything accessible.
 
-Explore features → https://3mpwrapp.pages.dev/user-guide/#features?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=detailed_review
+Explore features → https://3mpwrapp.ca/user-guide/#features?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=detailed_review
 
 #FeatureOverview #AppReview
 
@@ -2003,22 +2003,22 @@ Want full feature breakdown before you commit? Detailed Review screen explains E
 
 40+ advocacy tools. 41 wellness tools. 1,200+ community members. Privacy-first. Accessible-first →
 
-Review → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=detailed_review
+Review → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=detailed_review
 
 **X/Twitter** (275 chars):
 Full feature list. No marketing fluff. Just facts 📖
 
 40+ legal tools. 41 wellness tools. End-to-end encryption. WCAG AAA accessible. Free →
 
-Review features → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=detailed_review
+Review features → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=detailed_review
 
 ---
 
 ### Image 146-152: 1st Home Screen Tutorial (7 screens)
 **Filenames**: `1stHomeScreen-GetStarted3mpwrApp.png`, `2ndHomeScreen-HomeBase.png`, `3rdHomeScreen-ParseClaim.png`, `4thHomeScreen-WriteLetters.png`, `5thHomeScreen-TrackHealth.png`, `6thHomeScreen-NotAlone-Community.png`, `7thHomeScreen-YoureReady-EndOftutorial.png`  
 **Alt Text**: Interactive home screen tutorial demonstrating core features step-by-step - 3mpwrApp Onboarding  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#home-tutorial  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#home-tutorial  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (497 chars):
 Home Screen Tutorial = Learn by doing 🎯📱
@@ -2035,7 +2035,7 @@ Home Screen Tutorial = Learn by doing 🎯📱
 
 Contextual. Progressive. Hands-on learning.
 
-Start tutorial → https://3mpwrapp.pages.dev/user-guide/#home-tutorial?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_tutorial
+Start tutorial → https://3mpwrapp.ca/user-guide/#home-tutorial?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_tutorial
 
 #InteractiveTutorial #Onboarding #UserExperience
 
@@ -2046,7 +2046,7 @@ Scan letter. Generate appeal. Track mood. Join community. All guided, all hands-
 
 Interactive tutorial →
 
-Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_tutorial
+Try it → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_tutorial
 
 #Onboarding
 
@@ -2055,15 +2055,15 @@ Tutorial = hands-on, not passive reading 🎯
 
 Scan denial letter. Generate appeal. Track mood. Find community. Actually USE features, guided step-by-step →
 
-Learn by doing → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_tutorial
+Learn by doing → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_tutorial
 
 ---
 
 ### Image 153-155: Quick Overview (3 steps)
 **Filenames**: `QuickOverviewStep1.png`, `QuickOverviewStep2.png`, `QuickOverviewStep3Final.png`  
 **Alt Text**: Three-step quick overview for users who want minimal onboarding - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#quick-overview  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#quick-overview  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (489 chars):
 Quick Overview = Speedrun the tutorial 🏃‍♂️⚡
@@ -2078,7 +2078,7 @@ For users who hate long onboarding. Get the essentials. Start using app.
 
 "Skip to app" button on every screen. Detailed tutorial available in Settings later.
 
-Fast start → https://3mpwrapp.pages.dev/user-guide/#quick-overview?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_overview
+Fast start → https://3mpwrapp.ca/user-guide/#quick-overview?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_overview
 
 #QuickStart #Onboarding #UserExperience
 
@@ -2089,7 +2089,7 @@ Core features. Navigation. Privacy. That's it. Start using app →
 
 Quick start →
 
-Skip ahead → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_overview
+Skip ahead → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_overview
 
 #QuickStart
 
@@ -2098,7 +2098,7 @@ Impatient? Quick Overview = 30 seconds ⚡
 
 3 screens: Features. Navigation. Privacy. Done. Skip to app →
 
-Fast onboarding → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_overview
+Fast onboarding → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_overview
 
 #QuickStart
 
@@ -2107,8 +2107,8 @@ Fast onboarding → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&ut
 ### Image 156-159: Complete Your Profile (4 steps)
 **Filenames**: `CompleteYourProfile1-Role-Location.png`, `CompleteYourProfile2-WellnessToolsPreferences.png`, `CompleteYourProfile3-AdvocacyNeeds.png`, `CompleteYourProfile4-AccessibilityAccomodationsANDEnergyPatterns.png`  
 **Alt Text**: Four-step profile setup collecting user role, location, wellness preferences, advocacy needs, and accessibility requirements - 3mpwrApp Onboarding  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#profile-setup  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#profile-setup  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (496 chars):
 Complete Your Profile = Personalization that matters 🎯✨
@@ -2122,7 +2122,7 @@ Complete Your Profile = Personalization that matters 🎯✨
 
 App personalizes based on YOUR answers. Skip any question. Change answers anytime.
 
-Complete profile → https://3mpwrapp.pages.dev/user-guide/#profile-setup?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complete_profile
+Complete profile → https://3mpwrapp.ca/user-guide/#profile-setup?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complete_profile
 
 #Personalization #Onboarding
 
@@ -2133,7 +2133,7 @@ Role. Location. Goals. Accessibility needs. Skip any question. Change later →
 
 Setup profile →
 
-Personalize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complete_profile
+Personalize → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complete_profile
 
 #Personalization
 
@@ -2144,15 +2144,15 @@ Need: Appeal help → AI Assistant suggests Appeal Command Center 🎯
 
 4 questions personalize app →
 
-Setup → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complete_profile
+Setup → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=complete_profile
 
 ---
 
 ### Image 160: Get Started - Explore First Screen
 **Filename**: `11getstartedexplorefirst3mpwrapp.png`  
 **Alt Text**: "Get started exploring" call-to-action after onboarding completion - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#explore  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#explore  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (487 chars):
 Get Started - Explore First = Onboarding complete! 🎉🚀
@@ -2173,7 +2173,7 @@ Get Started - Explore First = Onboarding complete! 🎉🚀
 
 No more hand-holding. You're ready. Explore at your own pace.
 
-Start exploring → https://3mpwrapp.pages.dev/user-guide/#explore?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=explore_first
+Start exploring → https://3mpwrapp.ca/user-guide/#explore?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=explore_first
 
 #OnboardingComplete #GetStarted #UserExperience
 
@@ -2184,7 +2184,7 @@ Suggested first actions listed. No pressure. Your pace. Your journey →
 
 Start exploring →
 
-Explore → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=explore_first
+Explore → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=explore_first
 
 #GetStarted
 
@@ -2195,7 +2195,7 @@ Profile setup ✅
 
 NOW: Explore app. Suggested first steps listed. No pressure 🚀
 
-Start exploring → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=explore_first
+Start exploring → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=explore_first
 
 #GetStarted
 
@@ -2204,8 +2204,8 @@ Start exploring → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&ut
 ### Image 161: What's New Screen
 **Filename**: `10whatsnew3mpwrapp.png`  
 **Alt Text**: "What's new" changelog screen showing recent updates and new features - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#whats-new  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#whats-new
+**User Guide**: https://3mpwrapp.ca/user-guide/#whats-new  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#whats-new
 
 **Mastodon** (492 chars):
 What's New = Stay updated on improvements 📢✨
@@ -2221,7 +2221,7 @@ Shows on first launch after update. Access anytime from Settings → What's New.
 
 Transparent development. You see exactly what we're building.
 
-See updates → https://3mpwrapp.pages.dev/user-guide/#whats-new?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=whats_new
+See updates → https://3mpwrapp.ca/user-guide/#whats-new?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=whats_new
 
 #Changelog #AppUpdates #Transparency
 
@@ -2232,7 +2232,7 @@ New features. Improvements. Bug fixes. New resources. Transparent changelog →
 
 See updates →
 
-What's new → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=whats_new
+What's new → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=whats_new
 
 #Changelog
 
@@ -2245,15 +2245,15 @@ What's new → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_med
 
 Transparent development. You know exactly what we're building 📢
 
-See changelog → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=whats_new
+See changelog → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=whats_new
 
 ---
 
 ### Image 162: Login / Register Screen
 **Filename**: `12loginregister3mpwrapp.png`  
 **Alt Text**: Login and registration screen with email, Google, and Apple sign-in options - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#login  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#how-to-join-beta-testing
+**User Guide**: https://3mpwrapp.ca/user-guide/#login  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#how-to-join-beta-testing
 
 **Mastodon** (494 chars):
 Login / Register = Easy, secure, private 🔐✅
@@ -2274,7 +2274,7 @@ Login / Register = Easy, secure, private 🔐✅
 
 Safe. Simple. Respectful.
 
-Create account → https://3mpwrapp.pages.dev/beta-guide/#how-to-join-beta-testing?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=login_register
+Create account → https://3mpwrapp.ca/beta-guide/#how-to-join-beta-testing?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=login_register
 
 #Authentication #Privacy #SignUp
 
@@ -2285,7 +2285,7 @@ Privacy promise: No spam. No data selling. Delete account anytime ✅
 
 Create account →
 
-Sign up → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=login_register
+Sign up → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=login_register
 
 #Privacy
 
@@ -2296,15 +2296,15 @@ Privacy promise: NO spam, NO data selling, DELETE anytime ✅
 
 We respect your inbox AND your data →
 
-Sign up → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=login_register
+Sign up → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=login_register
 
 ---
 
 ### Image 163-171: Terms & Disclaimers (9 legal screens)
 **Filenames**: `2termsofservicev3.03mpowrapp.png`, `3privacypolicyv2,03mpwrapp.png`, `4medicaldisclaimer3mpwrapp.png`, `5legaldisclaimer3mpwrapp.png`, `6financialdisclaimer3mpwrapp.png`, `7aicontentdisclaimer3mpwrapp.png`, `8crisisnemergencydisclaimer3mpwrapp.png`, `9finalagreement3mpwrapp.png`  
 **Alt Text**: Comprehensive terms of service, privacy policy, and disclaimers (medical, legal, financial, AI, crisis) - 3mpwrApp Legal  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#legal  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#transparency
+**User Guide**: https://3mpwrapp.ca/user-guide/#legal  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#transparency
 
 **Mastodon** (499 chars):
 Terms & Disclaimers = Required reading (but actually readable) 📜✅
@@ -2322,7 +2322,7 @@ Terms & Disclaimers = Required reading (but actually readable) 📜✅
 
 Plain language summaries + full legal text.
 
-Review terms → https://3mpwrapp.pages.dev/user-guide/#legal?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=terms_disclaimers
+Review terms → https://3mpwrapp.ca/user-guide/#legal?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=terms_disclaimers
 
 #LegalTransparency #TermsOfService
 
@@ -2333,7 +2333,7 @@ Medical disclaimer. Legal disclaimer. AI limitations. Crisis protocols. Privacy 
 
 Required reading. Actually readable →
 
-Review → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=terms_disclaimers
+Review → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=terms_disclaimers
 
 #Transparency
 
@@ -2344,15 +2344,15 @@ Not a doctor. Not a lawyer. AI has limits. Call 911 for emergencies. Your data e
 
 Plain language legal docs →
 
-Read → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=terms_disclaimers
+Read → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=terms_disclaimers
 
 ---
 
 ### Image 172: Settings - Language & Notifications (First-Time Setup)
 **Filename**: `1-SettingsLanguageNotifications.png`  
 **Alt Text**: Initial language and notification preferences setup during onboarding - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#first-settings  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#first-settings  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (491 chars):
 First Settings = Customize before you even start 🎛️✨
@@ -2368,7 +2368,7 @@ Respects your preferences FROM THE START. Change anytime in Settings.
 
 Onboarding that actually listens to YOUR needs.
 
-Setup preferences → https://3mpwrapp.pages.dev/user-guide/#first-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_settings
+Setup preferences → https://3mpwrapp.ca/user-guide/#first-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_settings
 
 #Onboarding #Customization #UserExperience
 
@@ -2379,7 +2379,7 @@ Onboarding that respects YOUR preferences from second 1 →
 
 Setup preferences →
 
-Customize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_settings
+Customize → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_settings
 
 #Onboarding
 
@@ -2388,7 +2388,7 @@ First settings: Language. Notifications. Quiet hours 🎛️
 
 Respects your preferences BEFORE you start using app. No 2am wellness pings. Ever →
 
-Setup → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_settings
+Setup → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_settings
 
 ---
 

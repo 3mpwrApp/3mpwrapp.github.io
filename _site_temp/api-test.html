@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head><title>Campaign API Test</title></head>
 <body>
@@ -8,7 +8,7 @@
 async function testAPI() {
   const resultDiv = document.getElementById('result');
   try {
-    const apiUrl = 'https://3mpwrapp.pages.dev/api/campaigns.json?ts=' + Date.now();
+    const apiUrl = 'https://3mpwrapp.ca/api/campaigns.json?ts=' + Date.now();
     const response = await fetch(apiUrl, { cache: 'no-store' });
     const data = await response.json();
     resultDiv.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';

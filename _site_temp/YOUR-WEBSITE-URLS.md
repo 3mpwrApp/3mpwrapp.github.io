@@ -4,7 +4,7 @@
 
 ### Production URL (Cloudflare Pages - Recommended)
 ```
-https://3mpwrapp.pages.dev
+https://3mpwrapp.ca
 ```
 - **Status**: ✅ Live and fully functional
 - **Has**: All updates, user guide, cookie banner, accessibility settings
@@ -37,7 +37,7 @@ https://3mpwrapp.github.io
 - Automatically deleted after 30 days
 
 **How to avoid them:**
-- Always use `https://3mpwrapp.pages.dev` (no prefix!)
+- Always use `https://3mpwrapp.ca` (no prefix!)
 - In Cloudflare dashboard, click "View production deployment" not "View preview"
 
 ---
@@ -46,7 +46,7 @@ https://3mpwrapp.github.io
 
 **Step 1**: Open incognito window (Ctrl+Shift+N)
 
-**Step 2**: Go to: `https://3mpwrapp.pages.dev`
+**Step 2**: Go to: `https://3mpwrapp.ca`
 
 **Step 3**: You should see:
 - ✅ Full homepage with hero section
@@ -55,7 +55,7 @@ https://3mpwrapp.github.io
 - ✅ All styling and colors
 - ✅ Working links
 
-**Step 4**: Click "User Guide" - should go to: `https://3mpwrapp.pages.dev/user-guide/`
+**Step 4**: Click "User Guide" - should go to: `https://3mpwrapp.ca/user-guide/`
 
 ---
 
@@ -65,7 +65,7 @@ https://3mpwrapp.github.io
 2. Click **Workers & Pages** (left sidebar)
 3. Click **3mpwrapp** project
 4. Look for **"Production"** deployment (has a star icon ⭐)
-5. That's your real site: `https://3mpwrapp.pages.dev`
+5. That's your real site: `https://3mpwrapp.ca`
 
 **Ignore:**
 - Preview deployments (have random codes)
@@ -79,7 +79,7 @@ https://3mpwrapp.github.io
 Save these in your browser bookmarks:
 
 ### For Daily Use
-- **Live Site**: https://3mpwrapp.pages.dev
+- **Live Site**: https://3mpwrapp.ca
 - **GitHub Repo**: https://github.com/3mpowrApp/3mpwrapp.github.io
 
 ### For Monitoring
@@ -101,7 +101,7 @@ Save these in your browser bookmarks:
 ## 🚀 What to Share with Users
 
 When you promote your site, use:
-- **Main URL**: `https://3mpwrapp.pages.dev`
+- **Main URL**: `https://3mpwrapp.ca`
 
 Later, you can add a custom domain like `3mpwrapp.com` that points to this!
 

@@ -27,7 +27,7 @@ Hey beta testers,
 - ✅ Found and fixed critical duplicate overrides bug in package.json
 - ✅ All protection layers verified active
 
-Full transparency blog post: [https://3mpwrapp.pages.dev/blog/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated/](https://3mpwrapp.pages.dev/blog/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated/)
+Full transparency blog post: [https://3mpwrapp.ca/blog/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated/](https://3mpwrapp.ca/blog/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated/)
 
 ---
 

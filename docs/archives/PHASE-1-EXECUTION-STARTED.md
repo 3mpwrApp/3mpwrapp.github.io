@@ -18,13 +18,13 @@
 #### Test Matrix Overview
 ```
 PAGES TO TEST (7):
-1. Homepage           → https://3mpwrapp.pages.dev/
-2. About            → https://3mpwrapp.pages.dev/about.md
-3. Features         → https://3mpwrapp.pages.dev/features
-4. Blog             → https://3mpwrapp.pages.dev/blog
-5. User Guide       → https://3mpwrapp.pages.dev/user-guide.md
-6. Privacy          → https://3mpwrapp.pages.dev/privacy.md
-7. Accessibility    → https://3mpwrapp.pages.dev/accessibility.md
+1. Homepage           → https://3mpwrapp.ca/
+2. About            → https://3mpwrapp.ca/about.md
+3. Features         → https://3mpwrapp.ca/features
+4. Blog             → https://3mpwrapp.ca/blog
+5. User Guide       → https://3mpwrapp.ca/user-guide.md
+6. Privacy          → https://3mpwrapp.ca/privacy.md
+7. Accessibility    → https://3mpwrapp.ca/accessibility.md
 
 BROWSERS TO TEST (5):
 1. Chrome
@@ -163,13 +163,13 @@ For each page in each browser, verify:
 2. ✅ Have DevTools ready (F12 key)
 3. ✅ Have axe DevTools extension installed (if available)
 4. ✅ Have these URLs bookmarked:
-   - https://3mpwrapp.pages.dev/
-   - https://3mpwrapp.pages.dev/about.md
-   - https://3mpwrapp.pages.dev/features
-   - https://3mpwrapp.pages.dev/blog
-   - https://3mpwrapp.pages.dev/user-guide.md
-   - https://3mpwrapp.pages.dev/privacy.md
-   - https://3mpwrapp.pages.dev/accessibility.md
+   - https://3mpwrapp.ca/
+   - https://3mpwrapp.ca/about.md
+   - https://3mpwrapp.ca/features
+   - https://3mpwrapp.ca/blog
+   - https://3mpwrapp.ca/user-guide.md
+   - https://3mpwrapp.ca/privacy.md
+   - https://3mpwrapp.ca/accessibility.md
 5. ✅ Have this document open for reference
 
 ### Testing Each Page:
@@ -272,7 +272,7 @@ Create file: `CROSS-BROWSER-TEST-RESULTS-OCT20.md` with:
 **All Set? Let's Go! 🚀**
 
 Start with Chrome, first page: Homepage  
-Go to: https://3mpwrapp.pages.dev/
+Go to: https://3mpwrapp.ca/
 
 Document results as you test each page/browser combination.
 

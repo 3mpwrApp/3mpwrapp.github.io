@@ -110,7 +110,7 @@ You are free to share and adapt this guide with attribution.
 
 Questions about the user guide?
 - **Email:** empowrapp08162025@gmail.com
-- **Website:** https://3mpwrapp.pages.dev
+- **Website:** https://3mpwrapp.ca
 
 ---
 

@@ -8,7 +8,7 @@ The CI checks are failing because they test against the **deployed site** or **l
 ### 1. Accessibility (axe-core) - EXPECTED TO PASS AFTER DEPLOYMENT
 
 **What it tests:**
-- Runs Playwright + axe-core against `https://3mpwrapp.pages.dev`
+- Runs Playwright + axe-core against `https://3mpwrapp.ca`
 - Tests WCAG 2.0 A/AA compliance
 - Checks 7 key pages in quick mode
 
@@ -30,7 +30,7 @@ The CI checks are failing because they test against the **deployed site** or **l
 
 **What it tests:**
 - Performance, Accessibility, Best Practices, SEO
-- Tests 5 URLs at `https://3mpwrapp.pages.dev`
+- Tests 5 URLs at `https://3mpwrapp.ca`
 - Uses Chrome DevTools Lighthouse
 
 **Why scores may be lower:**
@@ -141,7 +141,7 @@ Re-run CI checks manually ← SHOULD PASS
 **Wait 5-10 minutes** for Cloudflare Pages to complete deployment, then:
 
 1. **Check deployment status:**
-   - Visit https://3mpwrapp.pages.dev/about
+   - Visit https://3mpwrapp.ca/about
    - View source and verify aria-hidden attributes are present
    - Test with screen reader to confirm improvements
 
@@ -213,7 +213,7 @@ The UX upgrades prioritized **user experience** over raw performance scores:
 After deployment completes, monitor:
 1. GitHub Actions workflow results
 2. Cloudflare Pages deployment logs  
-3. Live site functionality at https://3mpwrapp.pages.dev
+3. Live site functionality at https://3mpwrapp.ca
 4. Browser console for JavaScript errors
 5. Accessibility audit with browser DevTools
 

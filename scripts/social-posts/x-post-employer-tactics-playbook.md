@@ -13,7 +13,7 @@ BC investigation uncovered "second-tier compensation systems" on megaprojects �
 Same medical provider (International SOS) across all 4 projects investigated.
 
 Your defense playbook ↓
-https://3mpwrapp.pages.dev/[LINK]
+https://3mpwrapp.ca/[LINK]
 ```
 
 **Character count:** 269
@@ -63,7 +63,7 @@ We built a defense guide from BC investigation + 6 legal cases:
 • Free downloadable templates
 
 Read the full playbook:
-https://3mpwrapp.pages.dev/[LINK]
+https://3mpwrapp.ca/[LINK]
 ```
 
 ---

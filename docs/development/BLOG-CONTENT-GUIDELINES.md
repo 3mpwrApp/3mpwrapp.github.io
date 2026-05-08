@@ -185,7 +185,7 @@ Blog posts should be named:
 ## 🎯 Current Status
 
 **App Status:** Pre-launch (Beta Phase 1 preparation)  
-**Website Status:** Live at https://3mpwrapp.pages.dev  
+**Website Status:** Live at https://3mpwrapp.ca  
 **User Count:** 0 (not launched)  
 **Content Strategy:** Educational + Curated news + Platform updates
 

@@ -68,7 +68,7 @@ Building disability rights tools in public (evidence lockers, benefits trackers,
 Beta access + design input if interested. Zero pressure.
 
 — [Your Name]
-https://3mpwrapp.pages.dev/blog
+https://3mpwrapp.ca/blog
 ```
 
 **Key elements:**

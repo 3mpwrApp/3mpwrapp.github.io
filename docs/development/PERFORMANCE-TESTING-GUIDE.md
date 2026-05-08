@@ -27,7 +27,7 @@
 ## 🚀 METHOD 1: CHROME LIGHTHOUSE (Recommended)
 
 ### Step 1: Open Chrome DevTools
-1. Open https://3mpwrapp.pages.dev
+1. Open https://3mpwrapp.ca
 2. Press F12 or Ctrl+Shift+I
 3. Click "Lighthouse" tab (rightmost)
 
@@ -84,7 +84,7 @@ For each Opportunity:
 
 ### Step 1: Open PageSpeed Insights
 - URL: https://pagespeed.web.dev/
-- Enter: https://3mpwrapp.pages.dev
+- Enter: https://3mpwrapp.ca
 - Click "Analyze"
 
 ### Step 2: Review Mobile Results
@@ -115,7 +115,7 @@ Scroll down and check Desktop:
 
 ### Step 1: Open WebPageTest
 - URL: https://www.webpagetest.org/
-- Enter: https://3mpwrapp.pages.dev
+- Enter: https://3mpwrapp.ca
 - Keep defaults or customize:
   - Location: New York or San Francisco
   - Browser: Chrome
@@ -147,7 +147,7 @@ This shows:
 ## 🔍 METHOD 4: CHROME DEVTOOLS PERFORMANCE TAB
 
 ### Step 1: Open Performance Tab
-1. Go to https://3mpwrapp.pages.dev
+1. Go to https://3mpwrapp.ca
 2. Open Chrome DevTools (F12)
 3. Click "Performance" tab
 
@@ -284,7 +284,7 @@ These shouldn't cause issues but verify they're not blocking critical resources.
 
 ### Test Curation Endpoint
 1. Open DevTools Network
-2. Visit: https://3mpwrapp.pages.dev/curation-latest.json
+2. Visit: https://3mpwrapp.ca/curation-latest.json
 3. Check:
    - [ ] Load time: < 500ms
    - [ ] File size: < 100KB

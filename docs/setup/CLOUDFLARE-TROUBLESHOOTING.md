@@ -82,7 +82,7 @@ Then redeploy.
 
 **Solution:** Updated _config.yml to use Cloudflare URL:
 ```yaml
-url: "https://3mpwrapp.pages.dev"
+url: "https://3mpwrapp.ca"
 ```
 
 This was just fixed! Commit and push will trigger new deployment.
@@ -143,7 +143,7 @@ Build failed
 
 I just updated your `_config.yml` to use the Cloudflare Pages URL:
 ```yaml
-url: "https://3mpwrapp.pages.dev"
+url: "https://3mpwrapp.ca"
 ```
 
 **Next steps:**
@@ -151,7 +151,7 @@ url: "https://3mpwrapp.pages.dev"
 2. Push to GitHub
 3. Cloudflare will auto-detect and rebuild
 4. Wait 2-3 minutes
-5. Check `https://3mpwrapp.pages.dev/` again
+5. Check `https://3mpwrapp.ca/` again
 
 ### Manual Deployment Trigger
 
@@ -172,9 +172,9 @@ If auto-deploy doesn't work:
 
 **Test these URLs after fix:**
 ```
-https://3mpwrapp.pages.dev/          (homepage)
-https://3mpwrapp.pages.dev/about/    (about page)
-https://3mpwrapp.pages.dev/features/ (features)
+https://3mpwrapp.ca/          (homepage)
+https://3mpwrapp.ca/about/    (about page)
+https://3mpwrapp.ca/features/ (features)
 ```
 
 **If all are blank:**
@@ -254,6 +254,6 @@ git commit -m "fix: Update URL for Cloudflare Pages deployment"
 git push origin main
 ```
 
-Then wait 2-3 minutes and check `https://3mpwrapp.pages.dev/` again.
+Then wait 2-3 minutes and check `https://3mpwrapp.ca/` again.
 
 **It should work!** 🎉

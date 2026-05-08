@@ -141,13 +141,13 @@ That's 3mpwrApp.
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/)** - Proof of concept: see the 3 flywheels in action with 11,430 cases analyzed, knowledge base articles, and appeal templates
+📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/)** - Proof of concept: see the 3 flywheels in action with 11,430 cases analyzed, knowledge base articles, and appeal templates
 
-📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The journey: collecting 14,000+ tribunal decisions across all of Canada (complete transparency on process)
+📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The journey: collecting 14,000+ tribunal decisions across all of Canada (complete transparency on process)
 
-📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - Real-world validation from Thunder Bay's injured worker community (40+ years of advocacy experience)
+📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.ca/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - Real-world validation from Thunder Bay's injured worker community (40+ years of advocacy experience)
 
-📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026/04/02/community-what-3mpwr-means/)** - The philosophy: Individual, Community, and Systemic change working together (not mistaking coping for justice)
+📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.ca/blog/2026/04/02/community-what-3mpwr-means/)** - The philosophy: Individual, Community, and Systemic change working together (not mistaking coping for justice)
 
 ---
 
@@ -159,7 +159,7 @@ Everyone from disability advocates to policy makers to product teams should be w
 
 ### Get Involved
 
-**Waitlist:** [Join the beta testing waitlist](https://3mpwrapp.pages.dev/waitlist)  
+**Waitlist:** [Join the beta testing waitlist](https://3mpwrapp.ca/waitlist)  
 **Learn more:** [Full 3mpwrApp feature breakdown](https://3mpwrapp.com)  
 **Follow the conversation:** Share this with your network. Policy makers need to see this. Tech companies need to know disabled people are watching.
 

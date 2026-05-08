@@ -48,13 +48,13 @@
 **Objective:** Test 7 pages on 5 browsers = 35 tests
 
 **Pages:**
-1. Homepage → https://3mpwrapp.pages.dev/
-2. About → https://3mpwrapp.pages.dev/about.md
-3. Features → https://3mpwrapp.pages.dev/features
-4. Blog → https://3mpwrapp.pages.dev/blog
-5. User Guide → https://3mpwrapp.pages.dev/user-guide.md
-6. Privacy → https://3mpwrapp.pages.dev/privacy.md
-7. Accessibility → https://3mpwrapp.pages.dev/accessibility.md
+1. Homepage → https://3mpwrapp.ca/
+2. About → https://3mpwrapp.ca/about.md
+3. Features → https://3mpwrapp.ca/features
+4. Blog → https://3mpwrapp.ca/blog
+5. User Guide → https://3mpwrapp.ca/user-guide.md
+6. Privacy → https://3mpwrapp.ca/privacy.md
+7. Accessibility → https://3mpwrapp.ca/accessibility.md
 
 **Browsers:**
 - Chrome
@@ -162,7 +162,7 @@ Morning   Final verification
 ### Next 30 Minutes
 
 1. Start: Chrome browser
-2. Navigate: https://3mpwrapp.pages.dev/
+2. Navigate: https://3mpwrapp.ca/
 3. Begin: Testing checklist
 4. Mark: Results in dashboard
 

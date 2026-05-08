@@ -27,7 +27,7 @@ Why it matters:
 
 Also: Beta testers just started onboarding for 3mpwrApp (disability rights tools)!
 
-Building in public: https://3mpwrapp.pages.dev/blog
+Building in public: https://3mpwrapp.ca/blog
 
 #BuildInPublic #DisabilityTech #AccessibilityFirst #OpenSource
 ```
@@ -56,7 +56,7 @@ That's when I realized: the system requires cognitive capacity that disabled peo
 
 So I built 3mpwrApp—tools designed for hard days, not just good ones.
 
-Free forever: https://3mpwrapp.pages.dev
+Free forever: https://3mpwrapp.ca
 
 #WSIB #ODSP #CPPDisability #InjuredWorker #DisabilityJustice
 ```
@@ -85,7 +85,7 @@ Miss this deadline = appeal automatically dismissed.
 
 3mpwrApp's Benefits Tracker sends reminders 30 days before deadlines.
 
-Never miss another one: https://3mpwrapp.pages.dev/features/benefits-tracker
+Never miss another one: https://3mpwrapp.ca/features/benefits-tracker
 
 #WSIB #WorkersComp #Ontario #LegalTips
 ```
@@ -118,7 +118,7 @@ No. The system is designed to overwhelm you.
 
 You're not disorganized. The system is hostile.
 
-Always free: https://3mpwrapp.pages.dev/features/evidence-locker
+Always free: https://3mpwrapp.ca/features/evidence-locker
 
 #DisabilityRights #WSIB #ODSP #LegalTools
 ```
@@ -217,7 +217,7 @@ Next Week:
 🔜 Spoon Theory Tracker tutorial
 🔜 Founder story Part 2
 
-Building 3mpwrApp in public: https://3mpwrapp.pages.dev/blog
+Building 3mpwrApp in public: https://3mpwrapp.ca/blog
 
 #BuildInPublic #DisabilityTech
 ```
@@ -358,7 +358,7 @@ Most apps collect data and sell it.
 
 Lived Experience → Data → Insight → Action
 
-Full diagram: https://3mpwrapp.pages.dev/#flywheels
+Full diagram: https://3mpwrapp.ca/#flywheels
 
 What do you think? Does this resonate?
 
@@ -397,7 +397,7 @@ Next: Extracting patterns + building search tool.
 
 This is what collective knowledge looks like.
 
-Building in public: https://3mpwrapp.pages.dev/blog
+Building in public: https://3mpwrapp.ca/blog
 
 #BuildInPublic #CanLII #LegalTech #AccessToJustice
 ```
@@ -471,7 +471,7 @@ Why it works:
 • Never lose critical documents
 • Works 100% offline
 
-Free: https://3mpwrapp.pages.dev/features/evidence-locker
+Free: https://3mpwrapp.ca/features/evidence-locker
 
 Questions about organizing evidence?
 

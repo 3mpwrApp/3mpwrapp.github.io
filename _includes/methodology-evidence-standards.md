@@ -225,7 +225,7 @@ Answer: **YES, and we acknowledge them:**
 - **Raw data:** [GitHub: 3mpwrapp.github.io/data/tribunal-decisions/](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions)
 - **Analysis scripts:** [GitHub: 3mpwrapp.github.io/scripts/](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/scripts)
 - **Full methodology:** [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) (45,000 words)
-- **Interactive tools:** [WSIB Denial Network Visualization](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html)
+- **Interactive tools:** [WSIB Denial Network Visualization](https://3mpwrapp.ca/wsib-denial-network-visualization.html)
 
 **Replication instructions:**
 
@@ -341,12 +341,12 @@ Answer: **YES, and we acknowledge them:**
 1. **📚 Knowledge Base (16 Injury Guides)**
    - Built from patterns in 11,430 cases
    - Shows what arguments work for shoulder, knee, chronic pain, etc.
-   - Evidence: [Knowledge Base Index](https://3mpwrapp.pages.dev/knowledge-base/)
+   - Evidence: [Knowledge Base Index](https://3mpwrapp.ca/knowledge-base/)
 
 2. **📝 Appeal Templates (50+ Free Downloads)**
    - Prefilled with winning language from tribunal decisions
    - Cites statistics ("20% of knee injuries denied as pre-existing—here's how to fight back")
-   - Evidence: [Template Library](https://3mpwrapp.pages.dev/research/#templates)
+   - Evidence: [Template Library](https://3mpwrapp.ca/research/#templates)
 
 3. **🤝 Community Support (Peer Network)**
    - Workers share outcomes (filling 91.8% data gap)

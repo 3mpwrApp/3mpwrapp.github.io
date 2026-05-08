@@ -158,7 +158,7 @@ permalink: /campaigns/
    * Related:
    * - Campaigns API: https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns
    * - Events API: https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events
-   * - Events Page: https://3mpwrapp.pages.dev/events/
+   * - Events Page: https://3mpwrapp.ca/events/
    * ========================================
    */
 
@@ -377,7 +377,7 @@ permalink: /campaigns/
       if (syncStatus) syncStatus.textContent = '🔄 Syncing...';
       
       // Fetch from campaigns.json API
-      const apiUrl = 'https://3mpwrapp.pages.dev/api/campaigns.json?ts=' + Date.now();
+      const apiUrl = 'https://3mpwrapp.ca/api/campaigns.json?ts=' + Date.now();
       const response = await fetch(apiUrl, { cache: 'no-store' });
       
       if (!response.ok) {
@@ -461,7 +461,7 @@ permalink: /campaigns/
   
   // Share campaign to specific social platform with #3mpwrApp hashtag
   function shareCampaignToSocial(title, description, platform) {
-    const campaignUrl = 'https://3mpwrapp.pages.dev/campaigns/';
+    const campaignUrl = 'https://3mpwrapp.ca/campaigns/';
     const hashtag = '3mpwrApp';
     const shareText = `${title}\n\n${description}\n\nJoin the campaign on 3mpwr App! #${hashtag}`;
     
@@ -490,8 +490,8 @@ permalink: /campaigns/
   
   // Copy campaign details with #3mpwrApp hashtag
   function copyCampaignDetails(title, description, shareLink) {
-    const campaignUrl = shareLink || 'https://3mpwrapp.pages.dev/campaigns/';
-    const copyText = `${title}\n\n${description}\n\nJoin the campaign: ${campaignUrl}\n\n#3mpwrApp\n\nPowered by 3mpwr App | https://3mpwrapp.pages.dev`;
+    const campaignUrl = shareLink || 'https://3mpwrapp.ca/campaigns/';
+    const copyText = `${title}\n\n${description}\n\nJoin the campaign: ${campaignUrl}\n\n#3mpwrApp\n\nPowered by 3mpwr App | https://3mpwrapp.ca`;
     
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(copyText).then(() => {

@@ -187,7 +187,7 @@ Today's Top Stories:
 1. [Story title]
    [Story link]
 
-🔗 Visit: https://3mpwrapp.pages.dev
+🔗 Visit: https://3mpwrapp.ca
 
 #Accessibility #DisabilityRights #DisabilityBenefits #News #Canada
 ```

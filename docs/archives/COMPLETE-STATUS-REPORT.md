@@ -77,12 +77,12 @@ When you originally provided the Phase 2 user guide content, it may have had for
 
 | Page | URL | Status |
 |------|-----|--------|
-| Homepage | `https://3mpwrapp.pages.dev` | ✅ WORKING |
-| About | `https://3mpwrapp.pages.dev/about/` | ✅ WORKING (just fixed) |
-| Features | `https://3mpwrapp.pages.dev/features/` | ✅ WORKING |
-| User Guide | `https://3mpwrapp.pages.dev/user-guide/` | ❌ BROKEN (corrupted) |
-| Privacy | `https://3mpwrapp.pages.dev/privacy/` | ✅ Should work |
-| Terms | `https://3mpwrapp.pages.dev/terms/` | ✅ Should work |
+| Homepage | `https://3mpwrapp.ca` | ✅ WORKING |
+| About | `https://3mpwrapp.ca/about/` | ✅ WORKING (just fixed) |
+| Features | `https://3mpwrapp.ca/features/` | ✅ WORKING |
+| User Guide | `https://3mpwrapp.ca/user-guide/` | ❌ BROKEN (corrupted) |
+| Privacy | `https://3mpwrapp.ca/privacy/` | ✅ Should work |
+| Terms | `https://3mpwrapp.ca/terms/` | ✅ Should work |
 
 ---
 
@@ -99,7 +99,7 @@ This is a **preview deployment** - Cloudflare creates these automatically for te
 - They have random codes like `7314eccf`, `abc123`, etc.
 
 ### Your Real Site
-**Always use:** `https://3mpwrapp.pages.dev`  
+**Always use:** `https://3mpwrapp.ca`  
 (No random code!)
 
 This is your **production site** - the real, live version.
@@ -179,7 +179,7 @@ If you want to delete old previews now:
 Press `Ctrl+Shift+N` (bypasses cache)
 
 ### Step 2: Visit Production Site
-Go to: `https://3mpwrapp.pages.dev`
+Go to: `https://3mpwrapp.ca`
 
 ### Step 3: Check These Pages
 - ✅ Homepage - Should load fully
@@ -234,7 +234,7 @@ If you have the original Phase 2 user guide document:
 
 ### Now (5 minutes)
 1. ⏰ **Wait 8 minutes** for current deployment to finish
-2. 🧪 **Test in incognito**: `https://3mpwrapp.pages.dev`
+2. 🧪 **Test in incognito**: `https://3mpwrapp.ca`
 3. ✅ **Verify** homepage, about, features work
 
 ### After Testing (10 minutes)
@@ -261,7 +261,7 @@ If you have the original Phase 2 user guide document:
 - **Status:** ⏳ Building now
 - **Commit:** 37ba09c
 - **ETA:** 2 minutes
-- **Production URL:** https://3mpwrapp.pages.dev
+- **Production URL:** https://3mpwrapp.ca
 
 ### File Status
 | File | Status | Notes |

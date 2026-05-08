@@ -35,7 +35,7 @@ https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=productio
 
 ### Website Events Page
 ```
-https://3mpwrapp.pages.dev/events/
+https://3mpwrapp.ca/events/
 ```
 **Status**: Ready to deploy
 
@@ -118,7 +118,7 @@ After pushing to GitHub, verify the live site:
 
 ### 1. Check Events Page
 ```
-https://3mpwrapp.pages.dev/events/
+https://3mpwrapp.ca/events/
 ```
 **Look for:**
 - ✅ Page loads without JavaScript errors (F12 → Console)
@@ -264,7 +264,7 @@ https://3mpwrapp.pages.dev/events/
    - Updates subscriber calendars within 1-24 hours
 
 ### For Event Attendees
-1. Visit `https://3mpwrapp.pages.dev/events/`
+1. Visit `https://3mpwrapp.ca/events/`
 2. Browse all upcoming events with full accessibility info
 3. Copy calendar feed URL
 4. Add to their calendar app once
@@ -311,7 +311,7 @@ Every event includes:
 ### Key URLs
 - **API Endpoint**: https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production
 - **ICS Feed**: https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production
-- **Website**: https://3mpwrapp.pages.dev/events/
+- **Website**: https://3mpwrapp.ca/events/
 - **Firebase Console**: https://console.firebase.google.com/project/empowrapp/
 - **GitHub Repo**: https://github.com/3mpwrApp/empowrapp-main/
 

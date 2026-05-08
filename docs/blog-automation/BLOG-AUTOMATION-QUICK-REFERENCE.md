@@ -2,7 +2,7 @@
 
 ## ✅ What's Fixed
 
-1. **Blog Links** - All social posts now link to: `https://3mpwrapp.pages.dev/blog/#[section]`
+1. **Blog Links** - All social posts now link to: `https://3mpwrapp.ca/blog/#[section]`
 2. **User-Friendly Names** - Section names now clear: "Daily News Highlights", "Feature Spotlights", etc.
 3. **Deployment Verification** - Posts only sent after blog is confirmed live
 4. **Better Social Content** - Time-based greetings, feature highlights, clear language
@@ -12,25 +12,25 @@
 ## 📍 Blog Sections & Links
 
 ### 1. 📰 Daily News Highlights
-**Link:** https://3mpwrapp.pages.dev/blog/#curated-daily  
+**Link:** https://3mpwrapp.ca/blog/#curated-daily  
 **Posts:** Daily at 9 AM UTC  
 **Tags:** `highlights`  
 **Social:** Mastodon + Bluesky
 
 ### 2. ✨ Feature Spotlights
-**Link:** https://3mpwrapp.pages.dev/blog/#feature-articles  
+**Link:** https://3mpwrapp.ca/blog/#feature-articles  
 **Posts:** Daily at 10 AM UTC  
 **Tags:** `features`, `spotlight`  
 **Social:** Mastodon + Bluesky
 
 ### 3. 📅 Weekly Recaps
-**Link:** https://3mpwrapp.pages.dev/blog/#weekly-recaps  
+**Link:** https://3mpwrapp.ca/blog/#weekly-recaps  
 **Posts:** Monday at 9 AM UTC  
 **Tags:** `weekly`, `updates`  
 **Social:** Manual (optional)
 
 ### 4. 💬 Community Updates
-**Link:** https://3mpwrapp.pages.dev/blog/#blog-posts  
+**Link:** https://3mpwrapp.ca/blog/#blog-posts  
 **Posts:** Manual  
 **Tags:** Various  
 **Social:** Manual
@@ -94,7 +94,7 @@ ls -lh _posts/*weekly-update*.md | tail -1
 4. Verify they go to blog sections
 
 ### Check Blog Display
-1. Visit: https://3mpwrapp.pages.dev/blog/
+1. Visit: https://3mpwrapp.ca/blog/
 2. Verify 4 sections visible
 3. Check section names user-friendly
 4. Test navigation links

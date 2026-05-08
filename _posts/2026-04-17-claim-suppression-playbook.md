@@ -54,7 +54,7 @@ We asked: **Is this happening in Ontario too?**
 
 **What we found:** Multiple pattern indicators suggest claim-reporting barriers may not be isolated to BC, but **CanLII keyword/API limits in Ontario records** (91.8% without explicit outcome-labeled keywords) make full-scope quantification difficult.
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our pattern analysis uses keyword co-occurrence and temporal detection where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our pattern analysis uses keyword co-occurrence and temporal detection where official outcomes aren't available.
 
 ---
 
@@ -853,8 +853,8 @@ Your story helps us document the scope of the problem. Contact us confidentially
 
 **BC & Ontario Cross-Provincial Analysis:**
 - [BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse](/blog/2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns/) - 7,386 BC cases reveal 100% unknown outcomes and systemic claim suppression patterns
-- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.pages.dev/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook documenting BC megaproject claim suppression
-- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.pages.dev/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - How beta tester research exposed WorkSafeBC "second-tier systems"
+- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.ca/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook documenting BC megaproject claim suppression
+- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.ca/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - How beta tester research exposed WorkSafeBC "second-tier systems"
 
 ---
 

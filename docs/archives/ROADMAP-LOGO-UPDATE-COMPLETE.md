@@ -11,7 +11,7 @@
 ### 1. ✅ Created Dedicated Roadmap Page
 
 **File**: `roadmap.md`  
-**URL**: https://3mpwrapp.pages.dev/roadmap/  
+**URL**: https://3mpwrapp.ca/roadmap/  
 **Size**: 400+ lines
 
 **Content Sections**:
@@ -195,7 +195,7 @@ node scripts/generate-icons.js
 
 ✅ **Committed**: e891fe1  
 ✅ **Pushed to GitHub**: origin/main  
-✅ **Live on Cloudflare Pages**: https://3mpwrapp.pages.dev
+✅ **Live on Cloudflare Pages**: https://3mpwrapp.ca
 
 ### Deployment Includes:
 - New roadmap page at `/roadmap/`
@@ -209,7 +209,7 @@ node scripts/generate-icons.js
 ## 🧪 Testing Checklist
 
 ### Roadmap Page
-- [ ] Visit https://3mpwrapp.pages.dev/roadmap/
+- [ ] Visit https://3mpwrapp.ca/roadmap/
 - [ ] Verify all sections display correctly
 - [ ] Check progress indicators (40%, 70%)
 - [ ] Test mobile responsiveness
@@ -307,8 +307,8 @@ node scripts/generate-icons.js
 
 **Questions about the roadmap?**
 - Email: empowrapp08162025@gmail.com
-- Roadmap page: https://3mpwrapp.pages.dev/roadmap/
-- User guide: https://3mpwrapp.pages.dev/user-guide/
+- Roadmap page: https://3mpwrapp.ca/roadmap/
+- User guide: https://3mpwrapp.ca/user-guide/
 
 **Found an issue?**
 - Check existing documentation

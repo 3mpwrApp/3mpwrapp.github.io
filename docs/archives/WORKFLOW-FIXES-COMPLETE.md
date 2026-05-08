@@ -230,7 +230,7 @@ git push origin main
 
 After push completes:
 1. ✅ Check GitHub Actions - All workflows passing
-2. ✅ Visit https://3mpwrapp.pages.dev - See new logo in header
+2. ✅ Visit https://3mpwrapp.ca - See new logo in header
 3. ✅ Open DevTools → Application → Manifest - Verify new icons
 4. ✅ Install as PWA on mobile - See new home screen icon
 

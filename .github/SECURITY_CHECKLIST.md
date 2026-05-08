@@ -63,7 +63,7 @@ cat .gitignore | grep -E "vendor|.bundle|credentials"
 ### 3. Test Security Headers
 ```bash
 # Check deployed headers
-curl -I https://3mpwrapp.pages.dev
+curl -I https://3mpwrapp.ca
 
 # Expected headers:
 # ✅ Strict-Transport-Security
@@ -128,8 +128,8 @@ Create `.well-known/security.txt`:
 ```
 Contact: empowrapp08162025@gmail.com
 Preferred-Languages: en
-Canonical: https://3mpwrapp.pages.dev/.well-known/security.txt
-Policy: https://3mpwrapp.pages.dev/security
+Canonical: https://3mpwrapp.ca/.well-known/security.txt
+Policy: https://3mpwrapp.ca/security
 ```
 
 ### Ongoing: Maintenance
@@ -160,11 +160,11 @@ Verify each layer is active:
     → Test: Cloudflare dashboard shows traffic stats
 
 [2] SSL/TLS Encryption
-    → Verify: curl -I https://3mpwrapp.pages.dev | grep "strict-transport"
+    → Verify: curl -I https://3mpwrapp.ca | grep "strict-transport"
     → Expected: Strict-Transport-Security header present
 
 [3] Security Headers
-    → Verify: curl -I https://3mpwrapp.pages.dev
+    → Verify: curl -I https://3mpwrapp.ca
     → Expected: CSP, X-Frame-Options, HSTS, etc.
 
 [4] Bot Management
@@ -176,7 +176,7 @@ Verify each layer is active:
     → Expected: Only HTML/CSS/JS files
 
 [6] CDN Caching
-    → Verify: curl -I https://3mpwrapp.pages.dev | grep "cf-cache"
+    → Verify: curl -I https://3mpwrapp.ca | grep "cf-cache"
     → Expected: cf-cache-status: HIT (after first load)
 
 [7] Secret Management

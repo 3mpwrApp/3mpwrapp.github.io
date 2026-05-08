@@ -38,13 +38,13 @@
 **What:** Test 7 pages on 5 browsers = 35 tests
 
 **Pages:**
-1. Homepage → https://3mpwrapp.pages.dev/
-2. About → https://3mpwrapp.pages.dev/about.md
-3. Features → https://3mpwrapp.pages.dev/features
-4. Blog → https://3mpwrapp.pages.dev/blog
-5. User Guide → https://3mpwrapp.pages.dev/user-guide.md
-6. Privacy → https://3mpwrapp.pages.dev/privacy.md
-7. Accessibility → https://3mpwrapp.pages.dev/accessibility.md
+1. Homepage → https://3mpwrapp.ca/
+2. About → https://3mpwrapp.ca/about.md
+3. Features → https://3mpwrapp.ca/features
+4. Blog → https://3mpwrapp.ca/blog
+5. User Guide → https://3mpwrapp.ca/user-guide.md
+6. Privacy → https://3mpwrapp.ca/privacy.md
+7. Accessibility → https://3mpwrapp.ca/accessibility.md
 
 **Browsers:**
 - Chrome
@@ -71,7 +71,7 @@
 - Mark progress as you test each combination
 
 **Step 2:** Start with Chrome
-- Open first page: https://3mpwrapp.pages.dev/
+- Open first page: https://3mpwrapp.ca/
 - Work through 7 test criteria
 - Mark ✅ for pass, ❌ for fail
 - Note any issues (severity: Critical/Important/Minor)
@@ -277,7 +277,7 @@ Target:   Oct 23 sign-off
 **NEXT 5 MINUTES:**
 
 1. ✅ Start: Chrome browser
-2. ✅ Go to: https://3mpwrapp.pages.dev/
+2. ✅ Go to: https://3mpwrapp.ca/
 3. ✅ Begin: Testing checklist
 4. ✅ Track: Mark progress in dashboard
 

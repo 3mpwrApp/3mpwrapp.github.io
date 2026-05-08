@@ -79,11 +79,11 @@ Content added:
 2. Privacy/Security → Clear browsing data
 3. Check "Cached images and files"
 4. Clear last 24 hours
-5. Refresh https://3mpwrapp.pages.dev
+5. Refresh https://3mpwrapp.ca
 
 #### Option 3: Incognito/Private Window
 - Open new private/incognito window
-- Visit https://3mpwrapp.pages.dev
+- Visit https://3mpwrapp.ca
 - Should see Roadmap link immediately
 
 #### Option 4: Wait for Cloudflare Cache
@@ -95,7 +95,7 @@ Content added:
 1. Hard refresh browser (Ctrl + Shift + R)
 2. Look for navigation menu
 3. Should see "Roadmap" between "User Guide" and "Contact"
-4. Click it → Should go to https://3mpwrapp.pages.dev/roadmap/
+4. Click it → Should go to https://3mpwrapp.ca/roadmap/
 
 **The roadmap page exists and is live** - just need to clear your browser cache to see the updated navigation!
 
@@ -221,7 +221,7 @@ git push origin main
 After committing and clearing cache:
 
 ### About Page
-- [ ] Visit https://3mpwrapp.pages.dev/about/
+- [ ] Visit https://3mpwrapp.ca/about/
 - [ ] See "🇨🇦 Currently Serving Canada-Wide" section
 - [ ] Verify link to /roadmap/ works
 - [ ] Check mobile view

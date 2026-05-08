@@ -47,7 +47,7 @@
 
 **Steps**:
 1. Go to https://validator.w3.org/
-2. Enter URL: `https://3mpwrapp.pages.dev/`
+2. Enter URL: `https://3mpwrapp.ca/`
 3. Click "Check"
 4. Review errors and warnings
 5. Repeat for each major page
@@ -745,7 +745,7 @@ A page/feature is ready when:
 
 **Accessibility Team**: empowrapp08162025@gmail.com  
 **Response Time**: 2 business days  
-**Accessibility Statement**: https://3mpwrapp.pages.dev/accessibility
+**Accessibility Statement**: https://3mpwrapp.ca/accessibility
 
 ---
 

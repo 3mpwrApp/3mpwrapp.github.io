@@ -663,8 +663,8 @@ Question → Answer → Template → Success → Mentorship
 >
 > A few final things:
 >
-> 1. **Event info is on our website:** https://3mpwrapp.pages.dev/events/  
-> 2. **Campaigns are live:** https://3mpwrapp.pages.dev/campaigns/  
+> 1. **Event info is on our website:** https://3mpwrapp.ca/events/  
+> 2. **Campaigns are live:** https://3mpwrapp.ca/campaigns/  
 > 3. **Production beta signup:** hello@3mpwrapp.org  
 > 4. **Questions anytime:** Same email, or find me on social media @3mpwrApp
 >

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Feature Spotlight: Campaign Coordination"
 date: 2026-03-26 00:00:00 +0000
@@ -21,7 +21,7 @@ excerpt: Coordinate advocacy actions in one place so groups can move from scatte
 - Downstream effect: stronger submissions, faster coordination, and more consistent pressure for systemic change * * * ## In Practice **Example scenario (illustrative only):** An advocacy group supporting injured workers needs to submit a disability-access campaign package within 48 hours. Before using Campaign Coordination, they are splitting work between email, multiple chat apps, and separate files, with duplicated tasks and missing updates. Using Campaign Coordination, they set one campaign room, assign ownership for each required task, attach supporting documents in one location, and track completion against a shared deadline. Instead of spending energy on coordination confusion, the group spends energy on content quality and response strategy. * * * ## Why It Matters - reduces avoidable coordination failures
 - improves clarity during high-pressure timelines
 - helps preserve limited energy for high-value advocacy work
-- increases accountability within collaborative campaigns * * * ## What This Unlocks Next As campaigns become better organized, outcomes and lessons can be translated into shared guides and reusable templates. That strengthens the broader 3mpwrApp knowledge layer and improves future campaigns for injured workers, the disability community, families, and advocates. * * * ## Getting Started Ready to try Campaign Coordination? Here's how to get started: 1. **Open 3mpwrApp** - Start here: https://3mpwrapp.pages.dev/
+- increases accountability within collaborative campaigns * * * ## What This Unlocks Next As campaigns become better organized, outcomes and lessons can be translated into shared guides and reusable templates. That strengthens the broader 3mpwrApp knowledge layer and improves future campaigns for injured workers, the disability community, families, and advocates. * * * ## Getting Started Ready to try Campaign Coordination? Here's how to get started: 1. **Open 3mpwrApp** - Start here: https://3mpwrapp.ca/
 2. **Complete setup** - Takes just 5 minutes
 3. **Find the feature** - Look for "Campaign Coordination" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step * * * ## Learn More For complete information about Campaign Coordination and all other features: - - ...A - - [Read the Complete User Guide](/user-guide/#campaign-coordination)

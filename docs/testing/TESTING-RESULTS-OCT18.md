@@ -23,13 +23,13 @@
 ### Test Matrix: 7 Pages × 5 Browsers = 35 Tests
 
 #### Pages Under Test:
-1. ✅ Homepage - https://3mpwrapp.pages.dev/
-2. ⏳ About - https://3mpwrapp.pages.dev/about.md
-3. ⏳ Features - https://3mpwrapp.pages.dev/features
-4. ⏳ Blog - https://3mpwrapp.pages.dev/blog
-5. ⏳ User Guide - https://3mpwrapp.pages.dev/user-guide.md
-6. ⏳ Privacy - https://3mpwrapp.pages.dev/privacy.md
-7. ⏳ Accessibility - https://3mpwrapp.pages.dev/accessibility.md
+1. ✅ Homepage - https://3mpwrapp.ca/
+2. ⏳ About - https://3mpwrapp.ca/about.md
+3. ⏳ Features - https://3mpwrapp.ca/features
+4. ⏳ Blog - https://3mpwrapp.ca/blog
+5. ⏳ User Guide - https://3mpwrapp.ca/user-guide.md
+6. ⏳ Privacy - https://3mpwrapp.ca/privacy.md
+7. ⏳ Accessibility - https://3mpwrapp.ca/accessibility.md
 
 ### Browser Testing Progress
 
@@ -65,7 +65,7 @@
 | All Pages | ⏳ Pending |
 
 ### Initial Observations (Chrome - Homepage)
-**URL:** https://3mpwrapp.pages.dev/
+**URL:** https://3mpwrapp.ca/
 
 ✅ **Page Load:**
 - Status Code: 200 OK
@@ -133,7 +133,7 @@ Checking for:
 
 ### Lighthouse Audit Results
 
-#### Homepage (https://3mpwrapp.pages.dev/)
+#### Homepage (https://3mpwrapp.ca/)
 ⏳ **Status:** Lighthouse test initiated, collecting results...
 
 **Metrics to Measure:**

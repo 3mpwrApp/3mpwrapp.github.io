@@ -1,9 +1,9 @@
 {
   "lighthouseVersion": "13.0.1",
-  "requestedUrl": "https://3mpwrapp.pages.dev/",
-  "mainDocumentUrl": "https://3mpwrapp.pages.dev/",
-  "finalDisplayedUrl": "https://3mpwrapp.pages.dev/",
-  "finalUrl": "https://3mpwrapp.pages.dev/",
+  "requestedUrl": "https://3mpwrapp.ca/",
+  "mainDocumentUrl": "https://3mpwrapp.ca/",
+  "finalDisplayedUrl": "https://3mpwrapp.ca/",
+  "finalUrl": "https://3mpwrapp.ca/",
   "fetchTime": "2025-10-27T23:53:48.080Z",
   "gatherMode": "navigation",
   "runWarnings": [
@@ -234,7 +234,7 @@
             "description": "Failed to load resource: the server responded with a status of 404 ()",
             "sourceLocation": {
               "type": "source-location",
-              "url": "https://3mpwrapp.pages.dev/favicon.ico",
+              "url": "https://3mpwrapp.ca/favicon.ico",
               "urlProvider": "network",
               "line": 0,
               "column": 0
@@ -245,7 +245,7 @@
             "description": "Refused to load the font 'https://cdn.jsdelivr.net/npm/opendyslexic@latest/otf/OpenDyslexic-Bold.otf' because it violates the following Content Security Policy directive: \"font-src 'self' data:\".\n",
             "sourceLocation": {
               "type": "source-location",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "urlProvider": "network",
               "line": 1029,
               "column": 0
@@ -256,7 +256,7 @@
             "description": "Refused to load the font 'https://cdn.jsdelivr.net/npm/opendyslexic@latest/otf/OpenDyslexic-Bold.otf' because it violates the following Content Security Policy directive: \"font-src 'self' data:\".\n",
             "sourceLocation": {
               "type": "source-location",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "urlProvider": "network",
               "line": 1029,
               "column": 0
@@ -267,7 +267,7 @@
             "description": "Refused to load the font 'https://cdn.jsdelivr.net/npm/opendyslexic@latest/otf/OpenDyslexic-Regular.otf' because it violates the following Content Security Policy directive: \"font-src 'self' data:\".\n",
             "sourceLocation": {
               "type": "source-location",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "urlProvider": "network",
               "line": 1029,
               "column": 0
@@ -278,7 +278,7 @@
             "description": "Refused to load the font 'https://cdn.jsdelivr.net/npm/opendyslexic@latest/otf/OpenDyslexic-Regular.otf' because it violates the following Content Security Policy directive: \"font-src 'self' data:\".\n",
             "sourceLocation": {
               "type": "source-location",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "urlProvider": "network",
               "line": 1029,
               "column": 0
@@ -289,7 +289,7 @@
             "description": "Refused to load the script 'https://www.clarity.ms/tag/tps3d4cg0x' because it violates the following Content Security Policy directive: \"script-src 'self' https://www.googletagmanager.com https://gc.zgo.at 'unsafe-inline'\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.\n",
             "sourceLocation": {
               "type": "source-location",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "urlProvider": "network",
               "line": 262,
               "column": 52
@@ -300,7 +300,7 @@
             "description": "Refused to load the script 'https://www.clarity.ms/tag/tps3d4cg0x' because it violates the following Content Security Policy directive: \"script-src 'self' https://www.googletagmanager.com https://gc.zgo.at 'unsafe-inline'\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.\n",
             "sourceLocation": {
               "type": "source-location",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "urlProvider": "network",
               "line": 262,
               "column": 52
@@ -311,7 +311,7 @@
             "description": "X-Frame-Options may only be set via an HTTP header sent along with a document. It may not be set inside <meta>.",
             "sourceLocation": {
               "type": "source-location",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "urlProvider": "network",
               "line": 11,
               "column": 0
@@ -349,7 +349,7 @@
         ],
         "items": [
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "responseTime": 106
           }
         ],
@@ -647,7 +647,7 @@
         ],
         "items": [
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "total": 8664.192000000017,
             "scripting": 57.632,
             "scriptParseCompile": 24.367999999999995
@@ -762,7 +762,7 @@
         ],
         "items": [
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 0,
@@ -779,7 +779,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/style.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/style.min.css",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 261.0320000015199,
@@ -797,7 +797,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/design-system.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/design-system.min.css",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 264.3400000035763,
@@ -815,7 +815,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+            "url": "https://3mpwrapp.ca/assets/empwrapp-logo.png",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 264.67200000211596,
@@ -850,7 +850,7 @@
             "entity": "Clarity"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/style.css",
+            "url": "https://3mpwrapp.ca/assets/css/style.css",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 271.0160000026226,
@@ -868,7 +868,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/accessibility-tokens.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/accessibility-tokens.min.css",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 272.9510000012815,
@@ -885,7 +885,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/accessibility-enhancements.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/accessibility-enhancements.min.css",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 273.24800000339746,
@@ -902,7 +902,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/performance-optimizations.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/performance-optimizations.min.css",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 273.5590000003576,
@@ -919,7 +919,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/lighthouse-fixes.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/lighthouse-fixes.min.css",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 273.8700000010431,
@@ -970,7 +970,7 @@
             "entity": "JSDelivr CDN"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/design-system.css",
+            "url": "https://3mpwrapp.ca/assets/css/design-system.css",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 1850.692000001669,
@@ -987,7 +987,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/homepage-animations.css",
+            "url": "https://3mpwrapp.ca/assets/css/homepage-animations.css",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2039.8860000036657,
@@ -1004,7 +1004,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/accessibility-toolbar.js",
+            "url": "https://3mpwrapp.ca/assets/js/accessibility-toolbar.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2094.864999998361,
@@ -1021,7 +1021,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/homepage-features.js",
+            "url": "https://3mpwrapp.ca/assets/js/homepage-features.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2095.3360000029206,
@@ -1038,7 +1038,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/a11y.min.js",
+            "url": "https://3mpwrapp.ca/assets/js/a11y.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2098.9880000017583,
@@ -1055,7 +1055,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/contrast.min.js",
+            "url": "https://3mpwrapp.ca/assets/js/contrast.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2099.320000000298,
@@ -1072,7 +1072,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/theme.min.js",
+            "url": "https://3mpwrapp.ca/assets/js/theme.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2099.5839999988675,
@@ -1089,7 +1089,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/back-to-top.min.js",
+            "url": "https://3mpwrapp.ca/assets/js/back-to-top.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2099.8180000036955,
@@ -1106,7 +1106,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/settings.min.js",
+            "url": "https://3mpwrapp.ca/assets/js/settings.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2100.0769999995828,
@@ -1123,7 +1123,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/accessibility-innovations.min.js",
+            "url": "https://3mpwrapp.ca/assets/js/accessibility-innovations.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2100.417000003159,
@@ -1140,7 +1140,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/wcag-compliance.min.js",
+            "url": "https://3mpwrapp.ca/assets/js/wcag-compliance.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2100.922000002116,
@@ -1157,7 +1157,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/lazy-load.min.js",
+            "url": "https://3mpwrapp.ca/assets/js/lazy-load.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2161.2609999999404,
@@ -1174,7 +1174,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/performance-monitor.min.js",
+            "url": "https://3mpwrapp.ca/assets/js/performance-monitor.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2162.629999998957,
@@ -1207,7 +1207,7 @@
             "experimentalFromMainFrame": true
           },
           {
-            "url": "https://3mpwrapp.pages.dev/manifest.json",
+            "url": "https://3mpwrapp.ca/manifest.json",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2441.947000000626,
@@ -1224,7 +1224,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/favicon.svg",
+            "url": "https://3mpwrapp.ca/assets/favicon.svg",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2442.978000000119,
@@ -1241,7 +1241,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/favicon.ico",
+            "url": "https://3mpwrapp.ca/favicon.ico",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2623.867000002414,
@@ -1258,7 +1258,7 @@
             "entity": "pages.dev"
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/icons/icon-144.png",
+            "url": "https://3mpwrapp.ca/assets/icons/icon-144.png",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 2786.9410000033677,
@@ -1281,135 +1281,135 @@
           "initiators": [
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 22,
               "columnNumber": 66
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 23,
               "columnNumber": 74
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 24,
               "columnNumber": 66
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 267,
               "columnNumber": 135
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 370,
               "columnNumber": 73
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 372,
               "columnNumber": 79
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 374,
               "columnNumber": 78
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 376,
               "columnNumber": 69
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/assets/css/accessibility-enhancements.min.css"
+              "url": "https://3mpwrapp.ca/assets/css/accessibility-enhancements.min.css"
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/assets/css/accessibility-enhancements.min.css"
+              "url": "https://3mpwrapp.ca/assets/css/accessibility-enhancements.min.css"
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1104,
               "columnNumber": 62
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1106,
               "columnNumber": 68
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1108,
               "columnNumber": 68
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1110,
               "columnNumber": 64
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1219,
               "columnNumber": 54
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1220,
               "columnNumber": 58
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1221,
               "columnNumber": 55
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1222,
               "columnNumber": 61
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1223,
               "columnNumber": 58
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1226,
               "columnNumber": 81
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1229,
               "columnNumber": 65
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1652,
               "columnNumber": 59
             },
             {
               "type": "parser",
-              "url": "https://3mpwrapp.pages.dev/",
+              "url": "https://3mpwrapp.ca/",
               "lineNumber": 1655,
               "columnNumber": 69
             }
@@ -1443,7 +1443,7 @@
         ],
         "items": [
           {
-            "origin": "https://3mpwrapp.pages.dev",
+            "origin": "https://3mpwrapp.ca",
             "rtt": 31.531999999999996
           }
         ],
@@ -1478,7 +1478,7 @@
         ],
         "items": [
           {
-            "origin": "https://3mpwrapp.pages.dev",
+            "origin": "https://3mpwrapp.ca",
             "serverResponseTime": 54.056500000000014
           }
         ],
@@ -1832,12 +1832,12 @@
         ],
         "items": [
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "duration": 2851.0000000000005,
             "startTime": 1146.0565000000001
           },
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "duration": 214,
             "startTime": 4152.056500000001
           },
@@ -1847,32 +1847,32 @@
             "startTime": 954.0565
           },
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "duration": 88,
             "startTime": 4451.056500000001
           },
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "duration": 79,
             "startTime": 4073.0565000000006
           },
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "duration": 76,
             "startTime": 3997.0565000000006
           },
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "duration": 72,
             "startTime": 1074.0565000000001
           },
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "duration": 58,
             "startTime": 4393.056500000001
           },
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "duration": 54,
             "startTime": 4581.056500000001
           }
@@ -1886,7 +1886,7 @@
         "debugData": {
           "type": "debugdata",
           "urls": [
-            "https://3mpwrapp.pages.dev/",
+            "https://3mpwrapp.ca/",
             "Unattributable"
           ],
           "tasks": [
@@ -2486,7 +2486,7 @@
         "type": "treemap-data",
         "nodes": [
           {
-            "name": "https://3mpwrapp.pages.dev/",
+            "name": "https://3mpwrapp.ca/",
             "resourceBytes": 16692,
             "encodedBytes": 4281,
             "unusedBytes": 10239,
@@ -2534,67 +2534,67 @@
             ]
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/accessibility-toolbar.js",
+            "name": "https://3mpwrapp.ca/assets/js/accessibility-toolbar.js",
             "resourceBytes": 15040,
             "encodedBytes": 3868,
             "unusedBytes": 10219
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/homepage-features.js",
+            "name": "https://3mpwrapp.ca/assets/js/homepage-features.js",
             "resourceBytes": 1848,
             "encodedBytes": 727,
             "unusedBytes": 996
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/a11y.min.js",
+            "name": "https://3mpwrapp.ca/assets/js/a11y.min.js",
             "resourceBytes": 1141,
             "encodedBytes": 490,
             "unusedBytes": 111
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/contrast.min.js",
+            "name": "https://3mpwrapp.ca/assets/js/contrast.min.js",
             "resourceBytes": 580,
             "encodedBytes": 288,
             "unusedBytes": 108
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/theme.min.js",
+            "name": "https://3mpwrapp.ca/assets/js/theme.min.js",
             "resourceBytes": 555,
             "encodedBytes": 284,
             "unusedBytes": 108
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/back-to-top.min.js",
+            "name": "https://3mpwrapp.ca/assets/js/back-to-top.min.js",
             "resourceBytes": 542,
             "encodedBytes": 282,
             "unusedBytes": 137
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/settings.min.js",
+            "name": "https://3mpwrapp.ca/assets/js/settings.min.js",
             "resourceBytes": 2268,
             "encodedBytes": 885,
             "unusedBytes": 517
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/wcag-compliance.min.js",
+            "name": "https://3mpwrapp.ca/assets/js/wcag-compliance.min.js",
             "resourceBytes": 9653,
             "encodedBytes": 2784,
             "unusedBytes": 7121
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/lazy-load.min.js",
+            "name": "https://3mpwrapp.ca/assets/js/lazy-load.min.js",
             "resourceBytes": 2780,
             "encodedBytes": 1212,
             "unusedBytes": 1034
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/performance-monitor.min.js",
+            "name": "https://3mpwrapp.ca/assets/js/performance-monitor.min.js",
             "resourceBytes": 3611,
             "encodedBytes": 1306,
             "unusedBytes": 301
           },
           {
-            "name": "https://3mpwrapp.pages.dev/assets/js/accessibility-innovations.min.js",
+            "name": "https://3mpwrapp.ca/assets/js/accessibility-innovations.min.js",
             "resourceBytes": 7653,
             "encodedBytes": 2506,
             "unusedBytes": 4522
@@ -4199,43 +4199,43 @@
         ],
         "items": [
           {
-            "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+            "url": "https://3mpwrapp.ca/assets/empwrapp-logo.png",
             "totalBytes": 697122
           },
           {
-            "url": "https://3mpwrapp.pages.dev/",
+            "url": "https://3mpwrapp.ca/",
             "totalBytes": 19249
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/icons/icon-144.png",
+            "url": "https://3mpwrapp.ca/assets/icons/icon-144.png",
             "totalBytes": 16210
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/style.css",
+            "url": "https://3mpwrapp.ca/assets/css/style.css",
             "totalBytes": 13337
           },
           {
-            "url": "https://3mpwrapp.pages.dev/favicon.ico",
+            "url": "https://3mpwrapp.ca/favicon.ico",
             "totalBytes": 12224
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/style.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/style.min.css",
             "totalBytes": 9801
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/js/accessibility-toolbar.js",
+            "url": "https://3mpwrapp.ca/assets/js/accessibility-toolbar.js",
             "totalBytes": 5031
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/design-system.css",
+            "url": "https://3mpwrapp.ca/assets/css/design-system.css",
             "totalBytes": 4830
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/accessibility-enhancements.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/accessibility-enhancements.min.css",
             "totalBytes": 4132
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/design-system.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/design-system.min.css",
             "totalBytes": 3953
           }
         ],
@@ -4526,7 +4526,7 @@
         ],
         "items": [
           {
-            "href": "https://3mpwrapp.pages.dev/cookies/",
+            "href": "https://3mpwrapp.ca/cookies/",
             "text": "Learn more",
             "textLang": "en"
           }
@@ -4961,7 +4961,7 @@
               "snippet": "<img src=\"/assets/empwrapp-logo.png\" alt=\"\" width=\"28\" height=\"28\" aria-hidden=\"true\" loading=\"eager\">",
               "nodeLabel": "header > div.brand > a.site-brand > img"
             },
-            "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+            "url": "https://3mpwrapp.ca/assets/empwrapp-logo.png",
             "totalBytes": 695760,
             "wastedBytes": 695360,
             "subItems": {
@@ -5117,44 +5117,44 @@
               "type": "network-tree",
               "chains": {
                 "F918DC888B714394610D500A5FFC5E39": {
-                  "url": "https://3mpwrapp.pages.dev/",
+                  "url": "https://3mpwrapp.ca/",
                   "navStartToEndTime": 277,
                   "transferSize": 19249,
                   "isLongest": true,
                   "children": {
                     "11940.18": {
-                      "url": "https://3mpwrapp.pages.dev/assets/css/homepage-animations.css",
+                      "url": "https://3mpwrapp.ca/assets/css/homepage-animations.css",
                       "navStartToEndTime": 2094,
                       "transferSize": 1595,
                       "isLongest": true,
                       "children": {}
                     },
                     "11940.17": {
-                      "url": "https://3mpwrapp.pages.dev/assets/css/design-system.css",
+                      "url": "https://3mpwrapp.ca/assets/css/design-system.css",
                       "navStartToEndTime": 1912,
                       "transferSize": 4830,
                       "children": {}
                     },
                     "11940.11": {
-                      "url": "https://3mpwrapp.pages.dev/assets/css/lighthouse-fixes.min.css",
+                      "url": "https://3mpwrapp.ca/assets/css/lighthouse-fixes.min.css",
                       "navStartToEndTime": 411,
                       "transferSize": 2019,
                       "children": {}
                     },
                     "11940.10": {
-                      "url": "https://3mpwrapp.pages.dev/assets/css/performance-optimizations.min.css",
+                      "url": "https://3mpwrapp.ca/assets/css/performance-optimizations.min.css",
                       "navStartToEndTime": 411,
                       "transferSize": 1939,
                       "children": {}
                     },
                     "11940.9": {
-                      "url": "https://3mpwrapp.pages.dev/assets/css/accessibility-enhancements.min.css",
+                      "url": "https://3mpwrapp.ca/assets/css/accessibility-enhancements.min.css",
                       "navStartToEndTime": 409,
                       "transferSize": 4132,
                       "children": {}
                     },
                     "11940.8": {
-                      "url": "https://3mpwrapp.pages.dev/assets/css/accessibility-tokens.min.css",
+                      "url": "https://3mpwrapp.ca/assets/css/accessibility-tokens.min.css",
                       "navStartToEndTime": 406,
                       "transferSize": 3411,
                       "children": {}
@@ -5344,22 +5344,22 @@
         ],
         "items": [
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/lighthouse-fixes.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/lighthouse-fixes.min.css",
             "totalBytes": 2019,
             "wastedMs": 207
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/performance-optimizations.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/performance-optimizations.min.css",
             "totalBytes": 1939,
             "wastedMs": 507
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/accessibility-enhancements.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/accessibility-enhancements.min.css",
             "totalBytes": 4132,
             "wastedMs": 507
           },
           {
-            "url": "https://3mpwrapp.pages.dev/assets/css/accessibility-tokens.min.css",
+            "url": "https://3mpwrapp.ca/assets/css/accessibility-tokens.min.css",
             "totalBytes": 3411,
             "wastedMs": 507
           }
@@ -6362,7 +6362,7 @@
     {
       "name": "pages.dev",
       "origins": [
-        "https://3mpwrapp.pages.dev"
+        "https://3mpwrapp.ca"
       ],
       "isFirstParty": true,
       "isUnrecognized": true

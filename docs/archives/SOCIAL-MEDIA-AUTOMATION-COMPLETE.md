@@ -220,7 +220,7 @@ Discover how 3mpwrApp's AI-powered energy prediction helps you plan your day and
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 
-https://3mpwrapp.pages.dev/2025-10-20-3mpwrapp-feature/
+https://3mpwrapp.ca/2025-10-20-3mpwrapp-feature/
 ```
 
 #### Instagram
@@ -240,7 +240,7 @@ Link in bio 🔗
 
 Discover how 3mpwrApp's AI-powered energy prediction helps you plan your day and manage your capacity with personalized smart notifications.
 
-[Read the full article](https://3mpwrapp.pages.dev/2025-10-20-3mpwrapp-feature/)
+[Read the full article](https://3mpwrapp.ca/2025-10-20-3mpwrapp-feature/)
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -251,7 +251,7 @@ Discover how 3mpwrApp's AI-powered energy prediction helps you plan your day and
 
 Discover how 3mpwrApp's AI-powered energy prediction helps you plan your day and manage your capacity with personalized smart notifications.
 
-https://3mpwrapp.pages.dev/2025-10-20-3mpwrapp-feature/
+https://3mpwrapp.ca/2025-10-20-3mpwrapp-feature/
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```

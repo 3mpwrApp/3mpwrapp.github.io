@@ -324,7 +324,7 @@ header {
 ### 3. Lighthouse Testing
 ```powershell
 # Run Lighthouse CLS test
-lighthouse https://3mpwrapp.pages.dev --only-categories=performance --view
+lighthouse https://3mpwrapp.ca --only-categories=performance --view
 ```
 
 ### 4. Browser DevTools

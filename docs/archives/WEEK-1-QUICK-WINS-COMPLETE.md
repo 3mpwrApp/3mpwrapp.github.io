@@ -56,7 +56,7 @@ Successfully implemented **all 5 Week 1 Quick Wins** from the optimization recom
 <meta property="og:title" content="Page Title">
 <meta property="og:description" content="Page description">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://3mpwrapp.pages.dev/page">
+<meta property="og:url" content="https://3mpwrapp.ca/page">
 <meta property="og:locale" content="en_CA">
 <meta property="og:locale:alternate" content="fr_CA">
 <meta property="og:image" content="/assets/empowrapp-logo.png">
@@ -228,14 +228,14 @@ ambient-light-sensor=()   # Block ambient light access
 **Example Output**:
 ```html
 <!-- On English page -->
-<link rel="alternate" hreflang="en" href="https://3mpwrapp.pages.dev/about/">
-<link rel="alternate" hreflang="fr" href="https://3mpwrapp.pages.dev/fr/about/">
-<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/about/">
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.ca/about/">
+<link rel="alternate" hreflang="fr" href="https://3mpwrapp.ca/fr/about/">
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.ca/about/">
 
 <!-- On French page -->
-<link rel="alternate" hreflang="en" href="https://3mpwrapp.pages.dev/about/">
-<link rel="alternate" hreflang="fr" href="https://3mpwrapp.pages.dev/fr/about/">
-<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/about/">
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.ca/about/">
+<link rel="alternate" hreflang="fr" href="https://3mpwrapp.ca/fr/about/">
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.ca/about/">
 ```
 
 **SEO Benefits**:

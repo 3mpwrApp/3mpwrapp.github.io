@@ -2,7 +2,7 @@
 **3mpwr App Website - Open Graph & Social Media Strategy**
 
 **Created:** January 15, 2026  
-**Website:** https://3mpwrapp.pages.dev  
+**Website:** https://3mpwrapp.ca  
 **Framework:** Jekyll with jekyll-seo-tag plugin  
 **Target Platform:** Cloudflare Pages
 
@@ -532,11 +532,11 @@ twitter_description: "Be among the first 10,000 to access revolutionary accessib
 **1. Facebook Sharing Debugger**
 - URL: https://developers.facebook.com/tools/debug/
 - Test each page:
-  - [ ] Homepage: `https://3mpwrapp.pages.dev/`
-  - [ ] About: `https://3mpwrapp.pages.dev/about`
-  - [ ] Features: `https://3mpwrapp.pages.dev/features/`
-  - [ ] Accessibility: `https://3mpwrapp.pages.dev/accessibility/`
-  - [ ] Beta: `https://3mpwrapp.pages.dev/app-waitlist/`
+  - [ ] Homepage: `https://3mpwrapp.ca/`
+  - [ ] About: `https://3mpwrapp.ca/about`
+  - [ ] Features: `https://3mpwrapp.ca/features/`
+  - [ ] Accessibility: `https://3mpwrapp.ca/accessibility/`
+  - [ ] Beta: `https://3mpwrapp.ca/app-waitlist/`
 - Click "Scrape Again" to clear cache if images don't show
 - Verify image preview displays correctly
 - Check for warnings or errors
@@ -618,13 +618,13 @@ gtag('event', 'share', {
 Add social share buttons with tracking:
 ```html
 <!-- Facebook -->
-https://www.facebook.com/sharer/sharer.php?u=https://3mpwrapp.pages.dev/?utm_source=facebook&utm_medium=social&utm_campaign=share
+https://www.facebook.com/sharer/sharer.php?u=https://3mpwrapp.ca/?utm_source=facebook&utm_medium=social&utm_campaign=share
 
 <!-- Twitter -->
-https://twitter.com/intent/tweet?url=https://3mpwrapp.pages.dev/?utm_source=twitter&utm_medium=social&utm_campaign=share&text=Check%20out%203mpwr%20App
+https://twitter.com/intent/tweet?url=https://3mpwrapp.ca/?utm_source=twitter&utm_medium=social&utm_campaign=share&text=Check%20out%203mpwr%20App
 
 <!-- LinkedIn -->
-https://www.linkedin.com/sharing/share-offsite/?url=https://3mpwrapp.pages.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=share
+https://www.linkedin.com/sharing/share-offsite/?url=https://3mpwrapp.ca/?utm_source=linkedin&utm_medium=social&utm_campaign=share
 ```
 
 ---

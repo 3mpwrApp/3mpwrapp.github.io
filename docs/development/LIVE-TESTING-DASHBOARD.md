@@ -1,7 +1,7 @@
 # 🎯 LIVE TESTING EXECUTION - October 18, 2025
 
 **Status:** 🟢 TESTING NOW  
-**Browser Open:** Simple Browser at https://3mpwrapp.pages.dev/
+**Browser Open:** Simple Browser at https://3mpwrapp.ca/
 
 ---
 
@@ -15,7 +15,7 @@
 
 ### Step 1: Test Homepage in Chrome (10 minutes)
 
-**Open:** https://3mpwrapp.pages.dev/ in Chrome
+**Open:** https://3mpwrapp.ca/ in Chrome
 
 **Checklist:**
 - [ ] 1. Page loads in under 3 seconds ⏱️
@@ -31,7 +31,7 @@
 
 ### Step 2: Test About Page in Chrome (10 minutes)
 
-**Open:** https://3mpwrapp.pages.dev/about.md
+**Open:** https://3mpwrapp.ca/about.md
 
 **Same checklist as above:**
 - [ ] Load time < 3 sec
@@ -61,14 +61,14 @@ Pages to test (check off as you go):
 ### Step 4: Test in Firefox (Quick Check)
 
 Just test Homepage in Firefox:
-- [ ] Open https://3mpwrapp.pages.dev/ in Firefox
+- [ ] Open https://3mpwrapp.ca/ in Firefox
 - [ ] Page loads and displays correctly
 - [ ] No obvious visual issues
 
 ### Step 5: Test in Edge (Quick Check)
 
 Just test Homepage in Edge:
-- [ ] Open https://3mpwrapp.pages.dev/ in Edge
+- [ ] Open https://3mpwrapp.ca/ in Edge
 - [ ] Page loads and displays correctly
 - [ ] No obvious visual issues
 
@@ -80,7 +80,7 @@ Just test Homepage in Edge:
 
 **Step 1: Check Security Headers (5 minutes)**
 
-1. Open https://3mpwrapp.pages.dev/ in Chrome
+1. Open https://3mpwrapp.ca/ in Chrome
 2. Press F12
 3. Go to Network tab
 4. Reload page (Ctrl+R)
@@ -125,7 +125,7 @@ Just test Homepage in Edge:
 
 **Step 1: Run Lighthouse in Chrome (3 minutes)**
 
-1. Open https://3mpwrapp.pages.dev/ in Chrome
+1. Open https://3mpwrapp.ca/ in Chrome
 2. Press F12
 3. Click "Lighthouse" tab (if not visible, click >> to find it)
 4. Select:

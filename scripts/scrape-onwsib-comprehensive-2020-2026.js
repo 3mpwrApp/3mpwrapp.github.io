@@ -24,9 +24,33 @@ const path = require('path');
 const CANLII_BASE = "https://api.canlii.org/v1";
 const CANLII_API_KEY = process.env.CANLII_API_KEY || "YOUR_FREE_API_KEY_HERE";
 const OUTPUT_DIR = path.join(__dirname, '../data/tribunal-decisions');
-const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
+const DEFAULT_YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
 const DELAY_MS = 15000; // 15 seconds between requests (avoid CanLII throttling)
 const MAX_RETRIES = 3;
+const MODE = process.env.ONWSIB_MODE || 'scrape'; // scrape | deep-dive | coverage-audit
+const APPLY_RECLASSIFICATION = process.env.APPLY_RECLASSIFICATION === '1';
+const PREDICTION_MIN_CONFIDENCE = Number(process.env.ONWSIB_PRED_MIN_CONF || '0.55');
+const OBSERVED_COUNTS = {
+  2020: 0,
+  2021: 49,
+  2022: 149,
+  2023: 120,
+  2024: 3,
+  2025: 64,
+  2026: 8
+};
+
+function parseYears() {
+  const raw = process.env.ONWSIB_YEARS;
+  if (!raw) return DEFAULT_YEARS;
+  const parsed = raw
+    .split(',')
+    .map((y) => Number(y.trim()))
+    .filter((y) => Number.isInteger(y) && y >= 2020 && y <= 2026);
+  return parsed.length > 0 ? parsed : DEFAULT_YEARS;
+}
+
+const YEARS = parseYears();
 
 // Ensure output directory exists
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -37,6 +61,137 @@ if (!fs.existsSync(OUTPUT_DIR)) {
 
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function asKeywordArray(keywords) {
+  if (Array.isArray(keywords)) return keywords.filter(Boolean);
+  if (typeof keywords === 'string') {
+    return keywords.split(';').map(k => k.trim()).filter(Boolean);
+  }
+  return [];
+}
+
+function toDecisionText(caseData, html) {
+  const title = (caseData?.title || '').toLowerCase();
+  const keywordsApi = asKeywordArray(caseData?.keywords_api || caseData?.keywords || '').join(' ').toLowerCase();
+  const text = (html || '').toLowerCase();
+  return `${title}\n${keywordsApi}\n${text}`;
+}
+
+function manualReviewSignalScore(decision) {
+  const text = toDecisionText(decision, decision.full_text_html || '');
+  let score = 0;
+  if (/entitled\s+to/i.test(text)) score += 4;
+  if (/denied\s+entitlement|benefits\s+denied|is\s+denied/i.test(text)) score += 4;
+  if (/allowed|dismissed|upheld|rescinded/i.test(text)) score += 3;
+  if (/\|/.test(text)) score += 2; // often mixed issue summaries
+  if ((decision.keywords_api || []).join(' ').length > 180) score += 1;
+  return score;
+}
+
+function classifyOnwsibOutcome(caseData, html) {
+  const text = toDecisionText(caseData, html);
+
+  const positive = [
+    /appeal\s+is\s+allowed/i,
+    /appeal\s+allowed/i,
+    /entitlement\s+allowed/i,
+    /initial\s+entitlement\s+allowed/i,
+    /worker\s+is\s+entitled\s+to/i,
+    /entitled\s+to\s+(benefits|full\s+loss|re-employment\s+payments)/i,
+    /benefits\s+are\s+payable/i,
+    /balance\s+of\s+probabilities\s+met/i,
+    /decision\s+is\s+rescinded/i,
+    /decision\s+varied\s+in\s+favour/i
+  ];
+
+  const negative = [
+    /appeal\s+is\s+dismissed/i,
+    /appeal\s+dismissed/i,
+    /appeal\s+is\s+denied/i,
+    /benefits\s+denied/i,
+    /ongoing\s+\w+\s+benefits\s+denied/i,
+    /denied\s+entitlement/i,
+    /entitlement\s+.*\s+is\s+denied/i,
+    /worker\s+is\s+not\s+entitled/i,
+    /no\s+entitlement\s+to/i,
+    /decision\s+(is\s+)?upheld/i,
+    /decision\s+remains\s+in\s+effect/i,
+    /request\s+is\s+denied/i,
+    /\sis\sdenied/i
+  ];
+
+  const partial = [
+    /appeal\s+allowed\s+in\s+part/i,
+    /partially\s+allowed/i,
+    /granted\s+in\s+part/i,
+    /part\s+of\s+the\s+decision\s+is\s+varied/i
+  ];
+
+  const procedural = [
+    /referred\s+back\s+to\s+wsib/i,
+    /matter\s+is\s+remitted/i,
+    /returned\s+to\s+the\s+board/i,
+    /new\s+decision\s+required/i,
+    /withdrawn/i,
+    /abandoned/i,
+    /interim\s+decision/i,
+    /adjourned/i,
+    /procedural\s+order/i,
+    /extension\s+of\s+time/i,
+    /reconsideration/i
+  ];
+
+  const positiveHits = positive.filter((p) => p.test(text));
+  const negativeHits = negative.filter((p) => p.test(text));
+  const partialHits = partial.filter((p) => p.test(text));
+  const proceduralHits = procedural.filter((p) => p.test(text));
+
+  if (partialHits.length > 0) {
+    return {
+      outcome: 'Allowed - Partial',
+      confidence: 'high',
+      evidence: partialHits[0].toString()
+    };
+  }
+
+  if (positiveHits.length > 0 && negativeHits.length > 0) {
+    return {
+      outcome: 'Mixed / Partially Allowed',
+      confidence: 'medium',
+      evidence: `${positiveHits[0].toString()} + ${negativeHits[0].toString()}`
+    };
+  }
+
+  if (positiveHits.length > 0) {
+    return {
+      outcome: 'Allowed - Full',
+      confidence: 'high',
+      evidence: positiveHits[0].toString()
+    };
+  }
+
+  if (negativeHits.length > 0) {
+    return {
+      outcome: 'Denied - Upheld',
+      confidence: 'high',
+      evidence: negativeHits[0].toString()
+    };
+  }
+
+  if (proceduralHits.length > 0) {
+    return {
+      outcome: 'Interim / Procedural',
+      confidence: 'low',
+      evidence: proceduralHits[0].toString()
+    };
+  }
+
+  return {
+    outcome: 'Unknown',
+    confidence: 'low',
+    evidence: 'no-pattern-match'
+  };
 }
 
 function httpsGet(url) {
@@ -349,8 +504,15 @@ function parseDecision(caseData, fullData) {
   // 🆕 Extract legislation from keywords text
   const legislation = extractLegislationFromKeywords(keywordsApi);
   
-  // Enhanced outcome parsing from keywords
+  // ONWSIB-specific outcome parsing (stronger than generic HRTO rules)
+  const deepOutcome = classifyOnwsibOutcome({
+    ...caseData,
+    keywords_api: keywordsApi
+  }, html);
   const outcomeFromKeywords = extractOutcomeFromKeywords(keywordsApi);
+  const resolvedOutcome = deepOutcome.outcome !== 'Unknown'
+    ? deepOutcome.outcome
+    : (outcomeFromKeywords || extractOutcome(fullData || caseData, html));
   
   return {
     case_id: caseId || 'unknown',
@@ -369,7 +531,9 @@ function parseDecision(caseData, fullData) {
     legislation_count: legislation.length,
     
     // Analysis
-    outcome: outcomeFromKeywords || extractOutcome(fullData || caseData, html),
+    outcome: resolvedOutcome,
+    outcome_confidence: deepOutcome.confidence,
+    outcome_evidence: deepOutcome.evidence,
     has_disability_ground: hasDisabilityGround(caseData, html, keywords),
     
     // Full text
@@ -385,8 +549,70 @@ function parseDecision(caseData, fullData) {
     data_quality: {
       has_full_text: !!html,
       has_keywords: keywords.length > 0,
-      has_outcome: outcomeFromKeywords !== null || extractOutcome(fullData || caseData, html) !== 'Unknown',
+      has_outcome: resolvedOutcome !== 'Unknown',
       has_legislation: legislation.length > 0
+    }
+  };
+}
+
+function enhanceExistingDecision(decision) {
+  const html = decision.full_text_html || '';
+  const deepOutcome = classifyOnwsibOutcome(decision, html);
+  const priorOutcome = decision.outcome || 'Unknown';
+  const upgradedOutcome = priorOutcome === 'Unknown' && deepOutcome.outcome !== 'Unknown'
+    ? deepOutcome.outcome
+    : priorOutcome;
+
+  return {
+    ...decision,
+    outcome: upgradedOutcome,
+    outcome_deep_dive: deepOutcome.outcome,
+    outcome_confidence: deepOutcome.confidence,
+    outcome_evidence: deepOutcome.evidence,
+    deep_dive_reviewed_at: new Date().toISOString(),
+    data_quality: {
+      ...(decision.data_quality || {}),
+      has_outcome: upgradedOutcome !== 'Unknown'
+    }
+  };
+}
+
+function loadPredictionMapForYear(year) {
+  const predFile = path.join(OUTPUT_DIR, `onwsib-${year}-complete-predicted-outcomes.json`);
+  if (!fs.existsSync(predFile)) return new Map();
+  const rows = JSON.parse(fs.readFileSync(predFile, 'utf8'));
+  const map = new Map();
+  rows.forEach((r) => {
+    if (r.case_id) {
+      map.set(r.case_id, {
+        outcome: r.outcome,
+        confidence: typeof r.outcome_confidence === 'number' ? r.outcome_confidence : 0,
+        method: r.outcome_method || 'ml_prediction'
+      });
+    }
+  });
+  return map;
+}
+
+function applyPrediction(decision, prediction) {
+  if (!prediction) return decision;
+  const canPromote =
+    (decision.outcome || 'Unknown') === 'Unknown' &&
+    prediction.confidence >= PREDICTION_MIN_CONFIDENCE;
+
+  return {
+    ...decision,
+    predicted_outcome: prediction.outcome,
+    predicted_confidence: prediction.confidence,
+    predicted_method: prediction.method,
+    outcome: canPromote ? `Predicted - ${prediction.outcome}` : decision.outcome,
+    outcome_confidence: canPromote ? 'low' : decision.outcome_confidence,
+    outcome_evidence: canPromote
+      ? `ml:${prediction.method}:${prediction.confidence.toFixed(3)}`
+      : decision.outcome_evidence,
+    data_quality: {
+      ...(decision.data_quality || {}),
+      has_outcome: canPromote ? true : (decision.data_quality?.has_outcome || false)
     }
   };
 }
@@ -529,9 +755,162 @@ async function scrapeYear(year) {
   return decisions;
 }
 
+async function runDeepDiveLocal() {
+  console.log('╔════════════════════════════════════════════════════════════════════╗');
+  console.log('║  🔎 ONWSIB DEEP-DIVE MODE (LOCAL ONLY, NO API CALLS)             ║');
+  console.log('║  Reclassifies existing files with ONWSIB-specific outcome rules   ║');
+  console.log('╚════════════════════════════════════════════════════════════════════╝');
+  console.log();
+  console.log(`📁 Output directory: ${OUTPUT_DIR}`);
+  console.log(`🛡️  API-safe mode: YES (safe to run while ONCA scraper is active)`);
+  console.log();
+
+  const summary = [];
+  const manualQueue = [];
+
+  for (const year of YEARS) {
+    const inputFile = path.join(OUTPUT_DIR, `onwsib-${year}-complete.json`);
+    const outputFile = APPLY_RECLASSIFICATION
+      ? inputFile
+      : path.join(OUTPUT_DIR, `onwsib-${year}-complete-deep-dive.json`);
+
+    if (!fs.existsSync(inputFile)) {
+      summary.push({ year, skipped: true, reason: 'missing-file' });
+      continue;
+    }
+
+    const existing = JSON.parse(fs.readFileSync(inputFile, 'utf8'));
+    const predictions = loadPredictionMapForYear(year);
+    const beforeKnown = existing.filter(d => (d.outcome || 'Unknown') !== 'Unknown').length;
+    const enhanced = existing
+      .map(enhanceExistingDecision)
+      .map((d) => applyPrediction(d, predictions.get(d.case_id)));
+    const afterKnown = enhanced.filter(d => (d.outcome || 'Unknown') !== 'Unknown').length;
+
+    fs.writeFileSync(outputFile, JSON.stringify(enhanced, null, 2));
+
+    summary.push({
+      year,
+      total: existing.length,
+      beforeKnown,
+      afterKnown,
+      netGain: afterKnown - beforeKnown,
+      predMinConfidence: PREDICTION_MIN_CONFIDENCE,
+      outputFile: path.basename(outputFile)
+    });
+
+    enhanced
+      .filter((d) => (d.outcome || 'Unknown') === 'Unknown')
+      .map((d) => ({
+        year,
+        case_id: d.case_id,
+        title: d.title,
+        url: d.url,
+        signal_score: manualReviewSignalScore(d),
+        keywords_api: d.keywords_api,
+        predicted_outcome: d.predicted_outcome || null,
+        predicted_confidence: d.predicted_confidence || null
+      }))
+      .filter((d) => d.signal_score > 0)
+      .forEach((d) => manualQueue.push(d));
+
+    console.log(`✅ ${year}: known outcomes ${beforeKnown} → ${afterKnown} (net +${afterKnown - beforeKnown})`);
+  }
+
+  const summaryFile = path.join(OUTPUT_DIR, 'onwsib-deep-dive-summary.json');
+  fs.writeFileSync(summaryFile, JSON.stringify({
+    generated_at: new Date().toISOString(),
+    mode: APPLY_RECLASSIFICATION ? 'in-place' : 'sidecar',
+    summary
+  }, null, 2));
+
+  const queueFile = path.join(OUTPUT_DIR, 'onwsib-manual-review-queue-top100.json');
+  const topQueue = manualQueue
+    .sort((a, b) => {
+      if (b.signal_score !== a.signal_score) return b.signal_score - a.signal_score;
+      return (b.predicted_confidence || 0) - (a.predicted_confidence || 0);
+    })
+    .slice(0, 100);
+  fs.writeFileSync(queueFile, JSON.stringify({
+    generated_at: new Date().toISOString(),
+    pred_min_confidence: PREDICTION_MIN_CONFIDENCE,
+    total_candidates: manualQueue.length,
+    top_100: topQueue
+  }, null, 2));
+
+  console.log();
+  console.log(`📄 Deep-dive summary saved: ${summaryFile}`);
+  console.log(`📄 Manual review queue saved: ${queueFile}`);
+  if (!APPLY_RECLASSIFICATION) {
+    console.log('ℹ️  Original files preserved. Use APPLY_RECLASSIFICATION=1 to overwrite originals.');
+  }
+}
+
+async function runCoverageAudit() {
+  console.log('╔════════════════════════════════════════════════════════════════════╗');
+  console.log('║  📊 ONWSIB COVERAGE AUDIT MODE (LOCAL ONLY, NO API CALLS)        ║');
+  console.log('║  Compares local records vs observed CanLII year counts            ║');
+  console.log('╚════════════════════════════════════════════════════════════════════╝');
+  console.log();
+
+  const report = [];
+  let localTotal = 0;
+  let observedTotal = 0;
+
+  for (const year of YEARS) {
+    const localFile = path.join(OUTPUT_DIR, `onwsib-${year}-complete.json`);
+    const localCount = fs.existsSync(localFile)
+      ? JSON.parse(fs.readFileSync(localFile, 'utf8')).length
+      : 0;
+    const observedCount = OBSERVED_COUNTS[year] || 0;
+    const gap = observedCount - localCount;
+
+    localTotal += localCount;
+    observedTotal += observedCount;
+
+    report.push({
+      year,
+      local_count: localCount,
+      observed_canlii_count: observedCount,
+      gap,
+      status: gap === 0 ? 'aligned' : (gap > 0 ? 'missing-local-records' : 'local-exceeds-observed')
+    });
+  }
+
+  const out = {
+    generated_at: new Date().toISOString(),
+    mode: 'coverage-audit',
+    totals: {
+      local_total: localTotal,
+      observed_total: observedTotal,
+      net_gap: observedTotal - localTotal
+    },
+    by_year: report
+  };
+
+  const outFile = path.join(OUTPUT_DIR, 'onwsib-coverage-gap-report.json');
+  fs.writeFileSync(outFile, JSON.stringify(out, null, 2));
+
+  report.forEach((r) => {
+    console.log(`${r.year}: local=${r.local_count}, observed=${r.observed_canlii_count}, gap=${r.gap}`);
+  });
+  console.log();
+  console.log(`📄 Coverage report saved: ${outFile}`);
+}
+
 // ===== MAIN EXECUTION =====
 
 async function main() {
+  if (MODE === 'deep-dive') {
+    await runDeepDiveLocal();
+    return;
+  }
+
+  if (MODE === 'coverage-audit') {
+    await runCoverageAudit();
+    return;
+  }
+
   console.log('╔════════════════════════════════════════════════════════════════════╗');
   console.log('║  🔬 COMPREHENSIVE ONWSIB SCRAPER (2020-2026)                      ║');
   console.log('║  WSIB First-Level Decisions - Pre-existing Denial Patterns       ║');

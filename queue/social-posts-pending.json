@@ -15,7 +15,7 @@
     "platform": "x",
     "scheduledTime": "08:00 EST",
     "content": {
-      "text": "Most disability apps are built BY people who aren't disabled. That's the problem.\n\n3mpwrApp is different.\n\nBuilt BY disabled people. FOR disabled people. No compromise.\n\nHere's why that changes everything:\n\n→ https://3mpwrapp.pages.dev/blog/2026-01-06-why-disability-apps-fail",
+      "text": "Most disability apps are built BY people who aren't disabled. That's the problem.\n\n3mpwrApp is different.\n\nBuilt BY disabled people. FOR disabled people. No compromise.\n\nHere's why that changes everything:\n\n→ https://3mpwrapp.ca/blog/2026-01-06-why-disability-apps-fail",
       "hashtags": [
         "#DisabilityTech",
         "#Accessibility",
@@ -69,7 +69,7 @@
       },
       {
         "order": 5,
-        "text": "The numbers:\n\n60+ features\n721 tests passing\n100% accessibility target (not 95%)\nZero venture capital\nClosed beta with real users\n\nNot a charity. Not theater. Infrastructure.\n\nRead the full story:\nhttps://3mpwrapp.pages.dev/blog/2026-01-06-why-disability-apps-fail\n\n#DisabilityTech #3mpwrApp",
+        "text": "The numbers:\n\n60+ features\n721 tests passing\n100% accessibility target (not 95%)\nZero venture capital\nClosed beta with real users\n\nNot a charity. Not theater. Infrastructure.\n\nRead the full story:\nhttps://3mpwrapp.ca/blog/2026-01-06-why-disability-apps-fail\n\n#DisabilityTech #3mpwrApp",
         "threadPosition": "end",
         "replyTo": 4
       }
@@ -110,7 +110,7 @@
       "mainText": "Here's what happens with most disability apps:\n\nTech company sees \"untapped market\" → Hires accessibility consultant (usually not disabled) → Builds features for press releases → Launches with inspiration porn → Disabled people leave.\n\nThen 3mpwrApp arrived.\n\nWe built this differently:\n\n✓ Built BY disabled people. Not consultants. Not board members. Actual disabled people making the decisions.\n\n✓ Your data stays YOURS. Bring your own Google Drive. No tracking. No selling. No \"anonymized insights.\"\n\n✓ 721 tests. Zero compromise on accessibility. Not 95%. 100% target.\n\n✓ Works completely offline. Because chronic illness doesn't wait for WiFi.\n\n✓ 60+ features tested with real users before launch. No inspiration porn. Just tools that solve real problems.\n\nHere's the real talk: When disabled people design for disabled people, you don't get a \"better\" therapy app. You get infrastructure.\n\nRead the full story → [Link to blog post]",
       "cta_button": {
         "text": "Read the Full Story",
-        "link": "https://3mpwrapp.pages.dev/blog/2026-01-06-why-disability-apps-fail",
+        "link": "https://3mpwrapp.ca/blog/2026-01-06-why-disability-apps-fail",
         "type": "LEARN_MORE"
       },
       "image": {

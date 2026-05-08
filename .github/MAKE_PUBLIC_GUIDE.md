@@ -149,8 +149,8 @@ Create `.well-known/security.txt`:
 ```
 Contact: empowrapp08162025@gmail.com
 Preferred-Languages: en
-Canonical: https://3mpwrapp.pages.dev/.well-known/security.txt
-Policy: https://3mpwrapp.pages.dev/security
+Canonical: https://3mpwrapp.ca/.well-known/security.txt
+Policy: https://3mpwrapp.ca/security
 ```
 
 ---
@@ -217,7 +217,7 @@ cat .gitignore | grep ".env"
 # Should show: .env files are blocked
 
 # Check security headers
-curl -I https://3mpwrapp.pages.dev
+curl -I https://3mpwrapp.ca
 # Should show: All security headers present
 
 # Test HTTPS enforcement

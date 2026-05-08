@@ -39,7 +39,7 @@
 - **Commit:** f9346d8
 - **ETA:** 2 minutes to build
 - **Cache clear:** 5-8 minutes total
-- **Production URL:** https://3mpwrapp.pages.dev
+- **Production URL:** https://3mpwrapp.ca
 
 ---
 
@@ -67,7 +67,7 @@
 Press `Ctrl+Shift+N` (bypasses all cache)
 
 ### Step 2: Visit Production Site
-Go to: **`https://3mpwrapp.pages.dev`**
+Go to: **`https://3mpwrapp.ca`**
 
 ### Step 3: Test All Pages
 - [ ] ✅ Homepage loads with full content
@@ -96,7 +96,7 @@ You saw: `https://7314eccf.3mpwrapp.pages.dev`
 This was a **preview deployment** - a temporary test version that Cloudflare creates automatically. These are NOT meant for public use and are often broken.
 
 ### Your Real Site
-**Always use:** `https://3mpwrapp.pages.dev`
+**Always use:** `https://3mpwrapp.ca`
 
 This is your **production site** - the real, live version.
 
@@ -261,6 +261,6 @@ All these guides are now in your repository:
 
 **Status: ✅ ALL FIXES COMPLETE**  
 **Next: ⏰ Wait 8 minutes, then test!**  
-**URL: https://3mpwrapp.pages.dev**
+**URL: https://3mpwrapp.ca**
 
 🎉 Congratulations! Your site is fixed and deploying now!

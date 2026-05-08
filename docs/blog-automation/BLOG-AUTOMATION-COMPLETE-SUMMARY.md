@@ -28,12 +28,12 @@
 ### 1. Standardized All Blog Links ✅
 
 **Before:**
-- Some posts linked to `https://3mpwrapp.pages.dev/`
+- Some posts linked to `https://3mpwrapp.ca/`
 - Inconsistent URL construction across scripts
 - Links sometimes broken or 404
 
 **After:**
-- All posts link to `https://3mpwrapp.pages.dev/blog/#curated-daily`
+- All posts link to `https://3mpwrapp.ca/blog/#curated-daily`
 - Consistent use of `site-config.js` for URLs
 - Feature articles link directly to article pages
 
@@ -69,7 +69,7 @@
 
 3mpwrApp updated with...
 
-🔗 Read more: https://3mpwrapp.pages.dev/
+🔗 Read more: https://3mpwrapp.ca/
 
 #Accessibility #DisabilityBenefits #News #Canada
 ```
@@ -89,7 +89,7 @@ Today's Top Stories:
    [Story URL]
 
 📰 Read all 24 stories: 
-https://3mpwrapp.pages.dev/blog/#curated-daily
+https://3mpwrapp.ca/blog/#curated-daily
 
 #DisabilityRights #Accessibility #WorkersComp #Canada
 ```
@@ -120,7 +120,7 @@ sleep 2700  # Wait 45 minutes
 ```bash
 sleep 2700  # Wait 45 minutes
 # Try to verify blog is accessible (5 retries)
-curl -sSf https://3mpwrapp.pages.dev/blog/
+curl -sSf https://3mpwrapp.ca/blog/
 # Only post if verified
 ```
 
@@ -185,19 +185,19 @@ Added prominent "Follow Us on Social Media" box to blog with:
 - Curates from 50+ RSS feeds
 - Scores and ranks articles
 - Creates post in `_posts/`
-- Links: `https://3mpwrapp.pages.dev/blog/#curated-daily`
+- Links: `https://3mpwrapp.ca/blog/#curated-daily`
 
 ✅ **Daily at 10:00 AM UTC** - Daily Feature Spotlight runs
 - Rotates through 10+ features
 - Creates detailed article
 - References user guide
-- Links: `https://3mpwrapp.pages.dev/YYYY/MM/DD/feature-spotlight-[name]/`
+- Links: `https://3mpwrapp.ca/YYYY/MM/DD/feature-spotlight-[name]/`
 
 ✅ **Monday at 9:00 AM UTC** - Weekly Update runs
 - Analyzes last 7 days of commits
 - Categorizes changes
 - Creates human-readable summary
-- Links: `https://3mpwrapp.pages.dev/YYYY/MM/DD/weekly-update-week-[NN]/`
+- Links: `https://3mpwrapp.ca/YYYY/MM/DD/weekly-update-week-[NN]/`
 
 ### Social Media Posting (Automated)
 ✅ **Daily at ~10:00 AM UTC** (after 45 min deployment)

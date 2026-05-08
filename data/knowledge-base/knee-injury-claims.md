@@ -633,9 +633,9 @@ A: **NO.** Employer can dispute, but WSIB makes the decision (not employer). Emp
 - [Knee Injury Appeal Template](../templates/knee-injury-appeal.md) - Fill-in-blank letter
 
 **Research:**
-- [WSIB Exposed: 8 Smoking Guns](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
-- [WSIB Keyword Decoder](https://3mpwrapp.pages.dev/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/)
-- [Full WSIB System Analysis](https://3mpwrapp.pages.dev/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026)
+- [WSIB Exposed: 8 Smoking Guns](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+- [WSIB Keyword Decoder](https://3mpwrapp.ca/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/)
+- [Full WSIB System Analysis](https://3mpwrapp.ca/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026)
 
 ---
 

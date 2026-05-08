@@ -193,7 +193,7 @@ Si vous découvrez une vulnérabilité de sécurité :
 Pour toute question concernant ces conditions :
 
 **Courriel** : [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)  
-**Site Web** : [https://3mpwrapp.pages.dev](https://3mpwrapp.pages.dev)  
+**Site Web** : [https://3mpwrapp.ca](https://3mpwrapp.ca)  
 **GitHub** : [github.com/3mpowrApp](https://github.com/3mpowrApp)
 
 **Délai de réponse** : 24-48 heures pour la plupart des demandes
@@ -202,7 +202,7 @@ Pour toute question concernant ces conditions :
 
 ## Glossaire
 
-**Site** : Le site Web 3mpwrApp accessible à https://3mpwrapp.pages.dev  
+**Site** : Le site Web 3mpwrApp accessible à https://3mpwrapp.ca  
 **Nous/Notre** : 3mpwrApp et ses affiliés  
 **Vous/Votre** : L'utilisateur du site  
 **Contenu** : Texte, images, vidéos, code et autres matériaux  

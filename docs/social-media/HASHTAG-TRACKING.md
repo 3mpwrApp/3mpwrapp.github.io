@@ -54,7 +54,7 @@ This document provides tools and methods for tracking the **#3mpwrApp** hashtag 
 When sharing links with #3mpwrApp, use these UTM parameters to track traffic:
 
 ```
-https://3mpwrapp.pages.dev/?utm_source=social&utm_medium=hashtag&utm_campaign=3mpwrApp
+https://3mpwrapp.ca/?utm_source=social&utm_medium=hashtag&utm_campaign=3mpwrApp
 ```
 
 **Parameter breakdown:**

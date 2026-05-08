@@ -217,7 +217,7 @@ Complete these steps in your first week to get the most out of 3mpwrApp:
 - **Export Anytime** - Download all your data in JSON format
 - **Delete Anytime** - Request account deletion
 
-See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
+See full Privacy Policy at: https://3mpwrapp.ca/privacy
 
 ---
 
@@ -420,7 +420,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Report violations
 
 ### **Community Guidelines:**
-See full Community Guidelines at: https://3mpwrapp.pages.dev/community-guidelines
+See full Community Guidelines at: https://3mpwrapp.ca/community-guidelines
 
 **Not Allowed:**
 - Harassment or abuse
@@ -3258,7 +3258,7 @@ A: Most actions can be undone. Look for "Undo" options or edit your entries. You
 **Include:** Description, use case, priority
 
 ### **Website:**
-https://3mpwrapp.pages.dev
+https://3mpwrapp.ca
 
 ---
 
@@ -3331,10 +3331,10 @@ See full changelog: Settings > About > What's New
 ## 📚 **Additional Resources**
 
 ### **Documentation:**
-- Terms of Service: https://3mpwrapp.pages.dev/terms
-- Privacy Policy: https://3mpwrapp.pages.dev/privacy
-- Community Guidelines: https://3mpwrapp.pages.dev/community-guidelines
-- Accessibility Statement: https://3mpwrapp.pages.dev/accessibility
+- Terms of Service: https://3mpwrapp.ca/terms
+- Privacy Policy: https://3mpwrapp.ca/privacy
+- Community Guidelines: https://3mpwrapp.ca/community-guidelines
+- Accessibility Statement: https://3mpwrapp.ca/accessibility
 
 ### **Crisis Resources:**
 - **Canada Suicide Prevention Service:** Call [1-833-456-4566](tel:1-833-456-4566) or text [45645](sms:45645) (24/7)

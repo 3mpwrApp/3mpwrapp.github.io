@@ -54,7 +54,7 @@ RUBY_VERSION = 3.1.0
 
 After deployment, verify security headers:
 ```bash
-curl -I https://3mpwrapp.pages.dev
+curl -I https://3mpwrapp.ca
 ```
 
 You should see:

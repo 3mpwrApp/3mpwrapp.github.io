@@ -112,13 +112,13 @@ Every feature in 3mpwrApp maps to one (or more) of these pillars:
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/)** - See the philosophy in action: knowledge base, appeal templates, and comprehensive guides from 11,430 tribunal cases
+📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/)** - See the philosophy in action: knowledge base, appeal templates, and comprehensive guides from 11,430 tribunal cases
 
-📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The journey from zero to 1,500+ Ontario cases (transparency on successes and failures)
+📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The journey from zero to 1,500+ Ontario cases (transparency on successes and failures)
 
-📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - How the three pillars become three flywheels: Evidence, Pattern Detection, and Collective Action working together
+📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.ca/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - How the three pillars become three flywheels: Evidence, Pattern Detection, and Collective Action working together
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026/01/06/the-power-of-3mpwrapp-how-were-building-different/)** - The technical implementation: why compounding community knowledge is our superpower
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.ca/blog/2026/01/06/the-power-of-3mpwrapp-how-were-building-different/)** - The technical implementation: why compounding community knowledge is our superpower
 
 ---
 
@@ -127,9 +127,9 @@ This article is part of a connected series documenting how we're building 3mpwrA
 3mpwrApp is built on these three pillars—and built for and with the people who need them most.
 
 **Get involved:**
-- 💬 [Community Forums](https://3mpwrapp.pages.dev/community/)
-- 🧪 [Become a Beta Tester](https://3mpwrapp.pages.dev/app-waitlist/)
-- 📖 [Read Our Mission](https://3mpwrapp.pages.dev/about/)
+- 💬 [Community Forums](https://3mpwrapp.ca/community/)
+- 🧪 [Become a Beta Tester](https://3mpwrapp.ca/app-waitlist/)
+- 📖 [Read Our Mission](https://3mpwrapp.ca/about/)
 
 **Follow us:**
 - **Discord:** [https://discord.gg/P2qQyjxV](https://discord.gg/P2qQyjxV)

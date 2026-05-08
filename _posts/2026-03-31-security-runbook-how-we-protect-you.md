@@ -251,13 +251,13 @@ A: Same process - email empowrapp08162025@gmail.com with subject "SECURITY: Webs
 ## Stay Informed
 
 **Subscribe for Security Alerts:**
-- Blog RSS: [https://3mpwrapp.pages.dev/feed.xml](https://3mpwrapp.pages.dev/feed.xml)
+- Blog RSS: [https://3mpwrapp.ca/feed.xml](https://3mpwrapp.ca/feed.xml)
 - Email updates: Coming soon for beta testers
 - Social media: [@3mpowrApp0816](https://x.com/3mpowrapp0816)
 
 **Latest Security Status:**
-- [Security Policy](https://3mpwrapp.pages.dev/security/)
-- [Blog Posts](https://3mpwrapp.pages.dev/)
+- [Security Policy](https://3mpwrapp.ca/security/)
+- [Blog Posts](https://3mpwrapp.ca/)
 - [GitHub Security Advisories](https://github.com/S0vryn9-C011ect1ve/empowrapp-main/security/advisories)
 
 * * *

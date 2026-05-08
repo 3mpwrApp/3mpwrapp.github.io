@@ -2,7 +2,7 @@
 **Professional UX/UI Design & Accessibility Review**
 
 **Date:** October 26, 2025  
-**Website:** https://3mpwrapp.pages.dev/  
+**Website:** https://3mpwrapp.ca/  
 **Audit Team:** UX/UI Designers, Accessibility Experts, Content Strategists
 
 ---
@@ -33,7 +33,7 @@ The 3mpwr App website demonstrates **exceptional commitment to accessibility** w
 ---
 
 ## Homepage Audit
-**URL:** https://3mpwrapp.pages.dev/
+**URL:** https://3mpwrapp.ca/
 
 ### 1. Content & Clarity Issues
 
@@ -221,7 +221,7 @@ The 3mpwr App website demonstrates **exceptional commitment to accessibility** w
 ---
 
 ## About Page Audit
-**URL:** https://3mpwrapp.pages.dev/about
+**URL:** https://3mpwrapp.ca/about
 
 ### 1. Content & Messaging
 
@@ -315,7 +315,7 @@ The 3mpwr App website demonstrates **exceptional commitment to accessibility** w
 ---
 
 ## Accessibility Page Audit
-**URL:** https://3mpwrapp.pages.dev/accessibility
+**URL:** https://3mpwrapp.ca/accessibility
 
 ### 1. Content & Structure
 
@@ -385,7 +385,7 @@ The 3mpwr App website demonstrates **exceptional commitment to accessibility** w
 ---
 
 ## Contact Page Audit
-**URL:** https://3mpwrapp.pages.dev/contact
+**URL:** https://3mpwrapp.ca/contact
 
 ### 1. Content & Layout
 
@@ -458,7 +458,7 @@ The 3mpwr App website demonstrates **exceptional commitment to accessibility** w
 ---
 
 ## FAQ Page Audit
-**URL:** https://3mpwrapp.pages.dev/faq
+**URL:** https://3mpwrapp.ca/faq
 
 ### 1. Content & Structure
 
@@ -551,7 +551,7 @@ The 3mpwr App website demonstrates **exceptional commitment to accessibility** w
 ---
 
 ## Features Page Audit
-**URL:** https://3mpwrapp.pages.dev/features
+**URL:** https://3mpwrapp.ca/features
 
 ### 1. Content & Structure
 

@@ -113,7 +113,7 @@ WCAG 2.2 AAA:   Full Compliance ✅
 - Monitor: https://github.com/3mpwrApp/3mpwrapp.github.io/actions
 
 ### Live Site Update
-- URL: https://3mpwrapp.pages.dev/
+- URL: https://3mpwrapp.ca/
 - Expected: Automatic after build completes
 
 ### Verification Steps
@@ -181,7 +181,7 @@ Created:
 [ ] W3C Validator: https://validator.w3.org/
     Expected: 0 errors
 
-[ ] Homepage Load: https://3mpwrapp.pages.dev/
+[ ] Homepage Load: https://3mpwrapp.ca/
     Expected: Loads normally
 
 [ ] Lighthouse Audit: DevTools > Lighthouse
@@ -271,7 +271,7 @@ All documentation has been committed and is now available in the repository:
 ## 📞 Next Steps
 
 1. **Monitor Build:** Check GitHub Actions for build status
-2. **Verify Live:** Test site at https://3mpwrapp.pages.dev/ after build
+2. **Verify Live:** Test site at https://3mpwrapp.ca/ after build
 3. **Validate:** Run W3C validator on live site to confirm 0 errors
 4. **Test:** Screen reader and keyboard navigation testing
 5. **Document:** Link to W3C-FIXES-SUMMARY.md in project documentation

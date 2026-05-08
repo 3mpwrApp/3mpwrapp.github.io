@@ -264,7 +264,7 @@ Write-Host "`n🎉 All tests passed! Ready to deploy." -ForegroundColor Green
 
 - **Cloudflare Dashboard**: https://dash.cloudflare.com/
 - **Firebase Console**: https://console.firebase.google.com/
-- **Your Website**: https://3mpwrapp.pages.dev/events/
+- **Your Website**: https://3mpwrapp.ca/events/
 - **ICS Validator**: https://icalendar.org/validator.html
 
 ---

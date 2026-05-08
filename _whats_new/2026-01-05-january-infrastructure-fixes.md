@@ -191,8 +191,8 @@ function getGoogleClientId(): string | null {
 
 **Before**:
 ```env
-EXPO_PUBLIC_CAMPAIGNS_API_BASE=https://3mpwrapp.pages.dev/api/
-EXPO_PUBLIC_EVENTS_API_BASE=https://3mpwrapp.pages.dev/api/
+EXPO_PUBLIC_CAMPAIGNS_API_BASE=https://3mpwrapp.ca/api/
+EXPO_PUBLIC_EVENTS_API_BASE=https://3mpwrapp.ca/api/
 ```
 
 **After**:

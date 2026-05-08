@@ -22,7 +22,7 @@
 ### 1. **Axe DevTools CLI (Terminal)**
 Command-line tool for automated accessibility testing:
 ```bash
-npx axe https://3mpwrapp.pages.dev/
+npx axe https://3mpwrapp.ca/
 ```
 
 ### 2. **Browser Extension (Manual Installation)**
@@ -42,28 +42,28 @@ npx playwright test
 
 ### Test Homepage
 ```bash
-npx axe https://3mpwrapp.pages.dev/
+npx axe https://3mpwrapp.ca/
 ```
 
 ### Test Specific Page
 ```bash
-npx axe https://3mpwrapp.pages.dev/about/
+npx axe https://3mpwrapp.ca/about/
 ```
 
 ### Generate JSON Report
 ```bash
-npx axe https://3mpwrapp.pages.dev/ --json > accessibility-report.json
+npx axe https://3mpwrapp.ca/ --json > accessibility-report.json
 ```
 
 ### Test All Key Pages
 ```bash
-npx axe https://3mpwrapp.pages.dev/
-npx axe https://3mpwrapp.pages.dev/about/
-npx axe https://3mpwrapp.pages.dev/features/
-npx axe https://3mpwrapp.pages.dev/user-guide/
-npx axe https://3mpwrapp.pages.dev/accessibility/
-npx axe https://3mpwrapp.pages.dev/privacy/
-npx axe https://3mpwrapp.pages.dev/terms/
+npx axe https://3mpwrapp.ca/
+npx axe https://3mpwrapp.ca/about/
+npx axe https://3mpwrapp.ca/features/
+npx axe https://3mpwrapp.ca/user-guide/
+npx axe https://3mpwrapp.ca/accessibility/
+npx axe https://3mpwrapp.ca/privacy/
+npx axe https://3mpwrapp.ca/terms/
 ```
 
 ---
@@ -88,7 +88,7 @@ The project already has:
 ### Method 1: CLI (Terminal)
 **Best for:** Quick automated checks
 ```bash
-npx axe https://3mpwrapp.pages.dev/
+npx axe https://3mpwrapp.ca/
 ```
 
 ### Method 2: Browser Extension
@@ -104,7 +104,7 @@ npx axe https://3mpwrapp.pages.dev/
 const { injectAxe, checkA11y } = require('axe-playwright');
 
 test('accessibility check', async ({ page }) => {
-  await page.goto('https://3mpwrapp.pages.dev/');
+  await page.goto('https://3mpwrapp.ca/');
   await injectAxe(page);
   await checkA11y(page);
 });
@@ -154,10 +154,10 @@ Add these scripts to `package.json` for easier testing:
 
 ```json
 "scripts": {
-  "test:accessibility": "axe https://3mpwrapp.pages.dev/",
-  "test:accessibility:about": "axe https://3mpwrapp.pages.dev/about/",
-  "test:accessibility:all": "npm run test:accessibility && npm run test:accessibility:about && axe https://3mpwrapp.pages.dev/features/ && axe https://3mpwrapp.pages.dev/user-guide/ && axe https://3mpwrapp.pages.dev/accessibility/",
-  "test:accessibility:json": "axe https://3mpwrapp.pages.dev/ --json > accessibility-report.json"
+  "test:accessibility": "axe https://3mpwrapp.ca/",
+  "test:accessibility:about": "axe https://3mpwrapp.ca/about/",
+  "test:accessibility:all": "npm run test:accessibility && npm run test:accessibility:about && axe https://3mpwrapp.ca/features/ && axe https://3mpwrapp.ca/user-guide/ && axe https://3mpwrapp.ca/accessibility/",
+  "test:accessibility:json": "axe https://3mpwrapp.ca/ --json > accessibility-report.json"
 }
 ```
 
@@ -208,7 +208,7 @@ Edit code → F12 → Axe DevTools → Scan → Fix issues → Repeat
 ### 2. **Pre-Deployment**
 Run CLI for comprehensive check:
 ```bash
-npx axe https://3mpwrapp.pages.dev/
+npx axe https://3mpwrapp.ca/
 ```
 
 ### 3. **CI/CD Integration**
@@ -220,7 +220,7 @@ npm run test:playwright
 ### 4. **Issue Tracking**
 Export results for documentation:
 ```bash
-npx axe https://3mpwrapp.pages.dev/ --json > report-$(date +%Y-%m-%d).json
+npx axe https://3mpwrapp.ca/ --json > report-$(date +%Y-%m-%d).json
 ```
 
 ---
@@ -268,7 +268,7 @@ export default defineConfig({
 ## 📚 Next Steps
 
 1. **Install Browser Extension** (Chrome/Firefox)
-2. **Test Homepage** - `npx axe https://3mpwrapp.pages.dev/`
+2. **Test Homepage** - `npx axe https://3mpwrapp.ca/`
 3. **Test Key Pages** - Use CLI for each section
 4. **Add npm Scripts** - For easier recurring testing
 5. **Document Issues** - Use reports for tracking

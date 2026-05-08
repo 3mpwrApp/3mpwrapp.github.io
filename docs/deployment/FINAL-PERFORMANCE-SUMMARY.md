@@ -13,7 +13,7 @@
 - **New Files Created:** 10 files (6 CSS/JS pairs + docs)
 - **Performance Impact:** Estimated **+8-12 Lighthouse points**
 - **Zero errors or warnings**
-- **All changes live:** https://3mpwrapp.pages.dev/
+- **All changes live:** https://3mpwrapp.ca/
 
 ---
 
@@ -318,7 +318,7 @@ Contact:     ~94 mobile, ~97 desktop (+4/+2)
 
 ### Deployment
 - ✅ All 7 commits pushed to `main` branch
-- ✅ Live on: https://3mpwrapp.pages.dev/
+- ✅ Live on: https://3mpwrapp.ca/
 - ✅ Cloudflare CDN updated
 - ✅ No deployment errors
 - ✅ All pages loading correctly
@@ -528,6 +528,6 @@ The 3mpwr App website now features:
 **Total Commits:** 7  
 **Status:** ✅ ✅ ✅ **100% COMPLETE** ✅ ✅ ✅  
 **Quality Score:** ⭐⭐⭐⭐⭐ (5/5 stars)  
-**Live Site:** https://3mpwrapp.pages.dev/
+**Live Site:** https://3mpwrapp.ca/
 
 🎉 **Congratulations on completing ALL Phase 3 optimizations!** 🎉

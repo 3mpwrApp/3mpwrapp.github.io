@@ -709,8 +709,8 @@ My knee injury satisfies the *Kriz* "greater severity" test:
 
 **3mpwrApp Resources:**
 - [Knee Injury Knowledge Base Guide](../knowledge-base/knee-injury-claims.md)
-- [WSIB Exposed Blog](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
-- [Keyword Decoder](https://3mpwrapp.pages.dev/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/)
+- [WSIB Exposed Blog](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+- [Keyword Decoder](https://3mpwrapp.ca/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/)
 
 **Email:** empowrapp08162025@gmail.com
 

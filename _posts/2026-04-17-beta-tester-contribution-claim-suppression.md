@@ -524,8 +524,8 @@ More Workers Win → More Contributions → Better Research (CYCLE ACCELERATES)
 
 **BC & Ontario Claim Suppression Research:**
 - [BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse](/blog/2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns/) - 7,386 BC cases with 100% unknown outcomes reveal systemic patterns documented by beta testers
-- [The Claim Suppression Playbook: BC to Ontario Cross-Provincial Analysis](https://3mpwrapp.pages.dev/research/wsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Statistical analysis of 11,430 Ontario WSIAT decisions comparing to BC patterns
-- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.pages.dev/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook based on documented BC megaproject cases
+- [The Claim Suppression Playbook: BC to Ontario Cross-Provincial Analysis](https://3mpwrapp.ca/research/wsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Statistical analysis of 11,430 Ontario WSIAT decisions comparing to BC patterns
+- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.ca/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook based on documented BC megaproject cases
 
 ---
 

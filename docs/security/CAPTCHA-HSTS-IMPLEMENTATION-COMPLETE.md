@@ -208,7 +208,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 ### Test Turnstile (After Getting Site Key)
 
 1. **Visit Contact Form**:
-   - Go to https://3mpwrapp.pages.dev/contact/
+   - Go to https://3mpwrapp.ca/contact/
    - Should see Turnstile widget
 
 2. **Auto-Verification** (Most Users):

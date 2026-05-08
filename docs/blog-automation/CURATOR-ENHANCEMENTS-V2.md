@@ -215,7 +215,7 @@ public/images/social-cards/
 <!-- Open Graph Tags -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="...">
-<meta property="og:image" content="https://3mpwrapp.pages.dev/images/social-cards/card-1.png">
+<meta property="og:image" content="https://3mpwrapp.ca/images/social-cards/card-1.png">
 
 <!-- Twitter Card Tags -->
 <meta name="twitter:card" content="summary_large_image">
@@ -296,7 +296,7 @@ Post 7: [CTA + Link]
 - Dublin Core metadata
 
 ### Feed Details
-- **URL:** `https://3mpwrapp.pages.dev/feeds/curated.xml`
+- **URL:** `https://3mpwrapp.ca/feeds/curated.xml`
 - **Format:** RSS 2.0 with Atom namespace
 - **Encoding:** UTF-8
 - **Items:** All curated stories (25-30)
@@ -308,7 +308,7 @@ Post 7: [CTA + Link]
 <rss version="2.0" xmlns:atom="..." xmlns:dc="...">
   <channel>
     <title>3mpwr App - Curated Disability News</title>
-    <link>https://3mpwrapp.pages.dev/blog/</link>
+    <link>https://3mpwrapp.ca/blog/</link>
     <description>Daily curated news...</description>
     
     <item>
@@ -411,12 +411,12 @@ cat public/posting-results.json
 
 **View RSS Feed:**
 ```
-https://3mpwrapp.pages.dev/feeds/curated.xml
+https://3mpwrapp.ca/feeds/curated.xml
 ```
 
 **Subscribe to Updates:**
 ```
-https://3mpwrapp.pages.dev/feeds/
+https://3mpwrapp.ca/feeds/
 ```
 
 ---

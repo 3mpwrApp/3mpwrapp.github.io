@@ -110,15 +110,15 @@
 ### Image 1: AI Assistant - Personalized Recommendations
 **Filename**: `AIAssistantTab1-YouNext3Steps-RecommendedTools.png`  
 **Alt Text**: AI Assistant showing personalized next steps and recommended tools for disability advocacy - 3mpwrApp home dashboard  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#priority-february-2026-personalization
+**User Guide**: https://3mpwrapp.ca/user-guide/#ai-advocacy-suite  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#priority-february-2026-personalization
 
 **Mastodon** (467 chars):
 Meet your AI Assistant 🤖 Personalized next steps, tailored recommendations, and zero guesswork. Built BY disabled people FOR disabled people.
 
 Your disability is unique. Your tools should be too.
 
-Join our closed beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_assistant_1
+Join our closed beta → https://3mpwrapp.ca/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_assistant_1
 
 #3mpwrApp #DisabilityRights #BetaTesting #AIAccessibility #DisabilityTech
 
@@ -127,7 +127,7 @@ Your phone now knows what you need before you do 🤖
 
 AI Assistant that actually understands disability life. Personalized recs. Zero overwhelm.
 
-Closed beta open → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_1
+Closed beta open → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_1
 
 #3mpwrApp #DisabilityTech
 
@@ -136,7 +136,7 @@ Brain fog? No problem. The AI remembers what you forget 🧠
 
 Your personalized disability advocacy assistant is here. Free forever.
 
-Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_1
+Join beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_1
 
 #3mpwrApp #DisabilityRights
 
@@ -145,8 +145,8 @@ Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medi
 ### Image 2: Home Dashboard Overview
 **Filename**: `HomeScreenTab1.png`  
 **Alt Text**: 3mpwrApp home dashboard with personalized widgets, quick actions, and AI assistant for disability rights advocacy  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#personalization-setup  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#priority-february-2026-personalization
+**User Guide**: https://3mpwrapp.ca/user-guide/#personalization-setup  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#priority-february-2026-personalization
 
 **Mastodon** (476 chars):
 Your command center for disability advocacy ⚡
@@ -158,7 +158,7 @@ Your command center for disability advocacy ⚡
 
 All in one place. All accessible. All FREE.
 
-Test it now → https://3mpwrapp.pages.dev/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dashboard_1
+Test it now → https://3mpwrapp.ca/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dashboard_1
 
 #3mpwrApp #DisabilityRights #BetaTesting #AccessibleTech
 
@@ -167,7 +167,7 @@ Stop switching between 12 apps 😅
 
 One dashboard. Your health. Your case. Your community. Everything disability advocacy in one place.
 
-Early access → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dash_1
+Early access → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dash_1
 
 #3mpwrApp #DisabilityAdvocacy
 
@@ -176,7 +176,7 @@ Your disability is unique. Why isn't your app?
 
 Personalized dashboard that adapts to YOU, not the other way around. Free beta open.
 
-Join → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dash_1
+Join → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dash_1
 
 #3mpwrApp
 
@@ -185,8 +185,8 @@ Join → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=so
 ### Image 3: Home Features
 **Filename**: `HomeScreenTab2.png`  
 **Alt Text**: 3mpwrApp home screen showing wellness tracking, evidence management, and community support features  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#quick-start  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#quick-start  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (453 chars):
 Three things disabled people need DAILY: 🧠💪💚
@@ -197,7 +197,7 @@ Three things disabled people need DAILY: 🧠💪💚
 
 All three. One app. Zero cost.
 
-See how it works → https://3mpwrapp.pages.dev/user-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_features_1
+See how it works → https://3mpwrapp.ca/user-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_features_1
 
 #3mpwrApp #ChronicIllness #DisabilityAdvocacy #SpoonTheory
 
@@ -206,7 +206,7 @@ Wellness + Evidence + Community = 3mpwrApp 💚
 
 Track symptoms, protect documents, find your people. All accessible. All private. All yours.
 
-Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_feat_1
+Join beta → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_feat_1
 
 #3mpwrApp
 
@@ -215,7 +215,7 @@ Started with 12 spoons. Ended with 2. This app tracks what drained me →
 
 Wellness tracking + evidence storage + community support. Built BY disabled people.
 
-Beta open → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_feat_1
+Beta open → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_feat_1
 
 #SpoonTheory
 
@@ -224,8 +224,8 @@ Beta open → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medi
 ### Image 4: Community Hub Simple Mode
 **Filename**: `HomeCommunityHubSimpleMode.png`  
 **Alt Text**: Community Hub in simple complexity mode - accessible interface for disability community connection - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#complexity-mode  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#complexity-mode  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (489 chars):
 Bad day? Switch to Simple Mode. Seriously.
@@ -240,7 +240,7 @@ Complexity modes designed for:
 🌟 Neurodivergent comfort
 
 Disability tech that adapts to YOU →  
-https://3mpwrapp.pages.dev/user-guide/#complexity-mode?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple_mode
+https://3mpwrapp.ca/user-guide/#complexity-mode?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple_mode
 
 #3mpwrApp #A11y #CognitiveAccessibility
 
@@ -252,7 +252,7 @@ Same app. YOUR choice. Switch anytime.
 
 Because disability isn't one-size-fits-all 💚
 
-Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple
+Try it → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple
 
 #3mpwrApp #AccessibleTech
 
@@ -263,7 +263,7 @@ One tap. Simple Mode. 5 features. No overwhelm.
 
 Disability tech that actually understands bad days.
 
-Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple
+Join beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple
 
 #3mpwrApp #Neurodivergent
 
@@ -272,8 +272,8 @@ Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medi
 ### Image 5: Evidence Vault Quick Access
 **Filename**: `HomeEvidenceVault-EvidenceCommandCenter.png`  
 **Alt Text**: Quick access to Evidence Command Center from home - encrypted document storage for workers compensation cases - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#evidence-command-center  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#original-priority-features
+**User Guide**: https://3mpwrapp.ca/user-guide/#evidence-command-center  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#original-priority-features
 
 **Mastodon** (472 chars):
 "I lost the denial letter" 📄❌
@@ -288,7 +288,7 @@ Never again. Evidence Command Center:
 
 Your evidence. Your privacy. Your control.
 
-Protect your case → https://3mpwrapp.pages.dev/user-guide/#evidence-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
+Protect your case → https://3mpwrapp.ca/user-guide/#evidence-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
 
 #3mpwrApp #WorkersComp
 
@@ -299,7 +299,7 @@ Medical records. Denial letters. Photos. Voice memos. All encrypted. All organiz
 
 Benefits appeals? Covered. Workplace discrimination? Documented.
 
-Test it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
+Test it → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
 
 #3mpwrApp
 
@@ -310,15 +310,15 @@ Evidence Command Center = encrypted proof they can't deny.
 
 Workers comp. Disability claims. Workplace discrimination. Document EVERYTHING.
 
-Beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
+Beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
 
 ---
 
 ### Image 6: Wellness Command Access
 **Filename**: `HomeWellnessCommand.png`  
 **Alt Text**: Wellness Hub quick access with health tracking, mood logging, and energy management tools - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#wellness-hub  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#wellness-hub  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (481 chars):
 Wellness Hub: 41 tools. 6 categories. Zero judgment 💚
@@ -332,7 +332,7 @@ Wellness Hub: 41 tools. 6 categories. Zero judgment 💚
 
 Self-care that isn't just "take a bath"
 
-Explore tools → https://3mpwrapp.pages.dev/user-guide/#wellness-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
+Explore tools → https://3mpwrapp.ca/user-guide/#wellness-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
 
 #ChronicIllness #SpoonTheory
 
@@ -343,7 +343,7 @@ Mood tracking. Energy forecasts. Pain logging. Crisis support. Exercise videos. 
 
 41 tools built for chronic illness life. Not "wellness influencer" nonsense.
 
-Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
+Try it → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
 
 #ChronicPain
 
@@ -352,7 +352,7 @@ Pain at 7/10? The app adjusts. That's Pain Flare Mode 🔥
 
 Wellness tools that don't require energy you don't have. Mood tracking. Spoon theory. Crisis support.
 
-Free forever → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
+Free forever → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
 
 #ChronicIllness
 
@@ -361,8 +361,8 @@ Free forever → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_m
 ### Image 7-9: Getting Started Tutorial (3 images)
 **Filenames**: `Step1-StartYourFirstCase.png`, `Step2-UploadDocumentsIntoEvidenceCommandCenter.png`, `Step3-FindYourPeople-CommunityHub.png`  
 **Alt Text**: Three-step guided onboarding tutorial for workers compensation cases and community connection - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#quick-start  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#how-to-join-beta-testing
+**User Guide**: https://3mpwrapp.ca/user-guide/#quick-start  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#how-to-join-beta-testing
 
 **Combined Thread Post (Mastodon)**:
 1/3 🚀 Getting started with 3mpwrApp = 3 simple steps
@@ -372,7 +372,7 @@ Whether it's workers comp, disability benefits, or workplace accommodations — 
 
 [Image: Step1-StartYourFirstCase.png]
 
-https://3mpwrapp.pages.dev/user-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial_thread
+https://3mpwrapp.ca/user-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial_thread
 
 #3mpwrApp #WorkersComp
 
@@ -394,15 +394,15 @@ They can't deny what's documented 📸🔐
 
 You're not alone 💚
 
-Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial_complete
+Join beta → https://3mpwrapp.ca/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial_complete
 
 ---
 
 ### Image 10-12: Background Themes (3 images)
 **Filenames**: `bg_emberforge.png`, `bg_LanternAscension.jpeg`, `bg_VerdantSanctuary.png`  
 **Alt Text**: Customizable accessibility themes - Ember Forge, Lantern Ascension, Verdant Sanctuary - 3mpwrApp personalization  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#accessibility-settings  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#accessibility-settings  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Single Post (All Platforms)**:
 
@@ -419,7 +419,7 @@ Customize everything:
 
 Sensory-friendly design that doesn't sacrifice beauty.
 
-Make it yours → https://3mpwrapp.pages.dev/user-guide/#accessibility-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
+Make it yours → https://3mpwrapp.ca/user-guide/#accessibility-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
 
 #A11y #Neurodivergent #AccessibleDesign
 
@@ -430,7 +430,7 @@ Not just dark mode. Full visual customization. Reduce overwhelm. Increase comfor
 
 Because accessibility is also aesthetic.
 
-Preview themes → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
+Preview themes → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
 
 #AccessibleTech
 
@@ -439,7 +439,7 @@ Dyslexia? 5 fonts. 8 themes. Your screen, your rules.
 
 Customization that actually helps, not just "vibe" →
 
-Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
+Join beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
 
 #Neurodivergent #A11y #3mpwrApp
 
@@ -448,8 +448,8 @@ Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medi
 ### Image 13: Home Dashboard with AI Assistant
 **Filename**: `AIAssistantTab2-HelpfulRessources-NeedMoreHelp.png`  
 **Alt Text**: AI Assistant providing helpful resources and additional support options - 3mpwrApp AI advocacy tools  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#ai-advocacy-suite  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (474 chars):
 "I don't even know where to start" 😰
@@ -464,7 +464,7 @@ Meet your AI Assistant. It does.
 
 Not a chatbot. A guide. Built with input from 200+ disabled people.
 
-Get personalized help → https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_resources
+Get personalized help → https://3mpwrapp.ca/user-guide/#ai-advocacy-suite?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_resources
 
 #AIAccessibility #DisabilityTech
 
@@ -475,7 +475,7 @@ Your situation → AI analysis → Personalized resources → Action plan
 
 No generic advice. Just relevant help.
 
-Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_help
+Try it → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_help
 
 #3mpwrApp
 
@@ -484,7 +484,7 @@ Legal jargon → plain English. In seconds. For free.
 
 AI that translates, suggests, and guides. Built BY disabled people FOR disabled people.
 
-Free beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_help
+Free beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_help
 
 #AIForGood #3mpwrApp
 
@@ -497,8 +497,8 @@ Free beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medi
 ### Image 14: Advocacy Hub Main Dashboard
 **Filename**: `AdvocacyHub1-WhatDoYouNeedHelpWithToday.png`  
 **Alt Text**: Advocacy Hub main dashboard asking "What do you need help with today?" - personalized legal support for injured workers - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#legal-action-hub  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#legal-action-hub  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (487 chars):
 "What do you need help with today?" ⚖️
@@ -514,7 +514,7 @@ Advocacy Hub adapts to YOUR situation:
 
 Personalized legal support without the $400/hr price tag.
 
-Start your case → https://3mpwrapp.pages.dev/user-guide/#legal-action-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
+Start your case → https://3mpwrapp.ca/user-guide/#legal-action-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
 
 #WorkersComp #DisabilityAdvocacy #LegalAid #3mpwrApp
 
@@ -527,7 +527,7 @@ Advocacy Hub guides you through:
 → Writing letters (AI templates)
 → Finding lawyers (Directory)
 
-Fight back → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
+Fight back → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
 
 #WorkersComp
 
@@ -538,7 +538,7 @@ DENIED. But then I sent THIS letter... [Full template inside]
 
 Your employer said no? Here's the tool that changes minds →
 
-Beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
+Beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
 
 #WorkersComp
 
@@ -547,8 +547,8 @@ Beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=so
 ### Image 15: Jurisdiction & Appeal Calculator
 **Filename**: `AdvocacyHub2-Jusrisdiction-AppealDeadlineCalculator.png`  
 **Alt Text**: Jurisdiction selection and appeal deadline calculator - track critical legal deadlines for workers compensation - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#appeal-command-center  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#appeal-command-center  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (481 chars):
 Missing a deadline = losing your case 📅❌
@@ -563,7 +563,7 @@ Appeal Deadline Calculator:
 
 "I didn't know I only had 30 days" — We've heard it too many times. Not anymore.
 
-Never miss a deadline → https://3mpwrapp.pages.dev/user-guide/#appeal-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline_calc
+Never miss a deadline → https://3mpwrapp.ca/user-guide/#appeal-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline_calc
 
 #WorkersComp #LegalDeadlines
 
@@ -576,7 +576,7 @@ Deadline calculator tracks:
 ✓ Extensions granted
 ✓ Submission confirmation
 
-No more panic → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline
+No more panic → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline
 
 #WorkersComp #3mpwrApp
 
@@ -587,7 +587,7 @@ Every province. Every deadline. All tracked. All automated.
 
 Appeal calculator that could save your case →
 
-Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline
+Join beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline
 
 #WorkersComp #3mpwrApp
 
@@ -596,8 +596,8 @@ Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medi
 ### Image 16: Form Helper & Search Tools
 **Filename**: `AdvocacyHub3-FormHelper-SearchTools.png`  
 **Alt Text**: Form helper and legal search tools for workers compensation paperwork assistance - 3mpwrApp Advocacy Hub  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#document-factory  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#document-factory  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (493 chars):
 "Which form do I even need?" 🤷‍♀️
@@ -613,7 +613,7 @@ Form Helper knows. SearchTools find it.
 
 "Worker's Injury Report" or "Reconsideration Request"? The app translates legal jargon into plain English.
 
-Simplify paperwork → https://3mpwrapp.pages.dev/user-guide/#document-factory?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=form_helper
+Simplify paperwork → https://3mpwrapp.ca/user-guide/#document-factory?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=form_helper
 
 #WorkersComp #Paperwork
 
@@ -624,7 +624,7 @@ Pick your situation → Get the right form → Auto-filled with your info → Tr
 
 Stop Googling "Ontario WSIB Form 8 fillable PDF"
 
-Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forms
+Try it → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forms
 
 #WorkersComp
 
@@ -635,7 +635,7 @@ Form Helper = "What happened?" → Correct form, auto-filled, deadline tracked.
 
 Your case. Their paperwork. Our tool handles it →
 
-Beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forms
+Beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=forms
 
 #LegalAid
 
@@ -644,8 +644,8 @@ Beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=so
 ### Image 17: Main Hubs & Quick Tools
 **Filename**: `AdvocacyHub4-MainHubs-QuickTools.png`  
 **Alt Text**: Quick access dashboard showing main advocacy hubs and fast-action tools - 3mpwrApp command center  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#advocacy-hub  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#advocacy-hub  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (486 chars):
 Bad brain fog day? Quick Tools = 5 essential actions. Big buttons. No navigation hell.
@@ -662,7 +662,7 @@ Full toolkit, deep features, guided workflows
 
 Your energy. Your choice.
 
-Adaptive advocacy → https://3mpwrapp.pages.dev/user-guide/#advocacy-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_tools
+Adaptive advocacy → https://3mpwrapp.ca/user-guide/#advocacy-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick_tools
 
 #SpoonTheory #A11y
 
@@ -673,7 +673,7 @@ Feeling better = Main Hubs. Full power.
 
 Same app. Adapts to YOUR energy level. Every. Single. Day.
 
-See it work → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick
+See it work → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick
 
 #ChronicPain #3mpwrApp
 
@@ -684,15 +684,15 @@ Check deadlines. Upload photo. Call lawyer. Get crisis help. Find clinic.
 
 Disability-first design that respects bad days →
 
-Beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick
+Beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=quick
 
 ---
 
 ### Image 18: AI Advocacy Suite
 **Filename**: `AIAdvocacySuite.png`  
 **Alt Text**: AI Advocacy Suite with legal document analysis, personalized recommendations, and case strategy tools - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#priority-february-2026-personalization
+**User Guide**: https://3mpwrapp.ca/user-guide/#ai-advocacy-suite  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#priority-february-2026-personalization
 
 **Mastodon** (498 chars):
 AI Advocacy Suite = your 24/7 legal research assistant 🤖⚖️
@@ -705,7 +705,7 @@ AI Advocacy Suite = your 24/7 legal research assistant 🤖⚖️
 
 Not generic advice. Tailored to YOUR province, YOUR injury, YOUR denial reason.
 
-Meet your AI advocate → https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_suite
+Meet your AI advocate → https://3mpwrapp.ca/user-guide/#ai-advocacy-suite?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_suite
 
 #AIForGood #LegalTech
 
@@ -717,7 +717,7 @@ What to do: Request Dr. notes from May 2024
 Deadline: 27 days  
 Success rate: 68%
 
-Real help → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai
+Real help → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai
 
 **X/Twitter** (279 chars):
 Denied? AI reads the letter. Finds the weakness. Writes your appeal. All in 60 seconds.
@@ -726,7 +726,7 @@ $400/hr lawyer knowledge. $0 price tag.
 
 Your denial → AI analysis → Winning strategy →
 
-Free beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai
+Free beta → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai
 
 #AIForGood
 
@@ -735,8 +735,8 @@ Free beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medi
 ### Image 19: Ally & Support Network
 **Filename**: `AllyANDSupportNetwork.png`  
 **Alt Text**: Ally and support network matching system connecting disabled people with advocates and peer support - 3mpwrApp Community  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#peer-matching  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#peer-matching  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (491 chars):
 You don't have to fight alone 💚
@@ -751,7 +751,7 @@ Ally & Support Network:
 
 Algorithmically matched. Manually verified. Community moderated.
 
-Find your people → https://3mpwrapp.pages.dev/user-guide/#peer-matching?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=allies
+Find your people → https://3mpwrapp.ca/user-guide/#peer-matching?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=allies
 
 #DisabilityCommunity #MutualAid
 
@@ -764,7 +764,7 @@ Peer matching that actually understands context:
 ✓ Same stage (appeal, hearing, etc.)
 ✓ Shared identity (language, culture, etc.)
 
-Real support → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=peer
+Real support → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=peer
 
 **X/Twitter** (277 chars):
 Just matched with someone who won the EXACT case I'm fighting. Same province. Same denial reason. Same everything.
@@ -773,15 +773,15 @@ She's coaching me through it. For free.
 
 That's the Ally Network →
 
-Join → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=peer
+Join → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=peer
 
 ---
 
 ### Image 20: Collective Legal Action Hub
 **Filename**: `CollectiveLegalActionHub.png`  
 **Alt Text**: Collective legal action coordination for class action lawsuits and group advocacy campaigns - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#collective-action  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#collective-action  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (497 chars):
 One person? They ignore.  
@@ -798,7 +798,7 @@ Collective Legal Action Hub:
 
 "The 50-User Threshold" — when individual cases become collective power.
 
-Join forces → https://3mpwrapp.pages.dev/user-guide/#collective-action?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=collective
+Join forces → https://3mpwrapp.ca/user-guide/#collective-action?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=collective
 
 #SolidarityForever #WorkersRights
 
@@ -809,7 +809,7 @@ They overturned ALL 47 cases in one hearing.
 
 That's collective legal action. That's power →
 
-Organize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=collective
+Organize → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=collective
 
 #Solidarity #3mpwrApp
 
@@ -819,15 +819,15 @@ Organize → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_mediu
 
 Collective legal action turns individual losses into group WINS. App connects you with others fighting the same fight.
 
-Power in numbers → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=collective
+Power in numbers → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=collective
 
 ---
 
 ### Image 21: Evidence Command Center
 **Filename**: `EvidenceCommandCenter.png`  
 **Alt Text**: Evidence Command Center with encrypted document storage, timeline view, and case building tools - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#evidence-command-center  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#original-priority-features
+**User Guide**: https://3mpwrapp.ca/user-guide/#evidence-command-center  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#original-priority-features
 
 **Mastodon** (484 chars):
 Build a case they CAN'T deny 🔐📄
@@ -843,7 +843,7 @@ Evidence Command Center:
 
 They lost your file? You didn't. You have backups.
 
-Protect your case → https://3mpwrapp.pages.dev/user-guide/#evidence-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence
+Protect your case → https://3mpwrapp.ca/user-guide/#evidence-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence
 
 #WorkersComp
 
@@ -854,7 +854,7 @@ Evidence Command Center: Search. Found in 0.3 seconds. Organized by date. Encryp
 
 Never lose critical documents again →
 
-Secure storage → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence
+Secure storage → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence
 
 #3mpwrApp
 
@@ -863,15 +863,15 @@ They "lost" my file. Twice. Third time? I had encrypted backups of EVERYTHING �
 
 Evidence Command Center = Photo vault + timeline + checklist. All encrypted. All yours.
 
-Protect your case → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence
+Protect your case → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence
 
 ---
 
 ### Image 22: Legal Action Hub
 **Filename**: `LegalActionHub.png`  
 **Alt Text**: Legal Action Hub main dashboard with case management, lawyer directory, and legal resource library - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#legal-action-hub  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#legal-action-hub  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (489 chars):
 Legal Action Hub = Your case management HQ ⚖️📊
@@ -885,7 +885,7 @@ Legal Action Hub = Your case management HQ ⚖️📊
 
 From filing to winning. All tracked. All organized.
 
-Take control → https://3mpwrapp.pages.dev/user-guide/#legal-action-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal_hub
+Take control → https://3mpwrapp.ca/user-guide/#legal-action-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal_hub
 
 #LegalAid #DisabilityLaw
 
@@ -896,7 +896,7 @@ Need precedent? 1,000+ cases searchable.
 
 Legal Action Hub = Every tool. One place. Zero cost →
 
-Find resources → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal_hub
+Find resources → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal_hub
 
 #3mpwrApp
 
@@ -905,7 +905,7 @@ Find resources → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm
 
 Legal Action Hub = Your case command center. For FREE →
 
-Manage your case → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal_hub
+Manage your case → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=legal_hub
 
 #WorkersComp
 
@@ -914,8 +914,8 @@ Manage your case → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&u
 ### Image 23: Self-Advocacy Coach
 **Filename**: `SelfAdvocacyCoach.png`  
 **Alt Text**: Self-advocacy coaching tools with guided scripts, confidence building, and communication strategies - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#self-advocacy-tools  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#self-advocacy-tools  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (494 chars):
 "I froze during the phone call. Said yes when I meant no." 😰
@@ -931,7 +931,7 @@ Self-Advocacy Coach helps you find your voice:
 
 Rehearse. Practice. Speak up. We coach you through it.
 
-Build confidence → https://3mpwrapp.pages.dev/user-guide/#self-advocacy-tools?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=self_advocacy
+Build confidence → https://3mpwrapp.ca/user-guide/#self-advocacy-tools?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=self_advocacy
 
 #SelfAdvocacy #DisabilityRights
 
@@ -946,14 +946,14 @@ Self-Advocacy Coach gives you:
 
 Prepared = powerful →
 
-Practice → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_coach
+Practice → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_coach
 
 **X/Twitter** (278 chars):
 "What should I say to my employer about accommodations?"
 
 Self-Advocacy Coach: Here's the script. Here's the backup plan. Here's your legal rights. Now practice out loud →
 
-Confidence training → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_coach
+Confidence training → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_coach
 
 ---
 
@@ -962,8 +962,8 @@ Confidence training → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitte
 ### Image 24: Wellness Hub Main Dashboard
 **Filename**: `Wellness1-Tab.png`  
 **Alt Text**: Wellness Hub main dashboard with mood tracking, energy management, and mental health tools - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#wellness-hub  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#wellness-hub  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (488 chars):
 Wellness Hub: 41 tools. Zero toxic positivity 💚
@@ -978,7 +978,7 @@ Wellness Hub: 41 tools. Zero toxic positivity 💚
 
 Self-care that understands chronic illness reality.
 
-Explore tools → https://3mpwrapp.pages.dev/user-guide/#wellness-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=wellness_main
+Explore tools → https://3mpwrapp.ca/user-guide/#wellness-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=wellness_main
 
 #ChronicIllness #SpoonTheory #MentalHealth
 
@@ -987,7 +987,7 @@ Wellness tools built by people who live with chronic pain. Not influencers who s
 
 Mood tracking. Energy forecasts. Crisis support. Exercise. CBT. Pacing.
 
-Real tools → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=wellness
+Real tools → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=wellness
 
 #ChronicPain #3mpwrApp
 
@@ -998,7 +998,7 @@ Spoon theory tracking. Pacing algorithms. Crisis hotlines. CBT techniques. Pain 
 
 Built BY chronically ill people →
 
-Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=wellness
+Try it → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=wellness
 
 #Spoonie
 
@@ -1007,8 +1007,8 @@ Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=
 ### Image 25: Mental Health Crisis Tools
 **Filename**: `Wellness2-12MentalHealthCrisisTools.png`  
 **Alt Text**: 12 mental health crisis intervention tools including hotlines, grounding exercises, and safety planning - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#crisis-tools  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#original-priority-features
+**User Guide**: https://3mpwrapp.ca/user-guide/#crisis-tools  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#original-priority-features
 
 **Mastodon** (497 chars):
 12 Mental Health Crisis Tools — no login required 🚨
@@ -1026,7 +1026,7 @@ CW: Crisis, self-harm, suicide
 
 Accessible without barriers. Private. Free. Always.
 
-Crisis support → https://3mpwrapp.pages.dev/user-guide/#crisis-tools?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=crisis
+Crisis support → https://3mpwrapp.ca/user-guide/#crisis-tools?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=crisis
 
 #MentalHealthMatters #CrisisSupport
 
@@ -1037,7 +1037,7 @@ Hotlines. Grounding techniques. Safety plans. Coping skills.
 
 When you need help NOW, not after creating an account →
 
-Immediate support → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=crisis
+Immediate support → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=crisis
 
 #MentalHealth
 
@@ -1046,7 +1046,7 @@ Mental health crisis? 12 tools. Zero barriers. No login. No payment. No judgment
 
 Hotlines, grounding, safety planning, coping skills. Instant access →
 
-Help now → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=crisis
+Help now → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=crisis
 
 #MentalHealthMatters #988
 
@@ -1055,8 +1055,8 @@ Help now → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_mediu
 ### Image 26: Energy & Mood Dashboard
 **Filename**: `Wellness3-EnergyMood-Dashboard.png`  
 **Alt Text**: Interactive energy and mood tracking dashboard with pattern analysis and trend visualization - 3mpwrApp Wellness  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#mood-tracker  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#mood-tracker  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (491 chars):
 Energy & Mood Dashboard: Your body's user manual 📊💚
@@ -1070,7 +1070,7 @@ Energy & Mood Dashboard: Your body's user manual 📊💚
 
 "Why do I crash every Thursday?" The data shows you why.
 
-Understand your patterns → https://3mpwrapp.pages.dev/user-guide/#mood-tracker?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=energy_mood
+Understand your patterns → https://3mpwrapp.ca/user-guide/#mood-tracker?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=energy_mood
 
 #ChronicIllness #DataDrivenSelfCare
 
@@ -1081,7 +1081,7 @@ AI analyzed 8 weeks of data: You overschedule Wednesdays. Your body crashes next
 
 Energy & Mood tracking that actually EXPLAINS patterns →
 
-Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=energy
+Try it → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=energy
 
 #SpoonTheory
 
@@ -1090,15 +1090,15 @@ Started with 14 spoons Monday. Had 2 by noon. The AI figured out WHY 🧠
 
 Energy & Mood Dashboard = Pattern detection for chronic illness. Your body's trends, visualized →
 
-Track it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=energy
+Track it → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=energy
 
 ---
 
 ### Image 27: Emotional First Aid - Crisis Mode
 **Filename**: `Wellness4-EmotionalFirstAid-crisis.png`  
 **Alt Text**: Emotional first aid crisis intervention with guided breathing exercises and immediate coping strategies - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#emotional-first-aid  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#emotional-first-aid  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (483 chars):
 Emotional First Aid = Crisis mode, activated 🚨💚
@@ -1116,7 +1116,7 @@ When you're spiraling:
 
 Simple. Fast. Evidence-based. Works without thinking.
 
-Calm the storm → https://3mpwrapp.pages.dev/user-guide/#emotional-first-aid?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_aid_crisis
+Calm the storm → https://3mpwrapp.ca/user-guide/#emotional-first-aid?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_aid_crisis
 
 #PanicAttack #MentalHealthTools
 
@@ -1127,7 +1127,7 @@ Box breathing (4-4-4-4). Grounding. Ice cube technique. Muscle relaxation.
 
 Can't think straight? The app thinks FOR you →
 
-Calm down → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_aid
+Calm down → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_aid
 
 #Anxiety
 
@@ -1136,15 +1136,15 @@ Panic attack? Open app. Follow the breathing animation. 4 seconds in. 4 seconds 
 
 Emotional First Aid talks you down when your brain can't →
 
-Crisis tools → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_aid
+Crisis tools → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=first_aid
 
 ---
 
 ### Image 28: Emotional First Aid - DBT Skills
 **Filename**: `Wellness5-EmotionalFirstAid-DBT.png`  
 **Alt Text**: DBT skills training with distress tolerance, emotion regulation, and mindfulness exercises - 3mpwrApp Wellness  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#dbt-coach  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#dbt-coach  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (496 chars):
 DBT Skills = Therapy techniques in your pocket 🧠💚
@@ -1160,7 +1160,7 @@ Dialectical Behavior Therapy tools:
 
 Evidence-based. Therapist-approved. Always accessible.
 
-Learn DBT → https://3mpwrapp.pages.dev/user-guide/#dbt-coach?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=dbt
+Learn DBT → https://3mpwrapp.ca/user-guide/#dbt-coach?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=dbt
 
 #DBT #MentalHealthTools #TherapyTools
 
@@ -1171,7 +1171,7 @@ Distress tolerance. Emotion regulation. Mindfulness. Radical acceptance.
 
 Real therapy techniques. No paywall →
 
-Learn DBT → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=dbt
+Learn DBT → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=dbt
 
 #MentalHealth #3mpwrApp
 
@@ -1182,7 +1182,7 @@ App: "Try TIPP skill. Here's how." ✅
 
 DBT Coach = 15 therapy techniques, step-by-step guides, always in your pocket →
 
-Free tools → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=dbt
+Free tools → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=dbt
 
 #DBT
 
@@ -1193,8 +1193,8 @@ Free tools → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_med
 ### Image 29: Resources Tab - PowerTools
 **Filename**: `ResourcesTab1-PowerTools.png`  
 **Alt Text**: Resources tab showing PowerTools collection for advanced advocacy features - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#resources  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#resources  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (492 chars):
 Resources = 150+ tools organized into 4 tabs 🛠️
@@ -1210,7 +1210,7 @@ Not sure where to start? AI Assistant suggests which tool fits YOUR situation.
 
 From beginner-friendly to power-user advanced. All free.
 
-Explore tools → https://3mpwrapp.pages.dev/user-guide/#resources?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=powertools
+Explore tools → https://3mpwrapp.ca/user-guide/#resources?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=powertools
 
 #DisabilityTech #AdvocacyTools
 
@@ -1221,7 +1221,7 @@ PowerTools = Advanced features for serious cases. Case tracking. Policy simulato
 
 Free forever →
 
-Explore → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=resources
+Explore → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=resources
 
 #3mpwrApp
 
@@ -1231,7 +1231,7 @@ Need expert tools? Tab 1.
 
 150+ resources sorted by complexity. You choose your level →
 
-Free toolkit → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=resources
+Free toolkit → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=resources
 
 #DisabilityAdvocacy
 
@@ -1240,8 +1240,8 @@ Free toolkit → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_m
 ### Image 30: Resources Tab - Featured Tools (Appeals & Advocacy)
 **Filename**: `ResourcesTab2-FeaturedTools-AppealsAdvocacy.png`  
 **Alt Text**: Featured tools tab highlighting appeals and advocacy resources - 3mpwrApp Resources  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#featured-tools  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#featured-tools  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (486 chars):
 **Featured Tools**: Most popular resources this week 🔥
@@ -1255,7 +1255,7 @@ Top 5 right now:
 
 Curated based on what's actually helping people WIN cases.
 
-Popular for a reason → https://3mpwrapp.pages.dev/user-guide/#featured-tools?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=featured
+Popular for a reason → https://3mpwrapp.ca/user-guide/#featured-tools?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=featured
 
 #WorkersComp #AppealSuccess
 
@@ -1266,7 +1266,7 @@ Top 5 most-used tools updated weekly. See what others are using to win appeals.
 
 Crowdsourced success →
 
-See featured → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=featured
+See featured → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=featured
 
 #WorkersComp
 
@@ -1275,7 +1275,7 @@ See featured → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_m
 
 Featured Tools = Top 5 most successful resources THIS WEEK. Curated. Proven. Updated weekly.
 
-Start here → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=featured
+Start here → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=featured
 
 #Appeal
 
@@ -1284,8 +1284,8 @@ Start here → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_med
 ### Image 31: Resources Tab - Documents & Forms (Health & Work Planning)
 **Filename**: `ResourcesTab3-DocumentsANDForms-HealthANDWorkPlanning.png`  
 **Alt Text**: Documents and forms library organized by health management and return-to-work planning - 3mpwrApp Resources  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#document-factory  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#document-factory  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (495 chars):
 **Documents & Forms Tab**: 22 templates organized by category 📄
@@ -1303,7 +1303,7 @@ Start here → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_med
 
 All fillable PDFs. Auto-populated from your profile. Print or email directly to employer/doctor.
 
-Professional templates → https://3mpwrapp.pages.dev/user-guide/#document-factory?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=documents
+Professional templates → https://3mpwrapp.ca/user-guide/#document-factory?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=documents
 
 #RTW #WorkplaceAccommodations
 
@@ -1314,7 +1314,7 @@ Health logs. Accommodation requests. RTW plans. Medical forms.
 
 Stop starting from blank pages →
 
-Templates → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=documents
+Templates → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=documents
 
 #WorkersComp
 
@@ -1323,15 +1323,15 @@ Accommodation request letter? Template's ready. Fill in 3 blanks. Send →
 
 22 professional forms for health management & return-to-work planning. All FREE →
 
-Download → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=documents
+Download → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=documents
 
 ---
 
 ### Image 32: Resources Tab - Support & Learning (AI-Powered Tools)
 **Filename**: `ResourcesTab4-SupportANDLearning-AIPoweredTools.png`  
 **Alt Text**: Support and learning resources featuring AI-powered advocacy tools and educational content - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#priority-february-2026-personalization
+**User Guide**: https://3mpwrapp.ca/user-guide/#ai-advocacy-suite  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#priority-february-2026-personalization
 
 **Mastodon** (489 chars):
 **Support & Learning Tab**: AI + Education 🤖📚
@@ -1350,7 +1350,7 @@ Download → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_mediu
 
 Learn by doing. AI coaches you through it.
 
-Get smart → https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=support_learn
+Get smart → https://3mpwrapp.ca/user-guide/#ai-advocacy-suite?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=support_learn
 
 #AIForGood #LegalEducation
 
@@ -1362,7 +1362,7 @@ Tutorials teach. Articles explain. Stories inspire.
 
 Everything you need to fight back →
 
-Learn → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=support
+Learn → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=support
 
 #AIForGood
 
@@ -1371,15 +1371,15 @@ AI tools that work FOR you. Learning resources that actually teach.
 
 Denial Decoder + Case Analyzer + Letter Writer + 1,000 articles = Your advocacy education →
 
-Free access → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=support
+Free access → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=support
 
 ---
 
 ### Image 33: Appeal Command Center - Status & Critical Tools
 **Filename**: `AppealCommandCenter1-AppealStatus-CriticalToolsActNow-HighPriority.png`  
 **Alt Text**: Appeal Command Center dashboard showing case status, critical action items, and high-priority deadlines - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#appeal-command-center  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#appeal-command-center  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (494 chars):
 Appeal Command Center = Mission control for your case 🎯📊
@@ -1397,7 +1397,7 @@ Appeal Command Center = Mission control for your case 🎯📊
 
 Color-coded urgency. Action-focused. Nothing falls through the cracks.
 
-Take control → https://3mpwrapp.pages.dev/user-guide/#appeal-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_status
+Take control → https://3mpwrapp.ca/user-guide/#appeal-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_status
 
 #WorkersComp #AppealPrep
 
@@ -1406,7 +1406,7 @@ Red = URGENT. Orange = Soon. Green = On track 🚦
 
 Appeal Command Center color-codes your deadlines so you know what needs attention NOW →
 
-Zero missed deadlines → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_center
+Zero missed deadlines → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_center
 
 #WorkersComp
 
@@ -1415,15 +1415,15 @@ Zero missed deadlines → https://3mpwrapp.pages.dev/beta-guide/?utm_source=blue
 
 Appeal Command Center = No surprises. No missed deadlines →
 
-Stay on track → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal
+Stay on track → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal
 
 ---
 
 ### Image 34: Appeal Command Center - Additional Resources & Success Tips
 **Filename**: `AppealCommandCenter2-AdditionalResources-AppealSuccessTips.png`  
 **Alt Text**: Appeal success tips and additional advocacy resources within Appeal Command Center - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#appeal-success-tips  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#appeal-success-tips  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (494 chars):
 **How Success Tips Works** 💪📈
@@ -1436,7 +1436,7 @@ The app guides you with proven appeal strategies:
 
 **Additional Resources**: Templates, legal precedents, similar case examples, support groups.
 
-See how it works → https://3mpwrapp.pages.dev/user-guide/#appeal-success-tips?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=success_tips
+See how it works → https://3mpwrapp.ca/user-guide/#appeal-success-tips?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=success_tips
 
 #AppealStrategy #WorkersComp
 
@@ -1445,7 +1445,7 @@ See how it works → https://3mpwrapp.pages.dev/user-guide/#appeal-success-tips?
 
 Example strategies: workplace photos, detailed medical notes, timestamped communications, functional limitations documentation.
 
-Learn the approach → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tips
+Learn the approach → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tips
 
 #WorkersComp #AppealHelp
 
@@ -1456,7 +1456,7 @@ Workplace photos. Detailed doctor notes. Timestamped proof. Functional limitatio
 
 Learn the approach that works →
 
-See examples → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tips
+See examples → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tips
 
 #WorkersComp
 
@@ -1465,8 +1465,8 @@ See examples → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_m
 ### Image 35: Automated Rights Checker - Check Rights (Part 1)
 **Filename**: `AutomatedRightsChecker-CheckRights1.png`  
 **Alt Text**: Automated rights checker analyzing your situation to identify legal rights and protections - 3mpwrApp AI tools  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#automated-rights-checker  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#automated-rights-checker  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (497 chars):
 "Do I even have a case?" 🤔
@@ -1483,7 +1483,7 @@ Automated Rights Checker answers in 2 minutes:
 
 Free legal analysis. No lawyer fees. Instant results.
 
-Check your rights → https://3mpwrapp.pages.dev/user-guide/#automated-rights-checker?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_check
+Check your rights → https://3mpwrapp.ca/user-guide/#automated-rights-checker?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_check
 
 #KnowYourRights #LegalAI
 
@@ -1494,7 +1494,7 @@ Type what happened. AI checks if they violated your rights.
 
 $0 lawyer consult →
 
-Check rights → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights
+Check rights → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights
 
 #WorkersRights
 
@@ -1505,15 +1505,15 @@ AI: "No. Violates Ontario Human Rights Code s.17. You have 1 year to file. Here'
 
 Rights checker in 60 seconds →
 
-Check → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights
+Check → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights
 
 ---
 
 ### Image 36: Automated Rights Checker - Check Rights (Part 2)
 **Filename**: `AutomatedRightsChecker-CheckRights2.png`  
 **Alt Text**: Automated rights checker results showing identified violations and recommended actions - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#automated-rights-checker  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#automated-rights-checker  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (488 chars):
 Rights Checker Results = Your legal roadmap 🗺️⚖️
@@ -1534,7 +1534,7 @@ Rights Checker Results = Your legal roadmap 🗺️⚖️
 
 Actionable. Specific. Cited.
 
-Get results → https://3mpwrapp.pages.dev/user-guide/#automated-rights-checker?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_results
+Get results → https://3mpwrapp.ca/user-guide/#automated-rights-checker?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_results
 
 #LegalAnalysis #AI
 
@@ -1543,7 +1543,7 @@ AI found 3 rights violations. Listed next steps. Cited specific laws. Calculated
 
 That's a $400 lawyer consult. Yours in 2 minutes. Free 🤖⚖️
 
-Run analysis → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_results
+Run analysis → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_results
 
 #AIForGood
 
@@ -1553,15 +1553,15 @@ Output: "Human Rights violation. File within 1 year. Here's the form. Here's the
 
 Legal AI that actually helps →
 
-Analyze → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_results
+Analyze → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_results
 
 ---
 
 ### Image 37-40: Automated Rights Checker - Rights Library
 **Filenames**: `AutomatedRightsChecker-RightsLibrary1.png`, `AutomatedRightsChecker-RightsLibrary2.png`, `AutomatedRightsChecker-RightsLibrary3.png`, `AutomatedRightsChecker-UserPersonalHistory.png`  
 **Alt Text**: Rights library with comprehensive database of worker protections, disabilities rights, and personal legal history tracking - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#rights-library  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#rights-library  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (493 chars):
 **Rights Library** = 1,000+ rights explained in plain language 📚⚖️
@@ -1583,7 +1583,7 @@ Each right includes:
 
 **Personal History Tracker**: Your rights checks, saved results, case timeline.
 
-Knowledge is power → https://3mpwrapp.pages.dev/user-guide/#rights-library?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
+Knowledge is power → https://3mpwrapp.ca/user-guide/#rights-library?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
 
 #KnowYourRights #LegalEducation
 
@@ -1596,7 +1596,7 @@ Knowledge is power → https://3mpwrapp.pages.dev/user-guide/#rights-library?utm
 
 All explained like a human, not a lawyer 📚
 
-Browse library → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
+Browse library → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
 
 #WorkersRights
 
@@ -1607,15 +1607,15 @@ Rights Library: "Yes. Here's the law. Here's how to invoke it. Here's what happe
 
 1,000+ rights, zero legalese →
 
-Search → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
+Search → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=library
 
 ---
 
 ### Image 41: Case Timeline Builder
 **Filename**: `CaseTimelineBuilder.png`  
 **Alt Text**: Visual case timeline builder organizing events chronologically for workers compensation appeals - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#case-timeline  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#case-timeline  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (492 chars):
 "When did the injury happen? When did you report it? When did they deny you?"
@@ -1631,7 +1631,7 @@ Case Timeline Builder visualizes your story 📅📊
 
 Build the narrative. Prove the sequence. Win the case.
 
-Build timeline → https://3mpwrapp.pages.dev/user-guide/#case-timeline?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=timeline
+Build timeline → https://3mpwrapp.ca/user-guide/#case-timeline?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=timeline
 
 #WorkersComp #CaseBuilding
 
@@ -1645,7 +1645,7 @@ April: Appealed
 
 Evidence attached to each event. Gaps highlighted. PDF exportable for hearings.
 
-Build story → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=timeline
+Build story → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=timeline
 
 **X/Twitter** (278 chars):
 Adjudicator: "Walk me through what happened"  
@@ -1653,15 +1653,15 @@ You: [Opens Case Timeline] "Visual timeline with attached evidence for each date
 
 That's how you win appeals. Organized. Visual. Proof →
 
-Build it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=timeline
+Build it → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=timeline
 
 ---
 
 ### Image 42-46: Case Tracker Pro
 **Filenames**: `CaseTrackerPro-MasterHub.png`, `CaseTrackerPro-Claims.png`, `CaseTrackerPro-Deadlines.png`, `CaseTrackerPro-Denial.png`, `CaseTrackerPro-RTW.png`  
 **Alt Text**: Case Tracker Pro multi-case management system tracking claims, deadlines, denials, and return-to-work plans - 3mpwrApp PowerTools  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#case-tracker-pro  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#case-tracker-pro  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (496 chars):
 Case Tracker Pro = Manage multiple cases like a lawyer 👨‍⚖️📊
@@ -1680,7 +1680,7 @@ Case Tracker Pro = Manage multiple cases like a lawyer 👨‍⚖️📊
 
 Managing 3 different cases? One dashboard. Zero chaos.
 
-Pro-level tracking → https://3mpwrapp.pages.dev/user-guide/#case-tracker-pro?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tracker_pro
+Pro-level tracking → https://3mpwrapp.ca/user-guide/#case-tracker-pro?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tracker_pro
 
 #WorkersComp #CaseManagement
 
@@ -1691,7 +1691,7 @@ Case Tracker Pro manages ALL of it in one dashboard 📊
 
 Claims. Deadlines. Denials. RTW. All tracked →
 
-Power-user tool → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tracker_pro
+Power-user tool → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tracker_pro
 
 #WorkersComp #PowerTools
 
@@ -1701,15 +1701,15 @@ Case Tracker Pro: "FREE. Same features. Better interface."
 
 Multi-case management. Deadline tracking. Appeal coordination. All in one →
 
-Track cases → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tracker_pro
+Track cases → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tracker_pro
 
 ---
 
 ### Image 47: Claims Navigator
 **Filename**: `ClaimsNavigator.png`  
 **Alt Text**: Claims Navigator wizard guiding users through step-by-step workers compensation claim filing process - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#claims-navigator  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#claims-navigator  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (491 chars):
 "How do I even FILE a workers comp claim?" 🤷‍♂️
@@ -1725,7 +1725,7 @@ Claims Navigator = Step-by-step wizard 🧙‍♂️✅
 
 Never filed before? You'll feel like a pro by step 3.
 
-File your claim → https://3mpwrapp.pages.dev/user-guide/#claims-navigator?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=claims_nav
+File your claim → https://3mpwrapp.ca/user-guide/#claims-navigator?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=claims_nav
 
 #WorkersComp #FileClaim
 
@@ -1736,7 +1736,7 @@ Never filed workers comp before? Claims Navigator holds your hand through every 
 
 Guided. Simple. Free →
 
-File claim → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=claims_nav
+File claim → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=claims_nav
 
 #WorkersComp
 
@@ -1746,15 +1746,15 @@ Claims Navigator? 8 questions. Auto-fills the form. Explains every field. Submit
 
 Beginner-friendly wizard →
 
-File now → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=claims_nav
+File now → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=claims_nav
 
 ---
 
 ### Image 48: Denial Decoder
 **Filename**: `DenialDecoder.png`  
 **Alt Text**: Denial Decoder AI analyzing rejection letters to identify appeal strategies and weak points - 3mpwrApp AI tools  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#denial-decoder  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#priority-february-2026-personalization
+**User Guide**: https://3mpwrapp.ca/user-guide/#denial-decoder  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#priority-february-2026-personalization
 
 **Mastodon** (498 chars):
 Denial letter = 3 pages of legal jargon. Denial Decoder = 60 seconds to plain English 🤖📄
@@ -1770,7 +1770,7 @@ Denial letter = 3 pages of legal jargon. Denial Decoder = 60 seconds to plain En
 
 "Insufficient medical evidence" → "Here's EXACTLY what medical documentation to get from your doctor."
 
-Decode denial → https://3mpwrapp.pages.dev/user-guide/#denial-decoder?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=denial_decoder
+Decode denial → https://3mpwrapp.ca/user-guide/#denial-decoder?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=denial_decoder
 
 #AppealHelp #AIForGood
 
@@ -1779,7 +1779,7 @@ They denied you with legal BS. AI translates it to "Get updated doctor's note wi
 
 Denial Decoder = Attack plan in 60 seconds 🤖
 
-Decode letter → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=denial
+Decode letter → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=denial
 
 #WorkersComp
 
@@ -1789,7 +1789,7 @@ Denial Decoder: "Real reason = weak medical evidence. Fix: Get Dr. Smith to spec
 
 AI translator →
 
-Decode → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=denial
+Decode → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=denial
 
 #Appeal #AIForGood
 
@@ -1798,8 +1798,8 @@ Decode → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=
 ### Image 49-50: Document Factory
 **Filenames**: `DocumentFactory1.png`, `DocumentFactory2.png`  
 **Alt Text**: Document Factory with professional letter templates and auto-generation tools for workers compensation paperwork - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#document-factory  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#document-factory  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (494 chars):
 Document Factory = 22 professional templates. Zero legal fees 📄✍️
@@ -1818,7 +1818,7 @@ All auto-filled with your case details. Professional language. Legally sound. Pr
 
 Lawyers charge $200/letter. You pay $0.
 
-Create documents → https://3mpwrapp.pages.dev/user-guide/#document-factory?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=doc_factory
+Create documents → https://3mpwrapp.ca/user-guide/#document-factory?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=doc_factory
 
 #Paperwork #Templates
 
@@ -1829,22 +1829,22 @@ Document Factory = 22 templates. Lawyer-quality. Free 📄
 
 Accommodation requests. RTW plans. Medical forms. Appeal letters. All covered →
 
-Generate → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=doc_factory
+Generate → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=doc_factory
 
 **X/Twitter** (276 chars):
 $200 for a lawyer to write an appeal letter vs. $0 for same quality from Document Factory 📄
 
 22 templates. Auto-filled. Professional. Yours →
 
-Generate docs → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=doc_factory
+Generate docs → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=doc_factory
 
 ---
 
 ### Image 51-54: Evidence Command Center (Detailed Views)
 **Filenames**: `EvidenceCommandCenter1-Locker.png`, `EvidenceCommandCenter2-Timeline.png`, `EvidenceCommandCenter3-Voice.png`, `EvidenceCommandCenter4-Checklist.png`  
 **Alt Text**: Evidence Command Center with encrypted locker, timeline organization, voice memos, and comprehensive evidence checklist - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#evidence-command-center  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#original-priority-features
+**User Guide**: https://3mpwrapp.ca/user-guide/#evidence-command-center  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#original-priority-features
 
 **Mastodon** (497 chars):
 Evidence Command Center = 4 views for bulletproof case building 🔐📊
@@ -1861,7 +1861,7 @@ Evidence Command Center = 4 views for bulletproof case building 🔐📊
 
 Protect. Organize. Win.
 
-Build evidence → https://3mpwrapp.pages.dev/user-guide/#evidence-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_center
+Build evidence → https://3mpwrapp.ca/user-guide/#evidence-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_center
 
 #EvidenceManagement #WorkersComp
 
@@ -1874,7 +1874,7 @@ Build evidence → https://3mpwrapp.pages.dev/user-guide/#evidence-command-cente
 
 Evidence Command Center = Every angle covered 🔐
 
-Organize proof → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_center
+Organize proof → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_center
 
 #WorkersComp
 
@@ -1883,15 +1883,15 @@ They "lost" critical evidence. You didn't. Encrypted backups of EVERYTHING 🔐
 
 Locker. Timeline. Voice memos. Checklist. 4 views. One command center →
 
-Secure storage → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_center
+Secure storage → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=evidence_center
 
 ---
 
 ### Image 55-60: Interactive Policy Simulator
 **Filenames**: `InteractivePolicySimulator1-WhatsYourSituation.png`, `InteractivePolicySimulator2-FileWorkersCompClaim.png`, `InteractivePolicySimulator3-AppealDeniedClaim.png`, `InteractivePolicySimulator4-RequestWorkplaceAccomodation.png`, `InteractivePolicySimulator5-ReturnToWorkPlanning.png`, `InteractivePolicySimulator7-FileHumanRightsComplaint.png`  
 **Alt Text**: Interactive policy simulator with guided scenarios for common advocacy situations - workers comp claims, appeals, accommodations, RTW planning, human rights complaints - 3mpwrApp PowerTools  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#policy-simulator  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.ca/user-guide/#policy-simulator  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#january-2026-powertools
 
 **Mastodon** (499 chars):
 Interactive Policy Simulator = Practice BEFORE the real thing 🎮⚖️
@@ -1907,7 +1907,7 @@ Interactive Policy Simulator = Practice BEFORE the real thing 🎮⚖️
 
 Test outcomes. Learn requirements. Build confidence. Then do it for real.
 
-Practice scenarios → https://3mpwrapp.pages.dev/user-guide/#policy-simulator?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=simulator
+Practice scenarios → https://3mpwrapp.ca/user-guide/#policy-simulator?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=simulator
 
 #LegalEducation #WorkersRights
 
@@ -1916,22 +1916,22 @@ Practice scenarios → https://3mpwrapp.pages.dev/user-guide/#policy-simulator?u
 
 Policy Simulator lets you PRACTICE first. 6 scenarios. Branching outcomes. Learn consequences without risking your real case 🎮
 
-Practice → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=simulator
+Practice → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=simulator
 
 **X/Twitter** (279 chars):
 Practice filing your workers comp claim in the simulator. Learn the process. See what evidence you need. Build confidence.
 
 THEN file the real one. Prepared = powerful 🎮⚖️
 
-Try scenarios → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=simulator
+Try scenarios → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=simulator
 
 ---
 
 ### Image 61-62: Knowledge Base
 **Filenames**: `KnowledgeBase1-MustKnowRights.png`, `KnowledgeBase2-BrowseByCategory.png`  
 **Alt Text**: Knowledge Base with must-know rights summaries and browseable categories of disability and workers rights information - 3mpwrApp Resources  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#knowledge-base  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#knowledge-base  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (489 chars):
 Knowledge Base = 1,000+ articles in plain language 📚✨
@@ -1953,7 +1953,7 @@ Knowledge Base = 1,000+ articles in plain language 📚✨
 
 Searchable. Cited. Updated monthly.
 
-Learn your rights → https://3mpwrapp.pages.dev/user-guide/#knowledge-base?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=knowledge_base
+Learn your rights → https://3mpwrapp.ca/user-guide/#knowledge-base?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=knowledge_base
 
 #LegalEducation
 
@@ -1964,7 +1964,7 @@ Knowledge Base: "No. They can ask for functional limitations, not diagnosis. Pri
 
 1,000+ answers. Plain language. Cited sources 📚
 
-Search → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=kb
+Search → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=kb
 
 #KnowYourRights
 
@@ -1973,15 +1973,15 @@ Search → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=
 
 "Can they fire me while on WSIB?" → Full answer with citations + precedents + next steps 📚
 
-Free legal library → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=kb
+Free legal library → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=kb
 
 ---
 
 ### Image 63-64: Prepare to Appeal Guide
 **Filenames**: `PrepareToAppealGuide1.png`, `PrepareToAppealGuide2.png`  
 **Alt Text**: Step-by-step prepare to appeal guide with checklists, evidence requirements, and success strategies - 3mpwrApp  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#appeal-guide  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#appeal-guide  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (495 chars):
 Prepare to Appeal Guide = Increase your odds from 12% to 68% 📈⚖️
@@ -1998,7 +1998,7 @@ Prepare to Appeal Guide = Increase your odds from 12% to 68% 📈⚖️
 
 National approval rate: 12%. Prepared appeals: 68%.
 
-Prepare to win → https://3mpwrapp.pages.dev/user-guide/#appeal-guide?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_guide
+Prepare to win → https://3mpwrapp.ca/user-guide/#appeal-guide?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_guide
 
 #AppealSuccess
 
@@ -2009,7 +2009,7 @@ Evidence. Documentation. Professional letters. Deadlines. Precedents. Strategy.
 
 Complete checklist →
 
-Win appeal → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_guide
+Win appeal → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_guide
 
 #WorkersComp
 
@@ -2018,15 +2018,15 @@ DENIED → PREPARED → APPROVED 📈
 
 12-step appeal guide that increases success rates from 12% to 68%. Evidence checklist. Letter templates. Deadline tracking. Everything.
 
-Prepare → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_guide
+Prepare → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=appeal_guide
 
 ---
 
 ### Image 65: Rights Explained - Plain Language
 **Filename**: `RightsExplained-PlainLanguage.png`  
 **Alt Text**: Rights explained in plain language with real-world examples and enforcement guidance - 3mpwrApp Knowledge Base  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#rights-explained  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#rights-explained  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (493 chars):
 "Right to accommodation" in legal terms = 📄🤯  
@@ -2043,7 +2043,7 @@ Every right includes:
 ✅ Exceptions (when it doesn't apply)  
 ✅ Related rights
 
-Understand your power → https://3mpwrapp.pages.dev/user-guide/#rights-explained?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_plain
+Understand your power → https://3mpwrapp.ca/user-guide/#rights-explained?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_plain
 
 #PlainLanguage
 
@@ -2054,7 +2054,7 @@ Every workers' right explained like you're talking to a friend, not a lawyer. Re
 
 Understand rights →
 
-Read → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_plain
+Read → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_plain
 
 #KnowYourRights
 
@@ -2065,15 +2065,15 @@ That's plain language. Not legal jargon.
 
 Every right explained clearly →
 
-Understand rights → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_plain
+Understand rights → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=rights_plain
 
 ---
 
 ### Image 66: Success Templates
 **Filename**: `SuccessTemplates.png`  
 **Alt Text**: Success templates library with proven appeal letters, accommodation requests, and winning case strategies - 3mpwrApp Document Factory  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/#success-templates  
-**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.ca/user-guide/#success-templates  
+**Beta Guide**: https://3mpwrapp.ca/beta-guide/#what-to-test
 
 **Mastodon** (496 chars):
 Success Templates = Copy what WORKED for others 🏆📝
@@ -2090,7 +2090,7 @@ Templates include:
 → Why it worked (strategy breakdown)  
 → Customizable version for YOUR case
 
-Learn from wins → https://3mpwrapp.pages.dev/user-guide/#success-templates?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=success_templates
+Learn from wins → https://3mpwrapp.ca/user-guide/#success-templates?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=success_templates
 
 #ProvenStrategies
 
@@ -2101,7 +2101,7 @@ Success Templates = Real winning letters. See what worked. Copy the strategy. Cu
 
 No guessing. Just proven wins →
 
-Copy winners → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=success_templates
+Copy winners → https://3mpwrapp.ca/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=success_templates
 
 **X/Twitter** (279 chars):
 Why guess what to write when you can copy a letter that ALREADY WON? 🏆
@@ -2110,7 +2110,7 @@ Success Templates = Proven winners. Real cases. Customizable for yours.
 
 Appeal letters. Accommodation requests. Complaints. All winning examples →
 
-Use → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=success_templates
+Use → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=success_templates
 
 ---
 
@@ -2398,10 +2398,10 @@ This framework can be adapted for:
 
 ## 📞 SUPPORT & RESOURCES
 
-**Beta Signup**: https://3mpwrapp.pages.dev/beta-guide/  
-**User Guide**: https://3mpwrapp.pages.dev/user-guide/  
-**Website**: https://3mpwrapp.pages.dev/  
-**App Tour**: https://3mpwrapp.pages.dev/app-tour/
+**Beta Signup**: https://3mpwrapp.ca/beta-guide/  
+**User Guide**: https://3mpwrapp.ca/user-guide/  
+**Website**: https://3mpwrapp.ca/  
+**App Tour**: https://3mpwrapp.ca/app-tour/
 
 **Feedback Channels**:
 - Mastodon: [@3mpwrapp@mas.to](https://mas.to/@3mpwrapp) (if exists)

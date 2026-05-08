@@ -424,13 +424,13 @@ After deploying fixes:
 ## 📈 **BLOG ANALYTICS**
 
 **RSS Feed:**
-- URL: `https://3mpwrapp.pages.dev/feed.xml`
+- URL: `https://3mpwrapp.ca/feed.xml`
 - Format: RSS 2.0
 - Updated: Daily
 - Subscribe with: Feedly, Google Podcasts, etc.
 
 **API Endpoint:**
-- URL: `https://3mpwrapp.pages.dev/public/curation-latest.json`
+- URL: `https://3mpwrapp.ca/public/curation-latest.json`
 - Format: JSON
 - Updated: Daily after curation runs
 - Use for: Custom dashboards, integrations

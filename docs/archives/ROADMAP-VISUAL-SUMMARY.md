@@ -235,7 +235,7 @@ What's missing from our approach?
 
 **Commit**: 5361968 ✅  
 **Pushed**: GitHub ✅  
-**Live**: https://3mpwrapp.pages.dev/roadmap/ ✅
+**Live**: https://3mpwrapp.ca/roadmap/ ✅
 
 ### Immediate Next Steps:
 1. ✅ Enhanced roadmap deployed
@@ -288,4 +288,4 @@ Make ourselves obsolete by winning the fights that make our app unnecessary:
 📧 empowrapp08162025@gmail.com
 
 **View Live Roadmap:**  
-🌐 https://3mpwrapp.pages.dev/roadmap/
+🌐 https://3mpwrapp.ca/roadmap/

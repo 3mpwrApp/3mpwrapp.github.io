@@ -12,7 +12,7 @@
 - **Performance improvements:** Estimated +5-10 Lighthouse points
 - **Zero errors or warnings**
 - **All changes committed and pushed to main branch**
-- **Live on:** https://3mpwrapp.pages.dev/
+- **Live on:** https://3mpwrapp.ca/
 
 ---
 
@@ -211,7 +211,7 @@
 
 ### Deployment
 - ✅ All commits pushed to `main` branch
-- ✅ Live on Cloudflare Pages: https://3mpwrapp.pages.dev/
+- ✅ Live on Cloudflare Pages: https://3mpwrapp.ca/
 - ✅ CDN cache updated
 - ✅ No deployment errors
 
@@ -392,5 +392,5 @@ The 3mpwr App website now features:
 **Completed:** October 26, 2025  
 **Commits:** 5 total (0f0db43, 217b023, dd09abf, f2b1880, 9d5d622)  
 **Status:** ✅ ALL PHASE 3 TASKS COMPLETE  
-**Live Site:** https://3mpwrapp.pages.dev/  
+**Live Site:** https://3mpwrapp.ca/  
 **Quality:** 🌟🌟🌟🌟🌟 (5/5 stars)

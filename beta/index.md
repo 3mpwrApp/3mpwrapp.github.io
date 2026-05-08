@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: Beta Testing Guide - Redirecting
 description: This page has been moved. Redirecting to the latest Beta Testing Guide.
@@ -12,7 +12,7 @@ redirect_to: /beta-guide/
 
 This page has moved to a new location with the latest February 2026 synced guidance.
 
-**[👉 Go to the new Beta Testing Guide →](/beta-guide/)**
+**[?? Go to the new Beta Testing Guide ?](/beta-guide/)**
 
 If you're not automatically redirected, please click the link above.
 
@@ -21,11 +21,11 @@ If you're not automatically redirected, please click the link above.
 ## Why the change?
 
 The beta testing guide has been updated with:
-- ✅ February 2026 documentation sync across app + website
-- ✅ Google Drive BYOC fully functional
-- ✅ API endpoints fixed and reliable  
-- ✅ Updated testing checklists and procedures
-- ✅ Current app and web testing guidance
+- ? February 2026 documentation sync across app + website
+- ? Google Drive BYOC fully functional
+- ? API endpoints fixed and reliable  
+- ? Updated testing checklists and procedures
+- ? Current app and web testing guidance
 
 **Visit the new guide:** [/beta-guide/](/beta-guide/)
 
@@ -40,7 +40,7 @@ Beta testing means using the app before it launches to the public. You help us f
 
 ### Beta Testing Phases
 
-**Phase 1: Closed Internal Testing** 🚀 *NOW ACTIVE*
+**Phase 1: Closed Internal Testing** ?? *NOW ACTIVE*
 - Slow release to selected beta testers (gradual rollout phase)
 - Core feature testing and monitoring
 - First demo with Thunder Bay & District Injured Workers Support Group (Dec 9, 2025)
@@ -49,9 +49,9 @@ Beta testing means using the app before it launches to the public. You help us f
 - USA Lite available for American supporters
 - Expected duration: 2-4 weeks
 
-**Phase 2: Open Beta** ⏳ *COMING NEXT*
+**Phase 2: Open Beta** ? *COMING NEXT*
 - Larger group of 100-200 testers
-- **🇺🇸 USA Lite available for American testers!**
+- **???? USA Lite available for American testers!**
 - Test all features
 - Duration: After Phase 1 completes
 
@@ -63,20 +63,20 @@ Beta testing means using the app before it launches to the public. You help us f
 **Phase 4: Public Release**
 - Full launch to all users
 
-### 🇺🇸 USA Lite Beta Testing
+### ???? USA Lite Beta Testing
 
 **New!** Following strong interest from USA listeners during our demo, American supporters can now join beta testing:
 
 | Feature | Availability |
 |---------|-------------|
-| Wellness Tools | ✅ Full access |
-| Community | ✅ Full access |
-| Evidence Locker | ✅ Full access |
-| Letter Wizard | ✅ General templates |
-| Crisis Resources | ✅ US hotlines (988, etc.) |
-| Accessibility | ✅ Full WCAG AAA |
-| Workers' Comp | ⚠️ General (not state-specific) |
-| Benefits | ⚠️ General (not SSDI/SSI-specific) |
+| Wellness Tools | ? Full access |
+| Community | ? Full access |
+| Evidence Locker | ? Full access |
+| Letter Wizard | ? General templates |
+| Crisis Resources | ? US hotlines (988, etc.) |
+| Accessibility | ? Full WCAG AAA |
+| Workers' Comp | ?? General (not state-specific) |
+| Benefits | ?? General (not SSDI/SSI-specific) |
 
 **To join as a USA tester:** Same signup process - we'll detect your location and provide appropriate features.
 
@@ -298,7 +298,7 @@ Bug: Photo upload freezes at 50%
 
 Steps to reproduce:
 1. Opened app on iPhone 13
-2. Went to Advocacy ΓåÆ Evidence Locker
+2. Went to Advocacy G�� Evidence Locker
 3. Tapped "+ Upload"
 4. Selected "Photo Library"
 5. Chose a 3MB photo
@@ -431,20 +431,20 @@ Note: Offline handling works well!
 
 **Option 3: Beta Testers Chat**
 - For quick issues or questions
-- Community ΓåÆ Beta Testers Chat
+- Community G�� Beta Testers Chat
 - Post your bug with #bug tag
 
 ### Bug Report Template (Copy This!)
 
 ```
-≡ƒÉ¢ BUG REPORT
+=�ɢ BUG REPORT
 
 Title: [One sentence describing the problem]
 
 Device Information:
 - Device: [iPhone 13 Pro / Samsung Galaxy S21 / etc.]
 - Operating System: [iOS 17.2 / Android 13 / etc.]
-- App Version: [Found in Settings ΓåÆ About]
+- App Version: [Found in Settings G�� About]
 - Network: [WiFi / Cellular / Offline]
 
 Steps to Reproduce:
@@ -472,7 +472,7 @@ Additional Notes:
 ### Sample Filled Bug Report
 
 ```
-≡ƒÉ¢ BUG REPORT
+=�ɢ BUG REPORT
 
 Title: App crashes when opening Settings on Android
 
@@ -545,7 +545,7 @@ Additional Notes:
 
 ### Severity Levels Explained
 
-**≡ƒö┤ Critical (P1)**
+**=��� Critical (P1)**
 - App won't launch
 - Data loss occurs
 - Security vulnerability found
@@ -554,7 +554,7 @@ Additional Notes:
 **Response Time:** 4 hours
 **Fix Target:** Same day or next beta release
 
-**≡ƒƒá High (P2)**
+**=��� High (P2)**
 - Major feature doesn't work
 - Frequent crashes
 - Login problems
@@ -563,7 +563,7 @@ Additional Notes:
 **Response Time:** 24 hours
 **Fix Target:** Within 3 days
 
-**≡ƒƒí Medium (P3)**
+**=��� Medium (P3)**
 - Minor feature issues
 - UI display problems
 - Slow performance
@@ -572,7 +572,7 @@ Additional Notes:
 **Response Time:** 3 days
 **Fix Target:** Within 1 week
 
-**≡ƒƒó Low (P4)**
+**=��� Low (P4)**
 - Typos
 - Cosmetic issues
 - Minor layout problems
@@ -635,7 +635,7 @@ Additional Notes:
 - Request data removal
 
 **How to Exercise Rights:**
-1. Go to Settings ΓåÆ Privacy
+1. Go to Settings G�� Privacy
 2. Choose your preference
 3. Or email: empowrapp08162025@gmail.com
 
@@ -658,7 +658,7 @@ Additional Notes:
 
 ### How to Report Security Issues
 
-**ΓÜá∩╕Å IMPORTANT: Do NOT post security issues publicly!**
+**G��n+� IMPORTANT: Do NOT post security issues publicly!**
 
 **For Security Issues:**
 1. Email: empowrapp08162025@gmail.com
@@ -735,7 +735,7 @@ read user passwords from system logs.
    - Direct responses to your reports
 
 2. **In-App Chat**
-   - Community ΓåÆ Beta Testers Chat
+   - Community G�� Beta Testers Chat
    - Daily check-ins welcome
    - Quick questions answered here
    - Connect with other testers
@@ -857,9 +857,9 @@ We're reasonable humans! Accidents happen. If you accidentally post something, j
 - [ ] App doesn't crash during basic use
 - [ ] No obvious visual glitches
 
-**If all items checked:** App passes smoke test Γ£à
+**If all items checked:** App passes smoke test G��
 
-**If any items fail:** Report immediately as High priority ≡ƒƒá
+**If any items fail:** Report immediately as High priority =���
 
 ### Accessibility Test Checklist
 
@@ -875,7 +875,7 @@ We're reasonable humans! Accidents happen. If you accidentally post something, j
 **Visual Accessibility:**
 - [ ] Enable high contrast mode
 - [ ] Check all text is readable
-- [ ] Enable large text (Settings ΓåÆ Display)
+- [ ] Enable large text (Settings G�� Display)
 - [ ] Verify text scales properly
 - [ ] Check color is not the only indicator
 - [ ] Test in bright light and darkness
@@ -906,9 +906,9 @@ Test Steps:
 3. [Step three]
 
 Results:
-Γ£à [What worked]
-Γ¥î [What didn't work]
-ΓÜá∩╕Å [What was confusing]
+G�� [What worked]
+G�� [What didn't work]
+G��n+� [What was confusing]
 
 Issues Found:
 - [Bug #1]
@@ -978,7 +978,7 @@ Questions for Team:
 ### Community Support
 
 **Beta Testers Chat:**
-- Access: Community ΓåÆ Beta Testers Chat
+- Access: Community G�� Beta Testers Chat
 - Active: 9 AM - 9 PM Eastern (most days)
 - For: Quick questions, discussions, tips
 
@@ -992,7 +992,7 @@ Questions for Team:
 
 ### Helpful Links
 
-- Main Website: [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev)
+- Main Website: [3mpwrapp.pages.dev](https://3mpwrapp.ca)
 - User Guide: [/user-guide/](/user-guide/)
 - Feature List: [/features/](/features/)
 - Privacy Policy: [/privacy/](/privacy/)
@@ -1086,27 +1086,27 @@ Feature flags let us turn features on or off without releasing a new app version
 
 ---
 
-## 🔗 Related Resources & Interlinking
+## ?? Related Resources & Interlinking
 
 **These pages work together with this beta guide:**
 
 ### Main Documentation
-- **[User Guide →](/user-guide)** - Complete step-by-step tutorials for all app features
+- **[User Guide ?](/user-guide)** - Complete step-by-step tutorials for all app features
   - Includes [First-Time Setup](/user-guide#first-time-setup-9-step-acceptance) instructions
   - Includes [First Week Checklist](/user-guide#first-week-checklist) for new users
   - Includes [Beta Testing Priorities](/user-guide#beta-testing-priorities-%F0%9F%A7%AA) section
 
 ### Feature Documentation
-- **[All 145+ Features →](/features)** - Complete feature inventory with detailed descriptions
-- **[Accessibility Features →](/accessibility)** - Detailed accessibility guides and setup
+- **[All 145+ Features ?](/features)** - Complete feature inventory with detailed descriptions
+- **[Accessibility Features ?](/accessibility)** - Detailed accessibility guides and setup
 
 ### Getting Started
-- **[Home Page →](/)** - Start here if you're new
-- **[What's New →](/whats-new)** - Latest app updates and announcements
+- **[Home Page ?](/)** - Start here if you're new
+- **[What's New ?](/whats-new)** - Latest app updates and announcements
 
 ### Account & Support
-- **[Privacy Policy →](/privacy)** - How we protect your data
-- **[Contact Us →](/contact/)** - Get help anytime
+- **[Privacy Policy ?](/privacy)** - How we protect your data
+- **[Contact Us ?](/contact/)** - Get help anytime
 
 ### Quick Links for Beta Testers
 1. **Testing Instructions:** Start with [Step-by-Step Testing Instructions](#step-by-step-testing-instructions)
@@ -1116,16 +1116,16 @@ Feature flags let us turn features on or off without releasing a new app version
 
 ---
 
-## 📖 Using This Guide with the User Guide
+## ?? Using This Guide with the User Guide
 
 **This beta guide covers:** Beta testing procedures, issue reporting, timelines, and releases
 
 **The User Guide covers:** How to use features, step-by-step tutorials, and accessibility settings
 
 **How they work together:**
-- Start with [User Guide's First-Time Setup →](/user-guide#first-time-setup-9-step-acceptance)
+- Start with [User Guide's First-Time Setup ?](/user-guide#first-time-setup-9-step-acceptance)
 - Then come back here to [Step-by-Step Testing Instructions](#step-by-step-testing-instructions)
-- Use [Beta Priorities from User Guide →](/user-guide#beta-testing-priorities-%F0%9F%A7%AA) to focus your testing
+- Use [Beta Priorities from User Guide ?](/user-guide#beta-testing-priorities-%F0%9F%A7%AA) to focus your testing
 - Report issues using [Reporting Issues section](#reporting-issues--triage-process) below
 
 ---
@@ -1134,13 +1134,13 @@ Feature flags let us turn features on or off without releasing a new app version
 
 Thank you for being a beta tester. Your time, feedback, and patience help us create an app that truly serves injured workers and persons with disabilities.
 
-You are making a difference! ≡ƒÆ¬
+You are making a difference! =�Ƭ
 
 **Questions? Feedback? Issues?**
 
-≡ƒôº Email: empowrapp08162025@gmail.com  
-≡ƒÆ¼ Chat: Community ΓåÆ Beta Testers Chat  
-≡ƒÉª Twitter: [@3mpowrApp0816](https://x.com/3mpowrApp0816)
+=��� Email: empowrapp08162025@gmail.com  
+=�Ƽ Chat: Community G�� Beta Testers Chat  
+=�ɪ Twitter: [@3mpowrApp0816](https://x.com/3mpowrApp0816)
 
 ---
 

@@ -99,7 +99,7 @@
    
    Your privacy = non-negotiable.
 
-   Building 3mpwrApp in public: https://3mpwrapp.pages.dev/blog
+   Building 3mpwrApp in public: https://3mpwrapp.ca/blog
    ```
 
 **Process (PHASE 2 - Month 2+: Beta User Stories):**

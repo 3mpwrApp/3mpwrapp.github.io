@@ -444,7 +444,7 @@ We will NEVER:
 
 **If you use this data:**
 
-> 3mpwrApp Research. (2026). *Comprehensive Analysis of 98,992 WSIAT Workplace Injury Appeal Decisions (1987-2026)*. Retrieved from https://3mpwrapp.pages.dev/data-limitations/
+> 3mpwrApp Research. (2026). *Comprehensive Analysis of 98,992 WSIAT Workplace Injury Appeal Decisions (1987-2026)*. Retrieved from https://3mpwrapp.ca/data-limitations/
 
 **BibTeX:**
 ```bibtex
@@ -452,7 +452,7 @@ We will NEVER:
   author = {3mpwrApp Research},
   title = {Comprehensive Analysis of 98,992 WSIAT Workplace Injury Appeal Decisions (1987-2026)},
   year = {2026},
-  url = {https://3mpwrapp.pages.dev/data-limitations/},
+  url = {https://3mpwrapp.ca/data-limitations/},
   note = {Dataset includes 230,392 records from WSIAT, HRTO, NEER, and CAD-7 programs}
 }
 ```

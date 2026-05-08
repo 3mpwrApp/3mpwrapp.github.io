@@ -135,7 +135,7 @@ Your Cloudflare Worker needs CORS headers for the website to access it:
 
 ```javascript
 const headers = {
-  'Access-Control-Allow-Origin': 'https://3mpwrapp.pages.dev',
+  'Access-Control-Allow-Origin': 'https://3mpwrapp.ca',
   'Access-Control-Allow-Methods': 'GET, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
   'Content-Type': 'application/json',

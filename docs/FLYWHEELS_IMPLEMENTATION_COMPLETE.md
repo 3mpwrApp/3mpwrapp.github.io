@@ -60,7 +60,7 @@ python scripts/scrape-canlii-tribunals.py
 
 **File:** `_posts/2026-04-01-3-flywheels-thunder-bay-presentation-success.md`
 
-**URL:** https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+**URL:** https://3mpwrapp.ca/2026/04/01/3-flywheels-thunder-bay-presentation-success/
 
 **Contents:**
 - March 31 presentation recap
@@ -133,7 +133,7 @@ Three brilliant audience questions solved our biggest challenge: the cold start 
 User #1 used to need 40 hours to research an appeal.
 WITH historical data: 30 minutes.
 
-📊 Full story: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+📊 Full story: https://3mpwrapp.ca/2026/04/01/3-flywheels-thunder-bay-presentation-success/
 
 #3Flywheels #CollectivePower #ThunderBay #WorkersRights
 ```
@@ -150,7 +150,7 @@ Thunder Bay pilot launching this week:
 
 User #1: 40 hours → With data: 30 minutes
 
-https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+https://3mpwrapp.ca/2026/04/01/3-flywheels-thunder-bay-presentation-success/
 
 #3Flywheels #ThunderBay #WorkersRights
 ```
@@ -169,7 +169,7 @@ After March 31 presentation to Thunder Bay injured workers, we're launching a 12
 User #1 traditionally: 40 hours to research an appeal
 User #1 WITH historical data: 30 minutes
 
-Read: <https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/>
+Read: <https://3mpwrapp.ca/2026/04/01/3-flywheels-thunder-bay-presentation-success/>
 
 Questions? Ask in #community-organizing!
 ```
@@ -403,7 +403,7 @@ You just scraped 247 tribunal decisions for FREE. That would cost $5 with GPT-4.
 
 ### Immediate (Today):
 1. ☐ **Verify blog post is live** (wait for Cloudflare deployment ~5 min)
-   - Test: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+   - Test: https://3mpwrapp.ca/2026/04/01/3-flywheels-thunder-bay-presentation-success/
 2. ☐ **Post launch announcement** (use templates above for Mastodon/Bluesky/Discord)
 3. ☐ **Register CanLII API key** (5 minutes, free, instant approval)
 

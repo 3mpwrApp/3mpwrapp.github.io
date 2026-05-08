@@ -123,7 +123,7 @@ node scripts/post-daily-feature.js
 ## Verify Blog Display
 
 ### Check Blog Sections
-Visit: https://3mpwrapp.pages.dev/blog/
+Visit: https://3mpwrapp.ca/blog/
 
 **Verify these sections exist:**
 - [ ] 📰 Daily News Highlights
@@ -152,13 +152,13 @@ Visit: https://3mpwrapp.pages.dev/blog/
 Visit: https://mastodon.social/@3mpwrapp
 
 **For Daily News posts:**
-- [ ] Link goes to: `https://3mpwrapp.pages.dev/blog/#curated-daily`
+- [ ] Link goes to: `https://3mpwrapp.ca/blog/#curated-daily`
 - [ ] Link works and scrolls to correct section
 - [ ] Top stories listed
 - [ ] Hashtags relevant
 
 **For Feature posts:**
-- [ ] Link goes to: `https://3mpwrapp.pages.dev/YYYY/MM/DD/feature-spotlight-[name]/`
+- [ ] Link goes to: `https://3mpwrapp.ca/YYYY/MM/DD/feature-spotlight-[name]/`
 - [ ] Link works and loads article
 - [ ] Feature description clear
 - [ ] Hashtags relevant
@@ -167,7 +167,7 @@ Visit: https://mastodon.social/@3mpwrapp
 Visit: https://bsky.app/profile/3mpwrapp.bsky.social
 
 **For Daily News posts:**
-- [ ] Link goes to: `https://3mpwrapp.pages.dev/blog/#curated-daily`
+- [ ] Link goes to: `https://3mpwrapp.ca/blog/#curated-daily`
 - [ ] Link works and scrolls to correct section
 - [ ] Top stories listed (max 2)
 - [ ] Character limit respected (< 300)
@@ -230,21 +230,21 @@ Visit: https://bsky.app/profile/3mpwrapp.bsky.social
 **Action:** Daily News Curator
 **Output:** `_posts/YYYY-MM-DD-daily-curation.md`
 **Social:** Mastodon + Bluesky
-**Link:** `https://3mpwrapp.pages.dev/blog/#curated-daily`
+**Link:** `https://3mpwrapp.ca/blog/#curated-daily`
 
 ### Daily at 10:00 AM UTC
 **Workflow:** `daily-feature.yml`
 **Action:** Daily Feature Article
 **Output:** `_posts/YYYY-MM-DD-feature-spotlight-[name].md`
 **Social:** Mastodon + Bluesky
-**Link:** `https://3mpwrapp.pages.dev/YYYY/MM/DD/feature-spotlight-[name]/`
+**Link:** `https://3mpwrapp.ca/YYYY/MM/DD/feature-spotlight-[name]/`
 
 ### Monday at 9:00 AM UTC
 **Workflow:** `weekly-update.yml`
 **Action:** Weekly Update
 **Output:** `_posts/YYYY-MM-DD-weekly-update-week-[NN].md`
 **Social:** None (manual if needed)
-**Link:** `https://3mpwrapp.pages.dev/YYYY/MM/DD/weekly-update-week-[NN]/`
+**Link:** `https://3mpwrapp.ca/YYYY/MM/DD/weekly-update-week-[NN]/`
 
 ---
 
@@ -317,7 +317,7 @@ If automation fails, post manually:
 
 Top stories on disability rights, accessibility & workers' comp from across Canada.
 
-📰 Read all stories: https://3mpwrapp.pages.dev/blog/#curated-daily
+📰 Read all stories: https://3mpwrapp.ca/blog/#curated-daily
 
 #DisabilityRights #Accessibility #WorkersComp #Canada
 ```
@@ -328,7 +328,7 @@ Top stories on disability rights, accessibility & workers' comp from across Cana
 
 [Brief summary]
 
-📰 All stories: https://3mpwrapp.pages.dev/blog/#curated-daily
+📰 All stories: https://3mpwrapp.ca/blog/#curated-daily
 
 #DisabilityRights #Accessibility
 ```

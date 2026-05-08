@@ -178,7 +178,7 @@ The Disability Bulletin fills a gap mainstream media ignores.
 [Follow @ODSPoor →] https://x.com/ODSPoor
 [Follow @emilypot_ →] https://x.com/emilypot_
 
-Learn more: https://3mpwrapp.pages.dev/community/disability-bulletin/
+Learn more: https://3mpwrapp.ca/community/disability-bulletin/
 
 ---
 ```

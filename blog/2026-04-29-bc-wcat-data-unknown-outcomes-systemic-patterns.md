@@ -427,9 +427,9 @@ That's why we're building 3mpwrApp. That's why we're fighting for data access. T
 - [HRTO Abandonment Analysis: Email Issues in 70.1% of Abandoned Cases](/_posts/2026-04-20-hrto-email-crisis-abandonment-epidemic.md) - Digital barriers blocking vulnerable claimants from justice
 
 **Claim Suppression Research:**
-- [The Claim Suppression Playbook: How Employers Block Legitimate WSIB Claims](https://3mpwrapp.pages.dev/research/wsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Documented tactics employers use to prevent workers from filing claims
-- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.pages.dev/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - First-hand accounts from beta testers identifying systemic patterns
-- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.pages.dev/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - How retaliation tactics correlate with claim suppression strategies
+- [The Claim Suppression Playbook: How Employers Block Legitimate WSIB Claims](https://3mpwrapp.ca/research/wsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Documented tactics employers use to prevent workers from filing claims
+- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.ca/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - First-hand accounts from beta testers identifying systemic patterns
+- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.ca/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - How retaliation tactics correlate with claim suppression strategies
 
 ---
 

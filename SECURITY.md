@@ -95,7 +95,7 @@ The 3mpwrApp team is committed to providing enterprise-grade security for all us
 - **Guest mode** - Use app without creating account
 - **Data minimization** - Only collect what's needed
 - **User data export** - Download your data anytime
-- **Right to deletion** - Delete account and all data: [3mpwrapp.pages.dev/delete-data](https://3mpwrapp.pages.dev/delete-data)
+- **Right to deletion** - Delete account and all data: [3mpwrapp.pages.dev/delete-data](https://3mpwrapp.ca/delete-data)
 - **GDPR/CCPA compliance** - Full data protection compliance
 - **No selling data** - Your data is yours, not a product
 
@@ -217,10 +217,10 @@ We will:
 - **Socket.dev Dashboard**: Real-time dependency monitoring
 
 ### For Users
-- **Privacy Policy**: [3mpwrapp.pages.dev/privacy](https://3mpwrapp.pages.dev/privacy)
-- **Delete Your Data**: [3mpwrapp.pages.dev/delete-data](https://3mpwrapp.pages.dev/delete-data)
-- **Terms of Service**: [3mpwrapp.pages.dev/terms](https://3mpwrapp.pages.dev/terms)
-- **Security Updates**: Check our [blog](https://3mpwrapp.pages.dev/) for announcements
+- **Privacy Policy**: [3mpwrapp.pages.dev/privacy](https://3mpwrapp.ca/privacy)
+- **Delete Your Data**: [3mpwrapp.pages.dev/delete-data](https://3mpwrapp.ca/delete-data)
+- **Terms of Service**: [3mpwrapp.pages.dev/terms](https://3mpwrapp.ca/terms)
+- **Security Updates**: Check our [blog](https://3mpwrapp.ca/) for announcements
 
 * * *
 

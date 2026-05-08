@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Feature Spotlight: 3mpwrApp Beta Launch: Join Phase 1 Testing"
 date: 2025-11-08 09:00:00 +0000
@@ -11,7 +11,7 @@ excerpt: 3mpwrApp is now live in Phase 1 closed beta testing - completely free f
 - **Help shape the app through testing and feedback**
 - **Direct communication with development team**
 - **Installation instructions sent via email**
-- **Join waitlist at https://3mpwrapp.pages.dev/app-waitlist** * * * ## How It Works Here are real examples of how you can use 3mpwrApp Beta Launch: Join Phase 1 Testing: 1. Test Evidence Locker and document storage features
+- **Join waitlist at https://3mpwrapp.ca/app-waitlist** * * * ## How It Works Here are real examples of how you can use 3mpwrApp Beta Launch: Join Phase 1 Testing: 1. Test Evidence Locker and document storage features
 2. Try out the Master Letter Generator with 22 templates
 3. Explore Wellness Hub mood and symptom tracking
 4. Provide feedback on accessibility features

@@ -55,13 +55,13 @@ Once deployed, test these URLs:
 
 ```powershell
 # Short blog post
-Invoke-WebRequest -Uri "https://3mpwrapp.pages.dev/2026/03/31/axios-supply-chain-attack-3mpwrapp-safe/" -Method Head
+Invoke-WebRequest -Uri "https://3mpwrapp.ca/2026/03/31/axios-supply-chain-attack-3mpwrapp-safe/" -Method Head
 
 # Comprehensive blog post  
-Invoke-WebRequest -Uri "https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack/" -Method Head
+Invoke-WebRequest -Uri "https://3mpwrapp.ca/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack/" -Method Head
 
 # Security page
-Invoke-WebRequest -Uri "https://3mpwrapp.pages.dev/security/" -Method Head
+Invoke-WebRequest -Uri "https://3mpwrapp.ca/security/" -Method Head
 ```
 
 All should return HTTP 200 (not 404).

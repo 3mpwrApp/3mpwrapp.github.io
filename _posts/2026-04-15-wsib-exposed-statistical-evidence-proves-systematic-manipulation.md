@@ -37,7 +37,7 @@ featured: true
 
 **TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using rigorous statistical methods. **FACTS WE CAN PROVE:** 43.9% (95% CI: 42.3-45.6%) of 2024 decisions missing from public record (1,545 cases), reconsideration adds 1.5 years vs. 0.5 for direct appeals (4x longer), 20% (95% CI: 17.3-22.7%) of knee injuries cite "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline, July 2023 collapse to 39 decisions (99.7% certain not random). **WHAT THIS SHOWS:** Repeated structural patterns across 6 years. **WHAT THIS SUGGESTS:** Patterns consistent with systematic dysfunction or cost-reduction strategy. **ALTERNATIVE EXPLANATIONS:** Administrative chaos, systemic organizational challenges, understaffing also fit the evidence. **Full methodology transparency below.**
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our statistical analysis uses keyword patterns and co-occurrence detection where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our statistical analysis uses keyword patterns and co-occurrence detection where official outcomes aren't available.
 
 **This analysis has been shared with Thunder Bay & District Injured Workers Support Group for community feedback. All methodology is transparent and open for review.**
 
@@ -587,8 +587,8 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 **Data Exports:**
 - [ONWSIAT-DETECTIVE-FINDINGS.json](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Raw anomaly results
 - [ONWSIAT-CO-OCCURRENCE.csv](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Network analysis data
-- [Research Hub](https://3mpwrapp.pages.dev/research/) - Visualization + 16 injury guides + 50+ appeal templates
-- [Interactive Keyword Network](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore keyword co-occurrence patterns from CanLII data (ONWSIAT 2020-2026)
+- [Research Hub](https://3mpwrapp.ca/research/) - Visualization + 16 injury guides + 50+ appeal templates
+- [Interactive Keyword Network](https://3mpwrapp.ca/wsib-denial-network-visualization.html) - Explore keyword co-occurrence patterns from CanLII data (ONWSIAT 2020-2026)
 
 **Code transparency:** All scripts open-source on GitHub. Run them yourself to verify findings.
 
@@ -859,9 +859,9 @@ More Cases Analyzed... (CYCLE ACCELERATES)
 ## Related Reading
 
 **Previous 3mpwrApp Research:**
-- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built the tribunal decision database
-- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
-- [3 Flywheels: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/) - Community impact and grassroots advocacy
+- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built the tribunal decision database
+- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
+- [3 Flywheels: Thunder Bay Presentation Success](https://3mpwrapp.ca/2026/03/31/3-flywheels-thunder-bay-presentation-success/) - Community impact and grassroots advocacy
 
 **Full Documentation:**
 - [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document with all findings, legal context, historical analysis, and advocacy strategies
@@ -938,8 +938,8 @@ More Cases Analyzed... (CYCLE ACCELERATES)
 - **Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)
 - **Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)
 - **Full Master Document:** [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
-- **Research Hub:** [All Research Tools](https://3mpwrapp.pages.dev/research/) (visualization, guides, templates)
-- **Interactive Visualization:** [WSIB Denial Network](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html)
+- **Research Hub:** [All Research Tools](https://3mpwrapp.ca/research/) (visualization, guides, templates)
+- **Interactive Visualization:** [WSIB Denial Network](https://3mpwrapp.ca/wsib-denial-network-visualization.html)
 
 ---
 

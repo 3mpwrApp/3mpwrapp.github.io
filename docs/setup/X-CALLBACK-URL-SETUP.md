@@ -36,7 +36,7 @@ https://3mpwrapp.github.io/callback
 OR
 
 ```
-https://3mpwrapp.pages.dev/callback
+https://3mpwrapp.ca/callback
 ```
 
 (Use whichever matches your actual site URL)

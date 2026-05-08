@@ -89,10 +89,10 @@
    - Click "Save and Deploy"
    - Watch build log (2-4 minutes)
    - Should see: "Success!"
-   - Your URL: `https://3mpwrapp.pages.dev`
+   - Your URL: `https://3mpwrapp.ca`
 
 **6. Test Your Site**
-   - Visit: `https://3mpwrapp.pages.dev`
+   - Visit: `https://3mpwrapp.ca`
    - Click around, verify it works
    - Test these pages:
      - Homepage ✓
@@ -102,7 +102,7 @@
 **7. Verify Security Headers**
    In PowerShell, run:
    ```powershell
-   curl -I https://3mpwrapp.pages.dev
+   curl -I https://3mpwrapp.ca
    ```
    
    Look for:
@@ -169,7 +169,7 @@
    - Keep for open source visibility
    - Automatic deployment
 
-2. **Cloudflare Pages:** https://3mpwrapp.pages.dev
+2. **Cloudflare Pages:** https://3mpwrapp.ca
    - Use as primary
    - Better performance
    - Server security headers
@@ -244,7 +244,7 @@
 
 **Your Sites:**
 - Production 1: https://3mpwrapp.github.io
-- Production 2: https://3mpwrapp.pages.dev
+- Production 2: https://3mpwrapp.ca
 - Repository: https://github.com/3mpwrApp/3mpwrapp.github.io
 
 **Guides:**

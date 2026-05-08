@@ -32,7 +32,7 @@ Want to help shape the future of 3mpwrApp?
   <p>
     <a href="/downloads/contact.pdf" class="format-link">📄 Download as PDF</a>
     <a href="javascript:window.print()" class="format-link">🖨️ Print-friendly version</a>
-    <a href="mailto:?subject=3mpwrApp Contact&body=Contact 3mpwrApp: https://3mpwrapp.pages.dev/contact" class="format-link">📧 Email to yourself</a>
+    <a href="mailto:?subject=3mpwrApp Contact&body=Contact 3mpwrApp: https://3mpwrapp.ca/contact" class="format-link">📧 Email to yourself</a>
   </p>
 </div>
 

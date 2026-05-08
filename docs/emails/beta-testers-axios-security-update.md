@@ -161,12 +161,12 @@ We refuse to run npm install while compromised packages are marked as "latest" o
 We believe in full transparency with our beta community. Here's everything we know:
 
 ### Full Technical Analysis:
-https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
+https://3mpwrapp.ca/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 ### Real-time Status:
 - **Verified safe:** Run powershell -File scripts/safe-package-verify.ps1
 - **Monitor axios status:** npm view axios@latest version
-- **Check our security policy:** https://3mpwrapp.pages.dev/security
+- **Check our security policy:** https://3mpwrapp.ca/security
 
 ---
 

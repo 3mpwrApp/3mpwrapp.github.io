@@ -43,7 +43,7 @@ I'm listening. If you're testing 3mpwrApp and something doesn't work, tell me. I
 
 📬 [Get updates in your inbox](/newsletter/)
 🔍 [See all weekly updates](/whats-new/)
-💬 [Join the beta testing community](https://3mpwrapp.pages.dev/beta/)
+💬 [Join the beta testing community](https://3mpwrapp.ca/beta/)
 ```
 
 ---

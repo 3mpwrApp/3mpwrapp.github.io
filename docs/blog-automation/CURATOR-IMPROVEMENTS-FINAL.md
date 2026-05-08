@@ -43,9 +43,9 @@ Description text here
 
 ---
 
-📰 **Stay Informed**: [Subscribe to updates](https://3mpwrapp.pages.dev/newsletter/)
+📰 **Stay Informed**: [Subscribe to updates](https://3mpwrapp.ca/newsletter/)
 
-🌐 **Explore More**: [Visit 3mpwrApp Blog](https://3mpwrapp.pages.dev/blog/)
+🌐 **Explore More**: [Visit 3mpwrApp Blog](https://3mpwrapp.ca/blog/)
 ```
 
 **Improvements:**
@@ -60,10 +60,10 @@ Description text here
 
 ### 2. All Social Posts Link to Blog
 **Verified Links:**
-- ✅ `social-post.js` → `https://3mpwrapp.pages.dev/blog/#curated-daily`
-- ✅ `post-to-mastodon.js` → `https://3mpwrapp.pages.dev/blog/#curated-daily`
-- ✅ `post-to-bluesky.js` → `https://3mpwrapp.pages.dev/blog/#curated-daily`
-- ✅ `post-daily-feature.js` → `https://3mpwrapp.pages.dev/blog/#feature-articles`
+- ✅ `social-post.js` → `https://3mpwrapp.ca/blog/#curated-daily`
+- ✅ `post-to-mastodon.js` → `https://3mpwrapp.ca/blog/#curated-daily`
+- ✅ `post-to-bluesky.js` → `https://3mpwrapp.ca/blog/#curated-daily`
+- ✅ `post-daily-feature.js` → `https://3mpwrapp.ca/blog/#feature-articles`
 - ✅ `daily-feature-generator.js` → Full article URLs on blog
 
 ### 3. Enhanced Content Relevance
@@ -109,7 +109,7 @@ Top story: Federal court rules on accessibility barrier case
 
 Source: [url]
 
-📰 Read all today's stories: https://3mpwrapp.pages.dev/blog/#curated-daily
+📰 Read all today's stories: https://3mpwrapp.ca/blog/#curated-daily
 
 #DisabilityRights #Accessibility #WorkersComp #Canada
 ```
@@ -120,7 +120,7 @@ Source: [url]
 
 Federal court rules on accessibility case
 
-📰 All stories: https://3mpwrapp.pages.dev/blog/#curated-daily
+📰 All stories: https://3mpwrapp.ca/blog/#curated-daily
 
 #DisabilityRights #Accessibility
 ```
@@ -140,7 +140,7 @@ Today's Top Stories:
 2. New ODSP benefits announced for 2026
 
 📰 Read all 24 stories: 
-https://3mpwrapp.pages.dev/blog/#curated-daily
+https://3mpwrapp.ca/blog/#curated-daily
 
 #DisabilityRights #Accessibility #WorkersComp #Canada
 ```
@@ -258,7 +258,7 @@ node scripts/social-post.js
 1. Go to: https://mastodon.social/@3mpwrapp
 2. Go to: https://bsky.app/profile/3mpwrapp.bsky.social
 3. Click links in posts
-4. Verify they go to: `https://3mpwrapp.pages.dev/blog/#curated-daily`
+4. Verify they go to: `https://3mpwrapp.ca/blog/#curated-daily`
 
 ---
 
@@ -292,7 +292,7 @@ node scripts/social-post.js
 All improvements are implemented and ready to use:
 
 1. ✅ **User-friendly post format** with clear structure
-2. ✅ **All social links** point to `https://3mpwrapp.pages.dev/blog/`
+2. ✅ **All social links** point to `https://3mpwrapp.ca/blog/`
 3. ✅ **Relevant content** highly scored and prioritized
 4. ✅ **Professional presentation** with scores and types visible
 

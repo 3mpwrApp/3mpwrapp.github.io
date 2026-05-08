@@ -473,9 +473,9 @@ This section focuses on community pathways and transparency participation, not d
 ## Related Research
 
 **Previous 3mpwrApp Analysis:**
-- [WSIB Pattern Analysis: Statistical Evidence](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Analysis of 11,430 cases
-- [Hidden Language of Denial: Keyword Decoder](https://3mpwrapp.pages.dev/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode denial letters
-- [Research Hub: Guides & Templates](https://3mpwrapp.pages.dev/research/) - 16 injury guides, 50+ appeal templates
+- [WSIB Pattern Analysis: Statistical Evidence](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Analysis of 11,430 cases
+- [Hidden Language of Denial: Keyword Decoder](https://3mpwrapp.ca/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode denial letters
+- [Research Hub: Guides & Templates](https://3mpwrapp.ca/research/) - 16 injury guides, 50+ appeal templates
 
 **Full Documentation:**
 - [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - Comprehensive methodology

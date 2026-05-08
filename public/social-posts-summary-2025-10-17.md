@@ -14,7 +14,7 @@ Generated: 2025-10-17T20:53:29.986Z
 
 ### 1. How-To: Navigate Your Benefits with 3mpwrApp
 - **Type:** feature
-- **URL:** https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-howto/
+- **URL:** https://3mpwrapp.ca/whats-new/2025-10-22-3mpwrapp-howto/
 
 #### X (Twitter)
 ```
@@ -24,7 +24,7 @@ Step-by-step guide to finding your eligibility and benefits using 3mpwrApp's too
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-howto/
+https://3mpwrapp.ca/whats-new/2025-10-22-3mpwrapp-howto/
 ```
 
 #### Instagram
@@ -44,7 +44,7 @@ Link in bio 🔗
 
 Step-by-step guide to finding your eligibility and benefits using 3mpwrApp's tools
 
-[Read the full article](https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-howto/)
+[Read the full article](https://3mpwrapp.ca/whats-new/2025-10-22-3mpwrapp-howto/)
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -55,7 +55,7 @@ Step-by-step guide to finding your eligibility and benefits using 3mpwrApp's too
 
 Step-by-step guide to finding your eligibility and benefits using 3mpwrApp's tools
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-howto/
+https://3mpwrapp.ca/whats-new/2025-10-22-3mpwrapp-howto/
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -64,7 +64,7 @@ https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-howto/
 
 ### 2. Accessibility Achievement: WCAG 2.1 AA Compliance
 - **Type:** feature
-- **URL:** https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-accessibility/
+- **URL:** https://3mpwrapp.ca/whats-new/2025-10-22-3mpwrapp-accessibility/
 
 #### X (Twitter)
 ```
@@ -74,7 +74,7 @@ Learn about 3mpwrApp's commitment to digital accessibility standards
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-accessibility/
+https://3mpwrapp.ca/whats-new/2025-10-22-3mpwrapp-accessibility/
 ```
 
 #### Instagram
@@ -94,7 +94,7 @@ Link in bio 🔗
 
 Learn about 3mpwrApp's commitment to digital accessibility standards
 
-[Read the full article](https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-accessibility/)
+[Read the full article](https://3mpwrapp.ca/whats-new/2025-10-22-3mpwrapp-accessibility/)
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -105,7 +105,7 @@ Learn about 3mpwrApp's commitment to digital accessibility standards
 
 Learn about 3mpwrApp's commitment to digital accessibility standards
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-accessibility/
+https://3mpwrapp.ca/whats-new/2025-10-22-3mpwrapp-accessibility/
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -114,7 +114,7 @@ https://3mpwrapp.pages.dev/whats-new/2025-10-22-3mpwrapp-accessibility/
 
 ### 3. Resource Round-Up: Workers Compensation Updates
 - **Type:** feature
-- **URL:** https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-roundup/
+- **URL:** https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-roundup/
 
 #### X (Twitter)
 ```
@@ -124,7 +124,7 @@ This month's updates to workers compensation programs across Canada
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-roundup/
+https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-roundup/
 ```
 
 #### Instagram
@@ -144,7 +144,7 @@ Link in bio 🔗
 
 This month's updates to workers compensation programs across Canada
 
-[Read the full article](https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-roundup/)
+[Read the full article](https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-roundup/)
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -155,7 +155,7 @@ This month's updates to workers compensation programs across Canada
 
 This month's updates to workers compensation programs across Canada
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-roundup/
+https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-roundup/
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -164,7 +164,7 @@ https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-roundup/
 
 ### 4. Feature Spotlight: Accessible Resource Library
 - **Type:** feature
-- **URL:** https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-feature/
+- **URL:** https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-feature/
 
 #### X (Twitter)
 ```
@@ -174,7 +174,7 @@ Discover how 3mpwrApp's comprehensive resource library makes disability support 
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-feature/
+https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-feature/
 ```
 
 #### Instagram
@@ -194,7 +194,7 @@ Link in bio 🔗
 
 Discover how 3mpwrApp's comprehensive resource library makes disability support services easier to find
 
-[Read the full article](https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-feature/)
+[Read the full article](https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-feature/)
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -205,7 +205,7 @@ Discover how 3mpwrApp's comprehensive resource library makes disability support 
 
 Discover how 3mpwrApp's comprehensive resource library makes disability support services easier to find
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-feature/
+https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-feature/
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -214,7 +214,7 @@ https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-feature/
 
 ### 5. Community Spotlight: Stories from 3mpwrApp Users
 - **Type:** feature
-- **URL:** https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-community/
+- **URL:** https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-community/
 
 #### X (Twitter)
 ```
@@ -224,7 +224,7 @@ Real stories from people who found support and community through 3mpwrApp
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-community/
+https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-community/
 ```
 
 #### Instagram
@@ -244,7 +244,7 @@ Link in bio 🔗
 
 Real stories from people who found support and community through 3mpwrApp
 
-[Read the full article](https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-community/)
+[Read the full article](https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-community/)
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```
@@ -255,7 +255,7 @@ Real stories from people who found support and community through 3mpwrApp
 
 Real stories from people who found support and community through 3mpwrApp
 
-https://3mpwrapp.pages.dev/whats-new/2025-10-20-3mpwrapp-community/
+https://3mpwrapp.ca/whats-new/2025-10-20-3mpwrapp-community/
 
 #3mpwrApp #Features #DisabilityTech #Accessibility
 ```

@@ -346,8 +346,8 @@ Contact:     94 mobile, 97 desktop
   "@type": "NGO",
   "name": "3mpwr App",
   "alternateName": "3mpwrApp",
-  "url": "https://3mpwrapp.pages.dev",
-  "logo": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+  "url": "https://3mpwrapp.ca",
+  "logo": "https://3mpwrapp.ca/assets/empwrapp-logo.png",
   "description": "Community-powered hub for injured workers and persons with disabilities",
   "foundingDate": "2025",
   "sameAs": [
@@ -437,13 +437,13 @@ image: /assets/social/about-share.png
 **Fix:**
 ```html
 <!-- In <head> of English pages -->
-<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.pages.dev/" />
-<link rel="alternate" hreflang="fr-CA" href="https://3mpwrapp.pages.dev/fr/" />
-<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/" />
+<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.ca/" />
+<link rel="alternate" hreflang="fr-CA" href="https://3mpwrapp.ca/fr/" />
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.ca/" />
 
 <!-- When USA, UK, AU variants exist -->
-<link rel="alternate" hreflang="en-US" href="https://3mpwrapp.pages.dev/us/" />
-<link rel="alternate" hreflang="en-GB" href="https://3mpwrapp.pages.dev/uk/" />
+<link rel="alternate" hreflang="en-US" href="https://3mpwrapp.ca/us/" />
+<link rel="alternate" hreflang="en-GB" href="https://3mpwrapp.ca/uk/" />
 ```
 
 **Effort:** 4-6 hours (implement in templates, test)  

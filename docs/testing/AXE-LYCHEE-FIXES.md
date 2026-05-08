@@ -177,12 +177,12 @@ Lychee link checker failing with 400+ `InvalidPathToUri` errors in GitHub Action
 
 1. **Added base URL to `lychee.toml`**:
    ```toml
-   base = "https://3mpwrapp.pages.dev"
+   base = "https://3mpwrapp.ca"
    ```
 
 2. **Updated `.github/workflows/links.yml`**:
    - ❌ Removed: `--offline` flag
-   - ✅ Added: `--base https://3mpwrapp.pages.dev` argument
+   - ✅ Added: `--base https://3mpwrapp.ca` argument
    - Benefits:
      - Resolves absolute paths correctly
      - Checks actual live links
@@ -221,13 +221,13 @@ Lychee link checker failing with 400+ `InvalidPathToUri` errors in GitHub Action
 
 ### Final Test Results (October 28, 2025):
 ```
-AXE: https://3mpwrapp.pages.dev/?no-modal=1 - 0 violation(s)
-AXE: https://3mpwrapp.pages.dev/about?no-modal=1 - 0 violation(s)
-AXE: https://3mpwrapp.pages.dev/features?no-modal=1 - 0 violation(s)
-AXE: https://3mpwrapp.pages.dev/user-guide?no-modal=1 - 0 violation(s)
-AXE: https://3mpwrapp.pages.dev/blog?no-modal=1 - 0 violation(s)
-AXE: https://3mpwrapp.pages.dev/contact?no-modal=1 - 0 violation(s)
-AXE: https://3mpwrapp.pages.dev/privacy?no-modal=1 - 0 violation(s)
+AXE: https://3mpwrapp.ca/?no-modal=1 - 0 violation(s)
+AXE: https://3mpwrapp.ca/about?no-modal=1 - 0 violation(s)
+AXE: https://3mpwrapp.ca/features?no-modal=1 - 0 violation(s)
+AXE: https://3mpwrapp.ca/user-guide?no-modal=1 - 0 violation(s)
+AXE: https://3mpwrapp.ca/blog?no-modal=1 - 0 violation(s)
+AXE: https://3mpwrapp.ca/contact?no-modal=1 - 0 violation(s)
+AXE: https://3mpwrapp.ca/privacy?no-modal=1 - 0 violation(s)
 ```
 
 **🎉 ALL 7 PAGES PASS WITH ZERO VIOLATIONS - WCAG 2.1 AA COMPLIANT**

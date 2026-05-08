@@ -407,13 +407,13 @@ One worker's 40-hour struggle becomes 500 workers getting instant answers.
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/)** - Proof the flywheels work: 11,430 cases analyzed, knowledge base articles, appeal templates, and comprehensive guides
+📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/)** - Proof the flywheels work: 11,430 cases analyzed, knowledge base articles, appeal templates, and comprehensive guides
 
-📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The execution: collecting 14,000+ tribunal decisions across Canada (Ontario complete, expanding to all provinces)
+📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The execution: collecting 14,000+ tribunal decisions across Canada (Ontario complete, expanding to all provinces)
 
-📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026/04/02/community-what-3mpwr-means/)** - The philosophy behind the flywheels: Individual, Community, and Systemic change working together
+📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.ca/blog/2026/04/02/community-what-3mpwr-means/)** - The philosophy behind the flywheels: Individual, Community, and Systemic change working together
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026/01/06/the-power-of-3mpwrapp-how-were-building-different/)** - The technical foundation: how the 3 flywheels create compounding community knowledge
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.ca/blog/2026/01/06/the-power-of-3mpwrapp-how-were-building-different/)** - The technical foundation: how the 3 flywheels create compounding community knowledge
 
 ---
 
@@ -435,7 +435,7 @@ You're not a customer. You're a contributor. Your struggle, your win, your knowl
 
 **Want to learn more or get involved?**  
 📧 Contact: empowrapp08162025@gmail.com  
-🌐 Website: https://3mpwrapp.pages.dev  
+🌐 Website: https://3mpwrapp.ca  
 📱 Download: Available on iOS, Android, and web
 
 _Building this at $0 budget because every injured worker and person with disabilities deserves representation - even if they can't afford it._

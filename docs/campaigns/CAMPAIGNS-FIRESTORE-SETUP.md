@@ -123,7 +123,7 @@ Project Console: https://console.firebase.google.com/project/empowrapp/overview
 
 ### Step 5: Test Website
 
-Visit https://3mpwrapp.pages.dev/campaigns/ and check:
+Visit https://3mpwrapp.ca/campaigns/ and check:
 - ✅ No "Connection Issue" error
 - ✅ Sync status shows "✅ X active campaigns" or "📭 No active campaigns yet"
 - ✅ Console logs show: "✅ Loaded X campaigns from Firestore"
@@ -134,7 +134,7 @@ Visit https://3mpwrapp.pages.dev/campaigns/ and check:
 
 ### Browser Developer Console Test
 
-Open https://3mpwrapp.pages.dev/campaigns/ and check console:
+Open https://3mpwrapp.ca/campaigns/ and check console:
 
 ```javascript
 // You should see:
@@ -344,7 +344,7 @@ Then deploy: `firebase deploy --only firestore:rules`
 **What You Need to Do:**
 1. Update `firestore.rules` to allow public read for `campaigns_production`
 2. Deploy rules: `firebase deploy --only firestore:rules`
-3. Test at https://3mpwrapp.pages.dev/campaigns/
+3. Test at https://3mpwrapp.ca/campaigns/
 
 **Expected Result:**
 - Website fetches campaigns from Firestore every 30 seconds

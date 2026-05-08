@@ -396,17 +396,17 @@ Without outcome data, you **cannot** answer:
 
 ### Claim Suppression Research
 
-- [The Claim Suppression Playbook: BC to Ontario Cross-Provincial Analysis](https://3mpwrapp.pages.dev/research/wsib/claim-suppression/2026/04/17/claim-suppression-playbook/)
+- [The Claim Suppression Playbook: BC to Ontario Cross-Provincial Analysis](https://3mpwrapp.ca/research/wsib/claim-suppression/2026/04/17/claim-suppression-playbook/)
   - Statistical analysis of Ontario WSIAT patterns (11,430 decisions)
   - Comparison to BC WCAT 100% unknown outcomes
   - Documented tactics employers use to prevent legitimate claims
 
-- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.pages.dev/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/)
+- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.ca/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/)
   - BC megaproject claim suppression (Site C, LNG Canada, Coastal GasLink)
   - WorkSafeBC FOI memo: "second-tier compensation system"
   - Tactical defense playbook
 
-- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.pages.dev/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/)
+- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.ca/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/)
   - First-hand accounts exposing WorkSafeBC "second-tier systems"
   - Resources created from beta tester research
   - Pattern documentation framework

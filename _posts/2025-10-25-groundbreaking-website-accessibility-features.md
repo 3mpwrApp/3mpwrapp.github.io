@@ -270,7 +270,7 @@ We're 100% community-funded, no investors, no profit motive. We can innovate fre
 ## Try It Yourself
 
 **All features are live NOW on our website:**
-1. Visit [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev)
+1. Visit [3mpwrapp.pages.dev](https://3mpwrapp.ca)
 2. Look for the toolbar at the top of any page
 3. Try the features:
    - Click "ðŸ’™ Need a break?" for calming break mode
@@ -346,7 +346,7 @@ For too long, "web accessibility" has meant "can a screen reader read it?" That'
 
 **Help spread the word about these innovations:**
 
-- ðŸ¦ Tweet: "BREAKING: @3mpwrApp just launched 15 accessibility features NEVER done before. Energy tracking, pain modes, brain fog helpers, and more. This changes everything. ðŸ”‹ðŸ¥„ðŸ’™ https://3mpwrapp.pages.dev/blog/"
+- ðŸ¦ Tweet: "BREAKING: @3mpwrApp just launched 15 accessibility features NEVER done before. Energy tracking, pain modes, brain fog helpers, and more. This changes everything. ðŸ”‹ðŸ¥„ðŸ’™ https://3mpwrapp.ca/blog/"
 - ðŸ“˜ Facebook: Share this post in disability groups
 - ðŸ’¼ LinkedIn: Tag web developers and accessibility advocates
 

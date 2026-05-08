@@ -328,7 +328,7 @@ Repeated for:
 ## 🧪 How to Test (For Anyone)
 
 ### Test Light Mode
-1. Open site: https://3mpwrapp.pages.dev/
+1. Open site: https://3mpwrapp.ca/
 2. Check these pages:
    - Homepage (winner announcement visible)
    - Contact form (validation states readable)
@@ -595,7 +595,7 @@ This implementation demonstrates:
 ✅ **Pushed to GitHub**: `origin/main`  
 ✅ **Jekyll Built**: Incremental build successful  
 🔄 **Cloudflare Deploy**: In progress (removed 28MB audit file)  
-🌐 **Live Site**: https://3mpwrapp.pages.dev/
+🌐 **Live Site**: https://3mpwrapp.ca/
 
 ---
 

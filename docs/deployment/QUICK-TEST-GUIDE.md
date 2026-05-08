@@ -8,7 +8,7 @@
 
 ### 1️⃣ Test Campaigns Page (2 minutes)
 
-**Open:** https://3mpwrapp.pages.dev/campaigns/
+**Open:** https://3mpwrapp.ca/campaigns/
 
 **✅ What to Check:**
 - [ ] Page loads within 3 seconds
@@ -34,7 +34,7 @@ OR a list of campaign objects
 
 ### 2️⃣ Test Events Page (2 minutes)
 
-**Open:** https://3mpwrapp.pages.dev/events/
+**Open:** https://3mpwrapp.ca/events/
 
 **✅ What to Check:**
 - [ ] Page loads within 3 seconds
@@ -85,7 +85,7 @@ curl https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=prod
 3. Mark as "Public"
 4. Save
 5. Wait 5 minutes
-6. Refresh https://3mpwrapp.pages.dev/campaigns/
+6. Refresh https://3mpwrapp.ca/campaigns/
 7. Campaign should appear!
 
 **Create a Test Event in App:**
@@ -94,7 +94,7 @@ curl https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=prod
 3. Mark as "Public"
 4. Save
 5. Wait 5 minutes
-6. Refresh https://3mpwrapp.pages.dev/events/
+6. Refresh https://3mpwrapp.ca/events/
 7. Event should appear!
 
 ---
@@ -189,8 +189,8 @@ Before deploying to production:
    - Check deployment status at Cloudflare Pages dashboard
 
 3. **Verify Production:**
-   - Visit https://3mpwrapp.pages.dev/campaigns/
-   - Visit https://3mpwrapp.pages.dev/events/
+   - Visit https://3mpwrapp.ca/campaigns/
+   - Visit https://3mpwrapp.ca/events/
    - Test API endpoints
    - Test ICS feed
 

@@ -53,7 +53,7 @@ Deadlines are the hidden killer of disability claims. A reconsideration request 
 
 ## Ready to Try It?
 
-1. **Download 3mpwrApp** Ã¢â‚¬â€ [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)
+1. **Download 3mpwrApp** Ã¢â‚¬â€ [3mpwrapp.pages.dev](https://3mpwrapp.ca/)
 2. **Sign up or explore as guest** Ã¢â‚¬â€ no commitment needed
 3. **Find this feature** Ã¢â‚¬â€ search or browse main navigation
 

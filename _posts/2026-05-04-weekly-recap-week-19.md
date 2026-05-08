@@ -30,4 +30,4 @@ This recap explains development work in plain language and focuses on practical 
 
 - Live activity feed: [/whats-new/](/whats-new/)
 - Weekly recap archive: [/blog/#weekly-recaps](/blog/#weekly-recaps)
-- Beta updates: [https://3mpwrapp.pages.dev/beta/](https://3mpwrapp.pages.dev/beta/)
+- Beta updates: [https://3mpwrapp.ca/beta/](https://3mpwrapp.ca/beta/)

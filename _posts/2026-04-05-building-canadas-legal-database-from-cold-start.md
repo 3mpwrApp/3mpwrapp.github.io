@@ -485,20 +485,20 @@ That's what we're building. That's the mission.
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/)** - The results: 11,430 cases analyzed, knowledge base articles, appeal templates, comprehensive guides (complete transparency on process, failures, and pivots)
+📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/)** - The results: 11,430 cases analyzed, knowledge base articles, appeal templates, comprehensive guides (complete transparency on process, failures, and pivots)
 
-📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - The presentation that validated this approach with Thunder Bay's injured worker community
+📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.ca/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - The presentation that validated this approach with Thunder Bay's injured worker community
 
-📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026/04/02/community-what-3mpwr-means/)** - Why we're building this: the three pillars of Individual, Community, and Systemic change
+📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.ca/blog/2026/04/02/community-what-3mpwr-means/)** - Why we're building this: the three pillars of Individual, Community, and Systemic change
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026/01/06/the-power-of-3mpwrapp-how-were-building-different/)** - The technical deep dive on how the 3 flywheels work and why community knowledge compounds
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.ca/blog/2026/01/06/the-power-of-3mpwrapp-how-were-building-different/)** - The technical deep dive on how the 3 flywheels work and why community knowledge compounds
 
 ---
 
 ## Get Involved
 
 **Beta Testers:**
-Visit [3mpwrapp Website ](https://3mpwrapp.pages.dev) to join the beta program
+Visit [3mpwrapp Website ](https://3mpwrapp.ca) to join the beta program
 
 **Advocacy Groups:**
 Contact us about partnership opportunities for your community

@@ -177,7 +177,7 @@ All testing guides have been created and committed:
 5. `PRODUCTION-LAUNCH-CHECKLIST.md` - Launch day procedures
 
 ### Important URLs
-- **Site:** https://3mpwrapp.pages.dev
+- **Site:** https://3mpwrapp.ca
 - **GitHub:** https://github.com/3mpwrApp/3mpwrapp.github.io
 - **GitHub Actions:** https://github.com/3mpwrApp/3mpwrapp.github.io/actions
 - **Mastodon:** https://mastodon.social/@3mpwrApp

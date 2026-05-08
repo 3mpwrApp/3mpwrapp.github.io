@@ -287,7 +287,7 @@
 1. **Audit all color combinations:**
    ```bash
    npm install -g @adobe/leonardo-cli
-   leonardo-contrast --url https://3mpwrapp.pages.dev
+   leonardo-contrast --url https://3mpwrapp.ca
    ```
 
 2. **Enhance contrast where needed:**
@@ -652,9 +652,9 @@ self.addEventListener('fetch', (event) => {
    ```json
    {
      "urls": [
-       "https://3mpwrapp.pages.dev/",
-       "https://3mpwrapp.pages.dev/features/",
-       "https://3mpwrapp.pages.dev/blog/"
+       "https://3mpwrapp.ca/",
+       "https://3mpwrapp.ca/features/",
+       "https://3mpwrapp.ca/blog/"
      ],
      "standard": "WCAG2AAA"
    }
@@ -715,7 +715,7 @@ self.addEventListener('fetch', (event) => {
    <meta property="og:title" content="3mpwr App">
    <meta property="og:description" content="...">
    <meta property="og:image" content="/assets/og-image.jpg">
-   <meta property="og:url" content="https://3mpwrapp.pages.dev">
+   <meta property="og:url" content="https://3mpwrapp.ca">
    ```
 
 3. **Twitter Cards:**

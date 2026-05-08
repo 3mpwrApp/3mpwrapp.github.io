@@ -9,7 +9,7 @@ Your daily curator can automatically post to Mastodon when it finds great conten
 When your curator runs at 1pm Toronto time and finds quality content, it will automatically post to your Mastodon account:
 
 **Example post:**
-> Daily highlights for 2025-10-14 are live: https://3mpwrapp.pages.dev/
+> Daily highlights for 2025-10-14 are live: https://3mpwrapp.ca/
 > 
 > #Accessibility #A11y #Disability #Canada
 
@@ -26,7 +26,7 @@ You're currently at: https://mastodon.social/settings/applications/new
 1. **Application name:** `3mpowr Daily Curator`
    - This is just for your reference
 
-2. **Application website:** `https://3mpwrapp.pages.dev`
+2. **Application website:** `https://3mpwrapp.ca`
    - Your website URL
 
 3. **Redirect URI:** `urn:ietf:wg:oauth:2.0:oob`
@@ -280,7 +280,7 @@ Your automated social media pipeline is now active! Every day your curator:
 **Fixed 7 issues:**
 1. ✅ Added `npm install` step for dependencies
 2. ✅ Added `continue-on-error: true` so Mastodon failures don't break workflow
-3. ✅ Changed SITE_URL from GitHub Pages to Cloudflare Pages (https://3mpwrapp.pages.dev/)
+3. ✅ Changed SITE_URL from GitHub Pages to Cloudflare Pages (https://3mpwrapp.ca/)
 4. ✅ Added MASTO_VISIBILITY env variable
 5. ✅ Fixed artifact upload condition (only when curator runs)
 6. ✅ Proper secret handling (removed invalid condition check)

@@ -1139,7 +1139,7 @@ Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
   <p>
     <a href="/downloads/faq.pdf" class="format-link">📄 Download as PDF</a>
     <a href="javascript:window.print()" class="format-link">🖨️ Print-friendly version</a>
-    <a href="mailto:?subject=3mpwrApp FAQ&body=Check out these FAQs: https://3mpwrapp.pages.dev/faq" class="format-link">📧 Email to yourself</a>
+    <a href="mailto:?subject=3mpwrApp FAQ&body=Check out these FAQs: https://3mpwrapp.ca/faq" class="format-link">📧 Email to yourself</a>
   </p>
 </div>
 

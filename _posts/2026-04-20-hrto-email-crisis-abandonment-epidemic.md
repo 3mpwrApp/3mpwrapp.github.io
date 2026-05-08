@@ -14,7 +14,7 @@ toc: true
 
 **Advanced pattern analysis of 3,186 HRTO decisions (2020-2026) reveals significant correlation between email notification issues and case abandonments: 36.6% of all cases cite undeliverable emails in CanLII keywords, 70.1% of abandoned cases involve email delivery issues, and 73.5% of detected outcomes are abandonments. Analysis based on CanLII keyword data; complete tribunal notification procedures not captured in dataset.**
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 3,186 cases individually. Our analysis uses keyword patterns where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 3,186 cases individually. Our analysis uses keyword patterns where official outcomes aren't available.
 
 ---
 
@@ -618,7 +618,7 @@ This analysis is based on publicly available CanLII keyword data. Official HRTO 
 **Contact for case data submissions:** empowrapp08162025@gmail.com (anonymous submissions welcome). We're analyzing tribunal outcome patterns.
 
 **Related analysis:**
-- [WSIAT Revealed: 63% Worker Victory Rate](https://3mpwrapp.pages.dev/blog/2026/04/20/wsib-transparency-gap-outcome-obscurity-REVISED/) - WSIAT vs HRTO comparison
-- [Cross-Tribunal Comparison](https://3mpwrapp.pages.dev/blog/2026/04/20/hrto-wsiat-cross-tribunal-comparison/) - System-wide accountability gaps
+- [WSIAT Revealed: 63% Worker Victory Rate](https://3mpwrapp.ca/blog/2026/04/20/wsib-transparency-gap-outcome-obscurity-REVISED/) - WSIAT vs HRTO comparison
+- [Cross-Tribunal Comparison](https://3mpwrapp.ca/blog/2026/04/20/hrto-wsiat-cross-tribunal-comparison/) - System-wide accountability gaps
 
 **Contact:** empowrapp08162025@gmail.com

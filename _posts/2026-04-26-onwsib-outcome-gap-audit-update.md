@@ -13,6 +13,8 @@ toc: true
 
 This report documents what was collected, what can be classified, and what remains unresolved.
 
+Thousands of injured workers go through internal WSIB reconsideration processes each year, yet the public has almost no visibility into outcomes. This audit attempts to measure what can actually be verified from publicly available ONWSIB decisions and exposes how limited that visibility still is.
+
 ## What Is ONWSIB?
 
 The **Ontario Workplace Safety and Insurance Board (WSIB)** is the agency that decides initial workers' compensation claims. ONWSIB is their internal review/reconsideration process before cases go to WSIAT (the independent appeal tribunal).
@@ -23,7 +25,7 @@ The **Ontario Workplace Safety and Insurance Board (WSIB)** is the agency that d
 
 **431 ONWSIB decisions (2020-2026)** collected from CanLII public records.
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each case individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each case individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
 
 **Important Context:** ONWSIB has far fewer public decisions than WSIAT (431 vs 11,430) because:
 1. Most internal WSIB reviews don't get published to CanLII
@@ -47,6 +49,20 @@ ONWSIB records collected by year:
 
 **Peak:** 2022 (149 cases)  
 **Trend:** Declining from 149 (2022) → 61 (2025)
+
+### CanLII Browse Cross-Reference (Observed May 2026)
+
+Cross-checking the ONWSIB browse view on CanLII shows a different year split in the currently visible public listing:
+
+- 2020: 0 decisions
+- 2021: 49 decisions
+- 2022: 149 decisions
+- 2023: 120 decisions
+- 2024: 3 decisions
+- 2025: 64 decisions
+- 2026: 8 decisions
+
+These observed browse counts should be treated as a live-source cross-reference snapshot. They do not fully match the API-collected dataset table above and require reconciliation in a follow-up data integrity pass.
 
 ## Top Issues in ONWSIB Cases (Keyword Analysis)
 
@@ -104,7 +120,18 @@ From 431 ONWSIB records:
 **What This Means:**
 - Of the tiny 4.6% of ONWSIB cases we can classify, **17 out of 19 with merits outcomes are probable grants** (**directional only—sample size of 19 is far too small to generalize**).
 - With such a small classified sample constrained by data availability, we cannot draw system-wide conclusions about ONWSIB grant rates.
-- **HOWEVER:** The 95.4% unresolved rate means we have **no idea** what happens in the overwhelming majority of ONWSIB reconsiderations.
+- **Key limitation:** The 95.4% unresolved rate means the public cannot reliably measure what happens in the overwhelming majority of ONWSIB reconsiderations.
+
+<div style="border-left: 6px solid #b00020; background: #fff4f4; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 6px;">
+	<strong style="color: #7f0000; font-size: 1.05rem;">Key Finding: 95.4% of ONWSIB outcomes are unresolved in public records.</strong>
+	<p style="margin: 0.5rem 0 0.75rem;">Only 4.6% of cases are classifiable. This is an evidence-architecture problem, not a basis for system-wide outcome claims.</p>
+	<div style="display: flex; height: 16px; border-radius: 999px; overflow: hidden; background: #e0e0e0;">
+		<div style="width: 95.4%; background: #c62828;"></div>
+		<div style="width: 4.6%; background: #2e7d32;"></div>
+	</div>
+	<p style="margin: 0.6rem 0 0; font-size: 0.92rem;"><strong>Unresolved:</strong> 95.4% | <strong>Classified:</strong> 4.6%</p>
+	<p style="margin: 0.6rem 0 0;"><a href="/connecting-the-dots-canlii-keyword-visualization-network.html">View ONWSIB interactive visualization</a> (select <em>ONWSIB Only</em> in the tribunal filter).</p>
+</div>
 
 ## The Evidence Gap Crisis
 
@@ -151,7 +178,7 @@ Tier B confidence band is wide due to small sample size.
 
 This dataset is useful for:
 - Pattern discovery in keyword language (work-related injury, pre-existing conditions, employer obligations)
-- Evidence-gap quantification (95.4% unresolved is a transparency crisis)
+- Evidence-gap quantification (95.4% unresolved shows major public-data limits)
 - Monitoring outcome-field completeness over time
 - Injury type prevalence tracking (knee, shoulder, mental health trends)
 
@@ -228,6 +255,41 @@ Full datasets available for community analysis:
 - [onwsib-outcomes-3-tier-summary.json](/data/tribunal-decisions/onwsib-outcomes-3-tier-summary.json)
 - [onwsib-scraping-summary.json](/data/tribunal-decisions/onwsib-scraping-summary.json)
 - [Tribunal audit error-rate estimates (all four tribunals)](/data/tribunal-decisions/tribunal-audit-error-rate-estimates.json)
+
+## Methodology Notes, Research Constraints, and Confidence Levels
+
+**Methodology Notes:**
+- Tiered evidence framework was used: Tier A (confirmed language), Tier B (probable keyword inference), Tier C (unresolved).
+- We combined direct API metadata, keyword parsing, and audit-sample validation.
+- Confidence intervals are reported using Wilson 95% methods for small samples.
+
+**Research Constraints:**
+- Public records only; this does not represent all ONWSIB internal reviews.
+- No standardized outcome field is available through current API responses for this dataset.
+- Outcome language varies significantly across decisions, reducing extraction precision.
+- Biggest current accuracy limiter: many ONWSIB rows have empty `full_text_html` and only short keyword summaries, which limits high-confidence outcome extraction.
+- CanLII notes that while it strives for comprehensive databases, source-provider transfer and processing delays can temporarily result in missing documents before omissions are corrected.
+
+### Next Update Plan (After ONCA Collection Completes)
+
+To stay within CanLII throttling limits and improve data quality responsibly, ONWSIB will be rerun after ONCA collection is complete. That rerun will be used to update:
+
+- This ONWSIB blog post (reconciled counts and revised confidence notes)
+- Knowledge base entries
+- Public guides
+- Reusable templates
+- ONWSIB-related visualizations
+**Confidence Levels:**
+- High confidence: volume counts, year distribution, and Tier C share (95.4%).
+- Moderate confidence: issue prevalence from recurring keyword patterns.
+- Low confidence: inferred grant/denial rates from small Tier B sample (directional only).
+
+## Why This Matters
+
+- Injured workers need transparent systems to make informed appeal decisions.
+- Researchers need measurable outcomes to test what is working and what is failing.
+- Policymakers need reliable public data to evaluate fairness and performance.
+- Appeals systems should be independently understandable without insider access.
 
 ---
 

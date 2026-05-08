@@ -41,7 +41,7 @@ Mental health support that doesn't require 47 clicks to access.
 
 Always free. Always accessible.
 
-👉 Learn more: https://3mpwrapp.pages.dev/features/crisis-resources
+👉 Learn more: https://3mpwrapp.ca/features/crisis-resources
 
 #DisabilityRights #MentalHealthSupport #Accessibility
 ```
@@ -65,7 +65,7 @@ Did you know your phone can track your daily "spoons" (energy units)?
 
 Built BY the chronic illness community, FOR the community.
 
-Free forever: https://3mpwrapp.pages.dev/features/spoon-theory
+Free forever: https://3mpwrapp.ca/features/spoon-theory
 
 #SpoonTheory #ChronicIllness #EnergyManagement
 ```
@@ -93,7 +93,7 @@ After 3mpwrApp:
 
 Documentation tools shouldn't require a law degree.
 
-👉 https://3mpwrapp.pages.dev/features/ai-case-interpreter
+👉 https://3mpwrapp.ca/features/ai-case-interpreter
 
 #WSIB #CPPDisability #LegalTools
 ```
@@ -125,7 +125,7 @@ Why it matters: Mental health crises don't wait for Wi-Fi.
 
 Every crisis line (provincial + national) now works 100% offline. Zero login required.
 
-Building tools for hard days: https://3mpwrapp.pages.dev/features/crisis-resources
+Building tools for hard days: https://3mpwrapp.ca/features/crisis-resources
 
 #BuildInPublic #DisabilityTech #MentalHealthSupport
 ```
@@ -164,7 +164,7 @@ So I built 3mpwrApp—tools designed for hard days, not just good ones.
 
 If you're fighting WSIB, ODSP, CPP-D, or any disability system—this is for you.
 
-Free forever: https://3mpwrapp.pages.dev
+Free forever: https://3mpwrapp.ca
 
 #WSIB #InjuredWorker #BuildInPublic
 ```
@@ -188,7 +188,7 @@ Miss this deadline = appeal automatically dismissed.
 
 3mpwrApp's Benefits Tracker sends reminders 30 days before deadlines.
 
-Never miss another one: https://3mpwrapp.pages.dev/features/benefits-tracker
+Never miss another one: https://3mpwrapp.ca/features/benefits-tracker
 
 #WSIB #WorkersComp #Ontario #LegalTips
 ```
@@ -214,7 +214,7 @@ Here's how (5 steps):
 
 3mpwrApp's Letter Generator walks you through every step.
 
-22 templates, 100% free: https://3mpwrapp.pages.dev/features/letter-generator
+22 templates, 100% free: https://3mpwrapp.ca/features/letter-generator
 
 #WorkplaceRights #Accommodation #DisabilityRights
 ```
@@ -384,7 +384,7 @@ Documentation is the difference.
 
 3mpwrApp's Evidence Locker helps you build the paper trail that wins.
 
-Free tools: https://3mpwrapp.pages.dev
+Free tools: https://3mpwrapp.ca
 
 Source: WSIB Annual Report 2024
 #WSIB #WorkersComp #KnowYourRights
@@ -419,7 +419,7 @@ Appeal Filed On Time ✅
 
 Turn confusion into clarity.
 
-Tools: https://3mpwrapp.pages.dev
+Tools: https://3mpwrapp.ca
 
 #WSIB #Appeals #VisualGuide
 ```

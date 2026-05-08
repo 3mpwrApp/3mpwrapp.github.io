@@ -137,7 +137,7 @@ jobs:
           echo "Note: Cloudflare auto-builds from git push - no manual deploy needed"
           echo "Starting check at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
           
-          BLOG_URL="https://3mpwrapp.pages.dev/blog/"
+          BLOG_URL="https://3mpwrapp.ca/blog/"
           
           # Quick check: 3 attempts with 30-second intervals (max 1.5 min)
           for ATTEMPT in 1 2 3; do

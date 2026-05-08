@@ -122,13 +122,13 @@ firefox --version
    ```
 
 2. Bookmark testing URLs:
-   - Homepage: https://3mpwrapp.pages.dev
-   - About: https://3mpwrapp.pages.dev/about.md
-   - Features: https://3mpwrapp.pages.dev/features
-   - Blog: https://3mpwrapp.pages.dev/blog
-   - User Guide: https://3mpwrapp.pages.dev/user-guide.md
-   - Privacy: https://3mpwrapp.pages.dev/privacy.md
-   - Accessibility: https://3mpwrapp.pages.dev/accessibility.md
+   - Homepage: https://3mpwrapp.ca
+   - About: https://3mpwrapp.ca/about.md
+   - Features: https://3mpwrapp.ca/features
+   - Blog: https://3mpwrapp.ca/blog
+   - User Guide: https://3mpwrapp.ca/user-guide.md
+   - Privacy: https://3mpwrapp.ca/privacy.md
+   - Accessibility: https://3mpwrapp.ca/accessibility.md
 
 3. Bookmark testing tools:
    - Google PageSpeed: https://pagespeed.web.dev/
@@ -798,7 +798,7 @@ Verify overnight nothing broke:
 - PRODUCTION-LAUNCH-CHECKLIST.md
 
 ### Live Site
-- https://3mpwrapp.pages.dev
+- https://3mpwrapp.ca
 
 ### GitHub Repository
 - https://github.com/3mpwrApp/3mpwrapp.github.io

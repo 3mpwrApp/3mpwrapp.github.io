@@ -75,14 +75,14 @@ Status:                     ✅ PRODUCTION READY
 ## 🚀 **HOW TO USE**
 
 ### **View Your Blog**
-📖 Visit: `https://3mpwrapp.pages.dev/blog`
+📖 Visit: `https://3mpwrapp.ca/blog`
 
 ### **Subscribe to Updates**
-📡 RSS Feed: `https://3mpwrapp.pages.dev/feed.xml`
+📡 RSS Feed: `https://3mpwrapp.ca/feed.xml`
 - Use Feedly, Inoreader, or any RSS reader
 
 ### **Access the JSON API**
-🔗 URL: `https://3mpwrapp.pages.dev/public/curation-latest.json`
+🔗 URL: `https://3mpwrapp.ca/public/curation-latest.json`
 
 ### **Manual Testing**
 ```bash

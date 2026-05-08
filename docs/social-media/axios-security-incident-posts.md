@@ -14,7 +14,7 @@
 
 Your data is secure. No action needed.
 
-https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
+https://3mpwrapp.ca/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 #Security #NPM #SupplyChain
 
@@ -36,7 +36,7 @@ FOR USERS: No action required. Continue using normally.
 
 FOR DEVELOPERS: npm install paused until all-clear (est. April 3-5)
 
-Full details: https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
+Full details: https://3mpwrapp.ca/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 #Security #NPM #SupplyChainSecurity #OpenSource #Axios
 
@@ -98,7 +98,7 @@ This incident demonstrates the critical importance of:
 
 Our security-first approach protected 3mpwrApp users from this industry-wide threat. We continue to maintain enterprise-grade security standards for all our stakeholders.
 
-Read our full security analysis: https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
+Read our full security analysis: https://3mpwrapp.ca/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 Questions or concerns? Contact: empowrapp08162025@gmail.com
 
@@ -140,7 +140,7 @@ Your privacy and security will ALWAYS be our top priority. We built 3mpwrApp wit
 
 Questions? Concerns? We're here: empowrapp08162025@gmail.com
 
-Full technical details on our blog: https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
+Full technical details on our blog: https://3mpwrapp.ca/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 Stay safe out there! 
 
@@ -244,7 +244,7 @@ As maintainers of 3mpwrApp (privacy-first empowerment platform), here's our inci
 
 **Timeline Estimate for All-Clear:** April 3-5, 2026 (3-5 days)
 
-Full technical write-up: https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
+Full technical write-up: https://3mpwrapp.ca/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 Happy to answer questions about our process, tooling, or incident response framework.
 
@@ -256,7 +256,7 @@ Happy to answer questions about our process, tooling, or incident response frame
 
 **Title:** We verified our app is safe from the axios npm compromise in 4 hours - here's how
 
-**URL:** https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
+**URL:** https://3mpwrapp.ca/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 **Comment (if submitting as Show HN):**
 
@@ -273,7 +273,7 @@ Built Socket.dev integration (ready to deploy when safe to run npm install) to c
 
 Questions about our verification process or supply chain security practices welcome.
 
-Full details: https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
+Full details: https://3mpwrapp.ca/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 ---
 

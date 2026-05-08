@@ -358,7 +358,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       
       // Fetch from Cloudflare Worker API endpoint (production environment)
   const ts = Date.now();
-  const response = await fetch('https://3mpwrapp.pages.dev/api/events.json?ts=' + ts, { cache: 'no-store' });
+  const response = await fetch('https://3mpwrapp.ca/api/events.json?ts=' + ts, { cache: 'no-store' });
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -643,7 +643,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     const cleanDate = date;
     
     // Build the event URL (could be enhanced with event ID for deep linking)
-    const eventUrl = 'https://3mpwrapp.pages.dev/events/';
+    const eventUrl = 'https://3mpwrapp.ca/events/';
     
     // Create share text with proper formatting (includes #3mpwrApp hashtag)
     const shareText = `${cleanTitle}\n${cleanDate}\n\n${cleanDescription}\n\n#3mpwrApp\n\nPowered by 3mpwr App: ${eventUrl}`;
@@ -739,7 +739,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     const cleanDescription = description;
     const cleanDate = date;
     
-    const eventUrl = 'https://3mpwrapp.pages.dev/events/';
+    const eventUrl = 'https://3mpwrapp.ca/events/';
     const shareText = `${cleanTitle}\n${cleanDate}\n\n${cleanDescription}\n\nView all events: ${eventUrl}\n\nPowered by 3mpwr App`;
     
     // Try to copy to clipboard
@@ -762,7 +762,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   
   // Share all events page
   function shareAllEvents() {
-    const pageUrl = 'https://3mpwrapp.pages.dev/events/';
+    const pageUrl = 'https://3mpwrapp.ca/events/';
     const shareText = '📅 Check out the 3mpwr App Events Calendar!\n\nDisability rights, worker justice, and community events - all fully accessible.\n\n✅ Real-time sync\n✅ Subscribe to calendar feed\n✅ Community-driven events\n\n#3mpwrApp\n\nPowered by 3mpwr App';
     
     // Try native Web Share API first (mobile-friendly)

@@ -341,8 +341,8 @@ Based on analysis of 98,992 WSIAT decisions:
 
 1. **Get this guide:** [Download PDF](../guides/construction-wsiat-guide.pdf) (coming soon)
 2. **Find templates:** [Construction Templates](../data/templates/) - filter by your injury type
-3. **Join community:** [3mpwrApp Community](https://3mpwrapp.pages.dev/community/) - connect with other construction workers
-4. **Get representation:** [Find free legal help](https://3mpwrapp.pages.dev/resources/legal-clinics/)
+3. **Join community:** [3mpwrApp Community](https://3mpwrapp.ca/community/) - connect with other construction workers
+4. **Get representation:** [Find free legal help](https://3mpwrapp.ca/resources/legal-clinics/)
 5. **Report unsafe sites:** [MOL Hotline](tel:1-877-202-0008) - you can report anonymously
 
 ---

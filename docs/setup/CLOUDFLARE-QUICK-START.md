@@ -43,16 +43,16 @@ Value: production
 ### 4. Deploy! (1 minute)
 1. Click "Save and Deploy"
 2. Wait 2-3 minutes for first build
-3. You'll get a free URL: `https://3mpwrapp.pages.dev`
+3. You'll get a free URL: `https://3mpwrapp.ca`
 
 ## After Deployment
 
 ### Test Your Site
-1. Visit: `https://3mpwrapp.pages.dev`
+1. Visit: `https://3mpwrapp.ca`
 2. Verify everything works
 3. Check security headers:
    ```powershell
-   curl -I https://3mpwrapp.pages.dev
+   curl -I https://3mpwrapp.ca
    ```
    You should see:
    ```
@@ -130,7 +130,7 @@ If you have `3mpowr.org` or want to buy one:
 - Deploy time: ~2 minutes
 
 **After (Cloudflare Pages):**
-- URL: `https://3mpwrapp.pages.dev` (can use both)
+- URL: `https://3mpwrapp.ca` (can use both)
 - Security headers: Server-level (more secure)
 - CDN: 275+ cities worldwide
 - Deploy time: ~2 minutes

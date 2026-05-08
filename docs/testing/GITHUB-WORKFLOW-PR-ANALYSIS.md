@@ -152,7 +152,7 @@ JSON Output: Enabled
 **Timeout:** 25 minutes  
 **Error Handling:** Continues on non-PR events, strict on PRs
 
-**Site URL:** `https://3mpwrapp.pages.dev`
+**Site URL:** `https://3mpwrapp.ca`
 
 #### B. Pa11y-CI
 **File:** `.github/workflows/a11y-pa11y.yml`  
@@ -183,7 +183,7 @@ JSON Output: Enabled
 4. Run Lychee link checker on `_site/` directory
 
 **Config:** `lychee.toml`  
-**Base URL:** `https://3mpwrapp.pages.dev`  
+**Base URL:** `https://3mpwrapp.ca`  
 **Timeout:** 25 minutes
 
 **Error Handling:**
@@ -203,7 +203,7 @@ JSON Output: Enabled
 - On push/PR to main
 - Manual trigger
 
-**Site URL:** `https://3mpwrapp.pages.dev`
+**Site URL:** `https://3mpwrapp.ca`
 
 **Metrics Tracked:**
 - Performance score
@@ -531,7 +531,7 @@ DEBUG_CURATOR=1 node scripts/agent-curation-production.js
 cat lychee.toml
 
 # Test specific URL
-curl -I https://3mpwrapp.pages.dev/community-spotlight/
+curl -I https://3mpwrapp.ca/community-spotlight/
 ```
 
 **Pages Deployment Hangs:**

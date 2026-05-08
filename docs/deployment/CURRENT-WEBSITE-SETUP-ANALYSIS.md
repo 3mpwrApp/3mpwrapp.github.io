@@ -282,7 +282,7 @@ Your website operates as a **content hub with three interlocking systems**: (1) 
 ## VIII. SEO & DISCOVERY SETUP
 
 **Site Configuration** (`_config.yml`):
-- **Base URL**: https://3mpwrapp.pages.dev
+- **Base URL**: https://3mpwrapp.ca
 - **Plugins**: 
   - `jekyll-feed` (RSS generation)
   - `jekyll-seo-tag` (metadata)

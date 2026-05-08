@@ -314,7 +314,7 @@
 
 ### Live Status
 - **Repository:** https://github.com/3mpwrApp/3mpwrapp.github.io
-- **Live Site:** https://3mpwrapp.pages.dev/
+- **Live Site:** https://3mpwrapp.ca/
 - **Status:** ✅ Deployed (Cloudflare Pages auto-deploys on push)
 - **Build Time:** ~2-3 minutes after git push
 

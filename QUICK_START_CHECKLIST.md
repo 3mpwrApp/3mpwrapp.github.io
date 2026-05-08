@@ -107,7 +107,7 @@ Why it matters:
 
 Every crisis line (provincial + national) works 100% offline. Zero login required.
 
-Building tools for hard days: https://3mpwrapp.pages.dev/features/crisis-resources
+Building tools for hard days: https://3mpwrapp.ca/features/crisis-resources
 
 #BuildInPublic #DisabilityTech #MentalHealthSupport #AccessibilityFirst
 ```
@@ -132,7 +132,7 @@ Miss this deadline = appeal automatically dismissed.
 
 3mpwrApp's Benefits Tracker sends reminders 30 days before deadlines.
 
-Never miss another one: https://3mpwrapp.pages.dev/features/benefits-tracker
+Never miss another one: https://3mpwrapp.ca/features/benefits-tracker
 
 #WSIB #WorkersComp #Ontario #LegalTips
 ```

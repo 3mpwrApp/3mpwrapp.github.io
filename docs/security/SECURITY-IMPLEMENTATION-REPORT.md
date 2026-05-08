@@ -133,8 +133,8 @@ style-src 'self';
 Contact: mailto:empowrapp08162025@gmail.com
 Expires: 2026-10-27T00:00:00.000Z
 Preferred-Languages: en, fr
-Canonical: https://3mpwrapp.pages.dev/.well-known/security.txt
-Policy: https://3mpwrapp.pages.dev/privacy/
+Canonical: https://3mpwrapp.ca/.well-known/security.txt
+Policy: https://3mpwrapp.ca/privacy/
 ```
 
 **Purpose**:
@@ -332,7 +332,7 @@ Policy: https://3mpwrapp.pages.dev/privacy/
 - ✅ **Pushed to GitHub**: main branch
 - ✅ **Cloudflare Pages**: Auto-building
 - ⏳ **Build time**: 2-3 minutes
-- ✅ **Expected**: Live at https://3mpwrapp.pages.dev/
+- ✅ **Expected**: Live at https://3mpwrapp.ca/
 
 ---
 
@@ -658,7 +658,7 @@ Policy: https://3mpwrapp.pages.dev/privacy/
 
 **Questions?** Contact us:
 - Email: empowrapp08162025@gmail.com
-- Contact Form: https://3mpwrapp.pages.dev/contact/
+- Contact Form: https://3mpwrapp.ca/contact/
 - Security Disclosure: security.txt
 
 **Found a bug?**

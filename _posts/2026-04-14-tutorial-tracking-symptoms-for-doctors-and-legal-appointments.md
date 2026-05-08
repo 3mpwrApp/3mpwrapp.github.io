@@ -53,7 +53,7 @@ The export function is specifically formatted for medical appointments. Hand you
 
 ## Ready to Try It?
 
-1. **Download 3mpwrApp** â€” [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)
+1. **Download 3mpwrApp** â€” [3mpwrapp.pages.dev](https://3mpwrapp.ca/)
 2. **Sign up or explore as guest** â€” no commitment needed
 3. **Find this feature** â€” search or browse main navigation
 

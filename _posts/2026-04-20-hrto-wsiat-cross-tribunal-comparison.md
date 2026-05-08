@@ -18,7 +18,7 @@ toc: true
 
 **Comparative analysis of 5,186 tribunal decisions reveals significant disparities: WSIAT workers receive favorable decisions in 73.5% of classified appeals (438 granted of 649 classified from 11,430 CanLII decisions 2020-2026) with 0.5% abandonment rate, while HRTO shows 73.5% abandonment rate with email delivery issues cited in 70.1% of abandoned cases. Same province, same vulnerable populations, opposite outcome types.**
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each case individually. Our analysis uses keyword patterns where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each case individually. Our analysis uses keyword patterns where official outcomes aren't available.
 
 **📊 April 29, 2026 Update:** Full WSIAT dataset now available - **98,992 decisions (1987-2026)** from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). See [Deep-Dive Analysis Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html) for comprehensive pattern analysis including co-occurrence networks, temporal trends, vice-chair specialization, and body part injury patterns.
 
@@ -1075,5 +1075,5 @@ Ontario Bar Association. (2025). *Submissions on HRTO Rules of Procedure*. Retri
 **Contact:** empowrapp08162025@gmail.com (case pattern analysis, comparative tribunal research)
 
 **Related analysis:**
-- [WSIAT Revealed: 65-73% Worker Success Rate](https://3mpwrapp.pages.dev/blog/2026/04/20/wsib-transparency-gap-outcome-obscurity-REVISED/)
-- [HRTO Email Delivery and Abandonment Pattern Analysis](https://3mpwrapp.pages.dev/blog/2026/04/20/hrto-email-crisis-abandonment-epidemic/)
+- [WSIAT Revealed: 65-73% Worker Success Rate](https://3mpwrapp.ca/blog/2026/04/20/wsib-transparency-gap-outcome-obscurity-REVISED/)
+- [HRTO Email Delivery and Abandonment Pattern Analysis](https://3mpwrapp.ca/blog/2026/04/20/hrto-email-crisis-abandonment-epidemic/)

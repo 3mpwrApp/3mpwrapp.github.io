@@ -68,7 +68,7 @@
       "content": "🔄 The 3 Flywheels of Change\n\nMost apps collect data and sell it.\n3mpwrApp turns lived experience into POWER...",
       "hashtags": ["DisabilityJustice", "DataForGood", "CollectiveAction", "BuildInPublic"],
       "visualAsset": "assets/images/flywheels-diagram.png",
-      "link": "https://3mpwrapp.pages.dev/#flywheels",
+      "link": "https://3mpwrapp.ca/#flywheels",
       "posted": false
     },
     {
@@ -78,7 +78,7 @@
       "platforms": ["mastodon", "bluesky"],
       "content": "📚 Everything You Need (100% Free)\n\nCrisis hotlines → ...",
       "hashtags": ["DisabilityRights", "FreeResources"],
-      "link": "https://3mpwrapp.pages.dev/crisis-resources",
+      "link": "https://3mpwrapp.ca/crisis-resources",
       "posted": false
     }
   ]

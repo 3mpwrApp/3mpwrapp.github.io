@@ -283,7 +283,7 @@ In the last 24 hours we:
 
 ### Support Resources
 - GitHub: https://github.com/3mpwrApp/3mpwrapp.github.io
-- Site: https://3mpwrapp.pages.dev
+- Site: https://3mpwrapp.ca
 - Testing Tools: PageSpeed, SecurityHeaders.com, WebPageTest
 
 ---

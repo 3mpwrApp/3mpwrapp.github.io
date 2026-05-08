@@ -106,7 +106,7 @@ console.log(`📅 ${events.length} upcoming/current events (filtered from ${allE
 **File:** `api/events.json`
 
 **Purpose:**
-- Direct access to event data: `https://3mpwrapp.pages.dev/api/events.json`
+- Direct access to event data: `https://3mpwrapp.ca/api/events.json`
 - Fallback if Worker API has issues
 - Can be used by external tools
 
@@ -188,8 +188,8 @@ curl "https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=pro
 - **ICS Calendar Feed:** https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics ✅
 
 ### Website URLs:
-- **Events Page:** https://3mpwrapp.pages.dev/events/ (will work after deployment)
-- **Static JSON:** https://3mpwrapp.pages.dev/api/events.json (will work after deployment)
+- **Events Page:** https://3mpwrapp.ca/events/ (will work after deployment)
+- **Static JSON:** https://3mpwrapp.ca/api/events.json (will work after deployment)
 
 ## 📋 Next Steps
 

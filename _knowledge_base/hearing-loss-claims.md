@@ -399,7 +399,7 @@ Questions to ask:
 - [Permanent Impairment Ratings](permanent-impairment-rating.md) - Hearing loss & tinnitus ratings
 
 **Research:**
-- [WSIB Exposed: 8 Smoking Guns](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+- [WSIB Exposed: 8 Smoking Guns](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
 - NIOSH Noise & Hearing Loss Prevention: https://www.cdc.gov/niosh/topics/noise/
 
 ---

@@ -467,7 +467,7 @@ description: Free community-powered platform connecting injured workers, persons
 // Simple event loading - shows events in next 7 days
 async function loadSimpleEvents() {
   try {
-    const response = await fetch('https://3mpwrapp.pages.dev/api/events.json?ts=' + Date.now(), { cache: 'no-store' });
+    const response = await fetch('https://3mpwrapp.ca/api/events.json?ts=' + Date.now(), { cache: 'no-store' });
     const events = await response.json();
     
     const now = new Date();
@@ -508,7 +508,7 @@ async function loadSimpleEvents() {
 // Simple campaigns loading
 async function loadSimpleCampaigns() {
   try {
-    const response = await fetch('https://3mpwrapp.pages.dev/api/campaigns.json?ts=' + Date.now(), { cache: 'no-store' });
+    const response = await fetch('https://3mpwrapp.ca/api/campaigns.json?ts=' + Date.now(), { cache: 'no-store' });
     const campaigns = await response.json();
     
     // Get active campaigns (not completed)

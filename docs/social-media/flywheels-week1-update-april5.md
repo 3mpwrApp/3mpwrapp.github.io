@@ -152,7 +152,7 @@ All data is public and exportable:
 ---
 
 **Next Update**: April 6, 2026 (after Canada-wide collection)  
-**Questions?** Ping me or check https://3mpwrapp.pages.dev/
+**Questions?** Ping me or check https://3mpwrapp.ca/
 
 The flywheel is spinning. 🔄
 ```
@@ -215,8 +215,8 @@ Disability       ███  444
 
 ## 🔗 LINKS TO INCLUDE
 
-- Flywheels blog post: `https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
-- Pattern analysis summary: `https://3mpwrapp.pages.dev/docs/ONTARIO_PATTERN_ANALYSIS_COMPLETE/`
+- Flywheels blog post: `https://3mpwrapp.ca/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
+- Pattern analysis summary: `https://3mpwrapp.ca/docs/ONTARIO_PATTERN_ANALYSIS_COMPLETE/`
 - Data repository: `https://github.com/3mpwrapp/3mpwrapp.github.io/tree/main/data/tribunal-decisions`
 
 ---

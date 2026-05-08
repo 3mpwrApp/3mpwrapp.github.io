@@ -48,7 +48,7 @@ node scripts/curator-trending.js
 ## 📡 3. RSS Feed
 
 ### Subscribe
-**Feed URL:** `https://3mpwrapp.pages.dev/feeds/curated.xml`
+**Feed URL:** `https://3mpwrapp.ca/feeds/curated.xml`
 
 ### Generate Manually
 ```bash

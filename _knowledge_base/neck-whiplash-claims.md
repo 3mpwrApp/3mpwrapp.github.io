@@ -643,8 +643,8 @@ From our analysis of 11,430 tribunal decisions (2020-2026):
 - Neck Injury Appeal Template (coming soon)
 
 **Research:**
-- [WSIB Exposed: 8 Smoking Guns](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
-- [Black Box: Claim Suppression](https://3mpwrapp.pages.dev/blog/2026/05/01/wsib-black-box-claim-suppression-outcome-obscurity/)
+- [WSIB Exposed: 8 Smoking Guns](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+- [Black Box: Claim Suppression](https://3mpwrapp.ca/blog/2026/05/01/wsib-black-box-claim-suppression-outcome-obscurity/)
 
 ---
 

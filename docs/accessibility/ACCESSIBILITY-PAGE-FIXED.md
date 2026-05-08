@@ -10,7 +10,7 @@
 
 > "i checked accessibility page and theres issues: # Page not found"
 
-**URL**: https://3mpwrapp.pages.dev/accessibility/  
+**URL**: https://3mpwrapp.ca/accessibility/  
 **Error**: 404 Page Not Found
 
 ---
@@ -188,7 +188,7 @@ The new page includes navigation to:
 - [x] Emojis render correctly (✅ ♿ 💚)
 
 ### Deployment Tests (After Push):
-- [ ] Visit https://3mpwrapp.pages.dev/accessibility/
+- [ ] Visit https://3mpwrapp.ca/accessibility/
 - [ ] Page loads without 404 error
 - [ ] All internal links work
 - [ ] Footer link to accessibility page works
@@ -204,7 +204,7 @@ The new page includes navigation to:
 ⏳ **Building**: Jekyll workflow running  
 ⏳ **Deploying**: Cloudflare Pages (1-2 minutes)
 
-**Live URL**: https://3mpwrapp.pages.dev/accessibility/
+**Live URL**: https://3mpwrapp.ca/accessibility/
 
 ---
 
@@ -256,7 +256,7 @@ The new page includes navigation to:
 ### 1. Verify the Fix (In 2 Minutes):
 ```
 1. Wait for Cloudflare Pages deployment (~1-2 minutes)
-2. Visit: https://3mpwrapp.pages.dev/accessibility/
+2. Visit: https://3mpwrapp.ca/accessibility/
 3. Should see: "Accessibility Statement" page with full content
 4. Click around: All links should work
 ```
@@ -347,7 +347,7 @@ While fixing accessibility.md, I also checked:
 
 **Commit**: db95e95  
 **Status**: ✅ DEPLOYED  
-**URL**: https://3mpwrapp.pages.dev/accessibility/  
+**URL**: https://3mpwrapp.ca/accessibility/  
 **Time to fix**: ~5 minutes  
 
 **You should see the working page in about 2 minutes!** 🚀

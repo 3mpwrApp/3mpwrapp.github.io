@@ -37,7 +37,7 @@ featured: true
 
 ✅ **DATA VERIFIED:** April 17, 2026 - All keyword frequency statistics verified via analysis of CanLII keywords field across 11,430 WSIAT decisions (2020-2026). Analysis script: `analyze-keyword-frequency.mjs` | Output: `keyword-frequency-analysis.json`
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our keyword pattern analysis focuses on CanLII metadata where available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our keyword pattern analysis focuses on CanLII metadata where available.
 
 **TL;DR:** WSIB denials use specific technical language patterns revealed through statistical analysis: "pre-existing" (13.31%), "impairment" (11.85%), "psychotraumatic disability" (6.62%), "shoulder" (12.17%), "knee" (7.39%). Understanding these patterns and knowing how to respond gives you strategic advantage in appeals. All statistics include 95% confidence intervals.
 
@@ -76,7 +76,7 @@ After analyzing every word in 11,430 tribunal decisions from 2020-2026, we've id
 - **Suggests (interpretation):** May indicate template-based decision-making or widespread training practices
 - **Cannot prove:** Deliberate coordination between decision-makers (would require internal communications)
 
-**Read the full investigative report:** [WSIB Statistical Pattern Analysis (2026-04-15)](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+**Read the full investigative report:** [WSIB Statistical Pattern Analysis (2026-04-15)](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
 
 ---
 
@@ -789,16 +789,16 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 ## Related Reading
 
 **Previous 3mpwrApp Research:**
-- [WSIB Statistical Pattern Analysis](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Full report with key statistical signals
-- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
-- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Our data collection methodology
+- [WSIB Statistical Pattern Analysis](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Full report with key statistical signals
+- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
+- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Our data collection methodology
 
 **Full Documentation:**
 - [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document with all findings
 
 **Interactive Tools:**
-- [Research Hub](https://3mpwrapp.pages.dev/research/) - Visualization, knowledge base, and appeal templates
-- [WSIB Denial Network Visualization](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore keyword co-occurrence patterns
+- [Research Hub](https://3mpwrapp.ca/research/) - Visualization, knowledge base, and appeal templates
+- [WSIB Denial Network Visualization](https://3mpwrapp.ca/wsib-denial-network-visualization.html) - Explore keyword co-occurrence patterns
 
 ---
 

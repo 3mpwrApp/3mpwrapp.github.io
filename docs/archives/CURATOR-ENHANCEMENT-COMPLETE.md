@@ -80,7 +80,7 @@ across Canada
 Today's Top Stories:
 [stories...]
 
-🔗 Visit: https://3mpwrapp.pages.dev
+🔗 Visit: https://3mpwrapp.ca
 
 #Accessibility #DisabilityRights #DisabilityBenefits #News #Canada
 ```

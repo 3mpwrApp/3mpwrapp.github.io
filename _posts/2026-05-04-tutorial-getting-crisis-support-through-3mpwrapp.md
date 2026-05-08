@@ -32,7 +32,7 @@ Every crisis resource in the app is pre-loaded to device memory. Network failure
 - Offline availability means help is there even when the network is not
 ---
 ## Ready to Try It?
-1. **Download 3mpwrApp** a [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)
+1. **Download 3mpwrApp** a [3mpwrapp.pages.dev](https://3mpwrapp.ca/)
 2. **Sign up or explore as guest** a no commitment needed
 3. **Find this feature** a search or browse main navigation
 ---

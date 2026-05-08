@@ -479,7 +479,7 @@ Document ALL repetitive wrist activities:
 - [Chronic Pain Claims](chronic-pain-claims.md) - If wrist injury leads to CRPS
 
 **Research:**
-- [WSIB Exposed: 8 Smoking Guns](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+- [WSIB Exposed: 8 Smoking Guns](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
 
 ---
 

@@ -193,14 +193,14 @@ All 9 feeds now working perfectly:
 ## 🎯 **WHAT YOU CAN DO NOW**
 
 ### **View New Blog Posts:**
-Visit: `https://3mpwrapp.pages.dev/blog`
+Visit: `https://3mpwrapp.ca/blog`
 
 ### **Subscribe to Updates:**
-- RSS Feed: `https://3mpwrapp.pages.dev/feed.xml`
+- RSS Feed: `https://3mpwrapp.ca/feed.xml`
 - Subscribe with: Feedly, Inoreader, or any RSS reader
 
 ### **Access JSON API:**
-URL: `https://3mpwrapp.pages.dev/public/curation-latest.json`
+URL: `https://3mpwrapp.ca/public/curation-latest.json`
 
 ### **Manual Testing:**
 ```bash

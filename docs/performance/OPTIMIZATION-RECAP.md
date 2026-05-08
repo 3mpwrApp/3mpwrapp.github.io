@@ -77,11 +77,11 @@
 ## ⏱️ NEXT STEPS
 
 ### **1. Wait for Cloudflare Pages Rebuild (2-3 minutes)**
-Site is automatically rebuilding at: https://3mpwrapp.pages.dev
+Site is automatically rebuilding at: https://3mpwrapp.ca
 
 ### **2. Run Lighthouse Audit**
 ```bash
-lighthouse https://3mpwrapp.pages.dev --view
+lighthouse https://3mpwrapp.ca --view
 ```
 
 ### **3. Verify All Functionality**

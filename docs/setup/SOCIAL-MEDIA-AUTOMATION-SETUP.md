@@ -190,7 +190,7 @@ Each post includes:
 - 📰 Date and story count
 - 🌟 Random app feature highlight
 - 📋 Top 2-5 curated stories with links
-- 🔗 Link to https://3mpwrapp.pages.dev
+- 🔗 Link to https://3mpwrapp.ca
 - 🏷️ Hashtags: #Accessibility #DisabilityRights #DisabilityBenefits #News #Canada
 
 **Example Post:**
@@ -209,7 +209,7 @@ https://example.com/story1
 2. Accessible Canada Act Enforcement Begins
 https://example.com/story2
 
-🔗 Visit: https://3mpwrapp.pages.dev
+🔗 Visit: https://3mpwrapp.ca
 
 #Accessibility #DisabilityRights #DisabilityBenefits #News #Canada
 ```

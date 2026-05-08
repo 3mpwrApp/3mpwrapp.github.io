@@ -10,7 +10,7 @@
 
 ### Issues Identified
 
-1. **Invalid Link**: `https://3mpwrapp.pages.dev/curation-latest.json`
+1. **Invalid Link**: `https://3mpwrapp.ca/curation-latest.json`
    - File located in `/public/` folder (not deployed)
    - Generated 404 errors when users clicked social media posts
    
@@ -26,12 +26,12 @@
 
 **Before**:
 ```javascript
-let finalPost = `🔗 See full curation:\nhttps://3mpwrapp.pages.dev/curation-latest.json\n\n#news #curation #accessibility #disability #workers`;
+let finalPost = `🔗 See full curation:\nhttps://3mpwrapp.ca/curation-latest.json\n\n#news #curation #accessibility #disability #workers`;
 ```
 
 **After**:
 ```javascript
-let finalPost = `🔗 Read more stories & resources:\nhttps://3mpwrapp.pages.dev/\n📖 User Guide: https://3mpwrapp.pages.dev/user-guide/\n\n#news #curation #accessibility #disability #workers`;
+let finalPost = `🔗 Read more stories & resources:\nhttps://3mpwrapp.ca/\n📖 User Guide: https://3mpwrapp.ca/user-guide/\n\n#news #curation #accessibility #disability #workers`;
 ```
 
 **Changes**:
@@ -47,12 +47,12 @@ let finalPost = `🔗 Read more stories & resources:\nhttps://3mpwrapp.pages.dev
 
 **Before**:
 ```javascript
-post += `📖 Full User Guide: https://3mpwrapp.pages.dev/user-guide\n`;
+post += `📖 Full User Guide: https://3mpwrapp.ca/user-guide\n`;
 ```
 
 **After**:
 ```javascript
-post += `📖 Full User Guide: https://3mpwrapp.pages.dev/user-guide/\n`;
+post += `📖 Full User Guide: https://3mpwrapp.ca/user-guide/\n`;
 ```
 
 **Fix 2 - Bluesky Thread Final Post**:
@@ -61,7 +61,7 @@ post += `📖 Full User Guide: https://3mpwrapp.pages.dev/user-guide/\n`;
 ```javascript
 const finalPost = `✨ That's ${topItems.length}/${content.count} curated stories!\n\n` +
                  `Visit 3mpwr App for all stories, resources & benefits navigator:\n` +
-                 `https://3mpwrapp.pages.dev/\n\n` +
+                 `https://3mpwrapp.ca/\n\n` +
                  `#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
 ```
 
@@ -69,8 +69,8 @@ const finalPost = `✨ That's ${topItems.length}/${content.count} curated storie
 ```javascript
 const finalPost = `✨ That's ${topItems.length}/${content.count} curated stories!\n\n` +
                  `Visit 3mpwrApp for all stories, resources & benefits navigator:\n` +
-                 `🔗 https://3mpwrapp.pages.dev/\n` +
-                 `📖 User Guide: https://3mpwrapp.pages.dev/user-guide/\n\n` +
+                 `🔗 https://3mpwrapp.ca/\n` +
+                 `📖 User Guide: https://3mpwrapp.ca/user-guide/\n\n` +
                  `#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
 ```
 
@@ -85,12 +85,12 @@ const finalPost = `✨ That's ${topItems.length}/${content.count} curated storie
 
 **Before**:
 ```javascript
-const url = 'https://3mpwrapp.pages.dev/user-guide';
+const url = 'https://3mpwrapp.ca/user-guide';
 ```
 
 **After**:
 ```javascript
-const url = 'https://3mpwrapp.pages.dev/user-guide/';
+const url = 'https://3mpwrapp.ca/user-guide/';
 ```
 
 **Changes**:
@@ -102,13 +102,13 @@ const url = 'https://3mpwrapp.pages.dev/user-guide/';
 
 ### Valid URLs Confirmed
 
-- ✅ `https://3mpwrapp.pages.dev/` - Homepage (200 OK)
-- ✅ `https://3mpwrapp.pages.dev/user-guide/` - User Guide (200 OK)
+- ✅ `https://3mpwrapp.ca/` - Homepage (200 OK)
+- ✅ `https://3mpwrapp.ca/user-guide/` - User Guide (200 OK)
 - ✅ All social media scripts now use valid, accessible URLs
 
 ### Removed Invalid URLs
 
-- ❌ `https://3mpwrapp.pages.dev/curation-latest.json` (404) - REMOVED
+- ❌ `https://3mpwrapp.ca/curation-latest.json` (404) - REMOVED
 - ❌ `/user-guide` (without trailing slash) - FIXED with trailing slash
 
 ---

@@ -1,19 +1,19 @@
 # Calendar Integration Complete ✅
 
 **Date:** November 5, 2025  
-**Page Updated:** `/events/index.md` → https://3mpwrapp.pages.dev/events/
+**Page Updated:** `/events/index.md` → https://3mpwrapp.ca/events/
 
 ---
 
 ## 🎉 What Was Added
 
-The events page at https://3mpwrapp.pages.dev/events/ now includes **full calendar integration** based on the Calendar Integration Guide from the 3mpwrApp.
+The events page at https://3mpwrapp.ca/events/ now includes **full calendar integration** based on the Calendar Integration Guide from the 3mpwrApp.
 
 ### ✨ New Features
 
 #### 1. **Prominent Calendar Feed Banner** (Top of page)
 - Eye-catching gradient banner announcing calendar feed availability
-- Displays the ICS feed URL prominently: `https://3mpwrapp.pages.dev/events.ics`
+- Displays the ICS feed URL prominently: `https://3mpwrapp.ca/events.ics`
 - Shows total event count (131+)
 - Lists what's included (user events, awareness days, holidays, etc.)
 - Direct "Subscribe Now" button linking to instructions
@@ -125,8 +125,8 @@ Bookmark-friendly reference card with:
 
 ## 🔗 Key URLs
 
-- **Events Page:** https://3mpwrapp.pages.dev/events/
-- **Calendar Feed:** https://3mpwrapp.pages.dev/events.ics
+- **Events Page:** https://3mpwrapp.ca/events/
+- **Calendar Feed:** https://3mpwrapp.ca/events.ics
 - **Repository:** https://github.com/3mpowrApp/3mpwrapp.github.io
 
 ---
@@ -134,7 +134,7 @@ Bookmark-friendly reference card with:
 ## 📋 Technical Details
 
 ### ICS Feed
-- **URL:** `https://3mpwrapp.pages.dev/events.ics`
+- **URL:** `https://3mpwrapp.ca/events.ics`
 - **Format:** iCalendar (.ics)
 - **Size:** ~48 KB
 - **Events:** 131+ (user events + awareness days + holidays)
@@ -269,7 +269,7 @@ All new sections are mobile-friendly:
 ## ✅ Verification Checklist
 
 Before announcing:
-- [ ] Calendar feed URL works: https://3mpwrapp.pages.dev/events.ics
+- [ ] Calendar feed URL works: https://3mpwrapp.ca/events.ics
 - [ ] ICS file contains events (not empty)
 - [ ] All accordion sections expand/collapse properly
 - [ ] Gradient banner displays correctly

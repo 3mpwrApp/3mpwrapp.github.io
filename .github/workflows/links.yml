@@ -40,7 +40,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --base https://3mpwrapp.pages.dev
+            --base https://3mpwrapp.ca
             --config lychee.toml
             ./_site
         env:

@@ -37,9 +37,9 @@ featured: true
 
 **TL;DR:** **PROVABLE FACTS:** 11,430 tribunal decisions (2020-2026) represent about 1,905/year, and in CanLII keyword/API data 91.8% do not include explicit outcome labels. **EXTRAPOLATION FROM PEER-REVIEWED RESEARCH:** Institute for Work & Health (15-50% injuries unreported) + Public Health Ontario (1 in 20 workers injured annually) + Ontario workforce (7.5M) = **estimated 1.14-2.29 MILLION workers** not reaching tribunal-level adjudication. **CONFIDENCE INTERVALS:** Range shows uncertainty. **WHAT'S PROVABLE:** keyword-label limitations (91.8%), published under-reporting research (IWH), tribunal volumes (CanLII). **WHAT'S EXTRAPOLATED:** Estimated count of cases not reaching tribunal. Full methodology + alternative estimates below.
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our analysis uses keyword patterns where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our analysis uses keyword patterns where official outcomes aren't available.
 
-**Read previous investigation:**  [WSIB Statistical Pattern Analysis (2026-04-15)](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+**Read previous investigation:**  [WSIB Statistical Pattern Analysis (2026-04-15)](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
 
 ---
 
@@ -783,17 +783,17 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 ## Related Reading
 
 **Previous 3mpwrApp Research:**
-- [WSIB Statistical Pattern Analysis](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Pattern findings from 11,430 cases
-- [The Hidden Language of Denial: WSIB Keyword Decoder](https://3mpwrapp.pages.dev/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode your denial letter
-- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built this database
-- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
+- [WSIB Statistical Pattern Analysis](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Pattern findings from 11,430 cases
+- [The Hidden Language of Denial: WSIB Keyword Decoder](https://3mpwrapp.ca/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode your denial letter
+- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built this database
+- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
 
 **Full Documentation:**
 - [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document
 
 **Interactive Tools:**
-- [Research Hub](https://3mpwrapp.pages.dev/research/) - Visualization, knowledge base (16 injury guides), and 50+ appeal templates
-- [WSIB Denial Network Visualization](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore co-occurrence patterns
+- [Research Hub](https://3mpwrapp.ca/research/) - Visualization, knowledge base (16 injury guides), and 50+ appeal templates
+- [WSIB Denial Network Visualization](https://3mpwrapp.ca/wsib-denial-network-visualization.html) - Explore co-occurrence patterns
 
 ---
 

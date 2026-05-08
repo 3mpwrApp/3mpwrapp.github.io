@@ -110,7 +110,7 @@ Lightweight, privacy-focused alternative to Google Analytics.
    - Sign up (free tier available)
 
 2. **Create Site**
-   - Site URL: https://3mpwrapp.pages.dev
+   - Site URL: https://3mpwrapp.ca
    - Get tracking code
 
 3. **Add Tracking Script**
@@ -141,7 +141,7 @@ For comprehensive user behavior analysis.
    - Go to: https://analytics.google.com/
    - Create new property: `3mpwrApp-Website`
    - Add data stream: Web
-   - URL: https://3mpwrapp.pages.dev
+   - URL: https://3mpwrapp.ca
 
 2. **Get Measurement ID**
    - Format: `G-XXXXXXXXXX`
@@ -176,17 +176,17 @@ For comprehensive user behavior analysis.
 
 2. **Create HTTP Monitor**
    - **Name:** 3mpwrApp Homepage
-   - **URL:** https://3mpwrapp.pages.dev
+   - **URL:** https://3mpwrapp.ca
    - **Interval:** 5 minutes
    - **Timeout:** 30 seconds
    - **Alert contacts:** Your email
 
 3. **Add More Monitors for Key Pages**
-   - Homepage: https://3mpwrapp.pages.dev
-   - About: https://3mpwrapp.pages.dev/about
-   - Features: https://3mpwrapp.pages.dev/features
-   - Blog: https://3mpwrapp.pages.dev/blog
-   - Contact: https://3mpwrapp.pages.dev/contact
+   - Homepage: https://3mpwrapp.ca
+   - About: https://3mpwrapp.ca/about
+   - Features: https://3mpwrapp.ca/features
+   - Blog: https://3mpwrapp.ca/blog
+   - Contact: https://3mpwrapp.ca/contact
 
 4. **Setup Alerts**
    - Email notification on down
@@ -200,7 +200,7 @@ For comprehensive user behavior analysis.
    - Sign up (free tier: 20 checks)
 
 2. **Create Website Check**
-   - **URL:** https://3mpwrapp.pages.dev
+   - **URL:** https://3mpwrapp.ca
    - **Period:** 5 minutes
    - **Grace Period:** 1 minute
 

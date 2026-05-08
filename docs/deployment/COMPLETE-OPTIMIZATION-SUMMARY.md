@@ -278,7 +278,7 @@ node scripts/add-image-dimensions.js
 ### **All Changes Deployed:**
 - ✅ 10 commits pushed to GitHub
 - ✅ Cloudflare Pages auto-rebuild triggered
-- ✅ Production site updated: https://3mpwrapp.pages.dev
+- ✅ Production site updated: https://3mpwrapp.ca
 - ✅ All minified assets served
 - ✅ All WebP images available
 - ✅ CI workflows updated

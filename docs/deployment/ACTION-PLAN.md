@@ -61,9 +61,9 @@
 1. Go to https://uptimerobot.com
 2. Sign up (free, no card)
 3. Add monitors:
-   - `https://3mpwrapp.pages.dev`
-   - `https://3mpwrapp.pages.dev/user-guide/`
-   - `https://3mpwrapp.pages.dev/features/`
+   - `https://3mpwrapp.ca`
+   - `https://3mpwrapp.ca/user-guide/`
+   - `https://3mpwrapp.ca/features/`
 4. Set alert email
 5. Create public status page: `https://status.3mpwrapp.com` (free subdomain)
 
@@ -73,7 +73,7 @@
 1. Go to https://search.google.com/search-console
 2. Add property: `3mpwrapp.pages.dev`
 3. Verify via DNS (Cloudflare makes this easy)
-4. Submit sitemap: `https://3mpwrapp.pages.dev/sitemap.xml`
+4. Submit sitemap: `https://3mpwrapp.ca/sitemap.xml`
 
 **Result:** Track how people find you, optimize for search, see which content performs.
 
@@ -109,7 +109,7 @@
 1. Create account: `@3mpwrApp`
 2. Profile:
    - Bio: "Free, accessible platform empowering injured workers & disability community. 100% open source. Built for all abilities. 🦾 #DisabilityRights"
-   - Link: `https://3mpwrapp.pages.dev`
+   - Link: `https://3mpwrapp.ca`
    - Header image: Create in Canva (free) - show app screenshot
 3. First 3 tweets:
    ```
@@ -257,7 +257,7 @@ community, it includes:
 • WCAG 2.2 AAA accessibility (screen reader tested)
 • Zero cost, no ads, no data collection
 
-Website: https://3mpwrapp.pages.dev
+Website: https://3mpwrapp.ca
 
 Would you be open to:
 1. Sharing this with your community (newsletter, social media)

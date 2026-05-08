@@ -88,13 +88,13 @@ Added comprehensive button CSS with proper accessibility features:
 
 **Quick Mode (7 Primary Pages):**
 ```
-✅ https://3mpwrapp.pages.dev/?no-modal=1                  - 0 violations
-✅ https://3mpwrapp.pages.dev/about?no-modal=1             - 0 violations (FIXED)
-✅ https://3mpwrapp.pages.dev/features?no-modal=1          - 0 violations
-✅ https://3mpwrapp.pages.dev/user-guide?no-modal=1        - 0 violations
-✅ https://3mpwrapp.pages.dev/blog?no-modal=1              - 0 violations
-✅ https://3mpwrapp.pages.dev/contact?no-modal=1           - 0 violations
-✅ https://3mpwrapp.pages.dev/privacy?no-modal=1           - 0 violations
+✅ https://3mpwrapp.ca/?no-modal=1                  - 0 violations
+✅ https://3mpwrapp.ca/about?no-modal=1             - 0 violations (FIXED)
+✅ https://3mpwrapp.ca/features?no-modal=1          - 0 violations
+✅ https://3mpwrapp.ca/user-guide?no-modal=1        - 0 violations
+✅ https://3mpwrapp.ca/blog?no-modal=1              - 0 violations
+✅ https://3mpwrapp.ca/contact?no-modal=1           - 0 violations
+✅ https://3mpwrapp.ca/privacy?no-modal=1           - 0 violations
 ```
 
 **Standards Verified:**
@@ -114,7 +114,7 @@ Added comprehensive button CSS with proper accessibility features:
 - `about.md` - Removed inline button styles
 - `styles.css` - Added comprehensive button CSS with focus states
 
-**Deployed to:** https://3mpwrapp.pages.dev  
+**Deployed to:** https://3mpwrapp.ca  
 **Deployment Status:** ✅ Complete (Cloudflare Pages)
 
 ---

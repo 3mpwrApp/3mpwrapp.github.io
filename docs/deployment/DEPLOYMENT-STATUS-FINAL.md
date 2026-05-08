@@ -171,7 +171,7 @@ c4d8cae (HEAD -> main, origin/main) docs: add commit and sync completion summary
 
 ### Immediate (Monitor Deployment)
 1. GitHub Pages automatic build (2-5 minutes)
-2. Site deployment at https://3mpwrapp.pages.dev/
+2. Site deployment at https://3mpwrapp.ca/
 3. Verify W3C validation: https://validator.w3.org/
 
 ### Testing (After Deployment)

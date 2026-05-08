@@ -194,7 +194,7 @@ Links to related docs
 
 ## 📞 Contact
 
-**Website:** https://3mpwrapp.pages.dev  
+**Website:** https://3mpwrapp.ca  
 **Repository:** https://github.com/3mpwrApp/3mpwrapp.github.io  
 **Issues:** GitHub Issues  
 

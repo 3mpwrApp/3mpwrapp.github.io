@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Feature Spotlight: 3mpwrApp Technical Foundation: 721 Tests Passing"
 date: 2026-04-15 00:00:00 +0000
@@ -11,7 +11,7 @@ excerpt: 3mpwrApp built on production-grade foundation with comprehensive securi
 - **Complete offline-first architecture with AsyncStorage**
 - **XSS and SQL injection prevention mechanisms in place**
 - **0 ESLint errors, 0 TypeScript errors in codebase**
-- **Currently accepting beta testers: https://3mpwrapp.pages.dev/app-waitlist** --- ## How It Works Here are real examples of how you can use 3mpwrApp Technical Foundation: 721 Tests Passing: 1. Evidence Locker designed with bank-level AES-256-GCM encryption
+- **Currently accepting beta testers: https://3mpwrapp.ca/app-waitlist** --- ## How It Works Here are real examples of how you can use 3mpwrApp Technical Foundation: 721 Tests Passing: 1. Evidence Locker designed with bank-level AES-256-GCM encryption
 2. All features architected to work offline without internet
 3. Screen reader compatibility built-in (VoiceOver, TalkBack support)
 4. Simple Mode available (reduces interface to 5 core features)

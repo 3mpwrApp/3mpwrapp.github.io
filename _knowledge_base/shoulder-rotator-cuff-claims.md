@@ -626,9 +626,9 @@ A: **Limited options:**
 - [Shoulder Injury Appeal Template](../templates/shoulder-injury-appeal.md) - Fill-in-blank letter
 
 **Research & Advocacy:**
-- [WSIB Exposed: Statistical Evidence](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 8 smoking guns from 11,430 cases
-- [WSIB Keyword Decoder](https://3mpwrapp.pages.dev/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode denial letters
-- [Full WSIB System Analysis](https://3mpwrapp.pages.dev/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026) - 45,000-word master document
+- [WSIB Exposed: Statistical Evidence](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 8 smoking guns from 11,430 cases
+- [WSIB Keyword Decoder](https://3mpwrapp.ca/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode denial letters
+- [Full WSIB System Analysis](https://3mpwrapp.ca/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026) - 45,000-word master document
 
 ---
 

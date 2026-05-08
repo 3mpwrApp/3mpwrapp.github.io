@@ -34,7 +34,7 @@ All 4 content types ARE generating correctly:
 
 #### A. Link Issues
 - ❌ Some social posts may have incorrect/broken links
-- ❌ Links don't consistently point to https://3mpwrapp.pages.dev/blog/
+- ❌ Links don't consistently point to https://3mpwrapp.ca/blog/
 - ⚠️ Jekyll permalink format confusion in scripts
 
 **Root Cause:**
@@ -65,7 +65,7 @@ All 4 content types ARE generating correctly:
 3. Updated `scripts/share-to-social.js` to use correct blog URL
 4. Ensured all scripts reference `siteConfig.url/blog/`
 
-**Result:** All social media posts now link to https://3mpwrapp.pages.dev/blog/
+**Result:** All social media posts now link to https://3mpwrapp.ca/blog/
 
 ### Fix #2: Improve User-Friendly Section Names ✅
 
@@ -98,7 +98,7 @@ Top stories:
 • [Story 2]
 • [Story 3]
 
-Read more: https://3mpwrapp.pages.dev/blog/#curated-daily
+Read more: https://3mpwrapp.ca/blog/#curated-daily
 
 #DisabilityRights #Accessibility #Canada
 ```
@@ -122,25 +122,25 @@ Read more: https://3mpwrapp.pages.dev/blog/#curated-daily
 ### Section 1: 📰 Daily News Highlights
 **What:** Curated disability rights & accessibility news from 50+ trusted sources
 **When:** Updated daily at 9 AM UTC
-**Link:** https://3mpwrapp.pages.dev/blog/#curated-daily
+**Link:** https://3mpwrapp.ca/blog/#curated-daily
 **Tags:** `highlights`
 
 ### Section 2: ✨ Feature Articles
 **What:** In-depth spotlights on 3mpwrApp features and tools
 **When:** New article daily at 10 AM UTC
-**Link:** https://3mpwrapp.pages.dev/blog/#feature-articles
+**Link:** https://3mpwrapp.ca/blog/#feature-articles
 **Tags:** `features`, `spotlight`
 
 ### Section 3: 📅 Weekly Recaps
 **What:** Comprehensive summary of the week's updates
 **When:** Every Monday at 9 AM UTC
-**Link:** https://3mpwrapp.pages.dev/blog/#weekly-recaps
+**Link:** https://3mpwrapp.ca/blog/#weekly-recaps
 **Tags:** `weekly`, `updates`
 
 ### Section 4: 💬 Community Updates
 **What:** Announcements, stories, and updates from the 3mpwr community
 **When:** Ad-hoc (manual posts)
-**Link:** https://3mpwrapp.pages.dev/blog/#blog-posts
+**Link:** https://3mpwrapp.ca/blog/#blog-posts
 **Tags:** Various
 
 ---
@@ -150,17 +150,17 @@ Read more: https://3mpwrapp.pages.dev/blog/#curated-daily
 ### Daily at 9 AM UTC - Curated News
 **Platform:** Mastodon, Bluesky
 **Content:** Top 3 news stories + blog link
-**Link:** https://3mpwrapp.pages.dev/blog/#curated-daily
+**Link:** https://3mpwrapp.ca/blog/#curated-daily
 
 ### Daily at 10 AM UTC - Feature Article
 **Platform:** Mastodon, Bluesky
 **Content:** Feature description + article link
-**Link:** https://3mpwrapp.pages.dev/blog/YYYY/MM/DD/feature-spotlight-[name]/
+**Link:** https://3mpwrapp.ca/blog/YYYY/MM/DD/feature-spotlight-[name]/
 
 ### Weekly (Mondays) at 9 AM UTC - Weekly Recap
 **Platform:** Mastodon, Bluesky
 **Content:** Week summary + recap link
-**Link:** https://3mpwrapp.pages.dev/blog/YYYY/MM/DD/weekly-update-week-[NN]/
+**Link:** https://3mpwrapp.ca/blog/YYYY/MM/DD/weekly-update-week-[NN]/
 
 ---
 

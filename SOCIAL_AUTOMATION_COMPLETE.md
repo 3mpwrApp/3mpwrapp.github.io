@@ -97,7 +97,7 @@ cat public/social-queue.json
       "feature": "3 Flywheels of Change",
       "content": "🔄 The 3 Flywheels of Change...",
       "hashtags": ["DisabilityJustice", "DataForGood"],
-      "url": "https://3mpwrapp.pages.dev/#flywheels",
+      "url": "https://3mpwrapp.ca/#flywheels",
       "posted": false
     }
   ],

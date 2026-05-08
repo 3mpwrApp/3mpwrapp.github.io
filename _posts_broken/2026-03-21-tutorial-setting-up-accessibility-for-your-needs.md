@@ -53,7 +53,7 @@ Everything you configure saves automatically. Switch between Simple Mode and ful
 
 ## Ready to Try It?
 
-1. **Download 3mpwrApp** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)
+1. **Download 3mpwrApp** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â [3mpwrapp.pages.dev](https://3mpwrapp.ca/)
 2. **Sign up or explore as guest** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no commitment needed
 3. **Find this feature** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â search or browse main navigation
 

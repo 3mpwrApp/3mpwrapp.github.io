@@ -34,7 +34,7 @@ Your site deployed successfully, but Cloudflare's global CDN has cached the old 
 ### Option C: Incognito/Private Mode
 
 1. Open incognito window: `Ctrl + Shift + N` (Chrome/Edge) or `Ctrl + Shift + P` (Firefox)
-2. Go to: https://3mpwrapp.pages.dev/
+2. Go to: https://3mpwrapp.ca/
 3. Should see the full site!
 
 ---
@@ -67,9 +67,9 @@ Your site deployed successfully, but Cloudflare's global CDN has cached the old 
 Add `?v=2` to the end of URL to bypass cache:
 
 **Try these:**
-- https://3mpwrapp.pages.dev/?v=2
-- https://3mpwrapp.pages.dev/?nocache
-- https://3mpwrapp.pages.dev/?timestamp=123456
+- https://3mpwrapp.ca/?v=2
+- https://3mpwrapp.ca/?nocache
+- https://3mpwrapp.ca/?timestamp=123456
 
 This forces browser to fetch fresh version.
 
@@ -89,7 +89,7 @@ The new version IS deployed, just cached globally.
 ## Check If It's Really Deployed
 
 ### Test 1: View Source
-1. Right-click on https://3mpwrapp.pages.dev/
+1. Right-click on https://3mpwrapp.ca/
 2. Click "View Page Source"
 3. Look for: `<title>3mpowr App | Home</title>`
 4. Search for: `Welcome to 3mpowr App`
@@ -104,9 +104,9 @@ The new version IS deployed, just cached globally.
 
 ### Test 3: Test Specific Page
 Try a page that definitely has content:
-- https://3mpwrapp.pages.dev/about/
-- https://3mpwrapp.pages.dev/features/
-- https://3mpwrapp.pages.dev/user-guide/
+- https://3mpwrapp.ca/about/
+- https://3mpwrapp.ca/features/
+- https://3mpwrapp.ca/user-guide/
 
 If these work, homepage might have specific issue.
 
@@ -225,7 +225,7 @@ If none of the above works, provide this info:
 
 Based on your situation, **try these in order:**
 
-1. ✅ **Incognito mode** (Ctrl+Shift+N) → Visit https://3mpwrapp.pages.dev/
+1. ✅ **Incognito mode** (Ctrl+Shift+N) → Visit https://3mpwrapp.ca/
    - If this works: It's just browser cache!
    - Clear your browser cache and you're done
 

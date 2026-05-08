@@ -382,7 +382,7 @@ LAUNCH-READINESS-DASHBOARD.md
 ```
 
 ### Key URLs
-- **Site:** https://3mpwrapp.pages.dev
+- **Site:** https://3mpwrapp.ca
 - **GitHub:** https://github.com/3mpwrApp/3mpwrapp.github.io
 - **GitHub Actions:** https://github.com/3mpwrApp/3mpwrapp.github.io/actions
 

@@ -579,7 +579,7 @@ We may update this policy to reflect:
 - **Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
 - **Organization:** 3mpwrApp
 - **Location:** Toronto, ON, Canada
-- **Website:** [https://3mpwrapp.pages.dev](https://3mpwrapp.pages.dev)
+- **Website:** [https://3mpwrapp.ca](https://3mpwrapp.ca)
 
 For privacy-related questions, data requests, or security concerns, please contact us using the email above. We respond to all privacy inquiries within 48 hours and data rights requests within 30 days (or as required by applicable law).
 
@@ -722,7 +722,7 @@ This policy reflects our actual technical implementation. You can verify our pri
         <!-- PDF download removed - generate if needed -->
   </div>
     <a href="/print/privacy" class="format-link">🖨️ Print-friendly version</a>
-    <a href="mailto:?subject=3mpwrApp Privacy Policy&body=Check out the privacy policy: https://3mpwrapp.pages.dev/privacy/" class="format-link">📧 Email to yourself</a>
+    <a href="mailto:?subject=3mpwrApp Privacy Policy&body=Check out the privacy policy: https://3mpwrapp.ca/privacy/" class="format-link">📧 Email to yourself</a>
   </p>
 </div>
 

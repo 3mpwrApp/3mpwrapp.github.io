@@ -140,8 +140,8 @@ style-src 'self';
 Contact: mailto:empowrapp08162025@gmail.com
 Expires: 2026-10-27T00:00:00.000Z
 Preferred-Languages: en, fr
-Canonical: https://3mpwrapp.pages.dev/.well-known/security.txt
-Policy: https://3mpwrapp.pages.dev/privacy/
+Canonical: https://3mpwrapp.ca/.well-known/security.txt
+Policy: https://3mpwrapp.ca/privacy/
 ```
 
 **Purpose**:
@@ -337,7 +337,7 @@ Policy: https://3mpwrapp.pages.dev/privacy/
 **CSP Validation**:
 ```bash
 # Test CSP compliance
-curl -I https://3mpwrapp.pages.dev/ | grep -i content-security-policy
+curl -I https://3mpwrapp.ca/ | grep -i content-security-policy
 ```
 
 **Expected**:
@@ -348,13 +348,13 @@ Content-Security-Policy: default-src 'self'; script-src 'self' https://www.googl
 **Security.txt Validation**:
 ```bash
 # Verify security.txt exists and is valid
-curl https://3mpwrapp.pages.dev/.well-known/security.txt
+curl https://3mpwrapp.ca/.well-known/security.txt
 ```
 
 **HSTS Validation**:
 ```bash
 # Check HSTS header
-curl -I https://3mpwrapp.pages.dev/ | grep -i strict-transport-security
+curl -I https://3mpwrapp.ca/ | grep -i strict-transport-security
 ```
 
 **Expected**:
@@ -383,7 +383,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 - [ ] Verify all styles apply correctly
 
 **Security.txt**:
-- [ ] Visit https://3mpwrapp.pages.dev/.well-known/security.txt
+- [ ] Visit https://3mpwrapp.ca/.well-known/security.txt
 - [ ] Verify file is accessible
 - [ ] Check expiry date (should be 2026-10-27)
 - [ ] Validate contact email

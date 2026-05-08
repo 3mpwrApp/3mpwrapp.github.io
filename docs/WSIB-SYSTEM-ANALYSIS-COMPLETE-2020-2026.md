@@ -1723,6 +1723,6 @@ This report is our foundation.
 
 ---
 
-*For questions, corrections, or to contribute additional data/stories: [Contact 3mpwrApp](https://3mpwrapp.pages.dev/contact)*
+*For questions, corrections, or to contribute additional data/stories: [Contact 3mpwrApp](https://3mpwrapp.ca/contact)*
 
 *Last Updated: April 15, 2026*

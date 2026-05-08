@@ -2,7 +2,7 @@
 
 ## ✅ Current Status
 
-- **API Endpoint**: ✅ Live at `https://3mpwrapp.pages.dev/api/submissions`
+- **API Endpoint**: ✅ Live at `https://3mpwrapp.ca/api/submissions`
 - **Discord Webhook**: ✅ Configured (receiving notifications)
 - **KV Namespace**: ✅ Created (`SUBMISSIONS_KV`)
 - **D1 Database**: ✅ Created and schema applied (`3mpwrapp-submissions`)
@@ -84,7 +84,7 @@ $body = @{
     submittedAt = [long](Get-Date -UFormat %s) * 1000
 } | ConvertTo-Json -Depth 5
 
-Invoke-RestMethod -Uri 'https://3mpwrapp.pages.dev/api/submissions' `
+Invoke-RestMethod -Uri 'https://3mpwrapp.ca/api/submissions' `
     -Method POST `
     -ContentType 'application/json' `
     -Body $body

@@ -230,7 +230,7 @@
 **Personalization needed:**
 - [ ] Post 2A: Replace `[YEAR]` and `[WSIB/ODSP/CPP-D]` with YOUR story
 - [ ] All CanLII discoveries: Update with your actual findings (or use placeholders)
-- [ ] All feature posts: Verify URLs work (https://3mpwrapp.pages.dev/features/...)
+- [ ] All feature posts: Verify URLs work (https://3mpwrapp.ca/features/...)
 
 **Automation setup (if desired):**
 - [ ] Choose automation option (manual, queue, or Buffer)

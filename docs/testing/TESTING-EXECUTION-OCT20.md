@@ -31,13 +31,13 @@ Test 7 pages on 5 browsers = **35 tests**
 **Success Criteria:** 35/35 pass ✅
 
 ### 📄 PAGES TO TEST
-1. **Homepage** - https://3mpwrapp.pages.dev/
-2. **About** - https://3mpwrapp.pages.dev/about.md
-3. **Features** - https://3mpwrapp.pages.dev/features
-4. **Blog** - https://3mpwrapp.pages.dev/blog
-5. **User Guide** - https://3mpwrapp.pages.dev/user-guide.md
-6. **Privacy** - https://3mpwrapp.pages.dev/privacy.md
-7. **Accessibility** - https://3mpwrapp.pages.dev/accessibility.md
+1. **Homepage** - https://3mpwrapp.ca/
+2. **About** - https://3mpwrapp.ca/about.md
+3. **Features** - https://3mpwrapp.ca/features
+4. **Blog** - https://3mpwrapp.ca/blog
+5. **User Guide** - https://3mpwrapp.ca/user-guide.md
+6. **Privacy** - https://3mpwrapp.ca/privacy.md
+7. **Accessibility** - https://3mpwrapp.ca/accessibility.md
 
 ### 🌐 BROWSERS TO TEST
 1. Chrome (Desktop)
@@ -169,7 +169,7 @@ Execute 30+ security checks
 
 **1. SSL/TLS VERIFICATION (15 min)**
 ```
-☐ Go to https://3mpwrapp.pages.dev/
+☐ Go to https://3mpwrapp.ca/
 ☐ Check for green lock icon in address bar
 ☐ Click lock icon → "Certificate is valid"
 ☐ Test with: https://www.ssllabs.com/ssltest/analyze.html?d=3mpwrapp.pages.dev
@@ -196,7 +196,7 @@ Record score: [X]/100
 **3. CORS CONFIGURATION (20 min)**
 ```
 Steps:
-1. Open site in Chrome: https://3mpwrapp.pages.dev/
+1. Open site in Chrome: https://3mpwrapp.ca/
 2. Open DevTools (F12)
 3. Go to Network tab
 4. Reload page
@@ -392,7 +392,7 @@ Verify performance metrics
 **For EACH page (7 pages total):**
 
 ```
-1. Open page in Chrome: https://3mpwrapp.pages.dev/[page]
+1. Open page in Chrome: https://3mpwrapp.ca/[page]
 2. Press F12 to open DevTools
 3. Click "Lighthouse" tab (or ≡ menu → More tools → Lighthouse)
 4. Click "Analyze page load"
@@ -439,7 +439,7 @@ ADDITIONAL METRICS:
 
 ```
 1. Go to: https://www.webpagetest.org/
-2. Enter: https://3mpwrapp.pages.dev/
+2. Enter: https://3mpwrapp.ca/
 3. Click "Start Test"
 4. Wait for waterfall results
 5. Record:

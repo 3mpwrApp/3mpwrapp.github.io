@@ -290,9 +290,9 @@ node scripts/optimize-images.js
 ### **4. Performance Testing:**
 ```bash
 # Run Lighthouse audits
-lighthouse https://3mpwrapp.pages.dev --view
-lighthouse https://3mpwrapp.pages.dev/about --view
-lighthouse https://3mpwrapp.pages.dev/features --view
+lighthouse https://3mpwrapp.ca --view
+lighthouse https://3mpwrapp.ca/about --view
+lighthouse https://3mpwrapp.ca/features --view
 ```
 
 ---

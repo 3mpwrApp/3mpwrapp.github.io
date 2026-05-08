@@ -20,7 +20,7 @@ Updated the event-fetching code to use the Cloudflare Worker API endpoint:
 
 ```javascript
 // OLD
-const response = await fetch('https://3mpwrapp.pages.dev/api/events.json');
+const response = await fetch('https://3mpwrapp.ca/api/events.json');
 const events = await response.json();
 
 // NEW
@@ -259,7 +259,7 @@ The events page now integrates with:
 
 ### CORS Requirements
 Worker must allow requests from:
-- `https://3mpwrapp.pages.dev` (production)
+- `https://3mpwrapp.ca` (production)
 - `http://localhost:*` (development, optional)
 
 ### Firestore Rules
@@ -339,7 +339,7 @@ Before going live, verify:
 3. ✅ Commit changes: `git add . && git commit -m "Integrate real-time events calendar sync"`
 4. ✅ Push to GitHub: `git push origin main`
 5. ✅ Cloudflare Pages auto-deploys (usually < 2 minutes)
-6. ✅ Test live site at `https://3mpwrapp.pages.dev/events/`
+6. ✅ Test live site at `https://3mpwrapp.ca/events/`
 7. ✅ Subscribe to calendar feed from your phone
 8. ✅ Create test event in app and verify end-to-end
 

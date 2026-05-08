@@ -26,7 +26,7 @@ New section on About page: **"🇨🇦 Currently Serving Canada-Wide"**
 
 **Location**: About page, right after "Built with empathy..." section
 
-**Live**: https://3mpwrapp.pages.dev/about/
+**Live**: https://3mpwrapp.ca/about/
 
 ---
 
@@ -57,7 +57,7 @@ Navigation menu → Between "User Guide" and "Contact"
 - English: "Roadmap"
 - French: "Feuille de route"
 
-**URL**: https://3mpwrapp.pages.dev/roadmap/
+**URL**: https://3mpwrapp.ca/roadmap/
 
 ### To Verify:
 1. Hard refresh (Ctrl + Shift + R)
@@ -132,9 +132,9 @@ Just re-attach your new logo image (power button with hands design) in your next
 2. **For logo**: Re-attach your new logo image, and I'll save it + regenerate icons
 
 ### Testing After Cache Clear:
-- Visit: https://3mpwrapp.pages.dev
+- Visit: https://3mpwrapp.ca
 - Check navigation for "Roadmap" link
-- Visit: https://3mpwrapp.pages.dev/about/
+- Visit: https://3mpwrapp.ca/about/
 - See "🇨🇦 Currently Serving Canada-Wide" section
 - Click roadmap link to verify it works
 
@@ -143,8 +143,8 @@ Just re-attach your new logo image (power button with hands design) in your next
 ## 🚀 What's Live Now
 
 **Live URLs:**
-- About page: https://3mpwrapp.pages.dev/about/ (with Canada-wide section)
-- Roadmap page: https://3mpwrapp.pages.dev/roadmap/ (full global expansion plan)
+- About page: https://3mpwrapp.ca/about/ (with Canada-wide section)
+- Roadmap page: https://3mpwrapp.ca/roadmap/ (full global expansion plan)
 
 **In Navigation Menu** (after cache clear):
 ```
@@ -176,10 +176,10 @@ A: Clear your browser cache with Ctrl + Shift + R (hard refresh)
 A: Re-attach the image file here and I'll save it, or manually replace assets/empowrapp-logo.png
 
 **Q: Where is the Canada-wide info?**  
-A: About page, right after the first paragraphs: https://3mpwrapp.pages.dev/about/
+A: About page, right after the first paragraphs: https://3mpwrapp.ca/about/
 
 **Q: Is the roadmap page working?**  
-A: Yes! https://3mpwrapp.pages.dev/roadmap/ is live with full content
+A: Yes! https://3mpwrapp.ca/roadmap/ is live with full content
 
 ---
 

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Feature Spotlight: 3mpwrApp Production Release: 721 Tests Passing"
 date: 2026-03-14 00:00:00 +0000
@@ -11,7 +11,7 @@ excerpt: 3mpwrApp is 100% production ready with comprehensive security, accessib
 - **Complete offline-first support with AsyncStorage**
 - **XSS and SQL injection prevention confirmed**
 - **0 ESLint errors, 0 TypeScript errors**
-- **Join beta at https://3mpwrapp.pages.dev/app-waitlist** * * * ## How It Works Here are real examples of how you can use 3mpwrApp Production Release: 721 Tests Passing: 1. Use Evidence Locker with bank-level encryption
+- **Join beta at https://3mpwrapp.ca/app-waitlist** * * * ## How It Works Here are real examples of how you can use 3mpwrApp Production Release: 721 Tests Passing: 1. Use Evidence Locker with bank-level encryption
 2. Access all features offline without internet
 3. Navigate with screen readers (VoiceOver, TalkBack)
 4. Switch to Simple Mode on bad days (5 core features)

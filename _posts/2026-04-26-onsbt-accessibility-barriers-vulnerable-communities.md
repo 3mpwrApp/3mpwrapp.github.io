@@ -13,7 +13,7 @@ Analysis of 13,798 Ontario Social Benefits Tribunal (ONSBT) decisions reveals a 
 
 These barriers operate **before** the merits hearing even begins—in application completion, evidence gathering, prescribed professional access, and procedural compliance.
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 13,798 cases individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 13,798 cases individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
 
 ---
 

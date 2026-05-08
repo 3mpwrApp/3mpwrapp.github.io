@@ -251,7 +251,7 @@ node scripts/axe-check.js
 AXE_MODE=full node scripts/axe-check.js
 
 # Check specific page
-node scripts/axe-check-single.js https://3mpwrapp.pages.dev/about
+node scripts/axe-check-single.js https://3mpwrapp.ca/about
 ```
 
 ---

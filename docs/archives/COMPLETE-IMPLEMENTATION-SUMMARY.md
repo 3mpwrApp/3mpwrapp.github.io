@@ -304,7 +304,7 @@ All optimizations from OPTIMIZATION-RECOMMENDATIONS.md Week 2 completed:
 
 ### Technical:
 - **GitHub**: https://github.com/3mpowrApp/3mpwrapp.github.io
-- **Cloudflare**: https://3mpwrapp.pages.dev
+- **Cloudflare**: https://3mpwrapp.ca
 - **Email**: empowrapp08162025@gmail.com
 
 ---

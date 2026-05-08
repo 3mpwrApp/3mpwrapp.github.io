@@ -19,7 +19,7 @@ After March 31 presentation to Thunder Bay injured workers, we're launching a 12
 ✅ Auto-generated templates from winning strategies
 ✅ $0 cost to advocacy organizations
 
-Announcement: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+Announcement: https://3mpwrapp.ca/2026/04/01/3-flywheels-thunder-bay-presentation-success/
 
 #3Flywheels #CollectivePower #ThunderBay
 ```
@@ -43,7 +43,7 @@ WITH historical data: 30 minutes.
 
 Skip the cold start. Launch with institutional knowledge pre-loaded.
 
-📊 Full story: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+📊 Full story: https://3mpwrapp.ca/2026/04/01/3-flywheels-thunder-bay-presentation-success/
 
 #3Flywheels #CollectivePower #ThunderBay #WorkersRights #DisabilityJustice #CanLII
 ```
@@ -120,7 +120,7 @@ DATA SOVEREIGNTY = TRUST
 ✅ 60%+ template usage
 ✅ At least 1 campaign launched
 
-Full proposal: https://3mpwrapp.pages.dev/docs/partnerships/TBDIWSG_FLYWHEELS_PILOT_PROPOSAL
+Full proposal: https://3mpwrapp.ca/docs/partnerships/TBDIWSG_FLYWHEELS_PILOT_PROPOSAL
 
 9/ WHY THIS MATTERS BEYOND THUNDER BAY:
 
@@ -162,7 +162,7 @@ RECOMMENDATION: "Submit RFC + timeline → 92% success rate"
 📢 Worker? Share with your community
 💰 Supporter? Fund the mission
 
-🔗 Full story: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+🔗 Full story: https://3mpwrapp.ca/2026/04/01/3-flywheels-thunder-bay-presentation-success/
 
 13/ BOTTOM LINE:
 

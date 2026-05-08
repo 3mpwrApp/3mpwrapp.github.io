@@ -523,7 +523,7 @@ Your participation helps us create an app that truly empowers Canadians living w
 **Questions? Feedback? Found a bug?**
 - 📧 empowrapp08162025@gmail.com
 - 💬 Beta Testers Chat (in app)
-- 🌐 [Sign up for website beta](https://3mpwrapp.pages.dev/beta-guide)
+- 🌐 [Sign up for website beta](https://3mpwrapp.ca/beta-guide)
 
 **Happy Testing! 🎉**
 
