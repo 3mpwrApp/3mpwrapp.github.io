@@ -1,14 +1,16 @@
 # Pre-Existing Conditions: What You Need to Know
 
-*Based on 96 WSIAT decisions mentioning pre-existing conditions*
+*Updated May 8, 2026 - uses the 2020-2026 WSIAT appeal archive and the reconciled ONWSIB internal-review archive*
 
-## 🚨 NEW: Statistical Evidence Proves Systematic Pre-Existing Denials
+## 🚨 Current Research Snapshot
 
-**Recent analysis of 11,430 WSIAT tribunal decisions (2020-2026) reveals shocking patterns:**
+**Recent review of Ontario workers' compensation records shows the pre-existing condition argument appears in both appeal-stage and first-level decision records, but the archives answer different questions:**
 
-### WSIB's #1 Denial Tactic:
-- **Pre-existing condition appears in 1,522 cases (13.3%, 95% CI: 12.7-13.9%)** - the 2nd most common keyword after "worker"
-- More frequent than "benefits" (7.8%), "accident" (7.4%), or "entitlement" (4.4%)
+### What The Public Records Show:
+- **WSIAT appeal archive:** 1,522 of 11,430 appeal decisions (13.3%, 95% CI: 12.7-13.9%) mention pre-existing condition language
+- **ONWSIB internal-review archive:** 31 of 463 published decisions (6.7%) mention pre-existing condition language
+- **Interpretation limit:** These figures show how often the argument appears in the public record. They do not prove how often the argument succeeds.
+- **Method note for ONWSIB:** [ONWSIB Deep-Dive Method Note](/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html)
 
 ### Body-Part-Specific Bias Rates:
 - **Knee injuries:** 20.0% denied as pre-existing (169 of 845 cases)
@@ -26,7 +28,7 @@
 
 **Source:** [WSIB System Analysis 2020-2026](/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026)
 
-**What this means for YOUR case:** If WSIB denied your claim as "pre-existing," you're part of a documented pattern of systematic misapplication of law. Use this statistical evidence in your appeal.
+**What this means for YOUR case:** If WSIB denied your claim as "pre-existing," the public record shows this is a recurring argument. Use the legal and medical evidence below to challenge causation assumptions, not to claim a guaranteed outcome.
 
 ---
 
@@ -70,7 +72,7 @@ Work caused a **different injury** than pre-existing
 
 ## How WSIB Uses Pre-Existing Conditions Against You
 
-Common arguments from **96 analyzed cases:**
+Common arguments across the published record:
 
 ### "This is just natural progression"
 - WSIB claims your condition would have worsened anyway
@@ -216,4 +218,4 @@ Get strong medical evidence explaining the work contribution.
 
 ---
 
-*Data source: 96 cases mentioning pre-existing conditions from 1,334 WSIAT decisions*
+*Primary data sources: 2020-2026 WSIAT appeal archive (11,430 decisions) and reconciled ONWSIB archive (463 decisions). ONWSIB methodology note: [ONWSIB Deep-Dive Method Note](/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html)*

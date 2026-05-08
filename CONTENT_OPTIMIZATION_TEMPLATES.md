@@ -722,34 +722,30 @@ ONSBT appeal guide: https://3mpwrapp.ca/knowledge-base/onsbt
 
 ## ONWSIB & Workers' Comp Journey Content
 
-### Template 21: The Three-Stage System Explainer
-**Format:** Visual pathway ? Decision point guide ? Strategic advice
+### Template 21: ONWSIB Internal Review Snapshot
+**Format:** Dataset snapshot ? evidence-gap explainer ? worker prep checklist
 
 **Example:**
 ```
-??? Workers' Comp Appeal Journey (Ontario)
+??? ONWSIB Internal Review Snapshot (Ontario)
 
-STAGE 1: WSIB Initial Decision
-? Claim denied
+DATASET: 463 decisions (2020-2026)
+PUBLIC RECORD: 95.7% unresolved
+LOCAL DEEP-DIVE: 12 high-confidence reads
+MANUAL REVIEW: 6 more files queued
 
-STAGE 2: ONWSIB Internal Review (optional)
-?? WSIB reviews its own decision
-?? 89.5% probable grant rate (small sample)
-?? Limited public data (95.4% unresolved)
+WHAT TO SAVE NOW:
+?? Written reasons
+?? Medical reports and timelines
+?? Employer and WSIB correspondence
+?? Deadline notes for every step
 
-STAGE 3: WSIAT Independent Appeal
-?? 65-73% worker success rate (official)
-? Independent tribunal (not WSIB)
-?? 11,430 decisions analyzed
+Method note: https://3mpwrapp.ca/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html
 
-STRATEGY: Most workers skip ONWSIB and go straight to WSIAT.
-
-Full analysis: https://3mpwrapp.ca/research/onwsib-wsiat-pathway
-
-#WSIB #WorkersComp #WSIAT #ONWSIB
+#WSIB #WorkersComp #Ontario #ONWSIB
 ```
 
-**When to use:** Educational posts, strategic guidance, system transparency
+**When to use:** ONWSIB updates, evidence-gap explainers, worker prep posts
 
 ---
 
@@ -812,34 +808,30 @@ ONSBT appeal guide: https://3mpwrapp.ca/knowledge-base/onsbt
 
 ## ONWSIB & Workers' Comp Journey Content
 
-### Template 21: The Three-Stage System Explainer
-**Format:** Visual pathway → Decision point guide → Strategic advice
+### Template 21: ONWSIB Internal Review Snapshot
+**Format:** Dataset snapshot → evidence-gap explainer → worker prep checklist
 
 **Example:**
 ```
-🛤️ Workers' Comp Appeal Journey (Ontario)
+🧾 ONWSIB Internal Review Snapshot (Ontario)
 
-STAGE 1: WSIB Initial Decision
-❌ Claim denied
+DATASET: 463 decisions (2020-2026)
+⚠️ Public record: 95.7% unresolved
+📊 Local deep-dive: 12 high-confidence reads
+📝 Manual review: 6 more files queued
 
-STAGE 2: ONWSIB Internal Review (optional)
-↪️ WSIB reviews its own decision
-📊 89.5% probable grant rate (small sample)
-⚠️ Limited public data (95.4% unresolved)
+SAVE THESE EARLY:
+✅ Written reasons
+✅ Medical reports and timelines
+✅ Employer and WSIB correspondence
+✅ Deadline notes for every step
 
-STAGE 3: WSIAT Independent Appeal
-📊 65-73% worker success rate (official)
-✅ Independent tribunal (not WSIB)
-📝 11,430 decisions analyzed
+Method note: https://3mpwrapp.ca/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html
 
-STRATEGY: Most workers skip ONWSIB and go straight to WSIAT.
-
-Full analysis: https://3mpwrapp.ca/research/onwsib-wsiat-pathway
-
-#WSIB #WorkersComp #WSIAT #ONWSIB
+#WSIB #WorkersComp #Ontario #ONWSIB
 ```
 
-**When to use:** Educational posts, strategic guidance, system transparency
+**When to use:** ONWSIB updates, evidence-gap explainers, worker prep posts
 
 ---
 
@@ -848,14 +840,11 @@ Full analysis: https://3mpwrapp.ca/research/onwsib-wsiat-pathway
 
 **Example:**
 ```
-🚩 PRE-EXISTING CONDITION DENIAL PATTERN
+🚩 ONWSIB PRE-EXISTING CONDITION EARLY WARNING
 
-📊 Our analysis of 1,551 cases:
+📊 In the current ONWSIB archive, 6.7% of records cite a pre-existing condition argument.
 
-ONWSIB (internal review): 6.7% cite pre-existing
-WSIAT (appeals): 13.3% cite pre-existing
-
-PATTERN: If WSIB denies you for "pre-existing condition," they'll keep using that argument all the way through appeals.
+READ THIS CAREFULLY: That figure shows how often the argument appears in published ONWSIB materials. It does not prove how often the argument succeeds.
 
 DEFENSE STRATEGY:
 ✅ Get "aggravation/acceleration" medical opinion EARLY
@@ -865,7 +854,7 @@ DEFENSE STRATEGY:
 
 The earlier you build your defense, the better.
 
-Guide: https://3mpwrapp.ca/knowledge-base/pre-existing-conditions
+Method note: https://3mpwrapp.ca/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html
 
 #WSIB #PreExisting #WorkInjury
 ```

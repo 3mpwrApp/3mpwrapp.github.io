@@ -93,11 +93,13 @@ Professional fill-in-the-blank appeal letters:
 | Tribunal | Win Rate | Total Cases | Source | Abandonment |
 |----------|----------|-------------|--------|-------------|
 | **WSIAT** | **89.1%** | 11,430 | CanLII 2020-2026 | - |
-| **ONWSIB** | **83.3%** | 431 | CanLII 2020-2026 | - |
+| **ONWSIB** | **89.5%*** | 463 | CanLII 2020-2026 | **95.7% unresolved** |
 | **ONSBT** | **98.9%** | 14,298 | CanLII 2020-2026 | - |
 | **HRTO** | **12.7%** | 9,268 | CanLII 2020-2026 | **43.9%** |
 
-**Total Ontario Tribunal Decisions Classified:** 35,927
+*ONWSIB reflects only the small classified subset visible in public records. It should not be presented as a system-wide success rate.*
+
+**Total Ontario Tribunal Decisions Classified:** 35,459
 
 ---
 
@@ -111,7 +113,7 @@ Professional fill-in-the-blank appeal letters:
    - WSIAT: 89.1% (was 69%)
    - HRTO: 12.7% (was 2.66%) + 43.9% abandonment added
    - ONSBT: 98.9% (was "unknown")
-   - ONWSIB: 83.3% (added)
+   - ONWSIB: classified-only 89.5% snapshot with 463 total cases and 95.7% unresolved
 
 2. **wsiat-outcome-classification-2020-2026.json** ✅
    - Already had correct 89.1% from 11,430 decisions
@@ -119,10 +121,10 @@ Professional fill-in-the-blank appeal letters:
 
 3. **onsbt-onwsib-classification-2020-2026.json** ✅
    - ONSBT: 98.9% from 14,298 decisions
-   - ONWSIB: 83.3% from 431 decisions
-   - Already accurate
+   - ONWSIB: 463 decisions, 20 classified outcomes, 95.7% unresolved
+   - Labels updated to warn that the 89.5% figure is classified-only and not system-wide
 
-**All visualization data now matches classified tribunal statistics**
+**All visualization data now matches classified tribunal statistics, with the ONWSIB caution note preserved in labels**
 
 ---
 
@@ -206,7 +208,7 @@ Professional fill-in-the-blank appeal letters:
 - [x] Cross-tribunal comparison updated (all 4 Ontario tribunals)
 - [x] WSIAT classification data accurate (89.1%)
 - [x] ONSBT classification data accurate (98.9%)
-- [x] ONWSIB classification data accurate (83.3%)
+- [x] ONWSIB archive figures aligned (463 total, 95.7% unresolved, classified-only snapshot noted)
 - [x] HRTO abandonment rate added (43.9%)
 - [x] Temporal evolution data preserved
 - [x] Keyword network data preserved
@@ -226,8 +228,8 @@ Professional fill-in-the-blank appeal letters:
 
 ### Data Accuracy:
 - **Tribunal Statistics:** 100% accurate (verified against classification data)
-- **Case Counts:** 100% accurate (11,430 WSIAT, 9,268 HRTO, 14,298 ONSBT, 431 ONWSIB)
-- **Win Rates:** 100% accurate (89.1%, 12.7%, 98.9%, 83.3%)
+- **Case Counts:** 100% accurate (11,430 WSIAT, 9,268 HRTO, 14,298 ONSBT, 463 ONWSIB)
+- **Win Rates:** Accurate for WSIAT, HRTO, and ONSBT; ONWSIB carries a classified-only 89.5% snapshot with a 95.7% unresolved warning
 - **Visualizations:** 100% updated with classified data
 - **Cross-References:** 100% functional (KB → guides → templates → blogs)
 
@@ -297,7 +299,7 @@ Professional fill-in-the-blank appeal letters:
 - **WSIAT:** 89.1% success rate (11,430 decisions 2020-2026)
 - **HRTO:** 12.7% success rate, 43.9% abandonment (9,268 decisions)
 - **ONSBT:** 98.9% success rate (14,298 decisions)
-- **ONWSIB:** 83.3% success rate (431 decisions)
+- **ONWSIB:** 463 decisions, 95.7% unresolved public outcomes, with only a classified-only 89.5% visible-subset snapshot
 
 ### Content Accessible:
 - **Knowledge Base:** 18 guides at `/knowledge-base/[injury-name]/`

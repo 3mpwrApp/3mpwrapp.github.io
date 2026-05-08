@@ -1,60 +1,81 @@
 {
   "tribunal": "ONWSIB",
   "fullName": "WSIB Internal Review",
-  "totalCases": 431,
+  "totalCases": 463,
   "yearRange": "2020-2026",
-  "probableGrantRate": 89.5,
+  "classifiedGrantRate": 89.5,
+  "classifiedGrantRateNote": "Derived from 19 non-mixed classified outcomes only; not reliable as a population-level ONWSIB success rate.",
   "topIssues": [
     {
       "issue": "Worker designation",
-      "percentage": 80,
-      "count": 345
+      "count": 416,
+      "percentage": 89.8
+    },
+    {
+      "issue": "Employer obligations/disputes",
+      "count": 96,
+      "percentage": 20.7
     },
     {
       "issue": "Work-related injury determination",
-      "percentage": 12.1,
-      "count": 52
-    },
-    {
-      "issue": "Pre-existing condition defense",
-      "percentage": 6.7,
-      "count": 29
-    },
-    {
-      "issue": "Knee injuries",
-      "percentage": 4.9,
-      "count": 21
-    },
-    {
-      "issue": "Shoulder injuries",
-      "percentage": 4.2,
-      "count": 18
+      "count": 81,
+      "percentage": 17.5
     },
     {
       "issue": "Benefits eligibility",
-      "percentage": 6.3,
-      "count": 27
+      "count": 67,
+      "percentage": 14.5
+    },
+    {
+      "issue": "Pre-existing condition arguments",
+      "count": 31,
+      "percentage": 6.7
+    },
+    {
+      "issue": "Shoulder injuries",
+      "count": 33,
+      "percentage": 7.1
+    },
+    {
+      "issue": "Pain-related cases",
+      "count": 33,
+      "percentage": 7.1
+    },
+    {
+      "issue": "Knee injuries",
+      "count": 30,
+      "percentage": 6.5
     }
   ],
+  "coverageAudit": {
+    "localTotal": 463,
+    "observedCanliiTotal": 463,
+    "netGap": 0
+  },
+  "deepDive": {
+    "highConfidenceReads": 12,
+    "manualReviewCandidates": 6,
+    "predMinConfidence": 0.55
+  },
   "threeStageSystem": {
     "stage1": {
       "name": "WSIB Initial Decision",
       "description": "Workplace Safety and Insurance Board decides on your claim",
-      "outcome": "If denied, you have 2 appeal options"
+      "outcome": "If denied, you can request an internal review or pursue a later independent appeal path."
     },
     "stage2": {
       "name": "ONWSIB Internal Review (optional)",
       "description": "WSIB reviews its own decision",
-      "probableGrantRate": 89.5,
-      "dataQuality": "Very limited (95.4% unresolved in public records)",
-      "recommendation": "Most workers skip this and go straight to WSIAT"
+      "classifiedGrantRate": 89.5,
+      "dataQuality": "Very limited (95.7% unresolved in public records)",
+      "recommendation": "Do not infer a system-wide ONWSIB success rate from public records alone."
     },
     "stage3": {
       "name": "WSIAT Independent Appeal",
       "description": "Independent tribunal (not WSIB)",
       "successRate": "65-73%",
       "casesAnalyzed": 11430,
-      "recommendation": "Primary appeal venue for most workers"
+      "recommendation": "Independent appeal data is much stronger than ONWSIB internal-review outcome data."
     }
   },
   "tiers": {
@@ -65,13 +86,13 @@
     },
     "tierB": {
       "count": 19,
-      "percentage": 4.4,
+      "percentage": 4.1,
       "description": "Probable keyword inference"
     },
     "tierC": {
-      "count": 411,
-      "percentage": 95.4,
-      "description": "Unresolved metadata gap"
+      "count": 443,
+      "percentage": 95.7,
+      "description": "Unresolved public-record gap"
     }
   }
 }

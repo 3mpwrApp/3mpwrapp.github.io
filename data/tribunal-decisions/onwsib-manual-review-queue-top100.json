@@ -1,6 +1,79 @@
 {
-  "generated_at": "2026-05-07T21:26:30.253Z",
-  "pred_min_confidence": 0.8,
-  "total_candidates": 0,
-  "top_100": []
+  "generated_at": "2026-05-08T19:03:21.974Z",
+  "pred_min_confidence": 0.55,
+  "total_candidates": 6,
+  "top_100": [
+    {
+      "year": 2026,
+      "case_id": "2026canlii41518",
+      "title": "20260023 (Re)",
+      "url": "https://canlii.ca/t/kksf7",
+      "signal_score": 10,
+      "keywords_api": [
+        "Workplace health and safety — Workers’ compensation — Health care entitlement — Maintenance treatment — Is the worker entitled to maintenance physiotherapy or chiropractic once per week? — Policy 17-01-02 applied, necessary, appropriate, and sufficient — Maintenance to maintain function and prevent deterioration — Bilateral shoulders, MMR reached, ongoing symptoms with overhead work — Approval limited to one year — Objection allowed in part | Workplace health and safety — Workers’ compensation — Health care entitlement — Exclusions — Do acupuncture and massage therapy qualify as maintenance treatment? — Administrative Practice Document considered — No clinical necessity established for acupuncture or massage — Home exercise and sustainable tools emphasised — Non-work-related cervical radiculopathy noted — Acupuncture and massage therapy denied | Evidence — Medical evidence — Maintenance treatment — Whether clinical evidence supports treatment to reduce opioid medication and maintain function — Family doctor recommendations and opioid assessment form reviewed — Link between denial and increased Percocet considered — Confounding non-work-related conditions recognised — One-year trial to assess reduction in opioid use ordered — Partial entitlement granted"
+      ],
+      "predicted_outcome": null,
+      "predicted_confidence": null
+    },
+    {
+      "year": 2025,
+      "case_id": "2025canlii152660",
+      "title": "20260015 (Re)",
+      "url": "https://canlii.ca/t/kksdz",
+      "signal_score": 6,
+      "keywords_api": [
+        "Workplace health and safety — Workers’ compensation — Traumatic mental stress — Entitlement to benefits for PTSD and MDD under Policy 15-03-02 — Were the incidents objectively traumatic and arising out of and in the course of employment — Cumulative effect of multiple assaults and threats accepted — Employer non-participation noted — Initial entitlement under TMS policy allowed — Objection allowed | Workplace health and safety — Workers’ compensation — Date of injury — How is the accident date determined for cumulative traumatic events under Policy 11-01-04 — Chance event analysis applied to series of incidents — Last traumatic event used as accident date — Final reaction linked to March 27, 2024 incident — Date of injury fixed as March 27, 2024 | Workplace health and safety — Workers’ compensation — Medical evidence — Do clinical records establish a DSM-consistent diagnosis and work-related causation — Family physician and psychologist confirm PTSD and MDD — WSIAT PTSD Medical Discussion Paper considered — No contrary specialist opinion — Symptoms persisting beyond one month — Diagnoses accepted as related to workplace incidents — Entitlement to health care benefits granted"
+      ],
+      "predicted_outcome": null,
+      "predicted_confidence": null
+    },
+    {
+      "year": 2026,
+      "case_id": "2026canlii41520",
+      "title": "20260021 (Re)",
+      "url": "https://canlii.ca/t/kksf5",
+      "signal_score": 6,
+      "keywords_api": [
+        "Workplace health and safety — Workers’ compensation — Entitlement to health care — Whether right shoulder arthroscopic capsular release is necessary, appropriate, and sufficient as a result of the injury under Policy 17-01-02 — Occupational diagnosis of posttraumatic adhesive capsulitis accepted — Treating program reports list no non‑work‑related diagnoses — Entitlement to right shoulder surgery confirmed — Employer’s objection denied | Workplace health and safety — Causation — Vaccine-related allegation — Did the COVID-19 booster in the left arm cause right shoulder adhesive capsulitis, severing work-related causation? — Operative note describing adhesive capsulitis as mostly idiopathic considered — Program reports attribute condition to workplace injury — Submitted article addresses same-side vaccination only and small sample — Causal link to workplace injury maintained — Employer’s objection denied | Evidence — Medical evidence — Weight and sufficiency — Relative weight of treating orthopaedic and program reports versus submitted literature — OHAP and Upper Extremity Specialty Program list occupational diagnoses only — Literature on frozen shoulder after COVID-19 vaccination limited and same-side — Absence of persuasive non‑work‑related diagnosis — Treating evidence preferred — Entitlement upheld — Employer’s objection denied"
+      ],
+      "predicted_outcome": null,
+      "predicted_confidence": null
+    },
+    {
+      "year": 2026,
+      "case_id": "2026canlii41525",
+      "title": "20260017 (Re)",
+      "url": "https://canlii.ca/t/kksf1",
+      "signal_score": 6,
+      "keywords_api": [
+        "Labour and employment — Workers’ compensation — Course of employment — Whether worker removed themself from the course of employment, rebutting s. 13(2) WSIA presumption — Personal project using company equipment found — Activity not incidental to employment under OPM 15-03-08 — Video and witness statements accepted — Presumption under s. 13(2) not applicable — Presumption rebutted | Labour and employment — Workers’ compensation — Serious and wilful misconduct — Does s. 17 WSIA allow entitlement where injury is solely attributable to serious and wilful misconduct but results in serious impairment — Intentional non-condoned actions found — Partial hand amputation constituting serious impairment — Worker deemed entitled notwithstanding misconduct — Entitlement for injuries under s. 17 allowed | Labour and employment — Workers’ compensation — Psychotraumatic disability — Was entitlement for PTSD and Adjustment Disorder correctly allowed — Sudden traumatic accident with life-altering injury — OPM 15-04-02 applied — DSM-V criteria met, emotional reaction to accident and extended disablement established — Causation to workplace injury accepted — Entitlement to psychotraumatic disability confirmed"
+      ],
+      "predicted_outcome": null,
+      "predicted_confidence": null
+    },
+    {
+      "year": 2026,
+      "case_id": "2026canlii41519",
+      "title": "20260024 (Re)",
+      "url": "https://canlii.ca/t/kksf8",
+      "signal_score": 6,
+      "keywords_api": [
+        "Workplace health and safety — Workers’ compensation — Occupational disease — Entitlement to benefits for caustic fume inhalation — Application of WSIA and OPM 11-01-01 and 11-01-03 — Five point check system satisfied on balance of probabilities — Leaking knife valve and open industrial curtain corroborated — Post-incident air monitoring given little weight — Medical opinion consistent with exposure — Objection allowed | Workplace health and safety — Workers’ compensation — Loss of earnings — Whether LOE benefits payable for time missed to seek medical attention — OPM 11-02-02 applied — Absence to attend doctor reasonable and confirmed — Employer reported three hours missed on medical visit date — LOE benefits approved for the missed work time — LOE benefits approved"
+      ],
+      "predicted_outcome": null,
+      "predicted_confidence": null
+    },
+    {
+      "year": 2025,
+      "case_id": "2025canlii152662",
+      "title": "20260014 (Re)",
+      "url": "https://canlii.ca/t/kksdx",
+      "signal_score": 3,
+      "keywords_api": [
+        "Workplace health and safety — Workers’ compensation — Loss of earnings — Suitability of permanent modified duties — Do offered duties meet “suitable” and “productive” under Policy 19-02-07 — Whether duties eliminate wage loss under Policy 18-03-02 — Weight of Social Security Tribunal CPP-D decisions considered — Permanent duties found not productive — Partial LOE benefits awarded | Workplace health and safety — Non-economic loss — Mental and behavioural disorders — Whether 15% NEL rating for Major Depressive Disorder with Anxious Distress should be increased — Application of AMA Guides 3rd ed. and Policy 18-05-11 — Class 2 versus Class 3 impairment factors assessed — Activities of daily living and social functioning analysed — NEL rating confirmed | Workplace health and safety — Recurrence — Psychological condition — Is there a significant deterioration of Major Depressive Disorder with Anxious Distress under Policy 15-02-05 — Clinical findings and treatment records assessed — Distinction between deterioration and non-work-related factors — Neurology Specialty Program defers causation to psychology provider — Recurrence denied | Workplace health and safety — Recurrence and permanent impairment — Head injury and neck strain — Whether post-concussive condition worsened beyond MMR of June 30, 2022 under Policy 15-02-05 — Tinnitus rating under Policy 16-01-08 maintained — Objective findings support permanent cervical strain under Policy 11-01-05 — Head recurrence denied, permanent neck impairment recognised with NEL determination ordered"
+      ],
+      "predicted_outcome": null,
+      "predicted_confidence": null
+    }
+  ]
 }

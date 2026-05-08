@@ -1,0 +1,662 @@
+{
+  "generated_at": "2026-05-08T19:32:32.525Z",
+  "tribunal": "ONWSIB",
+  "source_dataset_total": 463,
+  "filter": "keywords_api contains pre-existing condition",
+  "overview": {
+    "pre_existing_cases": 31,
+    "share_of_archive_percent": 6.7,
+    "public_classified_cases": 1,
+    "public_unknown_cases": 30,
+    "deep_dive_high_confidence_cases": 0,
+    "manual_review_queue_hits": 0
+  },
+  "by_year": [
+    {
+      "year": 2020,
+      "count": 0
+    },
+    {
+      "year": 2021,
+      "count": 2
+    },
+    {
+      "year": 2022,
+      "count": 21
+    },
+    {
+      "year": 2023,
+      "count": 5
+    },
+    {
+      "year": 2024,
+      "count": 0
+    },
+    {
+      "year": 2025,
+      "count": 3
+    },
+    {
+      "year": 2026,
+      "count": 0
+    }
+  ],
+  "body_part_cooccurrence": [
+    {
+      "bodyPart": "shoulder",
+      "count": 6
+    },
+    {
+      "bodyPart": "knee",
+      "count": 5
+    },
+    {
+      "bodyPart": "neck",
+      "count": 2
+    },
+    {
+      "bodyPart": "ankle",
+      "count": 1
+    },
+    {
+      "bodyPart": "wrist",
+      "count": 1
+    },
+    {
+      "bodyPart": "hip",
+      "count": 1
+    }
+  ],
+  "issue_flag_cooccurrence": [
+    {
+      "issue": "Work-related injury",
+      "count": 4
+    },
+    {
+      "issue": "Employer mention",
+      "count": 3
+    },
+    {
+      "issue": "Benefits or LOE",
+      "count": 2
+    },
+    {
+      "issue": "Return to work or modified duties",
+      "count": 2
+    },
+    {
+      "issue": "Permanent impairment or NEL",
+      "count": 1
+    },
+    {
+      "issue": "Mental health language",
+      "count": 1
+    }
+  ],
+  "notes": [
+    "This slice tracks ONWSIB records whose published keyword text includes pre-existing condition language.",
+    "Most of these records remain unresolved in the public archive, so this sub-analysis is strongest as a pattern map rather than an outcome study.",
+    "Deep-dive predictions for these cases remained below the 0.55 threshold used for high-confidence ONWSIB sidecar promotion."
+  ],
+  "cases": [
+    {
+      "case_id": "2021canlii133787",
+      "year": 2021,
+      "citation": "2021 CanLII 133787 (ON WSIB)",
+      "decision_date": "2021-06-24",
+      "docket_number": "20210023",
+      "url": "https://canlii.ca/t/jlh82",
+      "keywords_api": [
+        "pre-existing condition — worker — work-related permanent impairment — work-related injury disease — shoulder"
+      ],
+      "body_parts": [
+        "shoulder"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2021canlii133938",
+      "year": 2021,
+      "citation": "2021 CanLII 133938 (ON WSIB)",
+      "decision_date": "2021-05-11",
+      "docket_number": "20210025",
+      "url": "https://canlii.ca/t/jlh84",
+      "keywords_api": [
+        "worker — knee — meniscus — pre-existing condition — tear"
+      ],
+      "body_parts": [
+        "knee"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii132548",
+      "year": 2022,
+      "citation": "2022 CanLII 132548 (ON WSIB)",
+      "decision_date": "2022-12-23",
+      "docket_number": "20230021",
+      "url": "https://canlii.ca/t/jvt56",
+      "keywords_api": [
+        "pre-existing condition — worker — annular tear — satchel — initial entitlement"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii132539",
+      "year": 2022,
+      "citation": "2022 CanLII 132539 (ON WSIB)",
+      "decision_date": "2022-12-16",
+      "docket_number": "20230018",
+      "url": "https://canlii.ca/t/jvt53",
+      "keywords_api": [
+        "worker — pre-existing condition — work-related injury — sciatica — initial entitlement to benefits"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii132540",
+      "year": 2022,
+      "citation": "2022 CanLII 132540 (ON WSIB)",
+      "decision_date": "2022-12-01",
+      "docket_number": "20230013",
+      "url": "https://canlii.ca/t/jvt4x",
+      "keywords_api": [
+        "worker — shoulder — surgery — pre-existing condition — accident"
+      ],
+      "body_parts": [
+        "shoulder"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii128917",
+      "year": 2022,
+      "citation": "2022 CanLII 128917 (ON WSIB)",
+      "decision_date": "2022-11-17",
+      "docket_number": "20230006",
+      "url": "https://canlii.ca/t/jv6mn",
+      "keywords_api": [
+        "worker — pre-existing condition — disease — electrocution type injury — tendinosis"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii121953",
+      "year": 2022,
+      "citation": "2022 CanLII 121953 (ON WSIB)",
+      "decision_date": "2022-11-08",
+      "docket_number": "20220143",
+      "url": "https://canlii.ca/t/jtn0r",
+      "keywords_api": [
+        "pre-existing condition — worker — atopic — irritant contact dermatitis — eczema"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii112764",
+      "year": 2022,
+      "citation": "2022 CanLII 112764 (ON WSIB)",
+      "decision_date": "2022-09-30",
+      "docket_number": "20220125",
+      "url": "https://canlii.ca/t/jt7z5",
+      "keywords_api": [
+        "pre-existing condition — worker — shoulder — rotator cuff tears — accident"
+      ],
+      "body_parts": [
+        "shoulder"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii89425",
+      "year": 2022,
+      "citation": "2022 CanLII 89425 (ON WSIB)",
+      "decision_date": "2022-07-15",
+      "docket_number": "20220101",
+      "url": "https://canlii.ca/t/js5ml",
+      "keywords_api": [
+        "pre-existing conditions — worker — stretcher — pre-existing condition — entitlement"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii89430",
+      "year": 2022,
+      "citation": "2022 CanLII 89430 (ON WSIB)",
+      "decision_date": "2022-06-29",
+      "docket_number": "20220097",
+      "url": "https://canlii.ca/t/js5mg",
+      "keywords_api": [
+        "pre-existing condition — ankle — worker — all-terrain vehicle — fracture"
+      ],
+      "body_parts": [
+        "ankle"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii68188",
+      "year": 2022,
+      "citation": "2022 CanLII 68188 (ON WSIB)",
+      "decision_date": "2022-06-17",
+      "docket_number": "20220073",
+      "url": "https://canlii.ca/t/jr41w",
+      "keywords_api": [
+        "worker — pre-existing condition — knee — pre-injury duties — work"
+      ],
+      "body_parts": [
+        "knee"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii54934",
+      "year": 2022,
+      "citation": "2022 CanLII 54934 (ON WSIB)",
+      "decision_date": "2022-06-17",
+      "docket_number": "20220055",
+      "url": "https://canlii.ca/t/jpz5j",
+      "keywords_api": [
+        "worker — rotator cuff tear — due to a pre-existing condition — work incident — enhanced"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii89428",
+      "year": 2022,
+      "citation": "2022 CanLII 89428 (ON WSIB)",
+      "decision_date": "2022-06-09",
+      "docket_number": "20220096",
+      "url": "https://canlii.ca/t/js5mf",
+      "keywords_api": [
+        "avascular necrosis — pre-existing condition — worker — hip — smoking"
+      ],
+      "body_parts": [
+        "hip"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii74706",
+      "year": 2022,
+      "citation": "2022 CanLII 74706 (ON WSIB)",
+      "decision_date": "2022-05-30",
+      "docket_number": "20220092",
+      "url": "https://canlii.ca/t/jrj4h",
+      "keywords_api": [
+        "hypertrophic cardiomyopathy — pre-existing condition — worker — cost relief — severity"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii44783",
+      "year": 2022,
+      "citation": "2022 CanLII 44783 (ON WSIB)",
+      "decision_date": "2022-05-05",
+      "docket_number": "20220050",
+      "url": "https://canlii.ca/t/jph04",
+      "keywords_api": [
+        "shoulder — worker — pre-existing condition — pre-accident state — dislocation"
+      ],
+      "body_parts": [
+        "shoulder"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii68179",
+      "year": 2022,
+      "citation": "2022 CanLII 68179 (ON WSIB)",
+      "decision_date": "2022-04-28",
+      "docket_number": "20220068",
+      "url": "https://canlii.ca/t/jr41q",
+      "keywords_api": [
+        "pre-existing condition — extensor carpi ulnaris tendon — orthopaedic surgeon — worker — wrist"
+      ],
+      "body_parts": [
+        "wrist"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii44782",
+      "year": 2022,
+      "citation": "2022 CanLII 44782 (ON WSIB)",
+      "decision_date": "2022-04-21",
+      "docket_number": "20220048",
+      "url": "https://canlii.ca/t/jph02",
+      "keywords_api": [
+        "pre-existing condition — knee — indicated the worker — return to work — patellofemoral compartment"
+      ],
+      "body_parts": [
+        "knee"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii33319",
+      "year": 2022,
+      "citation": "2022 CanLII 33319 (ON WSIB)",
+      "decision_date": "2022-03-10",
+      "docket_number": "20220035",
+      "url": "https://canlii.ca/t/jnx0l",
+      "keywords_api": [
+        "pre-existing condition — curtains — severity — cost relief — worker"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii21320",
+      "year": 2022,
+      "citation": "2022 CanLII 21320 (ON WSIB)",
+      "decision_date": "2022-02-25",
+      "docket_number": "20220023",
+      "url": "https://canlii.ca/t/jn8pm",
+      "keywords_api": [
+        "pre-existing condition — rotator cuff tears — worker — degenerative changes — shoulder"
+      ],
+      "body_parts": [
+        "shoulder"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii33329",
+      "year": 2022,
+      "citation": "2022 CanLII 33329 (ON WSIB)",
+      "decision_date": "2022-02-12",
+      "docket_number": "20220030",
+      "url": "https://canlii.ca/t/jnx0h",
+      "keywords_api": [
+        "pre-existing condition — worker — pre-existing psychological — cost relief — recovery from the compensable"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii33325",
+      "year": 2022,
+      "citation": "2022 CanLII 33325 (ON WSIB)",
+      "decision_date": "2022-02-11",
+      "docket_number": "20220024",
+      "url": "https://canlii.ca/t/jnx0b",
+      "keywords_api": [
+        "worker — pre-existing condition — shoulder partial tear — employer — trays"
+      ],
+      "body_parts": [
+        "shoulder"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii44777",
+      "year": 2022,
+      "citation": "2022 CanLII 44777 (ON WSIB)",
+      "decision_date": "2022-02-04",
+      "docket_number": "20220038",
+      "url": "https://canlii.ca/t/jpgzt",
+      "keywords_api": [
+        "worker — pre-existing condition — low blood sugar — acute subarachnoid hemorrhage — injury"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2022canlii8151",
+      "year": 2022,
+      "citation": "2022 CanLII 8151 (ON WSIB)",
+      "decision_date": "2022-01-05",
+      "docket_number": "20220011",
+      "url": "https://canlii.ca/t/jm99r",
+      "keywords_api": [
+        "pre-existing condition — obesity — pre-accident disability — tongs — https"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2023canlii89189",
+      "year": 2023,
+      "citation": "2023 CanLII 89189 (ON WSIB)",
+      "decision_date": "2023-06-22",
+      "docket_number": "20230106",
+      "url": "https://canlii.ca/t/k0f37",
+      "keywords_api": [
+        "worker — pre-existing condition — entry-level wage — specialty clinic — knee"
+      ],
+      "body_parts": [
+        "knee"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2023canlii89201",
+      "year": 2023,
+      "citation": "2023 CanLII 89201 (ON WSIB)",
+      "decision_date": "2023-05-08",
+      "docket_number": "20230107",
+      "url": "https://canlii.ca/t/k0f38",
+      "keywords_api": [
+        "worker — pre-existing condition — employer — re-employment obligations — work-related injury disease"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2023canlii34285",
+      "year": 2023,
+      "citation": "2023 CanLII 34285 (ON WSIB)",
+      "decision_date": "2023-03-06",
+      "docket_number": "20230045",
+      "url": "https://canlii.ca/t/jwwhn",
+      "keywords_api": [
+        "worker — knee — pain — pre-existing condition — benefits for a non-organic condition"
+      ],
+      "body_parts": [
+        "knee"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2023canlii24815",
+      "year": 2023,
+      "citation": "2023 CanLII 24815 (ON WSIB)",
+      "decision_date": "2023-02-03",
+      "docket_number": "20230032",
+      "url": "https://canlii.ca/t/jwg6g",
+      "keywords_api": [
+        "pre-existing condition — worker — neuropathic pain — hypothyroidism — clinicians"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2023canlii13768",
+      "year": 2023,
+      "citation": "2023 CanLII 13768 (ON WSIB)",
+      "decision_date": "2023-01-16",
+      "docket_number": "20230019",
+      "url": "https://canlii.ca/t/jvt54",
+      "keywords_api": [
+        "pre-existing condition — worker — pre-existing conditions — diabetes — entitlement to cost relief"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2025canlii111684",
+      "year": 2025,
+      "citation": "2025 CanLII 111684 (ON WSIB)",
+      "decision_date": "2025-03-26",
+      "docket_number": "20250049",
+      "url": "https://canlii.ca/t/kg7xz",
+      "keywords_api": [
+        "pre-existing condition — work-related injury disease — symptoms — pain — medical"
+      ],
+      "body_parts": [],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2025canlii39071",
+      "year": 2025,
+      "citation": "2025 CanLII 39071 (ON WSIB)",
+      "decision_date": "2025-01-30",
+      "docket_number": "20250027",
+      "url": "https://canlii.ca/t/kbwhb",
+      "keywords_api": [
+        "degrees — in-between values — range — rating for their neck injury — pre-existing condition"
+      ],
+      "body_parts": [
+        "neck"
+      ],
+      "public_outcome": "Unknown",
+      "deep_dive_outcome": "Unknown",
+      "predicted_outcome": "Granted",
+      "predicted_confidence": 0.3734,
+      "in_manual_review_queue": false
+    },
+    {
+      "case_id": "2025canlii152661",
+      "year": 2025,
+      "citation": "2025 CanLII 152661 (ON WSIB)",
+      "decision_date": "2025-01-16",
+      "docket_number": "20260019",
+      "url": "https://canlii.ca/t/kksf3",
+      "keywords_api": [
+        "Workplace health and safety — Initial entitlement — Cervical injury — Whether the worker has initial entitlement for a cervical injury arising from the December 28, 2022 accident — Case Manager denial overturned in part — Appeals Resolution Officer accepts accident, worker and employer criteria — Entitlement allowed for exacerbation of C8 nerve compression — Ongoing health care remitted — Objection allowed in part | Workplace health and safety — Workers’ compensation policy — Aggravation Basis — Application of OPM 15-02-04 where pre-accident impairment and minor accident found — Pre-accident impairment established by prior cervical surgeries and imaging — Maneuvering a 100 pound unit assessed as minor accident — Entitlement limited to aggravation basis until pre-accident state — Initial entitlement allowed on aggravation basis | Workplace health and safety — Reporting — Delay in reporting — Whether a 45 week delay in reporting a neck injury defeats entitlement — Consistent early symptoms documented despite unclear initial diagnosis — Family physician queried brachial plexus injury and referred to neurology — Claims not denied solely due to pre-existing conditions — Delay does not bar entitlement — Objection allowed in part | Workplace health and safety — Causation — Medical compatibility — Whether mechanism of injury is compatible with C8 radiculopathy — Heavy pushing and pulling of heat exchanger could exacerbate C8 nerve compression — Neurologist evidence accepted including acute right C8 radiculopathy — EMG and MRI findings considered — Compatibility criterion met under OPM 11-01-01 — Initial entitlement confirmed on aggravation basis"
+      ],
+      "body_parts": [
+        "neck"
+      ],
+      "public_outcome": "Allowed - Full",
+      "deep_dive_outcome": "Allowed - Full",
+      "predicted_outcome": null,
+      "predicted_confidence": null,
+      "in_manual_review_queue": false
+    }
+  ]
+}

@@ -21,6 +21,8 @@ This research network provides interactive visualizations based on comprehensive
 - **62,093 HRTO applications** (quarterly aggregates, 2016-2025)
 - **292 ONSBT appeals** (analyzed sample)
 
+For ONWSIB-specific visuals and summaries, use the reconciled 2020-2026 archive of **463 internal review decisions**. Public outcome visibility remains limited: **95.7% unresolved**, so any apparent ONWSIB win-rate figure should be read as a **classified-only subset snapshot**, not a system-wide success rate.
+
 ---
 
 ## Interactive Visualizations

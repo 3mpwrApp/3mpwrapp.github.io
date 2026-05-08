@@ -25,7 +25,7 @@ Based on WSIAT case language, these terms appear most frequently:
 - "Workplace accident" appears in 59 decisions
 
 ### Pre-Existing Conditions
-- **96 cases** mention "pre-existing condition"
+- Pre-existing condition arguments recur throughout the broader workers' compensation archive
 - Common defense by WSIB
 - You can still win if work **aggravated** or **accelerated** the condition
 

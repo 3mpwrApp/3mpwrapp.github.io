@@ -6,7 +6,7 @@ permalink: /templates/chronic-pain-appeal/
 
 # Chronic Pain Appeal Letter Template
 
-*Based on 186 chronic pain cases from WSIAT decisions*
+*Built from recurring chronic-pain arguments in public Ontario workers' compensation decisions.*
 
 ---
 
@@ -267,7 +267,7 @@ Chronic pain claims are **winnable** but require strong medical evidence!
 
 ---
 
-*Based on 186 chronic pain cases from 1,334 WSIAT decisions*
+*Built from recurring chronic-pain reasoning in public Ontario workers' compensation decisions.*
 
 ## Important Disclaimers
 

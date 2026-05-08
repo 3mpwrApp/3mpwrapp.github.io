@@ -611,7 +611,7 @@ A: **Limited options:**
 ## Related Resources
 
 **3mpwrApp Knowledge Base:**
-- [Pre-Existing Conditions: Countering WSIB's Favorite Denial](pre-existing-conditions.md) - 13.3% (95% CI: 12.7-13.9%) of cases use pre-existing arguments
+- [Pre-Existing Conditions: What You Need to Know](pre-existing-conditions.md) - archive frequency, legal test, and evidence strategy
 - [Chronic Pain Claims: Proving Subjective Conditions](chronic-pain-claims.md) - If shoulder injury leads to chronic pain
 - [Permanent Impairment Ratings: Maximizing NEL Benefits](permanent-impairment-rating.md) - If left with permanent disability
 - [Low Back Pain Claims](low-back-pain-claims.md) - Similar occupational disease strategies

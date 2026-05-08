@@ -24,7 +24,7 @@ layout: guide
 
 **Win Rate Calculation:** (Allowed + Settled) / (Clear Outcomes) = 724 / 5,699 = 12.7%
 
-**Key Insight:** HRTO has dramatically lower success rates than workplace tribunals (WSIAT 89.1%, ONWSIB 83.3%, ONSBT 98.9%). High abandonment rate (43.9%) suggests systemic access barriers including email notification failures and complex procedures.
+**Key Insight:** HRTO has dramatically lower clear-outcome rates than the workplace appeal datasets featured on this site. Those cross-tribunal figures are not directly comparable because outcome completeness and classification quality differ substantially by dataset. High abandonment rate (43.9%) still points to major access barriers including email notification failures and complex procedures.
 
 ---
 

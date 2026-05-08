@@ -8,7 +8,7 @@
 
 ## 🎯 THE BREAKTHROUGH DISCOVERY
 
-### **Why ONWSIB Had 95.4% Unknown Outcomes:**
+### **Why ONWSIB Had 95.7% Unknown Outcomes:**
 
 Your keyword extraction was looking for **tribunal language**:
 ```
@@ -26,7 +26,7 @@ But WSIB internal reviews use **administrative language**:
 ✓ "Board reverses its earlier determination..."
 ```
 
-**This is why 95.4% were Unknown!** You were searching for legal terms in administrative documents.
+**This is why 95.7% were Unknown!** You were searching for legal terms in administrative documents.
 
 ---
 
@@ -34,7 +34,7 @@ But WSIB internal reviews use **administrative language**:
 
 | Tribunal | Before | Target After | Key Patterns Added |
 |----------|--------|--------------|-------------------|
-| **ONWSIB** | 95.4% Unknown | ~70% Unknown | Administrative review language (30+ phrases) |
+| **ONWSIB** | 95.7% Unknown | ~70% Unknown | Administrative review language (30+ phrases) |
 | **WSIAT** | 94.3% Unknown | 50-60% Unknown | "Directed", "Reversing", "Deemed" patterns |
 | **ONSBT** | 95.4% Unknown | 40-50% Unknown | "Eligible for ODSP", consent orders |
 | **ONHRT** | N/A | 30-40% Unknown | "Discrimination found", prima facie |
@@ -319,7 +319,7 @@ Solution:
 
 | Metric | Target |
 |--------|--------|
-| ONWSIB Unknown Rate | 95.4% → 70% (25.4% improvement) |
+| ONWSIB Unknown Rate | 95.7% → 70% (25.7% improvement) |
 | WSIAT Unknown Rate | 94.3% → 50-60% (34-44% improvement) |
 | ONSBT Unknown Rate | 95.4% → 40-50% (45-55% improvement) |
 | ONHRT Unknown Rate | N/A → 30-40% (60-70% classification) |

@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Appeal Letter Templates
-description: Fill-in-the-blank WSIB appeal templates that save you $500+ in paralegal fees. Built from real winning cases.
+description: Fill-in-the-blank WSIB appeal templates built from public Ontario workers' compensation decisions.
 permalink: /templates/
 ---
 
 # Appeal Letter Templates
 
-**Professional WSIB appeal letters in 30-45 minutes.** These templates are based on real winning cases and save you $500+ in paralegal fees.
+**Professional WSIB appeal letters in 30-45 minutes.** These templates are built from recurring arguments in public Ontario workers' compensation decisions and can save you substantial drafting time.
 
 ---
 
@@ -60,7 +60,7 @@ permalink: /templates/
 2. **Fill in your information** - Replace [BRACKETED TEXT] with your details
 3. **Gather supporting documents** - Follow the evidence checklist in each template
 4. **Review for accuracy** - Make sure all dates, names, and medical information are correct
-5. **Submit to WSIAT** - Mail or upload according to their instructions
+5. **Submit to WSIB or adapt for later appeal** - Use the correct filing path for your stage; these templates are written as WSIB appeal letters
 
 **Important:** These templates provide the structure and legal framework, but you need to customize them with YOUR specific medical evidence and circumstances.
 

@@ -30,9 +30,9 @@
 | allowed | 1 | 0.2% |
 | remitted | 1 | 0.2% |
 
-**Key Finding:** 83.3% success rate from 12 clear outcomes
+**Key Finding:** 95.7% of the ONWSIB archive remains unresolved in public records; the visible classified subset shows an 89.5% worker-favourable snapshot, but that is not a system-wide success rate.
 
-**Interpretation:** ONWSIB (internal WSIB reviews) shows extremely high "unclear" outcomes (95.8%), suggesting most decisions lack explicit outcome language or involve complex medical determinations.
+**Interpretation:** ONWSIB (internal WSIB reviews) shows extremely high unresolved outcomes (95.7%), suggesting most decisions lack explicit public outcome language or involve complex medical determinations.
 
 ---
 
@@ -42,5 +42,7 @@
 |----------|----------------|----------------|----------|-------------|
 | WSIAT | 11,430 | 393 (3.4%) | 89.1% | 77.0% |
 | ONSBT | 14,298 | 8,071 (56.4%) | 98.9% | 34.3% |
-| ONWSIB | 431 | 12 (2.8%) | 83.3% | 95.8% |
+| ONWSIB | 463 | 20 (4.3%) | 89.5%* | 95.7% |
+
+*ONWSIB is a classified-only snapshot from the tiny visible subset, not a reliable system-wide success rate.*
 

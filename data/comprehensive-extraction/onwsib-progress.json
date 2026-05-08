@@ -1,28 +1,23 @@
 {
-  "totalDecisions": 431,
-  "classified": 431,
+  "totalDecisions": 463,
+  "classified": 463,
   "lastBatchNumber": 5,
   "batches": [
     {
-      "batchNumber": 1,
-      "mergedAt": "2026-05-02T00:45:50.992Z"
+      "batchNumber": 1
     },
     {
-      "batchNumber": 2,
-      "mergedAt": "2026-05-02T00:45:52.307Z"
+      "batchNumber": 2
     },
     {
-      "batchNumber": 3,
-      "mergedAt": "2026-05-02T00:45:53.673Z"
+      "batchNumber": 3
     },
     {
-      "batchNumber": 4,
-      "mergedAt": "2026-05-02T00:45:55.012Z"
+      "batchNumber": 4
     },
     {
-      "batchNumber": 5,
-      "mergedAt": "2026-05-02T00:45:56.155Z"
+      "batchNumber": 5
     }
   ],
-  "startedAt": "2026-05-02T00:45:49.459Z"
+  "startedAt": "2026-05-08T19:37:58.564Z"
 }

@@ -16,9 +16,11 @@
 | Tribunal | Win Rate | Total Decisions | Source |
 |----------|----------|----------------|--------|
 | WSIAT | **89.1%** | 11,430 | CanLII 2020-2026 |
-| ONWSIB | **83.3%** | 431 | CanLII 2020-2026 |
+| ONWSIB | **89.5%*** | 463 | CanLII 2020-2026 (classified-only subset; 95.7% unresolved) |
 | ONSBT | **98.9%** | 14,298 | CanLII 2020-2026 |
 | HRTO | **12.7%** | 9,268 | CanLII 2020-2026 |
+
+*ONWSIB remains mostly unresolved in public records and should not be presented as a system-wide success rate.*
 
 **HRTO Abandonment:** 43.9% (4,073 cases)
 

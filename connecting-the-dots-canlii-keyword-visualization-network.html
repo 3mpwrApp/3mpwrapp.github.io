@@ -564,14 +564,14 @@
     <div class="container">
         <div class="header">
             <h1>Connecting the Dots: Ontario Tribunal Network (2020-2026)</h1>
-            <p>Interactive keyword relationship mapping across all four Ontario tribunals: WSIAT (11,430 cases), HRTO (9,269 cases), ONSBT (13,798 cases), ONWSIB (431 cases). Complete 2020-2026 analysis. Canada-wide expansion in progress.</p>
+            <p>Interactive keyword relationship mapping across all four Ontario tribunals: WSIAT (11,430 cases), HRTO (9,269 cases), ONSBT (13,798 cases), ONWSIB (463 cases). Complete 2020-2026 analysis. Canada-wide expansion in progress.</p>
         </div>
 
         <div class="info-panel">
             <h3>📊 What This Visualization Shows:</h3>
             <ul>
-                <li><strong>Nodes (circles):</strong> Keywords from <strong>34,928 Ontario tribunal decisions</strong> (2020-2026) across all four tribunals</li>
-                <li><strong>Coverage:</strong> WSIAT (11,430 cases), HRTO (9,269 cases), ONSBT (13,798 cases), ONWSIB (431 cases)</li>
+                <li><strong>Nodes (circles):</strong> Keywords from <strong>34,960 Ontario tribunal decisions</strong> (2020-2026) across all four tribunals</li>
+                <li><strong>Coverage:</strong> WSIAT (11,430 cases), HRTO (9,269 cases), ONSBT (13,798 cases), ONWSIB (463 cases)</li>
                 <li><strong>Edges (lines):</strong> Co-occurrence frequency (how often keywords appear in the same case)</li>
                 <li><strong>Thicker lines:</strong> More frequent co-occurrence (statistically significant clustering)</li>
                 <li><strong>Node size:</strong> Larger = appears in more cases overall (frequency-weighted)</li>
@@ -593,7 +593,7 @@
                     <option value="wsiat">WSIAT Only (Workplace Safety & Insurance Appeals - 11,430 cases)</option>
                     <option value="hrto">HRTO Only (Human Rights Tribunal of Ontario - 9,269 cases)</option>
                     <option value="onsbt">ONSBT Only (Social Benefits Tribunal - 13,798 cases)</option>
-                    <option value="onwsib">ONWSIB Only (WSIB Internal Review - 431 cases)</option>
+                    <option value="onwsib">ONWSIB Only (WSIB Internal Review - 463 cases)</option>
                 </select>
             </div>
 
@@ -697,11 +697,11 @@
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #0f766e;"></div>
-                    <span><strong>Tribunal Nodes:</strong> WSIAT (11,430 workplace injury) | HRTO (9,269 human rights) | ONSBT (13,798 disability benefits) | ONWSIB (431 internal review)</span>
+                    <span><strong>Tribunal Nodes:</strong> WSIAT (11,430 workplace injury) | HRTO (9,269 human rights) | ONSBT (13,798 disability benefits) | ONWSIB (463 internal review)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #111827;"></div>
-                    <span><strong>Province Node:</strong> Ontario (34,928 total decisions) - Canada-wide expansion in progress</span>
+                    <span><strong>Province Node:</strong> Ontario (34,960 total decisions) - Canada-wide expansion in progress</span>
                 </div>
             </div>
             <p style="margin-top: 15px; font-size: 0.9em; color: #6c757d; font-style: italic;">
@@ -721,8 +721,8 @@
     <script>
         // Verified co-occurrence data from keyword-frequency-analysis.json
         // Updated: April 27, 2026 - Complete Ontario tribunal integration
-        // Sources: WSIAT 11,430 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 431 cases (2020-2026)
-        // Total: 34,928 Ontario tribunal decisions analyzed
+        // Sources: WSIAT 11,430 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 463 cases (2020-2026)
+        // Total: 34,960 Ontario tribunal decisions analyzed
         const coOccurrenceData = {
             "pre-existing": {
                 "worker": 1521,  // Updated: pre-existing appears in 13.31% of cases
@@ -761,14 +761,14 @@
 
         // Ontario tribunal connection seed data (can expand province-by-province)
         // Updated: April 27, 2026 - Comprehensive Ontario tribunal analysis (2020-2026)
-        // Sources: WSIAT 11,430 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 431 cases
+        // Sources: WSIAT 11,430 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 463 cases
         const ontarioConnectionData = {
             ontario: {
                 totals: {
                     onwsiat: 11430,  // Verified: WSIAT appeals 2020-2026
                     onhrt: 9269,     // Verified: HRTO (Human Rights Tribunal of Ontario) 2020-2026
                     onsbt: 13798,    // Verified: ONSBT (Social Benefits Tribunal) 2020-2026
-                    onwsib: 431      // Verified: ONWSIB (WSIB internal review) 2020-2026
+                    onwsib: 463      // Verified: ONWSIB (WSIB internal review) 2020-2026
                 },
                 tribunalKeywords: {
                     onwsiat: {
@@ -800,7 +800,7 @@
                         "anxiety": 849                     // Updated: 6.2% of cases
                     },
                     onwsib: {
-                        "work-related injury": 52,    // Updated: 12.1% of 431 cases
+                        "work-related injury": 52,    // Updated: 11.2% of 463 cases
                         "worker-related": 345,        // Updated: 80.0% of cases
                         "employer obligations": 50,   // Updated: 11.6% of cases
                         "pre-existing condition": 31, // Updated: 7.2% of cases (fixed inconsistency)
@@ -1163,7 +1163,7 @@
             // Factual tribunal data from complete 2020-2026 analysis
             const tribunalStats = `
                 <div class="stat-card">
-                    <div class="stat-value">34,928</div>
+                    <div class="stat-value">34,960</div>
                     <div class="stat-label">Total Ontario Decisions (2020-2026)</div>
                 </div>
                 <div class="stat-card">
@@ -1183,7 +1183,7 @@
                     <div class="stat-label">ONSBT Cases (Disability Benefits)</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">431</div>
+                    <div class="stat-value">463</div>
                     <div class="stat-label">ONWSIB Cases (WSIB Internal Review)</div>
                 </div>
             `;
@@ -1247,7 +1247,7 @@
                         'wsiat': 'WSIAT (Workplace Injury Appeals - 11,430 cases)',
                         'hrto': 'HRTO (Human Rights - 9,269 cases)',
                         'onsbt': 'ONSBT (Disability Benefits - 13,798 cases)',
-                        'onwsib': 'ONWSIB (WSIB Internal Review - 431 cases)'
+                        'onwsib': 'ONWSIB (WSIB Internal Review - 463 cases)'
                     };
                     modeIndicator.textContent = `${tribunalNames[scope]} Keyword Network`;
                 }

@@ -1,0 +1,148 @@
+{
+  "scrape_date": "2026-05-08T07:39:47.821Z",
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "stats": [
+    {
+      "year": 2020,
+      "total": 840,
+      "worker_injury_cases": 1,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 516,
+        "Appeal Dismissed": 142,
+        "Remitted to Lower Court/Tribunal": 8,
+        "Appeal Allowed": 23,
+        "Costs Decision": 104,
+        "Motion/Interlocutory Decision": 19,
+        "New Trial/Hearing Ordered": 17,
+        "Settled/Discontinued": 4,
+        "Leave to Appeal Refused": 3,
+        "Leave to Appeal Granted": 4
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2021,
+      "total": 924,
+      "worker_injury_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 567,
+        "Motion/Interlocutory Decision": 30,
+        "Costs Decision": 107,
+        "Appeal Dismissed": 155,
+        "Remitted to Lower Court/Tribunal": 15,
+        "Appeal Allowed": 22,
+        "New Trial/Hearing Ordered": 12,
+        "Leave to Appeal Granted": 8,
+        "Leave to Appeal Refused": 5,
+        "Settled/Discontinued": 3
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2022,
+      "total": 890,
+      "worker_injury_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Motion/Interlocutory Decision": 16,
+        "Appeal Dismissed": 182,
+        "Unknown": 531,
+        "Costs Decision": 100,
+        "New Trial/Hearing Ordered": 16,
+        "Leave to Appeal Refused": 6,
+        "Appeal Allowed": 20,
+        "Settled/Discontinued": 4,
+        "Leave to Appeal Granted": 7,
+        "Remitted to Lower Court/Tribunal": 8
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2023,
+      "total": 849,
+      "worker_injury_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 468,
+        "Appeal Dismissed": 201,
+        "Costs Decision": 96,
+        "Leave to Appeal Refused": 6,
+        "Appeal Allowed": 29,
+        "New Trial/Hearing Ordered": 18,
+        "Settled/Discontinued": 4,
+        "Remitted to Lower Court/Tribunal": 7,
+        "Motion/Interlocutory Decision": 19,
+        "Leave to Appeal Granted": 1
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2024,
+      "total": 314,
+      "worker_injury_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 150,
+        "Costs Decision": 34,
+        "Appeal Dismissed": 89,
+        "Motion/Interlocutory Decision": 9,
+        "New Trial/Hearing Ordered": 7,
+        "Appeal Allowed": 15,
+        "Leave to Appeal Refused": 1,
+        "Remitted to Lower Court/Tribunal": 4,
+        "Settled/Discontinued": 2,
+        "Leave to Appeal Granted": 3
+      },
+      "duration_minutes": "79.3"
+    },
+    {
+      "year": 2025,
+      "total": 896,
+      "worker_injury_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Costs Decision": 122,
+        "Unknown": 619,
+        "Leave to Appeal Granted": 7,
+        "Appeal Dismissed": 93,
+        "Appeal Allowed": 13,
+        "Motion/Interlocutory Decision": 19,
+        "Settled/Discontinued": 6,
+        "Leave to Appeal Refused": 4,
+        "Remitted to Lower Court/Tribunal": 5,
+        "New Trial/Hearing Ordered": 8
+      },
+      "duration_minutes": "228.2"
+    },
+    {
+      "year": 2026,
+      "total": 321,
+      "worker_injury_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Appeal Dismissed": 161,
+        "Appeal Allowed": 34,
+        "Costs Decision": 27,
+        "Motion/Interlocutory Decision": 12,
+        "Unknown": 75,
+        "Remitted to Lower Court/Tribunal": 2,
+        "Leave to Appeal Granted": 2,
+        "New Trial/Hearing Ordered": 7,
+        "Leave to Appeal Refused": 1
+      },
+      "duration_minutes": "81.2"
+    }
+  ],
+  "total_cases": 5034,
+  "total_worker_injury_cases": 1
+}

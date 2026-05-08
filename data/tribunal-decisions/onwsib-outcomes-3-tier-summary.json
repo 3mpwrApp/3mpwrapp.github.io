@@ -1,22 +1,22 @@
 {
   "database": "onwsib",
-  "created_at": "2026-04-26T21:47:13.547Z",
-  "total_cases": 431,
+  "created_at": "2026-05-08T19:32:32.512Z",
+  "total_cases": 463,
   "tiers": {
     "A": 1,
     "B": 19,
-    "C": 411
+    "C": 443
   },
   "outcomes": {
     "Granted": 17,
     "Denied": 2,
     "Deferred": 0,
     "Other": 1,
-    "Unknown": 411
+    "Unknown": 443
   },
   "coverage": {
     "classified_A_or_B": 20,
-    "classified_rate": "4.6",
-    "unresolved_rate": "95.4"
+    "classified_rate": "4.3",
+    "unresolved_rate": "95.7"
   }
 }

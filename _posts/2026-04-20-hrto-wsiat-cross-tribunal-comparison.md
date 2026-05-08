@@ -209,14 +209,11 @@ We analyzed **431 ONWSIB internal review decisions** from the same period and fo
 
 | Outcome | Count | Percentage |
 |---------|-------|------------|
-| unclear | 413 | 95.8% |
-| partial | 8 | 1.9% |
-| other | 6 | 1.4% |
-| denied | 2 | 0.5% |
-| allowed | 1 | 0.2% |
-| remitted | 1 | 0.2% |
+| unresolved | 443 | 95.7% |
+| tier-b probable | 19 | 4.1% |
+| tier-a confirmed | 1 | 0.2% |
 
-**Worker Success Rate:** 83.3% from 12 clear outcomes (10 wins: 1 allowed + 8 partial + 1 remitted)
+**Outcome note:** The reconciled ONWSIB archive now contains 463 decisions (2020-2026). Public outcome language remains too incomplete for a reliable ONWSIB success-rate claim. The current safest summary is 95.7% unresolved in public records, with a local deep-dive adding 12 high-confidence reads and 6 manual-review candidates.
 
 **ONSBT (Ontario Social Benefits Tribunal - ODSP/OW Appeals - 14,298 decisions, 2020-2026):**
 
@@ -235,15 +232,17 @@ We analyzed **431 ONWSIB internal review decisions** from the same period and fo
 |----------|----------------|----------------|------------|----------|-------------|
 | **WSIAT** (workplace injury appeals) | 11,430 | 649 | 5.7% | 73.5% | 94.3% |
 | **ONSBT** (social benefits appeals) | 14,298 | 8,071 | 56.4% | 98.9% | 34.3% |
-| **ONWSIB** (internal WSIB review) | 431 | 12 | 2.8% | 83.3% | 95.8% |
+| **ONWSIB** (internal WSIB review) | 463 | 20* | 4.3% | not reliable | 95.7% |
 | **HRTO** (human rights) | 3,186 | 2,274 | 71.4% | 0.7% | ~28% |
 
 **Key Insights:**
 
 1. **ONSBT has 16x higher clear outcome rate than WSIAT** (56.4% vs 3.4%) - social benefits eligibility decisions are far more explicit than workplace injury determinations
 2. **ONSBT shows highest worker success rate** - 98.9% success from clear outcomes (only 88 denials out of 14,298 decisions = 0.6%)
-3. **ONWSIB has even worse clarity than WSIAT** - 95.8% unclear vs 77.0%, suggesting internal WSIB reviews lack explicit outcome language
-4. **All three workplace injury tribunals struggle with outcome clarity** - WSIAT (77%), ONWSIB (95.8%), compared to ONSBT (34.3%)
+3. **ONWSIB remains the least transparent workplace-injury dataset in this comparison** - 95.7% unresolved in public records, which prevents a defensible success-rate estimate
+4. **All three workplace injury tribunals struggle with outcome clarity** - WSIAT (94.3% unresolved in the 2020-2026 CanLII subset), ONWSIB (95.7%), compared to ONSBT (34.3%)
+
+\* ONWSIB uses a mixed evidence model here: 1 Tier A confirmed outcome and 19 Tier B probable outcomes. That is sufficient for archive tracking, but not for a population-level success-rate claim.
 5. **Social benefits system more transparent** - ONSBT's eligibility determinations use clearer language: "granted eligibility", "appeal allowed", "not entitled"
 
 **Interpretation:** The striking difference between ONSBT (social benefits) and workplace injury tribunals (WSIAT/ONWSIB) suggests **different tribunal cultures around outcome transparency**. ODSP eligibility appeals result in explicit "allowed/denied" language, while workplace injury decisions often use medical/procedural terminology that obscures final outcomes.

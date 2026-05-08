@@ -6,7 +6,7 @@ permalink: /templates/back-injury-appeal/
 
 # Back Injury Appeal Letter Template
 
-*Based on 830 back injury cases from WSIAT decisions*
+*Built from recurring back-injury arguments in public Ontario workers' compensation decisions.*
 
 ---
 
@@ -216,7 +216,7 @@ Sincerely,
 
 ---
 
-*Based on review of 830 back injury cases from WSIAT decisions*
+*Built from recurring back-injury reasoning in public Ontario workers' compensation decisions.*
 
 ## Important Disclaimers
 

@@ -5,7 +5,7 @@ date: 2026-04-25 00:00:00 +0000
 tags: [legal-intelligence, canlii, tribunal-research]
 categories: [community-updates, research]
 excerpt: Searchable database of Canadian workplace and disability cases with plain-language summaries - starting with Ontario, expanding daily to all provinces
---- # Feature Spotlight: CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) **Category:** Legal Intelligence Searchable database of Canadian workplace and disability cases with plain-language summaries - starting with Ontario, expanding daily to all provinces --- ## What Is CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide)? CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) is designed to searchable database of canadian workplace and disability cases with plain-language summaries - starting with ontario, expanding daily to all provinces. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- ## Key Highlights - **Starting with Ontario: 34,928 tribunal decisions across 4 tribunals (WSIAT, HRTO, ONSBT, ONWSIB) from 2020-2026**
+--- # Feature Spotlight: CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) **Category:** Legal Intelligence Searchable database of Canadian workplace and disability cases with plain-language summaries - starting with Ontario, expanding daily to all provinces --- ## What Is CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide)? CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) is designed to searchable database of canadian workplace and disability cases with plain-language summaries - starting with ontario, expanding daily to all provinces. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- ## Key Highlights - **Starting with Ontario: 34,960 tribunal decisions across 4 tribunals (WSIAT, HRTO, ONSBT, ONWSIB) from 2020-2026**
 - **NEW: AI-powered outcome predictions for 137,252 tribunal decisions (79% accuracy)**
 - **Database grows daily: adding cases from all provinces and territories**
 - **Goal: Complete Canada-wide coverage across all jurisdictions**
@@ -30,12 +30,12 @@ excerpt: Searchable database of Canadian workplace and disability cases with pla
 |----------|----------------|----------|-------------|
 | **WSIAT** (Ontario) | 11,430 | **73.5%*** | 73.5% from 649 classified decisions (438 granted, 158 denied a 2020-2026 CanLII subset) |
 | **ONSBT** (Ontario Benefits) | 14,298 | **98.9%** | 98.9% from 8,071 clear outcomes - highest clarity (56.4%) |
-| **ONWSIB** (WSIB Internal) | 431 | **83.3%** | 83.3% from 12 clear outcomes - 95.8% unclear |
+| **ONWSIB** (WSIB Internal) | 463 | not reliable | 95.7% unresolved in public records; local deep-dive found 12 high-confidence reads |
 | **BCWCAT** (BC) | 7,916 | **86.4%** | Strong odds with proper medical evidence |
 | **Other Tribunals** | 77,718 | **84.1%** | Consistently high success rates |
 | **HRTO** (Human Rights) | 9,269 | ~varies | High abandonment (73.5%), but winnable | <small>*WSIAT 73.5% grant rate from 649 classified decisions (onwsiat-outcomes-3-tier-summary.json); official stats show 60-70% overall success. 94.3% of decisions unresolved.</small> **May 1, 2026 Update:** Complete classification now available for Ontario social tribunals:
 - **ONSBT (Social Benefits Tribunal):** 14,298 decisions analyzed (2020-2026) - 55.8% explicitly allowed, only 0.6% denied
-- **ONWSIB (WSIB Internal Review):** 431 decisions analyzed (2021-2025) - 95.8% unclear outcomes (lacks explicit outcome language)
+- **ONWSIB (WSIB Internal Review):** 463 decisions analyzed (2020-2026) - 95.7% unresolved outcomes in public records (lacks explicit outcome language)
 - **Key Finding:** Social benefits appeals (ONSBT) have 16x clearer outcomes than workplace injury appeals (WSIAT) - 56.4% vs 3.4% clear rate ### What This Means for You - **If you're appealing a WSIB denial:** Historical data shows 86-100% success rates across jurisdictions
 - **If you're filing a human rights complaint:** 14% of cases are abandonedabut those who persist have strong odds
 - **If you're appealing ODSP/OW denial:** Tribunal shows favorable outcomes for properly documented cases ### How We Built This - **Training data:** 256,734 labeled examples from 105 tribunal decision files

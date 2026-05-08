@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T21:26:30.252Z",
+  "generated_at": "2026-05-08T19:03:21.973Z",
   "mode": "sidecar",
   "summary": [
     {
@@ -8,16 +8,16 @@
       "beforeKnown": 0,
       "afterKnown": 0,
       "netGain": 0,
-      "predMinConfidence": 0.8,
+      "predMinConfidence": 0.55,
       "outputFile": "onwsib-2020-complete-deep-dive.json"
     },
     {
       "year": 2021,
-      "total": 28,
-      "beforeKnown": 0,
-      "afterKnown": 1,
-      "netGain": 1,
-      "predMinConfidence": 0.8,
+      "total": 49,
+      "beforeKnown": 2,
+      "afterKnown": 2,
+      "netGain": 0,
+      "predMinConfidence": 0.55,
       "outputFile": "onwsib-2021-complete-deep-dive.json"
     },
     {
@@ -26,7 +26,7 @@
       "beforeKnown": 0,
       "afterKnown": 2,
       "netGain": 2,
-      "predMinConfidence": 0.8,
+      "predMinConfidence": 0.55,
       "outputFile": "onwsib-2022-complete-deep-dive.json"
     },
     {
@@ -35,7 +35,7 @@
       "beforeKnown": 0,
       "afterKnown": 1,
       "netGain": 1,
-      "predMinConfidence": 0.8,
+      "predMinConfidence": 0.55,
       "outputFile": "onwsib-2023-complete-deep-dive.json"
     },
     {
@@ -44,25 +44,25 @@
       "beforeKnown": 0,
       "afterKnown": 0,
       "netGain": 0,
-      "predMinConfidence": 0.8,
+      "predMinConfidence": 0.55,
       "outputFile": "onwsib-2024-complete-deep-dive.json"
     },
     {
       "year": 2025,
-      "total": 61,
-      "beforeKnown": 0,
-      "afterKnown": 2,
-      "netGain": 2,
-      "predMinConfidence": 0.8,
+      "total": 64,
+      "beforeKnown": 3,
+      "afterKnown": 3,
+      "netGain": 0,
+      "predMinConfidence": 0.55,
       "outputFile": "onwsib-2025-complete-deep-dive.json"
     },
     {
       "year": 2026,
-      "total": 0,
-      "beforeKnown": 0,
-      "afterKnown": 0,
+      "total": 8,
+      "beforeKnown": 4,
+      "afterKnown": 4,
       "netGain": 0,
-      "predMinConfidence": 0.8,
+      "predMinConfidence": 0.55,
       "outputFile": "onwsib-2026-complete-deep-dive.json"
     }
   ]

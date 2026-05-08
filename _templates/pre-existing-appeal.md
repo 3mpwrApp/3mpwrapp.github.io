@@ -6,7 +6,7 @@ permalink: /templates/pre-existing-appeal/
 
 # Pre-Existing Condition Appeal Template
 
-*Based on 96 WSIAT cases where pre-existing condition was successfully argued*
+*Built from recurring pre-existing-condition arguments in public Ontario workers' compensation decisions. For ONWSIB archive limits and local review notes, see the [ONWSIB Deep-Dive Method Note](/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html).*
 
 ---
 
@@ -288,7 +288,7 @@ Sincerely,
 
 ---
 
-*Based on 96 successful pre-existing condition cases from WSIAT*
+*Built from recurring pre-existing-condition reasoning in public Ontario workers' compensation decisions.*
 
 ## Important Disclaimers
 

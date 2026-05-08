@@ -13,7 +13,7 @@ NotebookLM analysis of Ontario tribunal decisions revealed the **root cause** of
 **The Problem:**
 - Our keyword extraction searches for **legal tribunal language** ("appeal allowed", "granted")
 - WSIB internal reviews use **administrative bureaucratic language** ("upon review, the Board finds...")
-- **Result:** 95.4% of ONWSIB decisions classified as "Unknown" despite having clear outcomes
+- **Result:** 95.7% of ONWSIB decisions classified as "Unknown" despite having clear outcomes
 
 **The Solution:**
 - Add 100+ tribunal-specific administrative phrases
@@ -69,7 +69,7 @@ Example: `1129/10R`
 - WSIB internal reviews are NOT tribunal decisions
 - They use internal administrative language
 - Our legal keyword extraction completely missed these patterns
-- **This is why 95.4% were Unknown!**
+- **This is why 95.7% were Unknown!**
 
 ---
 
@@ -116,8 +116,8 @@ NotebookLM identified several "hidden" outcome indicators:
 
 #### **ONWSIB (WSIB Internal Reviews):**
 - **Critical Discovery:** Uses administrative language, NOT tribunal language
-- **Problem:** Only 431 public decisions vs. 11,430 WSIAT cases
-- **Limitation:** 95.4% Unknown likely to remain ~70% due to limited public data
+- **Problem:** Only 463 public decisions vs. 11,430 WSIAT cases
+- **Limitation:** 95.7% Unknown likely to remain ~70% due to limited public data
 - **Pattern:** "Upon review, the board finds...", "original decision is maintained..."
 
 #### **ONHRT (Ontario Human Rights Tribunal):**

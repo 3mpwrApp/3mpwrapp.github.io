@@ -1002,13 +1002,14 @@ description: Interactive data visualizations and research tools analyzing tribun
       <h4 style="margin: 0 0 0.5rem; color: #b71c1c;">🏢 ONWSIB</h4>
       <p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #c62828; font-weight: 600;">Ontario WSIB First-Level Decisions</p>
       <div style="background: white; padding: 1rem; border-radius: 6px; margin: 0.75rem 0;">
-        <div style="font-size: 2rem; font-weight: bold; color: #d32f2f;">431</div>
-        <div style="font-size: 0.85rem; color: #666;">decisions (2021-2026)</div>
+        <div style="font-size: 2rem; font-weight: bold; color: #d32f2f;">463</div>
+        <div style="font-size: 0.85rem; color: #666;">decisions (2020-2026)</div>
       </div>
       <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: #333;">
         <strong>Level:</strong> Initial WSIB claim decisions<br>
-        <strong>Focus:</strong> Compare first-level vs appeal outcomes<br>
-        <strong>Status:</strong> ⚠️ Collection in progress
+        <strong>Focus:</strong> Internal review record and public transparency gap<br>
+        <strong>Method:</strong> <a href="/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html">Local deep-dive note</a><br>
+        <strong>Status:</strong> ✅ Reconciled and complete
       </p>
       <a href="/data/tribunal-decisions/" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #d32f2f; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Raw Files →</a>
     </div>
@@ -1291,11 +1292,11 @@ description: Interactive data visualizations and research tools analyzing tribun
       </tr>
       <tr>
         <td style="padding: 0.75rem;"><strong>ONWSIB</strong><br><small>WSIB internal reviews</small></td>
-        <td style="padding: 0.75rem; text-align: right;">431</td>
+        <td style="padding: 0.75rem; text-align: right;">463</td>
         <td style="padding: 0.75rem; text-align: right;">1 (0.2%)</td>
         <td style="padding: 0.75rem; text-align: right;">19 (4.4%)</td>
-        <td style="padding: 0.75rem; text-align: right;">411 (95.4%)</td>
-        <td style="padding: 0.75rem;"><small>89.5% probable grant rate, very limited data</small></td>
+        <td style="padding: 0.75rem; text-align: right;">443 (95.7%)</td>
+        <td style="padding: 0.75rem;"><small>95.7% unresolved in public records; local deep-dive found 12 high-confidence reads and 6 manual-review candidates.</small></td>
       </tr>
     </tbody>
   </table>

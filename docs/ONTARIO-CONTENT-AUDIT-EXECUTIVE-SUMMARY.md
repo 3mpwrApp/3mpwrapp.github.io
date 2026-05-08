@@ -39,7 +39,7 @@
 **Added Context:**
 - Win rate calculation: (Allowed 503 + Settled 221) / Clear Outcomes 5,699 = 12.7%
 - Abandonment rate: 43.9% (4,073 cases)
-- Cross-tribunal comparison: WSIAT 89.1%, ONWSIB 83.3%, ONSBT 98.9%, HRTO 12.7%
+- Cross-tribunal comparison: WSIAT 89.1%, ONSBT 98.9%, HRTO 12.7%; ONWSIB public records remain 95.7% unresolved, with only a classified-only 89.5% subset snapshot
 - Systemic barriers: Email notification failures, complex procedures
 
 **Impact:** Corrected misleading historical stat with comprehensive classified data
@@ -76,15 +76,17 @@
 | Tribunal | Win Rate | Total Decisions | Abandonment | Source |
 |----------|----------|----------------|-------------|--------|
 | **WSIAT** | **89.1%** | 11,430 | N/A | CanLII subset 2020-2026 |
-| **ONWSIB** | **83.3%** | 431 | N/A | CanLII 2020-2026 |
+| **ONWSIB** | **89.5%*** | 463 | **95.7% unresolved** | CanLII 2020-2026 |
 | **ONSBT** | **98.9%** | 14,298 | Low | CanLII 2020-2026 |
 | **HRTO** | **12.7%** | 9,268 | **43.9%** | CanLII 2020-2026 |
+
+*ONWSIB reflects only the small classified subset visible in public records. It should not be presented as a system-wide success rate.*
 
 ### Win Rate Calculation Method
 - **Clear Outcomes:** Allowed + Denied + Settled (excludes Abandoned, Unclear, Other)
 - **WSIAT:** 350 wins / 393 clear outcomes = 89.1%
 - **ONSBT:** 7,972 wins / 8,060 clear outcomes = 98.9%
-- **ONWSIB:** 30 wins / 36 clear outcomes = 83.3%
+- **ONWSIB:** 17 granted, 2 denied, and 1 other classified outcome in a 463-case archive; 443 cases remain unresolved in public records
 - **HRTO:** 724 wins / 5,699 clear outcomes = 12.7%
 
 ---
@@ -245,5 +247,5 @@
 **Classification data sources:**
 - WSIAT: 11,430 decisions (CanLII 2020-2026)
 - ONSBT: 14,298 decisions (CanLII 2020-2026)
-- ONWSIB: 431 decisions (CanLII 2020-2026)
+- ONWSIB: 463 decisions (CanLII 2020-2026), with 95.7% unresolved public outcomes
 - HRTO: 9,268 decisions (CanLII 2020-2026)

@@ -14,9 +14,11 @@
 | Tribunal | Win Rate | Total Decisions | Source |
 |----------|----------|----------------|--------|
 | WSIAT | **89.1%** | 11,430 | CanLII subset 2020-2026 |
-| ONWSIB | **83.3%** | 431 | CanLII 2020-2026 |
+| ONWSIB | **89.5%*** | 463 | CanLII 2020-2026 |
 | ONSBT | **98.9%** | 14,298 | CanLII 2020-2026 |
 | HRTO | **12.7%** | 9,268 | CanLII 2020-2026 |
+
+*ONWSIB remains 95.7% unresolved in public records, so this is only a classified-only visible-subset snapshot.*
 
 ## Tribunal Mentions by File Type
 
@@ -201,7 +203,14 @@
 - **Expected:** 98.9%
 - **Found:** 60%
 - **Difference:** 38.9%
-- **Context:** "imated** - We made an informed guess based on patterns - Not directly measured - Example: "ONSBT success rate 40-60% (limited public data)"  ### 🔗 **External** - Data from another source - We"
+- **Context:** "imated**
+ - We made an informed guess based on patterns
+ - Not directly measured
+ - Example: "ONSBT success rate 40-60% (limited public data)"
+ 
+ ### 🔗 **External**
+ - Data from another source
+ - We"
 
 ### [`docs\CANLII_OUTCOME_DEPLOYMENT_COMPLETE_2026-04-28.md`](docs\CANLII_OUTCOME_DEPLOYMENT_COMPLETE_2026-04-28.md) Line 399
 - **Tribunal:** WSIAT
@@ -215,35 +224,72 @@
 - **Expected:** 89.1%
 - **Found:** 69%
 - **Difference:** 20.1%
-- **Context:** "ation Not Found: 2,430  **Analysis:** HRTO has dramatically worse outcomes than WSIAT. Only 2.66% success rate vs WSIAT's 69% success rate.  ---  ### 2. ONSBT Appeals (24 files) **Source:** Tri"
+- **Context:** "ation Not Found: 2,430
+ 
+ **Analysis:** HRTO has dramatically worse outcomes than WSIAT. Only 2.66% success rate vs WSIAT's 69% success rate.
+ 
+ ---
+ 
+ ### 2. ONSBT Appeals (24 files)
+ **Source:** Tri"
 
 ### [`docs\COMPREHENSIVE-PARSING-SUMMARY-2026-04-30.md`](docs\COMPREHENSIVE-PARSING-SUMMARY-2026-04-30.md) Line 180
 - **Tribunal:** WSIAT
 - **Expected:** 89.1%
 - **Found:** 69%
 - **Difference:** 20.1%
-- **Context:** "ng Registered/Allowed | N/A | Pending | Good - Open Data |  **Key Finding:** WSIAT has 26x higher success rate than HRTO (69% vs 2.66%).  ---  ## 📂 Output Files Generated  All outputs saved t"
+- **Context:** "ng Registered/Allowed | N/A | Pending | Good - Open Data |
+ 
+ **Key Finding:** WSIAT has 26x higher success rate than HRTO (69% vs 2.66%).
+ 
+ ---
+ 
+ ## 📂 Output Files Generated
+ 
+ All outputs saved t"
 
 ### [`docs\COMPREHENSIVE-PARSING-SUMMARY-2026-04-30.md`](docs\COMPREHENSIVE-PARSING-SUMMARY-2026-04-30.md) Line 24
 - **Tribunal:** ONSBT
 - **Expected:** 98.9%
 - **Found:** 69%
 - **Difference:** 29.9%
-- **Context:** "ation Not Found: 2,430  **Analysis:** HRTO has dramatically worse outcomes than WSIAT. Only 2.66% success rate vs WSIAT's 69% success rate.  ---  ### 2. ONSBT Appeals (24 files) **Source:** Tri"
+- **Context:** "ation Not Found: 2,430
+ 
+ **Analysis:** HRTO has dramatically worse outcomes than WSIAT. Only 2.66% success rate vs WSIAT's 69% success rate.
+ 
+ ---
+ 
+ ### 2. ONSBT Appeals (24 files)
+ **Source:** Tri"
 
 ### [`docs\COMPREHENSIVE-PARSING-SUMMARY-2026-04-30.md`](docs\COMPREHENSIVE-PARSING-SUMMARY-2026-04-30.md) Line 24
 - **Tribunal:** HRTO
 - **Expected:** 12.7%
 - **Found:** 69%
 - **Difference:** 56.3%
-- **Context:** "ation Not Found: 2,430  **Analysis:** HRTO has dramatically worse outcomes than WSIAT. Only 2.66% success rate vs WSIAT's 69% success rate.  ---  ### 2. ONSBT Appeals (24 files) **Source:** Tri"
+- **Context:** "ation Not Found: 2,430
+ 
+ **Analysis:** HRTO has dramatically worse outcomes than WSIAT. Only 2.66% success rate vs WSIAT's 69% success rate.
+ 
+ ---
+ 
+ ### 2. ONSBT Appeals (24 files)
+ **Source:** Tri"
 
 ### [`docs\COMPREHENSIVE-PARSING-SUMMARY-2026-04-30.md`](docs\COMPREHENSIVE-PARSING-SUMMARY-2026-04-30.md) Line 180
 - **Tribunal:** HRTO
 - **Expected:** 12.7%
 - **Found:** 69%
 - **Difference:** 56.3%
-- **Context:** "ng Registered/Allowed | N/A | Pending | Good - Open Data |  **Key Finding:** WSIAT has 26x higher success rate than HRTO (69% vs 2.66%).  ---  ## 📂 Output Files Generated  All outputs saved t"
+- **Context:** "ng Registered/Allowed | N/A | Pending | Good - Open Data |
+ 
+ **Key Finding:** WSIAT has 26x higher success rate than HRTO (69% vs 2.66%).
+ 
+ ---
+ 
+ ## 📂 Output Files Generated
+ 
+ All outputs saved t"
 
 ### [`docs\MAXIMUM-EXTRACTION-RESULTS.md`](docs\MAXIMUM-EXTRACTION-RESULTS.md) Line 75
 - **Tribunal:** WSIAT
@@ -309,7 +355,7 @@
 2. Update all statistics to match classified data:
    - WSIAT: 89.1% (11,430 decisions)
    - ONSBT: 98.9% (14,298 decisions)
-   - ONWSIB: 83.3% (431 decisions)
+   - ONWSIB: 463 decisions with 95.7% unresolved public outcomes; only the visible classified subset yields an 89.5% snapshot
    - HRTO: 12.7% (9,268 decisions)
 3. Add HRTO content where missing (new tribunal)
 4. Verify external links to CanLII, WSIAT, HRTO, WSIB

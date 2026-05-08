@@ -625,7 +625,7 @@ A: **NO.** Employer can dispute, but WSIB makes the decision (not employer). Emp
 
 **3mpwrApp Knowledge Base:**
 - [Shoulder Injuries: The Hidden Epidemic](shoulder-rotator-cuff-claims.md) - #1 litigated body part (1,391 cases)
-- [Pre-Existing Conditions: Countering WSIB's Favorite Denial](pre-existing-conditions.md) - 13.3% (95% CI: 12.7-13.9%) of cases
+- [Pre-Existing Conditions: What You Need to Know](pre-existing-conditions.md) - archive frequency, legal test, and evidence strategy
 - [Chronic Pain Claims](chronic-pain-claims.md) - If knee injury leads to chronic pain
 - [Permanent Impairment Ratings](permanent-impairment-rating.md) - Maximizing NEL benefits
 

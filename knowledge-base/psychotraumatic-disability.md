@@ -105,7 +105,7 @@ WSIB claims your mental injury stems from:
 **How to counter**: Show a **specific traumatic event** separate from employment decisions
 
 ### "Pre-existing mental health condition"
-Similar to physical pre-existing conditions (**96 cases** show this pattern):
+Similar to physical pre-existing condition disputes seen across the broader archive:
 - Had depression/anxiety before
 - WSIB says work didn't cause it
 

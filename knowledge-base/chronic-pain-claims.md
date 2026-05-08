@@ -68,7 +68,7 @@ From our analysis of 186 cases:
 
 ## The "Pre-Existing Condition" Defense
 
-**96 cases** mention pre-existing conditions. WSIB will argue:
+Pre-existing condition arguments recur across the published workers' compensation record. WSIB will argue:
 - "You had pain before the workplace injury"
 - "The work accident didn't cause your chronic pain"
 
