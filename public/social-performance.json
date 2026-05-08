@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-05-07T04:23:26.316Z",
+  "generated": "2026-05-08T03:59:33.331Z",
   "insights": {
-    "timestamp": "2026-05-07T04:23:26.285Z",
+    "timestamp": "2026-05-08T03:59:33.294Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-05-07T04:23:26.292Z",
+      "lastUpdated": "2026-05-08T03:59:33.301Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -39,22 +39,22 @@
       "currentTrending": [
         {
           "tag": "disabilityrights",
-          "mentions": 43,
+          "mentions": 44,
           "source": "emerging"
         },
         {
           "tag": "accessibility",
-          "mentions": 43,
+          "mentions": 41,
           "source": "emerging"
         },
         {
           "tag": "a11y",
-          "mentions": 28,
+          "mentions": 26,
           "source": "emerging"
         },
         {
           "tag": "disabilityjustice",
-          "mentions": 26,
+          "mentions": 25,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-05-07T04:23:26.296Z",
+      "lastUpdated": "2026-05-08T03:59:33.305Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-05-07T04:23:26.292Z",
+    "lastUpdated": "2026-05-08T03:59:33.301Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -102,22 +102,22 @@
     "currentTrending": [
       {
         "tag": "disabilityrights",
-        "mentions": 43,
+        "mentions": 44,
         "source": "emerging"
       },
       {
         "tag": "accessibility",
-        "mentions": 43,
+        "mentions": 41,
         "source": "emerging"
       },
       {
         "tag": "a11y",
-        "mentions": 28,
+        "mentions": 26,
         "source": "emerging"
       },
       {
         "tag": "disabilityjustice",
-        "mentions": 26,
+        "mentions": 25,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-05-07T04:23:26.296Z",
+    "lastUpdated": "2026-05-08T03:59:33.305Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
