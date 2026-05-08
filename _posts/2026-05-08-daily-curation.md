@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Daily News Curation - 2026-05-08"
+date: 2026-05-08
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-05-08
+
+Curated 4 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Province Declares a Public Health Emergency to Combat the Spread of HIV
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73717)
+**Score:** 15.40
+
+### 2. Report Warns of Russian and US Disinformation Campaigns on Alberta Separatism
+Researchers say MAGA influencers and Russian state media are trying to sway opinions.
+[Source](https://thetyee.ca/News/2026/05/07/Report-Warns-Russian-US-Disinformation-Alberta-Separatism/)
+**Score:** 9.50
+
+### 3. Manitoba Government Introduces Budget Implementation Bill That Would Remove Provincial Sales Tax from Groceries
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73737)
+**Score:** 7.50
+
