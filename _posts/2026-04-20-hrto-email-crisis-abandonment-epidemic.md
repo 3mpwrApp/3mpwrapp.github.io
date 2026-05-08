@@ -35,6 +35,15 @@ Automated proxy audit (sample-pack based, Wilson 95% CI):
 
 Interpretation note: the Tier B CI is wide due to very small sample size. This post should be interpreted as a pattern report with explicit uncertainty boundaries, not a definitive merits-outcome census.
 
+---
+
+## See Also
+
+**HRTO Resources:**
+- [**HRTO Complete Guide**](/guides/hrto-complete-guide.md) - Full procedural guide for human rights complaints
+- [**HRTO Analysis Screen**](https://3mpwrapp.ca/resources/hrto-analysis) - Interactive analysis in the app
+- [**HRTO Abandonment Article**](https://3mpwrapp.ca/resources/articles/hrto-abandonment) - Read the full app article
+
 ### Email-Related Abandonment Patterns
 
 **From 3,186 HRTO cases analyzed (2020-2026):**

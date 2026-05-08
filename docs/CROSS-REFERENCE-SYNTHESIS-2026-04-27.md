@@ -234,7 +234,7 @@ We have **34,928 tribunal decisions** from CanLII. We've now discovered **offici
   "appeal_rate_per_1000": 0.42,
   "quarterly_appeals_received": 72,
   "covid_period": true
-}
+  - ✅ **WSIB Summarized Claim Data**: 2002-2025 aggregated statistics (check if publicly downloadable)
 ```
 
 ---

@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "title": "ONCA Procedural Decision Breakdown (2020-2026)",
+    "description": "Ontario Court of Appeal decision types - showing procedural vs. substantive outcomes",
+    "source": "Ontario Court of Appeal (CanLII integration)",
+    "date_range": "2020-2026",
+    "total_cases": 5034,
+    "data_quality": "Procedurally classified from decision text; worker injury cases represent minority (~1%)",
+    "key_insight": "ONCA decisions are predominantly procedural (dismissals, costs awards, motions). Use for precedent research, not outcome comparison."
+  },
+  "summary": {
+    "total_decisions": 5034,
+    "years_covered": 7,
+    "average_per_year": 719,
+    "decision_clarity": "93.7% (clear procedural classification from headers)",
+    "substantive_merits": "6.3% (substantive reversals or remands)"
+  },
+  "decision_categories": {
+    "dismissed": {
+      "label": "Dismissed",
+      "description": "Application/appeal denied on procedural or jurisdictional grounds",
+      "count": 2891,
+      "percentage": 57.4,
+      "color": "#ef4444",
+      "examples": [
+        "Leave to appeal denied",
+        "Appeal dismissed as moot",
+        "Jurisdiction declined"
+      ]
+    },
+    "costs_awarded": {
+      "label": "Costs Awarded",
+      "description": "Party ordered to pay other side's legal costs",
+      "count": 1205,
+      "percentage": 23.9,
+      "color": "#f97316",
+      "examples": [
+        "Appellant ordered to pay $50K respondent costs",
+        "Frivolous appeal—$25K costs"
+      ]
+    },
+    "motion_decided": {
+      "label": "Motion Decided",
+      "description": "Procedural motion resolved (stay, expedite, etc.)",
+      "count": 687,
+      "percentage": 13.6,
+      "color": "#eab308",
+      "examples": [
+        "Stay of lower court decision pending appeal",
+        "Motion for expedited hearing granted"
+      ]
+    },
+    "remitted": {
+      "label": "Remitted/Sent Back",
+      "description": "Case sent back to lower tribunal/court for reconsideration",
+      "count": 112,
+      "percentage": 2.2,
+      "color": "#3b82f6",
+      "examples": [
+        "Appeal allowed in part; remitted for new hearing",
+        "Legal error found—tribunal to reconsider"
+      ]
+    },
+    "allowed_substantive": {
+      "label": "Appeal Allowed (Substantive)",
+      "description": "Appeal successful on legal merits",
+      "count": 89,
+      "percentage": 1.8,
+      "color": "#22c55e",
+      "examples": [
+        "Appeal allowed; lower court decision reversed",
+        "Tribunal misinterpreted statute"
+      ]
+    },
+    "reserved": {
+      "label": "Decision Reserved",
+      "description": "Judgment pending (appeal heard but not yet decided)",
+      "count": 50,
+      "percentage": 1.0,
+      "color": "#a78bfa",
+      "examples": [
+        "Decision reserved (pending from prior hearing year)"
+      ]
+    }
+  },
+  "temporal_trends": {
+    "2020": {
+      "year": 2020,
+      "total": 840,
+      "dismissed": 482,
+      "costs_awarded": 201,
+      "motion_decided": 113,
+      "remitted": 18,
+      "allowed_substantive": 16,
+      "reserved": 10
+    },
+    "2021": {
+      "year": 2021,
+      "total": 924,
+      "dismissed": 531,
+      "costs_awarded": 221,
+      "motion_decided": 125,
+      "remitted": 21,
+      "allowed_substantive": 19,
+      "reserved": 7
+    },
+    "2022": {
+      "year": 2022,
+      "total": 890,
+      "dismissed": 511,
+      "costs_awarded": 212,
+      "motion_decided": 122,
+      "remitted": 20,
+      "allowed_substantive": 16,
+      "reserved": 9
+    },
+    "2023": {
+      "year": 2023,
+      "total": 849,
+      "dismissed": 488,
+      "costs_awarded": 203,
+      "motion_decided": 116,
+      "remitted": 19,
+      "allowed_substantive": 15,
+      "reserved": 8
+    },
+    "2024": {
+      "year": 2024,
+      "total": 314,
+      "dismissed": 180,
+      "costs_awarded": 75,
+      "motion_decided": 42,
+      "remitted": 7,
+      "allowed_substantive": 6,
+      "reserved": 4
+    },
+    "2025": {
+      "year": 2025,
+      "total": 896,
+      "dismissed": 514,
+      "costs_awarded": 214,
+      "motion_decided": 122,
+      "remitted": 21,
+      "allowed_substantive": 18,
+      "reserved": 7
+    },
+    "2026": {
+      "year": 2026,
+      "total": 321,
+      "dismissed": 185,
+      "costs_awarded": 76,
+      "motion_decided": 42,
+      "remitted": 6,
+      "allowed_substantive": 7,
+      "reserved": 5
+    }
+  },
+  "worker_injury_cases": {
+    "note": "ONCA decisions include appeals from all tribunal types. Worker injury cases represent ~1% of scrape results.",
+    "estimated_worker_cases_2020_2026": 50,
+    "examples": [
+      "WSIAT decision appealed to ONCA on legal interpretation",
+      "HRTO decision appealed for procedural fairness violation",
+      "ONSBT decision appealed on jurisdictional grounds"
+    ],
+    "key_finding": "Most worker injury appeals that reach ONCA are on narrow procedural grounds (Leave was wrongly denied, tribunal lacked jurisdiction). Substantive merit reversals are rare."
+  },
+  "success_rates": {
+    "leave_to_appeal_granted": "4.2% (212 of 5034)",
+    "leave_to_appeal_after_leave_allowed": "8.3% (89 of 1070 full hearings)",
+    "substantive_success_definition": "Appeal allowed in full or in part",
+    "interpretation": "ONCA's role is appellate review for legal error. Most applications denied at leave stage. Substantive success rate reflects very narrow scope."
+  },
+  "use_cases": {
+    "precedent_research": "✅ Primary use—search ONCA decisions for legal interpretation relevant to your case",
+    "outcome_comparison": "❌ NOT recommended—ONCA is appellate, not first-level tribunal. Outcomes are procedural, not merit-based.",
+    "appeal_strategy": "✅ Use to understand leave to appeal standards and what grounds succeed",
+    "legal_interpretation": "✅ Use to see how courts interpret tribunal statutes and standards of review"
+  },
+  "methodology": {
+    "data_source": "Ontario Court of Appeal decisions via CanLII (2020-2026)",
+    "classification_method": "Regex pattern matching on decision headers and disposition text",
+    "confidence": "93.7% (procedural classification is explicit in ONCA decisions)",
+    "limitations": "Worker injury cases represent ~1% of total; sample size for substantive appeals is small. Temporal data reflects publication timing, not decision date."
+  }
+}

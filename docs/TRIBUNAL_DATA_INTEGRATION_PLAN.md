@@ -33,7 +33,6 @@ Integrate all CanLII tribunal research (35,928 decisions from 4 Ontario tribunal
 - [ ] ❌ **ONSBT/ONWSIB findings NOT in app**
 - [ ] ❌ **Issue slices NOT in app** (chronic pain, pre-existing, entitlement)
 
----
 
 ## Integration Architecture
 

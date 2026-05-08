@@ -413,6 +413,17 @@ Without outcome data, you **cannot** answer:
 
 ---
 
+## See Also
+
+**WSIAT Resources & Appeal Chain:**
+- [**WSIAT Complete Guide**](/guides/wsiat-complete-guide.md) - Full tactical guide for WSIAT appeals
+- [**WSIAT in App**](https://3mpwrapp.ca/resources/wsiat-analysis) - Interactive decision analysis
+- [**Fresh Evidence Strategies Article**](https://3mpwrapp.ca/resources/articles/wsiat-fresh-evidence) - How to prepare your appeal
+- [**ONWSIB Internal Review**](/_posts/2026-04-26-onwsib-outcome-gap-audit-update.md) - The step before WSIAT (many workers skip it)
+- [**HRTO & WSIAT Cross-Tribunal Comparison**](/_posts/2026-04-20-hrto-wsiat-cross-tribunal-comparison.md) - How outcomes compare
+
+---
+
 ## Call to Action
 
 ### For Workers and Advocates

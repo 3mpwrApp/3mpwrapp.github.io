@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "generated": "2026-05-08",
-  "totalDocuments": 521,
+  "totalDocuments": 522,
   "documents": [
     {
       "id": "blog/2025-10-03-welcome-to-3mpowr.md",
@@ -1549,6 +1549,18 @@
       ],
       "url": "/2026-05-08-feature-spotlight-pei-social-assistance-for-persons-with-disabilities",
       "filesize": 2993
+    },
+    {
+      "id": "blog/2026-05-08-onca-precedent-overview.md",
+      "source": "blog",
+      "title": "2026-05-08-onca-precedent-overview.md",
+      "excerpt": "--- layout: post title: \"Ontario Court of Appeal (ONCA) Precedent Overview: 5,034 Decisions Analyzed\" date: 2026-05-08 00:00:00 +0000 tags: [legal-intelligence, onca, appellate-research] categories: [",
+      "content": "--- layout: post title: \"Ontario Court of Appeal (ONCA) Precedent Overview: 5,034 Decisions Analyzed\" date: 2026-05-08 00:00:00 +0000 tags: [legal-intelligence, onca, appellate-research] categories: [community-updates, research] excerpt: A new ONCA dataset shows 5,034 Ontario Court of Appeal decisions from 2020-2026, with most activity concentrated in dismissals, costs, and procedural motions. --- What ONCA Adds The Ontario Court of Appeal is not a tribunal success-rate dataset. It is a precedent and procedure dataset. That makes it useful for: - Standards of review - Extensions of time - Leave motions - Costs disputes - Remittals and new-hearing orders 2020-2026 Snapshot | Year | Decisions | Notes | |------|-----------|-------| | 2020 | 840 | Large procedural volume | | 2021 | 924 | Highest yearly volume in the scrape | | 2022 | 890 | Heavy motion and appeal activity | | 2023 | 849 | Mostly appellate and costs decisions | | 2024 | 314 | Smaller year, still procedurally active | | 2025 | 896 | High volume again | | 2026 | 321 | Partial-year snapshot | What The Dataset Shows The current scrape covers 5,034 ONCA decisions and only one worker-injury case in the sample. The dominant buckets are procedural rather than merits-heavy: - Appeal dismissed - Costs decisions - Motions and interlocutory orders - Leave to appeal decisions - Remittals to lower courts and tribunals That matters because ONCA is best used for appellate framing, not for tribunal win-rate comparisons. Why It Belongs In The App And Site Adding ONCA helps users find the next level up in the legal process when a tribunal decision has already been made. It also gives the research hub a clean place to point people who need appellate precedent instead of tribunal outcome summaries. If you are comparing ONCA to the tribunal datasets, treat it as a precedent layer, not a direct apples-to-apples outcome scorecard.",
+      "date": "2026-05-08",
+      "tags": [],
+      "categories": [],
+      "url": "/2026-05-08-onca-precedent-overview",
+      "filesize": 1901
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -8234,6 +8246,9 @@
     ],
     "disabilities": [
       "blog/2026-05-08-feature-spotlight-pei-social-assistance-for-persons-with-disabilities.md"
+    ],
+    "2026-05-08-onca-precedent-overview.md": [
+      "blog/2026-05-08-onca-precedent-overview.md"
     ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"

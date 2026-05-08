@@ -7,9 +7,19 @@ tags: [ONSBT, disability-rights, access-to-justice, ODSP, vulnerable-communities
 excerpt: "Comprehensive analysis of 13,798 ONSBT tribunal decisions over seven years reveals systemic patterns in disability eligibility determination, data accessibility gaps, and structural barriers to justice for marginalized populations."
 ---
 
+## See Also
+
+**ONSBT Resources:**
+- [**ONSBT Complete Guide**](/guides/onsbt-complete-guide.md) - Step-by-step appeal procedures
+- [**ONSBT Success Rate Article**](https://3mpwrapp.ca/resources/articles/onsbt-success-rate) - What the 67.4% grant rate means for you
+- [**ONSBT Analysis Screen**](https://3mpwrapp.ca/resources/onsbt-analysis) - Interactive decision analysis
+- [**Accessibility Barriers in ONSBT**](/_posts/2026-04-26-onsbt-accessibility-barriers-vulnerable-communities.md) - Structural barriers affecting vulnerable communities
+
+---
+
 ## Overview: The Data Landscape
 
-From 2020 through 2026, the Ontario Social Benefits Tribunal (ONSBT) recorded **14,298 published decisions** across disability eligibility appeals, overpayment disputes, and regulatory compliance matters. This analysis examines what that dataset reveals—and, critically, what it obscures—about access to justice for people with disabilities navigating Ontario's social benefits system.
+From 2020 through 2026, the Ontario Social Benefits Tribunal (ONSBT) recorded **13,798 published decisions** across disability eligibility appeals, overpayment disputes, and regulatory compliance matters. This analysis examines what that dataset reveals—and, critically, what it obscures—about access to justice for people with disabilities navigating Ontario's social benefits system.
 
 **⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 13,798 cases individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
 
@@ -24,7 +34,7 @@ From 2020 through 2026, the Ontario Social Benefits Tribunal (ONSBT) recorded **
 | 2024 | 948 | 53% decline (incomplete year or data gap?) |
 | 2025 | 4,168 | 339% spike |
 | 2026 | 1,100 | Partial year |
-| **TOTAL** | **14,298** | |
+| **TOTAL** | **13,798** | |
 
 **Key Observation**: The 2025 spike (4,168 cases) is anomalous and requires investigation. Possible explanations include:
 - Policy change driving increased appeals

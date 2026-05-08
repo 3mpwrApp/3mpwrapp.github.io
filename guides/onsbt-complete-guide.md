@@ -17,7 +17,7 @@ layout: guide
 - **ODSP (Ontario Disability Support Program)** decisions
 - **Ontario Works (OW)** decisions
 
-**Success Rate: 98.9%** from clear outcomes in 14,298 recent decisions (2020-2026) - comprehensive analysis reveals ONSBT has the highest win rate among Ontario tribunals
+**Success Rate: 67.4%** from classified outcomes in 13,798 recent decisions (2020-2026) - see [ONSBT Comprehensive Analysis](/_posts/2026-04-26-onsbt-2020-2026-comprehensive-analysis.md) for full breakdown
 **Timeline:** 6-12 months from appeal filing to hearing
 **Cost:** FREE (no filing fees)
 **Representation:** Free legal aid available through community legal clinics
