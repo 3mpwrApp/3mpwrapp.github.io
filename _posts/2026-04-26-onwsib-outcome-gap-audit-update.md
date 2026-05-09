@@ -55,8 +55,8 @@ ONWSIB records collected by year:
 ## See Also
 
 **Related Resources:**
-- [**ONWSIB Skip Strategy Guide**](/guides/onwsib-skip-strategy-guide.md) - Why many workers skip internal review and go straight to WSIAT
-- [**WSIAT Full Analysis**](/_posts/2026-04-29-wsiat-vs-bc-wcat-transparency-divide.md) - The independent appeals tribunal (next step after ONWSIB)
+- [**ONWSIB Skip Strategy Guide**](/guides/onwsib-skip-strategy-guide/) - Why many workers skip internal review and go straight to WSIAT
+- [**WSIAT Full Analysis**](/research/tribunal-transparency/wsiat-vs-bc-wcat-transparency-divide/) - The independent appeals tribunal (next step after ONWSIB)
 - [**ONWSIB in App**](https://3mpwrapp.ca/resources/onwsib-analysis) - Analyze ONWSIB decisions interactively
 - [**Visualization: ONWSIB vs ONSBT Outcomes**](/data/visualizations/onsbt-onwsib-classification-2020-2026.json) - Classification breakdown
 - [**Interactive Chart: Outcome Tiers**](/data/visualizations/onsbt-onwsib-classification-2020-2026.json) - See Tier A/B/C distribution

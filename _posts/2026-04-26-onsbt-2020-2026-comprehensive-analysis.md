@@ -10,10 +10,10 @@ excerpt: "Comprehensive analysis of 13,798 ONSBT tribunal decisions over seven y
 ## See Also
 
 **ONSBT Resources:**
-- [**ONSBT Complete Guide**](/guides/onsbt-complete-guide.md) - Step-by-step appeal procedures
+- [**ONSBT Complete Guide**](/guides/onsbt-complete-guide/) - Step-by-step appeal procedures
 - [**ONSBT Success Rate Article**](https://3mpwrapp.ca/resources/articles/onsbt-success-rate) - What the 67.4% grant rate means for you
 - [**ONSBT Analysis Screen**](https://3mpwrapp.ca/resources/onsbt-analysis) - Interactive decision analysis
-- [**Accessibility Barriers in ONSBT**](/_posts/2026-04-26-onsbt-accessibility-barriers-vulnerable-communities.md) - Structural barriers affecting vulnerable communities
+- [**Accessibility Barriers in ONSBT**](/blog/2026/04/26/onsbt-accessibility-barriers-vulnerable-communities/) - Structural barriers affecting vulnerable communities
 
 ---
 

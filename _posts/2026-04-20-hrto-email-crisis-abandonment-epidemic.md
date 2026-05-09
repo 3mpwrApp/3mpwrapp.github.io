@@ -40,7 +40,7 @@ Interpretation note: the Tier B CI is wide due to very small sample size. This p
 ## See Also
 
 **HRTO Resources:**
-- [**HRTO Complete Guide**](/guides/hrto-complete-guide.md) - Full procedural guide for human rights complaints
+- [**HRTO Complete Guide**](/guides/hrto-complete-guide/) - Full procedural guide for human rights complaints
 - [**HRTO Analysis Screen**](https://3mpwrapp.ca/resources/hrto-analysis) - Interactive analysis in the app
 - [**HRTO Abandonment Article**](https://3mpwrapp.ca/resources/articles/hrto-abandonment) - Read the full app article
 

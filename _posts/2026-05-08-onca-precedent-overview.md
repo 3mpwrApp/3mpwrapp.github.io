@@ -11,6 +11,8 @@ excerpt: A new ONCA dataset shows 5,034 Ontario Court of Appeal decisions from 2
 
 The Ontario Court of Appeal is not a tribunal success-rate dataset. It is a precedent and procedure dataset.
 
+Method note: figures in this post describe observed volume and decision-type patterns in the collected ONCA sample; they are not a merits-based win/loss rate for workplace-injury claims.
+
 That makes it useful for:
 
 - Standards of review
@@ -76,9 +78,9 @@ If you are comparing ONCA to the tribunal datasets, treat it as a precedent laye
 ## See Also
 
 **Tribunal & Appellate Layer Resources:**
-- [**ONCA Appellate Guide**](/guides/onca-appellate-guide.md) - How to appeal tribunal decisions to court
+- [**ONCA Appellate Guide**](/guides/onca-appellate-guide/) - How to appeal tribunal decisions to court
 - [**ONCA in App**](https://3mpwrapp.ca/resources/articles/onca-precedent-overview) - Explore ONCA decisions interactively
 - [**ONCA Procedural Breakdown**](/data/visualizations/onca-procedural-decisions-2020-2026.json) - Decision types and trends
-- [**WSIAT Analysis**](/_posts/2026-04-29-wsiat-vs-bc-wcat-transparency-divide.md) - First-level tribunal appeals (WSIAT)
-- [**HRTO Analysis**](/_posts/2026-04-20-hrto-email-crisis-abandonment-epidemic.md) - Human rights tribunal (HRTO)
-- [**ONSBT Analysis**](/_posts/2026-04-26-onsbt-2020-2026-comprehensive-analysis.md) - Social benefits tribunal (ONSBT)
+- [**WSIAT Analysis**](/research/tribunal-transparency/wsiat-vs-bc-wcat-transparency-divide/) - First-level tribunal appeals (WSIAT)
+- [**HRTO Analysis**](/blog/2026/04/20/hrto-email-crisis-abandonment-epidemic/) - Human rights tribunal (HRTO)
+- [**ONSBT Analysis**](/blog/2026/04/26/onsbt-2020-2026-comprehensive-analysis/) - Social benefits tribunal (ONSBT)

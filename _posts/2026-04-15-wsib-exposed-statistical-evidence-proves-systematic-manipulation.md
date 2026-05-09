@@ -30,12 +30,12 @@ featured: true
 
 **📉 July 2023: Only 39 decisions published** vs. 154 average (99.7% certain NOT random)
 
-**💡 What This Means:** Statistical patterns show systematic dysfunction across 11,430 cases spanning 6 years
+**💡 What This Means:** Statistical patterns indicate repeat process variation across 11,430 cases spanning 6 years
 
 </div>
 </div>
 
-**TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using rigorous statistical methods. **FACTS WE CAN PROVE:** 43.9% (95% CI: 42.3-45.6%) of 2024 decisions missing from public record (1,545 cases), reconsideration adds 1.5 years vs. 0.5 for direct appeals (4x longer), 20% (95% CI: 17.3-22.7%) of knee injuries cite "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline, July 2023 collapse to 39 decisions (99.7% certain not random). **WHAT THIS SHOWS:** Repeated structural patterns across 6 years. **WHAT THIS SUGGESTS:** Patterns consistent with systematic dysfunction or cost-reduction strategy. **ALTERNATIVE EXPLANATIONS:** Administrative chaos, systemic organizational challenges, understaffing also fit the evidence. **Full methodology transparency below.**
+**TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using statistical methods. **Dataset findings:** 43.9% (95% CI: 42.3-45.6%) of 2024 decisions were missing from the public record (1,545 cases), reconsideration adds about 1.5 years vs. 0.5 for direct appeals (4x longer), 20% (95% CI: 17.3-22.7%) of knee-injury decisions cite "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline, and July 2023 dropped to 39 published decisions (99.7% unlikely to be random). **Interpretation:** repeated structural patterns are visible across 6 years. **Alternative explanations:** administrative constraints, organizational variation, and understaffing may also explain portions of these effects. **Full methodology appears below.**
 
 **⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our statistical analysis uses keyword patterns and co-occurrence detection where official outcomes aren't available.
 
@@ -64,7 +64,7 @@ You'll see these terms throughout this investigation. Here's what they mean in p
 
 **Baseline Rate:** The normal/average percentage across ALL cases. We compare specific groups (like knee injuries) to this baseline to see if they're treated differently.
 
-**🎯 Bottom Line:** These numbers prove patterns are real, not coincidence. When you see "p < 0.001" or "χ² = 32.7", it means: "This is NOT random chance—something systematic is happening."
+**🎯 Bottom Line:** These tests indicate the observed patterns are unlikely to be random within this dataset. When you see "p < 0.001" or "χ² = 32.7", it means there is strong statistical evidence of a non-random pattern in the analyzed records.
 
 ---
 
@@ -80,7 +80,7 @@ You'll see these terms throughout this investigation. Here's what they mean in p
 4. **Body-part bias testing:** Measure if certain injuries are denied at higher rates
 5. **Language pattern detection:** Find repeatedly used phrases across cases
 
-**What This Shows:** Eight measurable patterns where the data is statistically significant (not random chance). **What This Suggests:** These patterns are consistent with systematic dysfunction or deliberate cost-reduction. **Alternative Explanations:** Systemic organizational challenges, understaffing, administrative chaos also fit the evidence.
+**What This Shows:** Eight measurable patterns where the data is statistically significant (unlikely to be random). **What This Suggests:** These patterns are consistent with system-level process variation requiring policy and operational review. **Alternative Explanations:** Organizational constraints, understaffing, and administrative disruption may also contribute.
 
 **Read the full 45,000-word master document:** [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
 

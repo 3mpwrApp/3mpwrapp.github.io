@@ -26,18 +26,18 @@ excerpt: Searchable database of Canadian workplace and disability cases with pla
 - **NEW: See AI-predicted outcomes before reading full decisions**
 - **Filter by winning vs. losing outcomes to find relevant strategies**
 - Database continuously improving with daily additions
-- Eventually covers all provinces and territories --- ## YZ NEW: AI-Powered Outcome Predictions **We analyzed 137,252 tribunal decisions using natural language processingaand discovered something remarkable: <span style="color: #22c55e; font-weight: bold;">90.4% of workers who persist through appeals win their cases.</span>** ### The Numbers That Matter | Tribunal | Cases Analyzed | Win Rate | Key Finding |
+- Eventually covers all provinces and territories --- ## YZ NEW: AI-Powered Outcome Predictions **We analyzed 137,252 tribunal decisions using natural language processing and produced directional model estimates. These outputs should be interpreted as exploratory, not official adjudicative rates.** ### The Numbers That Matter | Tribunal | Cases Analyzed | Win Rate | Key Finding |
 |----------|----------------|----------|-------------|
 | **WSIAT** (Ontario) | 11,430 | **73.5%*** | 73.5% from 649 classified decisions (438 granted, 158 denied a 2020-2026 CanLII subset) |
-| **ONSBT** (Ontario Benefits) | 14,298 | **98.9%** | 98.9% from 8,071 clear outcomes - highest clarity (56.4%) |
+| **ONSBT** (Ontario Benefits) | 13,798 | **67.4%** | 67.4% in classified cases (Tier A+B); 72.9% remain unresolved in public metadata |
 | **ONWSIB** (WSIB Internal) | 463 | not reliable | 95.7% unresolved in public records; local deep-dive found 12 high-confidence reads |
 | **BCWCAT** (BC) | 7,916 | **86.4%** | Strong odds with proper medical evidence |
 | **Other Tribunals** | 77,718 | **84.1%** | Consistently high success rates |
 | **HRTO** (Human Rights) | 9,269 | ~varies | High abandonment (73.5%), but winnable | <small>*WSIAT 73.5% grant rate from 649 classified decisions (onwsiat-outcomes-3-tier-summary.json); official stats show 60-70% overall success. 94.3% of decisions unresolved.</small> **May 1, 2026 Update:** Complete classification now available for Ontario social tribunals:
-- **ONSBT (Social Benefits Tribunal):** 14,298 decisions analyzed (2020-2026) - 55.8% explicitly allowed, only 0.6% denied
+- **ONSBT (Social Benefits Tribunal):** 13,798 decisions analyzed (2020-2026) - 67.4% grant rate in classified cases (Tier A+B), with unresolved metadata volume disclosed separately
 - **ONWSIB (WSIB Internal Review):** 463 decisions analyzed (2020-2026) - 95.7% unresolved outcomes in public records (lacks explicit outcome language)
-- **Key Finding:** Social benefits appeals (ONSBT) have 16x clearer outcomes than workplace injury appeals (WSIAT) - 56.4% vs 3.4% clear rate ### What This Means for You - **If you're appealing a WSIB denial:** Historical data shows 86-100% success rates across jurisdictions
-- **If you're filing a human rights complaint:** 14% of cases are abandonedabut those who persist have strong odds
+- **Key Finding:** Social benefits appeals (ONSBT) have substantially clearer outcome metadata than workplace injury appeals (WSIAT) - 56.4% vs 3.4% clear rate ### What This Means for You - **If you're appealing a WSIB denial:** Published and classified datasets indicate meaningful success rates, but outcomes vary by tribunal, issue type, and evidence quality
+- **If you're filing a human rights complaint:** 14% of cases are abandoned, but those who persist may still have viable pathways
 - **If you're appealing ODSP/OW denial:** Tribunal shows favorable outcomes for properly documented cases ### How We Built This - **Training data:** 256,734 labeled examples from 105 tribunal decision files
 - **AI model:** Naive Bayes classifier trained on decision keywords and tribunal metadata
 - **Test accuracy:** 79.0% on 3,756 held-out test examples
