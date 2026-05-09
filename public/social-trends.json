@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-08T14:08:15.964Z",
+  "lastUpdated": "2026-05-09T03:44:46.436Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16768,
+      "totalPosts": 16792,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T14:08:03.829Z"
+      "lastSeen": "2026-05-09T03:44:38.814Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16761,
+      "totalPosts": 16786,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T14:08:06.626Z"
+      "lastSeen": "2026-05-09T03:44:40.507Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16645,
+      "totalPosts": 16670,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T14:08:09.124Z"
+      "lastSeen": "2026-05-09T03:44:42.064Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16837,
+      "totalPosts": 16862,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T14:08:12.222Z"
+      "lastSeen": "2026-05-09T03:44:43.683Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16798,
+      "totalPosts": 16823,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-08T14:08:14.960Z"
+      "lastSeen": "2026-05-09T03:44:45.433Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
-      "author": "uua.org",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I'm working on a blog post series about mobile #accessibility for May. 1st article: 4 iOS display settings to check your app with\n\nracheleditullio.com/blog/2026/05...",
-      "author": "racheled.bsky.social",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Sharing \"Star Wars\" images on this \"May The Fourth\"? Don't forget alt text! Alt text is crucial for people who are blind, who have low vision, and others who use screen readers.\n\n#MayTheFourth #MayTheFourthBeWithYou #MayThe4thBeWithYou #MayThe4th #StarWarsDay #StarWars #a11y",
-      "author": "a11yawareness.bsky.social",
-      "engagement": 43,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Hey literally every dev, did you know you can make #OpenGraph #OG images accessible with ?\n\n<meta property=\"og:image:alt\" content=\"A short descriptive phrase\" />\n\nstandards.scangov.org/ogimagealt/\n\n#A11y #Accessibility #ATproto",
-      "author": "renderg.host",
-      "engagement": 22,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "You’ve been told disabled people are the problem. You weren’t told who paid to put that idea in your head. \n\n#NDIS #NDISAustralia #DisabilityRights #MSWarrior #AusPol #VoteGREENS #Albo #Albanese",
-      "author": "twitter-exile.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "DEIA is making skateboarding accessible to ALL kids who want to share! #pinks #disabilityrights #DEI",
       "author": "aliceknew.bsky.social",
@@ -338,20 +308,50 @@
       "author": "juliametraux.bsky.social",
       "engagement": 115,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#MTPol #Montana #DisabilityRights #Section504",
+      "author": "gailwaldby.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Thanks to @laurakbuzz.bsky.social, I'm excited to say that I'll once again be recording the #audioDescription for the Access-Ability Summer Showcase! As always, I'm interested to see what appears, especially if I can play it without any assistance as well of course.\n#A11Y #Accessibility",
+      "author": "sightlesskombat.com",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Thanks to @laurakbuzz.bsky.social, I'm excited to say that I'll once again be recording the #audioDescription for the Access-Ability Summer Showcase! As always, I'm interested to see what appears, especially if I can play it without any assistance as well of course.\n#A11Y #Accessibility",
+      "author": "sightlesskombat.com",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "\"We aren’t asking for favors; we are demanding the basic dignity of a usable interface.\" #a11y accessaces.com/beyond-furio...",
+      "author": "ericwbailey.website",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Josh Turek in the Iowa State Senate Democratic Primary debate said the first bill he'd introduce in the Senate would be to push a bill that would end subminimum wage for disabled people. #CripTheVote",
+      "author": "juliametraux.bsky.social",
+      "engagement": 115,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
+    {
+      "keyword": "accessibility",
+      "count": 45
+    },
     {
       "keyword": "disabilityrights",
       "count": 44
     },
     {
-      "keyword": "accessibility",
-      "count": 44
-    },
-    {
       "keyword": "a11y",
-      "count": 26
+      "count": 28
     },
     {
       "keyword": "disabilityjustice",
@@ -398,19 +398,15 @@
       "count": 9
     },
     {
-      "keyword": "inclusion",
+      "keyword": "accessibility accessibility",
       "count": 8
     },
     {
-      "keyword": "disabled people",
-      "count": 7
+      "keyword": "accessibility a11y",
+      "count": 8
     },
     {
-      "keyword": "digitalaccessibility",
-      "count": 7
-    },
-    {
-      "keyword": "ada",
+      "keyword": "inclusion",
       "count": 6
     },
     {
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "cripminds",
+      "count": 6
+    },
+    {
+      "keyword": "accessibility disabilitysky",
       "count": 6
     }
   ]
