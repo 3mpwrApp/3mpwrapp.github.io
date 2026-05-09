@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated": "2026-05-08T03:59:33.331Z",
+  "generated": "2026-05-09T04:03:59.883Z",
   "insights": {
-    "timestamp": "2026-05-08T03:59:33.294Z",
+    "timestamp": "2026-05-09T04:03:59.851Z",
     "performance": {},
     "recommendations": [
       {
         "type": "content-strategy",
         "priority": "high",
         "title": "Create Content on Trending Topics",
-        "description": "Write blog posts about: disabilityrights, accessibility, a11y",
+        "description": "Write blog posts about: accessibility, disabilityrights, a11y",
         "expectedImpact": "High visibility and engagement",
         "action": "Generate blog posts using agent-blog-production.js with these topics"
       }
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-05-08T03:59:33.301Z",
+      "lastUpdated": "2026-05-09T04:03:59.858Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -27,8 +27,8 @@
           "priority": "high",
           "action": "Test these trending hashtags in next posts",
           "hashtags": [
-            "disabilityrights",
             "accessibility",
+            "disabilityrights",
             "a11y"
           ],
           "expectedImpact": "Increased reach"
@@ -38,18 +38,18 @@
       "lowPerformers": [],
       "currentTrending": [
         {
+          "tag": "accessibility",
+          "mentions": 45,
+          "source": "emerging"
+        },
+        {
           "tag": "disabilityrights",
           "mentions": 44,
           "source": "emerging"
         },
         {
-          "tag": "accessibility",
-          "mentions": 41,
-          "source": "emerging"
-        },
-        {
           "tag": "a11y",
-          "mentions": 26,
+          "mentions": 28,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-05-08T03:59:33.305Z",
+      "lastUpdated": "2026-05-09T04:03:59.861Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-05-08T03:59:33.301Z",
+    "lastUpdated": "2026-05-09T04:03:59.858Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -90,8 +90,8 @@
         "priority": "high",
         "action": "Test these trending hashtags in next posts",
         "hashtags": [
-          "disabilityrights",
           "accessibility",
+          "disabilityrights",
           "a11y"
         ],
         "expectedImpact": "Increased reach"
@@ -101,18 +101,18 @@
     "lowPerformers": [],
     "currentTrending": [
       {
+        "tag": "accessibility",
+        "mentions": 45,
+        "source": "emerging"
+      },
+      {
         "tag": "disabilityrights",
         "mentions": 44,
         "source": "emerging"
       },
       {
-        "tag": "accessibility",
-        "mentions": 41,
-        "source": "emerging"
-      },
-      {
         "tag": "a11y",
-        "mentions": 26,
+        "mentions": 28,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-05-08T03:59:33.305Z",
+    "lastUpdated": "2026-05-09T04:03:59.861Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
