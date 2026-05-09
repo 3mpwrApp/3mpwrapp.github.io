@@ -307,15 +307,6 @@ Full datasets available for community analysis:
 - Biggest current accuracy limiter: many ONWSIB rows have empty `full_text_html` and only short keyword summaries, which limits high-confidence outcome extraction.
 - CanLII notes that while it strives for comprehensive databases, source-provider transfer and processing delays can temporarily result in missing documents before omissions are corrected.
 
-### Next Update Plan (After ONCA Collection Completes)
-
-To stay within CanLII throttling limits and improve data quality responsibly, ONWSIB will be rerun after ONCA collection is complete. That rerun will be used to update:
-
-- This ONWSIB blog post (reconciled counts and revised confidence notes)
-- Knowledge base entries
-- Public guides
-- Reusable templates
-- ONWSIB-related visualizations
 **Confidence Levels:**
 - High confidence: volume counts, year distribution, and Tier C share (95.7%).
 - Moderate confidence: issue prevalence from recurring keyword patterns.
@@ -334,7 +325,7 @@ To stay within CanLII throttling limits and improve data quality responsibly, ON
 
 **Authors:** Lissa Beaulieu (Founder, 3mpwrApp) & GitHub Copilot  
 **Data Source:** CanLII ONWSIB decisions (2020-2026)  
-**Last Updated:** April 26, 2026
+**Last Updated:** May 8, 2026 (May 8 reconciliation rerun completed)
 
 ---
 

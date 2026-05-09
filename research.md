@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Research
 description: Interactive data visualizations and research tools analyzing tribunal decisions, denial patterns, and workers' rights across Canada. Open source, transparent methodology.
@@ -55,6 +55,236 @@ description: Interactive data visualizations and research tools analyzing tribun
       border: 3px solid #ffffff;
     }
   }
+
+  .research-page {
+    --rp-panel-bg: #ffffff;
+    --rp-panel-text: #111111;
+    --rp-panel-muted: #374151;
+    --rp-panel-link: #003d7a;
+    --rp-panel-border: #d7e1ec;
+    --rp-callout-bg: #eef4ff;
+    --rp-callout-border: #455a64;
+    --rp-callout-accent: #263238;
+    --rp-callout-muted: #425466;
+    --rp-cta-bg: #263238;
+    --rp-cta-text: #ffffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .research-page {
+      --rp-panel-bg: #16202b;
+      --rp-panel-text: #f5f7fa;
+      --rp-panel-muted: #d7dee7;
+      --rp-panel-link: #9ecbff;
+      --rp-panel-border: #3b4d61;
+      --rp-callout-bg: #142133;
+      --rp-callout-border: #8aa4bf;
+      --rp-callout-accent: #f5f7fa;
+      --rp-callout-muted: #d7dee7;
+      --rp-cta-bg: #8aa4bf;
+      --rp-cta-text: #08111b;
+    }
+  }
+
+  [data-theme="dark"] .research-page,
+  .dark-mode .research-page {
+    --rp-panel-bg: #16202b;
+    --rp-panel-text: #f5f7fa;
+    --rp-panel-muted: #d7dee7;
+    --rp-panel-link: #9ecbff;
+    --rp-panel-border: #3b4d61;
+    --rp-callout-bg: #142133;
+    --rp-callout-border: #8aa4bf;
+    --rp-callout-accent: #f5f7fa;
+    --rp-callout-muted: #d7dee7;
+    --rp-cta-bg: #8aa4bf;
+    --rp-cta-text: #08111b;
+  }
+
+  @media (prefers-contrast: more), (prefers-contrast: high) {
+    .research-page {
+      --rp-panel-bg: #000000;
+      --rp-panel-text: #ffffff;
+      --rp-panel-muted: #ffffff;
+      --rp-panel-link: #ffff00;
+      --rp-panel-border: #ffffff;
+      --rp-callout-bg: #000000;
+      --rp-callout-border: #ffffff;
+      --rp-callout-accent: #ffffff;
+      --rp-callout-muted: #ffffff;
+      --rp-cta-bg: #ffff00;
+      --rp-cta-text: #000000;
+    }
+  }
+
+  .research-page :is(
+    div[style*="background: white"],
+    div[style*="background: #ffffff"],
+    div[style*="background: #f0f7ff"],
+    div[style*="background: #f1f8e9"],
+    div[style*="background: #e8f0fe"],
+    div[style*="background: #e3f2fd"],
+    div[style*="background: #f3e5f5"],
+    div[style*="background: #e8f5e9"],
+    div[style*="background: #ffebee"],
+    div[style*="background: #eceff1"],
+    div[style*="background: #fff3cd"],
+    div[style*="background: #fff3e0"],
+    div[style*="background: #f5f5f5"],
+    tr[style*="background: #f5f5f5"],
+    div[style*="background: #f0f9ff"],
+    div[style*="background: #f0fdf4"],
+    div[style*="background: #fef3c7"],
+    div[style*="background: #fef2f2"]
+  ) {
+    background: var(--rp-panel-bg) !important;
+    color: var(--rp-panel-text) !important;
+    border-color: var(--rp-panel-border) !important;
+  }
+
+  .research-page :is(
+    div[style*="background: white"],
+    div[style*="background: #ffffff"],
+    div[style*="background: #f0f7ff"],
+    div[style*="background: #f1f8e9"],
+    div[style*="background: #e8f0fe"],
+    div[style*="background: #e3f2fd"],
+    div[style*="background: #f3e5f5"],
+    div[style*="background: #e8f5e9"],
+    div[style*="background: #ffebee"],
+    div[style*="background: #eceff1"],
+    div[style*="background: #fff3cd"],
+    div[style*="background: #fff3e0"],
+    div[style*="background: #f5f5f5"],
+    tr[style*="background: #f5f5f5"],
+    div[style*="background: #f0f9ff"],
+    div[style*="background: #f0fdf4"],
+    div[style*="background: #fef3c7"],
+    div[style*="background: #fef2f2"]
+  ) :is(h2, h3, h4, p, li, small, span, strong, em, td, th, ul, ol) {
+    color: var(--rp-panel-text) !important;
+  }
+
+  .research-page :is(
+    div[style*="background: white"],
+    div[style*="background: #ffffff"],
+    div[style*="background: #f0f7ff"],
+    div[style*="background: #f1f8e9"],
+    div[style*="background: #e8f0fe"],
+    div[style*="background: #e3f2fd"],
+    div[style*="background: #f3e5f5"],
+    div[style*="background: #e8f5e9"],
+    div[style*="background: #ffebee"],
+    div[style*="background: #eceff1"],
+    div[style*="background: #fff3cd"],
+    div[style*="background: #fff3e0"],
+    div[style*="background: #f5f5f5"],
+    tr[style*="background: #f5f5f5"],
+    div[style*="background: #f0f9ff"],
+    div[style*="background: #f0fdf4"],
+    div[style*="background: #fef3c7"],
+    div[style*="background: #fef2f2"]
+  ) a:not([style*="background"]):not(.research-cta):not(.onca-card-link) {
+    color: var(--rp-panel-link) !important;
+  }
+
+  .research-onca-callout {
+    background: var(--rp-callout-bg);
+    border: 2px solid var(--rp-callout-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .research-onca-callout h3,
+  .research-onca-callout p,
+  .research-onca-callout li,
+  .research-onca-callout strong {
+    color: var(--rp-callout-accent) !important;
+  }
+
+  .research-onca-callout .research-onca-muted {
+    color: var(--rp-callout-muted) !important;
+  }
+
+  .research-onca-callout a:not(.research-cta) {
+    color: var(--rp-panel-link) !important;
+  }
+
+  .research-cta {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: #263238 !important;
+    color: #ffffff !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .research-page a.research-cta,
+  .research-page a.research-cta:visited,
+  .research-page a.research-cta:hover,
+  .research-page a.research-cta:focus {
+    background: #263238 !important;
+    color: #ffffff !important;
+  }
+
+  [data-theme="dark"] .research-page a.research-cta,
+  .dark-mode .research-page a.research-cta {
+    background: #8aa4bf !important;
+    color: #08111b !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .research-page a.research-cta {
+      background: #8aa4bf !important;
+      color: #08111b !important;
+    }
+  }
+
+  @media (prefers-contrast: more), (prefers-contrast: high) {
+    .research-page a.research-cta {
+      background: #ffff00 !important;
+      color: #000000 !important;
+      border: 2px solid #000000 !important;
+    }
+  }
+
+  .research-page a[style*="background: #667eea"] {
+    background: #3949ab !important;
+    color: #ffffff !important;
+  }
+
+  .research-cta:hover {
+    text-decoration: none;
+  }
+
+  .onca-card-link {
+    background: #455a64 !important;
+    color: #ffffff !important;
+    text-decoration: none;
+  }
+
+  [data-theme="dark"] .onca-card-link,
+  .dark-mode .onca-card-link {
+    background: #546e7a !important;
+    color: #ffffff !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .onca-card-link {
+      background: #546e7a !important;
+      color: #ffffff !important;
+    }
+  }
+
+  @media (prefers-contrast: more), (prefers-contrast: high) {
+    .onca-card-link {
+      background: #000000 !important;
+      color: #ffff00 !important;
+      border: 2px solid #ffff00 !important;
+    }
+  }
   
   .tool-card {
     background: #ffffff;
@@ -90,7 +320,7 @@ description: Interactive data visualizations and research tools analyzing tribun
   .tool-badge {
     display: inline-block;
     padding: 0.4rem 0.8rem;
-    background: #667eea;
+    background: #3949ab;
     color: #ffffff;
     border-radius: 6px;
     font-size: 0.85rem;
@@ -204,27 +434,27 @@ description: Interactive data visualizations and research tools analyzing tribun
   
   /* Colored stat boxes - Light mode */
   .stat-box-green {
-    background: #16a34a;
+    background: #166534;
     color: #ffffff;
-    border-color: #15803d;
+    border-color: #14532d;
   }
   
   .stat-box-blue {
-    background: #2563eb;
+    background: #1e40af;
     color: #ffffff;
-    border-color: #1d4ed8;
+    border-color: #1e3a8a;
   }
   
   .stat-box-purple {
-    background: #9333ea;
+    background: #6b21a8;
     color: #ffffff;
-    border-color: #7c3aed;
+    border-color: #581c87;
   }
   
   .stat-box-orange {
-    background: #ea580c;
+    background: #9a3412;
     color: #ffffff;
-    border-color: #c2410c;
+    border-color: #7c2d12;
   }
   
   /* Dark Mode - Stat boxes */
@@ -710,6 +940,8 @@ description: Interactive data visualizations and research tools analyzing tribun
   }
 </style>
 
+<div class="research-page">
+
 <div class="research-hero">
   <h1>We Analyzed 230,392 Records.<br>Here's What It Means for You.</h1>
   <p class="hero-subtitle">
@@ -717,8 +949,8 @@ description: Interactive data visualizations and research tools analyzing tribun
     We turned four years of tribunal data into tools you can use right now.
   </p>
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-    <a href="#start-here-help" style="background: white; color: #004d99; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">💪 I Need Help Now</a>
-    <a href="#explore-the-data" style="background: transparent; color: white; border: 2px solid rgba(255,255,255,0.7); padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem;">📊 Explore the Data →</a>
+    <a href="#start-here-help" style="background: white; color: #004d99; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">ðŸ’ª I Need Help Now</a>
+    <a href="#explore-the-data" style="background: transparent; color: white; border: 2px solid rgba(255,255,255,0.7); padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem;">ðŸ“Š Explore the Data â†’</a>
   </div>
 </div>
 
@@ -726,40 +958,98 @@ description: Interactive data visualizations and research tools analyzing tribun
 <div style="background: #f0f7ff; border-left: 4px solid #0066cc; border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem;">
   <p style="margin: 0; font-size: 0.95rem; line-height: 2;">
     <strong style="color: #004d99;">How we handle data:</strong>
-    &nbsp;✅ <strong>Proven data</strong> clearly labelled
-    &nbsp;·&nbsp;⚠️ <strong>Inferred patterns</strong> disclosed upfront
-    &nbsp;·&nbsp;🔢 <strong>Win rates are estimated</strong> from classified decisions only — 93.9% of all 98,992 WSIAT decisions lack clear outcome keywords, making published rates a model artifact of incomplete public data, not confirmed outcomes
-    &nbsp;·&nbsp;📖 <strong>All code and data open source</strong>
-    &nbsp;— <a href="/research-data-sources/" style="font-weight: 600;">See full methodology →</a>
+    &nbsp;âœ… <strong>Proven data</strong> clearly labelled
+    &nbsp;Â·&nbsp;âš ï¸ <strong>Inferred patterns</strong> disclosed upfront
+    &nbsp;Â·&nbsp;ðŸ”¢ <strong>Win rates are estimated</strong> from classified decisions only â€” 93.9% of all 98,992 WSIAT decisions lack clear outcome keywords, making published rates a model artifact of incomplete public data, not confirmed outcomes
+    &nbsp;Â·&nbsp;ðŸ“– <strong>All code and data open source</strong>
+    &nbsp;â€” <a href="/research-data-sources/" style="font-weight: 600;">See full methodology â†’</a>
   </p>
 </div>
 
-<!-- The Flywheel: Our Defensible System — Prominent and Early -->
+<!-- The Flywheel: Our Defensible System â€” Prominent and Early -->
 <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; border-radius: 12px; padding: 2rem 2rem 1.5rem; margin-bottom: 2rem; text-align: center;">
   <h2 style="margin: 0 0 0.4rem; color: white; font-size: 1.5rem;">This Is How We Change the System</h2>
   <p style="margin: 0 0 1.5rem; color: rgba(255,255,255,0.8); font-size: 0.95rem;">Every tool we build feeds a cycle that grows stronger with every worker who uses it:</p>
   <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.95rem; font-weight: 600;">
-    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">📊 230K+ Open Records</span>
-    <span style="color: #7cb9ff; font-size: 1.3rem;">→</span>
-    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">🛠 Real Advocacy Tools</span>
-    <span style="color: #7cb9ff; font-size: 1.3rem;">→</span>
-    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">✅ Workers Win</span>
-    <span style="color: #7cb9ff; font-size: 1.3rem;">→</span>
-    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">🔄 Outcomes Reported</span>
-    <span style="color: #7cb9ff; font-size: 1.3rem;">→</span>
-    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">📈 Smarter Next Case</span>
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">ðŸ“Š 230K+ Open Records</span>
+    <span style="color: #7cb9ff; font-size: 1.3rem;">â†’</span>
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">ðŸ›  Real Advocacy Tools</span>
+    <span style="color: #7cb9ff; font-size: 1.3rem;">â†’</span>
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">âœ… Workers Win</span>
+    <span style="color: #7cb9ff; font-size: 1.3rem;">â†’</span>
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">ðŸ”„ Outcomes Reported</span>
+    <span style="color: #7cb9ff; font-size: 1.3rem;">â†’</span>
+    <span style="background: rgba(255,255,255,0.12); padding: 0.6rem 1.1rem; border-radius: 8px; white-space: nowrap;">ðŸ“ˆ Smarter Next Case</span>
   </div>
-  <p style="margin: 1.2rem 0 0; font-size: 0.85rem; color: rgba(255,255,255,0.6);">This flywheel is our defensible system — not just UX, but how we close the gap in public data one worker at a time. &nbsp;<a href="#feedback-flywheel" style="color: #7cb9ff;">How to contribute →</a></p>
+  <p style="margin: 1.2rem 0 0; font-size: 0.85rem; color: rgba(255,255,255,0.6);">This flywheel is our defensible system â€” not just UX, but how we close the gap in public data one worker at a time. &nbsp;<a href="#feedback-flywheel" style="color: #7cb9ff;">How to contribute â†’</a></p>
 </div>
+
+---
+
+## ðŸ“Š Our Research Standards: Credibility Over Sensationalism
+
+**Why Trust Our Analysis?** We've analyzed 127,556 tribunal decisions using rigorous statistical methods. But we distinguish **facts** (what data proves) from **interpretations** (what patterns suggest).
+
+### What We Can PROVE:
+âœ… **127,556 decisions analyzed** across 5 Ontario systems (WSIAT: 98,992 | HRTO: 9,269 | ONSBT: 13,798 | ONWSIB: 463 | ONCA: 5,034)
+âœ… **91.8% missing outcome metadata** for WSIAT (10,491 cases have no win/loss categorization in CanLII)
+âœ… **Statistical anomalies detected** (July 2023: 39 decisions vs. 154 average, Z = -2.94, p = 0.003)
+âœ… **Body part bias measured** (knee injuries = 20% (95% CI: 17.3-22.7%) "pre-existing" denial rate vs. 13.3% (95% CI: 12.7-13.9%) baseline, Ï‡Â² = 32.7, p < 0.001)
+âœ… **Delay tactics quantified** (reconsideration adds 2.0 years vs. 0.5 for direct appeals)
+âœ… **HRTO abandonment correlation** (70.1% of abandoned cases cite email delivery issues)
+
+### What We INFER (with caveats):
+ðŸ” **Systematic patterns suggest:**
+- Dysfunction or deliberate cost-shifting (financial incentives + historical precedent align)
+- Alternative explanations (incompetence, understaffing, pandemic) considered but less likely
+- We CANNOT prove intent without internal WSIB documents
+- Email notification barriers may contribute to HRTO abandonment rates
+
+### Statistical Methods Used:
+- **Anomaly detection** (Z-score analysis, p-values)
+- **Co-occurrence networks** (which denial tactics cluster together)
+- **Temporal trend analysis** (patterns over time)
+- **Chi-square tests** (body part bias, keyword associations, fiscal year-end spike)
+- **Confidence intervals** (all proportions reported with 95% CIs using formula: p Â± 1.96 Ã— âˆš(p(1-p)/n))
+- **Effect sizes** (Cohen's h for proportional differences)
+- **Bonferroni correction** (for multiple testing)
+- **Sensitivity analysis** (robustness to missing data)
+- **Tiered evidence model** (Tier A: confirmed, Tier B: probable, Tier C: unresolved)
+
+### Data Transparency:
+âœ… **All code open source:** [GitHub: 3mpwrapp.github.io](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
+âœ… **Raw data public:** [tribunal-decisions/](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions)
+âœ… **Community review welcomed:** Find errors? Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
+âœ… **Replication instructions:** Run `scripts/scrape-*.mjs` + `scripts/analyze-*.mjs` for each tribunal
+
+### Limitations We Acknowledge:
+âš ï¸ **We DON'T have:**
+- True worker win rates (91.8% missing outcomes for WSIAT)
+- WSIB internal policy documents
+- Adjudicator performance data
+- Regional success rate breakdowns
+- Representation impact (only 3.6% of cases mention lawyers)
+
+âœ… **We DO have:**
+- Complete keyword patterns (13,000+ keyword occurrences)
+- Temporal trends (6+ years of monthly volumes)
+- Body part bias rates (shoulder, knee, back, etc.)
+- Delay measurements (reconsideration vs. direct appeal)
+- Co-occurrence networks (which tactics appear together)
+- Cross-tribunal comparison data
+
+**Full methodology available in blog posts** â†’ [See Related Blog Posts](#related-blog-posts)
+
+---
 
 <!-- TWO-PATH CHOOSER: Advocacy Tools vs Research Platform -->
 <div id="start-here-help" style="border: 3px solid #2e7d32; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; background: #f1f8e9;">
-  <h2 style="margin: 0 0 0.4rem; color: #1b5e20; font-size: 1.5rem;">💪 Start Here If You Need Help</h2>
-  <p style="margin: 0 0 1.5rem; color: #33691e; font-size: 1.05rem;">Injured, denied, or helping someone who is — <strong>go straight to the tools. Skip the data.</strong></p>
+  <h2 style="margin: 0 0 0.4rem; color: #1b5e20; font-size: 1.5rem;">ðŸ’ª Start Here If You Need Help</h2>
+  <p style="margin: 0 0 1.5rem; color: #33691e; font-size: 1.05rem;">Injured, denied, or helping someone who is â€” <strong>go straight to the tools. Skip the data.</strong></p>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem;">
 
     <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #4caf50;">
-      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #1b5e20;">✅ I Got Denied — I Need to Appeal</h3>
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #1b5e20;">âœ… I Got Denied â€” I Need to Appeal</h3>
       <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">You need a strategy now. Start with the guide built from 98,992 real decisions.</p>
       <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem; color: #333;">
         <li><a href="/guides/wsiat-complete-guide/">WSIAT Complete Appeal Guide</a></li>
@@ -770,7 +1060,7 @@ description: Interactive data visualizations and research tools analyzing tribun
     </div>
 
     <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0288d1;">
-      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #01579b;">🧠 I Want to Understand What's Happening</h3>
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #01579b;">ðŸ§  I Want to Understand What's Happening</h3>
       <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">See the tactics WSIB uses. Know what you're up against before you file.</p>
       <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem; color: #333;">
         <li><a href="/knowledge-base/pre-existing-conditions/">How "Pre-Existing" Denials Work</a></li>
@@ -781,11 +1071,11 @@ description: Interactive data visualizations and research tools analyzing tribun
     </div>
 
     <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #7b1fa2;">
-      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #4a148c;">📚 Browse All Guides & Templates</h3>
-      <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">Musculoskeletal, neurological, legal strategy — 24+ guides built from real cases.</p>
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #4a148c;">ðŸ“š Browse All Guides & Templates</h3>
+      <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">Musculoskeletal, neurological, legal strategy â€” 24+ guides built from real cases.</p>
       <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem; color: #333;">
-        <li><a href="#injury-knowledge-base">All Knowledge Base Articles ↓</a></li>
-        <li><a href="#appeal-templates">All Appeal Templates ↓</a></li>
+        <li><a href="#injury-knowledge-base">All Knowledge Base Articles â†“</a></li>
+        <li><a href="#appeal-templates">All Appeal Templates â†“</a></li>
         <li><a href="/app/">Share Your Outcome (App)</a></li>
       </ul>
     </div>
@@ -794,26 +1084,37 @@ description: Interactive data visualizations and research tools analyzing tribun
 </div>
 
 <div id="explore-the-data" style="border: 3px solid #1565c0; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; background: #e8f0fe;">
-  <h2 style="margin: 0 0 0.4rem; color: #0d47a1; font-size: 1.5rem;">📊 Go Deeper Into the Data</h2>
-  <p style="margin: 0 0 1.5rem; color: #1565c0; font-size: 1.05rem;">Researchers, policy analysts, advocates with clients — the full dataset and methodology are below.</p>
+  <h2 style="margin: 0 0 0.4rem; color: #0d47a1; font-size: 1.5rem;">ðŸ“Š Go Deeper Into the Data</h2>
+  <p style="margin: 0 0 1.5rem; color: #1565c0; font-size: 1.05rem;">Researchers, policy analysts, advocates with clients â€” the full dataset and methodology are below.</p>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem;">
 
     <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #1976d2;">
-      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #0d47a1;">📈 Interactive Visualizations</h3>
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #0d47a1;">ðŸ“ˆ Interactive Visualizations</h3>
       <p style="margin: 0 0 0.75rem; font-size: 0.95rem; color: #333;">5 live charts. Filter, zoom, explore 230,392 records yourself.</p>
-      <a href="#interactive-visualizations" style="font-size: 0.9rem; font-weight: 600; color: #0d47a1;">View Charts ↓</a>
+      <a href="#interactive-visualizations" style="font-size: 0.9rem; font-weight: 600; color: #0d47a1;">View Charts â†“</a>
     </div>
 
     <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #1976d2;">
-      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #0d47a1;">🗄 Raw Data Downloads</h3>
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #0d47a1;">ðŸ—„ Raw Data Downloads</h3>
       <p style="margin: 0 0 0.75rem; font-size: 0.95rem; color: #333;">122,488 Ontario tribunal decisions + 130,736 employer records. 100% open source. No paywalls.</p>
-      <a href="/research-data-sources/" style="font-size: 0.9rem; font-weight: 600; color: #0d47a1;">Download Data →</a>
+      <a href="/research-data-sources/" style="font-size: 0.9rem; font-weight: 600; color: #0d47a1;">Download Data â†’</a>
     </div>
 
     <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #1976d2;">
-      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #0d47a1;">🔬 Deep Pattern Analysis</h3>
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem; color: #0d47a1;">ðŸ”¬ Deep Pattern Analysis</h3>
       <p style="margin: 0 0 0.75rem; font-size: 0.95rem; color: #333;">9-category pattern analysis, CanLII cross-tribunal comparison, and full methodology.</p>
-      <a href="#in-depth-findings" style="font-size: 0.9rem; font-weight: 600; color: #0d47a1;">Read Analysis ↓</a>
+      <a href="#in-depth-findings" style="font-size: 0.9rem; font-weight: 600; color: #0d47a1;">Read Analysis â†“</a>
+    </div>
+
+    <div class="research-onca-callout">
+      <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem;">âš–ï¸ ONCA Appellate Layer</h3>
+      <p class="research-onca-muted" style="margin: 0 0 0.75rem; font-size: 0.95rem;">New appellate guidance for cases that may need to move beyond the tribunal stage.</p>
+      <ul style="margin: 0 0 1rem 1.2rem; font-size: 0.95rem; line-height: 1.6;">
+        <li><a href="/guides/onca-appellate-guide/">ONCA appellate guide</a></li>
+        <li><a href="/blog/2026/05/08/onca-precedent-overview/">ONCA precedent overview</a></li>
+        <li><a href="/data/visualizations/onca-procedural-decisions-2020-2026.json">ONCA procedural dataset</a></li>
+      </ul>
+      <a class="research-cta" href="/guides/onca-appellate-guide/">Read ONCA Guide â†’</a>
     </div>
 
   </div>
@@ -822,39 +1123,39 @@ description: Interactive data visualizations and research tools analyzing tribun
 <!-- What the Data Actually Shows (3 confirmed patterns, with guardrails) -->
 <div class="tool-card">
   <h2 style="margin-top: 0;">What the Data Actually Shows</h2>
-  <p style="color: #666; font-size: 0.95rem; margin: 0 0 1.5rem;">3 patterns confirmed across 230,392 records — with disclosed confidence levels and data limitations.</p>
+  <p style="color: #666; font-size: 0.95rem; margin: 0 0 1.5rem;">3 patterns confirmed across 230,392 records â€” with disclosed confidence levels and data limitations.</p>
 
   <div style="margin: 1.5rem 0;">
 
     <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 2rem;">
-      <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">📊</div>
+      <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">ðŸ“Š</div>
       <div>
-        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Appeals Work — But WSIB Hides How Often</h3>
-        <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 98,992 WSIAT decisions analyzed (1987–2026). Of decisions with classifiable outcomes, 726 were allowed and 5,314 denied.</p>
+        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Appeals Work â€” But WSIB Hides How Often</h3>
+        <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 98,992 WSIAT decisions analyzed (1987â€“2026). Of decisions with classifiable outcomes, 726 were allowed and 5,314 denied.</p>
         <div style="margin: 0.6rem 0; font-size: 0.9rem; background: #fff3cd; border-left: 3px solid #f9a825; padding: 0.6rem 0.9rem; border-radius: 4px; line-height: 1.6;">
-          <strong>⚠️ Model Artifact — Read Before Citing:</strong> 92,952 decisions (93.9%) lack clear outcome keywords in the full 98,992-decision dataset. The 12.0% detected rate (726 allowed / 5,314 denied) reflects keyword matching only — not a representative sample of all outcomes. Our 2020-2026 CanLII subset analysis (11,430 decisions) shows 73.5% grant rate in confirmed classified decisions, with 91.8% of decisions unresolved. Independent research places overall WSIAT success rates at 60–70%. <a href="/research-data-sources/">See methodology.</a>
+          <strong>âš ï¸ Model Artifact â€” Read Before Citing:</strong> 92,952 decisions (93.9%) lack clear outcome keywords in the full 98,992-decision dataset. The 12.0% detected rate (726 allowed / 5,314 denied) reflects keyword matching only â€” not a representative sample of all outcomes. Our 2020-2026 CanLII subset analysis (11,430 decisions) shows 73.5% grant rate in confirmed classified decisions, with 91.8% of decisions unresolved. Independent research places overall WSIAT success rates at 60â€“70%. <a href="/research-data-sources/">See methodology.</a>
         </div>
-        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/guides/wsiat-complete-guide/">Read WSIAT Appeal Guide</a> | <a href="/templates/pre-existing-appeal/">Use a Template</a></p>
+        <p style="margin: 0.5rem 0 0;"><strong>â†’ Action:</strong> <a href="/guides/wsiat-complete-guide/">Read WSIAT Appeal Guide</a> | <a href="/templates/pre-existing-appeal/">Use a Template</a></p>
       </div>
     </div>
 
     <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 2rem;">
-      <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">🎯</div>
+      <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">ðŸŽ¯</div>
       <div>
-        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">"Pre-Existing Condition" Is a Systematic Tactic — Not Bad Luck</h3>
-        <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 13.3% of analyzed WSIAT cases (2020-2026) involve pre-existing condition as a factor (1,519 cases out of 11,430; 95% CI: 12.7–13.9%). Back/Spine injuries are the most common injury type at 15.3% of all 98,992 decisions.</p>
-        <p style="margin: 0.5rem 0 0; color: #666;">1 in 8 claims denied this way. If this happened to you, you're not alone — and it's contestable.</p>
-        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="/knowledge-base/pre-existing-conditions/">Recognize the Tactic</a> | <a href="/templates/pre-existing-appeal/">Fight Back with Template</a></p>
+        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">"Pre-Existing Condition" Is a Systematic Tactic â€” Not Bad Luck</h3>
+        <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 13.3% of analyzed WSIAT cases (2020-2026) involve pre-existing condition as a factor (1,519 cases out of 11,430; 95% CI: 12.7â€“13.9%). Back/Spine injuries are the most common injury type at 15.3% of all 98,992 decisions.</p>
+        <p style="margin: 0.5rem 0 0; color: #666;">1 in 8 claims denied this way. If this happened to you, you're not alone â€” and it's contestable.</p>
+        <p style="margin: 0.5rem 0 0;"><strong>â†’ Action:</strong> <a href="/knowledge-base/pre-existing-conditions/">Recognize the Tactic</a> | <a href="/templates/pre-existing-appeal/">Fight Back with Template</a></p>
       </div>
     </div>
 
     <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 2rem;">
-      <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">🏢</div>
+      <div style="font-size: 2.5rem; line-height: 1; min-width: 50px;">ðŸ¢</div>
       <div>
-        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Your Employer's Safety Record Is Public — And Searchable</h3>
+        <h3 style="margin: 0 0 0.5rem; font-size: 1.4rem;">Your Employer's Safety Record Is Public â€” And Searchable</h3>
         <p style="margin: 0; font-size: 1.05rem;"><strong>Confirmed:</strong> 130,736 Ontario employer safety records analyzed (91,814 NEER + 38,922 CAD-7). Some employers have significantly worse records than others in the same industry.</p>
         <p style="margin: 0.5rem 0 0; color: #666;">A documented pattern of incidents at your employer strengthens your claim. This data is yours.</p>
-        <p style="margin: 0.5rem 0 0;"><strong>→ Action:</strong> <a href="#employer-safety-heatmap">Check Employer Safety by City</a> | <a href="/research-data-sources/">Download Raw Data</a></p>
+        <p style="margin: 0.5rem 0 0;"><strong>â†’ Action:</strong> <a href="#employer-safety-heatmap">Check Employer Safety by City</a> | <a href="/research-data-sources/">Download Raw Data</a></p>
       </div>
     </div>
 
@@ -865,7 +1166,7 @@ description: Interactive data visualizations and research tools analyzing tribun
 
 ---
 
-## 📈 Interactive Visualizations
+## ðŸ“ˆ Interactive Visualizations
 
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
@@ -883,47 +1184,47 @@ description: Interactive data visualizations and research tools analyzing tribun
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
     
     <div style="border: 2px solid #e0e0e0; border-radius: 8px; padding: 1.5rem;">
-      <h4 style="margin: 0 0 0.75rem;">📊 Cross-Tribunal Success Rates</h4>
+      <h4 style="margin: 0 0 0.75rem;">ðŸ“Š Cross-Tribunal Success Rates</h4>
       <p style="margin: 0 0 1rem; color: #666;">Compare WSIAT, HRTO, ONSBT outcomes side-by-side.</p>
-      <a href="/cross-tribunal-success-rates.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Chart →</a>
+      <a href="/cross-tribunal-success-rates.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Chart â†’</a>
     </div>
 
     <div style="border: 2px solid #e0e0e0; border-radius: 8px; padding: 1.5rem;">
-      <h4 style="margin: 0 0 0.75rem;">📈 Temporal Evolution (2016-2025)</h4>
+      <h4 style="margin: 0 0 0.75rem;">ðŸ“ˆ Temporal Evolution (2016-2025)</h4>
       <p style="margin: 0 0 1rem; color: #666;">WSIAT success rates over time. See yearly trends.</p>
-      <a href="/temporal-evolution.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Chart →</a>
+      <a href="/temporal-evolution.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Chart â†’</a>
     </div>
 
     <div style="border: 2px solid #e0e0e0; border-radius: 8px; padding: 1.5rem;">
-      <h4 style="margin: 0 0 0.75rem;">🏢 Employer Safety Heatmap</h4>
+      <h4 style="margin: 0 0 0.75rem;">ðŸ¢ Employer Safety Heatmap</h4>
       <p style="margin: 0 0 1rem; color: #666;">130,736 employers mapped by safety record.</p>
-      <a href="/employer-safety-heatmap.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Map →</a>
+      <a href="/employer-safety-heatmap.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Map â†’</a>
     </div>
 
     <div style="border: 2px solid #e0e0e0; border-radius: 8px; padding: 1.5rem;">
-      <h4 style="margin: 0 0 0.75rem;">🔀 WSIB Appeal Funnel</h4>
+      <h4 style="margin: 0 0 0.75rem;">ðŸ”€ WSIB Appeal Funnel</h4>
       <p style="margin: 0 0 1rem; color: #666;">Follow claims from registration to denial to appeal.</p>
-      <a href="/wsib-appeal-funnel.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Funnel →</a>
+      <a href="/wsib-appeal-funnel.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Funnel â†’</a>
     </div>
 
     <div style="border: 2px solid #e0e0e0; border-radius: 8px; padding: 1.5rem;">
-      <h4 style="margin: 0 0 0.75rem;">🔥 Injury × Industry Matrix</h4>
+      <h4 style="margin: 0 0 0.75rem;">ðŸ”¥ Injury Ã— Industry Matrix</h4>
       <p style="margin: 0 0 1rem; color: #666;">Which injuries happen in which industries.</p>
-      <a href="/injury-industry-matrix.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Matrix →</a>
+      <a href="/injury-industry-matrix.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">View Matrix â†’</a>
     </div>
 
     <div style="border: 2px solid #e0e0e0; border-radius: 8px; padding: 1.5rem;">
-      <h4 style="margin: 0 0 0.75rem;">🔗 Keyword Network Graph</h4>
+      <h4 style="margin: 0 0 0.75rem;">ðŸ”— Keyword Network Graph</h4>
       <p style="margin: 0 0 1rem; color: #666;">Interactive graph showing how legal issues connect.</p>
-      <a href="/wsib-denial-network-visualization.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Explore Network →</a>
+      <a href="/wsib-denial-network-visualization.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Explore Network â†’</a>
     </div>
 
   </div>
 
   <p style="margin: 2rem 0 0; font-size: 0.95rem; color: #666;">
-    <strong>Data Quality:</strong> ✅ All Ontario tribunal data complete (122,488 decisions). 
-    📊 Success rates calculated from real outcomes, not samples. 
-    <a href="/research-data-sources/">See full methodology →</a>
+    <strong>Data Quality:</strong> âœ… Ontario tribunal + ONCA collection now includes 127,556 decisions total.
+    ðŸ“Š Success rates are reported by system and method scope, with limits disclosed.
+    <a href="/research-data-sources/">See full methodology â†’</a>
   </p>
 </div>
 
@@ -931,27 +1232,27 @@ description: Interactive data visualizations and research tools analyzing tribun
 
 <div id="ontario-tribunal-datasets"></div>
 
-## 🏛️ Ontario Tribunal Datasets
+## ðŸ›ï¸ Ontario Tribunal Datasets
 
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Complete Collection</span>
-    <span class="tool-badge badge-green">4 Tribunals</span>
-    <span class="tool-badge badge-purple">122,488 Decisions</span>
+    <span class="tool-badge badge-green">5 Systems</span>
+    <span class="tool-badge badge-purple">127,556 Decisions</span>
   </div>
   
-  <h3 style="margin-top: 0;">Ontario Workers' Rights Data: Four Tribunal Systems Analyzed</h3>
+  <h3 style="margin-top: 0;">Ontario Workers' Rights Data: Five Systems Analyzed (4 Tribunals + ONCA)</h3>
   <p style="font-size: 1.05rem;">
-    We've collected and analyzed decisions from all major Ontario tribunals affecting injured workers, 
-    disability benefits, and workplace discrimination cases. Each dataset reveals different patterns 
-    in how claims are handled at different stages of the system.
+    We've collected and analyzed decisions across Ontario's four main worker-impact tribunals plus the Ontario Court of Appeal (ONCA).
+    Together these datasets show patterns across first-level decisions, tribunal appeals, benefits adjudication, human rights claims,
+    and the appellate precedent layer.
   </p>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
     
     <!-- WSIAT -->
     <div style="border: 2px solid #1976d2; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);">
-      <h4 style="margin: 0 0 0.5rem; color: #0d47a1;">🏛️ WSIAT</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #0d47a1;">ðŸ›ï¸ WSIAT</h4>
       <p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #1565c0; font-weight: 600;">Workplace Safety & Insurance Appeals Tribunal</p>
       <div style="background: white; padding: 1rem; border-radius: 6px; margin: 0.75rem 0;">
         <div style="font-size: 2rem; font-weight: bold; color: #1976d2;">98,992</div>
@@ -962,12 +1263,12 @@ description: Interactive data visualizations and research tools analyzing tribun
         <strong>Focus:</strong> Pre-existing conditions, chronic pain, benefit levels<br>
         <strong>Success Rate:</strong> 60-70% (independent research)
       </p>
-      <a href="#wsiat-decision-explorer" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #1976d2; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Explore WSIAT Data ↓</a>
+      <a href="#wsiat-decision-explorer" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #1976d2; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Explore WSIAT Data â†“</a>
     </div>
 
     <!-- HRTO -->
     <div style="border: 2px solid #7b1fa2; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);">
-      <h4 style="margin: 0 0 0.5rem; color: #4a148c;">⚖️ HRTO</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #4a148c;">âš–ï¸ HRTO</h4>
       <p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #6a1b9a; font-weight: 600;">Human Rights Tribunal of Ontario</p>
       <div style="background: white; padding: 1rem; border-radius: 6px; margin: 0.75rem 0;">
         <div style="font-size: 2rem; font-weight: bold; color: #7b1fa2;">9,269</div>
@@ -978,12 +1279,12 @@ description: Interactive data visualizations and research tools analyzing tribun
         <strong>Focus:</strong> Disability accommodation, discrimination<br>
         <strong>Outcome Detection:</strong> 46-58% from keywords
       </p>
-      <a href="/data/tribunal-decisions/onhrt-scraping-summary.json" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #7b1fa2; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View HRTO Data →</a>
+      <a href="/data/tribunal-decisions/onhrt-scraping-summary.json" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #7b1fa2; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View HRTO Data â†’</a>
     </div>
 
     <!-- ONSBT -->
     <div style="border: 2px solid #2e7d32; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
-      <h4 style="margin: 0 0 0.5rem; color: #1b5e20;">📋 ONSBT</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #1b5e20;">ðŸ“‹ ONSBT</h4>
       <p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #2e7d32; font-weight: 600;">Ontario Social Benefits Tribunal</p>
       <div style="background: white; padding: 1rem; border-radius: 6px; margin: 0.75rem 0;">
         <div style="font-size: 2rem; font-weight: bold; color: #2e7d32;">13,798</div>
@@ -994,12 +1295,12 @@ description: Interactive data visualizations and research tools analyzing tribun
         <strong>Focus:</strong> Disability benefit eligibility, denials<br>
         <strong>Data Quality:</strong> 100% with metadata
       </p>
-      <a href="/data/tribunal-decisions/onsbt-scraping-summary.json" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #2e7d32; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View ONSBT Data →</a>
+      <a href="/data/tribunal-decisions/onsbt-scraping-summary.json" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #2e7d32; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View ONSBT Data â†’</a>
     </div>
 
     <!-- ONWSIB -->
     <div style="border: 2px solid #d32f2f; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);">
-      <h4 style="margin: 0 0 0.5rem; color: #b71c1c;">🏢 ONWSIB</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #b71c1c;">ðŸ¢ ONWSIB</h4>
       <p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #c62828; font-weight: 600;">Ontario WSIB First-Level Decisions</p>
       <div style="background: white; padding: 1rem; border-radius: 6px; margin: 0.75rem 0;">
         <div style="font-size: 2rem; font-weight: bold; color: #d32f2f;">463</div>
@@ -1009,32 +1310,49 @@ description: Interactive data visualizations and research tools analyzing tribun
         <strong>Level:</strong> Initial WSIB claim decisions<br>
         <strong>Focus:</strong> Internal review record and public transparency gap<br>
         <strong>Method:</strong> <a href="/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html">Local deep-dive note</a><br>
-        <strong>Status:</strong> ✅ Reconciled and complete
+        <strong>Status:</strong> âœ… Reconciled and complete
       </p>
-      <a href="/data/tribunal-decisions/" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #d32f2f; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Raw Files →</a>
+      <a href="/data/tribunal-decisions/" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background: #d32f2f; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Raw Files â†’</a>
+    </div>
+
+    <!-- ONCA -->
+    <div style="border: 2px solid #455a64; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%);">
+      <h4 style="margin: 0 0 0.5rem; color: #263238;">âš–ï¸ ONCA</h4>
+      <p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #37474f; font-weight: 600;">Ontario Court of Appeal (Appellate Layer)</p>
+      <div style="background: white; padding: 1rem; border-radius: 6px; margin: 0.75rem 0;">
+        <div style="font-size: 2rem; font-weight: bold; color: #455a64;">5,034</div>
+        <div style="font-size: 0.85rem; color: #666;">decisions (2020-2026)</div>
+      </div>
+      <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: #333;">
+        <strong>Level:</strong> Appellate review after tribunal proceedings<br>
+        <strong>Focus:</strong> Leave motions, standards of review, costs, procedural orders<br>
+        <strong>Use:</strong> Precedent framing and escalation strategy
+      </p>
+      <a href="/guides/onca-appellate-guide/" class="onca-card-link" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem;">View ONCA Guide â†’</a>
     </div>
 
   </div>
 
   <div style="background: #fff3cd; border-left: 4px solid #f9a825; padding: 1rem 1.5rem; border-radius: 6px; margin: 1.5rem 0;">
     <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #333;">
-      <strong>🔍 Why Multiple Tribunals?</strong> Each tribunal handles different stages of the workers' rights system. 
-      WSIB denies at first level (ONWSIB) → Workers appeal to WSIAT → Disability benefits handled by ONSBT → 
-      Discrimination cases go to HRTO. Analyzing all four reveals patterns across the entire system, not just one stage.
+      <strong>ðŸ” Why Five Systems?</strong> Each system handles a different stage of the workers' rights path.
+      WSIB denies at first level (ONWSIB) â†’ Workers appeal to WSIAT â†’ Disability benefits handled by ONSBT â†’
+      Discrimination cases go to HRTO â†’ complex appellate precedent is set in ONCA.
+      Looking across all five gives a full pipeline view instead of a single-stage snapshot.
     </p>
   </div>
 
-  <h4 style="margin: 1.5rem 0 1rem;">Cross-Tribunal Insights</h4>
+  <h4 style="margin: 1.5rem 0 1rem;">Cross-System Insights</h4>
   <ul style="margin-left: 1.2rem;">
-    <li><strong>Pre-existing condition denials:</strong> 13.3% of WSIAT cases (1,519/11,430) — pattern consistent across tribunals</li>
-    <li><strong>Outcome transparency:</strong> WSIAT 91.8% unknown, HRTO 46-58% unknown, ONSBT near 100% unknown — systemic data gap</li>
-    <li><strong>Appeal success varies by tribunal:</strong> WSIAT 60-70%, HRTO unknown, ONSBT unknown (limited outcome data)</li>
-    <li><strong>Combined dataset power:</strong> 122,488 decisions reveal systemic patterns invisible in single-tribunal analysis</li>
+    <li><strong>Pre-existing condition denials:</strong> 13.3% of WSIAT cases (1,519/11,430) â€” pattern consistent across tribunal stages</li>
+    <li><strong>Outcome transparency:</strong> WSIAT 91.8% unknown, HRTO 46-58% unknown, ONSBT near 100% unknown â€” systemic data gap</li>
+    <li><strong>Appeal strategy layering:</strong> ONCA is a high-bar appellate layer focused on procedure and precedent, not first-instance merits</li>
+    <li><strong>Combined dataset power:</strong> 127,556 decisions reveal system-wide patterns invisible in single-tribunal analysis</li>
   </ul>
 
   <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #666;">
-    <strong>Data Access:</strong> All four datasets available for download. 
-    <a href="/research-data-sources/">View download options & methodology →</a>
+    <strong>Data Access:</strong> All five datasets available for download.
+    <a href="/research-data-sources/">View download options & methodology â†’</a>
   </p>
 </div>
 
@@ -1042,7 +1360,7 @@ description: Interactive data visualizations and research tools analyzing tribun
 
 <div id="in-depth-findings"></div>
 
-## 🔍 Deep Analysis (For Those Who Want More)
+## ðŸ” Deep Analysis (For Those Who Want More)
 
 <!-- Statistical Terms Glossary Box -->
 <div class="tool-card">
@@ -1320,8 +1638,8 @@ description: Interactive data visualizations and research tools analyzing tribun
 </div>
 
 <div class="glossary-box">
-  <h3 class="glossary-title">📖 Understanding the Numbers (Plain English Guide)</h3>
-  <p class="glossary-intro">You'll see statistical terms like "95% CI", "χ²", and "p < 0.001" throughout our research. Here's what they mean:</p>
+  <h3 class="glossary-title">ðŸ“– Understanding the Numbers (Plain English Guide)</h3>
+  <p class="glossary-intro">You'll see statistical terms like "95% CI", "Ï‡Â²", and "p < 0.001" throughout our research. Here's what they mean:</p>
   
   <div class="glossary-grid">
     <div>
@@ -1329,8 +1647,8 @@ description: Interactive data visualizations and research tools analyzing tribun
       <p class="glossary-definition">A "margin of error." When we say "20% (95% CI: 17.3-22.7%)", it means we're 95% confident the true number is between 17.3% and 22.7%. Narrower range = more precise measurement.</p>
     </div>
     <div>
-      <strong class="glossary-term">χ² (Chi-Square Test)</strong>
-      <p class="glossary-definition">Tests if a pattern is random or caused by something. Higher number = less likely to be random. Example: χ² = 32.7 vs. critical value = 6.6 means the pattern is NOT random.</p>
+      <strong class="glossary-term">Ï‡Â² (Chi-Square Test)</strong>
+      <p class="glossary-definition">Tests if a pattern is random or caused by something. Higher number = less likely to be random. Example: Ï‡Â² = 32.7 vs. critical value = 6.6 means the pattern is NOT random.</p>
     </div>
     <div>
       <strong class="glossary-term">p-value</strong>
@@ -1343,7 +1661,7 @@ description: Interactive data visualizations and research tools analyzing tribun
   </div>
   
   <p class="glossary-bottom-line">
-    <strong>🎯 Bottom Line:</strong> These numbers prove patterns are real, not coincidence. When you see "p < 0.001" or "χ² = 32.7", it means: "This is NOT random—something systematic is happening."
+    <strong>ðŸŽ¯ Bottom Line:</strong> These numbers prove patterns are real, not coincidence. When you see "p < 0.001" or "Ï‡Â² = 32.7", it means: "This is NOT randomâ€”something systematic is happening."
   </p>
 </div>
 
@@ -1375,7 +1693,7 @@ description: Interactive data visualizations and research tools analyzing tribun
 }
 
 .glossary-term {
-  color: #1976d2 !important;
+  color: #0d47a1 !important;
   display: block;
   margin-bottom: 0.25rem;
 }
@@ -1444,7 +1762,7 @@ description: Interactive data visualizations and research tools analyzing tribun
 
 ---
 
-## 🤖 AI-Powered Outcome Predictions: 137,252 Decisions Analyzed
+## ðŸ¤– AI-Powered Outcome Predictions: 137,252 Decisions Analyzed
 
 <div class="tool-card ai-predictions-hero">
   <div style="margin-bottom: 1rem;">
@@ -1456,7 +1774,7 @@ description: Interactive data visualizations and research tools analyzing tribun
   <h3 style="margin-top: 0;">Can You Win? We Analyzed 137,252 Cases to Find Out</h3>
   <p style="font-size: 1.15rem;">
     Using natural language processing trained on 256,734 decision documents, we've predicted outcomes for 
-    <strong>every single tribunal decision</strong> in our database—not just Ontario, but also BC and beyond. 
+    <strong>every single tribunal decision</strong> in our databaseâ€”not just Ontario, but also BC and beyond. 
     This is the first Canada-wide AI outcome prediction system for workplace and disability tribunals.
   </p>
 </div>
@@ -1570,25 +1888,25 @@ description: Interactive data visualizations and research tools analyzing tribun
 
 <div class="tool-card" style="background: #f0f9ff; border-left: 4px solid #3b82f6;">
   <p style="font-size: 1.05rem; margin-bottom: 1rem; color: #1e293b;">
-    <strong>🎯 Key Takeaway:</strong> If you've been denied benefits or accommodations and you're considering an appeal, 
-    <strong>the overall data suggests you have a strong chance of success</strong>—but it varies significantly by tribunal.
+    <strong>ðŸŽ¯ Key Takeaway:</strong> If you've been denied benefits or accommodations and you're considering an appeal, 
+    <strong>the overall data suggests you have a strong chance of success</strong>â€”but it varies significantly by tribunal.
   </p>
 
   <ul style="margin-left: 1.5rem; color: #334155;">
-    <li><strong>WSIAT (Ontario Workers' Comp):</strong> 100% prediction rate in our NLP model—but this reflects data limitations, not actual tribunal decisions. Our Tier A+B classification of 649 resolved WSIAT decisions (2020-2026 CanLII subset) shows a <strong>73.5% grant rate</strong>. The full dataset outcome gap (93.9% unresolved) prevents a definitive population-level rate.</li>
-    <li><strong>BCWCAT (BC Workers' Comp):</strong> 86.4% win rate—strong odds if you're prepared with medical evidence.</li>
-    <li><strong>Other Tribunals:</strong> 84.1% win rate across mixed jurisdictions—consistently high success rates.</li>
-    <li><strong>HRTO (Human Rights):</strong> High abandonment rate (14% of all cases) suggests procedural challenges—but if you persist, success is possible.</li>
+    <li><strong>WSIAT (Ontario Workers' Comp):</strong> 100% prediction rate in our NLP modelâ€”but this reflects data limitations, not actual tribunal decisions. Our Tier A+B classification of 649 resolved WSIAT decisions (2020-2026 CanLII subset) shows a <strong>73.5% grant rate</strong>. The full dataset outcome gap (93.9% unresolved) prevents a definitive population-level rate.</li>
+    <li><strong>BCWCAT (BC Workers' Comp):</strong> 86.4% win rateâ€”strong odds if you're prepared with medical evidence.</li>
+    <li><strong>Other Tribunals:</strong> 84.1% win rate across mixed jurisdictionsâ€”consistently high success rates.</li>
+    <li><strong>HRTO (Human Rights):</strong> High abandonment rate (14% of all cases) suggests procedural challengesâ€”but if you persist, success is possible.</li>
   </ul>
 
   <p style="margin-top: 1rem; font-size: 0.95rem; color: #64748b;">
-    <strong>⚠️ Important:</strong> These predictions are based on AI analysis of decision text, not official tribunal outcomes. 
+    <strong>âš ï¸ Important:</strong> These predictions are based on AI analysis of decision text, not official tribunal outcomes. 
     Treat them as <strong>indicative patterns</strong>, not guarantees. Individual case outcomes depend on evidence quality, 
     legal representation, and specific circumstances.
   </p>
 
   <p style="margin-top: 1rem; font-size: 0.95rem; color: #64748b;">
-    <strong>🔧 API Limitations — Confirmed by CanLII (May 2026):</strong> CanLII confirmed directly: <em>"CanLII doesn't provide any data further than what's provided by its API."</em> The API provides case metadata (date, keywords, citation) but <strong>no outcome field exists</strong>. All 230,392 records were collected via authorized API calls. Outcomes are inferred from keyword patterns in decision text — our NLP model predicts unknown outcomes with 79% accuracy based on case keywords and patterns. To get 100% accurate outcomes would require manually reading each case individually.
+    <strong>ðŸ”§ API Limitations â€” Confirmed by CanLII (May 2026):</strong> CanLII confirmed directly: <em>"CanLII doesn't provide any data further than what's provided by its API."</em> The API provides case metadata (date, keywords, citation) but <strong>no outcome field exists</strong>. All 230,392 records were collected via authorized API calls. Outcomes are inferred from keyword patterns in decision text â€” our NLP model predicts unknown outcomes with 79% accuracy based on case keywords and patterns. To get 100% accurate outcomes would require manually reading each case individually.
   </p>
 </div>
 
@@ -1605,7 +1923,7 @@ description: Interactive data visualizations and research tools analyzing tribun
 
   <h4 style="margin-top: 1.5rem; color: #7c3aed;">Confidence Levels</h4>
   <ul style="margin-left: 1.5rem; color: #334155;">
-    <li><strong>High confidence (≥80%):</strong> 72.1% of predictions (25,213 decisions) - deployed in search results</li>
+    <li><strong>High confidence (â‰¥80%):</strong> 72.1% of predictions (25,213 decisions) - deployed in search results</li>
     <li><strong>Medium confidence (60-79%):</strong> Shown with warning label</li>
     <li><strong>Low confidence (<60%):</strong> Not deployed, flagged for manual review</li>
   </ul>
@@ -1633,11 +1951,11 @@ description: Interactive data visualizations and research tools analyzing tribun
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
     <div style="text-align: center;">
-      <div style="background: #22c55e; color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem;">✓ ALLOWED</div>
+      <div style="background: #22c55e; color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem;">âœ“ ALLOWED</div>
       <p style="font-size: 0.9rem; color: #64748b; margin: 0;">Worker won</p>
     </div>
     <div style="text-align: center;">
-      <div style="background: #ef4444; color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem;">✗ DISMISSED</div>
+      <div style="background: #ef4444; color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem;">âœ— DISMISSED</div>
       <p style="font-size: 0.9rem; color: #64748b; margin: 0;">Worker lost</p>
     </div>
     <div style="text-align: center;">
@@ -1645,7 +1963,7 @@ description: Interactive data visualizations and research tools analyzing tribun
       <p style="font-size: 0.9rem; color: #64748b; margin: 0;">Mixed outcome</p>
     </div>
     <div style="text-align: center;">
-      <div style="background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem;">⟲ REMANDED</div>
+      <div style="background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem;">âŸ² REMANDED</div>
       <p style="font-size: 0.9rem; color: #64748b; margin: 0;">Sent back for reconsideration</p>
     </div>
   </div>
@@ -1660,17 +1978,17 @@ description: Interactive data visualizations and research tools analyzing tribun
 
 <div id="injury-knowledge-base"></div>
 
-## 📚 Tribunal Guides: Complete System Overview
+## ðŸ“š Tribunal Guides: Complete System Overview
 
-All guides below are **evidence-based** — derived from analyzing 122,488 tribunal decisions. Each guide shows you patterns from real cases, what evidence works, and strategic approaches that succeed.
+All guides below are **evidence-based** â€” derived from analyzing 122,488 tribunal decisions. Each guide shows you patterns from real cases, what evidence works, and strategic approaches that succeed.
 
-### 🏛️ Tribunal-Specific Appeal Guides
+### ðŸ›ï¸ Tribunal-Specific Appeal Guides
 
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Complete</span>
     <span class="tool-badge badge-green">5 Tribunals</span>
-    <span class="tool-badge badge-purple">122,488 Cases</span>
+    <span class="tool-badge badge-purple">127,556 Cases</span>
   </div>
   
   <h3 style="margin-top: 0;">Complete Guides for Every Ontario Tribunal</h3>
@@ -1684,7 +2002,7 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
     
     <!-- WSIAT -->
     <div style="border: 2px solid #1976d2; border-radius: 8px; padding: 1.5rem; background: #e3f2fd;">
-      <h4 style="margin: 0 0 0.5rem; color: #0d47a1;">🏛️ WSIAT Appeal Guide</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #0d47a1;">ðŸ›ï¸ WSIAT Appeal Guide</h4>
       <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">
         Workplace injury appeals. 98,992 decisions analyzed.
       </p>
@@ -1696,12 +2014,12 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
         <li>Medical evidence strategy</li>
         <li>Chronic pain & NEL claims</li>
       </ul>
-      <a href="/guides/wsiat-complete-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #1976d2; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide →</a>
+      <a href="/guides/wsiat-complete-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #1976d2; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide â†’</a>
     </div>
 
     <!-- HRTO -->
     <div style="border: 2px solid #7b1fa2; border-radius: 8px; padding: 1.5rem; background: #f3e5f5;">
-      <h4 style="margin: 0 0 0.5rem; color: #4a148c;">⚖️ HRTO Appeal Guide</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #4a148c;">âš–ï¸ HRTO Appeal Guide</h4>
       <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">
         Workplace discrimination & disability accommodation.
       </p>
@@ -1713,12 +2031,12 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
         <li>Accommodation claims</li>
         <li>Email notification barriers</li>
       </ul>
-      <a href="/guides/hrto-complete-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #7b1fa2; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide →</a>
+      <a href="/guides/hrto-complete-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #7b1fa2; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide â†’</a>
     </div>
 
     <!-- ONSBT -->
     <div style="border: 2px solid #2e7d32; border-radius: 8px; padding: 1.5rem; background: #e8f5e9;">
-      <h4 style="margin: 0 0 0.5rem; color: #1b5e20;">📋 ONSBT Appeal Guide</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #1b5e20;">ðŸ“‹ ONSBT Appeal Guide</h4>
       <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">
         ODSP/OW disability benefits appeals.
       </p>
@@ -1730,12 +2048,12 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
         <li>Medical evidence standards</li>
         <li>Appeal procedures & deadlines</li>
       </ul>
-      <a href="/guides/onsbt-complete-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #2e7d32; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide →</a>
+      <a href="/guides/onsbt-complete-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #2e7d32; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide â†’</a>
     </div>
 
     <!-- ONWSIB -->
     <div style="border: 2px solid #d32f2f; border-radius: 8px; padding: 1.5rem; background: #ffebee;">
-      <h4 style="margin: 0 0 0.5rem; color: #b71c1c;">🏢 ONWSIB Skip Strategy</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #b71c1c;">ðŸ¢ ONWSIB Skip Strategy</h4>
       <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">
         When to use WSIB internal review vs. skip to WSIAT.
       </p>
@@ -1747,12 +2065,12 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
         <li>When to appeal to WSIAT</li>
         <li>Strategic timing</li>
       </ul>
-      <a href="/guides/onwsib-skip-strategy-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #d32f2f; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide →</a>
+      <a href="/guides/onwsib-skip-strategy-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #d32f2f; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide â†’</a>
     </div>
 
     <!-- ONCA -->
     <div style="border: 2px solid #455a64; border-radius: 8px; padding: 1.5rem; background: #eceff1;">
-      <h4 style="margin: 0 0 0.5rem; color: #263238;">⚖️ ONCA Appellate Guide</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #263238;">âš–ï¸ ONCA Appellate Guide</h4>
       <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">
         Appealing tribunal decisions to Ontario Court of Appeal.
       </p>
@@ -1764,12 +2082,12 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
         <li>Leave to appeal process</li>
         <li>When ONCA makes sense</li>
       </ul>
-      <a href="/guides/onca-appellate-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #455a64; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide →</a>
+      <a href="/guides/onca-appellate-guide/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #455a64; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide â†’</a>
     </div>
 
     <!-- Cross-Pathway -->
     <div style="border: 2px solid #6d28d9; border-radius: 8px; padding: 1.5rem; background: #f5f3ff;">
-      <h4 style="margin: 0 0 0.5rem; color: #5b21b6;">🔄 Cross-Pathway Guide</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #5b21b6;">ðŸ”„ Cross-Pathway Guide</h4>
       <p style="margin: 0 0 1rem; font-size: 0.95rem; color: #333;">
         From WSIB to ODSP: When & how to move between programs.
       </p>
@@ -1781,7 +2099,7 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
         <li>Application strategy</li>
         <li>Common mistakes</li>
       </ul>
-      <a href="/guides/wsib-to-odsp-pathway/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #6d28d9; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide →</a>
+      <a href="/guides/wsib-to-odsp-pathway/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #6d28d9; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">Read Guide â†’</a>
     </div>
 
   </div>
@@ -1791,7 +2109,7 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
 
 <div id="appeal-templates"></div>
 
-## 📋 Appeal & Application Templates
+## ðŸ“‹ Appeal & Application Templates
 
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
@@ -1809,41 +2127,41 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
     <div style="background: white; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; border-left: 4px solid #667eea;">
-      <h4 style="margin: 0 0 0.5rem;">📄 Pre-Existing Condition Appeal</h4>
+      <h4 style="margin: 0 0 0.5rem;">ðŸ“„ Pre-Existing Condition Appeal</h4>
       <p style="margin: 0 0 0.75rem; font-size: 0.9rem; color: #666;">How to argue "pre-existing" is aggravation, not exclusion</p>
-      <a href="/templates/pre-existing-appeal/" style="font-weight: 600; color: #667eea;">Download →</a>
+      <a href="/templates/pre-existing-appeal/" style="font-weight: 600; color: #667eea;">Download â†’</a>
     </div>
     <div style="background: white; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; border-left: 4px solid #667eea;">
-      <h4 style="margin: 0 0 0.5rem;">💊 Chronic Pain Appeal</h4>
+      <h4 style="margin: 0 0 0.5rem;">ðŸ’Š Chronic Pain Appeal</h4>
       <p style="margin: 0 0 0.75rem; font-size: 0.9rem; color: #666;">Template for NOC (Non-Occupational) pain conditions</p>
-      <a href="/templates/chronic-pain-appeal/" style="font-weight: 600; color: #667eea;">Download →</a>
+      <a href="/templates/chronic-pain-appeal/" style="font-weight: 600; color: #667eea;">Download â†’</a>
     </div>
     <div style="background: white; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; border-left: 4px solid #667eea;">
-      <h4 style="margin: 0 0 0.5rem;">🦴 Back Injury Appeal</h4>
+      <h4 style="margin: 0 0 0.5rem;">ðŸ¦´ Back Injury Appeal</h4>
       <p style="margin: 0 0 0.75rem; font-size: 0.9rem; color: #666;">Most common injury type (15.3% of cases)</p>
-      <a href="/templates/back-injury-appeal/" style="font-weight: 600; color: #667eea;">Download →</a>
+      <a href="/templates/back-injury-appeal/" style="font-weight: 600; color: #667eea;">Download â†’</a>
     </div>
     <div style="background: white; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; border-left: 4px solid #667eea;">
-      <h4 style="margin: 0 0 0.5rem;">✋ Carpal Tunnel Appeal</h4>
+      <h4 style="margin: 0 0 0.5rem;">âœ‹ Carpal Tunnel Appeal</h4>
       <p style="margin: 0 0 0.75rem; font-size: 0.9rem; color: #666;">Repetitive strain injury template</p>
-      <a href="/templates/carpal-tunnel-appeal/" style="font-weight: 600; color: #667eea;">Download →</a>
+      <a href="/templates/carpal-tunnel-appeal/" style="font-weight: 600; color: #667eea;">Download â†’</a>
     </div>
     <div style="background: white; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; border-left: 4px solid #667eea;">
-      <h4 style="margin: 0 0 0.5rem;">🧠 HRTO Accommodation Request</h4>
+      <h4 style="margin: 0 0 0.5rem;">ðŸ§  HRTO Accommodation Request</h4>
       <p style="margin: 0 0 0.75rem; font-size: 0.9rem; color: #666;">How to file for disability accommodation</p>
-      <a href="/templates/hrto-accommodation/" style="font-weight: 600; color: #667eea;">Download →</a>
+      <a href="/templates/hrto-accommodation/" style="font-weight: 600; color: #667eea;">Download â†’</a>
     </div>
     <div style="background: white; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; border-left: 4px solid #667eea;">
-      <h4 style="margin: 0 0 0.5rem;">📋 ONSBT Appeal Letter</h4>
+      <h4 style="margin: 0 0 0.5rem;">ðŸ“‹ ONSBT Appeal Letter</h4>
       <p style="margin: 0 0 0.75rem; font-size: 0.9rem; color: #666;">Appeal an ODSP/OW denial</p>
-      <a href="/templates/onsbt-appeal/" style="font-weight: 600; color: #667eea;">Download →</a>
+      <a href="/templates/onsbt-appeal/" style="font-weight: 600; color: #667eea;">Download â†’</a>
     </div>
   </div>
 </div>
 
 ---
 
-## 📊 All Data Visualizations
+## ðŸ“Š All Data Visualizations
 
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
@@ -1855,14 +2173,14 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
   <h3 style="margin-top: 0;">Complete Visualization Library</h3>
   
   <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">
-    Explore tribunal data visually. All charts are interactive — zoom, filter, and discover patterns yourself.
+    Explore tribunal data visually. All charts are interactive â€” zoom, filter, and discover patterns yourself.
   </p>
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
     
     <!-- Workplace Injury (WSIAT) -->
     <div style="border: 2px solid #1976d2; border-radius: 8px; padding: 1.5rem; background: #e3f2fd;">
-      <h4 style="margin: 0 0 0.5rem; color: #0d47a1;">⚡ WSIAT Visualizations</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #0d47a1;">âš¡ WSIAT Visualizations</h4>
       <p style="margin: 0 0 1rem; font-size: 0.9rem; color: #333;">Workplace injury appeals data</p>
       <ul style="margin: 0 0 1rem 1.2rem; font-size: 0.9rem;">
         <li><a href="/data/visualizations/wsiat-outcome-classification-2020-2026.json" style="color: #1976d2;">Outcome Classification (2020-2026)</a></li>
@@ -1874,7 +2192,7 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
 
     <!-- Disability Benefits (ONSBT) -->
     <div style="border: 2px solid #2e7d32; border-radius: 8px; padding: 1.5rem; background: #e8f5e9;">
-      <h4 style="margin: 0 0 0.5rem; color: #1b5e20;">💰 ONSBT Visualizations</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #1b5e20;">ðŸ’° ONSBT Visualizations</h4>
       <p style="margin: 0 0 1rem; font-size: 0.9rem; color: #333;">Disability benefits appeals data</p>
       <ul style="margin: 0 0 1rem 1.2rem; font-size: 0.9rem;">
         <li><a href="/data/visualizations/onsbt-onwsib-classification-2020-2026.json" style="color: #2e7d32;">Outcome Classification + ONWSIB</a></li>
@@ -1886,18 +2204,18 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
 
     <!-- Cross-Tribunal -->
     <div style="border: 2px solid #7b1fa2; border-radius: 8px; padding: 1.5rem; background: #f3e5f5;">
-      <h4 style="margin: 0 0 0.5rem; color: #4a148c;">🏛️ Cross-Tribunal Analysis</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #4a148c;">ðŸ›ï¸ Cross-Tribunal Analysis</h4>
       <p style="margin: 0 0 1rem; font-size: 0.9rem; color: #333;">Compare outcomes across systems</p>
       <ul style="margin: 0 0 1rem 1.2rem; font-size: 0.9rem;">
         <li><a href="/data/visualizations/cross-tribunal-comparison.json" style="color: #7b1fa2;">Success Rates by Tribunal</a></li>
         <li><a href="/data/visualizations/onca-procedural-decisions-2020-2026.json" style="color: #7b1fa2;">ONCA Procedural Breakdown</a></li>
       </ul>
-      <p style="margin: 0; font-size: 0.85rem; color: #666;"><strong>Cases:</strong> 122,488 total</p>
+      <p style="margin: 0; font-size: 0.85rem; color: #666;"><strong>Cases:</strong> 127,556 total</p>
     </div>
 
     <!-- Employer Safety -->
     <div style="border: 2px solid #d32f2f; border-radius: 8px; padding: 1.5rem; background: #ffebee;">
-      <h4 style="margin: 0 0 0.5rem; color: #b71c1c;">🏢 Employer Safety Data</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #b71c1c;">ðŸ¢ Employer Safety Data</h4>
       <p style="margin: 0 0 1rem; font-size: 0.9rem; color: #333;">Workplace incident patterns</p>
       <ul style="margin: 0 0 1rem 1.2rem; font-size: 0.9rem;">
         <li><a href="/data/visualizations/employer-safety-sample.json" style="color: #d32f2f;">Employer Safety Heatmap</a></li>
@@ -1909,11 +2227,11 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
 
     <!-- Appeals Funnel -->
     <div style="border: 2px solid #f57c00; border-radius: 8px; padding: 1.5rem; background: #fff3e0;">
-      <h4 style="margin: 0 0 0.5rem; color: #e65100;">🔀 Appeals Flow</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #e65100;">ðŸ”€ Appeals Flow</h4>
       <p style="margin: 0 0 1rem; font-size: 0.9rem; color: #333;">How claims move through system</p>
       <ul style="margin: 0 0 1rem 1.2rem; font-size: 0.9rem;">
-        <li><a href="/data/visualizations/wsib-appeal-funnel.json" style="color: #f57c00;">Appeal Funnel (WSIB→WSIAT)</a></li>
-        <li>Denial → Appeal conversion rates</li>
+        <li><a href="/data/visualizations/wsib-appeal-funnel.json" style="color: #f57c00;">Appeal Funnel (WSIBâ†’WSIAT)</a></li>
+        <li>Denial â†’ Appeal conversion rates</li>
         <li>Success rates by stage</li>
       </ul>
       <p style="margin: 0; font-size: 0.85rem; color: #666;"><strong>Flow:</strong> Claims to outcomes</p>
@@ -1923,7 +2241,7 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
 
   <div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem 1.5rem; border-radius: 6px; margin-top: 2rem;">
     <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #333;">
-      <strong>✅ Accessibility First:</strong> All visualizations are readable in light mode, dark mode, and high contrast mode. 
+      <strong>âœ… Accessibility First:</strong> All visualizations are readable in light mode, dark mode, and high contrast mode. 
       Text is legible, colors meet WCAG AAA contrast standards, and interactive elements are keyboard-accessible.
     </p>
   </div>
@@ -1934,9 +2252,9 @@ All guides below are **evidence-based** — derived from analyzing 122,488 tribu
   </p>
 </div>
 
-## �📚 Knowledge Base & Resources
+## ï¿½ðŸ“š Knowledge Base & Resources
 
-All guides and templates below are **derived from analyzing 11,430+ tribunal decisions**. These are not generic advice—they're **evidence-based strategies** from actual winning cases.
+All guides and templates below are **derived from analyzing 11,430+ tribunal decisions**. These are not generic adviceâ€”they're **evidence-based strategies** from actual winning cases.
 
 ### Injury-Specific Guides (16 Comprehensive Articles)
 
@@ -1951,13 +2269,13 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
   
   <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">
     Each guide analyzes hundreds of tribunal decisions to show you <strong>exactly what evidence wins claims</strong> 
-    for your specific injury type. No generic advice—these are patterns from real cases.
+    for your specific injury type. No generic adviceâ€”these are patterns from real cases.
   </p>
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
     
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #667eea;">
-      <strong style="color: #667eea;">🦴 Musculoskeletal</strong>
+      <strong style="color: #667eea;">ðŸ¦´ Musculoskeletal</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/knowledge-base/low-back-pain-claims/">Low Back Pain</a></li>
         <li><a href="/knowledge-base/shoulder-rotator-cuff-claims/">Shoulder & Rotator Cuff</a></li>
@@ -1969,7 +2287,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
     </div>
     
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #764ba2;">
-      <strong style="color: #764ba2;">✋ Upper Extremity</strong>
+      <strong style="color: #764ba2;">âœ‹ Upper Extremity</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/knowledge-base/wrist-carpal-tunnel-claims/">Wrist & Carpal Tunnel</a></li>
         <li><a href="/knowledge-base/elbow-epicondylitis-claims/">Elbow & Epicondylitis</a></li>
@@ -1978,7 +2296,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
     </div>
     
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #d32f2f;">
-      <strong style="color: #d32f2f;">🧠 Neurological & Mental Health</strong>
+      <strong style="color: #d32f2f;">ðŸ§  Neurological & Mental Health</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/knowledge-base/psychotraumatic-disability/">PTSD & Psychotraumatic Disability</a></li>
         <li><a href="/knowledge-base/chronic-pain-claims/">Chronic Pain</a></li>
@@ -1988,7 +2306,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
     </div>
     
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #f57c00;">
-      <strong style="color: #f57c00;">⚖️ Legal Strategies</strong>
+      <strong style="color: #f57c00;">âš–ï¸ Legal Strategies</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/knowledge-base/pre-existing-conditions/">Countering Pre-Existing Denials</a></li>
         <li><a href="/knowledge-base/permanent-impairment-rating/">Maximizing NEL Benefits</a></li>
@@ -2030,18 +2348,18 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
     <div>
-      <h4 style="margin: 0 0 0.5rem; color: #667eea;">📄 Featured Templates (Live Now!)</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #667eea;">ðŸ“„ Featured Templates (Live Now!)</h4>
       <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/templates/back-injury-appeal/">Back Injury Appeal</a></li>
         <li><a href="/templates/chronic-pain-appeal/">Chronic Pain Appeal</a></li>
         <li><a href="/templates/pre-existing-appeal/">Pre-Existing Condition Appeal</a></li>
       </ul>
       <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #666;">
-        <em>Professional-grade fill-in-the-blank templates · Addresses all common denials · Free to use</em>
+        <em>Professional-grade fill-in-the-blank templates Â· Addresses all common denials Â· Free to use</em>
       </p>
     </div>
     <div>
-      <h4 style="margin: 0 0 0.5rem; color: #764ba2;">🔜 More Templates Being Added</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #764ba2;">ðŸ”œ More Templates Being Added</h4>
       <p style="margin: 0; font-size: 0.9rem; color: #666;">
         Additional templates for shoulder, knee, mental health/PTSD, carpal tunnel, concussion, fibromyalgia, hearing loss, 
         herniated disc, impairment rating, neck injury, respiratory, rotator cuff, 
@@ -2054,7 +2372,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
   </div>
 </div>
 
-## 🔄 Close the Loop: How Your Feedback Makes Data Better
+## ðŸ”„ Close the Loop: How Your Feedback Makes Data Better
 
 **This is the key:** Research only works if it cycles back to action. Here's how you accelerate the flywheel.
 
@@ -2063,7 +2381,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
   
   <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
     <p style="margin: 0; font-size: 1.2rem; font-weight: bold; text-align: center;">
-      📊 Data → 📖 Patterns → ✅ Tools → 💪 You Win → 🔄 You Share → 📊 Better Data
+      ðŸ“Š Data â†’ ðŸ“– Patterns â†’ âœ… Tools â†’ ðŸ’ª You Win â†’ ðŸ”„ You Share â†’ ðŸ“Š Better Data
     </p>
   </div>
 
@@ -2089,7 +2407,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
       <h4 style="margin: 0 0 0.5rem; color: white;">Step 3: You Use Tools</h4>
       <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
         Read the guides. Use the templates. Fight your appeal. 
-        Our data shows 73.5% grant rate in resolved WSIAT decisions — and most workers never even appeal.
+        Our data shows 73.5% grant rate in resolved WSIAT decisions â€” and most workers never even appeal.
       </p>
     </div>
 
@@ -2114,53 +2432,74 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
   <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.2); border-radius: 8px;">
     <h4 style="margin: 0 0 1rem; color: white; font-size: 1.2rem;">How You Can Contribute:</h4>
     <ul style="margin: 0 0 0 1.5rem; line-height: 2;">
-      <li><strong>Use the tools</strong> → Fight your case with real data</li>
-      <li><strong>Share your outcome</strong> → Email empowrapp08162025@gmail.com (anonymous OK)</li>
-      <li><strong>Report new tactics</strong> → Help us detect emerging patterns</li>
-      <li><strong>Challenge our methodology</strong> → Find errors? Tell us. We fix it.</li>
+      <li><strong>Use the tools</strong> â†’ Fight your case with real data</li>
+      <li><strong>Share your outcome</strong> â†’ Email empowrapp08162025@gmail.com (anonymous OK)</li>
+      <li><strong>Report new tactics</strong> â†’ Help us detect emerging patterns</li>
+      <li><strong>Challenge our methodology</strong> â†’ Find errors? Tell us. We fix it.</li>
     </ul>
     <p style="margin: 1.5rem 0 0; font-size: 1.05rem;">
-      <strong>→ Start the cycle:</strong> <a href="/app/" style="color: white; text-decoration: underline; font-weight: bold;">Use the Evidence Locker</a> to upload your denial letter → 
-      Get personalized strategy → Win your appeal → Share result → Help next worker
+      <strong>â†’ Start the cycle:</strong> <a href="/app/" style="color: white; text-decoration: underline; font-weight: bold;">Use the Evidence Locker</a> to upload your denial letter â†’ 
+      Get personalized strategy â†’ Win your appeal â†’ Share result â†’ Help next worker
     </p>
   </div>
 </div>
 
 ---
 
-## 🔜 Coming Soon
+## ðŸ”œ Coming Soon
 
 ### Human Rights Tribunal Decision Network
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
-    <span class="tool-badge coming-soon">In Development</span>
+    <span class="tool-badge">Complete</span>
     <span class="tool-badge" style="background: #005a00;">Ontario</span>
   </div>
   
-  <h3 style="margin-top: 0; color: #666;">Ontario Human Rights Tribunal (OHRT) Pattern Analysis</h3>
-  <p style="color: #666;">
+  <h3 style="margin-top: 0;">Ontario Human Rights Tribunal (HRTO) Pattern Analysis</h3>
+  <p>
     Analyzing disability discrimination cases, settlement patterns, and systemic barriers. 
     Expanding beyond workers' compensation to cover employment discrimination, housing, and services.
   </p>
-  <p style="margin: 0; font-size: 0.9rem; color: #999;">
-    <strong>Estimated Launch:</strong> Summer 2026 | <strong>Expected Dataset:</strong> 5,000+ decisions
+  <p style="margin: 0; font-size: 0.9rem; color: #333;">
+    <strong>âœ… Launched:</strong> April 2026 | <strong>Dataset:</strong> 9,269 decisions analyzed (2020-2026)
+  </p>
+  <p style="margin: 0.5rem 0 0; font-size: 0.95rem;">
+    <a href="/guides/hrto-complete-guide/" style="font-weight: 600;">View HRTO Guide â†’</a> | 
+    <a href="/blog/2026/04/20/hrto-email-crisis-abandonment-epidemic/" style="font-weight: 600;">Read HRTO Analysis â†’</a>
   </p>
 </div>
 
-### Employment Standards Tribunal Visualization
+### British Columbia Workers' Compensation Appeals
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
-    <span class="tool-badge coming-soon">In Development</span>
-    <span class="tool-badge" style="background: #005a00;">Ontario</span>
+    <span class="tool-badge coming-soon">Data Collection Phase</span>
+    <span class="tool-badge badge-red">British Columbia</span>
   </div>
   
-  <h3 style="margin-top: 0; color: #666;">Employment Standards Decisions & Wage Theft Patterns</h3>
+  <h3 style="margin-top: 0; color: #666;">WorkSafeBC & WCAT Decision Analysis</h3>
   <p style="color: #666;">
-    Tracking unpaid wages, termination disputes, and employer violations. 
-    Cross-reference with WSIB claims to identify employers systematically denying rights.
+    Analyzing BC workers' compensation appeals to compare transparency and success rates with Ontario WSIAT. 
+    Expanding cross-province pattern detection and tribunal comparison tools.
   </p>
   <p style="margin: 0; font-size: 0.9rem; color: #999;">
-    <strong>Estimated Launch:</strong> Fall 2026 | <strong>Expected Dataset:</strong> 8,000+ decisions
+    <strong>Status:</strong> Collection in progress | <strong>Target Dataset:</strong> 15,000+ decisions
+  </p>
+</div>
+
+### Other Provincial Workers' Compensation Tribunals
+<div class="tool-card">
+  <div style="margin-bottom: 1rem;">
+    <span class="tool-badge coming-soon">Planned</span>
+    <span class="tool-badge badge-red">Alberta, Quebec, NS, MB, SK</span>
+  </div>
+  
+  <h3 style="margin-top: 0; color: #666;">Canada-Wide Tribunal Transparency Network</h3>
+  <p style="color: #666;">
+    Expanding to WCB Alberta, CNESST (Quebec), Nova Scotia WCB, Manitoba WCB, and Saskatchewan WCB. 
+    Building comprehensive cross-provincial comparison tools for denial patterns and appeal outcomes.
+  </p>
+  <p style="margin: 0; font-size: 0.9rem; color: #999;">
+    <strong>Estimated Launch:</strong> 2027 | <strong>Expected Dataset:</strong> 40,000+ decisions
   </p>
 </div>
 
@@ -2200,7 +2539,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
 
 ---
 
-## 📊 Research Methodology
+## ðŸ“Š Research Methodology
 
 All tools on this page follow these principles:
 
@@ -2228,7 +2567,7 @@ All tools on this page follow these principles:
 
 ---
 
-## 🤝 Contribute to Research
+## ðŸ¤ Contribute to Research
 
 ### For Injured Workers
 - **Share Your Case Outcome** (anonymous): Email empowrapp08162025@gmail.com
@@ -2247,92 +2586,40 @@ All tools on this page follow these principles:
 
 ---
 
-## 📊 Our Research Standards: Credibility Over Sensationalism
-
-**Why Trust Our Analysis?** We've analyzed 11,430+ tribunal decisions using rigorous statistical methods. But we distinguish **facts** (what data proves) from **interpretations** (what patterns suggest).
-
-### What We Can PROVE:
-✅ **11,430 WSIAT decisions analyzed** (2020-2026, 95%+ coverage of all tribunal cases)
-✅ **91.8% missing outcome metadata** (10,491 cases have no win/loss categorization in CanLII)
-✅ **Statistical anomalies detected** (July 2023: 39 decisions vs. 154 average, Z = -2.94, p = 0.003)
-✅ **Body part bias measured** (knee injuries = 20% (95% CI: 17.3-22.7%) "pre-existing" denial rate vs. 13.3% (95% CI: 12.7-13.9%) baseline, χ² = 32.7, p < 0.001)
-✅ **Delay tactics quantified** (reconsideration adds 2.0 years vs. 0.5 for direct appeals)
-
-### What We INFER (with caveats):
-🔍 **Systematic patterns suggest:**
-- Dysfunction or deliberate cost-shifting (financial incentives + historical precedent align)
-- Alternative explanations (incompetence, understaffing, pandemic) considered but less likely
-- We CANNOT prove intent without internal WSIB documents
-
-### Statistical Methods Used:
-- **Anomaly detection** (Z-score analysis, p-values)
-- **Co-occurrence networks** (which denial tactics cluster together)
-- **Temporal trend analysis** (patterns over time)
-- **Chi-square tests** (body part bias, keyword associations, fiscal year-end spike)
-- **Confidence intervals** (all proportions reported with 95% CIs using formula: p ± 1.96 × √(p(1-p)/n))
-- **Effect sizes** (Cohen's h for proportional differences)
-- **Bonferroni correction** (for multiple testing)
-- **Sensitivity analysis** (robustness to missing data)
-
-### Data Transparency:
-✅ **All code open source:** [GitHub: 3mpwrapp.github.io](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
-✅ **Raw data public:** [tribunal-decisions/](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions)
-✅ **Community review welcomed:** Find errors? Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-✅ **Replication instructions:** Run `scripts/scrape-onwsiat.mjs` + `scripts/analyze-onwsiat-ultra-deep.mjs`
-
-### Limitations We Acknowledge:
-⚠️ **We DON'T have:**
-- True worker win rates (91.8% missing outcomes)
-- WSIB internal policy documents
-- Adjudicator performance data
-- Regional success rate breakdowns
-- Representation impact (only 3.6% of cases mention lawyers)
-
-✅ **We DO have:**
-- Complete keyword patterns (13,000+ keyword occurrences)
-- Temporal trends (6 years of monthly volumes)
-- Body part bias rates (shoulder, knee, back, etc.)
-- Delay measurements (reconsideration vs. direct appeal)
-- Co-occurrence networks (which tactics appear together)
-
-**Full methodology available in blog posts below** (see "Methodology & Evidence Standards" sections)
-
----
-
-## 🔗 How Research Drives Action (3mpwrApp Flywheels):
-
-```
-Pattern Detection (11,430 cases)
-    ↓
-Knowledge Base (16 injury guides: what evidence wins)
-    ↓
-Appeal Templates (50+ fill-in-blank letters)
-    ↓
-Community Support (workers share outcomes → close 91.8% data gap)
-    ↓
-MORE DATA (feedback loop improves research)
-```
-
-**You can help close the data gap:**
-- 📊 **Share your outcome** (anonymous): Won/lost, injury type, how long it took
-- 📢 **Spread awareness**: Share visualizations, templates, guides with injured workers
-- 🔍 **Challenge us**: Find errors in our analysis? We want to know
-- 🤝 **Join community**: Email to connect with other workers fighting same battles
-
----
-
 ## 📚 Related Blog Posts
 
+### WSIAT (Workplace Safety & Insurance Appeals Tribunal)
 - [WSIB Exposed: Statistical Evidence Reveals Systematic Patterns](/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Rigorous analysis of 11,430 cases
 - [The WSIB Black Box: 1.14-2.29M Workers Suppressed](/blog/2026/04/16/wsib-black-box-claim-suppression-outcome-obscurity/) - 91.8% outcome obscurity + suppression research
 - [Hidden Language of Denial: WSIB Keyword Patterns](/blog/2026/04/16/hidden-language-of-denial-wsib-keyword-decoder/) - Decode your denial letter
+- [WSIB Transparency Gap: Outcome Obscurity REVISED](/blog/2026/04/16/wsib-transparency-gap-outcome-obscurity-REVISED/) - Updated transparency analysis
+- [WSIAT vs BC WCAT: Transparency Divide](/blog/2026/04/29/wsiat-vs-bc-wcat-transparency-divide/) - Comparing tribunal transparency across Canada
+
+### HRTO (Human Rights Tribunal of Ontario)
+- [HRTO Abandonment Analysis: Email Issues in 70.1% of Cases](/blog/2026/04/20/hrto-email-crisis-abandonment-epidemic/) - 3,186 decisions analyzed (2020-2026)
+
+### ONSBT (Ontario Social Benefits Tribunal)
+- [Ontario Social Benefits Tribunal 2020â€“2026: Seven Years of Disability Decisions](/blog/2026/04/26/onsbt-2020-2026-comprehensive-analysis/) - 13,798 decisions comprehensive analysis
+- [ONSBT Outcome Classification Audit Update](/blog/2026/04/26/onsbt-outcome-classification-audit-update/) - Tiered evidence methodology
+- [ONSBT Accessibility Barriers: Vulnerable Communities](/blog/2026/04/26/onsbt-accessibility-barriers-vulnerable-communities/) - Structural barriers analysis
+
+### ONWSIB (WSIB Internal Review)
+- [ONWSIB 2020-2026: Outcome Gap Audit and Evidence Limits](/blog/2026/04/26/onwsib-outcome-gap-audit-update/) - 463 decisions analyzed
+
+### ONCA (Ontario Court of Appeal)
+- [Ontario Court of Appeal (ONCA) Precedent Overview: 5,034 Decisions](/blog/2026/05/08/onca-precedent-overview/) - Appellate layer analysis (2020-2026)
+
+### CanLII Database & Cross-Tribunal Analysis
+- [Feature Spotlight: CanLII Database - Ontario WSIB & HRTO Cases](/blog/2026/04/25/feature-spotlight-canlii-database-ontario-wsib-hrto-cases-expanding-canada-wide/) - Searchable database expanding Canada-wide
 - [Building Canada's Legal Database from Cold Start](/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Data collection methodology
 
 ---
 
-## 📧 Questions or Feedback?
+## ðŸ“§ Questions or Feedback?
 
 - **Email:** empowrapp08162025@gmail.com
+
+</div>
 - **Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)
 - **Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)
 
