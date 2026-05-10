@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-09T13:43:28.457Z",
+  "lastUpdated": "2026-05-10T04:01:08.266Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16816,
+      "totalPosts": 16840,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-05-09T13:43:19.171Z"
+      "lastSeen": "2026-05-10T04:01:00.344Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16811,
-      "recentPosts": 25,
+      "totalPosts": 16835,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-05-09T13:43:21.467Z"
+      "lastSeen": "2026-05-10T04:01:02.156Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16695,
+      "totalPosts": 16720,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-09T13:43:23.363Z"
+      "lastSeen": "2026-05-10T04:01:03.748Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16887,
+      "totalPosts": 16912,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-09T13:43:25.335Z"
+      "lastSeen": "2026-05-10T04:01:05.317Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16848,
+      "totalPosts": 16873,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-09T13:43:27.454Z"
+      "lastSeen": "2026-05-10T04:01:07.263Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "In this picture, the meaning of a black blob is either:\n- Solid wall you cannot pass\n- Pit you fall into\n- Slowing goo\nOh, you figured out which is which? Now try it while dodging 10 enemies!\n\nReminder to make your obstacles visually distinct! 🫠 #gamedev #indiedev #ux #accessibility #gamedesign",
-      "author": "steinmakesgames.bsky.social",
-      "engagement": 33,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Really good read!\n\n“The text mode lie: why modern TUIs are a nightmare for accessibility” by Casey Reeves \n\nxogium.me/the-text-mod...\n\n#tui #a11y",
-      "author": "pawelgrzybek.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Sharing \"Star Wars\" images on this \"May The Fourth\"? Don't forget alt text! Alt text is crucial for people who are blind, who have low vision, and others who use screen readers.\n\n#MayTheFourth #MayTheFourthBeWithYou #MayThe4thBeWithYou #MayThe4th #StarWarsDay #StarWars #a11y",
-      "author": "a11yawareness.bsky.social",
-      "engagement": 43,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Hey literally every dev, did you know you can make #OpenGraph #OG images accessible with ?\n\n<meta property=\"og:image:alt\" content=\"A short descriptive phrase\" />\n\nstandards.scangov.org/ogimagealt/\n\n#A11y #Accessibility #ATproto",
-      "author": "renderg.host",
-      "engagement": 24,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "#MTPol #Montana #DisabilityRights #Section504",
-      "author": "gailwaldby.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "You’ve been told disabled people are the problem. You weren’t told who paid to put that idea in your head. \n\n#NDIS #NDISAustralia #DisabilityRights #MSWarrior #AusPol #VoteGREENS #Albo #Albanese",
       "author": "twitter-exile.bsky.social",
@@ -338,28 +308,58 @@
       "author": "juliametraux.bsky.social",
       "engagement": 115,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#MTPol #Montana #DisabilityRights #Section504",
+      "author": "gailwaldby.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "A little #MazesForDazes gameplay vid for you today. I'm working through adding 🎮 controller support +  haptics, keeping #accessibility in mind.  #Inclusion matters, and everyone should be able to play. 🕹️🙂\n\n#IndieDev #GameDev",
+      "author": "mazes4dazes.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I appreciate this “Accessibility Best Practices for Your Project” guide from GitHub:\nopensource.guide/accessibilit...\n\nI would share it more readily if the links were underlined.\n\nSo I filed a PR to fix that:\ngithub.com/github/opens...\n\n#accessibility #a11y #OpenSource",
+      "author": "aardrian.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Thanks to @laurakbuzz.bsky.social, I'm excited to say that I'll once again be recording the #audioDescription for the Access-Ability Summer Showcase! As always, I'm interested to see what appears, especially if I can play it without any assistance as well of course.\n#A11Y #Accessibility",
+      "author": "sightlesskombat.com",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Josh Turek in the Iowa State Senate Democratic Primary debate said the first bill he'd introduce in the Senate would be to push a bill that would end subminimum wage for disabled people. #CripTheVote",
+      "author": "juliametraux.bsky.social",
+      "engagement": 115,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 44
-    },
-    {
-      "keyword": "accessibility",
       "count": 43
     },
     {
-      "keyword": "a11y",
-      "count": 29
+      "keyword": "accessibility",
+      "count": 42
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 25
+      "keyword": "a11y",
+      "count": 30
     },
     {
       "keyword": "cripthevote",
       "count": 25
+    },
+    {
+      "keyword": "disabilityjustice",
+      "count": 24
     },
     {
       "keyword": "altcitizen",
@@ -386,6 +386,10 @@
       "count": 11
     },
     {
+      "keyword": "disability",
+      "count": 9
+    },
+    {
       "keyword": "disabilityrebellion",
       "count": 9
     },
@@ -398,15 +402,11 @@
       "count": 9
     },
     {
-      "keyword": "accessibility accessibility",
-      "count": 8
+      "keyword": "inclusion",
+      "count": 7
     },
     {
       "keyword": "accessibility a11y",
-      "count": 8
-    },
-    {
-      "keyword": "inclusion",
       "count": 7
     },
     {
