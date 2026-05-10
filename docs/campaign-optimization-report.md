@@ -1,8 +1,8 @@
 # Campaign Optimization Report
 
-**Generated:** 2026-05-10T21:37:17.061Z
+**Generated:** 2026-05-10T21:41:28.429Z
 
-**Data Period:** Last 26 days
+**Data Period:** Last 27 days
 
 ---
 
