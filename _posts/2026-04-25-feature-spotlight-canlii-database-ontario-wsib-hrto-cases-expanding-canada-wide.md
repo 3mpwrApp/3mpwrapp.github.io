@@ -5,7 +5,19 @@ date: 2026-04-25 00:00:00 +0000
 tags: [legal-intelligence, canlii, tribunal-research]
 categories: [community-updates, research]
 excerpt: Searchable database of Canadian workplace and disability cases with plain-language summaries - starting with Ontario, expanding daily to all provinces
---- # Feature Spotlight: CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) **Category:** Legal Intelligence Searchable database of Canadian workplace and disability cases with plain-language summaries - starting with Ontario, expanding daily to all provinces --- ## What Is CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide)? CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) is designed to searchable database of canadian workplace and disability cases with plain-language summaries - starting with ontario, expanding daily to all provinces. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- ## Key Highlights - **Starting with Ontario: 34,960 tribunal decisions across 4 tribunals (WSIAT, HRTO, ONSBT, ONWSIB) from 2020-2026**
+---
+
+# Feature Spotlight: CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide)
+
+**Category:** Legal Intelligence
+
+Searchable database of Canadian workplace and disability cases with plain-language summaries - starting with Ontario, expanding daily to all provinces
+
+---
+
+## What Is CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide)?
+
+CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) is designed to provide a searchable database of Canadian workplace and disability cases with plain-language summaries - starting with Ontario, expanding daily to all provinces. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- ## Key Highlights - **Starting with Ontario: 34,960 tribunal decisions across 4 tribunals (WSIAT, HRTO, ONSBT, ONWSIB) from 2020-2026**
 - **NEW: AI-powered outcome predictions for 137,252 tribunal decisions (79% accuracy)**
 - **Database grows daily: adding cases from all provinces and territories**
 - **Goal: Complete Canada-wide coverage across all jurisdictions**

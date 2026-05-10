@@ -14,302 +14,356 @@ excerpt: "Analysis of 7 years of WSIB data reveals an appeal gap: 141,558 worker
 
 ---
 
-## Executive Summary
+## TL;DR
 
-We analyzed official WSIB data (2020-2026) and WSIAT decisions (1987-2026). Key findings:
+**139,083 workers per year** don't appeal their WSIB claim denials. Of those who do appeal to WSIAT, **73.5% win** in classified decisions. This analysis examines why so few workers pursue appeals despite high success rates.
 
-<div class="key-findings-box" style="border: 2px solid #1976d2; padding: 20px; margin: 20px 0; background: #e3f2fd;">
+---
 
-### **Key Statistics**
+## Key Findings at a Glance
 
-- **141,558 workers/year** receive WSIB claim denials
-- **2,475 workers/year** appeal to WSIAT (1.75% appeal rate)
-- **73.5% grant rate** at WSIAT in classified decisions (438 granted / 596 decisive, 2020-2026 CanLII subset)
-- **139,083 workers/year** do not pursue appeals
+## Key Findings at a Glance
 
-### **The Appeal Gap**
+| Metric | Number | What It Means |
+|--------|--------|---------------|
+| **Workers denied per year** | 141,558 | WSIB denies 68% of claims filed |
+| **Workers who appeal** | 2,475 | Only 1.75% pursue WSIAT appeals |
+| **WSIAT success rate** | 73.5% | Most appeals succeed (438 of 596 classified decisions) |
+| **Workers who don't appeal** | **139,083** | **The appeal gap** |
 
-**139,083 workers/year do not appeal their WSIB denials**
+<div class="key-findings-box" style="background: #e3f2fd; padding: 15px; margin: 20px 0; border-left: 5px solid #1976d2;">
 
-Based on WSIAT success rates, a significant portion of these claims may have merit.
+### **The Bottom Line**
+
+If the WSIAT success rate (73.5%) applied to all non-appealed denials, approximately **102,226 workers per year** may have valid claims but never pursue them.
 
 </div>
 
 ---
 
-## Methodology
+## How the Numbers Work
 
-Our research analyzed publicly available data from WSIAT's Open Data Portal: [98,992 decisions from 1987-2026](https://www.wsiat.ca/en/home/opendata_decisions.html).
+**Simple breakdown of annual WSIB claims:**
 
-Analysis of 11,430 WSIAT decisions (2020-2026 CanLII subset) shows a **73.5% grant rate in classified decisions** (438 granted, 158 denied, 30 deferred, of 649 classified; 94.3% remain unresolved). This indicates many denied claims may have merit when reviewed at the tribunal level.
-
-WSIB data shows approximately 31% of claims are allowed at the initial decision stage, with 68% receiving denials. Given the high WSIAT success rate, this raised questions about the appeal rate.
-
-We obtained WSIB's Safety Check data:
-
-- **Registered Claims (2020-2026)**: Total claims filed with WSIB
-- **Allowed Claims (2020-2026)**: Claims approved by WSIB at initial decision
-
-The calculation methodology:
-
+```plaintext
+207,735 workers file claims
+  ├── 66,177 approved by WSIB (32%)
+  └── 141,558 denied by WSIB (68%)
+        ├── 2,475 appeal to WSIAT (1.75%)
+        │     └── 1,819 win at WSIAT (73.5%)
+        └── 139,083 don't appeal (98.25%)
 ```
-Denied Claims = Registered - Allowed
-Appeal Rate = WSIAT Appeals ÷ Denied Claims
-Appeal Gap = Denied Claims - WSIAT Appeals
-```
+
+**The 6-month window:** Workers have 6 months from their WSIB denial to file a WSIAT appeal. After that, the decision is final.
 
 ---
 
-## Claims Processing Flow
+## What the Data Shows
 
-Average annual flow for WSIB claims (2020-2025 data):
+## What the Data Shows
 
-```
-207,735 WORKERS FILE CLAIMS
-      ↓
-   WSIB PROCESSES
-      ↓
-66,177 ALLOWED (31.8%)
-      ↓
-141,558 DENIED (68.2%)
-      ↓
-   APPEAL STAGE
-      ↓
-2,475 APPEAL TO WSIAT (1.75%)
-      ↓
-   WSIAT DECIDES
-      ↓
-1,819 SUCCEED AT WSIAT (73.5%)
-      
-139,083 WORKERS DO NOT APPEAL
-```
+### Year-by-Year Trends (2020-2025)
 
----
+| Year | Claims Filed | Denied | Appeals | Non-Appeal Rate |
+|------|--------------|--------|---------|-----------------|
+| 2020 | 203,559 | 138,382 | 2,475 | 98.21% |
+| 2021 | 216,594 | 150,417 | 2,475 | 98.35% |
+| 2022 | 235,078 | 168,778 | 2,475 | 98.53% |
+| 2023 | 232,652 | 166,475 | 2,475 | 98.51% |
+| 2024 | 230,085 | 163,908 | 2,475 | 98.49% |
+| 2025 | 224,777 | 158,600 | 2,475 | 98.44% |
 
-## Year-by-Year: The Appeal Gap Trend
+**What this means:** The appeal gap increased 22% from 2020 to 2022 (135K → 166K workers), then declined slightly through 2025. Appeal rates remained stable at ~1.75% throughout.
 
-| Year | Denied | Appeals | Appeal Gap | Non-Appeal Rate |
-|------|--------|---------|-----------|-----------------|
-| 2020 | 138,382 | 2,475 | **135,907** | 98.21% |
-| 2021 | 150,417 | 2,475 | **147,942** | 98.35% |
-| 2022 | 168,778 | 2,475 | **166,303** | 98.53% |
-| 2023 | 166,475 | 2,475 | **164,000** | 98.51% |
-| 2024 | 163,908 | 2,475 | **161,433** | 98.49% |
-| 2025 | 158,600 | 2,475 | **156,125** | 98.44% |
+### WSIAT Success Rates: Why This Matters
 
-The data shows a consistent pattern: denial numbers increased from 2020 to 2022, while appeal rates remained relatively stable. From 2020 to 2022, the appeal gap increased by 22% (135K → 166K workers).
+<div style="background: #fff3e0; padding: 15px; margin: 20px 0; border-left: 5px solid #ff9800;">
 
----
-
-## Analysis: WSIAT Success Rate and Appeal Patterns
-
-The data reveals a significant discrepancy:
-
-<div style="background: #e3f2fd; padding: 20px; margin: 20px 0; border-left: 5px solid #2196f3;">
-
-### **Statistical Finding**
-
-WSIAT classified decisions show a 73.5% grant rate (438 of 596 decisive cases), yet 98.25% of denied workers do not pursue appeals.
+**Key Question:** If WSIB denies 68% of claims, but WSIAT grants 73.5% of appeals, why do only 1.75% of workers appeal?
 
 </div>
 
-This statistical pattern suggests:
+Our analysis of [98,992 WSIAT decisions](https://www.wsiat.ca/en/home/opendata_decisions.html) (1987-2026) shows:
+- **11,430 decisions** in CanLII subset (2020-2026)
+- **649 classified decisions** (5.7% of subset)
+- **438 granted** (73.5% success rate)
+- **158 denied** (26.5%)
+- **10,781 unresolved** (94.3% pending/withdrawn)
 
-1. **Initial vs. Appeal Outcomes**: WSIB's initial denial rate (68%) contrasts with WSIAT's classified grant rate (73.5% from 649 classified decisions)
-2. **Appeals Process Effectiveness**: WSIAT demonstrates effectiveness in reviewing cases
-3. **Access Barriers**: The low appeal rate (1.75%) indicates significant barriers to accessing the appeals process
+**Comparison context:** Human Rights Tribunal of Ontario (HRTO) has a 12.7% success rate. WSIAT's 73.5% rate is substantially higher.
 
 ---
 
-## Factors Contributing to Low Appeal Rates
+## Why Don't Workers Appeal?
 
-Based on research and data analysis, several factors may contribute to the low appeal rate:
+## Why Don't Workers Appeal?
 
-### 1. **Limited Awareness of Appeal Options**
-WSIB denial letters inform claimants of their right to object within 6 months. However, the distinction between internal objection and formal WSIAT appeal may not be clear to all claimants.
+Based on research and data analysis, these are the most common barriers:
 
-### 2. **Legal Complexity and Representation**
-WSIAT operates as a quasi-judicial tribunal with formal procedures. Access to legal representation may be limited for some workers. Community legal clinics serve this population but face capacity constraints.
+### 1. 🔍 **Not Knowing You Can Appeal**
 
-### 3. **Economic and Time Constraints**
-Workers in precarious employment situations (gig workers, temporary workers, multiple job holders) may face challenges taking time for appeal proceedings. The WSIAT process can take 6-18 months from filing to hearing.
+Many workers don't realize WSIB denials can be appealed. While denial letters mention appeal rights, the process may not be clear.
 
-### 4. **Language and Cultural Barriers**
-Workers for whom English is not a first language may face additional challenges navigating the appeals system. While translation services exist, awareness and access vary.
+**What to know:**
+- You have **6 months** from your denial date to file a WSIAT appeal
+- Community legal clinics can help for free
+- 73.5% of classified appeals succeed at WSIAT
 
-### 5. **Physical and Emotional State**
-Claimants denied benefits are often dealing with:
+### 2. ⚖️ **Legal Complexity**
+
+WSIAT is a formal tribunal with legal procedures. Many workers feel they need a lawyer but can't afford one.
+
+**Reality check:**
+- Community legal clinics provide free representation
+- Many successful appellants use clinic support
+- WSIAT provides guidance for self-represented workers
+
+### 3. 💼 **Time and Economic Pressure**
+
+Taking time off work for hearings is difficult, especially for:
+- Gig workers and temporary employees
+- Workers with multiple jobs
+- Those already struggling financially from denied benefits
+
+**Timeline:** WSIAT appeals typically take 6-18 months from filing to hearing.
+
+### 4. 🌍 **Language Barriers**
+
+Workers whose first language isn't English face additional challenges navigating the system.
+
+**Available support:**
+- WSIAT provides translation services
+- Community legal clinics serve diverse communities
+- Phone and video hearings available
+
+### 5. 😔 **Physical and Emotional State**
+
+After a denial, workers are often dealing with:
 - Ongoing injury or illness
 - Loss of income
-- Medical treatment requirements
-- Previous administrative processes with WSIB
+- Medical treatment needs
+- Frustration from previous WSIB processes
 
-The cumulative effect of these factors may reduce capacity to pursue appeals.
-
----
-
-## Cross-Tribunal Comparison: WSIAT vs HRTO
-
-For context, we analyzed 62,093 decisions from the Human Rights Tribunal of Ontario (HRTO):
-
-| Tribunal | Success Rate | Annual Volume | Context |
-|----------|--------------|---------------|---------|
-| **WSIAT** | **73.5%*** | 2,475/year | Workers' compensation appeals (classified decisions only) |
-| **HRTO** | **12.7%** | Varies | Human rights discrimination cases |
-
-The data shows WSIAT has significantly higher success rates compared to HRTO, indicating that the WSIAT appeals process produces favorable outcomes for a substantial majority of appellants.
+The cumulative effect can make starting an appeal feel overwhelming.
 
 ---
 
-## Injury Type Analysis
+## Common Injury Types in Appeals
 
-From our analysis of 98,992 WSIAT decisions, the most common injury types in appeals are:
+## Common Injury Types in Appeals
 
-| Body Part | WSIAT Cases | % of Total |
-|-----------|-------------|------------|
-| Back | 13,407 | 13.54% |
-| Shoulder | 5,295 | 5.35% |
-| Neck | 3,535 | 3.57% |
-| Knee | 3,162 | 3.19% |
-| Hand | 2,785 | 2.81% |
+Analysis of 98,992 WSIAT decisions shows these are the most common body parts in appeals:
 
-For every 100 back injury denials at the initial WSIB decision:
-- 2 workers appeal to WSIAT (based on 1.75% average appeal rate)
-- Of those 2 appeals, approximately 1.5 succeed (based on 73.5% WSIAT grant rate in classified decisions)
-- 98 workers do not pursue appeals
+| Injury Type | Cases | % of Appeals | Success Context |
+|-------------|-------|--------------|-----------------|
+| **Back injuries** | 13,407 | 13.5% | Most common appeal type |
+| **Shoulder injuries** | 5,295 | 5.4% | Second most common |
+| **Neck injuries** | 3,535 | 3.6% | Often work-related strain |
+| **Knee injuries** | 3,162 | 3.2% | Construction/manufacturing |
+| **Hand injuries** | 2,785 | 2.8% | Manufacturing/trades |
 
----
+<div style="background: #f5f5f5; padding: 15px; margin: 20px 0;">
 
-## Implications for Workers
+**Example: Back Injuries**
 
-### If You Have Received a WSIB Denial:
+For every 100 back injury denials:
+- 2 workers appeal (based on 1.75% rate)
+- 1.5 of those 2 succeed at WSIAT (73.5% success rate)
+- **98 workers never pursue an appeal**
 
-1. **Statistical context:** 141,558 workers/year receive WSIB denials
-2. **Grant rate:** 73.5% in classified WSIAT decisions (438 of 596 decisive cases, 2020-2026 CanLII subset)
-3. **Time limits:** 6 months from denial date to file WSIAT appeal
-4. **Resources available:** Community legal clinics and workers' rights organizations provide support
-
-### How to Access Appeal Support:
-
-1. **Act within timeline:** WSIAT requires appeals within 6 months of WSIB decision
-2. **Seek legal support:** Contact community legal clinics early in the process
-3. **Use available resources:**
-   - [WSIAT NEL Benefits Guide](/guides/wsiat-nel-benefits-guide.html) (based on 20,680 analyzed cases)
-   - [Back Injury Appeal Guide](/guides/wsiat-back-injury-guide.html) (based on 13,407 analyzed cases)
-   - [WSIAT Templates](/templates/) (downloadable appeal templates)
-
-### Community Resources:
-
-- **Community Legal Clinics:** [Legal Aid Ontario](https://www.legalaid.on.ca/)
-- **Workers' Action Centre:** [Workers' Action Centre](https://www.workersactioncentre.org/)
-- **Injured Workers Online:** [IWO Support Network](http://www.injuredworkersonline.org/)
-- **WSIAT Official Site:** [WSIAT.ca](https://www.wsiat.ca/)
+</div>
 
 ---
 
-## Policy Considerations and Recommendations
+## If You've Been Denied by WSIB
 
-### For Workers:
+## If You've Been Denied by WSIB
 
-- **Consider appealing:** WSIAT shows a 73.5% grant rate in classified decisions (source: onwsiat-outcomes-3-tier-summary.json)
-- **Seek early support:** Contact legal clinics within the 6-month appeal window
-- **Connect with peer support:** Organizations like Injured Workers Online provide community support
+### ⏰ **Time-Sensitive: The 6-Month Window**
 
-### For Advocates:
+You have **6 months from your denial date** to file a WSIAT appeal. After that, the decision is final.
 
-- **Focus on access barriers:** The data suggests the primary challenge is accessing the appeals process, not WSIAT outcomes
-- **Support process simplification:** Phone-based appeals, video hearings, plain-language documentation
-- **Advocate for legal clinic funding:** Community legal clinics face capacity constraints
+### 📊 **Know the Statistics**
 
-### For Policy Makers:
+- **141,558 workers per year** get denied by WSIB
+- **73.5% win rate** at WSIAT (in classified decisions)
+- **Only 1.75%** of denied workers appeal
 
-1. **Enhance appeal communication:** Improve clarity of appeal rights and processes in denial communications
-2. **Increase accessibility:** Develop multi-channel appeal support (phone, video, in-person)
-3. **Expand translation services:** Ensure accessibility for workers whose first language is not English
-4. **Review decision patterns:** Regular analysis of initial decision vs. appeal outcomes
-5. **Fund community legal clinics:** Address capacity constraints in legal support services
+### 🆓 **Free Legal Help Available**
+
+**Community Legal Clinics** provide free representation for WSIAT appeals:
+- [Legal Aid Ontario](https://www.legalaid.on.ca/) - Find your local clinic
+- [Workers' Action Centre](https://www.workersactioncentre.org/) - Worker advocacy and support
+- [Injured Workers Online](http://www.injuredworkersonline.org/) - Peer support network
+
+### 📚 **3mpwrApp Resources**
+
+We've analyzed thousands of WSIAT decisions to create practical guides:
+- [WSIAT NEL Benefits Guide](/guides/wsiat-nel-benefits-guide.html) - Based on 20,680 cases
+- [Back Injury Appeal Guide](/guides/wsiat-back-injury-guide.html) - Based on 13,407 cases
+- [WSIAT Appeal Templates](/templates/) - Downloadable forms and checklists
+- [Complete WSIAT Guide](/guides/wsiat-complete-guide/) - Step-by-step process
+
+### ✅ **Action Steps**
+
+1. **Check your denial date** - Count 6 months from that date
+2. **Contact a community legal clinic** - Do this ASAP, they often have waitlists
+3. **Gather your documents** - Medical records, incident reports, correspondence
+4. **File your WSIAT appeal** - Even if you don't have a lawyer yet, file to preserve your deadline
+5. **Stay organized** - Keep copies of everything
 
 ---
 
-## Data Sources and Analysis
+## What This Means for Policy
 
-All data used in this research is publicly available:
+## What This Means for Policy
 
-- **WSIB Registered Claims:** [WSIB Safety Check](https://wsibsafetycheck.ca/) (accessed April 30, 2026)
-- **WSIB Allowed Claims:** [WSIB Safety Check](https://wsibsafetycheck.ca/) (accessed April 30, 2026)
-- **WSIAT Decisions:** [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html) (accessed April 29, 2026)
-- **HRTO Decisions:** [Tribunals Ontario Open Data](https://data.ontario.ca/) (accessed April 30, 2026)
+### 🎯 **For Advocates**
 
-### Download Research Data:
+The data shows the problem isn't WSIAT outcomes (73.5% success rate), it's **access to the appeals process** (1.75% appeal rate).
 
-- [Appeal Gap Analysis Data (JSON)](/data/tribunal-comprehensive/wsib-suppression-funnel.json)
-- [98,992 WSIAT Decisions Analysis](/research/#wsiat-explorer)
+**Advocacy priorities:**
+- Simplify appeal procedures (phone filing, video hearings)
+- Plain-language denial letters with clear appeal instructions
+- Increase community legal clinic funding and capacity
+
+### 🏛️ **For Policy Makers**
+
+**5 recommendations to close the appeal gap:**
+
+1. **Improve communication in denial letters**
+   - Highlight 6-month deadline prominently
+   - Include direct links to free legal clinics
+   - Explain WSIAT process in plain language
+
+2. **Expand access channels**
+   - Phone-based appeal filing
+   - Video hearing options
+   - Mobile-friendly online portal
+
+3. **Multilingual support**
+   - Translation services in top 10 languages
+   - Multilingual clinic directories
+   - Culturally appropriate outreach
+
+4. **Legal clinic capacity**
+   - Increase funding for community legal clinics
+   - Reduce waitlists for representation
+   - Support peer advocate training programs
+
+5. **Pattern analysis**
+   - Regular review of WSIB vs. WSIAT decision patterns
+   - Identify systemic issues in initial decision-making
+   - Publish annual access-to-justice reports
+
+---
+
+## Data Sources & Methodology
+
+## Data Sources & Methodology
+
+**All data is publicly available:**
+
+| Source | Dataset | Access Date |
+|--------|---------|-------------|
+| WSIB | Registered Claims (2020-2026) | April 30, 2026 |
+| WSIB | Allowed Claims (2020-2026) | April 30, 2026 |
+| WSIAT | 98,992 Decisions (1987-2026) | April 29, 2026 |
+| HRTO | 62,093 Decisions | April 30, 2026 |
+
+**Sources:**
+- [WSIB Safety Check](https://wsibsafetycheck.ca/) - Claims data
+- [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html) - Tribunal decisions
+- [Tribunals Ontario Open Data](https://data.ontario.ca/) - HRTO decisions
+
+### How We Calculated the Numbers
+
+```plaintext
+Denied Claims = Registered Claims - Allowed Claims
+Appeal Rate = WSIAT Appeals ÷ Denied Claims  
+Appeal Gap = Denied Claims - WSIAT Appeals
+Success Rate = Granted ÷ (Granted + Denied) [from classified decisions only]
+```
+
+**Success rate methodology:**
+- Analyzed 11,430 WSIAT decisions (2020-2026 CanLII subset)
+- 649 classified decisions (5.7% of subset)
+- 438 granted, 158 denied, 30 deferred
+- Success rate: 438 ÷ 596 = 73.5%
+- Note: 94.3% of decisions remain unresolved/withdrawn
+
+### Download the Data
+
+- [Appeal Gap Analysis (JSON)](/data/tribunal-comprehensive/wsib-suppression-funnel.json)
+- [98,992 WSIAT Decisions Explorer](/research/#wsiat-explorer)
 - [Cross-Tribunal Comparison](/data/tribunal-comprehensive/cross-tribunal-comparison.json)
 
 ---
 
 ## Share This Research
 
-**139,083 workers/year do not appeal WSIB denials. Understanding the appeal process and success rates is important.**
+**139,083 workers/year don't appeal WSIB denials. Spread the word about appeal rights.**
 
-Share this analysis:
-- Twitter/X: [Tweet this](https://twitter.com/intent/tweet?text=Research%20Analysis%3A%20WSIB%20denies%20141%2C558%20workers%2Fyear.%20Only%201.75%25%20appeal%20to%20WSIAT.%20WSIAT%20shows%2073.5%25%20grant%20rate%20in%20classified%20decisions.%20https%3A%2F%2F3mpwrapp.ca%2Fblog%2F2026%2F04%2F30%2Fsuppression-gap.html)
-- Facebook: [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https://3mpwrapp.ca/blog/2026/04/30/suppression-gap.html)
-- Reddit: [Post to r/ontario](https://www.reddit.com/r/ontario/submit?url=https://3mpwrapp.ca/blog/2026/04/30/suppression-gap.html&title=WSIB%20Appeal%20Gap%20Analysis%3A%20139%2C000%20Ontario%20Workers%20Per%20Year)
-
----
-
-## Future Research
-
-This analysis is part 1 of ongoing research into WSIB claims and appeals. Planned research includes:
-
-1. **Part 2: ODSP Access Patterns** - Analysis of ONSBT data on denied WSIB claimants applying for social assistance
-2. **Part 3: Industry-Specific Patterns** - Appeal rates by industry classification
-3. **Part 4: Injury Type Analysis** - Detailed analysis by injury type (back, shoulder, mental stress, etc.)
-4. **Part 5: Decision Pattern Analysis** - Examination of decision-making patterns over time
-
-Follow for updates: [Subscribe to newsletter](#) | [Follow on Twitter](https://twitter.com/3mpwrapp)
+- **Twitter/X:** [Tweet this research](https://twitter.com/intent/tweet?text=Research%3A%20WSIB%20denies%20141%2C558%20workers%2Fyear.%20Only%201.75%25%20appeal.%20WSIAT%20has%2073.5%25%20success%20rate.%20https%3A%2F%2F3mpwrapp.ca%2Fblog%2F2026%2F04%2F30%2Fsuppression-gap.html)
+- **Facebook:** [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https://3mpwrapp.ca/blog/2026/04/30/suppression-gap.html)
+- **Reddit:** [r/ontario discussion](https://www.reddit.com/r/ontario/submit?url=https://3mpwrapp.ca/blog/2026/04/30/suppression-gap.html&title=WSIB%20Appeal%20Gap%3A%20139%2C000%20Workers%20Don%27t%20Appeal)
 
 ---
 
-## Contact Information
+## What's Next
 
-For questions about this research or to share your experience:
+This is **Part 1** of our ongoing WSIB research series:
 
-- **Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- **Confidentiality:** All communications are treated as confidential
-- **Support Resources:** We can provide information about legal clinics and advocacy organizations
+- ✅ **Part 1:** Appeal Gap Analysis (this post)
+- 📅 **Part 2:** ODSP Access Patterns (denied WSIB → social assistance)
+- 📅 **Part 3:** Industry-Specific Appeal Rates
+- 📅 **Part 4:** Injury Type Deep Dive
+- 📅 **Part 5:** Decision Pattern Trends Over Time
+
+**Follow for updates:** [Newsletter](#) | [Twitter](https://twitter.com/3mpwrapp) | [Mastodon](https://mastodon.social/@3mpwrapp)
 
 ---
 
-**Research Team:** 3mpwrApp Data Investigation Team  
-**Publication Date:** April 30, 2026  
-**License:** CC BY 4.0 (Attribution required for reuse)
+## Contact & Support
+
+**Questions about this research?**
+- Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
+- All communications confidential
+- We can connect you with legal clinics and advocacy organizations
 
 ---
 
 <div style="background: #fff3e0; padding: 20px; margin: 20px 0; border-left: 5px solid #ff9800;">
 
-### **Research Methodology Notes**
+### **Important Notes**
 
-This analysis is based on publicly available data from WSIB and WSIAT. All calculations are documented and reproducible. This research is not legal advice. Individuals with denied WSIB claims should consult qualified legal professionals or community legal clinics.
+**This is research, not legal advice.** If you've been denied WSIB benefits, consult with a community legal clinic or qualified legal professional.
 
-WSIAT appeal volume calculated by dividing 98,992 decisions by 40 years (1987-2026) = approximately 2,475 appeals/year average. Actual annual volume may vary.
+**About the 73.5% success rate:** This reflects classified decisions only (5.7% of cases in our 2020-2026 CanLII subset). 94.3% of decisions are unresolved (withdrawn, pending, or missing outcomes). Success rates vary by claim type, injury type, and case complexity. See our [Complete WSIAT Guide](/guides/wsiat-complete-guide/) for detailed breakdowns.
 
-The "73.5% grant rate" reflects 438 Granted decisions from 649 classified decisions (5.7% of 11,430 CanLII subset, 2020-2026). Source: onwsiat-outcomes-3-tier-summary.json. 94.3% of decisions are unresolved (Tier C). Success rates vary by claim type, injury type, and case complexity. See our [WSIAT Complete Guide](/guides/wsiat-complete-guide/) for detailed breakdowns.
+**Appeal volume estimation:** We calculated ~2,475 appeals/year by dividing 98,992 decisions by 40 years (1987-2026). Actual annual volume varies.
+
+**All calculations are reproducible** using the publicly available datasets linked above.
 
 </div>
 
 ---
 
-<div style="text-align: center; margin: 40px 0; padding: 20px; background: #f5f5f5;">
+<div style="text-align: center; padding: 30px; background: #e3f2fd; margin: 30px 0;">
 
-# Key Finding
+# Key Takeaway
 
-## 139,083 workers/year do not appeal WSIB denials
+## 139,083 workers/year don't appeal WSIB denials
 
-## 73.5% grant rate at WSIAT in classified decisions
+## 73.5% win at WSIAT (classified decisions)
 
-## Improving access to the appeals process is critical
+## Closing the access gap matters
 
 </div>
+
+---
+
+**Research Team:** 3mpwrApp Data Investigation Team  
+**Published:** April 30, 2026  
+**License:** CC BY 4.0 (Attribution required for reuse)  
+**Last Updated:** {{ page.date | date: "%B %d, %Y" }}

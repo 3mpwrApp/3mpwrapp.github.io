@@ -45,6 +45,9 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 ## <span id="curated-daily">📰 Daily News Highlights</span>
 
+<details class="blog-section-collapsible" open>
+<summary class="blog-section-summary">📰 View Daily News ({{ daily.size }} posts) — Click to expand/collapse</summary>
+
 <p class="section-description">Fresh news carefully curated from 50+ trusted sources across Canada. Updated every morning at 9 AM UTC with the most relevant stories on disability rights, accessibility, workers' compensation, and social policy changes that affect you.</p>
 
 {% assign daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
@@ -69,9 +72,14 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 <p class="empty-state">No curated highlights yet. Check back soon for today's top stories!</p>
 {% endif %}
 
+</details>
+
 ---
 
 ## <span id="feature-articles">✨ Feature Spotlights</span>
+
+<details class="blog-section-collapsible" open>
+<summary class="blog-section-summary">✨ View Feature Spotlights ({{ feature_articles.size }} posts) — Click to expand/collapse</summary>
 
 <p class="section-description">Explore 3mpwrApp features, the app itself, and our website tools. From Evidence Locker and Letter Generator to community features and accessibility innovations—discover how our platform helps you advocate for your rights, navigate systems, and connect with your community.</p>
 
@@ -94,9 +102,14 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 <p class="empty-state">Feature articles coming soon!</p>
 {% endif %}
 
+</details>
+
 ---
 
 ## <span id="weekly-recaps">📅 Weekly Recaps</span>
+
+<details class="blog-section-collapsible" open>
+<summary class="blog-section-summary">📅 View Weekly Recaps ({{ weekly_recaps.size }} posts) — Click to expand/collapse</summary>
 
 <p class="section-description">Every Monday, we compile the week's most important updates, new features, improvements, and fixes into one easy-to-read recap. See detailed changelog on our <a href="{{ '/whats-new' | relative_url }}">What's New</a> page. Perfect for staying up-to-date on what's changed!</p>
 
@@ -119,17 +132,23 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 <p class="empty-state">Weekly recaps will appear here starting this Friday!</p>
 {% endif %}
 
+</details>
+
 ---
 
 ## <span id="blog-posts">💬 Community Updates</span>
+
+<details class="blog-section-collapsible" open>
+<summary class="blog-section-summary">💬 View Community Updates (25 most recent) — Click to expand/collapse</summary>
 
 <p class="section-description">Announcements, stories, and updates from the 3mpwr community. Learn about new features, community achievements, and important information directly from our team.</p>
 
 <div class="posts-list">
   {% assign community_post_count = 0 %}
-  {% for post in site.posts limit:50 %}
+  {% for post in site.posts %}
     {% unless post.tags contains 'highlights' or post.tags contains 'weekly' or post.tags contains 'features' or post.tags contains 'spotlight' or post.categories contains 'dev-diary-updates' or post.categories contains 'weekly-recap' %}
       {% assign community_post_count = community_post_count | plus: 1 %}
+      {% if community_post_count <= 25 %}
       <article class="post-item">
         <h3 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p class="post-item__date">📅 {{ post.date | date: "%B %-d, %Y" }}</p>
@@ -145,12 +164,15 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
         {% endif %}
         <a href="{{ post.url | relative_url }}" class="post-item__link">Read more →</a>
       </article>
+      {% endif %}
     {% endunless %}
   {% endfor %}
   {% if community_post_count == 0 %}
   <p class="empty-state">Community blog posts coming soon!</p>
   {% endif %}
 </div>
+
+</details>
 
 ---
 
@@ -424,6 +446,51 @@ body {
   font-size: 0.9rem;
   min-width: 100px;
   color: var(--text-secondary, #404040);
+}
+
+/* ---- Collapsible Blog Sections ---- */
+.blog-section-collapsible {
+  border: 2px solid color-mix(in srgb, var(--text-link, #003d7a) 30%, transparent);
+  border-radius: 12px;
+  padding: 0;
+  margin: 1.5rem 0;
+  background: color-mix(in srgb, var(--text-link, #003d7a) 3%, transparent);
+}
+
+.blog-section-summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-link, #003d7a);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-section-summary::marker {
+  font-size: 1.3rem;
+}
+
+.blog-section-summary:hover {
+  background: color-mix(in srgb, var(--text-link, #003d7a) 10%, transparent);
+}
+
+.blog-section-collapsible[open] .blog-section-summary {
+  border-bottom: 2px solid color-mix(in srgb, var(--text-link, #003d7a) 20%, transparent);
+  margin-bottom: 1rem;
+}
+
+.blog-section-collapsible > *:not(summary) {
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.blog-section-collapsible .section-description {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* =============================================
