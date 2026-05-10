@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated": "2026-05-09T04:03:59.883Z",
+  "generated": "2026-05-10T04:33:14.896Z",
   "insights": {
-    "timestamp": "2026-05-09T04:03:59.851Z",
+    "timestamp": "2026-05-10T04:33:14.865Z",
     "performance": {},
     "recommendations": [
       {
         "type": "content-strategy",
         "priority": "high",
         "title": "Create Content on Trending Topics",
-        "description": "Write blog posts about: accessibility, disabilityrights, a11y",
+        "description": "Write blog posts about: disabilityrights, accessibility, a11y",
         "expectedImpact": "High visibility and engagement",
         "action": "Generate blog posts using agent-blog-production.js with these topics"
       }
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-05-09T04:03:59.858Z",
+      "lastUpdated": "2026-05-10T04:33:14.872Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -27,8 +27,8 @@
           "priority": "high",
           "action": "Test these trending hashtags in next posts",
           "hashtags": [
-            "accessibility",
             "disabilityrights",
+            "accessibility",
             "a11y"
           ],
           "expectedImpact": "Increased reach"
@@ -38,28 +38,28 @@
       "lowPerformers": [],
       "currentTrending": [
         {
-          "tag": "accessibility",
-          "mentions": 45,
+          "tag": "disabilityrights",
+          "mentions": 43,
           "source": "emerging"
         },
         {
-          "tag": "disabilityrights",
-          "mentions": 44,
+          "tag": "accessibility",
+          "mentions": 42,
           "source": "emerging"
         },
         {
           "tag": "a11y",
-          "mentions": 28,
-          "source": "emerging"
-        },
-        {
-          "tag": "disabilityjustice",
-          "mentions": 25,
+          "mentions": 30,
           "source": "emerging"
         },
         {
           "tag": "cripthevote",
           "mentions": 25,
+          "source": "emerging"
+        },
+        {
+          "tag": "disabilityjustice",
+          "mentions": 24,
           "source": "emerging"
         }
       ],
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-05-09T04:03:59.861Z",
+      "lastUpdated": "2026-05-10T04:33:14.876Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-05-09T04:03:59.858Z",
+    "lastUpdated": "2026-05-10T04:33:14.872Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -90,8 +90,8 @@
         "priority": "high",
         "action": "Test these trending hashtags in next posts",
         "hashtags": [
-          "accessibility",
           "disabilityrights",
+          "accessibility",
           "a11y"
         ],
         "expectedImpact": "Increased reach"
@@ -101,28 +101,28 @@
     "lowPerformers": [],
     "currentTrending": [
       {
-        "tag": "accessibility",
-        "mentions": 45,
+        "tag": "disabilityrights",
+        "mentions": 43,
         "source": "emerging"
       },
       {
-        "tag": "disabilityrights",
-        "mentions": 44,
+        "tag": "accessibility",
+        "mentions": 42,
         "source": "emerging"
       },
       {
         "tag": "a11y",
-        "mentions": 28,
-        "source": "emerging"
-      },
-      {
-        "tag": "disabilityjustice",
-        "mentions": 25,
+        "mentions": 30,
         "source": "emerging"
       },
       {
         "tag": "cripthevote",
         "mentions": 25,
+        "source": "emerging"
+      },
+      {
+        "tag": "disabilityjustice",
+        "mentions": 24,
         "source": "emerging"
       }
     ],
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-05-09T04:03:59.861Z",
+    "lastUpdated": "2026-05-10T04:33:14.876Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
