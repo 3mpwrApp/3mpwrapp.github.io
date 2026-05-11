@@ -6,21 +6,21 @@
     "chromeLaunchConfig": { "args": ["--no-sandbox"] }
   },
   "urls": [
-    "https://3mpwrapp.github.io/?no-modal=1",
-    "https://3mpwrapp.github.io/about?no-modal=1",
-    "https://3mpwrapp.github.io/features?no-modal=1",
-    "https://3mpwrapp.github.io/user-guide?no-modal=1",
-    "https://3mpwrapp.github.io/community?no-modal=1",
-    "https://3mpwrapp.github.io/resources?no-modal=1",
-    "https://3mpwrapp.github.io/wellness?no-modal=1",
-    "https://3mpwrapp.github.io/contact?no-modal=1",
-    "https://3mpwrapp.github.io/newsletter?no-modal=1",
-    "https://3mpwrapp.github.io/blog?no-modal=1",
-    "https://3mpwrapp.github.io/beta?no-modal=1",
-    "https://3mpwrapp.github.io/search?no-modal=1",
-    "https://3mpwrapp.github.io/site-map?no-modal=1",
-    "https://3mpwrapp.github.io/accessibility?no-modal=1",
-    "https://3mpwrapp.github.io/privacy?no-modal=1"
+    "https://3mpwrapp.ca/?no-modal=1",
+    "https://3mpwrapp.ca/about?no-modal=1",
+    "https://3mpwrapp.ca/features?no-modal=1",
+    "https://3mpwrapp.ca/user-guide?no-modal=1",
+    "https://3mpwrapp.ca/community?no-modal=1",
+    "https://3mpwrapp.ca/resources?no-modal=1",
+    "https://3mpwrapp.ca/wellness?no-modal=1",
+    "https://3mpwrapp.ca/contact?no-modal=1",
+    "https://3mpwrapp.ca/newsletter?no-modal=1",
+    "https://3mpwrapp.ca/blog?no-modal=1",
+    "https://3mpwrapp.ca/beta?no-modal=1",
+    "https://3mpwrapp.ca/search?no-modal=1",
+    "https://3mpwrapp.ca/site-map?no-modal=1",
+    "https://3mpwrapp.ca/accessibility?no-modal=1",
+    "https://3mpwrapp.ca/privacy?no-modal=1"
   ],
   "threshold": 0
 }

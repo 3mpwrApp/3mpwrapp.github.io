@@ -15,7 +15,7 @@ Policy: https://3mpwrapp.ca/privacy/
 # who report valid vulnerabilities through the proper channels.
 
 # Scope
-# In-scope: 3mpwrapp.pages.dev, 3mpwrapp.github.io
+# In-scope: 3mpwrapp.ca (primary domain), 3mpwrapp.pages.dev (Cloudflare Pages)
 # Please report issues responsibly and allow us time to respond before public disclosure.
 
 # Encryption

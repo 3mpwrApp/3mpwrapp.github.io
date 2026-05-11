@@ -22,85 +22,86 @@
       "wait for element body to be visible",
       "set field #search to test",
       "click element button[type=submit]",
-      "wait for url to not be https://3mpwrapp.github.io/search"
+      "wait for url to not be https://3mpwrapp.ca/search"
     ]
   },
   "urls": [
     {
-      "url": "https://3mpwrapp.github.io/?no-modal=1",
+      "url": "https://3mpwrapp.ca/?no-modal=1",
       "timeout": 40000,
       "screenCapture": "./reports/screenshots/homepage.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/about?no-modal=1",
+      "url": "https://3mpwrapp.ca/about?no-modal=1",
       "screenCapture": "./reports/screenshots/about.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/features?no-modal=1",
+      "url": "https://3mpwrapp.ca/features?no-modal=1",
       "screenCapture": "./reports/screenshots/features.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/user-guide?no-modal=1",
+      "url": "https://3mpwrapp.ca/user-guide?no-modal=1",
       "timeout": 40000,
       "screenCapture": "./reports/screenshots/user-guide.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/community?no-modal=1",
+      "url": "https://3mpwrapp.ca/community?no-modal=1",
       "screenCapture": "./reports/screenshots/community.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/resources?no-modal=1",
+      "url": "https://3mpwrapp.ca/resources?no-modal=1",
       "screenCapture": "./reports/screenshots/resources.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/wellness?no-modal=1",
+      "url": "https://3mpwrapp.ca/wellness?no-modal=1",
       "screenCapture": "./reports/screenshots/wellness.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/contact?no-modal=1",
+      "url": "https://3mpwrapp.ca/contact?no-modal=1",
       "screenCapture": "./reports/screenshots/contact.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/newsletter?no-modal=1",
+      "url": "https://3mpwrapp.ca/newsletter?no-modal=1",
       "screenCapture": "./reports/screenshots/newsletter.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/blog?no-modal=1",
+      "url": "https://3mpwrapp.ca/blog?no-modal=1",
       "screenCapture": "./reports/screenshots/blog.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/beta?no-modal=1",
+      "url": "https://3mpwrapp.ca/beta?no-modal=1",
       "screenCapture": "./reports/screenshots/beta.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/search?no-modal=1",
+      "url": "https://3mpwrapp.ca/search?no-modal=1",
       "actions": [],
       "screenCapture": "./reports/screenshots/search.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/site-map?no-modal=1",
+      "url": "https://3mpwrapp.ca/site-map?no-modal=1",
       "screenCapture": "./reports/screenshots/site-map.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/accessibility?no-modal=1",
+      "url": "https://3mpwrapp.ca/accessibility?no-modal=1",
       "screenCapture": "./reports/screenshots/accessibility.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/privacy?no-modal=1",
+      "url": "https://3mpwrapp.ca/privacy?no-modal=1",
       "screenCapture": "./reports/screenshots/privacy.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/campaigns?no-modal=1",
+      "url": "https://3mpwrapp.ca/campaigns?no-modal=1",
       "screenCapture": "./reports/screenshots/campaigns.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/events?no-modal=1",
+      "url": "https://3mpwrapp.ca/events?no-modal=1",
       "screenCapture": "./reports/screenshots/events.png"
     },
     {
-      "url": "https://3mpwrapp.github.io/whats-new?no-modal=1",
+      "url": "https://3mpwrapp.ca/whats-new?no-modal=1",
       "screenCapture": "./reports/screenshots/whats-new.png"
     }
   ],
   "threshold": 0
 }
+
