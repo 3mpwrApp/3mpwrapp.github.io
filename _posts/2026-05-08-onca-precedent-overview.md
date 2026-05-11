@@ -4,7 +4,7 @@ title: "Ontario Court of Appeal (ONCA) Precedent Overview: 5,034 Decisions Analy
 date: 2026-05-08 00:00:00 +0000
 tags: [legal-intelligence, onca, appellate-research]
 categories: [community-updates, research]
-excerpt: "Analysis of 5,034 Ontario Court of Appeal decisions (2020-2026) reveals 20.3% appeal dismissal rate, 11.7% costs decisions, and 58.1% unknown/procedural outcomes. Only 1 worker injury case found, confirming ONCA's role as a precedent layer, not a tribunal success-rate dataset."
+excerpt: "Analysis of 5,034 Ontario Court of Appeal decisions (2020-2026) reveals 20.3% appeal dismissal rate, 11.7% costs decisions, and 58.1% unknown/procedural outcomes. Zero direct workplace injury appeals found, confirming ONCA's role as a precedent layer, not a tribunal success-rate dataset."
 ---
 
 # Ontario Court of Appeal (ONCA) Precedent Overview: 5,034 Decisions Analyzed
@@ -15,7 +15,7 @@ excerpt: "Analysis of 5,034 Ontario Court of Appeal decisions (2020-2026) reveal
 
 ## TL;DR
 
-**5,034 ONCA decisions** analyzed from 2020-2026 show the court's primary role as a precedent and procedural engine, not a tribunal outcomes tracker. **Only 1 worker injury case** found in the entire dataset confirms ONCA should be used for appellate standards, not success rates.
+**5,034 ONCA decisions** analyzed from 2020-2026 show the court's primary role as a precedent and procedural engine, not a tribunal outcomes tracker. **Zero direct workplace injury appeals** (WSIAT → Divisional Court → ONCA) found in the entire dataset confirms ONCA should be used for appellate standards, not success rates.
 
 ---
 
@@ -76,7 +76,7 @@ The Ontario Court of Appeal is **not** a tribunal success-rate dataset. It's a *
 
 ### Key Finding
 
-**Only 1 worker injury case** found in 5,034 decisions analyzed. This confirms ONCA is a **precedent layer**, not a workplace injury appeals database.
+**Zero direct workplace injury appeals** found in 5,034 decisions analyzed. One case involving an occupational therapy company (*Sokoloff v. Tru-Path*, 2020 ONCA 730) appeared in keyword searches but was actually a defamation dispute, not a WSIAT appeal. This confirms ONCA is a **precedent layer**, not a workplace injury appeals database.
 
 </div>
 
@@ -84,15 +84,17 @@ The Ontario Court of Appeal is **not** a tribunal success-rate dataset. It's a *
 
 ### Year-by-Year Volume
 
-| Year | Decisions | Worker Injury Cases | Top Outcome Type |
-|------|-----------|---------------------|------------------|
-| 2020 | 840 | 1 | Unknown (61.4%) |
+| Year | Decisions | Direct Worker Appeals | Top Outcome Type |
+|------|-----------|----------------------|------------------|
+| 2020 | 840 | 0 | Unknown (61.4%) |
 | 2021 | 924 | 0 | Unknown (61.4%) |
 | 2022 | 890 | 0 | Unknown (59.7%) |
 | 2023 | 849 | 0 | Unknown (55.1%) |
 | 2024 | 314 | 0 | Unknown (47.8%) |
 | 2025 | 896 | 0 | Unknown (69.1%) |
 | 2026 | 321 | 0 | Appeal Dismissed (50.2%) |
+
+**Note:** One 2020 case (*Sokoloff v. Tru-Path*, 2020 ONCA 730) appeared in keyword searches but was a defamation case involving an occupational therapy company, not a WSIAT appeal.
 
 **Pattern:** High-volume appellate docket with a dip in 2024 and rebound in 2025. The 2026 data shows a shift toward more classified outcomes (50.2% dismissals vs. 23.4% unknown).
 
@@ -250,7 +252,7 @@ ONCA precedents become useful when:
 ## Key Takeaways
 
 1. **ONCA is a precedent engine, not a success-rate database**
-   - Only 1 worker injury case in 5,034 decisions
+   - Zero direct workplace injury appeals in 5,034 decisions
    - 58.1% of outcomes are unknown/procedural
    - 13.2% appeal success rate (among classified decisions)
 
@@ -292,9 +294,9 @@ ONCA precedents become useful when:
 
 ## Share This Research
 
-**5,034 ONCA decisions analyzed. Only 1 worker injury case found. Use ONCA for precedents, not success rates.**
+**5,034 ONCA decisions analyzed. Zero direct workplace injury appeals found. Use ONCA for precedents, not success rates.**
 
-- **Twitter/X:** [Tweet this research](https://twitter.com/intent/tweet?text=ONCA%20Analysis%3A%205%2C034%20decisions%2C%20only%201%20worker%20injury%20case.%2013.2%25%20appeal%20success%20rate.%20Use%20for%20precedents%2C%20not%20tribunal%20outcomes.%20https%3A%2F%2F3mpwrapp.ca%2Fblog%2F2026%2F05%2F08%2Fonca-precedent-overview.html)
+- **Twitter/X:** [Tweet this research](https://twitter.com/intent/tweet?text=ONCA%20Analysis%3A%205%2C034%20decisions%2C%20zero%20direct%20worker%20injury%20appeals.%2013.2%25%20appeal%20success%20rate.%20Use%20for%20precedents%2C%20not%20tribunal%20outcomes.%20https%3A%2F%2F3mpwrapp.ca%2Fblog%2F2026%2F05%2F08%2Fonca-precedent-overview.html)
 - **Facebook:** [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https://3mpwrapp.ca/blog/2026/05/08/onca-precedent-overview.html)
 - **Reddit:** [r/ontario discussion](https://www.reddit.com/r/ontario/submit?url=https://3mpwrapp.ca/blog/2026/05/08/onca-precedent-overview.html&title=ONCA%20Precedent%20Analysis%3A%205%2C034%20Decisions)
 

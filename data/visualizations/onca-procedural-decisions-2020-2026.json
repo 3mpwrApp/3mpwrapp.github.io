@@ -256,9 +256,10 @@
   },
   "worker_injury_cases": {
     "total_found": 1,
+    "direct_workplace_appeals": 0,
     "percentage_of_dataset": 0.02,
-    "note": "ONCA decisions include appeals from all tribunal types. Worker injury cases represent <1% of dataset.",
-    "interpretation": "Most worker injury appeals stop at tribunal level (WSIAT, HRTO) or Divisional Court. Very few reach ONCA.",
+    "note": "One case (Sokoloff v. Tru-Path Occupational Therapy Services Ltd., 2020 ONCA 730) appeared in keyword searches but was a defamation/anti-SLAPP case involving a company that serves injured workers, not a WSIAT appeal. Zero direct workplace injury appeals (WSIAT → Divisional Court → ONCA) found.",
+    "interpretation": "Worker injury appeals virtually never reach ONCA. Most stop at WSIAT (73.5% success rate) or Divisional Court.",
     "key_finding": "ONCA is a precedent layer for legal interpretation, not a workplace injury outcomes database."
   },
   "use_cases": {

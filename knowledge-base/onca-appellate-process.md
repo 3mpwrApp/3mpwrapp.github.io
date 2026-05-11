@@ -7,7 +7,7 @@ permalink: /knowledge-base/onca-appellate-process/
 
 # Understanding ONCA Appeals for Workers
 
-> **⚠️ STATISTICAL ALERT:** Only **1 workplace injury case** appears in 5,034 Ontario Court of Appeal decisions (2020-2026). ONCA is an appellate court for legal errors, not a workplace injury tribunal. Success rate: **13.2%** for all classified appeals.
+> **⚠️ STATISTICAL ALERT:** **Zero direct workplace injury appeals** appear in 5,034 Ontario Court of Appeal decisions (2020-2026). One case involving an occupational therapy company (*Sokoloff v. Tru-Path*, 2020 ONCA 730) appeared in keyword searches but was a defamation dispute. ONCA is an appellate court for legal errors, not a workplace injury tribunal. Success rate: **13.2%** for all classified appeals.
 
 *Updated May 8, 2026 - Based on analysis of 5,034 ONCA decisions (2020-2026)*
 
@@ -18,10 +18,12 @@ permalink: /knowledge-base/onca-appellate-process/
 The Ontario Court of Appeal (ONCA) is Ontario's highest provincial court. Workers reach ONCA **only after losing** at WSIAT (Workplace Safety and Insurance Appeals Tribunal) **and** Divisional Court.
 
 Our analysis of 5,034 ONCA decisions reveals:
-- **Only 1 worker injury case found** (0.02% of all ONCA decisions)
+- **Zero direct workplace injury appeals** found (WSIAT → Divisional Court → ONCA pathway)
 - **13.2% success rate** for all appeals (156 allowed of 1,179 classified appeals)
 - **58.1% of decisions** are procedural (Unknown/Procedural: 2,926 cases)
 - **Leave to appeal granted:** 0.6% (32 of 5,034 applications)
+
+**Note:** One 2020 case (*Sokoloff v. Tru-Path*, 2020 ONCA 730) involving an occupational therapy company appeared in keyword searches but was a defamation case, not a workplace injury appeal.
 
 **Key Takeaway:** ONCA is **NOT** for challenging facts or medical evidence. It's for legal errors only.
 
@@ -195,9 +197,9 @@ If your case is fact-specific and affects only you, leave to appeal is unlikely.
 
 ## Year-by-Year ONCA Activity (2020-2026)
 
-| Year | Total Decisions | Worker Injury Cases | Top Outcome |
-|------|-----------------|---------------------|-------------|
-| **2020** | 840 | 1 | Unknown (516, 61.4%) |
+| Year | Total Decisions | Direct Worker Appeals | Top Outcome |
+|------|-----------------|----------------------|-------------|
+| **2020** | 840 | 0 | Unknown (516, 61.4%) |
 | **2021** | 924 | 0 | Unknown (567, 61.4%) |
 | **2022** | 890 | 0 | Unknown (531, 59.7%) |
 | **2023** | 849 | 0 | Unknown (468, 55.1%) |
@@ -205,7 +207,9 @@ If your case is fact-specific and affects only you, leave to appeal is unlikely.
 | **2025** | 896 | 0 | Unknown (619, 69.1%) |
 | **2026** | 321 | 0 | Appeal Dismissed (161, 50.2%) |
 
-**Trend:** Most ONCA decisions are procedural (Unknown category). Only 1 worker injury case found across 7 years.
+**Trend:** Most ONCA decisions are procedural (Unknown category). Zero direct workplace injury appeals found across 7 years.
+
+**Note:** One 2020 case (*Sokoloff v. Tru-Path Occupational Therapy Services Ltd.*, 2020 ONCA 730) appeared in keyword searches but was a defamation/anti-SLAPP case involving a company that serves injured workers, not a WSIAT appeal.
 
 ---
 
@@ -266,7 +270,7 @@ If your case is fact-specific and affects only you, leave to appeal is unlikely.
 ## Important Warnings
 
 ⚠️ **ONCA IS NOT FOR MOST WORKERS:**
-- Only 1 worker injury case in 5,034 decisions analyzed
+- Zero direct workplace injury appeals in 5,034 decisions analyzed
 - Most workplace injury disputes are resolved at WSIAT or Divisional Court
 - ONCA is for **legal errors**, not disagreements about facts/evidence
 
