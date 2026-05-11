@@ -5,182 +5,275 @@
     "source": "Ontario Court of Appeal (CanLII integration)",
     "date_range": "2020-2026",
     "total_cases": 5034,
-    "data_quality": "Procedurally classified from decision text; worker injury cases represent minority (~1%)",
-    "key_insight": "ONCA decisions are predominantly procedural (dismissals, costs awards, motions). Use for precedent research, not outcome comparison."
+    "worker_injury_cases": 1,
+    "data_quality": "Outcome-classified from decision text; worker injury cases represent <1% of dataset",
+    "key_insight": "ONCA decisions are predominantly Unknown/Procedural (58.1%) and Appeal Dismissed (20.3%). Use for precedent research, not outcome comparison."
   },
   "summary": {
     "total_decisions": 5034,
     "years_covered": 7,
     "average_per_year": 719,
-    "decision_clarity": "93.7% (clear procedural classification from headers)",
-    "substantive_merits": "6.3% (substantive reversals or remands)"
+    "classified_outcomes": 2108,
+    "unknown_procedural": 2926,
+    "appeal_success_rate": 13.2
   },
   "decision_categories": {
-    "dismissed": {
-      "label": "Dismissed",
-      "description": "Application/appeal denied on procedural or jurisdictional grounds",
-      "count": 2891,
-      "percentage": 57.4,
+    "unknown_procedural": {
+      "label": "Unknown/Procedural",
+      "description": "Outcome not classified or purely procedural decision",
+      "count": 2926,
+      "percentage": 58.1,
+      "color": "#9ca3af",
+      "examples": [
+        "Procedural motion without clear outcome",
+        "Case management decisions",
+        "Administrative orders"
+      ]
+    },
+    "appeal_dismissed": {
+      "label": "Appeal Dismissed",
+      "description": "Lower court/tribunal decision upheld - appellant loses",
+      "count": 1023,
+      "percentage": 20.3,
       "color": "#ef4444",
       "examples": [
-        "Leave to appeal denied",
-        "Appeal dismissed as moot",
-        "Jurisdiction declined"
+        "Appeal dismissed - no error in law",
+        "Standard of review properly applied",
+        "Tribunal decision upheld"
       ]
     },
-    "costs_awarded": {
-      "label": "Costs Awarded",
+    "costs_decision": {
+      "label": "Costs Decision",
       "description": "Party ordered to pay other side's legal costs",
-      "count": 1205,
-      "percentage": 23.9,
+      "count": 590,
+      "percentage": 11.7,
       "color": "#f97316",
       "examples": [
-        "Appellant ordered to pay $50K respondent costs",
-        "Frivolous appeal—$25K costs"
+        "Appellant ordered to pay respondent costs",
+        "Costs award for successful party",
+        "Cost submissions reviewed"
       ]
     },
-    "motion_decided": {
-      "label": "Motion Decided",
-      "description": "Procedural motion resolved (stay, expedite, etc.)",
-      "count": 687,
-      "percentage": 13.6,
+    "appeal_allowed": {
+      "label": "Appeal Allowed",
+      "description": "Lower court/tribunal decision overturned - appellant wins",
+      "count": 156,
+      "percentage": 3.1,
+      "color": "#22c55e",
+      "examples": [
+        "Appeal allowed - error in law found",
+        "Tribunal exceeded jurisdiction",
+        "Procedural fairness breach"
+      ]
+    },
+    "motion_interlocutory": {
+      "label": "Motion/Interlocutory Decision",
+      "description": "Pre-hearing procedural motion resolved",
+      "count": 124,
+      "percentage": 2.5,
       "color": "#eab308",
       "examples": [
         "Stay of lower court decision pending appeal",
-        "Motion for expedited hearing granted"
+        "Motion for expedited hearing",
+        "Adjournment request"
+      ]
+    },
+    "new_trial_hearing": {
+      "label": "New Trial/Hearing Ordered",
+      "description": "Case sent back for new hearing at lower level",
+      "count": 85,
+      "percentage": 1.7,
+      "color": "#3b82f6",
+      "examples": [
+        "Matter remitted for new hearing",
+        "Procedural fairness breach - rehearing ordered",
+        "New evidence warrants fresh hearing"
       ]
     },
     "remitted": {
-      "label": "Remitted/Sent Back",
-      "description": "Case sent back to lower tribunal/court for reconsideration",
-      "count": 112,
-      "percentage": 2.2,
-      "color": "#3b82f6",
-      "examples": [
-        "Appeal allowed in part; remitted for new hearing",
-        "Legal error found—tribunal to reconsider"
-      ]
-    },
-    "allowed_substantive": {
-      "label": "Appeal Allowed (Substantive)",
-      "description": "Appeal successful on legal merits",
-      "count": 89,
-      "percentage": 1.8,
-      "color": "#22c55e",
-      "examples": [
-        "Appeal allowed; lower court decision reversed",
-        "Tribunal misinterpreted statute"
-      ]
-    },
-    "reserved": {
-      "label": "Decision Reserved",
-      "description": "Judgment pending (appeal heard but not yet decided)",
-      "count": 50,
+      "label": "Remitted to Lower Court/Tribunal",
+      "description": "Case sent back to lower court/tribunal for reconsideration",
+      "count": 49,
       "percentage": 1.0,
-      "color": "#a78bfa",
+      "color": "#8b5cf6",
       "examples": [
-        "Decision reserved (pending from prior hearing year)"
+        "Remitted to tribunal for reconsideration",
+        "Sent back for additional reasons",
+        "Lower court to reconsider in light of new law"
+      ]
+    },
+    "leave_granted": {
+      "label": "Leave to Appeal Granted",
+      "description": "Permission to appeal granted",
+      "count": 32,
+      "percentage": 0.6,
+      "color": "#10b981",
+      "examples": [
+        "Leave to appeal granted",
+        "Application for leave allowed",
+        "Appeal may proceed"
+      ]
+    },
+    "leave_refused": {
+      "label": "Leave to Appeal Refused",
+      "description": "Permission to appeal denied",
+      "count": 26,
+      "percentage": 0.5,
+      "color": "#dc2626",
+      "examples": [
+        "Leave to appeal refused",
+        "Application for leave dismissed",
+        "No merit for appeal"
+      ]
+    },
+    "settled_discontinued": {
+      "label": "Settled/Discontinued",
+      "description": "Case settled or withdrawn before decision",
+      "count": 23,
+      "percentage": 0.5,
+      "color": "#6b7280",
+      "examples": [
+        "Appeal discontinued",
+        "Parties reached settlement",
+        "Withdrawal of appeal"
       ]
     }
+  },
   },
   "temporal_trends": {
     "2020": {
       "year": 2020,
       "total": 840,
-      "dismissed": 482,
-      "costs_awarded": 201,
-      "motion_decided": 113,
-      "remitted": 18,
-      "allowed_substantive": 16,
-      "reserved": 10
+      "worker_injury_cases": 1,
+      "appeal_dismissed": 142,
+      "appeal_allowed": 23,
+      "costs_decision": 104,
+      "unknown": 516,
+      "motion_interlocutory": 19,
+      "new_trial_hearing": 17,
+      "remitted": 8,
+      "leave_granted": 4,
+      "leave_refused": 3,
+      "settled_discontinued": 4
     },
     "2021": {
       "year": 2021,
       "total": 924,
-      "dismissed": 531,
-      "costs_awarded": 221,
-      "motion_decided": 125,
-      "remitted": 21,
-      "allowed_substantive": 19,
-      "reserved": 7
+      "worker_injury_cases": 0,
+      "appeal_dismissed": 155,
+      "appeal_allowed": 22,
+      "costs_decision": 107,
+      "unknown": 567,
+      "motion_interlocutory": 30,
+      "new_trial_hearing": 12,
+      "remitted": 15,
+      "leave_granted": 8,
+      "leave_refused": 5,
+      "settled_discontinued": 3
     },
     "2022": {
       "year": 2022,
       "total": 890,
-      "dismissed": 511,
-      "costs_awarded": 212,
-      "motion_decided": 122,
-      "remitted": 20,
-      "allowed_substantive": 16,
-      "reserved": 9
+      "worker_injury_cases": 0,
+      "appeal_dismissed": 182,
+      "appeal_allowed": 20,
+      "costs_decision": 100,
+      "unknown": 531,
+      "motion_interlocutory": 16,
+      "new_trial_hearing": 16,
+      "remitted": 8,
+      "leave_granted": 7,
+      "leave_refused": 6,
+      "settled_discontinued": 4
     },
     "2023": {
       "year": 2023,
       "total": 849,
-      "dismissed": 488,
-      "costs_awarded": 203,
-      "motion_decided": 116,
-      "remitted": 19,
-      "allowed_substantive": 15,
-      "reserved": 8
+      "worker_injury_cases": 0,
+      "appeal_dismissed": 201,
+      "appeal_allowed": 29,
+      "costs_decision": 96,
+      "unknown": 468,
+      "motion_interlocutory": 19,
+      "new_trial_hearing": 18,
+      "remitted": 7,
+      "leave_granted": 1,
+      "leave_refused": 6,
+      "settled_discontinued": 4
     },
     "2024": {
       "year": 2024,
       "total": 314,
-      "dismissed": 180,
-      "costs_awarded": 75,
-      "motion_decided": 42,
-      "remitted": 7,
-      "allowed_substantive": 6,
-      "reserved": 4
+      "worker_injury_cases": 0,
+      "appeal_dismissed": 89,
+      "appeal_allowed": 15,
+      "costs_decision": 34,
+      "unknown": 150,
+      "motion_interlocutory": 9,
+      "new_trial_hearing": 7,
+      "remitted": 4,
+      "leave_granted": 3,
+      "leave_refused": 1,
+      "settled_discontinued": 2
     },
     "2025": {
       "year": 2025,
       "total": 896,
-      "dismissed": 514,
-      "costs_awarded": 214,
-      "motion_decided": 122,
-      "remitted": 21,
-      "allowed_substantive": 18,
-      "reserved": 7
+      "worker_injury_cases": 0,
+      "appeal_dismissed": 93,
+      "appeal_allowed": 13,
+      "costs_decision": 122,
+      "unknown": 619,
+      "motion_interlocutory": 19,
+      "new_trial_hearing": 8,
+      "remitted": 5,
+      "leave_granted": 7,
+      "leave_refused": 4,
+      "settled_discontinued": 6
     },
     "2026": {
       "year": 2026,
       "total": 321,
-      "dismissed": 185,
-      "costs_awarded": 76,
-      "motion_decided": 42,
-      "remitted": 6,
-      "allowed_substantive": 7,
-      "reserved": 5
+      "worker_injury_cases": 0,
+      "appeal_dismissed": 161,
+      "appeal_allowed": 34,
+      "costs_decision": 27,
+      "unknown": 75,
+      "motion_interlocutory": 12,
+      "new_trial_hearing": 7,
+      "remitted": 2,
+      "leave_granted": 2,
+      "leave_refused": 1,
+      "settled_discontinued": 0
     }
   },
-  "worker_injury_cases": {
-    "note": "ONCA decisions include appeals from all tribunal types. Worker injury cases represent ~1% of scrape results.",
-    "estimated_worker_cases_2020_2026": 50,
-    "examples": [
-      "WSIAT decision appealed to ONCA on legal interpretation",
-      "HRTO decision appealed for procedural fairness violation",
-      "ONSBT decision appealed on jurisdictional grounds"
-    ],
-    "key_finding": "Most worker injury appeals that reach ONCA are on narrow procedural grounds (Leave was wrongly denied, tribunal lacked jurisdiction). Substantive merit reversals are rare."
+  "appeal_success_analysis": {
+    "total_classified_appeals": 1179,
+    "appeals_allowed": 156,
+    "appeals_dismissed": 1023,
+    "success_rate_percentage": 13.2,
+    "note": "Success rate calculated from classified appeal outcomes only (excludes Unknown, Costs, Motions, Leave decisions)"
   },
-  "success_rates": {
-    "leave_to_appeal_granted": "4.2% (212 of 5034)",
-    "leave_to_appeal_after_leave_allowed": "8.3% (89 of 1070 full hearings)",
-    "substantive_success_definition": "Appeal allowed in full or in part",
-    "interpretation": "ONCA's role is appellate review for legal error. Most applications denied at leave stage. Substantive success rate reflects very narrow scope."
+  "worker_injury_cases": {
+    "total_found": 1,
+    "percentage_of_dataset": 0.02,
+    "note": "ONCA decisions include appeals from all tribunal types. Worker injury cases represent <1% of dataset.",
+    "interpretation": "Most worker injury appeals stop at tribunal level (WSIAT, HRTO) or Divisional Court. Very few reach ONCA.",
+    "key_finding": "ONCA is a precedent layer for legal interpretation, not a workplace injury outcomes database."
   },
   "use_cases": {
     "precedent_research": "✅ Primary use—search ONCA decisions for legal interpretation relevant to your case",
     "outcome_comparison": "❌ NOT recommended—ONCA is appellate, not first-level tribunal. Outcomes are procedural, not merit-based.",
     "appeal_strategy": "✅ Use to understand leave to appeal standards and what grounds succeed",
-    "legal_interpretation": "✅ Use to see how courts interpret tribunal statutes and standards of review"
+    "legal_interpretation": "✅ Use to see how courts interpret tribunal statutes and standards of review",
+    "standards_of_review": "✅ ONCA sets standards for reviewing tribunal decisions (reasonableness, correctness)"
   },
   "methodology": {
     "data_source": "Ontario Court of Appeal decisions via CanLII (2020-2026)",
-    "classification_method": "Regex pattern matching on decision headers and disposition text",
-    "confidence": "93.7% (procedural classification is explicit in ONCA decisions)",
-    "limitations": "Worker injury cases represent ~1% of total; sample size for substantive appeals is small. Temporal data reflects publication timing, not decision date."
+    "scrape_date": "2026-05-08",
+    "classification_method": "Outcome pattern matching from decision text",
+    "total_decisions_analyzed": 5034,
+    "confidence": "41.9% classified outcomes (2,108 of 5,034); 58.1% unknown/procedural",
+    "limitations": "Worker injury cases represent <1% of total; 58.1% of decisions have unknown/unclassified outcomes; sample primarily procedural decisions"
   }
 }

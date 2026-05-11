@@ -139,7 +139,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 ## <span id="blog-posts">💬 Community Updates</span>
 
 <details class="blog-section-collapsible" open>
-<summary class="blog-section-summary">💬 View Community Updates (25 most recent) — Click to expand/collapse</summary>
+<summary class="blog-section-summary">💬 View Community Updates (All posts) — Click to expand/collapse</summary>
 
 <p class="section-description">Announcements, stories, and updates from the 3mpwr community. Learn about new features, community achievements, and important information directly from our team.</p>
 
@@ -148,7 +148,6 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
   {% for post in site.posts %}
     {% unless post.tags contains 'highlights' or post.tags contains 'weekly' or post.tags contains 'features' or post.tags contains 'spotlight' or post.categories contains 'dev-diary-updates' or post.categories contains 'weekly-recap' %}
       {% assign community_post_count = community_post_count | plus: 1 %}
-      {% if community_post_count <= 25 %}
       <article class="post-item">
         <h3 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p class="post-item__date">📅 {{ post.date | date: "%B %-d, %Y" }}</p>
@@ -164,7 +163,6 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
         {% endif %}
         <a href="{{ post.url | relative_url }}" class="post-item__link">Read more →</a>
       </article>
-      {% endif %}
     {% endunless %}
   {% endfor %}
   {% if community_post_count == 0 %}
