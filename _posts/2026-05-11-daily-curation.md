@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Daily News Curation - 2026-05-11"
+date: 2026-05-11
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-05-11
+
+Curated 3 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Supporters to Hold Rally for Man Fighting Cancer and Deportation
+Francisco Barahona, who has lived in Canada for 15 years, is facing nearly $400,000 in medical bills.
+[Source](https://thetyee.ca/News/2026/05/11/Supporters-Rally-Man-Fighting-Cancer-Deportation/)
+**Score:** 15.00
+
+### 2. A Mayor’s Call to Fix Health Care in Rural BC
+Lifelong Haida Gwaii resident Lisa Pineault wants to take a hard look at costs and access for remote residents.
+[Source](https://thetyee.ca/News/2026/05/11/Mayor-Call-Fix-Health-Care-Rural-BC/)
+**Score:** 8.90
+

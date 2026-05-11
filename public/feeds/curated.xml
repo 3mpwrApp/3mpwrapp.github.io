@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 10 May 2026 13:24:36 GMT</lastBuildDate>
-    <pubDate>Sun, 10 May 2026 13:24:36 GMT</pubDate>
+    <lastBuildDate>Mon, 11 May 2026 15:15:44 GMT</lastBuildDate>
+    <pubDate>Mon, 11 May 2026 15:15:44 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -23,8 +23,28 @@
       <title>The Disability Bulletin</title>
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
-      <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Sun, 10 May 2026 13:24:36 GMT</pubDate>
+      <description><![CDATA[The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.]]></description>
+      <pubDate>Mon, 11 May 2026 15:15:44 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Supporters to Hold Rally for Man Fighting Cancer and Deportation</title>
+      <link>https://thetyee.ca/News/2026/05/11/Supporters-Rally-Man-Fighting-Cancer-Deportation/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/05/11/Supporters-Rally-Man-Fighting-Cancer-Deportation/</guid>
+      <description><![CDATA[Francisco Barahona, who has lived in Canada for 15 years, is facing nearly $400,000 in medical bills.]]></description>
+      <pubDate>Mon, 11 May 2026 07:20:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>A Mayor’s Call to Fix Health Care in Rural BC</title>
+      <link>https://thetyee.ca/News/2026/05/11/Mayor-Call-Fix-Health-Care-Rural-BC/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/05/11/Mayor-Call-Fix-Health-Care-Rural-BC/</guid>
+      <description><![CDATA[Lifelong Haida Gwaii resident Lisa Pineault wants to take a hard look at costs and access for remote residents.]]></description>
+      <pubDate>Mon, 11 May 2026 07:10:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
