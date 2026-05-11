@@ -6,8 +6,9 @@
     "date_range": "2020-2026",
     "total_cases": 5034,
     "worker_injury_cases": 1,
+    "disability_discrimination_cases": "Multiple cases found via HRTO appeals, LTD insurance disputes, capacity to litigate, Charter s.15 equality rights - see blog post for 6 concrete examples with citations",
     "data_quality": "Outcome-classified from decision text; worker injury cases represent <1% of dataset",
-    "key_insight": "ONCA decisions are predominantly Unknown/Procedural (58.1%) and Appeal Dismissed (20.3%). Use for precedent research, not outcome comparison."
+    "key_insight": "ONCA decisions are predominantly Unknown/Procedural (58.1%) and Appeal Dismissed (20.3%). Zero direct workplace injury appeals (WSIAT pathway) but multiple disability/discrimination cases via alternative pathways (HRTO, LTD insurance, Charter challenges). Use for precedent research, not outcome comparison."
   },
   "summary": {
     "total_decisions": 5034,

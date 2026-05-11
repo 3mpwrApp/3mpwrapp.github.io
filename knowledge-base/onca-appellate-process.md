@@ -46,6 +46,80 @@ You can appeal to ONCA **only** if:
 
 ---
 
+## The Other ONCA Pathway: Disability & Discrimination Cases
+
+### ONCA DOES Have Cases Relevant to Injured Workers
+
+While **zero direct workplace injury appeals** (WSIAT → Divisional Court → ONCA) exist in our dataset, ONCA **does** have disability and discrimination cases relevant to injured workers through **alternative legal pathways**:
+
+**Key insight:** Injured workers may reach ONCA through Human Rights Tribunal appeals, long-term disability insurance disputes, and accessibility litigation—not just workplace injury compensation appeals.
+
+### Concrete Examples: Actual ONCA Cases (2020)
+
+#### 1. **Longueépée v. University of Waterloo** (2020 ONCA 830)
+**Issue:** Duty to accommodate student with disabilities in university admissions  
+**Facts:** Applicant denied admission based on grades achieved without accommodations for disabilities  
+**Outcome:** Remitted to HRTO (Human Rights Tribunal of Ontario)  
+**Why it matters:** Establishes that institutions must accommodate disabilities in admissions/hiring processes, not just rely on unaccommodated performance  
+**CanLII:** [https://canlii.ca/t/jc99k](https://canlii.ca/t/jc99k)
+
+#### 2. **Nelson v. Ontario** (2020 ONCA 751)
+**Issue:** Gender and racial discrimination in workplace (HRTO concurrent jurisdiction with labour arbitrator)  
+**Facts:** Employment disputes under collective agreements with discrimination claims  
+**Outcome:** Confirmed HRTO's concurrent authority for workplace discrimination  
+**Why it matters:** Workers can pursue Human Rights Tribunal remedies even when collective agreements exist  
+**CanLII:** [https://canlii.ca/t/jbvmg](https://canlii.ca/t/jbvmg)
+
+#### 3. **Burns v. RBC Life Insurance Company** (2020 ONCA 347)
+**Issue:** Long-term disability (LTD) benefits termination—bad faith and negligence  
+**Facts:** Plaintiff alleged insurer and employees acted in bad faith terminating LTD benefits  
+**Outcome:** Costs decision (legal fees dispute)  
+**Why it matters:** Sets precedent for personal liability of insurer employees in LTD benefit terminations  
+**CanLII:** [https://canlii.ca/t/j81vp](https://canlii.ca/t/j81vp)
+
+#### 4. **Krukowski v. Aviva Insurance Company of Canada** (2020 ONCA 631)
+**Issue:** Settlement approval for person with catastrophic injuries—legal fees  
+**Facts:** $1.2 million settlement, legal fees reduced from 15% to 5% ($60,000)  
+**Outcome:** Costs decision upheld fee reduction  
+**Why it matters:** Court protects persons under disability from excessive legal fees (Rule 7.08)  
+**CanLII:** [https://canlii.ca/t/jb003](https://canlii.ca/t/jb003)
+
+#### 5. **Clarke v. Sun Life Assurance Company of Canada** (2020 ONCA 11)
+**Issue:** Long-term disability benefits limitation periods  
+**Facts:** Insurer ceased "own occupation" benefits (2013), denied "any occupation" benefits (2014), insured delayed providing medical evidence for 3 years  
+**Outcome:** Summary judgment denied—insufficient record required trial  
+**Why it matters:** Establishes when limitation period begins for LTD claims (discoverability principles under Limitations Act)  
+**CanLII:** [https://canlii.ca/t/j4g0n](https://canlii.ca/t/j4g0n)
+
+#### 6. **R. v. Sharma** (2020 ONCA 478) — Charter Section 15 Equality Rights
+**Issue:** Aboriginal offenders and conditional sentencing (Charter s.15 equality rights)  
+**Facts:** Challenged Criminal Code provisions precluding conditional sentences for certain offences  
+**Outcome:** Provisions found to violate Charter s.15 (systemic discrimination)  
+**Why it matters:** Addresses overincarceration and systemic disadvantage of vulnerable populations  
+**CanLII:** [https://canlii.ca/t/j8tgz](https://canlii.ca/t/j8tgz)
+
+---
+
+### How Injured Workers Reach ONCA (Non-WSIAT Pathways)
+
+| Pathway | Starting Point | Example Issues |
+|---------|---------------|----------------|
+| **Human Rights Tribunal** | HRTO → Divisional Court → ONCA | Duty to accommodate, disability discrimination, accessibility violations |
+| **Disability Insurance** | Civil court action → Court of Appeal → ONCA | Long-term disability benefit terminations, bad faith claims, limitation periods |
+| **Capacity to Litigate** | Civil procedure (Rules 7.04, 7.08, 37.16) | Persons under disability, settlement approvals, litigation guardianship |
+| **Charter Challenges** | Trial court → Court of Appeal → ONCA | Section 15 equality rights, section 7 fundamental justice |
+| **CPP Disability** | Social Security Tribunal → Federal Court → ONCA (rare) | Canada Pension Plan disability benefits |
+
+**Practical takeaway:** If you're an injured worker dealing with:
+- Disability discrimination (employment, housing, services)
+- Long-term disability insurance disputes
+- Catastrophic injury settlements
+- Capacity to manage your own legal case
+
+...you may find relevant ONCA precedents even though direct WSIAT appeals don't exist.
+
+---
+
 ## The Appeal Ladder for Workers
 
 Your case travels up this ladder:

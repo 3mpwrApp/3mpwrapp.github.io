@@ -1108,10 +1108,11 @@ description: Interactive data visualizations and research tools analyzing tribun
 
     <div class="research-onca-callout">
       <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem;">âš–ï¸ ONCA Appellate Layer</h3>
-      <p class="research-onca-muted" style="margin: 0 0 0.75rem; font-size: 0.95rem;">New appellate guidance for cases that may need to move beyond the tribunal stage.</p>
+      <p class="research-onca-muted" style="margin: 0 0 0.75rem; font-size: 0.95rem;">New appellate guidance for cases that may need to move beyond the tribunal stage. Includes disability discrimination, long-term disability insurance, and Human Rights Tribunal appeals.</p>
       <ul style="margin: 0 0 1rem 1.2rem; font-size: 0.95rem; line-height: 1.6;">
         <li><a href="/guides/onca-appellate-guide/">ONCA appellate guide</a></li>
-        <li><a href="/blog/2026/05/08/onca-precedent-overview/">ONCA precedent overview</a></li>
+        <li><a href="/blog/2026/05/08/onca-precedent-overview/">ONCA precedent overview</a> (includes 6 disability case examples)</li>
+        <li><a href="/knowledge-base/onca-appellate-process/">Understanding ONCA Appeals for Workers</a></li>
         <li><a href="/data/visualizations/onca-procedural-decisions-2020-2026.json">ONCA procedural dataset</a></li>
       </ul>
       <a class="research-cta" href="/guides/onca-appellate-guide/">Read ONCA Guide â†’</a>
