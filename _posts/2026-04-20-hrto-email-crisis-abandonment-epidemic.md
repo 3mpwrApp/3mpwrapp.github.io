@@ -3,10 +3,12 @@ layout: post
 title: "HRTO Abandonment Analysis: Email Issues Cited in 70.1% of Abandoned Cases"
 subtitle: "Keyword Analysis of 3,186 Human Rights Decisions (2020-2026) Shows Correlation Between Email Delivery Issues and Case Abandonments | Data Limitations Acknowledged"
 date: 2026-04-20
-author: Lissa Beaulieu (Founder, 3mpwrApp) & GitHub Copilot
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 categories: [Human Rights, Research, Access to Justice]
 tags: [hrto-analysis, email-notifications, abandonment-patterns, digital-divide]
+excerpt: "Analysis of 3,186 HRTO decisions shows 73.5% abandonment rate with 70.1% of abandoned cases citing email delivery issues. Data limitations acknowledged."
 image: /assets/images/hrto-email-crisis.png
+image_alt: "HRTO case abandonment analysis showing correlation between email issues and case abandonments"
 toc: true
 ---
 

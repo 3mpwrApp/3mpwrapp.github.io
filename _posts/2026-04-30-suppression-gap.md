@@ -4,7 +4,7 @@ title: "WSIB Appeal Gap Analysis: 139,000 Ontario Workers Per Year Do Not Appeal
 date: 2026-04-30
 categories: [investigations, wsib, data-analysis]
 tags: [wsib-appeals, claim-denials, wsiat-appeals, workers-rights, data-investigation]
-author: 3mpwrApp Data Investigation Team
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 excerpt: "Analysis of 7 years of WSIB data reveals an appeal gap: 141,558 workers/year receive denials, but only 1.75% appeal to WSIAT. Of those who appeal, 73.5% receive favorable decisions in classified cases (438 granted / 596 decisive, 2020-2026 CanLII subset). This represents 139,083 workers/year who do not pursue the appeals process."
 ---
 

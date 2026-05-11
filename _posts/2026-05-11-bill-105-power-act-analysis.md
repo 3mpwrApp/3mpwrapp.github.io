@@ -4,7 +4,7 @@ title: "Bill 105 (POWER Act): Analysis of Ontario Workers' Compensation Amendmen
 date: 2026-05-11
 categories: [research, legislation, advocacy]
 tags: [bill-105, POWER-Act, WSIB, ontario, workers-compensation, age-65, 72-month-review, wage-replacement]
-author: 3mpwrApp Research Team
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 excerpt: "Bill 105 (Protecting Ontario's Workers and Economic Resilience Act, 2026) introduces targeted amendments to Ontario's workers' compensation system. Analysis of key provisions, stakeholder concerns, and policy implications."
 featured: true
 toc: true

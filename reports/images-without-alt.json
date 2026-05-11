@@ -1,0 +1,12 @@
+{
+  "scan_date": "2026-05-11T13:23:00-04:00",
+  "stats": {
+    "total_files": 527,
+    "files_with_issues": 0,
+    "total_images": 1570,
+    "images_without_alt": 0,
+    "images_with_empty_alt": 0,
+    "decorative_images": 456
+  },
+  "images_without_alt": []
+}

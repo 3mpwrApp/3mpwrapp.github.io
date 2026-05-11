@@ -1,0 +1,248 @@
+name: Weekly Accessibility & SEO Report
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'  # Every Monday at 10:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  weekly-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps
+          bundle install
+
+      - name: Build site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Run pa11y audit
+        continue-on-error: true
+        run: |
+          npx pa11y-ci --config .pa11yci-aaa.json --reporter json > reports/weekly-pa11y.json || true
+
+      - name: Run Lighthouse audits
+        continue-on-error: true
+        run: |
+          npx lighthouse https://3mpwrapp.ca --output json --output-path reports/weekly-lighthouse.json --quiet || true
+
+      - name: Validate structured data
+        continue-on-error: true
+        run: |
+          node scripts/validate-structured-data.js || true
+
+      - name: Run keyboard navigation tests
+        continue-on-error: true
+        run: |
+          node scripts/keyboard-nav-tests.js || true
+        env:
+          SITE_URL: https://3mpwrapp.ca
+
+      - name: Generate image sitemap
+        continue-on-error: true
+        run: |
+          ruby scripts/generate-image-sitemap.rb
+
+      - name: Compile report
+        id: compile_report
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          
+          const report = {
+            date: new Date().toISOString(),
+            summary: {},
+            details: {}
+          };
+          
+          // PA11y results
+          try {
+            const pa11y = JSON.parse(fs.readFileSync('reports/weekly-pa11y.json', 'utf8'));
+            const errorPages = pa11y.filter(p => p.issues && p.issues.length > 0).length;
+            report.summary.pa11y = {
+              total: pa11y.length,
+              passing: pa11y.length - errorPages,
+              failing: errorPages
+            };
+          } catch (e) {
+            report.summary.pa11y = { error: 'Could not load pa11y results' };
+          }
+          
+          // Lighthouse results
+          try {
+            const lh = JSON.parse(fs.readFileSync('reports/weekly-lighthouse.json', 'utf8'));
+            report.summary.lighthouse = {
+              accessibility: (lh.categories.accessibility.score * 100).toFixed(0),
+              performance: (lh.categories.performance.score * 100).toFixed(0),
+              seo: (lh.categories.seo.score * 100).toFixed(0),
+              bestPractices: (lh.categories['best-practices'].score * 100).toFixed(0)
+            };
+          } catch (e) {
+            report.summary.lighthouse = { error: 'Could not load Lighthouse results' };
+          }
+          
+          // Structured data results
+          try {
+            const sd = JSON.parse(fs.readFileSync('reports/structured-data-validation.json', 'utf8'));
+            report.summary.structuredData = {
+              totalSchemas: sd.totalSchemas,
+              errors: sd.errors.length,
+              warnings: sd.warnings.length
+            };
+          } catch (e) {
+            report.summary.structuredData = { error: 'Could not load structured data results' };
+          }
+          
+          // Keyboard nav results
+          try {
+            const kbd = JSON.parse(fs.readFileSync('reports/keyboard-nav-results.json', 'utf8'));
+            report.summary.keyboardNav = {
+              total: kbd.total,
+              passed: kbd.passed,
+              failed: kbd.failed
+            };
+          } catch (e) {
+            report.summary.keyboardNav = { error: 'Could not load keyboard nav results' };
+          }
+          
+          fs.writeFileSync('reports/weekly-report.json', JSON.stringify(report, null, 2));
+          console.log('Report compiled successfully');
+          "
+
+      - name: Create GitHub Issue with report
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('reports/weekly-report.json', 'utf8'));
+            
+            let body = '# 📊 Weekly Accessibility & SEO Report\n\n';
+            body += `**Report Date:** ${new Date(report.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}\n\n`;
+            body += '---\n\n';
+            
+            // WCAG Compliance
+            body += '## ♿ WCAG 2.2 AAA Compliance (pa11y)\n\n';
+            if (report.summary.pa11y.error) {
+              body += `⚠️ ${report.summary.pa11y.error}\n\n`;
+            } else {
+              const passRate = ((report.summary.pa11y.passing / report.summary.pa11y.total) * 100).toFixed(1);
+              body += `**Pages Tested:** ${report.summary.pa11y.total}\n`;
+              body += `**Passing:** ✅ ${report.summary.pa11y.passing} (${passRate}%)\n`;
+              body += `**Failing:** ❌ ${report.summary.pa11y.failing}\n\n`;
+              
+              if (report.summary.pa11y.failing === 0) {
+                body += '✅ **Perfect score!** All pages pass WCAG 2.2 AAA standards.\n\n';
+              } else {
+                body += '⚠️ **Action needed:** Review pa11y report artifact for details.\n\n';
+              }
+            }
+            
+            // Lighthouse Scores
+            body += '## 🔦 Lighthouse Core Metrics\n\n';
+            if (report.summary.lighthouse.error) {
+              body += `⚠️ ${report.summary.lighthouse.error}\n\n`;
+            } else {
+              body += '| Metric | Score | Status |\n';
+              body += '|--------|-------|--------|\n';
+              body += `| Accessibility | ${report.summary.lighthouse.accessibility}% | ${report.summary.lighthouse.accessibility >= 95 ? '✅' : '⚠️'} |\n`;
+              body += `| Performance | ${report.summary.lighthouse.performance}% | ${report.summary.lighthouse.performance >= 60 ? '✅' : '⚠️'} |\n`;
+              body += `| SEO | ${report.summary.lighthouse.seo}% | ${report.summary.lighthouse.seo >= 90 ? '✅' : '⚠️'} |\n`;
+              body += `| Best Practices | ${report.summary.lighthouse.bestPractices}% | ${report.summary.lighthouse.bestPractices >= 90 ? '✅' : '⚠️'} |\n\n`;
+            }
+            
+            // Structured Data
+            body += '## 📊 Structured Data (Schema.org)\n\n';
+            if (report.summary.structuredData.error) {
+              body += `⚠️ ${report.summary.structuredData.error}\n\n`;
+            } else {
+              body += `**Total Schemas:** ${report.summary.structuredData.totalSchemas}\n`;
+              body += `**Errors:** ${report.summary.structuredData.errors === 0 ? '✅ 0' : '❌ ' + report.summary.structuredData.errors}\n`;
+              body += `**Warnings:** ${report.summary.structuredData.warnings === 0 ? '✅ 0' : '⚠️ ' + report.summary.structuredData.warnings}\n\n`;
+              
+              if (report.summary.structuredData.errors === 0 && report.summary.structuredData.warnings === 0) {
+                body += '✅ **Perfect!** All structured data is valid.\n\n';
+              }
+            }
+            
+            // Keyboard Navigation
+            body += '## ⌨️ Keyboard Navigation\n\n';
+            if (report.summary.keyboardNav.error) {
+              body += `⚠️ ${report.summary.keyboardNav.error}\n\n`;
+            } else {
+              body += `**Tests:** ${report.summary.keyboardNav.total}\n`;
+              body += `**Passed:** ✅ ${report.summary.keyboardNav.passed}\n`;
+              body += `**Failed:** ${report.summary.keyboardNav.failed === 0 ? '✅ 0' : '❌ ' + report.summary.keyboardNav.failed}\n\n`;
+              
+              if (report.summary.keyboardNav.failed === 0) {
+                body += '✅ **Excellent!** All keyboard navigation tests pass.\n\n';
+              }
+            }
+            
+            // Footer
+            body += '---\n\n';
+            body += '## 📌 Next Steps\n\n';
+            
+            const hasIssues = 
+              (report.summary.pa11y.failing && report.summary.pa11y.failing > 0) ||
+              (report.summary.structuredData.errors && report.summary.structuredData.errors > 0) ||
+              (report.summary.keyboardNav.failed && report.summary.keyboardNav.failed > 0) ||
+              (report.summary.lighthouse.accessibility && parseInt(report.summary.lighthouse.accessibility) < 95);
+            
+            if (hasIssues) {
+              body += '1. Download workflow artifacts for detailed reports\n';
+              body += '2. Review and fix failing tests\n';
+              body += '3. Update baselines if intentional changes were made\n';
+              body += '4. Re-run tests to verify fixes\n\n';
+            } else {
+              body += '✅ No action needed - all metrics are excellent!\n\n';
+              body += 'Keep up the great work maintaining accessibility standards! 🎉\n\n';
+            }
+            
+            body += '**Automated Report** • Generated by [Weekly Accessibility & SEO Report](.github/workflows/weekly-report.yml)\n';
+            
+            // Create issue
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📊 Weekly Report: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}`,
+              body: body,
+              labels: ['report', 'accessibility', 'seo', 'automated']
+            });
+            
+            console.log(`Created issue #${issue.data.number}`);
+
+      - name: Upload all reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-reports
+          path: |
+            reports/weekly-*.json
+            reports/weekly-report.json
+            reports/structured-data-validation.json
+            reports/keyboard-nav-results.json

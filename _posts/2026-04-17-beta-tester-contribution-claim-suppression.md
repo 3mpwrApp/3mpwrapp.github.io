@@ -5,7 +5,7 @@ date: 2026-04-17
 categories: [research, community, transparency]
 featured: true
 excerpt: "When a BC beta tester shared six legal cases and an investigation report, we converted that input into 34,000+ words of resources connecting BC's 'second-tier systems' to Ontario pattern analysis."
-author: 3mpwrApp
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 ---
 
 <div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #1a1a1a; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(255, 236, 210, 0.3);">

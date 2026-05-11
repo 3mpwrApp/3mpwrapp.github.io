@@ -4,9 +4,10 @@ title: "Employer Tactics to Suppress Workers' Comp Claims: A Defense Playbook"
 date: 2026-04-16 14:00:00 -0400
 categories: [research, employer-retaliation, claim-suppression, workers-rights]
 tags: [WSIB, WorkSafeBC, claim-suppression, employer-retaliation, megaprojects, legal-precedent]
-author: 3mpwrApp
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 excerpt: "A BC megaprojects investigation reported a 'second-tier compensation system' operating outside standard WorkSafeBC pathways. This guide summarizes reporting-barrier patterns and response options."
 image: /assets/images/blog/claim-suppression-social.png
+image_alt: "Employer claim suppression tactics infographic showing reporting barriers and worker rights"
 ---
 
 # Employer Tactics to Suppress Workers' Comp Claims: A Defense Playbook

@@ -1,0 +1,110 @@
+name: Keyboard Navigation Tests
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'assets/js/**'
+      - '_layouts/**'
+      - '_includes/**'
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 9 * * 1'  # Weekly Monday 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: keyboard-nav-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  keyboard-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps
+
+      - name: Run keyboard navigation tests
+        id: keyboard_tests
+        run: |
+          node scripts/keyboard-nav-tests.js
+        env:
+          SITE_URL: https://3mpwrapp.ca
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: keyboard-nav-results
+          path: reports/keyboard-nav-results.json
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const reportPath = 'reports/keyboard-nav-results.json';
+            
+            if (!fs.existsSync(reportPath)) {
+              return;
+            }
+            
+            const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+            
+            let body = '## ⌨️ Keyboard Navigation Test Report\n\n';
+            body += `**Tests:** ${report.total}\n`;
+            body += `**Passed:** ✅ ${report.passed}\n`;
+            body += `**Failed:** ❌ ${report.failed}\n\n`;
+            
+            const failures = report.tests.filter(t => !t.passed && !t.issues.some(i => i.includes('(test skipped)')));
+            
+            if (failures.length > 0) {
+              body += '### ❌ Failed Tests\n\n';
+              failures.forEach(test => {
+                body += `**${test.name}**\n`;
+                test.issues.forEach(issue => {
+                  body += `- ${issue}\n`;
+                });
+                body += '\n';
+              });
+            }
+            
+            if (report.failed === 0) {
+              body += '✅ **All keyboard navigation tests passed!**\n\n';
+              body += 'Site is fully keyboard accessible:\n';
+              body += '- ✅ Skip links work\n';
+              body += '- ✅ Tab order is logical\n';
+              body += '- ✅ Focus indicators visible\n';
+              body += '- ✅ Modal focus traps work\n';
+              body += '- ✅ Buttons keyboard-activatable\n';
+            }
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+
+      - name: Fail if tests failed
+        if: steps.keyboard_tests.outcome == 'failure'
+        run: |
+          echo "❌ Keyboard navigation tests failed"
+          exit 1

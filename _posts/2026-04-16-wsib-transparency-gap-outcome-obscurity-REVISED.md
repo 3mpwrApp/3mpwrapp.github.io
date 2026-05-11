@@ -3,10 +3,12 @@ layout: post
 title: "WSIAT Pattern Analysis: 63% Worker Victory Rate in Detected Outcomes and a 91.8% Metadata Gap"
 subtitle: "Advanced Pattern Analysis of 2,000 WSIAT Cases Detected 651 Outcomes | Worker Victory Rate: 63.1% in Detected Outcomes"
 date: 2026-04-20
-author: 3mpwrApp Research
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 categories: [WSIB, Research, Transparency]
 tags: [wsiat-analysis, outcome-extraction, worker-victories, statistical-analysis]
+excerpt: "Advanced pattern analysis of 2,000 WSIAT decisions detected 651 outcomes with 63.1% worker victory rate. 67.5% of decisions remain undetected due to CanLII metadata limitations."
 image: /assets/images/wsib-transparency-gap.png
+image_alt: "WSIAT outcome analysis chart showing 63% worker victory rate in detected appeals"
 toc: true
 ---
 

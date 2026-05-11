@@ -5,7 +5,7 @@ date: 2026-04-17
 categories: [research, advocacy, legislation]
 featured: true
 excerpt: "Analysis of 11,430 WSIAT tribunal decisions (2020-2026) provides empirical context for Bill 86's proposed workers' compensation reforms. Data shows at least 71 documented post-claim terminations (0.62%), 723 mental stress cases (6.33%), and systemic gaps in pain compensation. The bill did not advance past Second Reading in April 2025."
-author: 3mpwrApp
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 ---
 
 ## Executive Summary

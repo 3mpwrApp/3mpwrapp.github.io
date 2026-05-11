@@ -4,6 +4,7 @@ title: "Understanding Tribunal Outcomes: What Do They Mean?"
 category: Legal Basics
 tags: [tribunal-outcomes, legal-terms, appeals, WSIB, HRTO]
 excerpt: Plain-language guide to understanding tribunal decision outcomes—Allowed, Dismissed, Granted, Abandoned, and more.
+date: 2026-04-28
 last_updated: 2026-04-28
 ---
 

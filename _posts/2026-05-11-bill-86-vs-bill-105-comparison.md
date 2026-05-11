@@ -4,7 +4,7 @@ title: "Bill 86 vs Bill 105: Comparing Ontario Workers' Compensation Reform Prop
 date: 2026-05-11
 categories: [research, legislation, advocacy, comparison]
 tags: [bill-86, bill-105, WSIB, ontario, workers-compensation, comparison, meredith-act, POWER-Act]
-author: 3mpwrApp Research
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 excerpt: "Comprehensive comparison of Bill 86 (Meredith Act, failed April 2025) and Bill 105 (POWER Act, current Second Reading). Analysis of overlapping reforms, key differences, and implications for injured workers in Ontario."
 featured: true
 toc: true

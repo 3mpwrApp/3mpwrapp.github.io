@@ -4,6 +4,7 @@ title: "How Accurate Are Outcome Predictions? (79% AI Accuracy Explained)"
 category: Legal Basics
 tags: [ai-predictions, accuracy, tribunal-outcomes, methodology]
 excerpt: Understand how we achieve 79% accuracy predicting tribunal outcomes—and when you should trust vs. question the predictions.
+date: 2026-04-28
 last_updated: 2026-04-28
 ---
 

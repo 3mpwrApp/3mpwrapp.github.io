@@ -1,0 +1,87 @@
+<!-- VideoObject Structured Data for YouTube Embeds -->
+<!-- 
+Usage in posts:
+---
+youtube_id: "abc123xyz"
+video_title: "Video title"
+video_description: "Description"
+video_duration: "PT10M30S"  (ISO 8601 duration: 10 min 30 sec)
+video_upload_date: "2026-05-01"
+video_thumbnail: "/assets/images/video-thumb.jpg"  (optional, uses YouTube default if not set)
+---
+-->
+
+{% if page.youtube_id %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ page.video_title | default: page.title | escape }}",
+  "description": "{{ page.video_description | default: page.excerpt | default: page.description | escape }}",
+  "thumbnailUrl": [
+    "{% if page.video_thumbnail %}{{ page.video_thumbnail | absolute_url }}{% else %}https://img.youtube.com/vi/{{ page.youtube_id }}/maxresdefault.jpg{% endif %}",
+    "https://img.youtube.com/vi/{{ page.youtube_id }}/hqdefault.jpg"
+  ],
+  "uploadDate": "{{ page.video_upload_date | default: page.date | date_to_xmlschema }}",
+  {% if page.video_duration %}
+  "duration": "{{ page.video_duration }}",
+  {% endif %}
+  "contentUrl": "https://www.youtube.com/watch?v={{ page.youtube_id }}",
+  "embedUrl": "https://www.youtube.com/embed/{{ page.youtube_id }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "3mpwrApp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/assets/empwrapp-logo.png' | absolute_url }}",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "{{ page.author | default: '3mpwrApp' }}",
+    "url": "{{ site.url }}"
+  },
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": { "@type": "WatchAction" },
+    "userInteractionCount": 0
+  }
+}
+</script>
+{% endif %}
+
+{% if page.youtube_ids %}
+<!-- Multiple videos on one page -->
+{% for video in page.youtube_ids %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ video.title | escape }}",
+  "description": "{{ video.description | escape }}",
+  "thumbnailUrl": [
+    "{% if video.thumbnail %}{{ video.thumbnail | absolute_url }}{% else %}https://img.youtube.com/vi/{{ video.id }}/maxresdefault.jpg{% endif %}",
+    "https://img.youtube.com/vi/{{ video.id }}/hqdefault.jpg"
+  ],
+  "uploadDate": "{{ video.date | default: page.date | date_to_xmlschema }}",
+  {% if video.duration %}
+  "duration": "{{ video.duration }}",
+  {% endif %}
+  "contentUrl": "https://www.youtube.com/watch?v={{ video.id }}",
+  "embedUrl": "https://www.youtube.com/embed/{{ video.id }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "3mpwrApp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/assets/empwrapp-logo.png' | absolute_url }}",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+{% endfor %}
+{% endif %}

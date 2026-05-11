@@ -158,6 +158,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
+  "@id": "{{ page.url | absolute_url }}#accessibility-features",
+  "url": "{{ page.url | absolute_url }}",
   "name": "{{ page.title | escape }}",
   "description": "{{ page.description | default: 'Accessibility features and settings for 3mpwrApp' | escape }}",
   "accessibilityFeature": [

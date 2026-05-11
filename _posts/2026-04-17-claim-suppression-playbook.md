@@ -4,7 +4,7 @@ title: "BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns"
 date: 2026-04-17
 categories: [research, wsib, claim-suppression]
 tags: [employer-retaliation, claim-suppression, statistical-analysis, workers-rights, cross-provincial, pickering-precedent]
-author: 3mpwrApp
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 excerpt: "A BC investigation reported 'second-tier compensation systems' operating outside standard WorkSafeBC channels on megaprojects. We analyzed 11,430 WSIAT decisions to assess whether comparable reporting barriers may be present in Ontario."
 permalink: /blog/2026/04/17/claim-suppression-playbook/
 ---

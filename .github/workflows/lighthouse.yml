@@ -17,7 +17,7 @@ concurrency:
 jobs:
   lhci:
     runs-on: ubuntu-latest
-    continue-on-error: ${{ github.event_name != 'pull_request' }}
+    # Enforcement: Performance and accessibility checks must pass
     timeout-minutes: 20
     steps:
       - name: Checkout

@@ -1,0 +1,114 @@
+name: Theme Accessibility Testing
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'assets/css/**'
+      - '_layouts/**'
+      - '_includes/**'
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '30 8 * * 1'  # Weekly Monday 08:30 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write  # For updating baseline screenshots
+  pull-requests: write  # For PR comments
+
+concurrency:
+  group: theme-testing-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  theme-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps
+
+      - name: Run theme visual tests
+        id: theme_tests
+        run: |
+          node scripts/theme-visual-tests.js
+        continue-on-error: true
+        env:
+          SITE_URL: https://3mpwrapp.ca
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: theme-screenshots
+          path: |
+            reports/theme-screenshots/
+            reports/theme-diffs/
+            reports/theme-test-results.json
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const reportPath = 'reports/theme-test-results.json';
+            
+            if (!fs.existsSync(reportPath)) {
+              console.log('No report found');
+              return;
+            }
+            
+            const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+            
+            let body = '## 🎭 Theme Accessibility Test Report\n\n';
+            body += `**Tests:** ${report.total}\n`;
+            body += `**Passed:** ✅ ${report.passed}\n`;
+            body += `**Failed:** ❌ ${report.failed}\n`;
+            body += `**New baselines:** ℹ️ ${report.new}\n\n`;
+            
+            if (report.differences.length > 0) {
+              body += '### ⚠️ Visual Differences Detected\n\n';
+              report.differences.slice(0, 5).forEach(diff => {
+                if (diff.error) {
+                  body += `- **${diff.page || diff.test}** (${diff.theme}): ${diff.error}\n`;
+                } else {
+                  body += `- **${diff.page}** (${diff.theme}): ${diff.diffPercentage}% different\n`;
+                }
+              });
+              
+              if (report.differences.length > 5) {
+                body += `\n... and ${report.differences.length - 5} more\n`;
+              }
+              
+              body += '\n📸 Download the "theme-screenshots" artifact to view diffs\n';
+            }
+            
+            if (report.failed === 0) {
+              body += '\n✅ **All theme tests passed!** All modes render correctly.\n';
+            }
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+
+      - name: Fail if theme tests failed
+        if: steps.theme_tests.outcome == 'failure'
+        run: |
+          echo "❌ Theme accessibility tests failed"
+          exit 1

@@ -18,7 +18,7 @@ jobs:
     if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 20  # Reduced from 25
-    continue-on-error: ${{ github.event_name != 'pull_request' }}
+    # Enforcement: All accessibility checks must pass (no continue-on-error)
     env:
       AXE_MODE: quick
       SITE_URL: https://3mpwrapp.ca
@@ -66,7 +66,7 @@ jobs:
     if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 20  # Reduced from 30
-    continue-on-error: true
+    # Enforcement: Weekly full audits must pass
     env:
       AXE_MODE: full
       SITE_URL: https://3mpwrapp.ca
