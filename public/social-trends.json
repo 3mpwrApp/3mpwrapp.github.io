@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-10T13:46:16.999Z",
+  "lastUpdated": "2026-05-11T04:12:20.577Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16864,
+      "totalPosts": 16888,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-05-10T13:46:11.087Z"
+      "lastSeen": "2026-05-11T04:12:12.987Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16859,
+      "totalPosts": 16883,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-05-10T13:46:12.353Z"
+      "lastSeen": "2026-05-11T04:12:14.762Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16745,
+      "totalPosts": 16770,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-10T13:46:13.580Z"
+      "lastSeen": "2026-05-11T04:12:16.388Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16937,
+      "totalPosts": 16962,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-10T13:46:14.748Z"
+      "lastSeen": "2026-05-11T04:12:17.936Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16898,
+      "totalPosts": 16923,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-05-10T13:46:15.994Z"
+      "lastSeen": "2026-05-11T04:12:19.573Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "You’ve been told disabled people are the problem. You weren’t told who paid to put that idea in your head. \n\n#NDIS #NDISAustralia #DisabilityRights #MSWarrior #AusPol #VoteGREENS #Albo #Albanese",
-      "author": "twitter-exile.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "I was our district lead for MTSS muttered systems of support for student. I studied behavior supports for the last 10 years of my career. So much damage is done to kids needing best practice in behavior supports. #pinks #SPED #disabilityrights #autismspectrum #IDEA",
-      "author": "aliceknew.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Disability justice activist Leah Lakshmi Piepzna-Samarasinha reminds us that disabled communities hold vital wisdom about care, access, adaptation, and collective survival. May we follow disabled leadership and build a world where everyone can flourish in community. #DisabilityJustice #UU",
-      "author": "uua.org",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Really good read!\n\n“The text mode lie: why modern TUIs are a nightmare for accessibility” by Casey Reeves \n\nxogium.me/the-text-mod...\n\n#tui #a11y",
-      "author": "pawelgrzybek.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Josh Turek in the Iowa State Senate Democratic Primary debate said the first bill he'd introduce in the Senate would be to push a bill that would end subminimum wage for disabled people. #CripTheVote",
-      "author": "juliametraux.bsky.social",
-      "engagement": 112,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "#MTPol #Montana #DisabilityRights #Section504",
       "author": "gailwaldby.bsky.social",
@@ -338,16 +308,46 @@
       "author": "juliametraux.bsky.social",
       "engagement": 115,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#MTPol #Montana #DisabilityRights #Section504",
+      "author": "gailwaldby.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "A little #MazesForDazes gameplay vid for you today. I'm working through adding 🎮 controller support +  haptics, keeping #accessibility in mind.  #Inclusion matters, and everyone should be able to play. 🕹️🙂\n\n#IndieDev #GameDev",
+      "author": "mazes4dazes.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Accessibility Requirements at Project Gutenberg\n\nThe Title II of the Americans With Disabilities Act requires US government-funded institutions to meet digital accessibility standards. In response, PG has published VPAT-format accessibility reports here:\n\nwww.gutenberg.org/a11y/\n\n#Ebooks #a11y",
+      "author": "gutenberg.org",
+      "engagement": 18,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I appreciate this “Accessibility Best Practices for Your Project” guide from GitHub:\nopensource.guide/accessibilit...\n\nI would share it more readily if the links were underlined.\n\nSo I filed a PR to fix that:\ngithub.com/github/opens...\n\n#accessibility #a11y #OpenSource",
+      "author": "aardrian.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Josh Turek in the Iowa State Senate Democratic Primary debate said the first bill he'd introduce in the Senate would be to push a bill that would end subminimum wage for disabled people. #CripTheVote",
+      "author": "juliametraux.bsky.social",
+      "engagement": 115,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
-      "keyword": "accessibility",
-      "count": 44
-    },
-    {
       "keyword": "disabilityrights",
       "count": 43
+    },
+    {
+      "keyword": "accessibility",
+      "count": 42
     },
     {
       "keyword": "a11y",
@@ -359,7 +359,7 @@
     },
     {
       "keyword": "disabilityjustice",
-      "count": 24
+      "count": 23
     },
     {
       "keyword": "altcitizen",
@@ -382,12 +382,12 @@
       "count": 12
     },
     {
-      "keyword": "accessibility a11y",
+      "keyword": "nokings",
       "count": 11
     },
     {
-      "keyword": "nokings",
-      "count": 11
+      "keyword": "disability",
+      "count": 9
     },
     {
       "keyword": "disabilityrebellion",
@@ -402,23 +402,23 @@
       "count": 9
     },
     {
-      "keyword": "disability",
-      "count": 7
+      "keyword": "accessibility a11y",
+      "count": 8
+    },
+    {
+      "keyword": "disabilityjustice nico",
+      "count": 6
     },
     {
       "keyword": "a11yclub",
       "count": 6
     },
     {
-      "keyword": "inclusion",
+      "keyword": "ada",
       "count": 5
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 5
-    },
-    {
-      "keyword": "accessibility accessibility",
+      "keyword": "https accessibility",
       "count": 5
     }
   ]
