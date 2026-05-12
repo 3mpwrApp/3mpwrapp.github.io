@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Organization guard: keep new files out of root clutter and script root.
+node .husky/check-organization.js
+
 # Pre-commit hook for accessibility checks
 node .husky/pre-commit-checks.js
