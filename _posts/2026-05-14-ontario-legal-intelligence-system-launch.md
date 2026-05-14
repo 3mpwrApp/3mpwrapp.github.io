@@ -74,11 +74,19 @@ Improved from **16.8%** to **36.7% known outcomes** without a single API call.
 <details open>
 <summary><strong>Phase 2: Targeted Full-Text Extraction</strong> 🔄 IN PROGRESS</summary>
 
+<div style="background: #e8f5e9; color: #212121; padding: 15px; margin: 20px 0; border-left: 5px solid #4caf50;">
+
+**✅ ONSBT Complete: 499/500 Cases Extracted (99.8% success rate)**
+
+Extraction completed May 14, 2026 in 128.2 minutes. Outcome analysis in progress.
+
+</div>
+
 <div style="background: #fff3e0; color: #212121; padding: 15px; margin: 20px 0; border-left: 5px solid #ff9800;">
 
-**🔄 Currently Running: 1,150 High-Value Cases**
+**🔄 Next: ONWSIB, ONHRT, ONLRB, ONCA**
 
-Targeting worker injury cases with full decision text extraction.
+Continuing with remaining 650 high-value cases.
 
 </div>
 
@@ -89,16 +97,22 @@ Targeting worker injury cases with full decision text extraction.
 - 6-day extraction schedule
 
 **Extraction Schedule:**
-- Day 1: ONWSIAT (WSIAT Appeals) 500 cases (~2 hours)
-- Day 2: ONSBT (Social Benefits) 500 cases (~2 hours)
-- Day 3: ONWSIB (WSIB Initial) 200 cases (~50 min)
-- Day 4: ONHRT (Human Rights) 200 cases (~50 min)
-- Day 5: ONLRB (Labour Relations) 150 cases (~38 min)
-- Day 6: ONCA (Court of Appeal) 100 cases (~25 min)
+- Day 1: ONWSIAT (WSIAT Appeals) 500 cases (~2 hours) - 📅 Pending
+- Day 2: **ONSBT (Social Benefits) 500 cases** - ✅ **COMPLETE** (499/500, 128.2 min, May 14 2026)
+- Day 3: ONWSIB (WSIB Initial) 200 cases (~50 min) - 📅 Next
+- Day 4: ONHRT (Human Rights) 200 cases (~50 min) - 📅 Pending
+- Day 5: ONLRB (Labour Relations) 150 cases (~38 min) - 📅 Pending
+- Day 6: ONCA (Court of Appeal) 100 cases (~25 min) - 📅 Pending
 
-**Expected Results:**
-- +1,150 cases with identifiable outcomes
-- ~280 cases for ML training enhancement
+**Current Progress:**
+- **499/1,150 cases extracted (43.4%)**
+- ONSBT: 99.8% success rate, only 1 failed case
+- Duration: 128.2 minutes (2.14 hours)
+
+**Expected Final Results:**
+- +1,150 cases with full decision text
+- Enhanced outcome classification accuracy
+- ~280 additional cases for ML training
 
 </details>
 
@@ -376,8 +390,9 @@ This blog will update as each phase completes. Subscribe to our [RSS feed](/feed
 
 ---
 
-*Last Updated: May 14, 2026*  
-*Next Update: May 19, 2026 (Phase 2 completion expected)*
+*Last Updated: May 14, 2026 - 21:30 UTC*  
+*Latest: ONSBT Phase 2 extraction complete (499/500 cases, 128.2 min)*  
+*Next Update: ONWSIB extraction completion (expected May 15, 2026)*
 
 ---
 
