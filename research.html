@@ -73,7 +73,12 @@ description: Interactive visualizations and analysis of 230,000+ tribunal decisi
   }
   
   .info-box strong {
-    color: #004d99;
+    color: #003d7a;
+  }
+  
+  .info-box a {
+    color: #003d7a;
+    text-decoration: underline;
   }
   
   .section-box {
@@ -88,6 +93,10 @@ description: Interactive visualizations and analysis of 230,000+ tribunal decisi
     margin-top: 0;
     color: #1b5e20;
     font-size: 1.5rem;
+  }
+  
+  .section-box p {
+    color: #1b5e20;
   }
   
   .card-grid {
@@ -206,6 +215,11 @@ description: Interactive visualizations and analysis of 230,000+ tribunal decisi
       color: #9ecbff;
     }
     
+    .info-box a {
+      color: #9ecbff;
+      text-decoration: underline;
+    }
+    
     .section-box {
       background: #1a2e1a;
       border-color: #4caf50;
@@ -213,6 +227,10 @@ description: Interactive visualizations and analysis of 230,000+ tribunal decisi
     
     .section-box h2 {
       color: #81c784;
+    }
+    
+    .section-box p {
+      color: #e0e0e0;
     }
     
     .card {
@@ -241,6 +259,86 @@ description: Interactive visualizations and analysis of 230,000+ tribunal decisi
     }
   }
   
+  /* High Contrast Mode - Enhanced Readability */
+  @media (prefers-contrast: high) {
+    .research-hero {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .btn-primary {
+      background: #ffff00;
+      color: #000000;
+      border: 3px solid #000000;
+    }
+    
+    .btn-secondary {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .info-box {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .info-box strong,
+    .info-box a {
+      color: #ffff00;
+      font-weight: 700;
+    }
+    
+    .section-box {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .section-box h2,
+    .section-box p {
+      color: #ffffff;
+    }
+    
+    .card {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .card h3,
+    .card p,
+    .card li {
+      color: #ffffff;
+    }
+    
+    .card a {
+      color: #ffff00;
+      text-decoration: underline;
+    }
+    
+    .stat-box {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .methodology-section,
+    .visualization-card {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .badge {
+      background: #ffff00;
+      color: #000000;
+      border: 2px solid #000000;
+    }
+  }
+  
   @media (prefers-reduced-motion: reduce) {
     .visualization-card, .btn-primary, .btn-secondary {
       transition: none;
@@ -255,8 +353,8 @@ description: Interactive visualizations and analysis of 230,000+ tribunal decisi
 <div class="research-hero">
   <h1>We Analyzed 230,392 Records.<br>Here's What It Means for You.</h1>
   <p>
-    Workers win appeals when they know the patterns. Denials follow a playbook.
-    We turned four years of tribunal data into tools you can use right now.
+    People win appeals when they understand what's required and have the right evidence. Denials follow a playbook.
+    We turned four years of tribunal data into tools you can use right now — for injured workers, persons with disabilities, and anyone navigating these systems.
   </p>
   <div class="cta-buttons">
     <a href="#advocacy-tools" class="btn-primary">I Need Help Now</a>
@@ -274,7 +372,7 @@ description: Interactive visualizations and analysis of 230,000+ tribunal decisi
 
 <div id="advocacy-tools" class="section-box">
   <h2>Start Here If You Need Help</h2>
-  <p style="color: #33691e; font-size: 1.05rem; margin-bottom: 1.5rem;">
+  <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">
     Injured, denied, or helping someone who is? Go straight to the tools. Skip the data.
   </p>
   
@@ -314,26 +412,26 @@ description: Interactive visualizations and analysis of 230,000+ tribunal decisi
 </div>
 
 <div id="data-visualizations" class="section-box" style="border-color: #1565c0; background: #e8f0fe;">
-  <h2 style="color: #0d47a1;">Go Deeper Into the Data</h2>
-  <p style="color: #1565c0; font-size: 1.05rem; margin-bottom: 1.5rem;">
+  <h2 style="color: #004d99;">Go Deeper Into the Data</h2>
+  <p style="color: #004d99; font-size: 1.05rem; margin-bottom: 1.5rem;">
     Researchers, policy analysts, advocates with clients - the full dataset and methodology are below.
   </p>
   
   <div class="card-grid">
     <div class="card" style="border-left-color: #1976d2;">
-      <h3 style="color: #0d47a1;">Interactive Visualizations</h3>
+      <h3 style="color: #004d99;">Interactive Visualizations</h3>
       <p>5 live charts. Filter, zoom, explore 230,392 records yourself.</p>
       <a href="#visualizations" style="font-weight: 600;">View Charts</a>
     </div>
     
     <div class="card" style="border-left-color: #1976d2;">
-      <h3 style="color: #0d47a1;">Raw Data Downloads</h3>
+      <h3 style="color: #004d99;">Raw Data Downloads</h3>
       <p>122,488 Ontario tribunal decisions + 130,736 employer records. 100% open source. No paywalls.</p>
       <a href="/research-data-sources/" style="font-weight: 600;">Download Data</a>
     </div>
     
     <div class="card" style="border-left-color: #1976d2;">
-      <h3 style="color: #0d47a1;">Methodology and Statistical Methods</h3>
+      <h3 style="color: #004d99;">Methodology and Statistical Methods</h3>
       <p>Peer-reviewable methods. Confidence intervals. Limitations disclosed.</p>
       <a href="#methodology" style="font-weight: 600;">Read Methodology</a>
     </div>
