@@ -16,15 +16,17 @@ excerpt: "We're implementing a comprehensive data improvement system for all 6 O
 
 ## TL;DR
 
-We're building **Ontario's first comprehensive legal intelligence system** covering all 6 major workplace, human rights, and labour tribunals. Through a 3-phase extraction and machine learning process, we're transforming **83.2% unknown outcomes** into **70-80% known outcomes** — giving injured workers, persons with disabilities, and advocates the data they need to win appeals.
+### Turning Tribunal Decisions Into Actionable Insights
+
+We're building a comprehensive legal intelligence system covering Ontario's major workplace, human rights, and labour tribunals. Through a 4-phase extraction and machine learning process, we're transforming **83.2% unknown outcomes** into **70-80% known outcomes** — giving injured workers, persons with disabilities, and advocates the data they need to win appeals.
 
 **This is the template for the rest of Canada.**
 
 ---
 
-## The Problem: 85.8% Unknown Outcomes
+## The Problem: A Significant Data Gap
 
-When we analyzed **50,161 tribunal decisions** across Ontario (all 6 major tribunals), we discovered a catastrophic data gap:
+When we analyzed **50,161 tribunal decisions** across Ontario (all 6 major tribunals), we discovered a significant data gap:
 
 | Tribunal | Total Cases | Unknown % | Known % |
 |----------|-------------|-----------|---------|
@@ -48,27 +50,45 @@ When we analyzed **50,161 tribunal decisions** across Ontario (all 6 major tribu
 
 We're implementing a **4-phase data improvement system** that combines targeted extraction with machine learning classification:
 
-### **Phase 1: Pattern-Based ML Classification** ✅ COMPLETE
+<details open>
+<summary><strong>Phase 1: Pattern-Based ML Classification</strong> ✅ COMPLETE</summary>
+
+<div style="background: #e8f5e9; color: #212121; padding: 15px; margin: 20px 0; border-left: 5px solid #4caf50;">
+
+**✅ Milestone Achieved: 9,995 Cases Classified**
+
+Improved from **16.8%** to **36.7% known outcomes** without a single API call.
+
+</div>
 
 **What We Did:**
 - Analyzed existing metadata (keywords, case summaries, citations)
 - Used 30+ regex patterns to identify clear outcomes
 - Zero API calls required
 
-**Results:**
-- **9,995 cases classified** (19.9% of Ontario unknowns)
-- Improved from **16.8%** to **36.7% known outcomes**
+**Results by Tribunal:**
 - ONHRT: +48.0% | ONCA: +40.2% | ONLRB: +25.9% | ONWSIAT: +0.7% | ONSBT: +6.5%
 
-### **Phase 2: Targeted Full-Text Extraction** 🔄 IN PROGRESS
+</details>
+
+<details open>
+<summary><strong>Phase 2: Targeted Full-Text Extraction</strong> 🔄 IN PROGRESS</summary>
+
+<div style="background: #fff3e0; color: #212121; padding: 15px; margin: 20px 0; border-left: 5px solid #ff9800;">
+
+**🔄 Currently Running: 1,150 High-Value Cases**
+
+Targeting worker injury cases with full decision text extraction.
+
+</div>
 
 **What We're Doing:**
 - Extracting full decision text for **1,150 high-value cases**
 - Prioritizing: worker injury flags, recent decisions, injury keywords, legislation
 - 15-second delays between requests (CanLII API throttling)
-- 5-day extraction schedule
+- 6-day extraction schedule
 
-**Timeline:**
+**Extraction Schedule:**
 - Day 1: ONWSIAT (WSIAT Appeals) 500 cases (~2 hours)
 - Day 2: ONSBT (Social Benefits) 500 cases (~2 hours)
 - Day 3: ONWSIB (WSIB Initial) 200 cases (~50 min)
@@ -80,20 +100,45 @@ We're implementing a **4-phase data improvement system** that combines targeted 
 - +1,150 cases with identifiable outcomes
 - ~280 cases for ML training enhancement
 
-### **Phase 3: TF-IDF + Naive Bayes ML** 📅 NEXT
+</details>
+
+<details>
+<summary><strong>Phase 3: TF-IDF + Naive Bayes ML</strong> 📅 NEXT</summary>
+
+<div style="background: #e3f2fd; color: #212121; padding: 15px; margin: 20px 0; border-left: 5px solid #2196f3;">
+
+**📅 Coming Next: Machine Learning Classification**
+
+Expected to classify **+8,500 additional cases** using NLP.
+
+</div>
 
 **What's Coming:**
 - Train ML classifier on ~19,000 known outcomes
 - Use natural language processing on full decision text
 - 70% confidence threshold for final classifications
-- Expected: +8,500 cases classified
+- Target: **70-80% known outcomes** across all tribunals
 
-### **Phase 4: Manual Review + Validation** 📅 FINAL STAGE
+</details>
+
+<details>
+<summary><strong>Phase 4: Manual Review + Validation</strong> 📅 FINAL STAGE</summary>
+
+<div style="background: #f3e5f5; color: #212121; padding: 15px; margin: 20px 0; border-left: 5px solid #9c27b0;">
+
+**📅 Final Stage: Quality Assurance**
+
+Human review ensures classification accuracy before Canada-wide rollout.
+
+</div>
 
 **Quality Control:**
 - Human review of borderline ML classifications
 - Confidence score validation
 - Final data integrity checks
+- Ontario template finalization
+
+</details>
 
 ---
 
@@ -178,11 +223,14 @@ We're not hiding behind aggregated statistics. Every decision file shows:
 - Full text HTML (when extracted)
 - Keywords and legislation
 
-### **The Research Behind the Data**
+<details>
+<summary><strong>📚 The Research Behind the Data</strong> (Click to expand)</summary>
 
 This isn't just CanLII tribunal decisions. **Years of research** went into building this dataset:
 
-**WSIB Administrative Data (2012-2026):**
+<details>
+<summary><strong>WSIB Administrative Data (2012-2026)</strong></summary>
+
 - Fatality investigations: COVID-19, occupational disease, traumatic deaths
 - Lost-time claims and injury rates by industry, occupation, event type
 - Mental stress claims analysis
@@ -192,43 +240,69 @@ This isn't just CanLII tribunal decisions. **Years of research** went into build
 - Employer surveillance and compliance data (2014-2024)
 - Registered claims, allowed claims, and durations
 
-**Social Benefits Tribunal (SBT) Data (2012-2026):**
+</details>
+
+<details>
+<summary><strong>Social Benefits Tribunal (SBT) Data (2012-2026)</strong></summary>
+
 - 24 quarterly reports: Appeals received by issue type
 - 39 quarterly reports: Decisions issued with outcomes
 - Ontario social assistance recipient demographics
 - Characteristics by Census Metropolitan Area (CMA)
 
-**WSIAT Decision Data:**
+</details>
+
+<details>
+<summary><strong>WSIAT Decision Data</strong></summary>
+
 - Historical archive cross-referenced with CanLII
 - Quarterly outcome reports
 - Decision-level metadata extraction
 
-**Employer Compliance:**
+</details>
+
+<details>
+<summary><strong>Employer Compliance</strong></summary>
+
 - NEER and CAD7 rebate/surcharge data (2017-2020)
 - Workplaces covered and employment statistics
 - Fatal claims investigations tracking
 
+</details>
+
+---
+
 This is the foundation. Ontario's legal intelligence system isn't built on a single API — it's built on **exhaustive research** into every data source available, manually collected, cleaned, cross-referenced, and analyzed over years.
+
+</details>
 
 ---
 
 ## Timeline: When to Expect Updates
 
-| Date | Milestone | Impact |
-|------|-----------|--------|
-| **May 14, 2026** | Phase 1 Complete | +9,995 cases (16.8% → 36.7% known) |
-| **May 21, 2026** | Phase 2 Complete (Est.) | +1,150 cases (~39% known) |
-| **May 23, 2026** | Phase 3 Complete (Est.) | +8,500 cases (**70-80% known**) |
-| **May 26, 2026** | Phase 4 Complete (Est.) | Final validation, Ontario template ready |
-| **June 2026** | BC Expansion Start | Apply Ontario template to British Columbia |
-| **Q3 2026** | Alberta + Federal | Expand to western provinces |
-| **Q4 2026** | Canada-Wide Launch | All provinces covered |
-
 <div style="background: #fff3e0; color: #212121; padding: 15px; margin: 20px 0; border-left: 5px solid #ff9800;">
 
-**Note:** Timeline estimates assume no major API throttling issues. CanLII has ~1,000 requests/day limit with 15-second delays. We'll update this page as progress continues.
+**⚠️ Timeline Disclaimer**
+
+All dates are **projected estimates** and may shift depending on:
+- CanLII API availability and throttling limits (~1,000 requests/day)
+- Data quality and extraction complexity
+- Manual review requirements
+- Unexpected technical issues
+
+We'll update this page as progress continues. Subscribe to [RSS](/feed.xml) for real-time updates.
 
 </div>
+
+| Date | Milestone | Impact |
+|------|-----------|--------|
+| **May 14, 2026** | Phase 1 Complete ✅ | +9,995 cases (16.8% → 36.7% known) |
+| **May 21, 2026** | Phase 2 Target 🔄 | +1,150 cases (~39% known) |
+| **May 23, 2026** | Phase 3 Target 📅 | +8,500 cases (**70-80% known**) |
+| **May 26, 2026** | Phase 4 Target 📅 | Final validation, Ontario template ready |
+| **June 2026** | BC Expansion 📅 | Apply Ontario template to British Columbia |
+| **Q3 2026** | Alberta + Federal 📅 | Expand to western provinces |
+| **Q4 2026** | Canada-Wide Launch 📅 | All provinces covered |
 
 ---
 
