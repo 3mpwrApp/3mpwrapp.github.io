@@ -109,10 +109,27 @@ function extractOutcomeFromHTML(html) {
   return 'Unknown';
 }
 
+// Extract database ID from case_id (e.g., "2025onsbt4273" -> "onsbt")
+function extractDatabaseId(caseId) {
+  const tribunalCodes = ['onsbt', 'onwsib', 'onhrt', 'onlrb', 'onca', 'bcwcat', 'bchrt', 'bcest'];
+  for (const code of tribunalCodes) {
+    if (caseId.toLowerCase().includes(code)) {
+      return code;
+    }
+  }
+  return null;
+}
+
 // Fetch full text from CanLII API
 function fetchFullText(caseId) {
   return new Promise((resolve, reject) => {
-    const url = `https://api.canlii.org/v1/caseBrowse/en/${caseId}/?api_key=${CANLII_API_KEY}`;
+    const databaseId = extractDatabaseId(caseId);
+    if (!databaseId) {
+      return reject(new Error(`Could not extract database ID from case_id: ${caseId}`));
+    }
+    
+    // Correct CanLII API endpoint format: /v1/caseBrowse/en/{databaseId}/{caseId}/
+    const url = `https://api.canlii.org/v1/caseBrowse/en/${databaseId}/${caseId}/?api_key=${CANLII_API_KEY}`;
     
     https.get(url, (res) => {
       let data = '';
