@@ -10,14 +10,14 @@ https://www.3mpwrapp.ca/* https://3mpwrapp.ca/:splat 301!
 # Allow Jekyll-generated blog posts and pages to work
 # Blog posts (Jekyll permalinks)
 /20*/* 200!
-# Static pages
-/about /about.html 200
-/research /research.html 200
-/privacy /privacy.html 200
-/security /security.html 200
-/contact /contact.html 200
-/faq /faq.html 200
-/accessibility /accessibility.html 200
+# Static pages (Jekyll pretty URLs generate as directories)
+/about /about/ 200
+/research /research/ 200
+/privacy /privacy/ 200
+/security /security/ 200
+/contact /contact/ 200
+/faq /faq/ 200
+/accessibility /accessibility/ 200
 
 # SPA fallback for remaining routes (lower priority)
 /* /index.html 200

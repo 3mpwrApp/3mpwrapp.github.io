@@ -22,8 +22,6 @@ excerpt: "Analysis of 5,034 Ontario Court of Appeal decisions (2020-2026) reveal
 
 ## What ONCA Is (And Isn't)
 
-## What ONCA Is (And Isn't)
-
 **ONCA = Ontario Court of Appeal**
 
 The Ontario Court of Appeal is **not** a tribunal success-rate dataset. It's a **precedent and procedure dataset**.
@@ -80,8 +78,6 @@ The Ontario Court of Appeal is **not** a tribunal success-rate dataset. It's a *
 **Zero direct workplace injury appeals** found in 5,034 decisions analyzed. One case involving an occupational therapy company (*Sokoloff v. Tru-Path*, 2020 ONCA 730) appeared in keyword searches but was actually a defamation dispute, not a WSIAT appeal. This confirms ONCA is a **precedent layer**, not a workplace injury appeals database.
 
 </div>
-
-### Year-by-Year Volume
 
 ### Year-by-Year Volume
 
@@ -242,8 +238,6 @@ While **zero direct workplace injury appeals** (WSIAT → Divisional Court → O
 
 ## What This Means 
 
-## What This Means
-
 ### 🎯 When to Use ONCA Data
 
 **✅ Use ONCA when you need:**
@@ -385,7 +379,6 @@ ONCA precedents become useful when:
 
 ---
 
-## Related Research & Resources
 ## Related Research & Resources
 
 ### 📚 ONCA-Specific Resources
