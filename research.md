@@ -2,6 +2,7 @@
 layout: default
 title: Research
 description: Interactive data visualizations and research tools analyzing tribunal decisions, denial patterns, and workers' rights across Canada. Open source, transparent methodology.
+permalink: /research.html
 ---
 
 <style>
