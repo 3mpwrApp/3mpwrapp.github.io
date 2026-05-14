@@ -282,7 +282,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -294,6 +294,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:01.289Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -417,7 +422,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -429,6 +434,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.293Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -3198,7 +3208,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3210,6 +3220,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:01.302Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -3252,7 +3267,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3264,6 +3279,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:01.303Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -5844,7 +5864,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5856,6 +5876,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:01.329Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -7194,7 +7219,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "No Jurisdiction",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7206,6 +7231,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:01.332Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -12864,7 +12894,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12876,6 +12906,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.341Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -13323,7 +13358,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13335,6 +13370,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:01.342Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -15321,7 +15361,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15333,6 +15373,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:01.344Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -16077,7 +16122,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16089,6 +16134,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:01.345Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -17373,7 +17423,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17385,6 +17435,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.346Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -17454,7 +17509,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17466,6 +17521,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:01.346Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -20397,7 +20457,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20409,6 +20469,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:01.350Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -20694,7 +20759,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20706,6 +20771,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.350Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -20721,7 +20791,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Application Deficiency",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20733,6 +20803,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 80,
+      "classified_at": "2026-05-14T20:04:01.350Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -22584,7 +22659,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -22596,6 +22671,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.353Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -24960,7 +25040,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -24972,6 +25052,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:01.357Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -25257,7 +25342,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -25269,6 +25354,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:01.357Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -26013,7 +26103,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -26025,6 +26115,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:01.358Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -26958,7 +27053,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -26970,6 +27065,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.359Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -27282,7 +27382,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -27294,6 +27394,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.360Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -28497,7 +28602,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -28509,6 +28614,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.361Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -29388,7 +29498,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -29400,6 +29510,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.362Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -30846,7 +30961,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -30858,6 +30973,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.363Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -31521,7 +31641,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -31533,6 +31653,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.364Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -32304,7 +32429,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -32316,6 +32441,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.365Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -32520,7 +32650,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -32532,6 +32662,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:01.366Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -35220,7 +35355,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -35232,6 +35367,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.370Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -35301,7 +35441,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -35313,6 +35453,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.370Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -37866,7 +38011,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -37878,6 +38023,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.375Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -37974,7 +38124,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -37986,6 +38136,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:01.375Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -38109,7 +38264,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -38121,6 +38276,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.375Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -38757,7 +38917,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -38769,6 +38929,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:01.376Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -41538,7 +41703,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -41550,6 +41715,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:01.380Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -42564,7 +42734,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -42576,6 +42746,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:01.381Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -45183,7 +45358,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -45195,6 +45370,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.384Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -48639,7 +48819,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -48651,6 +48831,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.389Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -49800,7 +49985,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -49812,6 +49997,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:01.390Z",
+      "method": "pattern_based_ml"
     }
   },
   {

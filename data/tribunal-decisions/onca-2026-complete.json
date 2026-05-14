@@ -608,7 +608,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -620,6 +620,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.995Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -1175,7 +1180,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1187,6 +1192,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.995Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -1310,7 +1320,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1322,6 +1332,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.995Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -1391,7 +1406,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1403,6 +1418,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.995Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -1823,7 +1843,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1835,6 +1855,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.995Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -1958,7 +1983,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1970,6 +1995,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.996Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -2068,7 +2098,7 @@
       "Courts of Justice Act, s. 7"
     ],
     "legislation_count": 1,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2080,6 +2110,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": true
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.996Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -2095,7 +2130,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2107,6 +2142,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:05.996Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -2179,7 +2219,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2191,6 +2231,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.996Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -2287,7 +2332,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2299,6 +2344,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.996Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -2746,7 +2796,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2758,6 +2808,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.996Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -2935,7 +2990,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2947,6 +3002,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.996Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -2989,7 +3049,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3001,6 +3061,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.996Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -3639,7 +3704,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3651,6 +3716,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.997Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -3774,7 +3844,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3786,6 +3856,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.997Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -4017,7 +4092,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4029,6 +4104,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.997Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -4181,7 +4261,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4193,6 +4273,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.997Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -4507,7 +4592,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4519,6 +4604,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.997Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -4642,7 +4732,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4654,6 +4744,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.998Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -4723,7 +4818,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4735,6 +4830,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.998Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -4806,7 +4906,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4818,6 +4918,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.998Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -4914,7 +5019,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4926,6 +5031,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:05.998Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -5242,7 +5352,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5254,6 +5364,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.998Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -5350,7 +5465,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5362,6 +5477,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:05.998Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -5568,7 +5688,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5580,6 +5700,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.998Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -5813,7 +5938,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5825,6 +5950,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.998Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -5894,7 +6024,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5906,6 +6036,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.998Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -6056,7 +6191,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6068,6 +6203,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.999Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -6220,7 +6360,7 @@
       "Courts of Justice Act, s. 110"
     ],
     "legislation_count": 1,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6232,6 +6372,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": true
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.999Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -6276,7 +6421,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6288,6 +6433,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.999Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -6386,7 +6536,7 @@
       "Courts of Justice Act, s. 7"
     ],
     "legislation_count": 1,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6398,6 +6548,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": true
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.999Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -6413,7 +6568,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6425,6 +6580,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.999Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -6440,7 +6600,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6452,6 +6612,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.999Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -6548,7 +6713,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6560,6 +6725,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:05.999Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -6820,7 +6990,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6832,6 +7002,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 60,
+      "classified_at": "2026-05-14T20:04:06.000Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -7090,7 +7265,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7102,6 +7277,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.000Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -7252,7 +7432,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7264,6 +7444,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.000Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -7279,7 +7464,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7291,6 +7476,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.000Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -7661,7 +7851,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7673,6 +7863,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.000Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -7688,7 +7883,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7700,6 +7895,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.001Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -7823,7 +8023,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7835,6 +8035,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.001Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -8014,7 +8219,7 @@
       "Courts of Justice Act, s. 140"
     ],
     "legislation_count": 1,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8026,6 +8231,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": true
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.001Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -8041,7 +8251,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8053,6 +8263,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.002Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -8176,7 +8391,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8188,6 +8403,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.002Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -8203,7 +8423,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "No Jurisdiction",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8215,6 +8435,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.002Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -8257,7 +8482,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8269,6 +8494,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 100,
+      "classified_at": "2026-05-14T20:04:06.002Z",
+      "method": "pattern_based_ml"
     }
   },
   {
@@ -8554,7 +8784,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8566,6 +8796,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:06.002Z",
+      "method": "pattern_based_ml"
     }
   },
   {

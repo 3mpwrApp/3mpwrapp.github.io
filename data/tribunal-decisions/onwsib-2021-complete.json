@@ -215,7 +215,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "outcome_confidence": "low",
     "outcome_evidence": "no-pattern-match",
     "has_disability_ground": false,
@@ -229,6 +229,11 @@
       "has_keywords": false,
       "has_outcome": false,
       "has_legislation": false
+    },
+    "ml_classification": {
+      "confidence": 70,
+      "classified_at": "2026-05-14T20:04:06.027Z",
+      "method": "pattern_based_ml"
     }
   },
   {
