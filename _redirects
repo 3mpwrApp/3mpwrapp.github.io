@@ -12,7 +12,9 @@ https://www.3mpwrapp.ca/* https://3mpwrapp.ca/:splat 301!
 /20*/* 200!
 # Static pages
 /about /about.html 200
+/research /research.html 200
 /privacy /privacy.html 200
+/security /security.html 200
 /contact /contact.html 200
 /faq /faq.html 200
 /accessibility /accessibility.html 200
