@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribunal Navigator: Which Ontario System Should I File In? | 3mpwrApp</title>
+    <meta name="description" content="Answer 5 questions to find which Ontario tribunal(s) to file your disability or workplace injury claim with: WSIAT, ONSBT, HRTO, ONLRB, LTB, LAT, or others">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1a1a1a;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: #e0e7ff;
+            margin-bottom: 20px;
+        }
+        
+        .warning-box {
+            background: rgba(255, 87, 51, 0.95);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        
+        .warning-box h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box p {
+            line-height: 1.6;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        
+        .question-card {
+            display: none;
+        }
+        
+        .question-card.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .question-number {
+            color: #667eea;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .question-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .option-btn {
+            background: #f5f5f5;
+            border: 3px solid #e0e0e0;
+            padding: 18px 24px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .option-btn:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: translateX(8px);
+        }
+        
+        .option-btn .emoji {
+            font-size: 1.5rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4ade80 0%, #22c55e 100%);
+            border-radius: 10px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+        
+        .results-card {
+            display: none;
+        }
+        
+        .results-card.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .results-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .results-header h2 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .tribunal-recommendation {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .tribunal-recommendation h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tribunal-recommendation .priority {
+            background: #22c55e;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        
+        .tribunal-recommendation .secondary {
+            background: #f59e0b;
+        }
+        
+        .tribunal-recommendation p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        .tribunal-recommendation ul {
+            margin: 10px 0 10px 20px;
+            line-height: 1.8;
+        }
+        
+        .tribunal-recommendation .deadline {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        
+        .strategy-box {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .strategy-box h4 {
+            color: #92400e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .strategy-box p {
+            color: #78350f;
+            line-height: 1.6;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .action-btn {
+            flex: 1;
+            min-width: 200px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .action-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+        
+        .action-btn.secondary {
+            background: #64748b;
+        }
+        
+        .action-btn.secondary:hover {
+            background: #475569;
+        }
+        
+        .back-btn {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        .disclaimer {
+            background: rgba(255,255,255,0.95);
+            color: #666;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .disclaimer strong {
+            color: #d32f2f;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .question-text {
+                font-size: 1.2rem;
+            }
+            
+            .option-btn {
+                padding: 15px 18px;
+                font-size: 1rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .action-btn {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧭 Tribunal Navigator</h1>
+            <p class="subtitle">Find Which Ontario System(s) to File Your Claim In</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+        </div>
+        
+        <div class="warning-box">
+            <h2>⚠️ Important: You May Need to File in MULTIPLE Tribunals</h2>
+            <p>Ontario's disability and worker justice systems are designed to shift costs between agencies. <strong>The same injury/disability often requires filing in 3-5 different tribunals simultaneously.</strong> This tool will recommend ALL systems you should consider.</p>
+        </div>
+        
+        <!-- Question 1 -->
+        <div class="card question-card active" id="q1">
+            <div class="question-number">Question 1 of 5</div>
+            <div class="question-text">Was your disability/injury caused by or related to work?</div>
+            <div class="options">
+                <button class="option-btn" onclick="answer('q1', 'workplace_yes')">
+                    <span class="emoji">🏭</span>
+                    <span>Yes - Workplace injury or illness</span>
+                </button>
+                <button class="option-btn" onclick="answer('q1', 'workplace_no')">
+                    <span class="emoji">🏠</span>
+                    <span>No - Not work-related</span>
+                </button>
+                <button class="option-btn" onclick="answer('q1', 'workplace_maybe')">
+                    <span class="emoji">❓</span>
+                    <span>Unsure - Work may have contributed</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="card question-card" id="q2">
+            <button class="back-btn" onclick="goBack('q2', 'q1')">← Back</button>
+            <div class="question-number">Question 2 of 5</div>
+            <div class="question-text">What happened AFTER the injury/disability?</div>
+            <div class="options">
+                <button class="option-btn" onclick="answer('q2', 'fired')">
+                    <span class="emoji">🚪</span>
+                    <span>Fired or forced to quit</span>
+                </button>
+                <button class="option-btn" onclick="answer('q2', 'benefits_denied')">
+                    <span class="emoji">❌</span>
+                    <span>WSIB/ODSP/Insurance denied benefits</span>
+                </button>
+                <button class="option-btn" onclick="answer('q2', 'no_accommodation')">
+                    <span class="emoji">🚫</span>
+                    <span>Employer refused accommodation</span>
+                </button>
+                <button class="option-btn" onclick="answer('q2', 'still_working')">
+                    <span class="emoji">💼</span>
+                    <span>Still employed but struggling</span>
+                </button>
+                <button class="option-btn" onclick="answer('q2', 'cant_work')">
+                    <span class="emoji">😔</span>
+                    <span>Can't work, no income</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="card question-card" id="q3">
+            <button class="back-btn" onclick="goBack('q3', 'q2')">← Back</button>
+            <div class="question-number">Question 3 of 5</div>
+            <div class="question-text">Are you in a union?</div>
+            <div class="options">
+                <button class="option-btn" onclick="answer('q3', 'union_yes')">
+                    <span class="emoji">👥</span>
+                    <span>Yes - Unionized workplace</span>
+                </button>
+                <button class="option-btn" onclick="answer('q3', 'union_no')">
+                    <span class="emoji">🙅</span>
+                    <span>No - Non-union</span>
+                </button>
+                <button class="option-btn" onclick="answer('q3', 'union_refused')">
+                    <span class="emoji">😡</span>
+                    <span>Yes, but union won't help/file grievance</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Question 4 -->
+        <div class="card question-card" id="q4">
+            <button class="back-btn" onclick="goBack('q4', 'q3')">← Back</button>
+            <div class="question-number">Question 4 of 5</div>
+            <div class="question-text">Are you facing housing/financial crisis due to benefit loss?</div>
+            <div class="options">
+                <button class="option-btn" onclick="answer('q4', 'housing_yes')">
+                    <span class="emoji">🏚️</span>
+                    <span>Yes - Eviction notice or rent arrears</span>
+                </button>
+                <button class="option-btn" onclick="answer('q4', 'housing_soon')">
+                    <span class="emoji">⏰</span>
+                    <span>Not yet, but worried about rent</span>
+                </button>
+                <button class="option-btn" onclick="answer('q4', 'housing_no')">
+                    <span class="emoji">✅</span>
+                    <span>No - Housing is stable</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Question 5 -->
+        <div class="card question-card" id="q5">
+            <button class="back-btn" onclick="goBack('q5', 'q4')">← Back</button>
+            <div class="question-number">Question 5 of 5</div>
+            <div class="question-text">Was there a motor vehicle accident involved?</div>
+            <div class="options">
+                <button class="option-btn" onclick="answer('q5', 'mva_yes')">
+                    <span class="emoji">🚗</span>
+                    <span>Yes - Car/truck accident</span>
+                </button>
+                <button class="option-btn" onclick="answer('q5', 'mva_work')">
+                    <span class="emoji">🚚</span>
+                    <span>Yes - Accident happened during work</span>
+                </button>
+                <button class="option-btn" onclick="answer('q5', 'violence')">
+                    <span class="emoji">⚠️</span>
+                    <span>No, but workplace violence/assault</span>
+                </button>
+                <button class="option-btn" onclick="answer('q5', 'mva_no')">
+                    <span class="emoji">❌</span>
+                    <span>No motor vehicle accident</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Results -->
+        <div class="card results-card" id="results">
+            <div class="results-header">
+                <h2>📋 Your Recommended Filing Strategy</h2>
+                <p style="color: #666; margin-top: 10px;">Based on your answers, here's which tribunal(s) you should file in:</p>
+            </div>
+            
+            <div id="recommendations"></div>
+            
+            <div class="strategy-box">
+                <h3>💡 Multi-Tribunal Strategy</h3>
+                <p id="strategy-text"></p>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="https://3mpwrapp.ca/cross-tribunal-strategy-guide.html" class="action-btn">
+                    📖 Read Full Strategy Guide
+                </a>
+                <a href="https://3mpwrapp.ca/tribunal-overlap-network.html" class="action-btn secondary">
+                    🕸️ View Tribunal Network
+                </a>
+                <button class="action-btn secondary" onclick="restart()">
+                    🔄 Start Over
+                </button>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>⚖️ Legal Disclaimer:</strong> This tool provides general information only and does not constitute legal advice. Tribunal filing deadlines, jurisdictional rules, and strategic considerations vary by case. Consider consulting a lawyer, paralegal, or legal clinic (Community Legal Clinic, Injured Workers' Community Legal Clinic, ARCH Disability Law Centre) for your specific situation. <strong>Deadlines are strict</strong> - some tribunals require filing within 6 months to 1 year of the incident.
+        </div>
+    </div>
+    
+    <script>
+        const answers = {};
+        let currentQuestion = 1;
+        const totalQuestions = 5;
+        
+        function answer(questionId, value) {
+            answers[questionId] = value;
+            currentQuestion++;
+            
+            if (currentQuestion <= totalQuestions) {
+                showQuestion(`q${currentQuestion}`);
+                updateProgress();
+            } else {
+                showResults();
+            }
+        }
+        
+        function showQuestion(questionId) {
+            document.querySelectorAll('.question-card').forEach(q => q.classList.remove('active'));
+            document.getElementById(questionId).classList.add('active');
+        }
+        
+        function goBack(currentId, previousId) {
+            currentQuestion--;
+            delete answers[currentId];
+            showQuestion(previousId);
+            updateProgress();
+        }
+        
+        function updateProgress() {
+            const progress = ((currentQuestion - 1) / totalQuestions) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+        }
+        
+        function showResults() {
+            updateProgress();
+            document.getElementById('progress').style.width = '100%';
+            document.querySelectorAll('.question-card').forEach(q => q.classList.remove('active'));
+            document.getElementById('results').classList.add('active');
+            
+            const recommendations = generateRecommendations();
+            document.getElementById('recommendations').innerHTML = recommendations.html;
+            document.getElementById('strategy-text').innerHTML = recommendations.strategy;
+        }
+        
+        function generateRecommendations() {
+            const tribunals = [];
+            let strategy = '';
+            
+            // Analyze answers and build recommendations
+            const isWorkplace = answers.q1 === 'workplace_yes' || answers.q1 === 'workplace_maybe';
+            const wasFired = answers.q2 === 'fired';
+            const benefitsDenied = answers.q2 === 'benefits_denied';
+            const noAccommodation = answers.q2 === 'no_accommodation';
+            const cantWork = answers.q2 === 'cant_work';
+            const hasUnion = answers.q3 === 'union_yes' || answers.q3 === 'union_refused';
+            const unionRefused = answers.q3 === 'union_refused';
+            const housingCrisis = answers.q4 === 'housing_yes';
+            const hasMVA = answers.q5 === 'mva_yes' || answers.q5 === 'mva_work';
+            const mvaAtWork = answers.q5 === 'mva_work';
+            const hasViolence = answers.q5 === 'violence';
+            
+            // WSIAT - Workplace injury tribunal
+            if (isWorkplace && !hasMVA) {
+                tribunals.push({
+                    name: 'WSIAT (Workplace Safety Insurance Appeals Tribunal)',
+                    priority: 'PRIMARY',
+                    why: 'Your injury is work-related. WSIAT hears appeals of WSIB workplace injury denials.',
+                    what: [
+                        'Medical benefits (treatment, medications, equipment)',
+                        'Wage replacement (Loss of Earnings benefits)',
+                        'Permanent impairment awards',
+                        'Future Economic Loss (if can\'t return to pre-injury work)'
+                    ],
+                    deadline: '⏰ CRITICAL: File WSIB claim within 6 months of injury. Appeal WSIB denial to WSIAT within 6 months of denial.',
+                    link: 'https://www.wsiat.on.ca/'
+                });
+            }
+            
+            // ONSBT - Disability benefits
+            if (cantWork || benefitsDenied || (isWorkplace && !hasMVA)) {
+                tribunals.push({
+                    name: 'ONSBT (Ontario Social Benefits Tribunal)',
+                    priority: isWorkplace ? 'SECONDARY' : 'PRIMARY',
+                    why: cantWork ? 'You can\'t work due to disability. ONSBT hears ODSP (Ontario Disability Support Program) appeals.' : 'Benefits were denied. You may be eligible for ODSP if disability is "severe and prolonged".',
+                    what: [
+                        'ODSP monthly benefits (~$1,308/month + additional for dependents)',
+                        'Prescription drug coverage',
+                        'Dental/vision benefits',
+                        'Special diet allowance'
+                    ],
+                    deadline: '⏰ Appeal ODSP denial within 30 days. Request extension if disability prevented timely appeal.',
+                    link: 'https://www.ontario.ca/page/social-benefits-tribunal'
+                });
+            }
+            
+            // HRTO - Human rights / discrimination
+            if (wasFired || noAccommodation) {
+                tribunals.push({
+                    name: 'HRTO (Human Rights Tribunal of Ontario)',
+                    priority: 'PRIMARY',
+                    why: wasFired ? 'You were fired after injury/disability. HRTO hears disability discrimination claims including wrongful termination and failure to accommodate.' : 'Employer refused accommodation. HRTO enforces duty to accommodate to point of undue hardship.',
+                    what: [
+                        'Reinstatement to employment',
+                        'Lost wages and benefits',
+                        'Damages for injury to dignity ($5,000-$50,000+)',
+                        'Order employer to implement accommodation'
+                    ],
+                    deadline: '⏰ File within 1 year of discrimination. Shorter if collective agreement requires grievance first.',
+                    link: 'https://www.sjto.gov.on.ca/hrto/'
+                });
+            }
+            
+            // ONLRB - Union grievances
+            if (hasUnion && (wasFired || noAccommodation)) {
+                tribunals.push({
+                    name: 'ONLRB (Ontario Labour Relations Board)',
+                    priority: unionRefused ? 'PRIMARY' : 'SECONDARY',
+                    why: unionRefused ? 'Union refused to file grievance. ONLRB hears "duty of fair representation" complaints when union fails to represent member.' : 'You\'re unionized. File grievance for wrongful termination/failure to accommodate through union.',
+                    what: [
+                        'Reinstatement to employment',
+                        'Back pay and benefits',
+                        'Order union to process grievance (if duty of fair rep violated)',
+                        'Faster process than HRTO if union cooperates'
+                    ],
+                    deadline: '⏰ Check collective agreement timeline (often 10-30 days to file grievance). File duty of fair rep complaint within 6 months.',
+                    link: 'https://www.olrb.gov.on.ca/'
+                });
+            }
+            
+            // LTB - Housing / eviction
+            if (housingCrisis) {
+                tribunals.push({
+                    name: 'LTB (Landlord and Tenant Board)',
+                    priority: 'URGENT',
+                    why: 'You\'re facing eviction. LTB can delay/prevent eviction if rent arrears caused by benefit loss or disability.',
+                    what: [
+                        'Delay eviction while benefit appeals pending',
+                        'Payment plan for rent arrears',
+                        'Accommodation for disability (if behavior caused rent issues)',
+                        'Dispute landlord\'s eviction application'
+                    ],
+                    deadline: '⏰ URGENT: Respond to eviction notice within timelines on notice (often 10-14 days). File tenant application within 1 year of issue.',
+                    link: 'https://tribunalsontario.ca/ltb/'
+                });
+            }
+            
+            // LAT - Auto insurance
+            if (hasMVA) {
+                tribunals.push({
+                    name: 'LAT (License Appeal Tribunal - Automobile Accident Benefits)',
+                    priority: mvaAtWork ? 'SECONDARY' : 'PRIMARY',
+                    why: mvaAtWork ? 'Motor vehicle accident during work. Both WSIB and auto insurance may cover - file BOTH to avoid jurisdictional gaps.' : 'Motor vehicle accident. LAT hears auto insurance benefit disputes.',
+                    what: [
+                        'Income replacement benefits',
+                        'Medical/rehabilitation benefits',
+                        'Attendant care',
+                        'Catastrophic impairment determination'
+                    ],
+                    deadline: '⏰ Apply to auto insurer immediately. File LAT appeal within 2 years of denial.',
+                    link: 'https://tribunalsontario.ca/lat/'
+                });
+            }
+            
+            // CICB - Workplace violence
+            if (hasViolence) {
+                tribunals.push({
+                    name: 'CICB (Criminal Injuries Compensation Board)',
+                    priority: 'SECONDARY',
+                    why: 'Workplace violence/assault. CICB compensates victims of violent crimes including workplace assaults.',
+                    what: [
+                        'Lump sum compensation for injuries',
+                        'Pain and suffering damages',
+                        'Lost income compensation',
+                        'Can file BOTH CICB and WSIB for same incident'
+                    ],
+                    deadline: '⏰ File within 2 years of crime. Apply for extension if disability prevented timely filing.',
+                    link: 'https://www.attorneygeneral.jus.gov.on.ca/english/ovss/cicb.php'
+                });
+            }
+            
+            // Generate strategy recommendation
+            if (tribunals.length >= 3) {
+                strategy = `<strong>You should file in ${tribunals.length} tribunals SIMULTANEOUSLY.</strong> This is not "double-dipping" - each tribunal covers different harms. Filing simultaneously prevents statute of limitations issues and shows the pattern of systemic denial. Use the same medical evidence across all applications. Document everything with dates/emails to prove coordination between systems.`;
+            } else if (tribunals.length === 2) {
+                strategy = `<strong>File in both tribunals.</strong> If one is marked "PRIMARY", file there first and use that decision to strengthen your second claim. If both are "PRIMARY", file simultaneously to avoid missing deadlines.`;
+            } else {
+                strategy = `<strong>Focus on this tribunal first.</strong> If denied, consider whether other systems may also have jurisdiction over your case. Read the full Cross-Tribunal Strategy Guide to identify all options.`;
+            }
+            
+            // Build HTML
+            let html = '';
+            tribunals.forEach(t => {
+                html += `
+                    <div class="tribunal-recommendation">
+                        <h3>
+                            ${t.name}
+                            <span class="priority ${t.priority === 'SECONDARY' || t.priority === 'URGENT' ? 'secondary' : ''}">${t.priority}</span>
+                        </h3>
+                        <p><strong>Why File Here:</strong> ${t.why}</p>
+                        <p><strong>What You Can Get:</strong></p>
+                        <ul>
+                            ${t.what.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                        <div class="deadline">${t.deadline}</div>
+                        <p style="margin-top: 10px;"><a href="${t.link}" style="color: white; text-decoration: underline;">Visit ${t.name.split(' ')[0]} Website →</a></p>
+                    </div>
+                `;
+            });
+            
+            if (tribunals.length === 0) {
+                html = `
+                    <div class="tribunal-recommendation">
+                        <h3>📞 Consult Legal Advice</h3>
+                        <p>Based on your answers, your situation may not fit standard tribunal pathways, or you may have options not covered by this tool. Contact a community legal clinic for free consultation:</p>
+                        <ul>
+                            <li><strong>Community Legal Clinics:</strong> <a href="https://www.legalaid.on.ca/" style="color: white;">Legal Aid Ontario Clinic Finder</a></li>
+                            <li><strong>ARCH Disability Law Centre:</strong> 1-866-482-2724 (specialized disability rights)</li>
+                            <li><strong>Injured Workers' Clinics:</strong> Toronto, Hamilton, Ottawa, London</li>
+                        </ul>
+                    </div>
+                `;
+                strategy = 'Your situation is unique. Legal clinics can provide free case-specific advice on which tribunal(s) may have jurisdiction.';
+            }
+            
+            return { html, strategy };
+        }
+        
+        function restart() {
+            Object.keys(answers).forEach(key => delete answers[key]);
+            currentQuestion = 1;
+            updateProgress();
+            document.getElementById('results').classList.remove('active');
+            showQuestion('q1');
+        }
+    </script>
+</body>
+</html>

@@ -8,6 +8,7 @@ author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/
 excerpt: "We analyzed 11,430 WSIB tribunal decisions from 2020-2026 using statistical methods. FACTS: 43.9% (95% CI: 42.3-45.6%) of 2024 decisions are missing from the public record (1,545 cases). Reconsideration adds about 1.5 years of delay. 20% (95% CI: 17.3-22.7%) of knee injuries cite 'pre-existing' vs 13.3% (95% CI: 12.7-13.9%) baseline. INTERPRETATION: Patterns are consistent with system-level process variation. Alternative explanations acknowledged. Full methodology included."
 image: /assets/images/wsib-detective-analysis-2026-04-15.png
+image_alt: "Statistical analysis visualization showing WSIB tribunal decision patterns and outcome clarity metrics from 11,430 cases"
 featured: true
 ---
 
@@ -36,6 +37,8 @@ featured: true
 </div>
 
 **TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using statistical methods. **Dataset findings:** 43.9% (95% CI: 42.3-45.6%) of 2024 decisions were missing from the public record (1,545 cases), reconsideration adds about 1.5 years vs. 0.5 for direct appeals (4x longer), 20% (95% CI: 17.3-22.7%) of knee-injury decisions cite "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline, and July 2023 dropped to 39 published decisions (99.7% unlikely to be random). **Interpretation:** repeated structural patterns are visible across 6 years. **Alternative explanations:** administrative constraints, organizational variation, and understaffing may also explain portions of these effects. **Full methodology appears below.**
+
+**💡 Disability Justice Context:** This research serves **injured workers, people with disabilities, and vulnerable communities**. While this analysis focuses on workplace injury appeals (WSIAT), similar denial patterns affect disability benefit claims (ONSBT: ODSP/OW eligibility) and human rights claims (HRTO: disability discrimination). Systemic bias doesn't stop at one tribunal—it's a disability justice issue.
 
 **⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our statistical analysis uses keyword patterns and co-occurrence detection where official outcomes aren't available.
 

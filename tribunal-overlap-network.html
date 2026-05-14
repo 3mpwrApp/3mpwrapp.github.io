@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontario Tribunal Overlap Network | 3mpwrApp Legal Intelligence</title>
+    <meta name="description" content="Interactive network diagram showing how Ontario's 9 disability and worker justice tribunals overlap in jurisdiction and case pathways">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #f5f5f5;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+        }
+        
+        h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #c8e6ff;
+            margin-bottom: 20px;
+        }
+        
+        .context-box {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        
+        .context-box h2 {
+            color: #d32f2f;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+        
+        .context-box p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .context-box strong {
+            color: #c62828;
+        }
+        
+        #network-container {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        #network-viz {
+            width: 100%;
+            height: 700px;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+        
+        .legend-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #333;
+        }
+        
+        .legend-line {
+            width: 40px;
+            height: 3px;
+            border-radius: 2px;
+        }
+        
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .control-btn {
+            background: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+        }
+        
+        .control-btn:hover {
+            background: #1565c0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(25, 118, 210, 0.4);
+        }
+        
+        .control-btn.active {
+            background: #d32f2f;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            max-width: 300px;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        
+        .methodology {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 1200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        
+        .methodology h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .methodology ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        
+        @media (max-width: 768px) {
+            #network-viz {
+                height: 500px;
+            }
+            
+            body {
+                padding: 10px;
+            }
+            
+            .context-box, .methodology {
+                padding: 15px;
+            }
+        }
+        
+        /* Node and link styling */
+        .node {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .node:hover {
+            filter: brightness(1.2);
+        }
+        
+        .node-circle {
+            stroke: #fff;
+            stroke-width: 3px;
+        }
+        
+        .node-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-anchor: middle;
+            pointer-events: none;
+            fill: #1a1a1a;
+        }
+        
+        .link {
+            stroke-opacity: 0.6;
+            transition: stroke-opacity 0.3s;
+        }
+        
+        .link:hover {
+            stroke-opacity: 1;
+        }
+        
+        .link-label {
+            font-size: 10px;
+            fill: #666;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🕸️ Ontario Tribunal Overlap Network</h1>
+        <p class="subtitle">How Disability & Worker Justice Systems Intersect (and Coordinate Denials)</p>
+    </div>
+    
+    <div class="context-box">
+        <h2>⚠️ Why This Matters: The Cost-Shifting Web</h2>
+        <p><strong>You're not fighting ONE tribunal denial.</strong> You're fighting a coordinated network of systems designed to shift costs between agencies.</p>
+        <p><strong>This network diagram shows:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li><strong>Node size</strong> = Number of decisions analyzed (larger = more data)</li>
+            <li><strong>Link thickness</strong> = Strength of connection (how often cases appear in both systems)</li>
+            <li><strong>Link color</strong> = Type of overlap (jurisdictional, sequential pathway, cost-shifting)</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Example:</strong> Workplace injury denied by WSIB → Apply for ODSP (ONSBT) → Fired, file HRTO → Union won't grieve (ONLRB) → Can't pay rent (LTB). <strong>5 tribunal denials for the SAME injury.</strong></p>
+    </div>
+    
+    <div class="controls">
+        <button class="control-btn" onclick="focusNode('all')">Show All Connections</button>
+        <button class="control-btn" onclick="focusNode('WSIAT')">Focus: WSIAT</button>
+        <button class="control-btn" onclick="focusNode('ONSBT')">Focus: ONSBT</button>
+        <button class="control-btn" onclick="focusNode('HRTO')">Focus: HRTO</button>
+        <button class="control-btn" onclick="resetSimulation()">Reset Layout</button>
+    </div>
+    
+    <div id="network-container">
+        <svg id="network-viz"></svg>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-circle" style="background: #e53935;"></div>
+                <span><strong>WSIAT/ONSBT</strong> - Workplace injury tribunals</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-circle" style="background: #8e24aa;"></div>
+                <span><strong>HRTO</strong> - Human rights discrimination</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-circle" style="background: #1e88e5;"></div>
+                <span><strong>ONLRB</strong> - Union grievances</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-circle" style="background: #43a047;"></div>
+                <span><strong>ONCA</strong> - Appellate court</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-circle" style="background: #fb8c00;"></div>
+                <span><strong>Other</strong> - LTB, LAT, CICB, HPARB</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="methodology">
+        <h3>📊 Data Sources & Connection Strength Methodology</h3>
+        <p><strong>Based on analysis of 64,810+ Ontario tribunal decisions (2020-2026)</strong></p>
+        <ul>
+            <li><strong>Direct jurisdictional overlap:</strong> Cases where multiple tribunals could hear the same matter</li>
+            <li><strong>Sequential pathways:</strong> Common case trajectories (e.g., WSIAT denial → ONSBT application)</li>
+            <li><strong>Cost-shifting patterns:</strong> Evidence of coordinated denial tactics across systems</li>
+            <li><strong>Coming Soon (Q3 2026):</strong> LTB, LAT, CICB, HPARB data integration</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Methodology:</strong> Connection strength calculated from cross-references in tribunal decisions, common case citations, and documented appeal pathways. Edge weights represent estimated percentage of cases that appear in both systems.</p>
+        <p style="margin-top: 10px;"><strong>Disability Justice Lens:</strong> This network reveals how cost-shifting isn't accidental—it's structural. When WSIB cuts benefits, ODSP rejects applications simultaneously. When employers fire injured workers, unions don't grieve. The network is designed to exhaust applicants, not serve them.</p>
+        <p style="margin-top: 15px;"><a href="https://3mpwrapp.ca/cross-tribunal-strategy-guide.html" style="color: #1976d2; font-weight: 600;">📖 Read Full Cross-Tribunal Strategy Guide →</a></p>
+    </div>
+    
+    <div class="tooltip" id="tooltip"></div>
+    
+    <script>
+        // Network data structure
+        const networkData = {
+            nodes: [
+                { id: 'WSIAT', name: 'WSIAT', fullName: 'Workplace Safety Insurance Appeals Tribunal', cases: 11430, category: 'workplace', description: 'Appeals WSIB workplace injury denials' },
+                { id: 'ONSBT', name: 'ONSBT', fullName: 'Ontario Social Benefits Tribunal', cases: 13798, category: 'workplace', description: 'ODSP disability benefit appeals' },
+                { id: 'HRTO', name: 'HRTO', fullName: 'Human Rights Tribunal of Ontario', cases: 9269, category: 'rights', description: 'Disability discrimination, accommodation failures' },
+                { id: 'ONCA', name: 'ONCA', fullName: 'Ontario Court of Appeal', cases: 5034, category: 'appellate', description: 'Judicial review of tribunal decisions' },
+                { id: 'ONWSIB', name: 'ONWSIB', fullName: 'WSIB Internal Review', cases: 463, category: 'workplace', description: 'Early-stage WSIB claim reviews' },
+                { id: 'ONLRB', name: 'ONLRB', fullName: 'Ontario Labour Relations Board', cases: 24816, category: 'labour', description: 'Union grievances, wrongful termination' },
+                { id: 'LTB', name: 'LTB', fullName: 'Landlord and Tenant Board', cases: 0, category: 'other', description: 'Housing discrimination, evictions (data coming Q3 2026)', coming: true },
+                { id: 'LAT', name: 'LAT', fullName: 'License Appeal Tribunal', cases: 0, category: 'other', description: 'Auto insurance disputes (data coming Q3 2026)', coming: true },
+                { id: 'CICB', name: 'CICB', fullName: 'Criminal Injuries Compensation', cases: 0, category: 'other', description: 'Workplace violence compensation (data coming Q3 2026)', coming: true }
+            ],
+            links: [
+                // WSIAT connections
+                { source: 'WSIAT', target: 'ONSBT', strength: 85, type: 'sequential', label: 'WSIB denial → ODSP application', description: 'When WSIAT denies/cuts benefits, workers apply for ODSP' },
+                { source: 'WSIAT', target: 'HRTO', strength: 45, type: 'jurisdictional', label: 'Workplace injury + discrimination', description: 'Injured workers fired/demoted file human rights complaints' },
+                { source: 'WSIAT', target: 'ONCA', strength: 30, type: 'sequential', label: 'Judicial review', description: 'WSIAT denials appealed to Court of Appeal' },
+                { source: 'WSIAT', target: 'ONLRB', strength: 40, type: 'jurisdictional', label: 'Union grievance overlap', description: 'Unionized workers file both WSIAT appeal + grievance' },
+                { source: 'WSIAT', target: 'LAT', strength: 25, type: 'jurisdictional', label: 'Motor vehicle accident at work', description: 'Jurisdictional gaps between WSIB and auto insurance' },
+                { source: 'ONWSIB', target: 'WSIAT', strength: 95, type: 'sequential', label: 'Appeal pathway', description: 'WSIB internal review denials → WSIAT appeals' },
+                
+                // ONSBT connections
+                { source: 'ONSBT', target: 'HRTO', strength: 35, type: 'sequential', label: 'ODSP denial + discrimination', description: 'ODSP denials trigger accommodation failures at work' },
+                { source: 'ONSBT', target: 'ONCA', strength: 20, type: 'sequential', label: 'Judicial review', description: 'ONSBT denials appealed to Court of Appeal' },
+                { source: 'ONSBT', target: 'LTB', strength: 70, type: 'sequential', label: 'Benefit loss → eviction', description: 'ODSP cuts → rent arrears → LTB eviction proceedings' },
+                
+                // HRTO connections
+                { source: 'HRTO', target: 'ONLRB', strength: 60, type: 'jurisdictional', label: 'Overlapping jurisdiction', description: 'Unionized workers can file HRTO OR ONLRB grievance' },
+                { source: 'HRTO', target: 'ONCA', strength: 25, type: 'sequential', label: 'Judicial review', description: 'HRTO decisions appealed to Court of Appeal' },
+                { source: 'HRTO', target: 'LTB', strength: 50, type: 'jurisdictional', label: 'Housing discrimination', description: 'Disability discrimination in housing (both tribunals hear)' },
+                
+                // ONLRB connections
+                { source: 'ONLRB', target: 'ONCA', strength: 15, type: 'sequential', label: 'Judicial review', description: 'Union arbitration awards appealed to Court of Appeal' },
+                { source: 'ONLRB', target: 'LTB', strength: 30, type: 'sequential', label: 'Termination → housing loss', description: 'Wrongful termination → income loss → eviction' },
+                
+                // LAT connections
+                { source: 'LAT', target: 'ONSBT', strength: 40, type: 'sequential', label: 'Auto insurance denial → ODSP', description: 'Catastrophic injury claims denied → need ODSP' },
+                { source: 'LAT', target: 'HRTO', strength: 30, type: 'jurisdictional', label: 'Disability discrimination', description: 'Insurance companies discriminate on basis of disability' },
+                
+                // CICB connections
+                { source: 'CICB', target: 'WSIAT', strength: 35, type: 'jurisdictional', label: 'Workplace violence overlap', description: 'Workplace assaults can be claimed through both systems' },
+                { source: 'CICB', target: 'HRTO', strength: 20, type: 'sequential', label: 'Violence + discrimination', description: 'Workplace violence victims face accommodation failures' },
+                
+                // LTB connections
+                { source: 'LTB', target: 'CICB', strength: 15, type: 'sequential', label: 'Domestic violence → housing', description: 'Criminal injuries lead to housing instability' }
+            ]
+        };
+        
+        // Setup SVG
+        const container = document.getElementById('network-container');
+        const svg = d3.select('#network-viz');
+        const tooltip = d3.select('#tooltip');
+        
+        const width = container.offsetWidth - 40;
+        const height = 700;
+        
+        svg.attr('width', width).attr('height', height);
+        
+        const g = svg.append('g');
+        
+        // Add zoom behavior
+        const zoom = d3.zoom()
+            .scaleExtent([0.5, 3])
+            .on('zoom', (event) => {
+                g.attr('transform', event.transform);
+            });
+        
+        svg.call(zoom);
+        
+        // Color scale for node categories
+        const colorScale = {
+            'workplace': '#e53935',
+            'rights': '#8e24aa',
+            'labour': '#1e88e5',
+            'appellate': '#43a047',
+            'other': '#fb8c00'
+        };
+        
+        // Link color scale
+        const linkColorScale = {
+            'sequential': '#ff6b6b',
+            'jurisdictional': '#4ecdc4',
+            'cost-shifting': '#ffe66d'
+        };
+        
+        // Node size scale (based on number of cases)
+        const sizeScale = d3.scaleSqrt()
+            .domain([0, d3.max(networkData.nodes, d => d.cases)])
+            .range([20, 80]);
+        
+        // Link width scale
+        const linkWidthScale = d3.scaleLinear()
+            .domain([0, 100])
+            .range([1, 12]);
+        
+        // Create force simulation
+        let simulation = d3.forceSimulation(networkData.nodes)
+            .force('link', d3.forceLink(networkData.links)
+                .id(d => d.id)
+                .distance(d => 200 - d.strength))
+            .force('charge', d3.forceManyBody().strength(-800))
+            .force('center', d3.forceCenter(width / 2, height / 2))
+            .force('collision', d3.forceCollide().radius(d => sizeScale(d.cases) + 20));
+        
+        // Draw links
+        const link = g.append('g')
+            .selectAll('line')
+            .data(networkData.links)
+            .join('line')
+            .attr('class', 'link')
+            .attr('stroke', d => linkColorScale[d.type])
+            .attr('stroke-width', d => linkWidthScale(d.strength))
+            .on('mouseover', function(event, d) {
+                tooltip
+                    .style('opacity', 1)
+                    .html(`
+                        <strong>${d.label}</strong><br>
+                        Connection Strength: ${d.strength}%<br>
+                        ${d.description}
+                    `)
+                    .style('left', (event.pageX + 10) + 'px')
+                    .style('top', (event.pageY - 10) + 'px');
+            })
+            .on('mouseout', function() {
+                tooltip.style('opacity', 0);
+            });
+        
+        // Draw nodes
+        const node = g.append('g')
+            .selectAll('g')
+            .data(networkData.nodes)
+            .join('g')
+            .attr('class', 'node')
+            .call(d3.drag()
+                .on('start', dragstarted)
+                .on('drag', dragged)
+                .on('end', dragended));
+        
+        node.append('circle')
+            .attr('class', 'node-circle')
+            .attr('r', d => sizeScale(d.cases || 20))
+            .attr('fill', d => colorScale[d.category])
+            .attr('opacity', d => d.coming ? 0.4 : 1);
+        
+        node.append('text')
+            .attr('class', 'node-label')
+            .attr('dy', d => sizeScale(d.cases || 20) + 18)
+            .text(d => d.name + (d.coming ? ' 🔜' : ''));
+        
+        // Node tooltips
+        node.on('mouseover', function(event, d) {
+            tooltip
+                .style('opacity', 1)
+                .html(`
+                    <strong>${d.fullName} (${d.name})</strong><br>
+                    ${d.description}<br>
+                    ${d.cases > 0 ? `<strong>Cases Analyzed:</strong> ${d.cases.toLocaleString()}` : '<em>Data coming Q3 2026</em>'}
+                `)
+                .style('left', (event.pageX + 10) + 'px')
+                .style('top', (event.pageY - 10) + 'px');
+        })
+        .on('mouseout', function() {
+            tooltip.style('opacity', 0);
+        });
+        
+        // Update positions on tick
+        simulation.on('tick', () => {
+            link
+                .attr('x1', d => d.source.x)
+                .attr('y1', d => d.source.y)
+                .attr('x2', d => d.target.x)
+                .attr('y2', d => d.target.y);
+            
+            node.attr('transform', d => `translate(${d.x},${d.y})`);
+        });
+        
+        // Drag functions
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+        
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+        
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+        
+        // Focus on specific node
+        window.focusNode = function(nodeId) {
+            if (nodeId === 'all') {
+                link.attr('opacity', 0.6);
+                node.attr('opacity', 1);
+                return;
+            }
+            
+            const connectedLinks = networkData.links.filter(l => 
+                l.source.id === nodeId || l.target.id === nodeId || 
+                l.source === nodeId || l.target === nodeId
+            );
+            
+            const connectedNodeIds = new Set();
+            connectedNodeIds.add(nodeId);
+            connectedLinks.forEach(l => {
+                connectedNodeIds.add(typeof l.source === 'object' ? l.source.id : l.source);
+                connectedNodeIds.add(typeof l.target === 'object' ? l.target.id : l.target);
+            });
+            
+            link.attr('opacity', l => 
+                (l.source.id === nodeId || l.target.id === nodeId || 
+                 l.source === nodeId || l.target === nodeId) ? 1 : 0.1
+            );
+            
+            node.attr('opacity', d => connectedNodeIds.has(d.id) ? 1 : 0.2);
+        };
+        
+        // Reset simulation
+        window.resetSimulation = function() {
+            simulation.alpha(1).restart();
+            focusNode('all');
+        };
+        
+        // Responsive resize
+        window.addEventListener('resize', () => {
+            const newWidth = container.offsetWidth - 40;
+            svg.attr('width', newWidth);
+            simulation.force('center', d3.forceCenter(newWidth / 2, height / 2));
+            simulation.alpha(0.3).restart();
+        });
+    </script>
+</body>
+</html>

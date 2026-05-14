@@ -2,6 +2,10 @@
 
 **📅 UPDATE: May 1, 2026** - We've completed keyword-based classification of all 11,430 WSIAT tribunal decisions (2020-2026). Here's what the outcomes reveal:
 
+**⚠️ METHODOLOGY DISCLOSURE:** Outcome classification based on keyword pattern analysis of CanLII API metadata. 77% of cases have unclear outcomes due to ambiguous tribunal language. Success rates calculated from keyword-classified subset (393 cases) only.
+
+**📅 DATA SNAPSHOT:** Analysis run April 26-30, 2026. Tier summary file dated April 26, 2026.
+
 ### Outcome Distribution
 
 | Outcome | Count | Percentage |
