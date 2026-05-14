@@ -1,0 +1,134 @@
+{
+  "scrape_date": "2026-05-14T18:04:56.663Z",
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "stats": [
+    {
+      "year": 2020,
+      "total": 3584,
+      "retaliation_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 3263,
+        "Settled/Withdrawn": 99,
+        "Dismissed": 59,
+        "Stayed/Adjourned": 40,
+        "Reconsideration": 96,
+        "Allowed": 5,
+        "Certification Granted": 14,
+        "Interim Decision": 7,
+        "Certification Dismissed": 1
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2021,
+      "total": 1548,
+      "retaliation_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 1377,
+        "Settled/Withdrawn": 55,
+        "Stayed/Adjourned": 20,
+        "Reconsideration": 45,
+        "Dismissed": 37,
+        "Certification Granted": 5,
+        "Allowed": 4,
+        "Interim Decision": 3,
+        "No Jurisdiction": 2
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2022,
+      "total": 294,
+      "retaliation_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 267,
+        "Dismissed": 11,
+        "Stayed/Adjourned": 3,
+        "Settled/Withdrawn": 6,
+        "Reconsideration": 7
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2023,
+      "total": 610,
+      "retaliation_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 555,
+        "Dismissed": 18,
+        "Certification Dismissed": 1,
+        "Reconsideration": 18,
+        "Allowed": 5,
+        "Settled/Withdrawn": 10,
+        "Stayed/Adjourned": 2,
+        "No Jurisdiction": 1
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2024,
+      "total": 309,
+      "retaliation_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 285,
+        "Certification Granted": 1,
+        "Stayed/Adjourned": 2,
+        "Settled/Withdrawn": 6,
+        "Reconsideration": 9,
+        "Dismissed": 6
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2025,
+      "total": 1800,
+      "retaliation_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 1665,
+        "Reconsideration": 64,
+        "Dismissed": 26,
+        "Stayed/Adjourned": 13,
+        "Certification Granted": 2,
+        "Settled/Withdrawn": 23,
+        "Interim Decision": 5,
+        "Allowed": 2
+      },
+      "duration_minutes": "455.4"
+    },
+    {
+      "year": 2026,
+      "total": 2022,
+      "retaliation_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 1805,
+        "Interim Decision": 10,
+        "Settled/Withdrawn": 39,
+        "Reconsideration": 59,
+        "Stayed/Adjourned": 25,
+        "Dismissed": 49,
+        "Certification Granted": 22,
+        "No Jurisdiction": 3,
+        "Allowed": 9,
+        "Certification Dismissed": 1
+      },
+      "duration_minutes": "510.8"
+    }
+  ],
+  "total_cases": 10167,
+  "total_retaliation_cases": 0
+}
