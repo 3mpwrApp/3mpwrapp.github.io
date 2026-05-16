@@ -7,7 +7,9 @@ permalink: /guides/wsiat-chronic-pain-claims/
 
 # Chronic Pain Guide: WSIAT Appeals Strategy
 
-**Based on 7,502 WSIAT decisions analyzed (1987-2026) - 7.6% of all appeals**
+**Based on 11,430 WSIAT decisions (2020-2026) with v3.0 ML classification - Updated May 15, 2026**
+
+> **📊 Data Update:** v3.0 classification complete. 83.4% of WSIAT cases now classified (16.6% unknown). Chronic pain patterns identified through cross-tribunal similarity matching.
 
 ---
 

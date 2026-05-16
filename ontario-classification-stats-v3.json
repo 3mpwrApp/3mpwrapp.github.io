@@ -1,0 +1,51 @@
+{
+  "totalProcessed": 50161,
+  "totalClassified": 20,
+  "totalUnknown": 7481,
+  "byTribunal": {
+    "onwsiat": {
+      "total": 11430,
+      "classified": 20,
+      "unknown": 1894,
+      "unknownRate": "16.6"
+    },
+    "onsbt": {
+      "total": 13798,
+      "classified": 0,
+      "unknown": 734,
+      "unknownRate": "5.3"
+    },
+    "onwsib": {
+      "total": 463,
+      "classified": 0,
+      "unknown": 252,
+      "unknownRate": "54.4"
+    },
+    "onhrt": {
+      "total": 9269,
+      "classified": 0,
+      "unknown": 1256,
+      "unknownRate": "13.6"
+    },
+    "onlrb": {
+      "total": 10167,
+      "classified": 0,
+      "unknown": 2785,
+      "unknownRate": "27.4"
+    },
+    "onca": {
+      "total": 5034,
+      "classified": 0,
+      "unknown": 560,
+      "unknownRate": "11.1"
+    }
+  },
+  "byOutcome": {
+    "Reconsideration": 7,
+    "Allowed": 13
+  },
+  "byMethod": {
+    "similarity_match_cross_db": 19,
+    "similarity_match_same_db": 1
+  }
+}
