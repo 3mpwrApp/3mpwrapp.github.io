@@ -324,7 +324,7 @@
       "good faith — discrimination — reasonable explanation for the delay — incident — untimely"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -334,8 +334,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6033333333333334,
+    "classified_at": "2026-05-15T01:24:30.637Z",
+    "matched_case": "2026hrto237",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto780",
@@ -348,7 +353,7 @@
       "enumerated ground — adverse treatment — jurisdiction — bald assertion which links — discriminatory"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -358,8 +363,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5961538461538463,
+    "classified_at": "2026-05-15T01:24:33.294Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto779",
@@ -459,7 +469,7 @@
       "adverse treatment — enumerated ground — toilet paper — bald assertion — jurisdiction"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -469,8 +479,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:24:36.066Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto775",
@@ -628,7 +643,7 @@
       "discrimination — good faith — limitation period — delay — incident"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -638,8 +653,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.62,
+    "classified_at": "2026-05-15T01:24:39.363Z",
+    "matched_case": "2024hrto1807",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto769",
@@ -710,7 +730,7 @@
       "creed — bald assertion — enumerated ground — discrimination — jurisdiction"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -720,8 +740,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6277777777777778,
+    "classified_at": "2026-05-15T01:24:42.549Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto766",
@@ -734,7 +759,7 @@
       "creed — bald assertion — enumerated ground — discrimination — jurisdiction"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -744,8 +769,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6277777777777778,
+    "classified_at": "2026-05-15T01:24:46.031Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto765",
@@ -985,7 +1015,7 @@
       "disability — jurisdiction — wear a mask — ground — discriminatory"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -995,8 +1025,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:53:47.131Z",
+    "matched_case": "2026hrto182",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto755",
@@ -1270,7 +1305,7 @@
       "discrimination — delay — jurisdiction — untimely — good faith"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1280,8 +1315,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:24:55.788Z",
+    "matched_case": "2025hrto2530",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto745",
@@ -1381,7 +1421,7 @@
       "email — provide their availability — mediation — undeliverable — videoconference"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1391,8 +1431,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6136363636363636,
+    "classified_at": "2026-05-15T01:24:59.113Z",
+    "matched_case": "2022hrto566",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto741",
@@ -1405,7 +1450,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1415,8 +1460,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:25:02.282Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto740",
@@ -1458,7 +1508,7 @@
       "email — incident — discrimination within the meaning — unfairness — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1468,8 +1518,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.72,
+    "classified_at": "2026-05-15T22:53:47.153Z",
+    "matched_case": "2021hrto124"
   },
   {
     "case_id": "2021hrto738",
@@ -1482,7 +1536,7 @@
       "email — pandemic — wearing a mask — letter — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1492,8 +1546,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.705,
+    "classified_at": "2026-05-15T00:30:22.618Z",
+    "matched_case": "2021hrto600"
   },
   {
     "case_id": "2021hrto737",
@@ -1506,7 +1564,7 @@
       "email — respond to the jurisdictional — sent — directed the applicant to respond — letter"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1516,8 +1574,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7227272727272727,
+    "classified_at": "2026-05-15T00:30:22.646Z",
+    "matched_case": "2021hrto475"
   },
   {
     "case_id": "2021hrto736",
@@ -1559,7 +1621,7 @@
       "email — pandemic — wearing a mask — undeliverable — disabilities"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1569,8 +1631,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.705,
+    "classified_at": "2026-05-15T00:30:22.676Z",
+    "matched_case": "2021hrto600"
   },
   {
     "case_id": "2021hrto734",
@@ -2013,7 +2079,7 @@
       "discrimination — jurisdiction — enumerated ground — music — incidents"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2023,8 +2089,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:25:08.082Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto718",
@@ -2153,7 +2224,7 @@
       "email — unfairness — undeliverable — discrimination — federally"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2163,8 +2234,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:22.754Z",
+    "matched_case": "2021hrto152"
   },
   {
     "case_id": "2021hrto713",
@@ -2177,7 +2252,7 @@
       "reprisal — bald assertion — enumerated ground — jurisdiction — fax"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2187,8 +2262,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6277777777777778,
+    "classified_at": "2026-05-15T01:25:11.105Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto712",
@@ -2225,7 +2305,7 @@
       "conflict with established jurisprudence — opportunithy — submissionse — re-argue — public"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2235,8 +2315,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T01:25:13.859Z",
+    "matched_case": "2022hrto574",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto710",
@@ -2336,7 +2421,7 @@
       "good faith — deadline — delay was incurred — incident — draft"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2346,8 +2431,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6136363636363636,
+    "classified_at": "2026-05-15T01:25:17.572Z",
+    "matched_case": "2026hrto188",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto706",
@@ -2389,7 +2479,7 @@
       "undeliverable — timeline — respond — periods — suspending"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2399,8 +2489,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:04:10.560Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto704",
@@ -2413,7 +2508,7 @@
       "investigator — privilege — arguably relevant documents — alleged break-in — disclosure"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2423,8 +2518,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:25:17.637Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto703",
@@ -2437,7 +2536,7 @@
       "email — grievance — sent — respond — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2447,8 +2546,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:22.989Z",
+    "matched_case": "2021hrto317"
   },
   {
     "case_id": "2021hrto702",
@@ -2833,7 +2936,7 @@
       "email — undeliverable — sent — respond — letter"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2843,8 +2946,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:23.043Z",
+    "matched_case": "2021hrto717"
   },
   {
     "case_id": "2021hrto688",
@@ -2886,7 +2993,7 @@
       "enumerated ground — jurisdiction — bald assertion — adverse treatment — unfairness"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2896,8 +3003,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T01:25:23.285Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto686",
@@ -3190,7 +3302,7 @@
       "enumerated ground — jurisdiction — interviewer — bald assertion — adverse treatment"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3200,8 +3312,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T01:25:31.766Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto675",
@@ -3446,7 +3563,7 @@
       "good faith — delay — discrimination — explanation — occurred"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3456,8 +3573,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T01:25:34.290Z",
+    "matched_case": "2023hrto1479",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto666",
@@ -3755,7 +3877,7 @@
       "good faith — delay — discrimination — incurred — medical"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3765,8 +3887,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6100000000000001,
+    "classified_at": "2026-05-15T01:25:37.445Z",
+    "matched_case": "2024hrto1807",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto655",
@@ -4040,7 +4167,7 @@
       "letter — email to the email address — returned to the as undeliverable — resending — sent"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4050,8 +4177,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6807692307692308,
+    "classified_at": "2026-05-15T00:30:23.254Z",
+    "matched_case": "2021hrto25"
   },
   {
     "case_id": "2021hrto645",
@@ -4175,7 +4306,7 @@
       "enumerated ground — adverse treatment — jurisdiction — bald assertion which links — duzzi"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4185,8 +4316,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5961538461538463,
+    "classified_at": "2026-05-15T01:25:42.115Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto640",
@@ -4228,7 +4364,7 @@
       "email — estate — trustee — letter — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4238,8 +4374,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.69375,
+    "classified_at": "2026-05-15T22:53:50.298Z",
+    "matched_case": "2021hrto741"
   },
   {
     "case_id": "2021hrto638",
@@ -4252,7 +4392,7 @@
       "reprisal — bald assertion — jurisdiction — enumerated ground — discrimination"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4262,8 +4402,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.65,
+    "classified_at": "2026-05-15T01:25:44.064Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto637",
@@ -4276,7 +4421,7 @@
       "pandemic — wearing a mask — undeliverable — email address — discrimination"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4286,8 +4431,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.72,
+    "classified_at": "2026-05-15T00:30:23.389Z",
+    "matched_case": "2021hrto600"
   },
   {
     "case_id": "2021hrto636",
@@ -4300,7 +4449,7 @@
       "pandemic — wearing a mask — undeliverable — email address — discrimination"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4310,8 +4459,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.72,
+    "classified_at": "2026-05-15T00:30:23.417Z",
+    "matched_case": "2021hrto600"
   },
   {
     "case_id": "2021hrto635",
@@ -4498,7 +4651,7 @@
       "emails — undeliverable — letter — deferring — representatives"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4508,8 +4661,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:23.445Z",
+    "matched_case": "2021hrto361"
   },
   {
     "case_id": "2021hrto628",
@@ -4522,7 +4679,7 @@
       "trustee — email — estate — appointment — deferral"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4532,8 +4689,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:25:44.064Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto627",
@@ -4575,7 +4736,7 @@
       "email by the deadline — agreeable dates for the mediation — sent to the email addresses — undeliverable — mediation deadline provided to respond"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4585,8 +4746,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6785714285714286,
+    "classified_at": "2026-05-15T00:30:23.513Z",
+    "matched_case": "2021hrto688"
   },
   {
     "case_id": "2021hrto758",
@@ -4628,7 +4793,7 @@
       "agreeable dates for the mediation — sent to the email addresses — mediation deadline provided to respond — provide to the with agreeable — email by the deadline"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4638,8 +4803,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.7235294117647059,
+    "classified_at": "2026-05-15T01:25:44.107Z",
+    "matched_case": "2021hrto626"
   },
   {
     "case_id": "2021hrto624",
@@ -4710,7 +4879,7 @@
       "enumerated ground — jurisdiction — adverse treatment — bald assertion which links — provide"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4720,8 +4889,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5961538461538463,
+    "classified_at": "2026-05-15T01:25:46.301Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto621",
@@ -4734,7 +4908,7 @@
       "agreeable dates for the mediation — sent to the email addresses — mediation deadline provided to respond — undeliverable — letter"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4744,8 +4918,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.73125,
+    "classified_at": "2026-05-15T01:25:46.338Z",
+    "matched_case": "2021hrto626"
   },
   {
     "case_id": "2021hrto620",
@@ -4758,7 +4936,7 @@
       "pandemic — creed — email — mask — appears to be outside"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4768,8 +4946,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5961538461538463,
+    "classified_at": "2026-05-15T22:53:51.286Z",
+    "matched_case": "2023hrto698",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto619",
@@ -4782,7 +4965,7 @@
       "enumerated ground — jurisdiction — adverse treatment — bald assertion which links — actions"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4792,8 +4975,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5961538461538463,
+    "classified_at": "2026-05-15T01:25:50.084Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto618",
@@ -5091,7 +5279,7 @@
       "appropriately dealt with the substance — tenants — proceeding — jurisdiction — human"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5101,8 +5289,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6318181818181818,
+    "classified_at": "2026-05-15T01:25:53.866Z",
+    "matched_case": "2026hrto185",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto607",
@@ -5144,7 +5337,7 @@
       "good faith — untimely — explanation for the delay — filing — delay was incurred"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5154,8 +5347,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6071428571428572,
+    "classified_at": "2026-05-15T01:25:55.757Z",
+    "matched_case": "2024hrto516",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto604",
@@ -5168,7 +5366,7 @@
       "proposed — add — allegations — harassment — organizational"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5178,8 +5376,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6125,
+    "classified_at": "2026-05-15T22:53:53.377Z",
+    "matched_case": "2025hrto1442",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto603",
@@ -5192,7 +5395,7 @@
       "enumerated ground — jurisdiction — investigation — bald assertion — adverse treatment"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5202,8 +5405,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T01:25:59.559Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto602",
@@ -5419,7 +5627,7 @@
       "agreeable dates for the mediation — mediation deadline provided to respond — sent to the email addresses — provide the with agreeable dates — dates for the mediation deadline"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5429,8 +5637,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.7147058823529411,
+    "classified_at": "2026-05-15T01:25:59.613Z",
+    "matched_case": "2021hrto626"
   },
   {
     "case_id": "2021hrto594",
@@ -5781,7 +5993,7 @@
       "agreeable dates for the mediation — sent to the email addresses — respective — willing to try to settle — representatives"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5791,8 +6003,11 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:30:23.938Z"
   },
   {
     "case_id": "2021hrto581",
@@ -5950,7 +6165,7 @@
       "email — undeliverable — attend the scheduled mediation — sent — communicate"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5960,8 +6175,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6954545454545454,
+    "classified_at": "2026-05-15T00:30:24.003Z",
+    "matched_case": "2021hrto768"
   },
   {
     "case_id": "2021hrto575",
@@ -5974,7 +6193,7 @@
       "unfairness — undeliverable — discrimination — respond — mailing"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5984,8 +6203,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:24.042Z",
+    "matched_case": "2021hrto660"
   },
   {
     "case_id": "2021hrto574",
@@ -6022,7 +6245,7 @@
       "deem — undeliverable — waived — notice — mail"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6032,8 +6255,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:26:10.296Z",
+    "matched_case": "2022hrto1337",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto572",
@@ -6046,7 +6274,7 @@
       "agreeable dates for the mediation — sent to the email addresses — mediation deadline provided to respond — undeliverable — letter"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6056,8 +6284,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.73125,
+    "classified_at": "2026-05-15T01:26:10.337Z",
+    "matched_case": "2021hrto626"
   },
   {
     "case_id": "2021hrto571",
@@ -6070,7 +6302,7 @@
       "agreeable dates for the mediation — sent to the email addresses — mediation deadline provided to respond — undeliverable — letter"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6080,8 +6312,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.73125,
+    "classified_at": "2026-05-15T01:26:10.374Z",
+    "matched_case": "2021hrto626"
   },
   {
     "case_id": "2021hrto570",
@@ -6094,7 +6330,7 @@
       "email — reprisal — incident — discrimination within the meaning — unfairness"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6104,8 +6340,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.72,
+    "classified_at": "2026-05-15T22:53:58.422Z",
+    "matched_case": "2021hrto124"
   },
   {
     "case_id": "2021hrto569",
@@ -6205,7 +6445,7 @@
       "email — incident — discrimination within the meaning — unfairness — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6215,8 +6455,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.72,
+    "classified_at": "2026-05-15T22:53:58.444Z",
+    "matched_case": "2021hrto124"
   },
   {
     "case_id": "2021hrto565",
@@ -6229,7 +6473,7 @@
       "enumerated ground — adverse treatment — jurisdiction — bald assertion which links — discriminatory"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6239,8 +6483,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5961538461538463,
+    "classified_at": "2026-05-15T01:26:12.161Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto564",
@@ -6422,7 +6671,7 @@
       "email — undeliverable — response — withdrawal — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6432,8 +6681,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:04:11.084Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto557",
@@ -6504,7 +6758,7 @@
       "good faith — explanation for the delay — untimely — last incident — filing"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6514,8 +6768,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6033333333333334,
+    "classified_at": "2026-05-15T01:26:15.251Z",
+    "matched_case": "2026hrto237",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto554",
@@ -6847,7 +7106,7 @@
       "enumerated ground — discrimination — adverse treatment — bald assertion — jurisdiction"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6857,8 +7116,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.62,
+    "classified_at": "2026-05-15T01:26:16.454Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto542",
@@ -6871,7 +7135,7 @@
       "origin — ancestry — jurisdiction — enumerated — nstead"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6881,8 +7145,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:54:00.399Z",
+    "matched_case": "2023hrto1628",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto541",
@@ -7059,7 +7328,7 @@
       "Procedure — Parties — Adding respondents — Criteria to add a proposed school board respondent under Smyth v. Toronto Police Services, 2009 HRTO 1513 — Are there allegations capable of supporting a Code violation and is it fair to add the board? — Overlap and efficiency with existing allegations considered — School board added as respondent — Style of cause amended | Procedure — Parties — Individual respondents — Persaud v. Toronto District School Board, 2008 HRTO 31 applied — Should the Director of Education be added when the organization is a respondent? — No specific allegations against the individual — Organization able to take responsibility for conduct — Addition unnecessary to fair, just and expeditious adjudication — Individual respondent not added | Procedure — Case management — Amendments and timelines — What directions follow adding a new respondent and severing from combined processing? — Tribunal to deliver pleadings to added respondent — Deadlines set for Response and amended Reply — Application no longer processed with related Demonstration School matters — Case management directions issued"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7069,8 +7338,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:26:23.104Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto534",
@@ -7199,7 +7472,7 @@
       "enumerated ground — jurisdiction — adverse treatment — bald assertion which links — sexual"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7209,8 +7482,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5961538461538463,
+    "classified_at": "2026-05-15T01:26:24.290Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto529",
@@ -7426,7 +7704,7 @@
       "written — delay — medical — good faith — file"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7436,8 +7714,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T01:26:25.383Z",
+    "matched_case": "2025hrto2348",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto521",
@@ -7503,7 +7786,7 @@
       "email — bald assertion — marital status — enumerated ground — jurisdiction"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7513,8 +7796,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T01:26:27.724Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto518",
@@ -7556,7 +7844,7 @@
       "enumerated ground — adverse treatment — jurisdiction — bald assertion — reported"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7566,8 +7854,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T01:26:29.162Z",
+    "matched_case": "2023hrto1402",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto516",
@@ -7754,7 +8047,7 @@
       "email — incident — discrimination within the meaning — unfairness — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7764,8 +8057,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.72,
+    "classified_at": "2026-05-15T22:54:05.923Z",
+    "matched_case": "2021hrto124"
   },
   {
     "case_id": "2021hrto509",
@@ -7889,7 +8186,7 @@
       "discrimination within the meaning — untimely — delay — incidents — application"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7899,8 +8196,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:54:07.920Z",
+    "matched_case": "2022hrto612",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto504",
@@ -8343,7 +8645,7 @@
       "reprisal — enumerated ground — bald — adverse treatment — subsidized housing"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8353,8 +8655,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T01:26:33.790Z",
+    "matched_case": "2022hrto132",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto488",
@@ -8444,7 +8751,7 @@
       "oa — failure to attend — pandemic — disclosure obligations — witness"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8454,8 +8761,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:26:36.106Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto484",
@@ -8579,7 +8890,7 @@
       "reprisal — enumerated ground — bald — adverse treatment — jurisdiction"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8589,8 +8900,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6100000000000001,
+    "classified_at": "2026-05-15T01:26:38.343Z",
+    "matched_case": "2022hrto132",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto479",
@@ -8603,7 +8919,7 @@
       "reprisal — enumerated ground — bald — adverse treatment — jurisdiction"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8613,8 +8929,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6100000000000001,
+    "classified_at": "2026-05-15T01:26:39.523Z",
+    "matched_case": "2022hrto132",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto478",
@@ -8685,7 +9006,7 @@
       "letter — email — patiently — undeliverable — sent"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8695,8 +9016,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:25.958Z",
+    "matched_case": "2021hrto717"
   },
   {
     "case_id": "2021hrto475",
@@ -8767,7 +9092,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8777,8 +9102,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:26.020Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto472",
@@ -8815,7 +9144,7 @@
       "undeliverable — sent — periods — suspending — bold"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8825,8 +9154,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:26.229Z",
+    "matched_case": "2021hrto417"
   },
   {
     "case_id": "2021hrto470",
@@ -8892,7 +9225,7 @@
       "benefits — modified duties — ethnic origin — appropriately dealt with the substance — reasonable prospect"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8902,8 +9235,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5970588235294119,
+    "classified_at": "2026-05-15T22:54:15.183Z",
+    "matched_case": "2024hrto1176",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto467",
@@ -9109,7 +9447,7 @@
       "reprisal — benefits — discrimination — income — allegations"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": true,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9119,8 +9457,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:54:18.180Z",
+    "matched_case": "2020hrto1026",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto459",
@@ -9133,7 +9476,7 @@
       "email — incident — discrimination within the meaning — unfairness — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9143,8 +9486,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.72,
+    "classified_at": "2026-05-15T22:54:18.206Z",
+    "matched_case": "2021hrto124"
   },
   {
     "case_id": "2021hrto458",
@@ -9331,7 +9678,7 @@
       "request — deferring — outweigh the public interest — reconsider — finality"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9341,8 +9688,11 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:30:26.762Z"
   },
   {
     "case_id": "2021hrto451",
@@ -9442,7 +9792,7 @@
       "defer consideration — grievance — pending the resolution — proceeding — reprisal"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9452,8 +9802,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:26:47.156Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto447",
@@ -9490,7 +9844,7 @@
       "email address — alternate contact — sent — respond — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9500,8 +9854,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7,
+    "classified_at": "2026-05-15T00:30:27.095Z",
+    "matched_case": "2021hrto398"
   },
   {
     "case_id": "2021hrto445",
@@ -9736,7 +10094,7 @@
       "discrimination — jurisdiction — grounds — narrative — creed"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9746,8 +10104,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:54:21.267Z",
+    "matched_case": "2022hrto604",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto436",
@@ -9842,7 +10205,7 @@
       "email — unfairness — undeliverable — spouses — respond"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9852,8 +10215,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:27.451Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto432",
@@ -9953,7 +10320,7 @@
       "second status update request — email — grievances — undeliverable — reactivate"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9963,8 +10330,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T01:26:51.985Z",
+    "matched_case": "2022hrto429",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto428",
@@ -10218,7 +10590,7 @@
       "good faith — untimely — explanation for the delay — last incident — gender"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -10228,8 +10600,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5970588235294119,
+    "classified_at": "2026-05-15T01:26:57.230Z",
+    "matched_case": "2024hrto585",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto418",
@@ -10638,7 +11015,7 @@
       "class proceeding — intervention — intrusion upon seclusion — certified class — deferral"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -10648,8 +11025,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T01:26:59.326Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021hrto403",
@@ -10889,7 +11270,7 @@
       "bullying — deferred — communication — email — withdrawal"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -10899,8 +11280,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T01:27:00.411Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021hrto394",
@@ -11111,7 +11496,7 @@
       "defer — proceeding — reprisal — consideration — pending"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -11121,8 +11506,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:27:01.687Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto386",
@@ -11333,7 +11722,7 @@
       "letter — estate trustee — appointment — undeliverable — abeyance"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -11343,8 +11732,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:03.978Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto378",
@@ -11695,7 +12089,7 @@
       "litigation guardian — good faith — delay — alleged discrimination — untimely"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -11705,8 +12099,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T01:27:08.572Z",
+    "matched_case": "2023hrto1479",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto365",
@@ -11888,7 +12287,7 @@
       "grievances — defer consideration — pending the conclusion — sjto — grievance proceeding"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -11898,8 +12297,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:27:10.119Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto358",
@@ -11912,7 +12315,7 @@
       "proceeding — defer consideration — pending — complaint — tribunalsontario"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -11922,8 +12325,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:27:10.120Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto357",
@@ -12018,7 +12425,7 @@
       "good faith — delay — alleged discrimination — untimely — sooner"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12028,8 +12435,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:27:12.583Z",
+    "matched_case": "2023hrto1479",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto353",
@@ -12129,7 +12541,7 @@
       "police officers — reasonable prospect — father-in-law — gender — summary"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12139,8 +12551,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:54:36.619Z",
+    "matched_case": "2024hrto1325",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto349",
@@ -12211,7 +12628,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12221,8 +12638,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:15.139Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto346",
@@ -12293,7 +12715,7 @@
       "letter — estate trustee — asti — appointment — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12303,8 +12725,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:16.217Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto343",
@@ -12346,7 +12773,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12356,8 +12783,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:17.300Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto341",
@@ -12370,7 +12802,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12380,8 +12812,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:18.663Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto340",
@@ -12394,7 +12831,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12404,8 +12841,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:19.929Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto339",
@@ -12418,7 +12860,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12428,8 +12870,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:20.981Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto338",
@@ -12442,7 +12889,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12452,8 +12899,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:22.152Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto337",
@@ -12466,7 +12918,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12476,8 +12928,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:23.171Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto336",
@@ -12678,7 +13135,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12688,8 +13145,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:26.224Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto328",
@@ -12702,7 +13164,7 @@
       "will-say statements — pandemic — witness — videoconference — merits"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12712,8 +13174,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T01:27:27.286Z",
+    "matched_case": "2020canlii31368",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2021hrto327",
@@ -12842,7 +13309,7 @@
       "email — undeliverable — misapplied — respond — misinterpreted"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12852,8 +13319,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T01:27:27.311Z",
+    "matched_case": "2021hrto175"
   },
   {
     "case_id": "2021hrto322",
@@ -13122,7 +13593,7 @@
       "email — undeliverable — letter by mail — copying — respond"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13132,8 +13603,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T00:30:29.544Z",
+    "matched_case": "2021hrto322"
   },
   {
     "case_id": "2021hrto312",
@@ -13387,7 +13862,7 @@
       "compensation for injury to dignity — email — feelings — discrimination — self-respect"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13397,8 +13872,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6136363636363636,
+    "classified_at": "2026-05-15T22:54:44.657Z",
+    "matched_case": "2023hrto821",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto302",
@@ -13411,7 +13891,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13421,8 +13901,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:36.296Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto301",
@@ -13435,7 +13920,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13445,8 +13930,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:37.553Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto300",
@@ -13546,7 +14036,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13556,8 +14046,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:38.741Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto296",
@@ -13570,7 +14065,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13580,8 +14075,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:39.857Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto295",
@@ -13594,7 +14094,7 @@
       "discrimination — colour — jurisdiction — fall — prohibited"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13604,8 +14104,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T22:54:44.677Z",
+    "matched_case": "2021hrto34"
   },
   {
     "case_id": "2021hrto294",
@@ -13618,7 +14122,7 @@
       "good faith — plain — alleged discrimination — letter — incident"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13628,8 +14132,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6100000000000001,
+    "classified_at": "2026-05-15T01:27:42.045Z",
+    "matched_case": "2026hrto31",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto293",
@@ -13724,7 +14233,7 @@
       "letter — estate trustee — appointment — undeliverable — abeyance"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13734,8 +14243,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:44.279Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto290",
@@ -13777,7 +14291,7 @@
       "returned as undeliverable — letter — mediation — advise — scheduled"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13787,8 +14301,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7166666666666667,
+    "classified_at": "2026-05-15T00:30:30.064Z",
+    "matched_case": "2021hrto194"
   },
   {
     "case_id": "2021hrto288",
@@ -13854,7 +14372,7 @@
       "thesis supervisor — reprisal — disability — alleged discrimination — reasonable prospect"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13864,8 +14382,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T01:27:46.602Z",
+    "matched_case": "2021hrto87",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto285",
@@ -14100,7 +14623,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -14110,8 +14633,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:50.140Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto276",
@@ -14124,7 +14652,7 @@
       "letter — estate trustee — appointment — undeliverable — authorises"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -14134,8 +14662,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:27:51.196Z",
+    "matched_case": "2022hrto742",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto275",
@@ -14312,7 +14845,7 @@
       "defer consideration — pending the outcome — proceeding — tribunalsontario — https"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -14322,8 +14855,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:27:53.428Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto268",
@@ -14553,7 +15090,7 @@
       "reasonable prospect — father — summary — supervisor — success"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -14563,8 +15100,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T01:27:57.016Z",
+    "matched_case": "2021hrto74"
   },
   {
     "case_id": "2021hrto259",
@@ -14741,7 +15282,7 @@
       "arbitration proceeding — deferral — pending the conclusion — grievance — defer consideration"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -14751,8 +15292,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:27:59.458Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto252",
@@ -14910,7 +15455,7 @@
       "mental health counsellor — good faith — submitted — delay — medical"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -14920,8 +15465,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:28:00.735Z",
+    "matched_case": "2026hrto369",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto246",
@@ -15180,7 +15730,7 @@
       "appropriately dealt with the substance — defer — fired — obiter dicta — returned to his pre-accident"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15190,8 +15740,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:28:05.334Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto236",
@@ -15257,7 +15811,7 @@
       "good faith — delay — alleged discrimination — untimely — plain"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15267,8 +15821,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:28:08.884Z",
+    "matched_case": "2023hrto1479",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto233",
@@ -15281,7 +15840,7 @@
       "discrimination — jurisdiction — allegations — fall — conclusory"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15291,8 +15850,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:28:10.351Z",
+    "matched_case": "2023hrto211",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto232",
@@ -15305,7 +15869,7 @@
       "municipal by-law enforcement — good faith — alleged discrimination — incident — faith reason for the delay"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15315,8 +15879,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6088235294117648,
+    "classified_at": "2026-05-15T01:28:12.297Z",
+    "matched_case": "2024hrto585",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto231",
@@ -15329,7 +15898,7 @@
       "email to the email address — returned as undeliverable — mediation — periods — scheduled"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15339,8 +15908,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6807692307692308,
+    "classified_at": "2026-05-15T00:30:31.289Z",
+    "matched_case": "2021hrto25"
   },
   {
     "case_id": "2021hrto230",
@@ -15382,7 +15955,7 @@
       "arguments — conflict with established jurisprudence — restate — opportunity — merit"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15392,8 +15965,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:28:13.678Z",
+    "matched_case": "2025hrto23",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto228",
@@ -15406,7 +15984,7 @@
       "pregnancy — discrimination — incidents — good faith — delay was incurred"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15416,8 +15994,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6136363636363636,
+    "classified_at": "2026-05-15T01:28:15.100Z",
+    "matched_case": "2026hrto92",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto227",
@@ -15647,7 +16230,7 @@
       "email — alternative contact — amend — respond — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15657,8 +16240,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.69375,
+    "classified_at": "2026-05-15T01:28:22.226Z",
+    "matched_case": "2021hrto103"
   },
   {
     "case_id": "2021hrto218",
@@ -15864,7 +16451,7 @@
       "adjudicative — jurisdiction — unfairness — undeliverable — discrimination"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15874,8 +16461,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.69375,
+    "classified_at": "2026-05-15T22:55:06.439Z",
+    "matched_case": "2021hrto179"
   },
   {
     "case_id": "2021hrto210",
@@ -15888,7 +16479,7 @@
       "discrimination — prohibited — jurisdiction — bullied — allegations"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15898,8 +16489,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:28:25.721Z",
+    "matched_case": "2023hrto211",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto209",
@@ -15912,7 +16508,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15922,8 +16518,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:31.788Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto208",
@@ -15989,7 +16589,7 @@
       "email to the email address — returned as undeliverable — mediation — periods — scheduled"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15999,8 +16599,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6807692307692308,
+    "classified_at": "2026-05-15T00:30:31.878Z",
+    "matched_case": "2021hrto25"
   },
   {
     "case_id": "2021hrto205",
@@ -16042,7 +16646,7 @@
       "discrimination — good faith — delay — incident — online"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16052,8 +16656,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.625,
+    "classified_at": "2026-05-15T01:28:28.172Z",
+    "matched_case": "2023hrto1479",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto203",
@@ -16095,7 +16704,7 @@
       "withdrawal — scheduled for tomorrow is cancelled — refile the same allegations — organization — terms"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16105,8 +16714,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:04:13.829Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto201",
@@ -16288,7 +16902,7 @@
       "grievances — series — incidents — good faith — discrimination"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16298,8 +16912,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T01:28:32.000Z",
+    "matched_case": "2023hrto1479",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto194",
@@ -16452,7 +17071,7 @@
       "purportedly exempting any entity permitted — cross-examine witnesses — candidates pass records checks — intervention — databases"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16462,8 +17081,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:28:33.169Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021hrto188",
@@ -16664,7 +17287,7 @@
       "undeliverable is satisfied the email — email to the email address — sent — respond — returned as undeliverable is satisfied"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16674,8 +17297,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:32.536Z",
+    "matched_case": "2021hrto115"
   },
   {
     "case_id": "2021hrto180",
@@ -16712,7 +17339,7 @@
       "email — adjudicative immunity — unfairness — undeliverable — jurisdiction"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16722,8 +17349,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6125,
+    "classified_at": "2026-05-15T01:28:38.911Z",
+    "matched_case": "2022hrto1464",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto178",
@@ -16823,7 +17455,7 @@
       "email — undeliverable — misapplied — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16833,8 +17465,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:32.725Z",
+    "matched_case": "2021hrto164"
   },
   {
     "case_id": "2021hrto174",
@@ -17045,7 +17681,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17055,8 +17691,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:32.817Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto166",
@@ -17093,7 +17733,7 @@
       "email — delay — jurisdictional — returned as undeliverable is satisfied — discrimination"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17103,8 +17743,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6038461538461539,
+    "classified_at": "2026-05-15T01:28:42.274Z",
+    "matched_case": "2022hrto303",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto164",
@@ -17233,7 +17878,7 @@
       "email — incident — discrimination within the meaning — unfairness — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17243,8 +17888,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.72,
+    "classified_at": "2026-05-15T22:55:16.835Z",
+    "matched_case": "2021hrto124"
   },
   {
     "case_id": "2021hrto159",
@@ -17421,7 +18070,7 @@
       "reprisal — individual — bloodstain pattern — allegations — reasonable prospect"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17431,8 +18080,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:55:19.974Z",
+    "matched_case": "2022hrto1097",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto152",
@@ -17580,7 +18234,7 @@
       "email — reprisal — undeliverable — discrimination — instituting"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17590,8 +18244,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:33.625Z",
+    "matched_case": "2021hrto752"
   },
   {
     "case_id": "2021hrto146",
@@ -17913,7 +18571,7 @@
       "mail to the mailing address — contact information — letter — updated — mailing address provided"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17923,8 +18581,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6033333333333334,
+    "classified_at": "2026-05-15T01:28:48.814Z",
+    "matched_case": "2024hrto269",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto134",
@@ -17961,7 +18624,7 @@
       "letter — returned as undeliverable — mailing — warned — mediation"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17971,8 +18634,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.69,
+    "classified_at": "2026-05-15T00:30:33.872Z",
+    "matched_case": "2021hrto194"
   },
   {
     "case_id": "2021hrto132",
@@ -18043,7 +18710,7 @@
       "discrimination within the meaning — prohibited — termination — jurisdiction — incident"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Abandoned",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18053,8 +18720,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:28:49.888Z",
+    "matched_case": "2025hrto333",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto129",
@@ -18067,7 +18739,7 @@
       "email — unfairness — undeliverable — timelines — respond"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18077,8 +18749,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:33.997Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto128",
@@ -18120,7 +18796,7 @@
       "email — discrimination — unfairness — undeliverable — respond"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18130,8 +18806,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:34.096Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto126",
@@ -18144,7 +18824,7 @@
       "deferred — proceeding — letter — undeliverable — request to proceed"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18154,8 +18834,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T01:28:49.888Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021hrto125",
@@ -18192,7 +18876,7 @@
       "email — incident — adjudicative — discrimination within the meaning — unfairness"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18202,8 +18886,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:28:52.179Z",
+    "matched_case": "2022hrto1464",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto123",
@@ -18216,7 +18905,7 @@
       "email — undeliverable — advised — respond — letter"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18226,8 +18915,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:34.362Z",
+    "matched_case": "2021hrto322"
   },
   {
     "case_id": "2021hrto122",
@@ -18583,7 +19276,7 @@
       "email to the email address — returned as undeliverable — letter — warned — mediation"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18593,8 +19286,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6807692307692308,
+    "classified_at": "2026-05-15T00:30:34.480Z",
+    "matched_case": "2021hrto25"
   },
   {
     "case_id": "2021hrto109",
@@ -18636,7 +19333,7 @@
       "jurisdiction — relationships — discrimination — plain — benefits"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18646,8 +19343,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:55:24.058Z",
+    "matched_case": "2026hrto370",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto107",
@@ -18713,7 +19415,7 @@
       "email — reprisal — unfairness — undeliverable — discrimination"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18723,8 +19425,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:34.665Z",
+    "matched_case": "2021hrto774"
   },
   {
     "case_id": "2021hrto104",
@@ -18766,7 +19472,7 @@
       "email — contact — respond — address — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18776,8 +19482,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.69375,
+    "classified_at": "2026-05-15T00:30:34.715Z",
+    "matched_case": "2021hrto398"
   },
   {
     "case_id": "2021hrto102",
@@ -18819,7 +19529,7 @@
       "deem — undeliverable — waived — notice — file"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18829,8 +19539,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T22:55:24.099Z",
+    "matched_case": "2021hrto573"
   },
   {
     "case_id": "2021hrto100",
@@ -18843,7 +19557,7 @@
       "legal representatives by email — undeliverable — letter — deferring — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18853,8 +19567,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6818181818181818,
+    "classified_at": "2026-05-15T00:30:34.807Z",
+    "matched_case": "2021hrto173"
   },
   {
     "case_id": "2021hrto99",
@@ -19012,7 +19730,7 @@
       "email to the email address — returned as undeliverable — letter — warned — mediation"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -19022,8 +19740,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6807692307692308,
+    "classified_at": "2026-05-15T00:30:34.907Z",
+    "matched_case": "2021hrto25"
   },
   {
     "case_id": "2021hrto93",
@@ -19084,7 +19806,7 @@
       "via email — unfairness — undeliverable — discrimination — respond"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -19094,8 +19816,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.69375,
+    "classified_at": "2026-05-15T00:30:35.095Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto90",
@@ -19195,7 +19921,7 @@
       "reasonable prospect — work — discrimination — evidence — reprisal"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -19205,8 +19931,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T00:30:35.147Z",
+    "matched_case": "2021hrto188"
   },
   {
     "case_id": "2021hrto86",
@@ -19364,7 +20094,7 @@
       "appropriately dealt with the substance — e-mail message — apartment — human — evicted"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -19374,8 +20104,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:28:57.704Z",
+    "matched_case": "2022hrto617",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto80",
@@ -19388,7 +20123,7 @@
       "good faith — delay — incident — alleged discrimination — filing"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -19398,8 +20133,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6166666666666667,
+    "classified_at": "2026-05-15T01:28:58.823Z",
+    "matched_case": "2023hrto1479",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto79",
@@ -19552,7 +20292,7 @@
       "reasonable prospect — reprisal — discrimination — summary — success"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -19562,8 +20302,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T00:30:35.381Z",
+    "matched_case": "2021hrto188"
   },
   {
     "case_id": "2021hrto73",
@@ -20044,7 +20788,7 @@
       "reasonable prospect — evidence — finger — treatment — summary"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20054,8 +20798,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T22:55:33.298Z",
+    "matched_case": "2022hrto653",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto55",
@@ -20440,7 +21189,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20450,8 +21199,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:35.775Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto41",
@@ -20464,7 +21217,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20474,8 +21227,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:35.821Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto40",
@@ -20488,7 +21245,7 @@
       "email — unfairness — undeliverable — discrimination — respond"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20498,8 +21255,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:35.855Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto39",
@@ -20570,7 +21331,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20580,8 +21341,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:35.927Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto36",
@@ -20594,7 +21359,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20604,8 +21369,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:36.025Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto35",
@@ -20618,7 +21387,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": true,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20628,8 +21397,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:36.077Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto34",
@@ -20642,7 +21415,7 @@
       "discrimination — prohibited — jurisdiction — allegations — fall"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20652,8 +21425,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:29:11.134Z",
+    "matched_case": "2023hrto211",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto33",
@@ -20666,7 +21444,7 @@
       "reasonable prospect — discrimination — summary — store — shuttle"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20676,8 +21454,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T01:29:11.168Z",
+    "matched_case": "2021hrto74"
   },
   {
     "case_id": "2021hrto32",
@@ -20767,7 +21549,7 @@
       "reasonable prospect — summary — gender — discrimination on the basis — evidence"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20777,8 +21559,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T22:55:37.293Z",
+    "matched_case": "2022hrto96",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto28",
@@ -20791,7 +21578,7 @@
       "apartment — actions — race — reconsider — revisiting"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20801,8 +21588,11 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:30:36.395Z"
   },
   {
     "case_id": "2021hrto27",
@@ -21003,7 +21793,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -21013,8 +21803,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:36.559Z",
+    "matched_case": "2021hrto650"
   },
   {
     "case_id": "2021hrto19",
@@ -21027,7 +21821,7 @@
       "returned as undeliverable — mediation — email to the address provided — periods — letter"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -21037,8 +21831,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6923076923076923,
+    "classified_at": "2026-05-15T00:30:36.648Z",
+    "matched_case": "2021hrto25"
   },
   {
     "case_id": "2021hrto18",
@@ -21268,7 +22066,7 @@
       "estate — email — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -21278,8 +22076,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:30:36.821Z",
+    "matched_case": "2021hrto164"
   },
   {
     "case_id": "2021hrto6",
@@ -21292,7 +22094,7 @@
       "discrimination — incident — good faith — respond — undeliverable"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -21302,8 +22104,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T01:29:20.163Z",
+    "matched_case": "2023hrto1725",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2021hrto12",
@@ -21374,7 +22181,7 @@
       "email — proceeding — returned as undeliverable — letter — deferred"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -21384,8 +22191,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T01:29:20.163Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021hrto5",
@@ -21504,7 +22315,7 @@
       "representative — good faith — delay — medical — paralegal"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -21514,7 +22325,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T01:29:23.415Z",
+    "matched_case": "2025hrto973",
+    "source_database": "onhrt"
   }
 ]

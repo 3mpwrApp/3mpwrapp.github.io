@@ -93,7 +93,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed - Full",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -103,9 +103,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:51:20.057Z",
+    "matched_case": "2021canlii140788",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii122916",
@@ -120,7 +125,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -130,9 +135,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T22:51:21.084Z",
+    "matched_case": "2020onwsiat1937",
+    "source_database": "unknown"
   },
   {
     "case_id": "2023canlii138801",
@@ -147,7 +157,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -157,9 +167,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:51:22.130Z",
+    "matched_case": "2022canlii99432",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii122873",
@@ -476,7 +491,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -486,9 +501,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:18:52.785Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii112866",
@@ -611,7 +630,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -621,9 +640,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:18:57.268Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii112873",
@@ -773,7 +796,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -783,9 +806,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T22:51:41.509Z",
+    "matched_case": "2021canlii65124",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii100655",
@@ -800,7 +828,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -810,9 +838,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:19:04.530Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii100630",
@@ -935,7 +967,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed - Full",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -945,9 +977,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5966666666666667,
+    "classified_at": "2026-05-15T01:19:11.428Z",
+    "matched_case": "2025canlii144153",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii100127",
@@ -989,7 +1026,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -999,9 +1036,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:19:12.607Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii89183",
@@ -1016,7 +1057,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1026,9 +1067,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:30:18.454Z"
   },
   {
     "case_id": "2023canlii100649",
@@ -1340,7 +1384,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1350,9 +1394,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:19:25.404Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii89200",
@@ -1502,7 +1550,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1512,9 +1560,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5961538461538463,
+    "classified_at": "2026-05-15T07:03:33.129Z",
+    "matched_case": "2024canlii64305",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii112874",
@@ -1583,7 +1636,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1593,9 +1646,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:52:05.066Z",
+    "matched_case": "2022canlii54925",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii89185",
@@ -1610,7 +1668,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1620,9 +1678,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:30:18.456Z"
   },
   {
     "case_id": "2023canlii74907",
@@ -1664,7 +1725,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1674,9 +1735,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T22:52:07.021Z",
+    "matched_case": "2021canlii133938",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii74871",
@@ -1745,7 +1811,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed - Full",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1755,9 +1821,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T22:52:10.080Z",
+    "matched_case": "2021canlii140788",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii68381",
@@ -1831,7 +1902,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1841,9 +1912,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:19:42.916Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii68312",
@@ -1885,7 +1960,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1895,9 +1970,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:19:42.916Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii68343",
@@ -2020,7 +2099,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed - Full",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2030,9 +2109,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T07:03:46.971Z",
+    "matched_case": "2022canlii89426",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii57754",
@@ -2155,7 +2239,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2165,9 +2249,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:52:20.178Z",
+    "matched_case": "2024onwsiat1786",
+    "source_database": "unknown"
   },
   {
     "case_id": "2023canlii57745",
@@ -2209,7 +2298,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2219,9 +2308,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T07:03:53.560Z",
+    "matched_case": "2021canlii133937",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii57738",
@@ -2236,7 +2330,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2246,9 +2340,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:19:58.788Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii57744",
@@ -2263,7 +2361,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2273,9 +2371,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6277777777777778,
+    "classified_at": "2026-05-15T07:03:54.454Z",
+    "matched_case": "2021canlii133937",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii57731",
@@ -2290,7 +2393,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2300,9 +2403,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6277777777777778,
+    "classified_at": "2026-05-15T07:03:55.351Z",
+    "matched_case": "2021canlii133937",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii57732",
@@ -2484,7 +2592,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2494,9 +2602,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T07:04:00.972Z",
+    "matched_case": "2021canlii133937",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii37842",
@@ -2538,7 +2651,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2548,9 +2661,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T22:52:28.202Z",
+    "matched_case": "2021canlii140789",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii37839",
@@ -2565,7 +2683,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2575,9 +2693,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:20:12.354Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii34285",
@@ -2646,7 +2768,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2656,9 +2778,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6100000000000001,
+    "classified_at": "2026-05-15T22:52:31.568Z",
+    "matched_case": "2020onwsiat161",
+    "source_database": "unknown"
   },
   {
     "case_id": "2023canlii34289",
@@ -2673,7 +2800,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2683,9 +2810,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:20:15.743Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii24816",
@@ -2997,7 +3128,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3007,9 +3138,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T07:04:16.538Z",
+    "matched_case": "2022canlii68189",
+    "source_database": "onwsib"
   },
   {
     "case_id": "2023canlii34284",
@@ -3105,7 +3241,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3115,9 +3251,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:30:18.460Z"
   },
   {
     "case_id": "2023canlii13768",
@@ -3132,7 +3271,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3142,9 +3281,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:20:34.950Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2023canlii57742",

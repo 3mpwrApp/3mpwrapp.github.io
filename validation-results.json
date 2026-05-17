@@ -1,0 +1,21 @@
+{
+  "total": 100,
+  "reviewed": 0,
+  "correct": 0,
+  "incorrect": 0,
+  "ambiguous": 0,
+  "notReviewed": 100,
+  "overallAccuracy": 0,
+  "byTribunal": {},
+  "byConfidenceBand": {},
+  "byOutcome": {},
+  "byMethod": {},
+  "confusionMatrix": {},
+  "recommendations": [
+    {
+      "severity": "CRITICAL",
+      "message": "Overall accuracy 0% is below acceptable threshold. Consider major revision of classification methodology.",
+      "action": "Increase minimum confidence threshold to 0.65 or higher. Consider excluding low-confidence predictions entirely."
+    }
+  ]
+}

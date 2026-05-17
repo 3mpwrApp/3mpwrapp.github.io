@@ -282,7 +282,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -292,9 +292,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:33:05.170Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca923",
@@ -550,7 +554,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -560,9 +564,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:18.080Z"
   },
   {
     "case_id": "2021onca910",
@@ -931,7 +938,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -941,9 +948,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:33:08.008Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca899",
@@ -1054,7 +1065,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1064,9 +1075,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.9,
+    "classified_at": "2026-05-15T03:33:08.008Z",
+    "pattern_match_count": 3
   },
   {
     "case_id": "2021onca902",
@@ -1108,7 +1123,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1118,9 +1133,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.595925925925926,
+    "classified_at": "2026-05-15T03:33:11.149Z",
+    "matched_case": "2024onca69",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca893",
@@ -1365,7 +1385,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1375,9 +1395,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T03:33:20.307Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021onca889",
@@ -2232,7 +2256,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2242,9 +2266,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:09:01.717Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca850",
@@ -2345,7 +2374,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2355,9 +2384,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T03:33:30.367Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021onca843",
@@ -3229,7 +3262,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3239,9 +3272,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:33:35.222Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca814",
@@ -5056,7 +5093,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5066,9 +5103,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:27.048Z"
   },
   {
     "case_id": "2021onca743",
@@ -5292,7 +5332,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5302,9 +5342,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:34:04.957Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca747",
@@ -5418,7 +5462,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Costs Decision",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5428,9 +5472,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7071428571428571,
+    "classified_at": "2026-05-15T00:40:27.726Z",
+    "matched_case": "2021onca12"
   },
   {
     "case_id": "2021onca739",
@@ -5600,7 +5648,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5610,9 +5658,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:27.726Z"
   },
   {
     "case_id": "2021onca732",
@@ -5654,7 +5705,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5664,9 +5715,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:34:04.958Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca728",
@@ -6543,7 +6598,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6553,9 +6608,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:09:02.563Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca680",
@@ -6742,7 +6802,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6752,9 +6812,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:09:02.718Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca686",
@@ -7086,7 +7151,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7096,9 +7161,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:09:02.861Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca677",
@@ -7354,7 +7424,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7364,9 +7434,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:34:35.661Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca665",
@@ -7676,7 +7750,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Costs Decision",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7686,9 +7760,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6038461538461539,
+    "classified_at": "2026-05-15T03:34:37.686Z",
+    "matched_case": "2023onca573",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca657",
@@ -8133,7 +8212,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8143,9 +8222,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:34:49.805Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca639",
@@ -8187,7 +8270,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8197,9 +8280,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6038461538461539,
+    "classified_at": "2026-05-15T03:34:50.990Z",
+    "matched_case": "2023onca779",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca648",
@@ -8908,7 +8996,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8918,9 +9006,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:35:02.321Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca616",
@@ -9154,7 +9246,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9164,9 +9256,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:35:02.321Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca613",
@@ -9633,7 +9729,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9643,9 +9739,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T03:35:07.162Z",
+    "matched_case": "2020onca567",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca590",
@@ -9940,7 +10041,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -9950,9 +10051,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:35:16.392Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca581",
@@ -9994,7 +10099,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -10004,9 +10109,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:42.041Z"
   },
   {
     "case_id": "2021onca574",
@@ -10176,7 +10284,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -10186,9 +10294,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:42.041Z"
   },
   {
     "case_id": "2021onca570",
@@ -10604,7 +10715,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -10614,9 +10725,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:42.859Z"
   },
   {
     "case_id": "2021onca562",
@@ -11650,7 +11764,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -11660,9 +11774,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:35:32.568Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca520",
@@ -11766,7 +11884,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Costs Decision",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -11776,9 +11894,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:45.154Z"
   },
   {
     "case_id": "2021onca515",
@@ -12303,7 +12424,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -12313,9 +12434,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:46.495Z"
   },
   {
     "case_id": "2021onca504",
@@ -13148,7 +13272,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13158,9 +13282,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:48.776Z"
   },
   {
     "case_id": "2021onca472",
@@ -13295,7 +13422,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Application Deficiency",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13305,9 +13432,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:09:04.347Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca461",
@@ -13880,7 +14012,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -13890,9 +14022,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:36:18.130Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca440",
@@ -14541,7 +14677,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -14551,9 +14687,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-16T00:10:10.774Z",
+    "matched_case": "2022onca794",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca419",
@@ -14829,7 +14970,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Application Deficiency",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -14839,9 +14980,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:36:30.785Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca410",
@@ -15038,7 +15183,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -15048,9 +15193,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:36:30.785Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca400",
@@ -16084,7 +16233,7 @@
       "Courts of Justice Act, s. 6"
     ],
     "legislation_count": 1,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16094,9 +16243,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": true
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:36:42.850Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca375",
@@ -16426,7 +16579,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16436,9 +16589,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:36:42.851Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca359",
@@ -16814,7 +16971,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16824,9 +16981,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T03:36:46.599Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021onca343",
@@ -16986,7 +17147,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -16996,9 +17157,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:56.185Z"
   },
   {
     "case_id": "2021onca345",
@@ -17394,7 +17558,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17404,9 +17568,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:40:56.961Z"
   },
   {
     "case_id": "2021onca321",
@@ -17480,7 +17647,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17490,9 +17657,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T03:36:59.614Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021onca317",
@@ -17679,7 +17850,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Application Deficiency",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -17689,9 +17860,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T03:37:02.438Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021onca318",
@@ -18222,7 +18397,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18232,9 +18407,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:37:12.406Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021canlii151477",
@@ -18621,7 +18800,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18631,9 +18810,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:37:16.690Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca280",
@@ -18921,7 +19104,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Motion/Interlocutory Decision",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -18931,9 +19114,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6282608695652174,
+    "classified_at": "2026-05-15T03:37:19.052Z",
+    "matched_case": "2024onca98",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca267",
@@ -19066,7 +19254,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -19076,9 +19264,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:41:00.520Z"
   },
   {
     "case_id": "2021onca253",
@@ -19125,7 +19316,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -19135,9 +19326,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T03:37:20.102Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2021onca270",
@@ -19976,7 +20171,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -19986,9 +20181,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:37:25.149Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca235",
@@ -20234,7 +20433,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -20244,9 +20443,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T03:37:29.584Z",
+    "matched_case": "2020onca567",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca224",
@@ -21510,7 +21714,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -21520,9 +21724,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:37:44.530Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca184",
@@ -21596,7 +21804,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Application Deficiency",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -21606,9 +21814,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:37:44.530Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca176",
@@ -21623,7 +21835,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -21633,9 +21845,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:37:44.531Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca179",
@@ -23008,7 +23224,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -23018,9 +23234,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:09:06.167Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca131",
@@ -23620,7 +23841,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Allowed",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -23630,9 +23851,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:37:55.927Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca114",
@@ -23647,7 +23872,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -23657,9 +23882,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:37:55.928Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca110",
@@ -24120,7 +24349,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -24130,9 +24359,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T03:38:01.506Z",
+    "matched_case": "2020onca567",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca92",
@@ -24802,7 +25036,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -24812,9 +25046,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:09:06.448Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca72",
@@ -25207,7 +25446,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -25217,9 +25456,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:38:18.704Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca57",
@@ -25874,7 +26117,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -25884,9 +26127,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:38:25.960Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca35",
@@ -26083,7 +26330,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -26093,9 +26340,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T03:38:26.849Z",
+    "matched_case": "2020onca363",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca29",
@@ -26796,7 +27048,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -26806,9 +27058,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T03:38:27.827Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2021onca18",
@@ -26963,7 +27219,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Costs Decision",
     "has_worker_injury_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -26973,9 +27229,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T03:38:32.174Z",
+    "matched_case": "2020onca779",
+    "source_database": "onca"
   },
   {
     "case_id": "2021onca3",

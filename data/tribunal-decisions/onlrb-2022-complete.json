@@ -377,7 +377,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -387,9 +387,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T02:49:10.026Z",
+    "matched_case": "2026canlii20099",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii6783",
@@ -404,7 +409,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -414,9 +419,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7124999999999999,
+    "classified_at": "2026-05-15T00:37:22.608Z",
+    "matched_case": "2022canlii6752"
   },
   {
     "case_id": "2022canlii6778",
@@ -644,7 +653,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -654,9 +663,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.705,
+    "classified_at": "2026-05-15T00:37:22.624Z",
+    "matched_case": "2022canlii5028"
   },
   {
     "case_id": "2022canlii6752",
@@ -703,7 +716,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -713,9 +726,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T02:49:18.539Z",
+    "matched_case": "2020canlii41802",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii5464",
@@ -757,7 +775,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -767,9 +785,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T02:49:20.744Z",
+    "matched_case": "2020canlii73293",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii5459",
@@ -838,7 +861,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -848,9 +871,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.73125,
+    "classified_at": "2026-05-15T02:49:25.200Z",
+    "matched_case": "2022canlii3446"
   },
   {
     "case_id": "2022canlii5452",
@@ -865,7 +892,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -875,9 +902,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:37:22.655Z"
   },
   {
     "case_id": "2022canlii5444",
@@ -1010,7 +1040,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1020,9 +1050,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:37:22.659Z"
   },
   {
     "case_id": "2022canlii5454",
@@ -1064,7 +1097,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1074,9 +1107,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.73125,
+    "classified_at": "2026-05-15T02:49:30.025Z",
+    "matched_case": "2022canlii3446"
   },
   {
     "case_id": "2022canlii5450",
@@ -1246,7 +1283,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1256,9 +1293,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T02:49:33.136Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2022canlii5422",
@@ -1300,7 +1341,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1310,9 +1351,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.7,
+    "classified_at": "2026-05-15T02:49:33.166Z",
+    "matched_case": "2022canlii6783"
   },
   {
     "case_id": "2022canlii5420",
@@ -1523,7 +1568,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -1533,9 +1578,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:37:22.725Z"
   },
   {
     "case_id": "2022canlii5453",
@@ -2486,7 +2534,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2496,9 +2544,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6214285714285714,
+    "classified_at": "2026-05-15T02:50:31.715Z",
+    "matched_case": "2020canlii69603",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii5001",
@@ -2626,7 +2679,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2636,9 +2689,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T02:50:40.735Z",
+    "matched_case": "2020canlii41802",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii4994",
@@ -2680,7 +2738,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2690,9 +2748,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T02:50:43.597Z",
+    "matched_case": "2020canlii41498",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii4990",
@@ -2771,7 +2834,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2781,9 +2844,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T02:50:43.612Z",
+    "matched_case": "2022canlii1701"
   },
   {
     "case_id": "2022canlii4982",
@@ -2884,7 +2951,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2894,9 +2961,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.75,
+    "classified_at": "2026-05-15T00:37:22.854Z",
+    "matched_case": "2022canlii4973"
   },
   {
     "case_id": "2022canlii5021",
@@ -2943,7 +3014,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -2953,9 +3024,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:07:14.808Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2022canlii4986",
@@ -2997,7 +3073,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3007,9 +3083,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T02:50:46.473Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2022canlii4977",
@@ -3024,7 +3104,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3034,9 +3114,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T23:41:36.277Z",
+    "matched_case": "2020canlii43129",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii4976",
@@ -3400,7 +3485,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3410,9 +3495,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T02:50:50.558Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2022canlii3502",
@@ -3481,7 +3570,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3491,9 +3580,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:07:15.165Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2022canlii3476",
@@ -3734,7 +3828,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3744,9 +3838,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.69,
+    "classified_at": "2026-05-15T00:37:22.922Z",
+    "matched_case": "2022canlii4966"
   },
   {
     "case_id": "2022canlii3445",
@@ -3815,7 +3913,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -3825,9 +3923,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T23:41:45.757Z",
+    "matched_case": "2020canlii68292",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii3511",
@@ -4387,7 +4490,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Application Deficiency",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4397,9 +4500,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6125,
+    "classified_at": "2026-05-15T02:51:17.882Z",
+    "matched_case": "2025canlii49433",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii3473",
@@ -4522,7 +4630,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Dismissed",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4532,9 +4640,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T23:41:54.510Z",
+    "matched_case": "2022canlii4996"
   },
   {
     "case_id": "2022canlii3458",
@@ -4753,7 +4865,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Stayed/Adjourned",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -4763,9 +4875,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T02:51:28.419Z",
+    "matched_case": "2025canlii25757",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii2478",
@@ -5038,7 +5155,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5048,9 +5165,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.705,
+    "classified_at": "2026-05-15T00:37:23.044Z",
+    "matched_case": "2022canlii5028"
   },
   {
     "case_id": "2022canlii2435",
@@ -5463,7 +5584,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5473,9 +5594,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T23:42:08.603Z",
+    "matched_case": "2022canlii5461",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii2449",
@@ -5544,7 +5670,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5554,9 +5680,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6277777777777778,
+    "classified_at": "2026-05-15T02:51:53.697Z",
+    "matched_case": "2020canlii54933",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii2445",
@@ -5716,7 +5847,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5726,9 +5857,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T02:52:01.669Z",
+    "matched_case": "2020canlii16786",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii2433",
@@ -5824,7 +5960,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5834,9 +5970,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.7,
+    "classified_at": "2026-05-15T00:37:23.133Z",
+    "matched_case": "2022canlii1678"
   },
   {
     "case_id": "2022canlii2456",
@@ -5905,7 +6045,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5915,9 +6055,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6214285714285714,
+    "classified_at": "2026-05-15T02:52:07.690Z",
+    "matched_case": "2020canlii69603",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii2443",
@@ -5964,7 +6109,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -5974,9 +6119,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6214285714285714,
+    "classified_at": "2026-05-15T02:52:09.450Z",
+    "matched_case": "2020canlii69603",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii2425",
@@ -6087,7 +6237,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6097,9 +6247,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6227272727272728,
+    "classified_at": "2026-05-15T02:52:11.181Z",
+    "matched_case": "2026canlii17862",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii2421",
@@ -6114,7 +6269,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6124,9 +6279,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:07:18.041Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2022canlii2420",
@@ -6463,7 +6623,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6473,9 +6633,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T02:52:16.372Z",
+    "matched_case": "2026canlii13067",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii1689",
@@ -6640,7 +6805,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6650,9 +6815,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:37:23.179Z"
   },
   {
     "case_id": "2022canlii1667",
@@ -6903,7 +7071,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6913,9 +7081,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6045454545454546,
+    "classified_at": "2026-05-15T02:52:21.172Z",
+    "matched_case": "2023canlii10018",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii1676",
@@ -6930,7 +7103,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -6940,9 +7113,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.85,
+    "classified_at": "2026-05-15T02:52:21.172Z",
+    "pattern_match_count": 2
   },
   {
     "case_id": "2022canlii1674",
@@ -7016,7 +7193,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7026,9 +7203,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5954545454545455,
+    "classified_at": "2026-05-15T02:52:22.814Z",
+    "matched_case": "2021canlii27379",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii1664",
@@ -7325,7 +7507,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Remitted",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7335,9 +7517,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T00:37:23.241Z"
   },
   {
     "case_id": "2022canlii1694",
@@ -7352,7 +7537,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7362,9 +7547,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T02:52:34.396Z",
+    "matched_case": "2023canlii6030",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii1686",
@@ -7379,7 +7569,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7389,9 +7579,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:07:19.197Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2022canlii1682",
@@ -7406,7 +7601,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7416,9 +7611,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T02:52:38.323Z",
+    "matched_case": "2020canlii41498",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii1680",
@@ -7465,7 +7665,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7475,9 +7675,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T02:52:40.086Z",
+    "matched_case": "2025canlii46664",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii1678",
@@ -7610,7 +7815,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7620,9 +7825,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.638888888888889,
+    "classified_at": "2026-05-15T02:52:43.650Z",
+    "matched_case": "2023canlii2881",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii1661",
@@ -7954,7 +8164,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7964,9 +8174,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6214285714285714,
+    "classified_at": "2026-05-15T02:52:50.747Z",
+    "matched_case": "2020canlii73293",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii525",
@@ -7981,7 +8196,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -7991,9 +8206,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T23:42:28.230Z",
+    "matched_case": "2024canlii5453",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii524",
@@ -8035,7 +8255,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8045,9 +8265,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.75,
+    "classified_at": "2026-05-15T00:37:23.382Z",
+    "matched_case": "2022canlii4973"
   },
   {
     "case_id": "2022canlii522",
@@ -8121,7 +8345,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Representation Vote",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8131,9 +8355,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_same_db",
+    "classification_confidence": 0.69,
+    "classified_at": "2026-05-15T02:52:54.255Z",
+    "matched_case": "2022canlii3446"
   },
   {
     "case_id": "2022canlii519",
@@ -8325,7 +8553,7 @@
     "keywords_extracted": [],
     "legislation_cited": [],
     "legislation_count": 0,
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_retaliation_issue": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -8335,9 +8563,14 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false,
+      "has_outcome": true,
       "has_legislation": false
-    }
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T02:52:57.666Z",
+    "matched_case": "2020canlii41826",
+    "source_database": "onlrb"
   },
   {
     "case_id": "2022canlii126501",

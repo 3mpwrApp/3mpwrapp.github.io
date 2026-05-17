@@ -1,0 +1,64 @@
+{
+  "totalProcessed": 50161,
+  "totalClassified": 3586,
+  "totalUnknown": 11756,
+  "byTribunal": {
+    "onwsiat": {
+      "total": 11430,
+      "classified": 2992,
+      "unknown": 6020,
+      "unknownRate": "52.7"
+    },
+    "onsbt": {
+      "total": 13798,
+      "classified": 11,
+      "unknown": 738,
+      "unknownRate": "5.3"
+    },
+    "onwsib": {
+      "total": 463,
+      "classified": 34,
+      "unknown": 252,
+      "unknownRate": "54.4"
+    },
+    "onhrt": {
+      "total": 9269,
+      "classified": 253,
+      "unknown": 1279,
+      "unknownRate": "13.8"
+    },
+    "onlrb": {
+      "total": 10167,
+      "classified": 280,
+      "unknown": 2868,
+      "unknownRate": "28.2"
+    },
+    "onca": {
+      "total": 5034,
+      "classified": 16,
+      "unknown": 599,
+      "unknownRate": "11.9"
+    }
+  },
+  "byOutcome": {
+    "Allowed": 1950,
+    "Reconsideration": 583,
+    "Costs Decision": 9,
+    "Procedural": 298,
+    "Allowed - Full": 244,
+    "Interim Decision": 107,
+    "Settled/Withdrawn": 38,
+    "Dismissed": 88,
+    "Application Deficiency": 38,
+    "Discontinued": 100,
+    "Remitted": 44,
+    "Abandoned": 23,
+    "No Jurisdiction": 2,
+    "Representation Vote": 60,
+    "Stayed/Adjourned": 2
+  },
+  "byMethod": {
+    "similarity_match_cross_db": 2720,
+    "similarity_match_same_db": 866
+  }
+}

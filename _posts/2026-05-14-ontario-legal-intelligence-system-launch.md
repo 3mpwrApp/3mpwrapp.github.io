@@ -349,7 +349,7 @@ We'll update this page as progress continues. Subscribe to [RSS](/feed.xml) for 
 
 This isn't just about data — it's about **power**.
 
-When workers don't know:
+When people don't know:
 - ❌ What evidence wins appeals
 - ❌ What arguments fail
 - ❌ What patterns predict denials

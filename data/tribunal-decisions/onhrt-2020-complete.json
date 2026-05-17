@@ -179,7 +179,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -189,8 +189,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T00:30:20.863Z",
+    "matched_case": "2020hrto1031"
   },
   {
     "case_id": "2020hrto1028",
@@ -203,7 +207,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -213,8 +217,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T00:30:20.865Z",
+    "matched_case": "2020hrto1031"
   },
   {
     "case_id": "2020hrto1027",
@@ -227,7 +235,7 @@
       "undeliverable — formerly — email address — responded — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -237,8 +245,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T01:24:08.777Z",
+    "matched_case": "2021hrto12",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2020hrto1026",
@@ -251,7 +264,7 @@
       "reprisal — discrimination — allegations — jurisdiction — unfairness"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -261,8 +274,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T01:24:09.936Z",
+    "matched_case": "2021hrto774",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2020hrto1025",
@@ -275,7 +293,7 @@
       "email — unfairness — undeliverable — discrimination — respond"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -285,8 +303,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T00:30:20.870Z",
+    "matched_case": "2020hrto1031"
   },
   {
     "case_id": "2020hrto1024",
@@ -299,7 +321,7 @@
       "delay — seeking reactivation — evidence — conflict with established jurisprudence — sessions"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Reconsideration",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -309,8 +331,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.5961538461538463,
+    "classified_at": "2026-05-15T01:24:11.420Z",
+    "matched_case": "2021hrto775",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2020hrto1023",
@@ -347,7 +374,7 @@
       "withdrawal — administrative closing letter — paranoia — psychosis — resile"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -357,8 +384,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match_single",
+    "classification_confidence": 0.52,
+    "classified_at": "2026-05-16T01:04:10.090Z",
+    "classification_version": "v3.0",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2020hrto1021",
@@ -371,7 +403,7 @@
       "series — allegations — gender — good faith — fellow workers"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -381,8 +413,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6000000000000001,
+    "classified_at": "2026-05-15T22:53:41.826Z",
+    "matched_case": "2026hrto37",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2020hrto1016",
@@ -477,7 +514,7 @@
       "good faith — delay — discrimination — untimely — plain"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Settled/Withdrawn",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -487,8 +524,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6055555555555556,
+    "classified_at": "2026-05-15T01:24:20.945Z",
+    "matched_case": "2023hrto1479",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2020hrto1008",
@@ -501,7 +543,7 @@
       "returned as undeliverable — email to the address provided — letter — warned — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Interim Decision",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -511,8 +553,13 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match_cross_db",
+    "classification_confidence": 0.6346153846153847,
+    "classified_at": "2026-05-15T01:24:23.221Z",
+    "matched_case": "2021hrto19",
+    "source_database": "onhrt"
   },
   {
     "case_id": "2020hrto1007",
@@ -525,7 +572,7 @@
       "email — unfairness — undeliverable — respond — periods"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Discontinued",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -535,8 +582,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "similarity_match",
+    "classification_confidence": 0.6833333333333333,
+    "classified_at": "2026-05-15T00:30:20.902Z",
+    "matched_case": "2020hrto1031"
   },
   {
     "case_id": "2020hrto1006",
@@ -747,7 +798,7 @@
       "confidentiality — sealing — media — children — disclosure"
     ],
     "keywords_extracted": [],
-    "outcome": "Unknown",
+    "outcome": "Procedural",
     "has_disability_ground": false,
     "full_text_html": "",
     "full_text_length": 0,
@@ -757,8 +808,12 @@
     "data_quality": {
       "has_full_text": false,
       "has_keywords": false,
-      "has_outcome": false
-    }
+      "has_outcome": true
+    },
+    "classification_method": "pattern_match",
+    "classification_confidence": 0.8,
+    "classified_at": "2026-05-15T01:24:25.925Z",
+    "pattern_match_count": 1
   },
   {
     "case_id": "2020hrto632",
