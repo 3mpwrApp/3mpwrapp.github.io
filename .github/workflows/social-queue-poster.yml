@@ -31,12 +31,12 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --fund=false
 
       - name: Process social queue
-        run: node scripts/social-queue-processor.js
+        run: node scripts/social/social-queue-processor.js
         continue-on-error: true
 
       - name: Post to platforms (if post ready)
         if: hashFiles('public/daily-feature-social.json') != ''
-        run: node scripts/post-daily-feature.js
+        run: node scripts/utils/post-daily-feature.js
         env:
           MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
           MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE || 'https://mastodon.social' }}

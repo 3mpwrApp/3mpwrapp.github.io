@@ -81,7 +81,7 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           echo "📣 Posting to social media..."
-          node scripts/post-daily-feature.js
+          node scripts/utils/post-daily-feature.js
           echo "✅ Social posting complete"
 
       - name: Show results

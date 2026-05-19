@@ -49,12 +49,12 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --fund=false
 
       - name: Validate content policy
-        run: node scripts/validate-content.js
+        run: node scripts/testing/validate-content.js
 
       - name: Generate weekly recap from queue
         run: |
           echo "Generating weekly recap post..."
-          node scripts/weekly-update-generator-v2.js
+          node scripts/utils/weekly-update-generator-v2.js
 
       - name: Commit update
         run: |

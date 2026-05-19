@@ -79,8 +79,8 @@ jobs:
       - name: Validate configuration
         run: |
           echo "📋 Validating curator configuration..."
-          node scripts/curator-config.js validate || echo "⚠️ Config validation optional"
-          node scripts/curator-config.js summary || echo "⚠️ Config summary optional"
+          node scripts/utils/curator-config.js validate || echo "⚠️ Config validation optional"
+          node scripts/utils/curator-config.js summary || echo "⚠️ Config summary optional"
 
       - name: Run content curation
         env:
@@ -95,7 +95,7 @@ jobs:
           echo "  Force Publish: $FORCE_PUBLISH"
           echo ""
           
-          node scripts/curator-core.js
+          node scripts/utils/curator-core.js
           
           if [ ! -f "public/curation-latest.json" ]; then
             echo "⚠️ No curation output (may be normal if no quality content found)"
@@ -105,7 +105,7 @@ jobs:
         continue-on-error: true
         run: |
           echo "🔍 Building search index..."
-          node scripts/build-search-index.js || echo "⚠️ Search index build optional"
+          node scripts/utils/build-search-index.js || echo "⚠️ Search index build optional"
 
       - name: Commit changes
         run: |
