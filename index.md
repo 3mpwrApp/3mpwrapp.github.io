@@ -114,6 +114,15 @@ description: Free community-powered platform connecting injured workers, persons
 
 <!-- Value Proposition Cards -->
 <section class="value-props" style="margin-bottom: 4rem;">
+
+  <!-- Data Download / GitHub Link -->
+  <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: #f5f7fa; border-radius: 12px; border: 2px solid #e0e6ef;">
+    <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #003d7a;">Open Data: Download & Explore</h2>
+    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: #222;">All tribunal and research data is public and open source. Download, analyze, or contribute directly on GitHub.</p>
+    <a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 36px; background: #24292f; color: #fff; border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: background 0.2s;">
+      <span aria-hidden="true">📂</span> See Data on GitHub
+    </a>
+  </section>
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2.5rem; color: var(--text-color);">
     Why 3mpwrApp?
   </h2>
