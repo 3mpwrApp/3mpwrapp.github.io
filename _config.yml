@@ -10,6 +10,7 @@ theme: minima
 # Header pages (navigation in specific order)
 header_pages:
   - about.md
+  - ai-assistant-demo.md
   - research.md
   - faq.md
   - accessibility.md
