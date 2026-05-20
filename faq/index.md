@@ -327,7 +327,7 @@ Contrast meets WCAG 2.2 AAA standards (maximum contrast).
 Complexity Mode lets you choose:
 - **Simple** (5 essential tools for crisis/bad days)
 - **Standard** (20 tools for regular use)
-- **Power User** (all 150+ features)
+- **Power User** (all 74 features)
 
 You can switch as many times per day as you want. Perfect for managing disability.
 
