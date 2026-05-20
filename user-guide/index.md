@@ -2,24 +2,22 @@
 layout: default
 title: 3mpwrApp — User Guide
 description: Step-by-step tutorials for using all 3mpwrApp features. Learn how to navigate the app, use wellness tools, manage evidence, and advocate for your rights.
-version: 4.5 (Core Docs Refresh)
-lastUpdated: 2026-02-24
+version: 4.6 (May 2026 - Production Ready)
+lastUpdated: 2026-05-19
 ---
 
 {%- include status-banner.html -%}
 
 # 3mpwrApp — User Guide
 
-**Version 4.5 (Core Docs Refresh)** | **Last Updated:** February 24, 2026
-
-**What's New Reference:** [Documentation Sync Complete → Core user docs (English)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#core-user-docs-en)
+**Version 4.6 (May 2026 - Production Ready)** | **Last Updated:** May 19, 2026
 
 Step-by-step tutorials for using all app features. Each section includes clear instructions, tips, and troubleshooting help.
 
-> 🆕 **What's New?** Jan-Feb 2026 updates are now the synced baseline for app + website docs. [See latest updates →](/whats-new/)  
+> 🆕 **May 2026 Status:** All 50 features complete (8 Advocacy, 3 AI, 7 Community, 9 Resources, 14 Wellness, 3 Profile, 6 Other). [See latest updates →](/whats-new/)  
 > 📋 **Feature List:** [Browse all features →](/features/)  
 > 🧪 **Beta Testing:** [Join our beta program →](/beta-guide/)  
-> ⚡ **Performance:** 67% faster, 42% smaller, fully personalized  
+> ⚡ **Performance:** Bundle optimization in progress (target <2 MB), fully personalized  
 > 📺 **Video Tutorial:** [Watch: Getting Started with 3mpwr App →](https://www.youtube.com/watch?v=4i6xPpik_6M)
 
 ---

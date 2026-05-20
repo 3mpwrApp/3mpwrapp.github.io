@@ -3,8 +3,8 @@ layout: default
 title: FAQ - Frequently Asked Questions
 permalink: /faq/
 description: Answers to common questions about 3mpwr App features, PowerTools, privacy, accessibility, and more.
-version: 1.1.0
-lastUpdated: 2026-02-24
+version: 1.2.0
+lastUpdated: 2026-05-19
 ---
 
 {%- include faq-schema.html -%}
@@ -12,11 +12,9 @@ lastUpdated: 2026-02-24
 
 # ❓ FAQ - Frequently Asked Questions
 
-**Last Updated:** February 24, 2026
+**Last Updated:** May 19, 2026
 
-**Status Snapshot (Feb 2026):** Core user features are live, with ongoing quality and documentation updates.
-
-**What's New Reference:** [Documentation Sync Complete → Core user docs (English)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#core-user-docs-en)
+**Status Snapshot (May 2026):** All 50 tracked features complete and production-ready. Ongoing bundle optimization for improved performance.
 
 ---
 

@@ -10,15 +10,13 @@ description: Explore 3mpwr App's comprehensive features designed to empower your
 
 # 3mpwr App Features
 
-**Version:** 1.2.0 (Core Docs Sync) | **Status:** Core user feature set complete | **Last Updated:** February 24, 2026
+**Version:** 1.3.0 (May 2026 - Production Ready) | **Status:** All 50 tracked features complete | **Last Updated:** May 19, 2026
 
-**What's New Reference:** [Documentation Sync Complete → Core user docs (English)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#core-user-docs-en)
+Your complete toolkit for disability advocacy, community connection, and system navigation. **50+ features** (100% complete) organized into PowerTools hubs, with ongoing performance optimization.
 
-Your complete toolkit for disability advocacy, community connection, and system navigation. **60+ features** organized into PowerTools hubs, now aligned with the February 2026 documentation baseline.
-
-> 🆕 **Latest Updates:** Jan-Feb 2026 updates synced across app + website docs. [See What's New →](/whats-new/)  
+> 🆕 **May 2026 Status:** All 50 features complete (8 Advocacy, 3 AI, 7 Community, 9 Resources, 14 Wellness, 3 Profile, 6 Other). [See What's New →](/whats-new/)  
 > 📖 **How to Use:** Each feature links to detailed instructions in our [User Guide →](/user-guide/)  
-> ⚡ **Performance:** 67% faster navigation, 42% smaller download  
+> ⚡ **Performance:** Bundle optimization in progress (target: <2 MB), 11.4 MB saved (opencv-js removed, whatsnew optimized)  
 > 📺 **Video Tutorials:** [Watch Getting Started guide →](https://www.youtube.com/watch?v=4i6xPpik_6M) | [Subscribe to our channel →](https://www.youtube.com/@3mpwrApp)
 
 ---
