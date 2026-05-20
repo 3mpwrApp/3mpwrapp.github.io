@@ -31,7 +31,8 @@
     "Chronic Fatigue Management: Energy Banking for Crashes",
     "Accommodation Request Tracker: Never Let Them Ghost You",
     "PEI Social Assistance for Persons with Disabilities",
-    "Winning Arguments Library: Successful Legal Strategies from Case Law"
+    "Winning Arguments Library: Successful Legal Strategies from Case Law",
+    "Northwest Territories Income Assistance"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively"
@@ -56,6 +57,6 @@
     "Collective Advocacy: Why Individual Coping Is Not Enough",
     "Intersectionality and Disability: Building for the Full Reality"
   ],
-  "rotationIndex": 8,
+  "rotationIndex": 1,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
