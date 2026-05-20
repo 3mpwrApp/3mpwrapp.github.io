@@ -5,11 +5,12 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
 ---
 
 <style>
+  /* Base Styles */
   .hero {
     text-align: center;
     padding: 60px 20px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    color: #ffffff;
     border-radius: 12px;
     margin-bottom: 40px;
   }
@@ -17,12 +18,14 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   .hero h1 {
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
+    color: #ffffff;
   }
   
   .hero .subtitle {
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    color: #ffffff;
   }
   
   .hero p {
@@ -31,6 +34,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
+    color: #ffffff;
   }
   
   .demo-section {
@@ -48,15 +52,16 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   }
   
   .demo-section h3 {
-    color: #333;
+    color: #222;
     margin-top: 1.5rem;
   }
   
   .demo-steps {
-    background: white;
+    background: #ffffff;
     padding: 30px;
     border-radius: 8px;
     margin-top: 20px;
+    border: 1px solid #e0e0e0;
   }
   
   .demo-steps ol {
@@ -67,6 +72,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   .demo-steps li {
     margin: 15px 0;
     line-height: 1.6;
+    color: #222;
   }
   
   .demo-steps li strong {
@@ -82,7 +88,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   
   .use-case {
     padding: 25px;
-    background: white;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border-top: 3px solid #667eea;
@@ -94,6 +100,10 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
     font-size: 1.1rem;
   }
   
+  .use-case p {
+    color: #333;
+  }
+  
   .flywheel-showcase {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -103,7 +113,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   
   .flywheel {
     padding: 30px;
-    background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+    background: rgba(102,126,234,0.08);
     border-radius: 8px;
     border: 2px solid #667eea;
   }
@@ -128,6 +138,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   .flywheel li {
     margin: 10px 0;
     font-size: 0.95rem;
+    color: #333;
   }
   
   .feature-grid {
@@ -139,39 +150,55 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   
   .feature {
     padding: 24px;
-    background: white;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
   }
   
   .feature h3 {
-    color: var(--link-color);
+    color: #667eea;
     margin-bottom: 12px;
+  }
+  
+  .feature p {
+    color: #333;
   }
   
   .cta {
     text-align: center;
     padding: 40px 20px;
-    background: var(--bg-secondary);
+    background: #f5f7fa;
     border-radius: 12px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .cta h2 {
+    color: #222;
+  }
+  
+  .cta p {
+    color: #333;
   }
   
   .cta-button {
     display: inline-block;
     padding: 16px 32px;
-    background: var(--btn-primary-bg);
-    color: white;
+    background: #667eea;
+    color: #ffffff !important;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1.1rem;
     transition: transform 0.2s, box-shadow 0.2s;
     margin: 10px;
+    border: 2px solid #667eea;
   }
   
   .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    background: #5568d3;
   }
   
   /* Video & Media Styles */
@@ -202,16 +229,17 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   }
   
   .screenshot {
-    background: white;
+    background: #ffffff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e0e0e0;
   }
   
   .screenshot:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   }
   
   .screenshot img {
@@ -223,12 +251,13 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   .screenshot-caption {
     padding: 16px;
     text-align: center;
-    color: #666;
+    color: #444;
     font-size: 0.9rem;
+    background: #fafafa;
   }
   
   .visual-demo {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    background: #f5f7fa;
     padding: 40px;
     border-radius: 12px;
     margin: 30px 0;
@@ -271,7 +300,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   
   /* Interactive Feature Cards */
   .interactive-card {
-    background: white;
+    background: #ffffff;
     padding: 30px;
     border-radius: 12px;
     margin: 20px 0;
@@ -279,18 +308,19 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
     transition: all 0.3s;
     cursor: pointer;
     border-left: 4px solid #667eea;
+    border: 1px solid #e0e0e0;
   }
   
   .interactive-card:hover {
     transform: translateX(8px);
-    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
   }
   
   .badge {
     display: inline-block;
     padding: 4px 12px;
     background: #667eea;
-    color: white;
+    color: #ffffff;
     border-radius: 12px;
     font-size: 0.8rem;
     font-weight: 600;
@@ -299,7 +329,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   
   .video-placeholder {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    color: #ffffff;
     padding: 80px 40px;
     text-align: center;
     border-radius: 8px;
@@ -307,9 +337,236 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   }
   
   .video-placeholder h4 {
-    color: white;
+    color: #ffffff;
     margin-top: 0;
     font-size: 1.4rem;
+  }
+  
+  .video-placeholder p {
+    color: #ffffff;
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .demo-section {
+      background: #1a1a2e;
+      border-left-color: #8b9cee;
+    }
+    
+    .demo-section h2 {
+      color: #8b9cee;
+    }
+    
+    .demo-section h3 {
+      color: #e0e0e0;
+    }
+    
+    .demo-steps {
+      background: #16213e;
+      border-color: #2a2a40;
+      color: #e0e0e0;
+    }
+    
+    .demo-steps li {
+      color: #e0e0e0;
+    }
+    
+    .demo-steps li strong {
+      color: #8b9cee;
+    }
+    
+    .use-case {
+      background: #1a1a2e;
+      border-top-color: #8b9cee;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    
+    .use-case h4 {
+      color: #8b9cee;
+    }
+    
+    .use-case p {
+      color: #d0d0d0;
+    }
+    
+    .flywheel {
+      background: rgba(139,156,238,0.1);
+      border-color: #8b9cee;
+    }
+    
+    .flywheel h3 {
+      color: #8b9cee;
+    }
+    
+    .flywheel li {
+      color: #d0d0d0;
+    }
+    
+    .feature {
+      background: #1a1a2e;
+      border-color: #2a2a40;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    
+    .feature h3 {
+      color: #8b9cee;
+    }
+    
+    .feature p {
+      color: #d0d0d0;
+    }
+    
+    .cta {
+      background: #16213e;
+      border-color: #2a2a40;
+    }
+    
+    .cta h2 {
+      color: #e0e0e0;
+    }
+    
+    .cta p {
+      color: #d0d0d0;
+    }
+    
+    .screenshot {
+      background: #1a1a2e;
+      border-color: #2a2a40;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    .screenshot-caption {
+      color: #d0d0d0;
+      background: #16213e;
+    }
+    
+    .visual-demo {
+      background: #16213e;
+      border-color: #2a2a40;
+    }
+    
+    .interactive-card {
+      background: #1a1a2e;
+      border-color: #2a2a40;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+  }
+  
+  /* High Contrast Mode Support */
+  @media (prefers-contrast: high) {
+    .hero {
+      background: #000080;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .demo-section {
+      background: #ffffff;
+      border-left: 6px solid #000000;
+    }
+    
+    .demo-section h2 {
+      color: #000000;
+    }
+    
+    .cta-button {
+      background: #000000;
+      color: #ffffff !important;
+      border: 3px solid #ffffff;
+    }
+    
+    .cta-button:hover {
+      background: #ffffff;
+      color: #000000 !important;
+      border: 3px solid #000000;
+    }
+    
+    .video-placeholder {
+      background: #000080;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .badge {
+      background: #000000;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+    .hero {
+      background: #ffffff;
+      color: #000000;
+      border: 3px solid #000000;
+    }
+    
+    .hero h1,
+    .hero .subtitle,
+    .hero p {
+      color: #000000;
+    }
+    
+    .demo-section {
+      background: #000000;
+      border-left: 6px solid #ffffff;
+    }
+    
+    .demo-section h2,
+    .demo-section h3 {
+      color: #ffffff;
+    }
+    
+    .cta {
+      background: #000000;
+      border: 3px solid #ffffff;
+    }
+    
+    .cta h2,
+    .cta p {
+      color: #ffffff;
+    }
+  }
+  
+  /* Dark mode overrides for inline styled elements */
+  @media (prefers-color-scheme: dark) {
+    [style*="color: #333"],
+    [style*="color: #666"],
+    [style*="color: #999"],
+    [style*="color:#333"],
+    [style*="color:#666"],
+    [style*="color:#999"] {
+      color: #d0d0d0 !important;
+    }
+    
+    [style*="color: #222"],
+    [style*="color:#222"] {
+      color: #e0e0e0 !important;
+    }
+    
+    [style*="color: #667eea"],
+    [style*="color:#667eea"] {
+      color: #8b9cee !important;
+    }
+    
+    [style*="background: white"],
+    [style*="background: #fff"],
+    [style*="background:#fff"],
+    [style*="background: #ffffff"],
+    [style*="background:#ffffff"] {
+      background: #1a1a2e !important;
+    }
+    
+    [style*="background: #f0f4ff"],
+    [style*="background:#f0f4ff"],
+    [style*="background: #fff5f5"],
+    [style*="background:#fff5f5"],
+    [style*="background: #f0fff4"],
+    [style*="background:#f0fff4"],
+    [style*="background: #f8f0ff"],
+    [style*="background:#f8f0ff"] {
+      background: #16213e !important;
+    }
   }
 </style>
 
@@ -881,7 +1138,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
 <div class="cta">
   <h2>🚀 Ready to Try 3MPWRAPP?</h2>
   <p style="font-size: 1.1rem; margin: 20px 0;">We're in closed beta and stress testing before launching. Canadians coast-to-coast-to-coast can join now.</p>
-  <a href="https://3mpwrapp.ca/beta-signup" class="cta-button">Sign Up for Beta Access</a>
+  <a href="https://forms.gle/mjoH9G9MnUE23hCQA" class="cta-button">Sign Up for Beta Access</a>
   <a href="/features/" class="cta-button">See All Features →</a>
   <a href="/user-guide/" class="cta-button">How to Use →</a>
 </div>
