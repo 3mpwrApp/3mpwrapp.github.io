@@ -1,1160 +1,715 @@
 ---
 layout: default
-title: Frequently Asked Questions (FAQ)
-description: Common questions about 3mpwr App - privacy, features, accessibility, beta testing, USA Lite, and more. Updated December 2025 with production-ready status and USA Lite launch.
-permalink: /faq/
-lastUpdated: 2025-12-12
+title: 3MPWRAPP FAQ - Frequently Asked Questions
+description: Answers to common questions about 3MPWRAPP for the disability community. Learn about accessibility, privacy, troubleshooting, features, and beta testing. Built for injured workers, persons with disabilities, advocates, and supporters.
+version: 2.0 (Complete Rewrite - May 2026)
+lastUpdated: 2026-05-20
+accessibility: WCAG 2.2 AAA - fully readable in light, dark, and high contrast modes
 ---
 
 {%- include status-banner.html -%}
 
-# Frequently Asked Questions (FAQ)
+# 3MPWRAPP FAQ
 
-**Last Updated:** December 12, 2025
+**Frequently Asked Questions | Answers to Common Questions | May 2026**
 
-📖 **15 minute read** | ⚡ Use search or table of contents to jump to your question
-
-Quick answers to common questions about 3mpwr App. Can't find what you're looking for? [Contact us](/contact).
-
-<!-- FAQ Search -->
-<div class="faq-search-container">
-  <label for="faq-search" class="search-label">
-    <span class="search-icon" aria-hidden="true">🔍</span>
-    Search FAQs
-  </label>
-  <input 
-    type="search" 
-    id="faq-search" 
-    class="faq-search-input"
-    placeholder="Type keywords to search FAQs..."
-    aria-describedby="search-help search-results-count"
-    autocomplete="off">
-  <small id="search-help" class="search-help">Try searching: "privacy", "cost", "beta testing"</small>
-  <div id="search-results-count" class="search-results-count" role="status" aria-live="polite" style="display: none;"></div>
-  <button type="button" id="clear-search" class="clear-search-btn" style="display: none;" aria-label="Clear search">
-    ✕ Clear
-  </button>
-</div>
-
-<!-- Expand/Collapse All Controls -->
-<div class="accordion-controls">
-  <button type="button" id="expand-all-btn" class="accordion-control-btn">
-    <span class="icon">📖</span> Expand All Questions
-  </button>
-  <button type="button" id="collapse-all-btn" class="accordion-control-btn">
-    <span class="icon">📕</span> Collapse All Questions
-  </button>
-</div>
-
-<details class="tldr-box" open>
-  <summary>⚡ Most Common Questions</summary>
-  <div class="tldr-content">
-    <div class="tldr-item">
-      <span class="tldr-icon">💚</span>
-      <div>
-        <strong>Is it really free?</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Yes, 100% free forever - no subscriptions, no hidden costs</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">🔒</span>
-      <div>
-        <strong>Is my data private?</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Absolutely - your data stays on YOUR device, we can't see it</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">🧠</span>
-      <div>
-        <strong>Do I need to be tech-savvy?</strong>
-        <p style="margin: 0; font-size: 0.95rem;">No - designed for all skill levels with step-by-step guides</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">♿</span>
-      <div>
-        <strong>What about accessibility?</strong>
-        <p style="margin: 0; font-size: 0.95rem;">100% accessible - built by and for the disability community</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">⏰</span>
-      <div>
-        <strong>When can I join?</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Currently in closed beta - sign up at <a href="/beta">/beta</a></p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">🍁</span>
-      <div>
-        <strong>Works in my province?</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Yes - supports all Canadian provinces and territories</p>
-      </div>
-    </div>
-  </div>
-</details>
+Can't find an answer? [Contact us →](#contact)
 
 ---
 
-## 📑 Table of Contents
+## Quick Navigation
 
-- [What's New - December 2025](#whats-new---december-2025)
-- [USA Lite - For American Users](#usa-lite---for-american-users)
+**Jump to a section:**
 - [Getting Started](#getting-started)
-- [Common Concerns & Trust Questions](#common-concerns--trust-questions)
-- [Privacy & Data](#privacy--data)
-- [BYOC Modes Explained](#byoc-modes-explained)
-- [Features & Functionality](#features--functionality)
+- [Features & Tools](#features)
 - [Accessibility](#accessibility)
+- [Privacy & Security](#privacy)
 - [Beta Testing](#beta-testing)
 - [Troubleshooting](#troubleshooting)
-- [Legal & Disclaimers](#legal--disclaimers)
+- [Accounts & Data](#accounts)
+- [Support](#support)
 
 ---
 
-## What's New - December 2025
-
-### What's the December 2025 milestone?
-
-**🎉 First Demo Presentation Successful + USA Lite Launch!**
-
-On December 9, 2025, we completed our first demo/intro presentation for 3mpwr App — and it was a success!
-
-**Key achievements:**
-- ✅ **721 Tests Passing** - Complete test coverage across all features
-- ✅ **0 ESLint/TypeScript Errors** - Clean, maintainable codebase
-- ✅ **0 Accessibility Issues** - WCAG AAA compliant
-- ✅ **AES-256-GCM Encryption** - Security verified
-- ✅ **Full Offline Support** - Works without internet
-- ✅ **First Demo Successful** - Positive community response
-- ✅ **USA Lite Launched** - American supporters can now join!
-
-### What is USA Lite?
-
-Following strong interest from USA listeners during our demo, we've launched **USA Lite** - a streamlined version for American supporters and allies. [See full details below →](#usa-lite---for-american-users)
-
----
-
-## What's New - November 2025
-
-### What's new in the November 2025 update?
-
-**We've achieved 90% accessibility (up from 40%)!** Major improvements include:
-
-**🎯 Complexity Mode System**
-- Simple Mode (5 features) - For overwhelming days and cognitive challenges
-- Standard Mode (20 features) - For most users most of the time
-- Power User Mode (150+ features) - Everything unlocked
-- Bad Day Mode - One-tap emergency simplification
-
-**📚 Resources vs Research Split**
-- Resources Tab = In-app interactive tools only (Master Tracker Hub, Letter Wizard, Appeal Command Center, Evidence Manager)
-- Research Tab = 96 external resources organized by category with province filtering
-- Clear separation eliminates confusion about what opens in-app vs browser
-
-**🗂️ Master Tracker Hub**
-- All health tracking in one place (symptoms, meds, rehab, appointments, timeline, accessibility)
-- Quick log buttons, AI pattern detection, export to PDF/CSV/JSON
-
-**⚖️ Appeal Command Center**
-- Deadline warfare with color-coded urgency (red: 7 days, orange: 30 days)
-- Denial decoder translates insurance jargon
-- Evidence strength meter, appeal prep guide
-
-**📦 Offline Queue**
-- Upload evidence without internet - auto-syncs when connection restored
-- Critical for rural areas, court appearances, spotty WiFi
-
-**🆘 Global SOS/Crisis Button**
-- Single tap: crisis menu (Call 988, Crisis Text Line, Safe Landing Page, Emotional First Aid, Quick Exit)
-- Triple tap: emergency contact with location
-- Visible on all major screens
-
-**💪 4 Wellness Hubs**
-- Energy & Mood Hub, Unified Health Tracker, Mental Wellness Toolkit, Movement & Rehab Hub
-- Consolidates 10+ separate screens into 4 integrated hubs
-
-[See full November 2025 updates in User Guide →](/user-guide#whats-new-november-2025)
-
----
-
-## USA Lite - For American Users
-
-<div class="faq-accordion-section">
-
-<details class="faq-accordion" id="faq-usa-lite" open>
-  <summary class="faq-question">
-    <span class="question-icon">🇺🇸</span>
-    <span class="question-text">What is USA Lite?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**USA Lite** is a streamlined version of 3mpwr App designed for American supporters and allies who want to join our disability rights community.
-
-**Why we launched it:** During our first demo presentation (December 9, 2025), USA listeners expressed strong interest in beta testing. Rather than making them wait for our planned 2026 US launch, we streamlined our roadmap to provide immediate access to core features.
-
-**What's included:**
-- ✅ Full wellness tools (energy tracking, mood, pacing partner AI)
-- ✅ Community access (connect with disability rights movement)
-- ✅ Evidence Locker (AES-256 encrypted document storage)
-- ✅ Letter Wizard (general advocacy templates)
-- ✅ Crisis resources (US hotlines: 988, Crisis Text Line)
-- ✅ All accessibility features (WCAG AAA, Complexity Mode, voice)
-- ✅ Full offline support
-
-**What's different:**
-- ⚠️ Workers' comp templates are general (not state-specific)
-- ⚠️ Benefit workflows are general (not SSDI/SSI-specific)
-- ⚠️ Legal workflows focus on advocacy (not US tribunal-specific)
-
-**Full US launch with state-specific features is planned for Q1-Q2 2026.**
-
-**🎯 Initial Focus States:** We're starting with California, New York, Michigan, Texas, Washington, Ohio, Pennsylvania, Tennessee, Georgia, and Mississippi. More states coming as we expand!
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-usa-signup">
-  <summary class="faq-question">
-    <span class="question-icon">📝</span>
-    <span class="question-text">How do I sign up for USA Lite?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**Same process as Canadian users!**
-
-1. Go to [/beta/](/beta/) to sign up for beta testing
-2. When asked about location, select United States
-3. You'll receive access to USA Lite automatically
-4. All core features work immediately
-
-**No separate app** - USA Lite is the same app with region-appropriate features.
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-usa-canada-difference">
-  <summary class="faq-question">
-    <span class="question-icon">🇨🇦</span>
-    <span class="question-text">What's the difference between Canada and USA versions?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-| Feature | Canada (Full) | USA Lite |
-|---------|---------------|----------|
-| **Wellness Tools** | ✅ Full | ✅ Full |
-| **Community** | ✅ Full | ✅ Full |
-| **Evidence Locker** | ✅ Full | ✅ Full |
-| **Accessibility** | ✅ WCAG AAA | ✅ WCAG AAA |
-| **Crisis Resources** | 🇨🇦 Canadian | 🇺🇸 US (988, etc.) |
-| **Workers' Comp** | ✅ WSIB/WCB specific | ⚠️ General templates |
-| **Benefits** | ✅ ODSP, AISH, CPP-D | ⚠️ General resources |
-| **Legal Workflows** | ✅ Canadian tribunals | ⚠️ Advocacy tools |
-| **Province Filter** | ✅ All provinces | ❌ Not applicable |
-
-**Bottom line:** Universal features work the same. Country-specific legal/benefits features are tailored to each region.
-
-  </div>
-</details>
-
-</div>
-
----
-
+<a name="getting-started"></a>
 ## Getting Started
 
-### What is 3mpwrApp?
+### What is 3MPWRAPP?
 
-3mpwrApp is a comprehensive platform built for injured workers and persons with disabilities in Canada. We provide tools for advocacy, community connection, wellness tracking, legal workflow automation, and system navigation - all designed with accessibility and privacy as top priorities.
+**3MPWRAPP is a Canadian platform for the entire disability community.** Built by and for injured workers, persons with disabilities, advocates, supporters, and vulnerable Canadians seeking justice. Available coast-to-coast-to-coast.
 
-### Who is 3mpwrApp for?
+It helps you:
+- **Understand decisions** (Parse Claim decodes confusing letters)
+- **Organize evidence** (Evidence Locker stores documents securely)
+- **Manage cases** (Deadline Tracker never lets you miss a filing date)
+- **Track health** (Wellness tools track symptoms and health patterns)
+- **Connect with community** (Support Groups connect you with others)
+- **Advocate for change** (Collective action tools for systemic change)
+- **Contribute to knowledge** (Your evidence creates templates for others)
 
-- **Persons with disabilities** (any disability type)
-- **Injured workers** navigating workers' compensation systems
-- **Supporters and allies** helping disabled friends/family
-- **Unions and advocacy groups** organizing for change
-- **Healthcare providers** supporting disabled clients
+**[Learn about all features →](/features/)**
 
-We're built BY the disability community, FOR the disability community.
-
----
-
-## Common Concerns & Trust Questions
-
-<div class="faq-accordion-section">
-
-<details class="faq-accordion" id="faq-different">
-  <summary class="faq-question">
-    <span class="question-icon">❓</span>
-    <span class="question-text">How is 3mpwrApp different from other disability apps?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**Key Differences:**
-
-| 3mpwrApp | Other Apps |
-|----------|------------|
-| 🆓 **100% free forever** | Often have paid tiers, subscriptions |
-| 🔒 **You own your data** (BYOC options) | They own your data |
-| 🇨🇦 **Canadian-focused** (all provinces) | Often US-focused |
-| ♿ **Built BY disabled people** | Often built by corporations |
-| 🔓 **Open about limitations** | Often overpromise capabilities |
-| 💚 **Community-funded mission** | Profit-driven |
-| 🏛️ **Advocacy-focused** | Health tracking only |
-
-**Bottom line:** We're not trying to make money off the disability community—we're trying to empower it.
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-funding">
-  <summary class="faq-question">
-    <span class="question-icon">💰</span>
-    <span class="question-text">If it's free, how do you make money? What's the catch?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**Great question!** Here's our honest answer:
-
-**How We're Funded (Currently):**
-- 💰 Personal funds from founder
-- 🤝 Community donations (optional, not required)
-- 🎯 Grants for disability advocacy (applied for, not guaranteed)
-
-**Future Funding (Being Explored):**
-- 🏢 Institutional partnerships (unions, advocacy orgs) - they pay, members use free
-- 💼 Optional professional tools (lawyers, case workers) - NOT required for users
-- 🎓 Training/workshops for organizations - again, users always free
-
-**What We'll NEVER Do:**
-- ❌ Charge users a subscription
-- ❌ Sell your data to third parties
-- ❌ Show you ads
-- ❌ Require payment for core features
-- ❌ Create "premium" tiers
-
-**The Catch?** There isn't one. We're a grassroots community project, not a Silicon Valley startup looking for an exit strategy. We survive on donations and founder's personal investment because we believe in this mission.
-
-**[Read our funding transparency statement →](/about#funding-transparency)**
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-trust">
-  <summary class="faq-question">
-    <span class="question-icon">🔒</span>
-    <span class="question-text">How can I trust you with my sensitive data?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**We understand this concern completely. Here's how we've addressed it:**
-
-**1. You Don't Have to Trust Us**
-- Use **Strict BYOC Mode** - your data never touches our servers
-- Your data stays on YOUR device and YOUR cloud provider
-- We literally can't access it even if we wanted to
-
-**2. Technical Safeguards**
-- Military-grade encryption (AES-256)
-- Open-source security audit (coming Q1 2026)
-- Third-party penetration testing
-- Regular security audits
-
-**3. Legal Commitments**
-- Detailed privacy policy with no loopholes
-- GDPR and Canadian privacy law compliance
-- Data deletion on request (within 30 days)
-- No data sales - ever (written into Terms of Service)
-
-**4. Community Accountability**
-- Built with input from disability advocates
-- Transparent about what we collect and why
-- Regular community updates
-- Open to audits from disability rights organizations
-
-**[Read our detailed security documentation →](/privacy#security-measures)**
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-shutdown">
-  <summary class="faq-question">
-    <span class="question-icon">💾</span>
-    <span class="question-text">What if 3mpwrApp shuts down? Will I lose my data?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**No, your data is safe!**
-
-**If you use Default Mode:**
-- Export all your data anytime (Settings → Export Data)
-- Download JSON, PDF, or CSV formats
-- Data remains on your device until you delete it
-
-**If you use BYOC Modes (Hybrid or Strict):**
-- Your data lives in YOUR cloud storage (Google Drive, Dropbox, etc.)
-- You have complete copies independent of 3mpwrApp
-- Even if we shut down tomorrow, you keep everything
-
-**Our Shutdown Promise:**
-- ✅ 90-day advance notice before any shutdown
-- ✅ Tools to export all community posts/resources
-- ✅ Open-source the app code so community can continue
-- ✅ Provide migration guide to alternatives
-
-**Bottom Line:** You're not locked in. Your data is portable. You can leave anytime with everything you created.
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-privacy">
-  <summary class="faq-question">
-    <span class="question-icon">🕵️</span>
-    <span class="question-text">What about privacy? Can employers/insurance companies see my data?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**Absolutely NOT - unless YOU choose to share it.**
-
-**Default Privacy Protections:**
-- 🔒 All data encrypted on your device
-- 🔒 Only you have the decryption keys
-- 🔒 We cannot access your Evidence Locker, wellness logs, or personal notes
-- 🔒 No backdoors for law enforcement, employers, or insurance companies
-
-**Community Privacy:**
-- Use anonymous usernames (no real names required)
-- Control what you share publicly vs. privately
-- Delete your posts anytime
-- Opt out of public community entirely (still use tools)
-
-**Legal Requests:**
-- We fight subpoenas for user data
-- We comply only when legally required (with notice to you)
-- We collect minimal data, so there's little to hand over
-- BYOC modes mean we literally don't have your data to share
-
-**[Read our Privacy Policy →](/privacy)**  
-**[Read our Data Warrant Transparency Report →](/transparency-report)** (coming Q1 2026)
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-afford">
-  <summary class="faq-question">
-    <span class="question-icon">📱</span>
-    <span class="question-text">What if I can't afford a smartphone or data plan?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**We hear you. Digital divide is a real accessibility barrier.**
-
-**Current Solutions:**
-- 📱 App works 100% offline (no data needed after download)
-- 💻 Web version coming Phase 3 (use library computers)
-- 📄 Printable resources available (download PDFs)
-
-**Future Solutions (Advocating For):**
-- 📞 Partnership with free phone programs (SafeLink, Assurance Wireless)
-- 📡 Lobbying for disability tech subsidies
-- 🏢 Institutional access (union halls, community centers provide devices)
-
-**Right Now:**
-- Check if you qualify for [Connecting Families](https://ised-isde.canada.ca/site/connecting-families/en) (Canada) - $20/month internet
-- Ask local library about device lending programs
-- Contact your provincial disability program about tech assistance
-
-**We're working on this. Digital access IS a disability justice issue.**
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-scam">
-  <summary class="faq-question">
-    <span class="question-icon">🔍</span>
-    <span class="question-text">How do I know this isn't a scam or data harvesting scheme?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**Healthy skepticism is smart! Here's how to verify we're legitimate:**
-
-**Transparency Markers:**
-- ✅ Detailed [Terms of Service](/terms) and [Privacy Policy](/privacy) (no vague corporate speak)
-- ✅ Real person contact: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- ✅ Active social media with real community engagement
-- ✅ Open about limitations and what we DON'T do
-- ✅ Beta testing with real community members
-- ✅ Source code available for security audit (upon request during beta)
-
-**Red Flags We DON'T Have:**
-- ❌ No "too good to be true" promises
-- ❌ No pressure to upgrade or pay
-- ❌ No vague privacy policies
-- ❌ No requests for banking info or SIN numbers
-- ❌ No multi-level marketing or "refer 5 friends" schemes
-
-**You Can Verify:**
-- Google our app name + "reviews" or "scam"
-- Check our social media for real user interactions
-- Join beta and test with dummy data first
-- Ask questions in our public community forums
-
-**If something feels off, trust your gut.** We want informed, empowered users - not victims.
-
-  </div>
-</details>
-
-</div>
-
----
-- Join beta and test with dummy data first
-- Ask questions in our public community forums
-
-**If something feels off, trust your gut.** We want informed, empowered users - not victims.
+**[Full user guide →](/user-guide/)**
 
 ---
 
-## Getting Started
+### What are the 3 Flywheels?
 
-### How much does 3mpwrApp cost?
+Our most critical assets. These flywheels turn individual struggles into collective power:
 
-**3mpwrApp is completely FREE.** There are no paid tiers, no subscriptions, no in-app purchases - ever.
+**1. Evidence Flywheel** — Your wins become templates
+- Upload successful evidence and case outcomes
+- We assess and analyze what worked
+- Create guides and templates from your victory
+- Community learns from your success
 
-We're building this for the disability community, funded by the community. Our mission is accessibility and empowerment, not profit. All features will always be free for everyone.
+**2. Pattern Detection Flywheel** — Data reveals systemic issues
+- Collect tribunal decisions from CanLII (all provinces)
+- Assess and analyze outcomes and patterns
+- Identify discrimination, barriers, win rates
+- Create visualizations and reports for policy change
 
-### Is 3mpwrApp available now?
+**3. Collective Action Flywheel** — Organized advocacy creates change
+- Community coordinates around shared issues
+- Launch campaigns with evidence-backed arguments
+- Collective action generates institutional responses
+- Wins benefit all Canadians
 
-We're currently in **Phase 1 Closed Beta Testing**. [Sign up for beta access →](https://forms.gle/46yVp37vfitfitLT9)
-
-### What platforms does 3mpwrApp support?
-
-- **iOS** (iPhone, iPad)
-- **Android** (phones, tablets)
-- **Web version** (coming in Phase 3)
-
----
-
-## Privacy & Data
-
-### Who owns my data?
-
-**YOU DO.** 100% of your data belongs to you, not us. We never claim ownership of your content, evidence, wellness data, or anything you create in the app.
-
-**[Read our Data Ownership Statement →](/data-ownership/)**
-
-### Where is my data stored?
-
-That depends on which privacy mode you choose:
-
-- **Default Mode:** On your device by default, optional backup to Firebase (our secure cloud)
-- **Hybrid BYOC Mode:** On your device AND your chosen cloud (Google Drive, Dropbox, etc.)
-- **Strict BYOC Mode:** Only on your device and YOUR chosen cloud (we never see it)
-
-**[Learn about privacy modes →](/privacy-controls/#choose-your-privacy-mode)**
-
-### Can you see my data?
-
-**In Default Mode:** Only if you enable cloud backup (and even then, it's encrypted)  
-**In Hybrid Mode:** We handle your login, but never see your content  
-**In Strict Mode:** No - we're completely disconnected, the app only talks to YOUR cloud
-
-### Do you sell my data?
-
-**ABSOLUTELY NOT.** We will never sell, rent, or trade your personal information to third parties. This is a core promise we will never break.
-
-### How secure is my data?
-
-- **Military-grade encryption** (AES-256, same as banks use)
-- **Hardware-backed security** (encryption keys stored in your device's secure chip)
-- **Secure connections** (all network traffic encrypted with HTTPS/TLS)
-- **No backdoors** (we don't have access keys to your encrypted data)
-
-**[Read our Privacy Policy →](/privacy/)**
-
-### Can I delete my data?
-
-**YES!** You have the right to delete:
-- Your entire account (permanently)
-- Individual pieces of data (selective deletion)
-- All cloud backups (if you use them)
-
-Deletion is permanent and cannot be undone.
-
-**[Learn how to delete your data →](/delete-data)**
+**Together:** These flywheels transform 3MPWRAPP from a personal tool into a force for systemic change.
 
 ---
 
-## BYOC Modes Explained
+### How much does 3MPWRAPP cost?
 
-### What does BYOC mean?
+**Completely free.** Forever.
 
-**BYOC = Bring Your Own Cloud**
-
-It means you can connect your own cloud storage provider (Google Drive, Dropbox, iCloud, Nextcloud, etc.) and have ALL your data stored there instead of on our servers.
-
-### What's the difference between the three privacy modes?
-
-| Feature | Default Mode | Hybrid BYOC ⭐ | Strict BYOC |
-|---------|-------------|----------------|-------------|
-| **Login** | Easy (email, Google, Apple) | Easy (email, Google, Apple) | Custom only |
-| **Your data location** | Device + optional Firebase | Device + YOUR cloud | Device + YOUR cloud |
-| **What we can see** | Only what you backup | Only your login, never content | Nothing at all |
-| **Setup difficulty** | 🟢 Easy | 🟡 Medium | 🔴 Advanced |
-| **Best for** | Most users | Privacy + convenience | Maximum privacy |
-
-### Which mode should I choose?
-
-**Default Mode** - Start here if you're new and want the easiest experience
-
-**Hybrid BYOC Mode** ⭐ **RECOMMENDED** - Best balance of easy login + full data privacy
-
-**Strict BYOC Mode** - For maximum privacy advocates, healthcare settings, or legal work requiring complete air-gap
-
-You can switch modes anytime in Settings → Privacy & Security.
-
-### What cloud providers are supported?
-
-**ANY cloud storage that supports standard protocols:**
-
-- ✅ Google Drive
-- ✅ Dropbox
-- ✅ Microsoft OneDrive
-- ✅ Apple iCloud
-- ✅ Nextcloud
-- ✅ ownCloud
-- ✅ AWS S3
-- ✅ Azure Storage
-- ✅ Any WebDAV-compatible service
-- ✅ Your own server
-
-### Do I need technical skills for BYOC modes?
-
-**Hybrid Mode:** No - if you can sign into Google Drive or Dropbox, you can use Hybrid Mode
-
-**Strict Mode:** Some technical knowledge helpful (knowing what WebDAV is, how to connect to cloud storage)
-
-**[Full BYOC setup guide →](/data-ownership/#3-user-cloud-user-control--three-privacy-modes)**
+There are no hidden costs, no premium versions, no ads. 3MPWRAPP is funded by grants and donations because we believe people shouldn't have to pay to fight for their rights.
 
 ---
 
-## Features & Functionality
+### Do I need to create an account?
 
-### How many features does 3mpwr App have?
+Not necessarily. You can:
+1. **Create an account** (email/password or Google) — Data saves permanently
+2. **Continue as guest** — Use immediately, data deleted when you close the app
 
-**60+ core features available in production-ready beta** (November 2025).
+**Recommended:** Create an account so you don't lose your data. You can always delete your account later.
 
-The app adapts to your needs with **Complexity Mode**:
-- **Simple Mode:** 5 essential features for overwhelming days
-- **Standard Mode:** 20 commonly-used features for most users
-- **Power User Mode:** 150+ features including beta/experimental tools
+---
 
-Features organized into:
-- 🏠 Home & Dashboard
-- 📢 Campaigns & Events
-- 👥 Community
-- 📚 Resources (in-app tools)
-- 🔬 Research (external resources)
-- 💪 Wellness (4 integrated hubs)
-- ⚖️ Advocacy & Legal
-- ⚙️ Settings & Accessibility
-- 🆕 What's New
+### What devices can I use 3MPWRAPP on?
 
-**[See all features →](/features)**
+3MPWRAPP is ready for all devices:
+- **iPhone** (iOS 14+)
+- **iPad & iOS tablets** (iOS 14+)
+- **Android phones** (Android 10+)
+- **Android tablets** (Android 10+)
+- **Windows & Mac computers** (via web app)
+- **Website** (features, guides, information at https://3mpwrapp.ca)
 
-### What's the Master Tracker Hub? (NEW November 2025)
+**Currently in closed beta** while we do stress testing before submitting to app stores. [Sign up for beta testing →](https://3mpwrapp.ca/beta-signup)
 
-**All your health tracking in one unified dashboard:**
+---
 
-**What It Tracks:**
-- Symptoms (severity, triggers, patterns)
-- Medications (doses, schedules, side effects)
-- Rehab exercises (reps, sets, progress)
-- Doctor appointments (notes, recommendations, follow-ups)
-- Case timeline (legal deadlines, key events)
-- Accessibility needs (accommodations, barriers)
+### What about users outside Canada?
 
-**Features:**
-- Quick log buttons for fast entry when low on energy
-- AI pattern detection (requires 7+ days of data)
-- Export to PDF, CSV, JSON for doctors/lawyers
-- Privacy-first - data stays on your device
+**3MPWRAPP is primarily built for Canada.** All features work across every province and territory.
 
-**Find It:** Resources → Master Tracker Hub (Beta)
+**Available in Canada:** All provinces and territories (coast-to-coast-to-coast)
+- ✅ Full app access
+- ✅ All features working
+- ✅ Canadian legal references (WSIAT, provincial tribunals)
+- ✅ Canadian health system integration
 
-### What's the Appeal Command Center? (NEW November 2025)
+**Limited USA-lite availability:** We're doing a slow rollout in select US states. If you're in the USA and interested, [email us →](mailto:empowrapp08162025@gmail.com)
 
-**Everything you need to fight benefit/insurance denials:**
+**Outside North America?** Most features work worldwide (health tracking, community, evidence storage). Legal/tribunal features are Canada-specific.
 
-**Core Features:**
-- **Deadline Tracker** - Color-coded by urgency (red: 7 days, orange: 30 days, blue: additional)
-- **Denial Decoder** - AI translates insurance jargon to plain English
-- **Evidence Strength Meter** - Rate your evidence (weak/moderate/strong)
-- **Appeal Prep Guide** - Step-by-step walkthrough
-- **Precedent Finder** - Coming soon: Search successful cases like yours
+---
 
-**Find It:** Resources → Appeal Command Center (Beta)
+<a name="features"></a>
+## Features & Tools
 
-### What's the Offline Queue? (NEW November 2025)
+### What can I do with Evidence Locker?
 
-**Upload evidence even without internet connection:**
+Evidence Locker securely stores:
+- PDFs
+- Photos (of documents, screenshots)
+- Images
+- Word documents
+- Spreadsheets
+- Audio files
 
-- Works in airplane mode, rural areas, spotty WiFi
-- Automatically retries with smart timing (1s → 60s exponential backoff)
-- Network monitoring - auto-syncs when connection restored
-- Manual retry buttons for failed uploads
-- Pending count badge shows what's waiting
-- Critical for court appearances and legal deadlines
+All stored with AES-256-GCM encryption (bank-level security).
 
-**Find It:** Evidence Locker → Upload files while offline
+**What you CAN'T store:** Large videos (>50 MB), executables, malware
 
-### What's the Global SOS/Crisis Button? (NEW November 2025)
+---
 
-**Instant access to crisis resources from any screen:**
+### How do I know my evidence is encrypted?
 
-**Single Tap Opens:**
-- Call 988 (Suicide & Crisis Lifeline)
-- Crisis Text Line (text HOME to 741741)
-- Safe Landing Page (breathing exercises, grounding)
-- Emotional First Aid tools
-- Quick Exit (escape to weather.com for safety)
+Look for the lock icon (🔒) next to your document. That means it's encrypted.
 
-**Triple Tap:**
-- Emergency contact with location (requires setup in Settings)
+If you don't see the lock icon, it didn't encrypt properly. Try uploading again.
 
-**Why It Matters:** Disability crises are real. Instant help access can be life-saving.
+---
 
-### What's Complexity Mode? (NEW November 2025)
+### Can I share my evidence with others?
 
-**Revolutionary simplification system for cognitive accessibility:**
+Yes. From any document:
+1. Tap the document
+2. Tap "Share"
+3. Choose how: Email, Messages, or save to files
+4. Send to whoever you want
 
-**Three Modes:**
-1. **Simple Mode (5 features)** - For bad days, flare-ups, brain fog
-   - Evidence Locker, Letter Wizard (top 3 templates), Crisis Resources, Mood Tracker, Community
-   - Reduces overwhelm by 97%
+**Important:** Make sure you trust the person. Evidence may contain sensitive info.
 
-2. **Standard Mode (20 features)** - For most users most of the time
-   - All Simple features + AI tools, wellness tracking, campaigns, events, profiles
-   - Balanced power and simplicity
+---
 
-3. **Power User Mode (150+ features)** - Everything unlocked
-   - Full access to advanced tools, beta features, experimental functionality
+### What file types does Letter Wizard support?
 
-**Bad Day Mode:** One-tap emergency simplification (Settings → Complexity Mode)
+Letter Wizard can generate:
+- **Appeal Letters** — for tribunal appeals
+- **Accommodation Requests** — for workplace/school
+- **Formal Complaints** — to employers, government, organizations
+- **Demand Letters** — formal requests with deadlines
+- **Character Reference Letters** — for others to write
 
-**Impact:** 40% usability → 90% usability across the disability community
+More letter types are added regularly.
 
-### What's the Resources vs Research split? (NEW November 2025)
+---
 
-**Clear separation eliminates confusion:**
+### Is Parse Claim's analysis accurate?
 
-**Resources Tab = In-App Interactive Tools**
-- Master Tracker Hub
-- Letter Wizard (22 templates)
-- Appeal Command Center
-- Evidence Manager
-- NO external links - everything works within the app
+**Usually yes, but verify:**
 
-**Research Tab = External Resources & Data**
-- 96 external resources organized by category
-- Province filter (AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT)
-- Search functionality
-- Clear "opens in browser" indicators
-- Categories: Employment, Human Rights, Benefits, Workers' Comp, Crisis
+Parse Claim uses AI to read decision letters and extract key information. It's accurate 85-95% of the time for:
+- Decision (approved/denied/partial)
+- Deadline dates
+- Appeal options
 
-### What's the Evidence Locker?
+**Important:** Always verify with official tribunal websites or call the tribunal directly. AI sometimes misreads things.
 
-Your secure, encrypted document vault for storing:
-- Photos of workplace incidents
-- Medical documents
-- Accommodation requests and responses
-- Communication records
-- Legal evidence
+If Parse Claim gives you a date, check the tribunal website to confirm. When in doubt, contact a lawyer.
 
-All files are encrypted with military-grade security (AES-256).
+---
 
-**NEW November 2025:** Offline queue - upload without internet, auto-syncs later
+### What does "50% Rule" in Pacing Partner mean?
 
-**[Learn how to use Evidence Locker →](/user-guide#evidence-locker)**
+The 50% rule is a pacing strategy for conditions with post-exertional malaise (like ME/CFS):
+- **Day 1:** Do 50% of your normal capacity
+- **Day 2:** Rest (do 25-30%)
+- **Day 3:** Do 50% again
+- Pattern: 50%, 25%, 50%, 25%...
 
-### What's the Letter Wizard?
+This pattern prevents flare-ups and helps you do more long-term.
 
-Generate professional, legally-sound letters in minutes with **22 pre-built templates:**
+**It's not required** — adjust to your condition.
 
-- Workplace accommodation requests
-- Disability benefit applications
-- Human rights complaints
-- Housing accessibility requests
-- Legal demand letters
-- Appeal letters
-- And 16 more!
+---
 
-All templates auto-populate from your profile and include field validation.
+### Can I export all my health data?
 
-**[See all letter templates →](/features#letter-wizard---22-professional-letter-templates)**
+Yes, for most wellness tools:
+1. Open the tool (Symptom Tracker, Health Tracker, etc.)
+2. Tap "Export" or "Download"
+3. Choose format: PDF or CSV
+4. File downloads
 
-### Does 3mpwrApp provide medical advice?
+Some tools may not have export yet — that's coming.
 
-**NO.** Our wellness tools (mood tracking, symptom logging, meditation, etc.) are for information and self-tracking only.
+---
 
-❌ We do NOT diagnose, treat, or prevent medical conditions  
-❌ We are NOT a replacement for healthcare providers  
-✅ Always consult qualified medical professionals for health decisions
+### How do I delete a document from Evidence Locker?
 
-**[Read medical disclaimer →](/legal/disclaimers/#1-medical-information-disclaimer)**
+1. Open Evidence Locker
+2. Find the document
+3. Tap and hold (long press)
+4. Tap "Delete"
+5. Confirm
 
-### Does 3mpwrApp provide legal advice?
+**Caution:** Deleted documents CANNOT be recovered.
 
-**NO.** Our legal tools (letter templates, workflow automation, resources) are educational only.
+---
 
-❌ We do NOT create attorney-client relationships  
-❌ We do NOT provide legal representation  
-✅ Always consult licensed attorneys for legal matters
+<a name="accessibility"></a>
+## Accessibility
 
-**[Read legal disclaimer →](/legal/disclaimers/#2-legal-information-disclaimer)**
+### Is 3MPWRAPP accessible?
 
-### Does 3mpwrApp work offline?
+Yes! 3MPWRAPP is designed to work for people with:
+- Low vision
+- Blindness (screen reader support)
+- Color blindness
+- Dyslexia
+- Motor disabilities
+- Cognitive disabilities
+- Fatigue/pain (Complexity Mode)
+- Hearing disabilities (text-based communication)
 
-**YES!** Core features work 100% offline:
-- Evidence Locker
-- Wellness tracking
-- Letter generation
-- Resources library
-- Settings
+**[Accessibility guide →](/user-guide/#accessibility)**
 
-**Requires internet:**
-- Community features (chat, forums)
-- Cloud sync (if you enable it)
-- Campaign coordination
-- Real-time updates
+---
 
-### Can I use 3mpwrApp without creating an account?
+### Does 3MPWRAPP work with screen readers?
 
-**YES!** Guest Mode lets you use core features without creating an account:
+Yes. VoiceOver (iOS) and TalkBack (Android) both work:
+- ✅ All buttons are labeled for screen readers
+- ✅ Form fields are labeled
+- ✅ Images have descriptions
+- ✅ Headings are properly structured
+- ✅ Lists read in order
 
-✅ Wellness tracking  
-✅ Evidence Locker  
-✅ Letter Wizard  
-✅ Resources library  
+**[Screen reader guide →](/user-guide/#screen-reader)**
 
-❌ No community features  
-❌ No cloud sync  
-❌ No campaign coordination
+---
 
-**[Learn about Guest Mode →](/user-guide#getting-started)**
+### Can I use 3MPWRAPP with just a keyboard?
+
+Yes, the entire app works with keyboard:
+- **Tab** — Move between buttons
+- **Enter** — Activate button
+- **Arrow Keys** — Navigate lists
+- **Escape** — Close menus
+
+**[Keyboard navigation guide →](/user-guide/#keyboard-nav)**
+
+---
+
+### Can I make text bigger?
+
+Yes:
+1. Open Settings
+2. Tap "Display"
+3. Choose text size: Small, Default, Large, Extra Large
+4. Changes apply immediately
+
+(You can also use your phone's system-level text scaling)
+
+---
+
+### Can I use dyslexia-friendly fonts?
+
+Yes:
+1. Open Settings
+2. Tap "Accessibility"
+3. Toggle "Dyslexia-Friendly Font"
+4. Font changes to OpenDyslexic immediately
+
+---
+
+### Does 3MPWRAPP work in dark mode?
+
+Yes:
+1. Open Settings
+2. Tap "Display"
+3. Toggle "Dark Mode"
+4. Choose: Off, On, or Automatic (follows device settings)
+
+Dark mode helps with eye strain and works great at night.
+
+---
+
+### Is there high contrast mode?
+
+Yes:
+1. Open Settings
+2. Tap "Accessibility"
+3. Toggle "High Contrast Mode"
+4. Text becomes bolder, colors become more vivid
+
+Contrast meets WCAG 2.2 AAA standards (maximum contrast).
+
+---
+
+### What is Complexity Mode?
+
+Complexity Mode lets you choose:
+- **Simple** (5 essential tools for crisis/bad days)
+- **Standard** (20 tools for regular use)
+- **Power User** (all 150+ features)
+
+You can switch as many times per day as you want. Perfect for managing disability.
+
+**[Complexity Mode guide →](/user-guide/#complexity-mode)**
+
+---
+
+<a name="privacy"></a>
+## Privacy & Security
+
+### Who has access to my data?
+
+Only you.
+
+- Your documents stay encrypted
+- Your health data stays private
+- We don't share data with third parties
+- We don't sell your data
+- You can delete everything anytime
+
+**[Full privacy policy →](/privacy/)**
+
+---
+
+### How is my evidence encrypted?
+
+AES-256-GCM encryption (same encryption banks use):
+- Encrypts as it's uploaded
+- Only you can decrypt it (with your password)
+- Even 3MPWRAPP staff can't read it
+
+---
+
+### Can the government see my documents?
+
+Not unless you share them. Law enforcement could legally compel us to do something only if you're not encrypting things and sharing them. Our current setup means we have nothing to give them — it's encrypted on your device.
+
+[Read our Privacy Policy for full details →](/privacy/)
+
+---
+
+### Is it safe to use 3MPWRAPP for sensitive information?
+
+Yes, as long as you:
+1. Use a strong password
+2. Don't share your password
+3. Enable two-factor authentication (optional but recommended)
+4. Keep your phone secure
+5. Don't share documents with untrusted people
+
+---
+
+### What's collected for analytics?
+
+We track (privacy-friendly):
+- Pages viewed (which features are used most)
+- Crashes (to fix bugs)
+- General usage (to improve design)
+
+We DON'T track:
+- Personal information
+- Document content
+- Health information
+- Location
+- Cross-site activity
+
+[Privacy policy details →](/privacy/)
+
+---
+
+### Can I delete my account and all my data?
+
+Yes, anytime:
+1. Open Settings
+2. Tap "Account Settings"
+3. Tap "Delete Account"
+4. Confirm you want to delete
+5. All your data is deleted permanently
+
+We keep no backups of deleted data.
+
+---
+
+<a name="beta-testing"></a>
+## Beta Testing
+
+### How do I join beta testing?
+
+3MPWRAPP is in closed beta before launch on app stores. To join:
+
+**Step 1: Sign up**
+1. Go to https://3mpwrapp.ca/beta-signup
+2. Fill out the form (name, email, device type — iPhone, iPad, Android, or Windows/Mac)
+3. We'll review your request
+
+**Step 2: Get approved**
+- You'll receive an email within 48 hours with download instructions
+- No approval email? Email empowrapp08162025@gmail.com
+
+**Step 3: Install the beta**
+- **iPhone/iPad:** Follow the TestFlight link in the approval email
+- **Android phones/tablets:** Follow the Google Play Beta link in the approval email
+- **Windows/Mac:** Open the web app link in your browser
+
+---
+
+### What do beta testers do?
+
+Help us find and fix bugs by:
+- Using new features
+- Testing workflows
+- Reporting issues
+- Testing accessibility
+- Giving feedback
+
+---
+
+### Is beta testing safe?
+
+Yes:
+- Same privacy protections as stable version
+- Same encryption
+- Your data is still secure
+- You can delete anytime
+
+The only difference: beta versions sometimes have bugs (that's why we need testers!)
+
+---
+
+### Can I give feedback during beta testing?
+
+YES PLEASE! How to submit feedback:
+1. Open Settings
+2. Tap "Help & Support"
+3. Tap "Send Feedback"
+4. Tell us what you think
+5. Tap "Send"
+
+We read every piece of feedback and respond within 48 hours.
+
+---
+
+<a name="troubleshooting"></a>
+## Troubleshooting
+
+### The app keeps crashing
+
+Try this:
+1. Close the app (swipe it away from recent apps)
+2. Restart your phone
+3. Open the app again
+
+If still crashing:
+1. Force close the app
+2. Uninstall (delete the app)
+3. Restart your phone
+4. Reinstall from App Store/Play Store
+
+If STILL crashing:
+[Contact support →](#contact)
+
+---
+
+### I can't log in
+
+Try:
+1. Check email address is correct (no typos)
+2. Check Caps Lock is off
+3. Use "Forgot Password" to reset password
+4. Try again
+
+Still can't log in?
+[Contact support →](#contact)
+
+---
+
+### My documents won't upload
+
+Try:
+1. Check file size (max 50 MB)
+2. Try a different file type/format
+3. Check internet connection (WiFi is better than mobile)
+4. Try again
+
+If upload still fails:
+- Check your phone storage (need ~100 MB free)
+- Restart the app
+- [Contact support →](#contact)
+
+---
+
+### Deadline notifications aren't working
+
+Try:
+1. Open Settings
+2. Check Notifications are enabled for 3MPWRAPP
+3. Check your phone volume is on
+4. Close and reopen app
+5. Restart your phone
+
+Still no notifications?
+- Check you actually created deadlines
+- Check due dates are in the future
+- [Contact support →](#contact)
+
+---
+
+### The app is very slow
+
+Try:
+1. Close other apps running
+2. Restart your phone
+3. Clear app cache:
+   - Settings → Apps → 3MPWRAPP → Storage → Clear Cache
+   - (Don't select "Clear Data" — that deletes everything)
+4. Restart app
+
+If still slow:
+- You may need a phone with more storage/RAM
+- [Contact support →](#contact)
+
+---
+
+### I lost my data
+
+If you synced to cloud:
+1. Log back in
+2. Data should sync back automatically
+3. If not, [contact support →](#contact)
+
+If you didn't sync:
+1. Check if backup exists on your phone
+2. [Contact support →](#contact)
+(We may be able to recover from backup)
+
+---
+
+<a name="accounts"></a>
+## Accounts & Data
+
+### Can I have multiple accounts?
+
+Yes:
+1. Log out of current account
+2. Log in with different email
+3. That's it!
+
+Only one account logged in at a time though.
+
+---
+
+### Can I use the same email for multiple accounts?
+
+Not recommended. Use different emails for different accounts.
+
+---
+
+### How do I change my password?
+
+1. Open Settings
+2. Tap "Account Settings"
+3. Tap "Change Password"
+4. Enter current password
+5. Enter new password
+6. Confirm new password
+7. Save
+
+---
+
+### What if I forget my password?
+
+1. From login screen, tap "Forgot Password?"
+2. Enter your email
+3. Check your email for reset link
+4. Click link
+5. Create new password
+6. Log in
+
+(Check spam folder if you don't see email)
+
+---
+
+### Can I back up my data?
+
+Yes, multiple ways:
+1. **Cloud sync:** Settings → Data & Privacy → Cloud Sync (backs up to Google Drive or 3MPWRAPP servers)
+2. **Export:** Many tools let you export to PDF or CSV
+3. **Manual:** Take screenshots, save documents
+
+---
+
+### Will my data be backed up if I delete the app?
+
+Only if you have cloud sync enabled. If you delete the app without syncing, data is lost.
+
+**Recommended:** Enable cloud sync in Settings before deleting.
+
+---
+
+<a name="support"></a>
+## Support & Contact
+
+### How do I report a bug?
+
+1. Open Settings
+2. Tap "Help & Support"
+3. Tap "Report a Problem"
+4. Describe what happened
+5. Attach screenshot if helpful
+6. Tap "Send"
+
+Or email: **empowrapp08162025@gmail.com**
+
+---
+
+### How do I give feedback or suggest a feature?
+
+1. Open Settings
+2. Tap "Help & Support"
+3. Tap "Send Feedback"
+4. Tell us your idea
+5. Tap "Send"
+
+Or email: **empowrapp08162025@gmail.com**
+
+---
+
+### How do I contact support?
+
+- **Email:** empowrapp08162025@gmail.com
+- **In-app:** Settings → Help & Support → Contact Us
+- **Community:** Join a Support Group and ask others
+- **Website:** https://3mpwrapp.ca/contact
+
+Response time: Usually 24-48 hours
+
+---
+
+### Is there a Discord, Slack, or community forum?
+
+Not yet, but Support Groups are similar. Join one to connect with other users and get peer support.
+
+Plans for a public forum coming in 2026.
+
+---
+
+### Where can I learn more?
+
+- **Features:** [Full features guide →](/features/)
+- **How to use:** [Complete user guide →](/user-guide/)
+- **Beta testing:** [Beta testers guide →](/beta-guide/)
+- **Privacy details:** [Privacy policy →](/privacy/)
+- **Website:** https://3mpwrapp.ca
+
+---
+
+<a name="contact"></a>
+## Still Have Questions?
+
+We're here to help!
+
+- **Email:** empowrapp08162025@gmail.com  
+**Response time:** 24-48 hours
+
+**Or reach out:**
+1. Open the app
+2. Settings → Help & Support
+3. Choose: Report Bug, Send Feedback, or Contact Us
 
 ---
 
 ## Accessibility
 
-### Is 3mpwrApp accessible?
+This FAQ page is fully readable and accessible in:
+- ✅ **Light Mode** — Dark text on white background
+- ✅ **Dark Mode** — Light text on dark background
+- ✅ **High Contrast Mode** — Maximum contrast, bold text
 
-**YES!** We aim for **WCAG 2.1 Level AAA compliance** (the highest accessibility standard).
-
-Every feature is designed from the ground up to work for all disabilities and abilities.
-
-**[See our Accessibility Statement →](/accessibility)**
-
-### What accessibility features are included?
-
-**Vision:**
-- Screen reader optimization (TalkBack, VoiceOver)
-- Adjustable text sizes (up to 200%)
-- High contrast modes (3 options)
-- Colorblind-friendly palettes (5 types)
-- Large tap targets (minimum 44x44dp)
-
-**Hearing:**
-- Visual alerts for sounds
-- Captions for all audio/video
-- Text-based alternatives
-
-**Motor/Dexterity:**
-- Voice navigation
-- Switch control support
-- Reduced motion options
-- No time limits on actions
-
-**Cognitive:**
-- Simple, clear language
-- Consistent navigation
-- Distraction-free mode
-- Step-by-step wizards
-- Progress indicators
-
-**[See all accessibility features →](/accessibility-settings)**
-
-### Does 3mpwrApp support Indigenous languages?
-
-**YES!** We support **6 Indigenous languages** in beta:
-
-- Plains Cree (ᓀᐦᐃᔭᐍᐏᐣ / nehiyawewin)
-- Ojibwe (ᐊᓂᔑᓈᐯᒧᐎᐣ / Anishinaabemowin)
-- Inuktitut (ᐃᓄᒃᑎᑐᑦ)
-- Mi'kmaq (Mi'kmawi'simk)
-- Mohawk (Kanien'kéha)
-- Dene (Dënesųłiné)
-
-We also support syllabics rendering, cultural protocols, and OCAP principles for Indigenous data sovereignty.
-
-**[Learn about Indigenous language support →](/features#-indigenous-language-support-6-languages)**
-
-### Can I customize accessibility settings?
-
-**YES!** Settings → Accessibility lets you customize:
-
-- Text size and font
-- Color schemes and contrast
-- Motion and animation
-- Audio and visual alerts
-- Voice navigation
-- Keyboard shortcuts
-- And much more!
-
-**[Accessibility walkthrough →](/accessibility-walkthrough)**
+All headings, questions, answers, and links have adequate contrast ratios (WCAG 2.2 AAA).
 
 ---
 
-## Beta Testing
+**Version 2.0 | Completely Rewritten May 2026 | Next update: May 2027**
 
-### How do I join the beta?
-
-**[Sign up for beta access →](https://forms.gle/46yVp37vfitfitLT9)**
-
-We're accepting beta testers in waves during Phase 1 Closed Beta (October-December 2025).
-
-### What do beta testers do?
-
-Beta testers help us by:
-
-1. **Using the app** in real-world situations
-2. **Reporting bugs** when things don't work right
-3. **Providing feedback** on features and usability
-4. **Testing accessibility** with assistive technologies
-5. **Suggesting improvements** based on your needs
-
-### Do I need technical skills to be a beta tester?
-
-**NO!** We need testers of all skill levels:
-
-- First-time smartphone users
-- Power users
-- Assistive technology users
-- Non-technical community members
-
-Your perspective is valuable no matter your tech experience!
-
-### What if I find a bug?
-
-**Report it!** We have several ways to report issues:
-
-1. **In-app:** Settings → Help & Support → Report a Bug
-2. **Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-3. **Forms:** Use our bug report template
-
-**[Bug report template →](/bug-report-template)**
-
-### Will my beta feedback be confidential?
-
-**YES.** All feedback, bug reports, and testing data is kept confidential. We never share individual tester information publicly.
-
-### When does beta testing end?
-
-**Phase 1 Closed Beta:** October - December 2025  
-**Phase 2 Open Beta:** Q1 2026  
-**Phase 3 Public Launch:** Q2 2026
-
-**[See full roadmap →](/roadmap)**
-
----
-
-## Troubleshooting
-
-### The app won't open / keeps crashing
-
-**Try these steps:**
-
-1. **Force close the app** and reopen it
-2. **Restart your device**
-3. **Check for updates** in the App Store / Google Play
-4. **Clear app cache** (Settings → Apps → 3mpwrApp → Clear Cache)
-5. **Reinstall the app** (won't lose data if you have cloud backup enabled)
-
-Still not working? [Contact support →](/contact)
-
-### I can't log in
-
-**Common solutions:**
-
-- **Check your internet connection** - Login requires internet
-- **Reset your password** - Tap "Forgot Password" on login screen
-- **Check email for verification link** - May be in spam folder
-- **Try a different login method** (email vs. Google vs. Apple)
-
-**[Login troubleshooting guide →](/user-guide#troubleshooting)**
-
-### My cloud sync isn't working
-
-**Check these settings:**
-
-1. **Internet connection** - Cloud sync requires internet
-2. **Cloud provider credentials** - May need to re-authenticate
-3. **Storage space** - Your cloud may be full
-4. **Privacy mode** - Confirm correct mode is selected (Hybrid or Strict BYOC)
-
-**[Cloud sync troubleshooting →](/privacy-controls/#choose-your-privacy-mode)**
-
-### Features are missing / not showing up
-
-**Possible reasons:**
-
-- **Guest Mode** - Some features require an account
-- **Beta limitations** - Some features coming in future phases
-- **Privacy mode** - Strict BYOC mode disables some cloud features
-- **Platform differences** - Some features iOS/Android only
-
-**[See feature availability →](/features#-closed-beta-release)**
-
-### The app is running slowly
-
-**Try these steps:**
-
-1. **Close other apps** to free up memory
-2. **Clear app cache** (Settings → Apps → 3mpwrApp → Clear Cache)
-3. **Restart your device**
-4. **Check device storage** - Low storage slows performance
-5. **Update to latest version**
-
-### Screen reader isn't working properly
-
-**Troubleshooting:**
-
-1. **Enable screen reader** in device settings (TalkBack/VoiceOver)
-2. **Check app permissions** - May need accessibility permissions
-3. **Update the app** - We continuously improve screen reader support
-4. **Report specific issues** - [Contact accessibility team →](/contact)
-
-**[Accessibility troubleshooting →](/accessibility-walkthrough)**
-
----
-
-## Legal & Disclaimers
-
-### What are the main disclaimers I should know?
-
-**5 Critical Disclaimers:**
-
-1. ⚕️ **NOT Medical Advice** - Always consult healthcare professionals
-2. ⚖️ **NOT Legal Advice** - Always consult licensed attorneys
-3. 💰 **NOT Financial Advice** - Always consult financial advisors
-4. 🤖 **AI May Contain Errors** - Verify all AI-generated content with professionals
-5. 🆘 **NOT Emergency Services** - Call 911 in emergencies, not the app
-
-**[Read all 10 comprehensive disclaimers →](/legal/disclaimers/)**
-
-### What happens to my data if I delete my account?
-
-**Permanent deletion within 30 days:**
-
-- All account information deleted
-- All app data deleted from our servers
-- Cloud backups remain in YOUR cloud (you control deletion)
-- Community posts anonymized (cannot be undone)
-
-**[Data deletion policy →](/delete-account)**
-
-### Can I use 3mpwrApp for legal cases?
-
-You CAN use 3mpwrApp's **Evidence Locker** to organize documents and the **Letter Wizard** to draft letters, BUT:
-
-❌ This does NOT replace a lawyer  
-❌ This does NOT create attorney-client privilege  
-✅ Always consult a licensed attorney for legal matters  
-✅ Use the Lawyer Finder to connect with disability law specialists
-
-**[Find legal resources →](/user-guide#legal-resources)**
-
-### Is my Evidence Locker admissible in court?
-
-**Possibly, but depends on your jurisdiction and case.**
-
-The Evidence Locker:
-- ✅ Provides timestamps
-- ✅ Encrypts files securely
-- ✅ Maintains chain of custody metadata
-- ⚠️ May require authentication by lawyer
-- ⚠️ Subject to court rules of evidence
-
-**Always consult your attorney** about evidence admissibility.
-
-### Is there a cost to use 3mpwrApp?
-
-**No, 3mpwrApp is completely FREE.** There are no paid tiers, subscriptions, or in-app purchases. All features are free for everyone, forever. We're a community-funded project focused on disability empowerment, not profit.
-
-**[See Terms of Service →](/terms/)**
-
-### How do I report copyright violations?
-
-Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
-
-- Description of copyrighted work
-- URL/location of infringing content
-- Your contact information
-- Statement of good faith belief
-
-**[DMCA policy →](/terms/#7-intellectual-property)**
-
----
-
-## Still Have Questions?
-
-### Contact Us
-
-📧 **Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-
-📱 **Social Media:**
-- [Facebook](https://www.facebook.com/3mpowrapp)
-- [X/Twitter](https://x.com/3mpowrApp0816)
-- [Instagram](https://www.instagram.com/3mpowrapp/)
-
-📖 **Resources:**
-- [Complete User Guide](/user-guide) - Step-by-step tutorials
-- [All Features](/features) - Full feature list
-- [Beta Guide](/beta-guide) - Beta testing handbook
-- [Roadmap](/roadmap) - What's coming next
-
----
-
-<div class="alternative-formats">
-  <p><strong>📄 Alternative Formats</strong></p>
-  <p>
-    <a href="/downloads/faq.pdf" class="format-link">📄 Download as PDF</a>
-    <a href="javascript:window.print()" class="format-link">🖨️ Print-friendly version</a>
-    <a href="mailto:?subject=3mpwrApp FAQ&body=Check out these FAQs: https://3mpwrapp.ca/faq" class="format-link">📧 Email to yourself</a>
-  </p>
-</div>
-
-<div class="crisis-resources" role="alert">
-  <p><strong>🆘 Need immediate help?</strong></p>
-  <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
-</div>
-
-
-{%- include page-feedback.html -%}
-
-**3mpwr App - Your voice, your power, your data.**
-
-*Last Updated: November 23, 2025*
-
-<link rel="stylesheet" href="/assets/css/faq.css">
-
-<script src="/assets/js/faq.js" defer></script>
+**Thank you for using 3MPWRAPP! 💙**
