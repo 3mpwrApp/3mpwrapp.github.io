@@ -1,0 +1,233 @@
+---
+layout: post
+title: "Daily News Curation - 2026-05-20"
+date: 2026-05-20
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-05-20
+
+Curated 43 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. In Canada, Health Care is a Right. Except if You’re a Migrant Worker
+Sanctuary Health has helped farm and construction workers for decades. Now they’re bracing for a new crisis.
+[Source](https://thetyee.ca/News/2026/05/15/Sanctuary-Health-Care-Migrant-Worker-Rights/)
+**Score:** 24.40
+
+### 2. Manitoba Government Reminds Drivers to Share the Road as Canada Road Safety Week Begins
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73818)
+**Score:** 18.00
+
+### 3. Manitoba Government to Accelerate Clean Technology with $3.75-Million Foresight Canada Partnership
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73697)
+**Score:** 18.00
+
+### 4. When the Biggest AI Data Centre Comes to Your Town
+The largest in Canada is proposed for Olds, Alberta. Residents scrambled to know its impact.
+[Source](https://thetyee.ca/News/2026/05/19/When-AI-Data-Centre-Comes-Town/)
+**Score:** 16.00
+
+### 5. Province Declares a Public Health Emergency to Combat the Spread of HIV
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73717)
+**Score:** 15.40
+
+### 6. Victoria Uber Drivers Get Wage Bonuses, Wellness Fund
+Approximately 1,000 unionized drivers ratified a first agreement April 28, the first for ride-share drivers in Canada.
+[Source](https://thetyee.ca/News/2026/05/15/Victoria-Uber-Drivers-Get-Wage-Bonuses/)
+**Score:** 12.50
+
+### 7. BC’s Poverty Reduction Plan Is Working, Says Annual Review
+But the province still has the highest poverty rate in Canada, with Ontario a close second.
+[Source](https://thetyee.ca/News/2026/05/18/BC-Poverty-Reduction-Plan-Working/)
+**Score:** 11.50
+
+### 8. CLC sets a workers' agenda for Canada
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/podcast/clc-sets-a-workers-agenda-for-canada/)
+**Score:** 10.50
+
+### 9. I’m an Emergency Volunteer. It Changed How I See the World
+As global challenges get bigger, we need community more than ever.
+[Source](https://thetyee.ca/Culture/2026/05/15/Emergency-Volunteer/)
+**Score:** 9.60
+
+### 10. Manitoba Government Supports Heart and Stroke Care
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73859)
+**Score:** 11.90
+
+### 11. Manitoba Government Invests in Westman Health-Care Workforce with New Paramedic Training Seats, New Child-Care Spaces at the Brandon Regional Health-Care Centre
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73858)
+**Score:** 14.40
+
+### 12. Premier, India's High Commissioner to Canada Discuss Trade and Economic Opportunities Through Port of Churchill
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73817)
+**Score:** 10.50
+
+### 13. Manitoba Companies Encouraged to Apply to Innovation Growth Program
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73917)
+**Score:** 9.50
+
+### 14. Manitoba Government Increases Funding for Adult Learning Centres and Literacy Programs
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73897)
+**Score:** 10.50
+
+### 15. Canadian Labour Congress convention features focus on workers' rights in the face of turbulent economy
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/labour/canadian-labour-congress-convention-features-focus-on-workers-rights-in-the-face-of-turbulent-econom/)
+**Score:** 7.00
+
+### 16. Manitoba Government Expands French-Language Nursing Education
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73837)
+**Score:** 9.50
+
+### 17. Manitoba Government Appoints Noni Classen as New Commissioner of Teacher Professional Conduct
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73821)
+**Score:** 9.50
+
+### 18. Manitoba Government Honours Highest-Achieving Apprentices
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73759)
+**Score:** 9.50
+
+### 19. Manitoba Government Opens Applications for Orange Shirt Day Fund
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73698)
+**Score:** 9.50
+
+### 20. Doug Ford has opened the door to privatizing our water, history show how that can put public health at risk
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/columnists/doug-ford-has-opened-the-door-to-privatizing-our-water-history-show-how-that-can-put-public-health-at-risk/)
+**Score:** 8.40
+
+### 21. A Prominent Alberta Separatist Calls for a Coup Against Danielle Smith
+Jeffrey Rath blasts agreement with Mark Carney and urges supporters to take over the UCP.
+[Source](https://thetyee.ca/Opinion/2026/05/19/Prominent-Alberta-Separatist-Calls-For-Coup/)
+**Score:** 6.50
+
+### 22. Vancouver Is Getting AI Data Centres. That’s Not Good
+The federal government is subsidizing Telus projects that could make life worse for nearby residents.
+[Source](https://thetyee.ca/Opinion/2026/05/18/Vancouver-Getting-AI-Data-Centres/)
+**Score:** 6.00
+
+### 23. Manitoba Government Invests an Additional $500,000 in Manitoba Children's Museum
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73757)
+**Score:** 7.50
+
+### 24. Manitoba Government Introduces Budget Implementation Bill That Would Remove Provincial Sales Tax from Groceries
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73737)
+**Score:** 7.50
+
+### 25. Manitoba Government Opens Nominations For 2026 Mosaic Awards
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73700)
+**Score:** 7.50
+
+### 26. Manitoba Government Advances $3-Billion Investment in Westman Energy Production
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73657)
+**Score:** 7.50
+
+### 27. As Employers Push to Adopt AI, Many Workers Push Back
+Most Canadian execs embrace the trend but one-third face employee resistance, finds a survey.
+[Source](https://thetyee.ca/News/2026/05/19/Employers-Push-Adopt-AI-Workers-Push-Back/)
+**Score:** 4.00
+
+### 28. Alberta Separatists Ignored the Power of Treaties. Take Heed, Carney
+Ottawa, like the secessionists, aims to extract maximum resources. First Nations have enduring rights.
+[Source](https://thetyee.ca/Opinion/2026/05/15/Alberta-Separatists-Ignored-Power-Treaties/)
+**Score:** 5.50
+
+### 29. You thought the voters list debacle was bad? 20 years ago, Alberta Conservatives wanted our birthdays on it too!
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/politics/canadian-politics/you-thought-the-voters-list-debacle-was-bad-20-years-ago-alberta-conservatives-wanted-our-birthdays-on-it-too/)
+**Score:** 4.50
+
+### 30. No, Your Property Is Not at Risk After the Cowichan Decision
+An expert public forum concludes ‘we're all here to stay.’ But Eby still faces big challenges.
+[Source](https://thetyee.ca/News/2026/05/20/Property-Not-Risk-Cowichan-Decision/)
+**Score:** 3.90
+
+### 31. Why Is Smith Still Giving Separatists a Ride?
+The court, Carney and political threats offer Alberta’s premier an exit ramp. She refuses to swerve.
+[Source](https://thetyee.ca/Analysis/2026/05/20/Why-Smith-Giving-Separatists-Ride/)
+**Score:** 4.50
+
+### 32. As Election Looms, Band Halts Chief’s Credit Card Access
+McLeod Lake Indian Band has limited Chief Harley Chingee’s spending power, following reporting by The Tyee.
+[Source](https://thetyee.ca/News/2026/05/18/Band-Halts-Chief-Credit-Card-Access/)
+**Score:** 3.60
+
+### 33. Manitobans Invited to Share Views on Seasonal Time Change
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73919)
+**Score:** 4.50
+
+### 34. Measles Update  #111
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73918)
+**Score:** 4.50
+
+### 35. Measles Update #110
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73877)
+**Score:** 4.50
+
+### 36. Camping Season Kicks Off In Manitoba's Provincial Parks
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73860)
+**Score:** 4.50
+
+### 37. Measles Update  #109
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73857)
+**Score:** 4.50
+
+### 38. Measles Update #108
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73819)
+**Score:** 4.50
+
+### 39. Hepatitis A Public Notification #1
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73777)
+**Score:** 3.90
+
+### 40. Measles Update #107
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73760)
+**Score:** 4.50
+
+### 41. Province Encourages Eligible Manitobans to Access Hepatitis A Vaccine
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73758)
+**Score:** 4.50
+
+### 42. Manitoba Invests $15 Million to Transform Historic Pantages Playhouse Theatre into a Performing Arts Centre
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73677)
+**Score:** 4.50
+
