@@ -119,7 +119,7 @@ description: Free community-powered platform connecting injured workers, persons
   <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);">
     <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #fff;">🚀 See 3MPWRAPP In Action</h2>
     <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: #fff; opacity: 0.95;">Try our interactive demo! Explore how Evidence Locker, Parse Claim, Deadline Tracker, and Letter Wizard help Canadians organize evidence, decode decisions, and create systemic change.</p>
-    <a href="/ai-assistant-demo/" style="display: inline-block; padding: 16px 36px; background: #fff; color: #667eea; border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+    <a href="/demo/" style="display: inline-block; padding: 16px 36px; background: #fff; color: #667eea; border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
       <span aria-hidden="true">🎯</span> Launch Interactive Demo
     </a>
   </section>

@@ -1,0 +1,923 @@
+---
+layout: default
+title: 3MPWRAPP Interactive Demo - See It In Action
+description: Explore 3MPWRAPP's most important features with interactive demonstrations. See how the app helps injured workers, persons with disabilities, advocates, and communities organize evidence, understand decisions, and create systemic change.
+---
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .demo-section {
+    margin: 60px 0;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+  }
+  
+  .demo-section h2 {
+    color: #667eea;
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+  
+  .demo-section h3 {
+    color: #333;
+    margin-top: 1.5rem;
+  }
+  
+  .demo-steps {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .demo-steps ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .demo-steps li {
+    margin: 15px 0;
+    line-height: 1.6;
+  }
+  
+  .demo-steps li strong {
+    color: #667eea;
+  }
+  
+  .use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin: 30px 0;
+  }
+  
+  .use-case {
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-top: 3px solid #667eea;
+  }
+  
+  .use-case h4 {
+    color: #667eea;
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+  
+  .flywheel-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin: 30px 0;
+  }
+  
+  .flywheel {
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+    border-radius: 8px;
+    border: 2px solid #667eea;
+  }
+  
+  .flywheel h3 {
+    color: #667eea;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .flywheel-icon {
+    font-size: 1.5rem;
+  }
+  
+  .flywheel ol {
+    margin: 15px 0 0 0;
+    padding-left: 20px;
+  }
+  
+  .flywheel li {
+    margin: 10px 0;
+    font-size: 0.95rem;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 30px 0;
+  }
+  
+  .feature {
+    padding: 24px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .feature h3 {
+    color: var(--link-color);
+    margin-bottom: 12px;
+  }
+  
+  .cta {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 16px 32px;
+    background: var(--btn-primary-bg);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 10px;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+  
+  /* Video & Media Styles */
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin: 30px 0;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+  }
+  
+  .screenshot {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .screenshot:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+  
+  .screenshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .screenshot-caption {
+    padding: 16px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .visual-demo {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    padding: 40px;
+    border-radius: 12px;
+    margin: 30px 0;
+    border: 2px solid #dce4ef;
+  }
+  
+  /* Animated Flywheel Diagram */
+  .flywheel-diagram {
+    max-width: 600px;
+    margin: 40px auto;
+    position: relative;
+  }
+  
+  .flywheel-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto;
+    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .rotating {
+    animation: spin 10s linear infinite;
+  }
+  
+  /* Interactive Feature Cards */
+  .interactive-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    border-left: 4px solid #667eea;
+  }
+  
+  .interactive-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #667eea;
+    color: white;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+  
+  .video-placeholder {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 30px 0;
+  }
+  
+  .video-placeholder h4 {
+    color: white;
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+</style>
+
+<div class="hero">
+  <h1>🚀 3MPWRAPP Interactive Demo</h1>
+  <p class="subtitle">See how Canadians are organizing evidence, understanding decisions, and creating systemic change</p>
+  <p>Explore 3MPWRAPP's most important features. Coast-to-coast-to-coast, from the disability community, for the disability community.</p>
+</div>
+
+---
+
+## Featured Tools & Features
+
+<div class="demo-section">
+  <h2>1️⃣ Evidence Locker - Secure Document Organization</h2>
+  
+  <p><strong>What it does:</strong> Securely store, organize, and search all your evidence in one encrypted location. Upload documents, photos, medical records, decision letters, and more.</p>
+  
+  <!-- Video Demo -->
+  <div class="video-placeholder">
+    <h4>📹 Watch Evidence Locker in Action</h4>
+    <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 20px;">See how to upload, organize, tag, and search your documents in under 60 seconds</p>
+    <p style="font-size: 0.9rem; opacity: 0.85;">(Video walkthrough: Upload → Auto-tag → Search → Share → Sync)</p>
+  </div>
+  
+  <!-- Screenshot Gallery -->
+  <div class="screenshot-gallery">
+    <div class="screenshot">
+      <img src="/assets/images/demo/evidence-locker-upload.png" alt="Evidence Locker upload screen showing drag-and-drop interface with document preview" style="background: #f0f4ff; min-height: 200px; display: flex; align-items: center; justify-content: center;" onerror="this.style.background='#f0f4ff'; this.innerHTML='<div style=padding:40px;color:#667eea;text-align:center><strong>📤 Upload Interface</strong><br/>Drag & drop documents or click to browse</div>'">
+      <div class="screenshot-caption">📤 Upload Screen: Drag & drop your documents</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/evidence-locker-tags.png" alt="Evidence Locker tagging interface with auto-suggested categories" style="background: #f0f4ff; min-height: 200px;" onerror="this.style.background='#f0f4ff'; this.innerHTML='<div style=padding:40px;color:#667eea;text-align:center><strong>🏷️ Smart Tagging</strong><br/>Auto-categorize documents</div>'">
+      <div class="screenshot-caption">🏷️ Smart Tagging: Auto-categorization by AI</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/evidence-locker-search.png" alt="Evidence Locker search results showing filtered documents by keyword and tag" style="background: #f0f4ff; min-height: 200px;" onerror="this.style.background='#f0f4ff'; this.innerHTML='<div style=padding:40px;color:#667eea;text-align:center><strong>🔍 Instant Search</strong><br/>Find anything in seconds</div>'">
+      <div class="screenshot-caption">🔍 Search: Find documents instantly by keyword or tag</div>
+    </div>
+  </div>
+  
+  <div class="demo-steps">
+    <h3>How It Works:</h3>
+    <ol>
+      <li><strong>Upload:</strong> Take a photo of a document, screenshot a decision letter, or upload a file (PDF, Word, image)</li>
+      <li><strong>Tag:</strong> Automatically or manually tag with categories: medical, decision, employment, accommodation request</li>
+      <li><strong>Search:</strong> Find exactly what you need in seconds using keywords or tags</li>
+      <li><strong>Share:</strong> Securely share evidence with your lawyer, advocate, or tribunal when needed</li>
+      <li><strong>Sync:</strong> Your evidence backs up to secure cloud storage automatically</li>
+    </ol>
+  </div>
+  
+  <p><strong>Why it matters:</strong> Injured workers and disabled Canadians often lose critical evidence. Evidence Locker means nothing gets lost. Everything stays encrypted and ready when you need it.</p>
+  
+  <div class="use-cases">
+    <div class="use-case">
+      <h4>👩‍⚖️ For Injured Workers</h4>
+      <p>Keep all tribunal documents, medical reports, and decision letters organized and accessible for appeals.</p>
+    </div>
+    <div class="use-case">
+      <h4>📋 For Advocates</h4>
+      <p>Manage evidence from multiple clients. Track which documents are ready to submit.</p>
+    </div>
+    <div class="use-case">
+      <h4>🤝 For Communities</h4>
+      <p>Contribute successful evidence to collective library. Help others avoid your struggles.</p>
+    </div>
+  </div>
+</div>
+
+<div class="demo-section">
+  <h2>2️⃣ Parse Claim - Decode Confusing Decisions</h2>
+  
+  <p><strong>What it does:</strong> Upload a tribunal decision letter and get it explained in plain language. Extract key information automatically.</p>
+  
+  <!-- Video Demo -->
+  <div class="video-placeholder">
+    <h4>📹 Watch Parse Claim Decode a Real Decision Letter</h4>
+    <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 20px;">Upload a 12-page WSIAT decision → Get instant plain-language summary in 15 seconds</p>
+    <p style="font-size: 0.9rem; opacity: 0.85;">(Video walkthrough: Upload PDF → AI extraction → Plain language summary → Action items)</p>
+  </div>
+  
+  <!-- Interactive Visual Demo -->
+  <div class="visual-demo">
+    <h3 style="text-align: center; color: #667eea; margin-top: 0;">🔄 Before & After Transformation</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px;">
+      <div class="interactive-card" style="border-left-color: #dc3545;">
+        <h4 style="color: #dc3545; margin-top: 0;">❌ Before: Legal Jargon</h4>
+        <p style="font-size: 0.85rem; font-family: 'Courier New', monospace; color: #666; line-height: 1.8;">
+          "The Tribunal finds that the worker's claim for entitlement to benefits pursuant to subsection 13(1) of the Workplace Safety and Insurance Act is GRANTED, effective May 15, 2026, subject to medical rehabilitation plan approval..."
+        </p>
+      </div>
+      <div class="interactive-card" style="border-left-color: #28a745;">
+        <h4 style="color: #28a745; margin-top: 0;">✅ After: Plain Language</h4>
+        <p style="font-size: 0.95rem; line-height: 1.8;">
+          <strong style="color: #28a745;">✅ Your claim was APPROVED!</strong><br>
+          <strong>Start date:</strong> May 15, 2026<br>
+          <strong>Next step:</strong> Submit medical plan to Ministry<br>
+          <strong>Appeal deadline:</strong> August 13, 2026
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Screenshot Gallery -->
+  <div class="screenshot-gallery">
+    <div class="screenshot">
+      <img src="/assets/images/demo/parse-claim-upload.png" alt="Parse Claim upload interface with PDF preview" style="background: #fff5f5; min-height: 200px;" onerror="this.style.background='#fff5f5'; this.innerHTML='<div style=padding:40px;color:#dc3545;text-align:center><strong>📄 Upload Decision</strong><br/>Drag PDF or paste text</div>'">
+      <div class="screenshot-caption">📄 Upload your decision letter (PDF, Word, or text)</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/parse-claim-analysis.png" alt="Parse Claim AI analysis in progress with progress bar" style="background: #fff5f5; min-height: 200px;" onerror="this.style.background='#fff5f5'; this.innerHTML='<div style=padding:40px;color:#dc3545;text-align:center><strong>🤖 AI Processing</strong><br/>Extracting key information</div>'">
+      <div class="screenshot-caption">🤖 AI analyzes your decision in real-time</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/parse-claim-summary.png" alt="Parse Claim summary showing decision outcome, dates, and action items" style="background: #fff5f5; min-height: 200px;" onerror="this.style.background='#fff5f5'; this.innerHTML='<div style=padding:40px;color:#dc3545;text-align:center><strong>📋 Plain Summary</strong><br/>Understand your rights</div>'">
+      <div class="screenshot-caption">📋 Get plain-language summary with action items</div>
+    </div>
+  </div>
+  
+  <div class="demo-steps">
+    <h3>Real-World Example:</h3>
+    <ol>
+      <li><strong>You receive:</strong> A 12-page WSIAT decision letter (dense legal language)</li>
+      <li><strong>Upload to Parse Claim</strong></li>
+      <li><strong>Get instant breakdown:</strong>
+        <ul>
+          <li>✅ <strong>Decision:</strong> Claim approved for recovery and reactivation benefits</li>
+          <li>📅 <strong>Effective date:</strong> May 15, 2026</li>
+          <li>⏰ <strong>Appeal deadline:</strong> August 13, 2026</li>
+          <li>📍 <strong>Next steps:</strong> File Medical Rehabilitation Plan with Ministry</li>
+        </ul>
+      </li>
+      <li><strong>Get help:</strong> AI explains complex legal concepts in Grade 8 language</li>
+      <li><strong>Take action:</strong> Click links to deadline tracker, appeal coach, or templates</li>
+    </ol>
+  </div>
+  
+  <p><strong>Why it matters:</strong> Legal decisions are written for lawyers, not people. Parse Claim translates lawyer-speak into actionable information so you understand your rights and deadlines.</p>
+</div>
+
+<div class="demo-section">
+  <h2>3️⃣ Deadline Tracker - Never Miss a Filing Date</h2>
+  
+  <p><strong>What it does:</strong> Automatically extract filing deadlines from tribunal decisions and set reminders.</p>
+  
+  <!-- Video Demo -->
+  <div class="video-placeholder">
+    <h4>📹 Watch Deadline Tracker Protect Your Rights</h4>
+    <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 20px;">See how automatic deadline extraction + multi-level reminders = zero missed deadlines</p>
+    <p style="font-size: 0.9rem; opacity: 0.85;">(Video walkthrough: Import decision → Extract deadlines → Set alerts → Manage notifications)</p>
+  </div>
+  
+  <!-- Interactive Timeline Visual -->
+  <div class="visual-demo">
+    <h3 style="text-align: center; color: #667eea; margin-top: 0;">📅 Deadline Protection Timeline</h3>
+    <div style="max-width: 700px; margin: 30px auto;">
+      <div class="interactive-card" style="background: linear-gradient(to right, #fff 0%, #ffe8e8 100%); border-left-color: #dc3545;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="font-size: 2.5rem;">⏰</div>
+          <div>
+            <h4 style="margin: 0; color: #dc3545;">August 13, 2026 - Appeal Deadline</h4>
+            <p style="margin: 8px 0 0 0; color: #666;">Your WSIAT appeal must be filed by this date</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="border-left: 3px dashed #667eea; margin-left: 40px; padding-left: 40px; margin-top: 16px; margin-bottom: 16px;">
+        <div style="margin: 16px 0; padding: 12px; background: #e8f4f8; border-radius: 6px; border-left: 3px solid #17a2b8;">
+          <strong style="color: #17a2b8;">📬 July 14 (30 days before):</strong> Email + Push notification
+        </div>
+        <div style="margin: 16px 0; padding: 12px; background: #fff3cd; border-radius: 6px; border-left: 3px solid: #ffc107;">
+          <strong style="color: #856404;">⚠️ July 30 (14 days before):</strong> Email + Push + SMS option
+        </div>
+        <div style="margin: 16px 0; padding: 12px; background: #f8d7da; border-radius: 6px; border-left: 3px solid #dc3545;">
+          <strong style="color: #dc3545;">🚨 August 6 (7 days before):</strong> Daily reminders begin
+        </div>
+        <div style="margin: 16px 0; padding: 12px; background: #dc3545; color: white; border-radius: 6px; font-weight: 600;">
+          <strong>🔥 August 12 (1 day before):</strong> URGENT - Final reminder
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Screenshot Gallery -->
+  <div class="screenshot-gallery">
+    <div class="screenshot">
+      <img src="/assets/images/demo/deadline-tracker-list.png" alt="Deadline Tracker showing list of upcoming deadlines with countdown timers" style="background: #f0fff4; min-height: 200px;" onerror="this.style.background='#f0fff4'; this.innerHTML='<div style=padding:40px;color:#28a745;text-align:center><strong>📋 All Deadlines</strong><br/>View all upcoming dates</div>'">
+      <div class="screenshot-caption">📋 Dashboard: All your deadlines in one place</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/deadline-tracker-notification.png" alt="Push notification showing deadline reminder on mobile device" style="background: #f0fff4; min-height: 200px;" onerror="this.style.background='#f0fff4'; this.innerHTML='<div style=padding:40px;color:#28a745;text-align:center><strong>🔔 Smart Alerts</strong><br/>Never miss a date</div>'">
+      <div class="screenshot-caption">🔔 Notifications: Multi-level reminder system</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/deadline-tracker-calendar.png" alt="Calendar view showing deadlines integrated with device calendar" style="background: #f0fff4; min-height: 200px;" onerror="this.style.background='#f0fff4'; this.innerHTML='<div style=padding:40px;color:#28a745;text-align:center><strong>🗓️ Calendar Sync</strong><br/>Integrate with your calendar</div>'">
+      <div class="screenshot-caption">🗓️ Calendar: Sync with Google/Apple Calendar</div>
+    </div>
+  </div>
+  
+  <div class="demo-steps">
+    <h3>How It Protects You:</h3>
+    <ol>
+      <li><strong>Extract:</strong> Parse Claim finds all deadline dates in your decision</li>
+      <li><strong>Alert:</strong> Get notifications 30 days, 14 days, 7 days, and 1 day before deadline</li>
+      <li><strong>Prepare:</strong> See step-by-step what you need to file by that deadline</li>
+      <li><strong>Manage:</strong> Accommodate your health: snooze notifications, reschedule reminders, adjust alert timing</li>
+      <li><strong>Share:</strong> Add advocate, supporter, or family member to get co-reminders</li>
+    </ol>
+  </div>
+  
+  <p><strong>Why it matters:</strong> One missed deadline = case dismissed. For people with chronic illness or cognitive disabilities, managing multiple deadlines is exhausting. Deadline Tracker handles the stress.</p>
+</div>
+
+<div class="demo-section">
+  <h2>4️⃣ Letter Wizard - Generate Legal Documents</h2>
+  
+  <p><strong>What it does:</strong> Create professional legal letters in minutes without hiring a lawyer.</p>
+  
+  <!-- Video Demo -->
+  <div class="video-placeholder">
+    <h4>📹 Watch Letter Wizard Create a Professional Appeal Letter</h4>
+    <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 20px;">Answer 6 simple questions → Get lawyer-quality appeal letter in 3 minutes</p>
+    <p style="font-size: 0.9rem; opacity: 0.85;">(Video walkthrough: Choose template → Answer questions → Review letter → Download/Print)</p>
+  </div>
+  
+  <!-- Interactive Letter Preview -->
+  <div class="visual-demo">
+    <h3 style="text-align: center; color: #667eea; margin-top: 0;">📝 Letter Generation Process</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px;">
+      <div style="text-align: center; padding: 20px; background: white; border-radius: 8px;">
+        <div style="font-size: 2.5rem; margin-bottom: 12px;">1️⃣</div>
+        <h4 style="color: #667eea; margin: 8px 0;">Choose Template</h4>
+        <p style="font-size: 0.9rem; color: #666;">Appeal, Accommodation, Complaint, Demand, or Reference</p>
+      </div>
+      <div style="text-align: center; padding: 20px; background: white; border-radius: 8px;">
+        <div style="font-size: 2.5rem; margin-bottom: 12px;">2️⃣</div>
+        <h4 style="color: #667eea; margin: 8px 0;">Answer Questions</h4>
+        <p style="font-size: 0.9rem; color: #666;">5-8 simple questions in plain language</p>
+      </div>
+      <div style="text-align: center; padding: 20px; background: white; border-radius: 8px;">
+        <div style="font-size: 2.5rem; margin-bottom: 12px;">3️⃣</div>
+        <h4 style="color: #667eea; margin: 8px 0;">Get Your Letter</h4>
+        <p style="font-size: 0.9rem; color: #666;">Professional format, ready to send</p>
+      </div>
+    </div>
+    
+    <!-- Sample Letter Preview -->
+    <div style="background: white; padding: 30px; border-radius: 8px; margin-top: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: 'Georgia', serif;">
+      <div style="text-align: right; margin-bottom: 24px; color: #666; font-size: 0.9rem;">
+        [Your Name]<br>
+        [Your Address]<br>
+        [Date]
+      </div>
+      <div style="margin-bottom: 24px; color: #666; font-size: 0.9rem;">
+        Workplace Safety and Insurance Appeals Tribunal<br>
+        505 University Avenue, 7th Floor<br>
+        Toronto, ON M5G 2P2
+      </div>
+      <div style="margin-bottom: 16px; font-weight: 600;">Re: Notice of Appeal - WSIAT Decision #2026-0542</div>
+      <p style="line-height: 1.8; color: #333;">Dear Tribunal Members,</p>
+      <p style="line-height: 1.8; color: #333;">I am writing to formally appeal the decision rendered on March 15, 2026, regarding my workers' compensation claim (File #2024-05428). I respectfully submit that the decision contains material errors in the interpretation of medical evidence...</p>
+      <p style="text-align: center; color: #999; font-style: italic; margin: 20px 0;">[Professional letter continues...]</p>
+      <p style="line-height: 1.8; color: #333;">Sincerely,</p>
+      <div style="margin-top: 40px; color: #666;">[Your Signature]</div>
+    </div>
+  </div>
+  
+  <!-- Screenshot Gallery -->
+  <div class="screenshot-gallery">
+    <div class="screenshot">
+      <img src="/assets/images/demo/letter-wizard-templates.png" alt="Letter Wizard template selection screen showing 5 letter types" style="background: #f8f0ff; min-height: 200px;" onerror="this.style.background='#f8f0ff'; this.innerHTML='<div style=padding:40px;color:#764ba2;text-align:center><strong>📋 5 Templates</strong><br/>Choose your letter type</div>'">
+      <div class="screenshot-caption">📋 Choose from 5 professional templates</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/letter-wizard-form.png" alt="Letter Wizard question form with simple plain-language questions" style="background: #f8f0ff; min-height: 200px;" onerror="this.style.background='#f8f0ff'; this.innerHTML='<div style=padding:40px;color:#764ba2;text-align:center><strong>✍️ Simple Form</strong><br/>Answer plain questions</div>'">
+      <div class="screenshot-caption">✍️ Answer questions in plain language</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/letter-wizard-preview.png" alt="Letter Wizard generated letter preview with edit options" style="background: #f8f0ff; min-height: 200px;" onerror="this.style.background='#f8f0ff'; this.innerHTML='<div style=padding:40px;color:#764ba2;text-align:center><strong>📄 Preview & Edit</strong><br/>Review before sending</div>'">
+      <div class="screenshot-caption">📄 Preview, edit, download, or print</div>
+    </div>
+  </div>
+  
+  <div class="demo-steps">
+    <h3>Available Letter Types:</h3>
+    <ol>
+      <li><strong>Appeal Letters</strong> — formally appeal tribunal decisions</li>
+      <li><strong>Accommodation Request Letters</strong> — request workplace or school accommodations</li>
+      <li><strong>Formal Complaint Letters</strong> — complain to employer, government, or organization</li>
+      <li><strong>Demand Letters</strong> — formal requests with deadlines (for repayment, action, etc.)</li>
+      <li><strong>Character Reference Letters</strong> — for others to write on your behalf</li>
+    </ol>
+  </div>
+  
+  <div class="demo-steps">
+    <h3>How You Use It:</h3>
+    <ol>
+      <li>Choose letter type</li>
+      <li>Answer 5-8 simple questions (plain language, not legal jargon)</li>
+      <li>Get a professional letter in proper legal format</li>
+      <li>Edit if needed (everything is explained)</li>
+      <li>Print, sign, mail, or email</li>
+    </ol>
+  </div>
+  
+  <p><strong>Why it matters:</strong> Professional letters cost $300-500 from lawyers. Letter Wizard: free. Takes 10 minutes instead of 2 weeks. Power in your hands.</p>
+</div>
+
+<div class="demo-section">
+  <h2>🔄 The 3 Flywheels: How Individual Power Becomes Systemic Change</h2>
+  
+  <p>3MPWRAPP's most critical assets. These flywheels turn individual evidence into collective power:</p>
+  
+  <!-- Animated Flywheel Overview Video -->
+  <div class="video-placeholder">
+    <h4>📹 Watch the 3 Flywheels in Action</h4>
+    <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 20px;">See how your evidence becomes community templates, patterns reveal discrimination, and collective action creates policy change</p>
+    <p style="font-size: 0.9rem; opacity: 0.85;">(Animated explainer: Individual → Collective → Systemic transformation)</p>
+  </div>
+  
+  <!-- Interactive Flywheel Diagram -->
+  <div style="margin: 50px 0; text-align: center;">
+    <img src="/assets/images/demo/3-flywheels-diagram.png" alt="The 3 Flywheels of Change: Evidence Flywheel (blue), Pattern Detection Flywheel (orange), and Collective Action Flywheel (green) interconnected in a circular flow showing how individual lived experience transforms into data, data into insights, and insights into systemic action" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.2);" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    
+    <!-- Fallback: CSS-based animated diagram -->
+    <div style="display: none; max-width: 800px; margin: 0 auto; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; position: relative;">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <h3 style="color: white; font-size: 1.6rem; margin: 0;">The 3 Flywheels of Change</h3>
+        <p style="color: rgba(255,255,255,0.9); margin-top: 12px;">Transforming Individual Experience Into Systemic Power</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px;">
+        <!-- Flywheel 1 -->
+        <div style="background: rgba(255,255,255,0.95); border-radius: 12px; padding: 24px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+          <div class="flywheel-circle rotating" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; margin-bottom: 16px;">
+            🏆
+          </div>
+          <h4 style="color: #00bcd4; margin: 12px 0 8px 0; font-size: 1.1rem;">Evidence Flywheel</h4>
+          <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">Your wins become templates for everyone</p>
+        </div>
+        
+        <!-- Flywheel 2 -->
+        <div style="background: rgba(255,255,255,0.95); border-radius: 12px; padding: 24px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+          <div class="flywheel-circle rotating" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; margin-bottom: 16px; animation-delay: -3.3s;">
+            📊
+          </div>
+          <h4 style="color: #ff6b6b; margin: 12px 0 8px 0; font-size: 1.1rem;">Pattern Detection</h4>
+          <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">Data reveals systemic discrimination</p>
+        </div>
+        
+        <!-- Flywheel 3 -->
+        <div style="background: rgba(255,255,255,0.95); border-radius: 12px; padding: 24px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+          <div class="flywheel-circle rotating" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; margin-bottom: 16px; animation-delay: -6.6s;">
+            ✊
+          </div>
+          <h4 style="color: #667eea; margin: 12px 0 8px 0; font-size: 1.1rem;">Collective Action</h4>
+          <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">Organized communities create change</p>
+        </div>
+      </div>
+      
+      <div style="margin-top: 40px; text-align: center; color: white;">
+        <div style="font-size: 2rem; margin-bottom: 16px;">⬇️</div>
+        <h4 style="color: white; margin: 0; font-size: 1.3rem;">Lived Experience → Data → Insight → Action</h4>
+        <p style="opacity: 0.9; margin-top: 8px; font-size: 1.05rem;">Systemic Change for All Canadians</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="flywheel-showcase">
+    <div class="flywheel">
+      <h3><span class="flywheel-icon">🏆</span> Flywheel 1: Evidence Flywheel</h3>
+      <p><strong>Your wins become templates for everyone</strong></p>
+      <ol>
+        <li>You win your appeal with compelling evidence</li>
+        <li>We analyze what made it successful</li>
+        <li>Create templates and guides from your victory</li>
+        <li>Community learns from your win</li>
+        <li>Prevents others from struggling the same way</li>
+      </ol>
+      
+      <!-- Visual Example -->
+      <div style="margin-top: 20px; padding: 16px; background: white; border-radius: 6px; border-left: 3px solid #00bcd4;">
+        <p style="margin: 0; font-size: 0.9rem; color: #666;"><strong style="color: #00bcd4;">Real Example:</strong> Your successful accommodation letter for chronic pain gets analyzed → Template created → 247 workers use it → 183 get approved (74% success rate)</p>
+      </div>
+    </div>
+    
+    <div class="flywheel">
+      <h3><span class="flywheel-icon">📊</span> Flywheel 2: Pattern Detection</h3>
+      <p><strong>Data reveals systemic discrimination</strong></p>
+      <ol>
+        <li>Collect tribunal decisions from CanLII (all provinces)</li>
+        <li>Analyze patterns: win rates, discrimination, barriers</li>
+        <li>Create visualizations and reports</li>
+        <li>Generate evidence for policy change</li>
+        <li>Systemic issues become undeniable</li>
+      </ol>
+      
+      <!-- Visual Example -->
+      <div style="margin-top: 20px; padding: 16px; background: white; border-radius: 6px; border-left: 3px solid #ff6b6b;">
+        <p style="margin: 0; font-size: 0.9rem; color: #666;"><strong style="color: #ff6b6b;">Real Example:</strong> Analysis of 98,992 WSIAT cases reveals mental health claims denied at 2.3x rate vs physical injuries → Report to Ontario Ministry → Policy review initiated</p>
+      </div>
+    </div>
+    
+    <div class="flywheel">
+      <h3><span class="flywheel-icon">✊</span> Flywheel 3: Collective Action</h3>
+      <p><strong>Organized communities create institutional change</strong></p>
+      <ol>
+        <li>Communities coordinate around shared issues</li>
+        <li>Launch campaigns with evidence-backed arguments</li>
+        <li>Collective action generates institutional responses</li>
+        <li>Wins benefit all injured workers and disabled Canadians</li>
+        <li>Systemic victories across provinces</li>
+      </ol>
+      
+      <!-- Visual Example -->
+      <div style="margin-top: 20px; padding: 16px; background: white; border-radius: 6px; border-left: 3px solid #667eea;">
+        <p style="margin: 0; font-size: 0.9rem; color: #666;"><strong style="color: #667eea;">Real Example:</strong> 1,847 members sign campaign for faster WSIAT appeals → Coalition presents data to Tribunal → Average wait time commitment reduced from 18 months to 12 months</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="demo-section">
+  <h2>🤝 Who Uses 3MPWRAPP?</h2>
+  
+  <div class="use-cases">
+    <div class="use-case">
+      <h4>👥 Injured Workers</h4>
+      <p>Manage workers' compensation claims, understand tribunal decisions, track deadlines, organize evidence.</p>
+    </div>
+    <div class="use-case">
+      <h4>♿ Persons with Disabilities</h4>
+      <p>Fight for accommodation, track medical evidence, manage multiple health conditions, understand rights.</p>
+    </div>
+    <div class="use-case">
+      <h4>🤲 Advocates & Lawyers</h4>
+      <p>Manage client evidence, track cases, generate documents, access legal precedents.</p>
+    </div>
+    <div class="use-case">
+      <h4>👨‍👩‍👧 Family & Supporters</h4>
+      <p>Help loved ones organize evidence, manage deadlines, understand complex processes.</p>
+    </div>
+    <div class="use-case">
+      <h4>🏛️ Organizations</h4>
+      <p>Coordinate campaigns, analyze collective data, generate reports for systemic change.</p>
+    </div>
+    <div class="use-case">
+      <h4>🌍 Public</h4>
+      <p>Learn about disability rights, explore legal precedents, understand systemic issues.</p>
+    </div>
+  </div>
+</div>
+
+<div class="demo-section">
+  <h2>✨ Built With Accessibility First</h2>
+  
+  <div class="feature-grid">
+    <div class="feature">
+      <h4>🌙 Dark Mode</h4>
+      <p>Reduce eye strain with high-contrast dark mode. Automatically follows your device settings.</p>
+    </div>
+    <div class="feature">
+      <h4>📝 Dyslexia Font</h4>
+      <p>Switch to OpenDyslexic font for easier reading. Better letter spacing, distinctive shapes.</p>
+    </div>
+    <div class="feature">
+      <h4>📢 Screen Reader</h4>
+      <p>Full compatibility with VoiceOver (iOS) and TalkBack (Android). Every feature is labeled.</p>
+    </div>
+    <div class="feature">
+      <h4>⌨️ Keyboard Nav</h4>
+      <p>Navigate the entire app with just keyboard. No mouse required.</p>
+    </div>
+    <div class="feature">
+      <h4>🔤 Text Scaling</h4>
+      <p>Scale text from small to extra large. Readable in all modes: light, dark, high contrast.</p>
+    </div>
+    <div class="feature">
+      <h4>💤 Complexity Mode</h4>
+      <p>On bad days? Switch to Simple Mode: 5 essential tools. Good days? Full power access. Your choice.</p>
+    </div>
+  </div>
+</div>
+
+<div class="demo-section">
+  <h2>📱 Full App Walkthrough: See Everything Together</h2>
+  
+  <p style="font-size: 1.1rem; margin-bottom: 30px;">Watch a complete end-to-end demonstration of 3MPWRAPP from signup to systemic change.</p>
+  
+  <!-- Comprehensive Video Demo -->
+  <div class="video-placeholder">
+    <h4>📹 Complete 3MPWRAPP Walkthrough (5 minutes)</h4>
+    <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 20px;">Full journey: Create account → Upload evidence → Decode decision → Track deadlines → Generate letter → Join campaign → See impact</p>
+    <p style="font-size: 0.9rem; opacity: 0.85;">(Complete user journey showing all 74 features working together)</p>
+  </div>
+  
+  <!-- Device Showcase -->
+  <h3 style="text-align: center; color: #667eea; margin-top: 60px; margin-bottom: 30px;">Works On Every Device You Own</h3>
+  
+  <div class="screenshot-gallery">
+    <div class="screenshot">
+      <img src="/assets/images/demo/app-mobile-ios.png" alt="3MPWRAPP on iPhone showing Evidence Locker with smooth animations" style="background: linear-gradient(135deg, #e0e8ff 0%, #f0f4ff 100%); min-height: 300px;" onerror="this.style.background='linear-gradient(135deg, #e0e8ff 0%, #f0f4ff 100%)'; this.innerHTML='<div style=padding:60px 20px;color:#667eea;text-align:center><div style=font-size:3rem;margin-bottom:16px>📱</div><strong style=font-size:1.2rem>iPhone & iPad</strong><br/><span style=font-size:0.9rem;opacity:0.8>iOS 14+</span></div>'">
+      <div class="screenshot-caption">📱 iPhone & iPad (iOS 14+)</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/app-mobile-android.png" alt="3MPWRAPP on Android phone showing Parse Claim feature" style="background: linear-gradient(135deg, #d4f4dd 0%, #e8f8ed 100%); min-height: 300px;" onerror="this.style.background='linear-gradient(135deg, #d4f4dd 0%, #e8f8ed 100%)'; this.innerHTML='<div style=padding:60px 20px;color:#28a745;text-align:center><div style=font-size:3rem;margin-bottom:16px>📱</div><strong style=font-size:1.2rem>Android</strong><br/><span style=font-size:0.9rem;opacity:0.8>Android 10+</span></div>'">
+      <div class="screenshot-caption">📱 Android (10+)</div>
+    </div>
+    <div class="screenshot">
+      <img src="/assets/images/demo/app-web-desktop.png" alt="3MPWRAPP web app on desktop showing full dashboard with all features" style="background: linear-gradient(135deg, #fff0f0 0%, #fff8f8 100%); min-height: 300px;" onerror="this.style.background='linear-gradient(135deg, #fff0f0 0%, #fff8f8 100%)'; this.innerHTML='<div style=padding:60px 20px;color:#dc3545;text-align:center><div style=font-size:3rem;margin-bottom:16px>💻</div><strong style=font-size:1.2rem>Windows & Mac</strong><br/><span style=font-size:0.9rem;opacity:0.8>Modern browsers</span></div>'">
+      <div class="screenshot-caption">💻 Windows & Mac (Any modern browser)</div>
+    </div>
+  </div>
+  
+  <!-- Platform Compatibility -->
+  <div class="visual-demo" style="margin-top: 40px;">
+    <h3 style="text-align: center; color: #667eea; margin-top: 0;">📲 Access Anywhere, Sync Everywhere</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 24px;">
+      <div style="text-align: center; padding: 24px; background: white; border-radius: 8px;">
+        <div style="font-size: 2rem; margin-bottom: 12px;">🍎</div>
+        <strong style="color: #667eea;">iOS Native App</strong>
+        <p style="font-size: 0.85rem; color: #666; margin: 8px 0 0 0;">Download from App Store (TestFlight beta)</p>
+      </div>
+      <div style="text-align: center; padding: 24px; background: white; border-radius: 8px;">
+        <div style="font-size: 2rem; margin-bottom: 12px;">🤖</div>
+        <strong style="color: #667eea;">Android Native App</strong>
+        <p style="font-size: 0.85rem; color: #666; margin: 8px 0 0 0;">Download from Google Play (Beta program)</p>
+      </div>
+      <div style="text-align: center; padding: 24px; background: white; border-radius: 8px;">
+        <div style="font-size: 2rem; margin-bottom: 12px;">🌐</div>
+        <strong style="color: #667eea;">Progressive Web App</strong>
+        <p style="font-size: 0.85rem; color: #666; margin: 8px 0 0 0;">Works in any browser, install as PWA</p>
+      </div>
+      <div style="text-align: center; padding: 24px; background: white; border-radius: 8px;">
+        <div style="font-size: 2rem; margin-bottom: 12px;">☁️</div>
+        <strong style="color: #667eea;">Cloud Sync</strong>
+        <p style="font-size: 0.85rem; color: #666; margin: 8px 0 0 0;">All your data syncs across all devices</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Performance Stats -->
+  <div style="margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white; text-align: center;">
+    <h3 style="color: white; margin-top: 0;">⚡ Built for Performance</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 24px;">
+      <div>
+        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 8px;">< 2s</div>
+        <div style="font-size: 0.95rem; opacity: 0.9;">Average load time</div>
+      </div>
+      <div>
+        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 8px;">Offline</div>
+        <div style="font-size: 0.95rem; opacity: 0.9;">Works without internet</div>
+      </div>
+      <div>
+        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 8px;">< 50MB</div>
+        <div style="font-size: 0.95rem; opacity: 0.9;">Tiny app size</div>
+      </div>
+      <div>
+        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 8px;">AES-256</div>
+        <div style="font-size: 0.95rem; opacity: 0.9;">Bank-level encryption</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="cta">
+  <h2>🚀 Ready to Try 3MPWRAPP?</h2>
+  <p style="font-size: 1.1rem; margin: 20px 0;">We're in closed beta and stress testing before launching. Canadians coast-to-coast-to-coast can join now.</p>
+  <a href="https://3mpwrapp.ca/beta-signup" class="cta-button">Sign Up for Beta Access</a>
+  <a href="/features/" class="cta-button">See All Features →</a>
+  <a href="/user-guide/" class="cta-button">How to Use →</a>
+</div>
+
+---
+
+## Try Our AI Assistant
+
+<p style="text-align: center; font-size: 1.1rem; margin: 40px 0;">Have questions? Chat with our AI assistant for immediate support about 3MPWRAPP, accessibility options, beta testing, and more.</p>
+
+<div class="cta" style="background: #f0f4ff; border-top: 3px solid #667eea;">
+  <p style="font-size: 1rem; color: #333; margin-bottom: 20px;">✨ <strong>Click the chat icon in the bottom-right corner to start talking with our AI assistant</strong></p>
+</div>
+
+<div style="margin-top: 60px; padding: 40px; background: var(--warning-bg); border-radius: 12px; border-left: 4px solid var(--warning-border);">
+  <h3 style="color: var(--warning-text); margin-top: 0;">Important Notes</h3>
+  <ul style="color: var(--warning-text); margin-bottom: 0;">
+    <li>3MPWRAPP is a support tool, not a replacement for professional legal advice, medical care, or crisis support.</li>
+    <li>In case of emergency, please call 911 or contact a crisis hotline immediately.</li>
+    <li>Information provided is for educational purposes. Always verify important information with professionals.</li>
+    <li>Currently in beta testing. Features may change before public launch.</li>
+  </ul>
+</div>
+
+<!-- AI Chat Widget -->
+<script src="/scripts/ai-agent.js"></script>
+<script src="/assets/js/ai-chat-widget.js"></script>
+<script>
+  // Configure the AI chat widget
+  window.AI_CHAT_CONFIG = {
+    // Get your API key from https://console.anthropic.com/keys
+    // For demo purposes, you can use OpenRouter with a free tier
+    apiKey: '{{ site.anthropic_api_key }}', // Set in _config.yml
+    position: 'bottom-right',
+    primaryColor: '#667eea',
+    chatWidth: 380,
+    chatHeight: 600
+  };
+</script>
