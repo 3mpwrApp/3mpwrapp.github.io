@@ -102,8 +102,6 @@
   font-size: 80px;
   margin-bottom: 16px;
   /* Ensure decorative emojis are hidden from screen readers */
-  role: presentation;
-  aria-hidden: true;
 }
 
 .demo-subtitle {
@@ -392,7 +390,6 @@
 
 .file-icon {
   font-size: 40px;
-  aria-hidden: true; /* Decorative only */
 }
 
 .file-info {
@@ -1070,6 +1067,7 @@
   background: #e0e0e0;
   outline: none;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .wellness-slider::-webkit-slider-thumb {
