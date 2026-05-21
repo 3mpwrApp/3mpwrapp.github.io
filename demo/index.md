@@ -962,10 +962,8 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   
   <!-- Interactive Flywheel Diagram -->
   <div style="margin: 50px 0; text-align: center;">
-    <img src="/assets/images/demo/3-flywheels-diagram.png" alt="The 3 Flywheels of Change: Evidence Flywheel (blue), Pattern Detection Flywheel (orange), and Collective Action Flywheel (green) interconnected in a circular flow showing how individual lived experience transforms into data, data into insights, and insights into systemic action" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.2);" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-    
-    <!-- Fallback: CSS-based animated diagram -->
-    <div style="display: none; max-width: 800px; margin: 0 auto; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; position: relative;">
+    <!-- CSS-based animated diagram -->
+    <div style="max-width: 800px; margin: 0 auto; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; position: relative;">
       <div style="text-align: center; margin-bottom: 30px;">
         <h3 style="color: white; font-size: 1.6rem; margin: 0;">The 3 Flywheels of Change</h3>
         <p style="color: rgba(255,255,255,0.9); margin-top: 12px;">Transforming Individual Experience Into Systemic Power</p>
