@@ -595,15 +595,33 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   <!-- Screenshot Gallery -->
   <div class="screenshot-gallery">
     <div class="screenshot">
-      <img src="/assets/images/demo/evidence-locker-upload.png" alt="Evidence Locker upload screen showing drag-and-drop interface with document preview" style="background: #f0f4ff; min-height: 200px; display: flex; align-items: center; justify-content: center;" onerror="this.style.background='#f0f4ff'; this.innerHTML='<div style=padding:40px;color:#667eea;text-align:center><strong>📤 Upload Interface</strong><br/>Drag & drop documents or click to browse</div>'">
+      <div style="background: #f0f4ff; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #667eea;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">📤</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Upload Interface</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Drag & drop documents or click to browse</span>
+        </div>
+      </div>
       <div class="screenshot-caption">📤 Upload Screen: Drag & drop your documents</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/evidence-locker-tags.png" alt="Evidence Locker tagging interface with auto-suggested categories" style="background: #f0f4ff; min-height: 200px;" onerror="this.style.background='#f0f4ff'; this.innerHTML='<div style=padding:40px;color:#667eea;text-align:center><strong>🏷️ Smart Tagging</strong><br/>Auto-categorize documents</div>'">
+      <div style="background: #f0f4ff; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #667eea;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">🏷️</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Smart Tagging</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Auto-categorize documents</span>
+        </div>
+      </div>
       <div class="screenshot-caption">🏷️ Smart Tagging: Auto-categorization by AI</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/evidence-locker-search.png" alt="Evidence Locker search results showing filtered documents by keyword and tag" style="background: #f0f4ff; min-height: 200px;" onerror="this.style.background='#f0f4ff'; this.innerHTML='<div style=padding:40px;color:#667eea;text-align:center><strong>🔍 Instant Search</strong><br/>Find anything in seconds</div>'">
+      <div style="background: #f0f4ff; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #667eea;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">🔍</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Instant Search</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Find anything in seconds</span>
+        </div>
+      </div>
       <div class="screenshot-caption">🔍 Search: Find documents instantly by keyword or tag</div>
     </div>
   </div>
@@ -674,15 +692,33 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   <!-- Screenshot Gallery -->
   <div class="screenshot-gallery">
     <div class="screenshot">
-      <img src="/assets/images/demo/parse-claim-upload.png" alt="Parse Claim upload interface with PDF preview" style="background: #fff5f5; min-height: 200px;" onerror="this.style.background='#fff5f5'; this.innerHTML='<div style=padding:40px;color:#dc3545;text-align:center><strong>📄 Upload Decision</strong><br/>Drag PDF or paste text</div>'">
+      <div style="background: #fff5f5; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #dc3545;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">📄</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Upload Decision</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Drag PDF or paste text</span>
+        </div>
+      </div>
       <div class="screenshot-caption">📄 Upload your decision letter (PDF, Word, or text)</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/parse-claim-analysis.png" alt="Parse Claim AI analysis in progress with progress bar" style="background: #fff5f5; min-height: 200px;" onerror="this.style.background='#fff5f5'; this.innerHTML='<div style=padding:40px;color:#dc3545;text-align:center><strong>🤖 AI Processing</strong><br/>Extracting key information</div>'">
+      <div style="background: #fff5f5; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #dc3545;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">🤖</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">AI Processing</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Extracting key information</span>
+        </div>
+      </div>
       <div class="screenshot-caption">🤖 AI analyzes your decision in real-time</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/parse-claim-summary.png" alt="Parse Claim summary showing decision outcome, dates, and action items" style="background: #fff5f5; min-height: 200px;" onerror="this.style.background='#fff5f5'; this.innerHTML='<div style=padding:40px;color:#dc3545;text-align:center><strong>📋 Plain Summary</strong><br/>Understand your rights</div>'">
+      <div style="background: #fff5f5; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #dc3545;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">📋</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Plain Summary</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Understand your rights</span>
+        </div>
+      </div>
       <div class="screenshot-caption">📋 Get plain-language summary with action items</div>
     </div>
   </div>
@@ -754,15 +790,33 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   <!-- Screenshot Gallery -->
   <div class="screenshot-gallery">
     <div class="screenshot">
-      <img src="/assets/images/demo/deadline-tracker-list.png" alt="Deadline Tracker showing list of upcoming deadlines with countdown timers" style="background: #f0fff4; min-height: 200px;" onerror="this.style.background='#f0fff4'; this.innerHTML='<div style=padding:40px;color:#28a745;text-align:center><strong>📋 All Deadlines</strong><br/>View all upcoming dates</div>'">
+      <div style="background: #f0fff4; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #28a745;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">📋</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">All Deadlines</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">View all upcoming dates</span>
+        </div>
+      </div>
       <div class="screenshot-caption">📋 Dashboard: All your deadlines in one place</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/deadline-tracker-notification.png" alt="Push notification showing deadline reminder on mobile device" style="background: #f0fff4; min-height: 200px;" onerror="this.style.background='#f0fff4'; this.innerHTML='<div style=padding:40px;color:#28a745;text-align:center><strong>🔔 Smart Alerts</strong><br/>Never miss a date</div>'">
+      <div style="background: #f0fff4; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #28a745;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">🔔</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Smart Alerts</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Never miss a date</span>
+        </div>
+      </div>
       <div class="screenshot-caption">🔔 Notifications: Multi-level reminder system</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/deadline-tracker-calendar.png" alt="Calendar view showing deadlines integrated with device calendar" style="background: #f0fff4; min-height: 200px;" onerror="this.style.background='#f0fff4'; this.innerHTML='<div style=padding:40px;color:#28a745;text-align:center><strong>🗓️ Calendar Sync</strong><br/>Integrate with your calendar</div>'">
+      <div style="background: #f0fff4; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #28a745;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">🗓️</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Calendar Sync</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Integrate with your calendar</span>
+        </div>
+      </div>
       <div class="screenshot-caption">🗓️ Calendar: Sync with Google/Apple Calendar</div>
     </div>
   </div>
@@ -838,15 +892,33 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   <!-- Screenshot Gallery -->
   <div class="screenshot-gallery">
     <div class="screenshot">
-      <img src="/assets/images/demo/letter-wizard-templates.png" alt="Letter Wizard template selection screen showing 5 letter types" style="background: #f8f0ff; min-height: 200px;" onerror="this.style.background='#f8f0ff'; this.innerHTML='<div style=padding:40px;color:#764ba2;text-align:center><strong>📋 5 Templates</strong><br/>Choose your letter type</div>'">
+      <div style="background: #f8f0ff; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #764ba2;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">📋</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">5 Templates</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Choose your letter type</span>
+        </div>
+      </div>
       <div class="screenshot-caption">📋 Choose from 5 professional templates</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/letter-wizard-form.png" alt="Letter Wizard question form with simple plain-language questions" style="background: #f8f0ff; min-height: 200px;" onerror="this.style.background='#f8f0ff'; this.innerHTML='<div style=padding:40px;color:#764ba2;text-align:center><strong>✍️ Simple Form</strong><br/>Answer plain questions</div>'">
+      <div style="background: #f8f0ff; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #764ba2;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">✍️</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Simple Form</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Answer plain questions</span>
+        </div>
+      </div>
       <div class="screenshot-caption">✍️ Answer questions in plain language</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/letter-wizard-preview.png" alt="Letter Wizard generated letter preview with edit options" style="background: #f8f0ff; min-height: 200px;" onerror="this.style.background='#f8f0ff'; this.innerHTML='<div style=padding:40px;color:#764ba2;text-align:center><strong>📄 Preview & Edit</strong><br/>Review before sending</div>'">
+      <div style="background: #f8f0ff; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px;">
+        <div style="text-align: center; color: #764ba2;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">📄</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Preview & Edit</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Review before sending</span>
+        </div>
+      </div>
       <div class="screenshot-caption">📄 Preview, edit, download, or print</div>
     </div>
   </div>
@@ -1069,15 +1141,33 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   
   <div class="screenshot-gallery">
     <div class="screenshot">
-      <img src="/assets/images/demo/app-mobile-ios.png" alt="3MPWRAPP on iPhone showing Evidence Locker with smooth animations" style="background: linear-gradient(135deg, #e0e8ff 0%, #f0f4ff 100%); min-height: 300px;" onerror="this.style.background='linear-gradient(135deg, #e0e8ff 0%, #f0f4ff 100%)'; this.innerHTML='<div style=padding:60px 20px;color:#667eea;text-align:center><div style=font-size:3rem;margin-bottom:16px>📱</div><strong style=font-size:1.2rem>iPhone & iPad</strong><br/><span style=font-size:0.9rem;opacity:0.8>iOS 14+</span></div>'">
+      <div style="background: linear-gradient(135deg, #e0e8ff 0%, #f0f4ff 100%); min-height: 300px; display: flex; align-items: center; justify-content: center; padding: 60px 20px; border-radius: 8px;">
+        <div style="text-align: center; color: #667eea;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">📱</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">iPhone & iPad</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">iOS 14+</span>
+        </div>
+      </div>
       <div class="screenshot-caption">📱 iPhone & iPad (iOS 14+)</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/app-mobile-android.png" alt="3MPWRAPP on Android phone showing Parse Claim feature" style="background: linear-gradient(135deg, #d4f4dd 0%, #e8f8ed 100%); min-height: 300px;" onerror="this.style.background='linear-gradient(135deg, #d4f4dd 0%, #e8f8ed 100%)'; this.innerHTML='<div style=padding:60px 20px;color:#28a745;text-align:center><div style=font-size:3rem;margin-bottom:16px>📱</div><strong style=font-size:1.2rem>Android</strong><br/><span style=font-size:0.9rem;opacity:0.8>Android 10+</span></div>'">
+      <div style="background: linear-gradient(135deg, #d4f4dd 0%, #e8f8ed 100%); min-height: 300px; display: flex; align-items: center; justify-content: center; padding: 60px 20px; border-radius: 8px;">
+        <div style="text-align: center; color: #28a745;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">📱</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Android</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Android 10+</span>
+        </div>
+      </div>
       <div class="screenshot-caption">📱 Android (10+)</div>
     </div>
     <div class="screenshot">
-      <img src="/assets/images/demo/app-web-desktop.png" alt="3MPWRAPP web app on desktop showing full dashboard with all features" style="background: linear-gradient(135deg, #fff0f0 0%, #fff8f8 100%); min-height: 300px;" onerror="this.style.background='linear-gradient(135deg, #fff0f0 0%, #fff8f8 100%)'; this.innerHTML='<div style=padding:60px 20px;color:#dc3545;text-align:center><div style=font-size:3rem;margin-bottom:16px>💻</div><strong style=font-size:1.2rem>Windows & Mac</strong><br/><span style=font-size:0.9rem;opacity:0.8>Modern browsers</span></div>'">
+      <div style="background: linear-gradient(135deg, #fff0f0 0%, #fff8f8 100%); min-height: 300px; display: flex; align-items: center; justify-content: center; padding: 60px 20px; border-radius: 8px;">
+        <div style="text-align: center; color: #dc3545;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">💻</div>
+          <strong style="font-size: 1.2rem; display: block; margin-bottom: 8px;">Windows & Mac</strong>
+          <span style="font-size: 0.9rem; opacity: 0.8;">Modern browsers</span>
+        </div>
+      </div>
       <div class="screenshot-caption">💻 Windows & Mac (Any modern browser)</div>
     </div>
   </div>
