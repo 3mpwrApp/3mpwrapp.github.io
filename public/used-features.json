@@ -32,7 +32,8 @@
     "Accommodation Request Tracker: Never Let Them Ghost You",
     "PEI Social Assistance for Persons with Disabilities",
     "Winning Arguments Library: Successful Legal Strategies from Case Law",
-    "Northwest Territories Income Assistance"
+    "Northwest Territories Income Assistance",
+    "Manitoba EIA Disability Benefits"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -58,6 +59,6 @@
     "Collective Advocacy: Why Individual Coping Is Not Enough",
     "Intersectionality and Disability: Building for the Full Reality"
   ],
-  "rotationIndex": 2,
+  "rotationIndex": 3,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
