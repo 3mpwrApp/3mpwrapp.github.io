@@ -578,6 +578,59 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
 
 ---
 
+## 🎯 Try the Live App Now
+
+<div class="demo-section" style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); border-left: 4px solid #667eea; padding: 40px; border-radius: 12px;">
+  <div style="text-align: center; margin-bottom: 30px;">
+    <h2 style="margin-top: 0; color: #667eea; font-size: 2rem;">📱 Interactive PWA Demo</h2>
+    <p style="font-size: 1.2rem; color: #333; max-width: 800px; margin: 0 auto 20px auto;">Experience the full app right in your browser. No installation required. Works on desktop, tablet, and mobile.</p>
+    
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+      <a href="https://app-3mpwrapp.pages.dev/" target="_blank" class="cta-button" style="background: #667eea; color: white !important; text-decoration: none;">
+        🚀 Open Full App (New Tab)
+      </a>
+      <a href="https://app.3mpwrapp.ca" target="_blank" class="cta-button" style="background: #764ba2; color: white !important; text-decoration: none;">
+        ✨ Official PWA (app.3mpwrapp.ca)
+      </a>
+    </div>
+  </div>
+  
+  <!-- Embedded PWA -->
+  <div class="video-container" style="padding-bottom: 75%; border: 3px solid #667eea; box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);">
+    <iframe 
+      src="https://app-3mpwrapp.pages.dev/" 
+      title="3MPWRAPP Live Demo" 
+      style="border: none;"
+      allow="accelerometer; camera; geolocation; microphone"
+      sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+    ></iframe>
+  </div>
+  
+  <div style="margin-top: 30px; padding: 24px; background: rgba(255, 255, 255, 0.9); border-radius: 8px; border-left: 4px solid #28a745;">
+    <h3 style="margin-top: 0; color: #28a745; display: flex; align-items: center; gap: 10px;">
+      <span style="font-size: 1.5rem;">✅</span>
+      What You Can Do Right Now:
+    </h3>
+    <ul style="margin: 16px 0; padding-left: 24px; color: #333;">
+      <li><strong>Browse Features:</strong> Navigate through tabs: Home, Campaigns, Community, Resources, Wellness, Advocacy</li>
+      <li><strong>Test Evidence Locker:</strong> Upload a test file (works offline, stored locally on your device)</li>
+      <li><strong>Try Parse Claim:</strong> Upload a sample decision letter to see AI analysis in action</li>
+      <li><strong>Explore Community:</strong> View collective evidence library and success stories</li>
+      <li><strong>Check Resources:</strong> Access crisis resources, legal guides, and advocacy tools</li>
+      <li><strong>Install App:</strong> Click "Add to Home Screen" to install as a native-like app</li>
+    </ul>
+  </div>
+  
+  <div style="margin-top: 20px; padding: 20px; background: rgba(255, 243, 205, 0.5); border-radius: 8px; border-left: 4px solid #ffc107;">
+    <p style="margin: 0; color: #856404;">
+      <strong>🔒 Privacy Note:</strong> This is a fully functional demo. All data stays on YOUR device (local storage). 
+      No personal information is sent to our servers. Sign in with Google (optional) only accesses YOUR Google Drive for BYOC (Bring Your Own Cloud) backup.
+    </p>
+  </div>
+</div>
+
+---
+
 ## Featured Tools & Features
 
 <div class="demo-section">
