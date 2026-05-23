@@ -1,6 +1,6 @@
 ---
 title: "Tribunal Data Visualizations | 3mpwrApp Research Network"
-description: "Interactive data visualizations from 230,000+ tribunal records: WSIAT, HRTO, ONSBT, employer safety data"
+description: "Interactive data visualizations from 230,000+ tribunal records. Explore WSIAT, HRTO, ONSBT success rates and employer safety data."
 keywords: "tribunal data, WSIAT statistics, HRTO data, ONSBT data, employer safety Ontario, workplace injury data"
 author: "3mpwrApp Research Team"
 date: 2026-04-30

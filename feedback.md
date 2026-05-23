@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Feedback
-description: Thank you for your feedback on 3mpwrApp
+description: Thank you for your feedback! We read every response and use your input to improve 3mpwrApp for the disability community.
 permalink: /feedback/
 ---
 

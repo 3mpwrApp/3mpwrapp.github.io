@@ -1,0 +1,104 @@
+name: Check Internal Links
+
+on:
+  pull_request:
+    paths:
+      - '**.md'
+      - '**.html'
+  schedule:
+    # Run weekly on Sundays at 2 AM UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch: # Allow manual runs
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup PowerShell
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y powershell
+          
+      - name: Run broken link scanner
+        id: scan
+        continue-on-error: true
+        run: |
+          pwsh -File scripts/audit/find-broken-links.ps1 -MaxFiles 2000
+          
+      - name: Check if links were found
+        id: check
+        run: |
+          if [ -f "broken-links-report.json" ]; then
+            BROKEN_COUNT=$(cat broken-links-report.json | grep -o '"Count":[0-9]*' | head -1 | grep -o '[0-9]*')
+            echo "broken_count=$BROKEN_COUNT" >> $GITHUB_OUTPUT
+            
+            if [ "$BROKEN_COUNT" -gt "0" ]; then
+              echo "❌ Found $BROKEN_COUNT broken links" >> $GITHUB_STEP_SUMMARY
+              echo "## Broken Links Report" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "Found $BROKEN_COUNT broken internal links." >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "See the [full report](broken-links-report.json) for details." >> $GITHUB_STEP_SUMMARY
+              exit 1
+            else
+              echo "✅ No broken links found!" >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "⚠️ Link check did not produce a report" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+      - name: Upload broken links report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: broken-links-report
+          path: |
+            broken-links-report.json
+            broken-links-top20.csv
+          retention-days: 30
+          
+      - name: Comment on PR
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let report = '';
+            
+            try {
+              const csv = fs.readFileSync('broken-links-top20.csv', 'utf8');
+              const lines = csv.split('\n').slice(1, 11); // Get first 10 broken links
+              
+              report = '## ⚠️ Broken Links Detected\n\n';
+              report += 'This PR introduces or modifies files with broken internal links:\n\n';
+              report += '| Broken Link | Occurrences | Example File |\n';
+              report += '|-------------|-------------|-------------|\n';
+              
+              lines.forEach(line => {
+                if (line.trim()) {
+                  const parts = line.split(',');
+                  const link = parts[0]?.replace(/"/g, '');
+                  const count = parts[1]?.replace(/"/g, '');
+                  const file = parts[2]?.replace(/"/g, '').replace(/\\/g, '/');
+                  report += `| \`${link}\` | ${count} | \`${file}\` |\n`;
+                }
+              });
+              
+              report += '\n---\n';
+              report += 'Please fix these broken links before merging. Download the full report from the workflow artifacts.';
+              
+            } catch (error) {
+              report = '## ⚠️ Broken Links Detected\n\n';
+              report += 'Failed to read the detailed report. Check the workflow artifacts for the full broken links report.';
+            }
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: report
+            });

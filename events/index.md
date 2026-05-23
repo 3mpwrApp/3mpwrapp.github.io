@@ -2,7 +2,7 @@
 layout: default
 title: Events Calendar
 permalink: /events/
-description: "Community events calendar for disability rights, worker justice gatherings, workshops, and meetups. Subscribe via ICS feed for automatic updates. All events fully accessible."
+description: "Community events calendar for disability rights and worker justice. Subscribe via ICS feed for automatic updates to your calendar app."
 image: /assets/empwrapp-logo.png
 image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 ---

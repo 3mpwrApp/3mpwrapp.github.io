@@ -2,7 +2,7 @@
 layout: default
 title: Community Guidelines
 permalink: /community/guidelines/
-description: Our community standards for a safe, supportive space for people with disabilities.
+description: Community standards for a safe, respectful, trauma-informed space. Rules for peer support, privacy protection, and inclusive advocacy.
 ---
 
 

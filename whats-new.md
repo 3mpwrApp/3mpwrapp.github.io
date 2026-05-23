@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "What's New - Every Update, Every Commit"
-description: "Complete transparency - see every feature, fix, and improvement to 3mpwrApp. We're building in public!"
+description: "Complete transparency - see every feature, fix, and improvement to 3mpwrApp. Track all updates, commits, and changes as we build in public."
 image: /assets/empwrapp-logo.png
 image_alt: "3mpwrApp What's New - Complete changelog with full transparency"
 permalink: /whats-new/
