@@ -1,6 +1,31 @@
-# Dependabot disabled during axios supply chain attack (March 31, 2026)
-# DO NOT re-enable until npm all-clear (estimated April 3-5, 2026)
-# Reason: Automated PRs during active supply chain attacks are dangerous
+# Dependabot configuration for automated dependency updates
+# Re-enabled May 22, 2026 after axios supply chain attack resolution
+# Monitors npm and bundler dependencies for security updates
 
 version: 2
-updates: []
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-request-limit: 10
+    labels:
+      - "dependencies"
+      - "security"
+    reviewers:
+      - "S0vryn9-C011ect1ve"
+    
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-request-limit: 5
+    labels:
+      - "dependencies"
+      - "ruby"
+    reviewers:
+      - "S0vryn9-C011ect1ve"
