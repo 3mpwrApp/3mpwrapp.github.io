@@ -411,6 +411,64 @@ description: Free community-powered platform connecting injured workers, persons
   {%- include newsletter-signup.html -%}
 </section>
 
+<!-- Learn More Section -->
+<section style="margin-bottom: 4rem; padding: 2.5rem; background: linear-gradient(135deg, rgba(61, 78, 170, 0.08) 0%, rgba(61, 78, 170, 0.03) 100%); border-radius: 12px; border: 2px solid rgba(61, 78, 170, 0.15);">
+  <h2 style="text-align: center; font-size: 1.9rem; margin-bottom: 2rem; color: var(--text-color);">
+    <span aria-hidden="true">📚</span> Learn More About 3mpwrApp
+  </h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto;">
+    
+    <div style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #3d4eaa;">
+      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: #3d4eaa;">
+        <span aria-hidden="true">📖</span> Documentation
+      </h3>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin: 0.5rem 0;"><a href="/user-guide/" style="color: #003d7a; text-decoration: none; font-weight: 500;">User Guide</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/faq/" style="color: #003d7a; text-decoration: none; font-weight: 500;">FAQ</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/app-tour/" style="color: #003d7a; text-decoration: none; font-weight: 500;">App Tour</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/whats-new/" style="color: #003d7a; text-decoration: none; font-weight: 500;">What's New</a></li>
+      </ul>
+    </div>
+    
+    <div style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #10b981;">
+      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: #10b981;">
+        <span aria-hidden="true">🛡️</span> Privacy & Security
+      </h3>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin: 0.5rem 0;"><a href="/privacy/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Privacy Policy</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/security/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Security</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/accessibility/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Accessibility</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/delete-account.html" style="color: #003d7a; text-decoration: none; font-weight: 500;">Delete Account</a></li>
+      </ul>
+    </div>
+    
+    <div style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #f59e0b;">
+      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: #f59e0b;">
+        <span aria-hidden="true">🤝</span> Community & Support
+      </h3>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin: 0.5rem 0;"><a href="/community/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Community Hub</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/community/guidelines/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Community Guidelines</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/contact/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Contact Us</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/crisis-resources/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Crisis Resources</a></li>
+      </ul>
+    </div>
+    
+    <div style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #dc2626;">
+      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: #dc2626;">
+        <span aria-hidden="true">🔬</span> Research & Data
+      </h3>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin: 0.5rem 0;"><a href="/research/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Research Tools</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/research-data-sources/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Data Sources</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/tribunal-visualizations/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Visualizations</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/how-to-use-this-data/" style="color: #003d7a; text-decoration: none; font-weight: 500;">How to Use Data</a></li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
 <!-- Social Media Links -->
 <section style="text-align: center; margin-bottom: 4rem; padding: 2rem; background: rgba(61, 78, 170, 0.05); border-radius: 12px;">
   <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--text-color);">Stay Connected</h2>
