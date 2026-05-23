@@ -3,6 +3,14 @@ source "https://rubygems.org"
 # github-pages gem includes Jekyll, minima theme, and all standard plugins
 gem "github-pages", "~> 232"
 
+# Security updates (override github-pages pinned versions)
+gem "nokogiri", ">= 1.19.3"
+gem "addressable", ">= 2.9.0"
+gem "json", ">= 2.19.2"
+gem "uri", ">= 1.0.4"
+gem "faraday", ">= 2.14.1"
+gem "activesupport", ">= 8.1.2.1"
+
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
