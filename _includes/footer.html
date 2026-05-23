@@ -1,0 +1,55 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="{{ 'feed.xml' | relative_url }}">
+            <svg class="svg-icon orange">
+              <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        {%- if site.author %}
+          <ul class="contact-list">
+            {% if site.author.name -%}
+              <li class="p-name">{{ site.author.name | escape }}</li>
+            {% endif -%}
+            {% if site.author.email -%}
+              <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+            {%- endif %}
+          </ul>
+        {%- endif %}
+      </div>
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
+      </div>
+    </div>
+
+    <div class="social-links">
+      {%- include social-icons.html -%}
+    </div>
+
+    <div class="footer-legal">
+      <p>&copy; {{ 'now' | date: "%Y" }} 3mpwrApp™. All rights reserved.</p>
+      <p class="footer-trademark">
+        <strong>3mpwrApp™</strong> is a trademark. Unauthorized use is prohibited. 
+        <a href="{{ '/CONTRIBUTING.md' | relative_url }}">Contributors</a> must comply with <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">AGPL-3.0</a> license.
+      </p>
+      <p class="footer-mission">
+        🌱 Grassroots & Community-Funded • 💯 100% Free Forever • 🎯 Mission-Driven, Not Profit-Driven
+      </p>
+      <p class="footer-links">
+        <a href="{{ '/privacy.md' | relative_url }}">Privacy</a> • 
+        <a href="{{ '/security.md' | relative_url }}">Security</a> • 
+        <a href="{{ '/accessibility.md' | relative_url }}">Accessibility</a> • 
+        <a href="{{ '/CONTRIBUTING.md' | relative_url }}">Contribute</a> • 
+        <a href="{{ '/support.md' | relative_url }}">Support</a>
+      </p>
+    </div>
+
+  </div>
+
+</footer>

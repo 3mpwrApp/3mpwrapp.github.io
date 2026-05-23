@@ -1,4 +1,4 @@
-title: 3mpwr App
+title: 3mpwrApp™
 description: Practical tools and community for injured workers and persons with disabilities.
 baseurl: ""
 url: "https://3mpwrapp.ca"  # Primary custom domain
@@ -69,7 +69,7 @@ feed:
     - whats_new
 
 social:
-  name: "3mpwr App"
+  name: "3mpwrApp™"
   links:
     - https://github.com/3mpwrApp
     - https://www.facebook.com/3mpowrapp/
@@ -98,6 +98,11 @@ webmanifest: /assets/site.webmanifest
 
 # Include Google Search Console verification file and well-known folder for Android App Links
 include:
+  - .well-known
+  - google7c1f45d906f05cad.html
+  - _headers
+  - _redirects
+  - _routes.json
   - google92c2c14246b0aaae.html
   - _headers
   - .well-known

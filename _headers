@@ -1,5 +1,6 @@
-# Security Headers for Netlify/Cloudflare Pages
-# If using GitHub Pages, add these as meta tags in default.html
+# Security Headers for Cloudflare Pages
+# Format: path pattern followed by headers (indented with 2 spaces)
+# This file MUST be included in Jekyll output (see _config.yml include directive)
 
 # Force fresh content for research page (no CDN caching)
 /research
@@ -12,29 +13,33 @@
   Pragma: no-cache
   Expires: 0
 
+# Global security headers for ALL pages
 /*
-  # Content Security Policy - Allow inline scripts/styles for dynamic content + Turnstile + Analytics
+  # CRITICAL SECURITY HEADERS (fixes Mozilla Observatory grade D → A)
+  
+  # Content Security Policy - Prevents XSS attacks (-25 points if missing)
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://gc.zgo.at https://challenges.cloudflare.com https://static.cloudflareinsights.com https://3mpwrapp-calendar.empowrapp08162025.workers.dev; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://challenges.cloudflare.com https://cloudflareinsights.com https://3mpwrapp-calendar.empowrapp08162025.workers.dev; frame-src https://docs.google.com https://challenges.cloudflare.com; base-uri 'self'; form-action 'self' https://duckduckgo.com https://docs.google.com https://formspree.io; frame-ancestors 'none'; object-src 'none'; media-src 'self'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests
   
-  # Prevent clickjacking
-  X-Frame-Options: DENY
-  
-  # Prevent MIME type sniffing
-  X-Content-Type-Options: nosniff
-  
-  # Enable XSS protection
-  X-XSS-Protection: 1; mode=block
-  
-  # Referrer policy
-  Referrer-Policy: strict-origin-when-cross-origin
-  
-  # Permissions policy (restrict dangerous features)
-  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), ambient-light-sensor=(), interest-cohort=()
-  
-  # HSTS (2 years with preload)
+  # Strict Transport Security - Forces HTTPS (-20 points if missing)
+  # 2 years (63072000 seconds) with includeSubDomains and preload
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   
-  # Cross-Origin Policies for enhanced security
+  # X-Frame-Options - Prevents clickjacking (-20 points if missing)
+  X-Frame-Options: DENY
+  
+  # X-Content-Type-Options - Prevents MIME sniffing (required for passing)
+  X-Content-Type-Options: nosniff
+  
+  # X-XSS-Protection - Legacy XSS protection (belt and suspenders)
+  X-XSS-Protection: 1; mode=block
+  
+  # Referrer Policy - Controls referrer information (required for passing)
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Permissions Policy - Restricts dangerous browser features (recommended)
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), ambient-light-sensor=(), interest-cohort=()
+  
+  # Cross-Origin Policies - Enhanced security (recommended)
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
@@ -45,6 +50,16 @@
 # Google Drive OAuth callback - needs unsafe-none COOP to communicate with popup opener
 # Must match all variations: /gdrive-callback, /gdrive-callback/, /gdrive-callback.html
 /gdrive-callback
+  Cross-Origin-Opener-Policy: unsafe-none
+  Cross-Origin-Embedder-Policy: unsafe-none
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/gdrive-callback/
+  Cross-Origin-Opener-Policy: unsafe-none
+  Cross-Origin-Embedder-Policy: unsafe-none
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/gdrive-callback.html
   Cross-Origin-Opener-Policy: unsafe-none
   Cross-Origin-Embedder-Policy: unsafe-none
   Cache-Control: no-cache, no-store, must-revalidate

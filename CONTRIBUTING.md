@@ -271,8 +271,9 @@ All code contributions are licensed under **AGPL-3.0** (GNU Affero General Publi
 
 **What this means:**
 - ✅ Your code can be used, modified, and distributed freely
-- ✅ Anyone using your code must share their modifications
+- ✅ Anyone using your code MUST share their modifications publicly (copyleft)
 - ✅ Prevents commercial closed-source exploitation
+- ✅ Protects 3mpwrApp™ from being copied and monetized without community benefit
 - ❌ Cannot be used in proprietary software without releasing source
 
 ### **Content License:**
@@ -280,12 +281,17 @@ Documentation, guides, and website content are licensed under **CC BY-SA 4.0** (
 
 **What this means:**
 - ✅ Your content can be shared and adapted
-- ✅ Must give credit to you and 3mpwrApp
+- ✅ Must give credit to you and 3mpwrApp™
 - ✅ Adaptations must use same license
 - ❌ Cannot be used without attribution
 
-### **By Contributing:**
+### **Trademark:**
+"3mpwrApp™" is a trademark. Using the name or logo requires permission.
+
+**By Contributing:**
 You agree that your contributions will be licensed under these terms.
+
+**For more details:** See [LICENSE](LICENSE) file and [GOVERNANCE.md](GOVERNANCE.md)
 
 ---
 

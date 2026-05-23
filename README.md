@@ -1,18 +1,33 @@
-# 3mpowr App Website
+# 3mpwrApp™ Website
 
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Accessibility (pa11y-ci)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/a11y-pa11y.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/a11y-pa11y.yml)
 [![Accessibility (axe-core)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/accessibility-axe.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/accessibility-axe.yml)
 [![Links](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/links.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/links.yml)
 [![Lighthouse](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/lighthouse.yml)
 [![Pages build](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/jekyll.yml)
 
-**Last Updated**: January 5, 2026 | **Version**: 1.0.0 (Production Ready) | **Status**: ✅ All Systems Operational
+**Last Updated**: May 23, 2026 | **Version**: 1.0.0 (Production Ready) | **Status**: ✅ All Systems Operational
 
 > ⚠️ WEBSITE NOT LIVE YET? → See the Activation Guide: [ACTIVATION.md](ACTIVATION.md) (2–5 minutes)
 
-This is the official website repository for the 3mpowr App — a community‑driven platform for injured workers and persons with disabilities across Canada and the USA.
+This is the official website repository for **3mpwrApp™** — a community‑driven platform for injured workers and persons with disabilities across Canada.
 
-🌐 Live Site: [https://3mpwrapp.github.io](https://3mpwrapp.github.io)
+🌐 Live Site: [https://3mpwrapp.ca](https://3mpwrapp.ca)
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community! See [CONTRIBUTING.md](CONTRIBUTING.md) for:
+- How to contribute code, content, or feedback
+- Code of Conduct
+- Development setup
+- Pull request guidelines
+
+**Want to help protect 3mpwrApp™ from exploitation?** See:
+- [GOVERNANCE.md](GOVERNANCE.md) - Decision-making structure and project protection
+- [PROJECT_PROTECTION_STRATEGY.md](docs/PROJECT_PROTECTION_STRATEGY.md) - 5-layer defense against hijacking
 
 ---
 
