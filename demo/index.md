@@ -1286,6 +1286,48 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
 
 ---
 
+## Learn More About 3MPWRAPP
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1200px; margin: 40px auto;">
+  <div class="feature">
+    <h3>🏠 About Us</h3>
+    <p>Learn about our mission, the team behind 3MPWRAPP, and why we're building this tool for the disability community.</p>
+    <a href="/about/" style="color: #667eea; text-decoration: none; font-weight: 600;">Read Our Story →</a>
+  </div>
+  
+  <div class="feature">
+    <h3>❓ FAQ</h3>
+    <p>Have questions? Our comprehensive FAQ covers everything from privacy and security to features and pricing (spoiler: 100% free forever!).</p>
+    <a href="/faq/" style="color: #667eea; text-decoration: none; font-weight: 600;">Get Answers →</a>
+  </div>
+  
+  <div class="feature">
+    <h3>♿ Accessibility</h3>
+    <p>Discover our revolutionary accessibility features: spoon counter, emergency simplify mode, dyslexia support, and WCAG AAA compliance.</p>
+    <a href="/accessibility/" style="color: #667eea; text-decoration: none; font-weight: 600;">Explore Accessibility →</a>
+  </div>
+  
+  <div class="feature">
+    <h3>🔒 Privacy & Security</h3>
+    <p>Your data stays with YOU. Learn about our zero-collection policy, encryption, BYOC architecture, and 8-layer security.</p>
+    <a href="/privacy/" style="color: #667eea; text-decoration: none; font-weight: 600;">Read Privacy Policy →</a>
+  </div>
+  
+  <div class="feature">
+    <h3>📚 Documentation</h3>
+    <p>Comprehensive user guides, video tutorials, developer docs, and API references for extending 3MPWRAPP.</p>
+    <a href="/user-guide/" style="color: #667eea; text-decoration: none; font-weight: 600;">View Documentation →</a>
+  </div>
+  
+  <div class="feature">
+    <h3>📧 Contact Us</h3>
+    <p>Questions, feedback, or collaboration opportunities? We'd love to hear from you. Support response within 24 hours.</p>
+    <a href="/contact/" style="color: #667eea; text-decoration: none; font-weight: 600;">Get In Touch →</a>
+  </div>
+</div>
+
+---
+
 ## Try Our AI Assistant
 
 <p style="text-align: center; font-size: 1.1rem; margin: 40px 0;">Have questions? Chat with our AI assistant for immediate support about 3MPWRAPP, accessibility options, beta testing, and more.</p>
