@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Daily News Curation - 2026-05-23"
+date: 2026-05-23
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-05-23
+
+Curated 4 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Manitoba Government Expands Breast Screening Services to Portage La Prairie
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73939)
+**Score:** 10.50
+
+### 2. Elon Musk’s Knife, and the Global Lives Sacrificed
+The shocking insider’s account of who killed America’s international aid program and why.
+[Source](https://thetyee.ca/Culture/2026/05/22/Elon-Musk-Knife-Global-Lives-Sacrificed/)
+**Score:** 3.60
+
+### 3. Province Further Updates Hepatitis A Vaccine Criteria
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73942)
+**Score:** 4.50
+
