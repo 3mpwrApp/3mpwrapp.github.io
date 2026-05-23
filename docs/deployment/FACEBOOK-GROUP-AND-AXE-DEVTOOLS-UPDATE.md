@@ -1,4 +1,4 @@
-# ✅ Changes Complete - Facebook Group & Axe DevTools
+﻿# ✅ Changes Complete - Facebook Group & Axe DevTools
 
 ## 📋 Summary
 
@@ -75,10 +75,10 @@ npx axe https://3mpwrapp.ca/
 
 ### Test Specific Pages
 ```bash
-npx axe https://3mpwrapp.ca/about/
+npx axe https://3mpwrapp.ca/about
 npx axe https://3mpwrapp.ca/features/
 npx axe https://3mpwrapp.ca/user-guide/
-npx axe https://3mpwrapp.ca/accessibility/
+npx axe https://3mpwrapp.ca/accessibility
 ```
 
 ### Generate Report

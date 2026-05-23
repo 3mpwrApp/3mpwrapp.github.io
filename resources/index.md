@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Resources
 description: Comprehensive guides, rights information, templates, and helpful links to empower your journey.
@@ -23,7 +23,7 @@ description: Comprehensive guides, rights information, templates, and helpful li
   - Accessible PDF with proper tagging
   - All features documented in detail
   
-- **[🌐 Read Online User Guide]({{ '/user-guide' | relative_url }})**
+- **[🌐 Read Online User Guide](/user-guide)**
   - Web-optimized version
   - Mobile-friendly
   - Screen reader compatible
@@ -56,7 +56,7 @@ description: Comprehensive guides, rights information, templates, and helpful li
 - **Human Rights:** Complaint procedures by jurisdiction
 - **Accessibility Laws:** Federal and provincial legislation
 
-**[View Complete Legal Coverage in User Guide]({{ '/user-guide' | relative_url }}#federal-rights-benefits)**
+**[View Complete Legal Coverage in User Guide](/user-guide#federal-rights-benefits)**
 
 ---
 
@@ -117,7 +117,7 @@ We support **every type of disability:**
 - Invisible and Chronic Conditions
 - Intersectional Support
 
-**[Read Complete Disability Support Guide]({{ '/user-guide' | relative_url }}#all-disability-types-supported)**
+**[Read Complete Disability Support Guide](/user-guide#all-disability-types-supported)**
 
 ---
 
@@ -167,7 +167,7 @@ We support **every type of disability:**
 - Traditional knowledge protection
 - Data sovereignty principles
 
-**[Read Indigenous Language Support Guide]({{ '/user-guide' | relative_url }}#indigenous-languages)**
+**[Read Indigenous Language Support Guide](/user-guide#indigenous-languages)**
 
 ---
 
@@ -202,7 +202,7 @@ We support **every type of disability:**
 - **Housing:** Accessible housing information
 - **Transportation:** Transit accessibility by region
 
-**[View External Resources Directory]({{ '/user-guide' | relative_url }}#legal-resources-by-region)**
+**[View External Resources Directory](/user-guide#legal-resources-by-region)**
 
 ---
 
@@ -225,7 +225,7 @@ We've launched 6 major new features:
 
 ### Available Formats
 - **PDF:** [Download User Guide](/assets/downloads/3mpwrapp-user-guide-full.pdf)
-- **Web:** [Read Online]({{ '/user-guide' | relative_url }})
+- **Web:** [Read Online](/user-guide)
 - **Print:** PDF optimized for printing
 - **Large Print:** 16pt and 20pt versions available
 - **High Contrast:** Available on request

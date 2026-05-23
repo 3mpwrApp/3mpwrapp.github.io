@@ -1,4 +1,4 @@
-# Beta Tester Email: Research Launch Announcement
+﻿# Beta Tester Email: Research Launch Announcement
 
 **Subject Line Options:**
 1. 🔬 We analyzed 11,430 WSIAT cases—here's what we found (and what you can use)
@@ -59,7 +59,7 @@ We've translated the research into practical guides for the most commonly denied
 - **Shoulder/Rotator Cuff:** Navigating the 16% "pre-existing bias"
 - **Chronic Pain & Fibromyalgia:** Fighting the "invisible disability" denial patterns
 
-🔗 Browse: https://3mpwrapp.ca/research/#knowledge-base
+🔗 Browse: https://3mpwrapp.ca/research.html#knowledge-base
 
 Each guide includes:
 - ✅ Statistical evidence from our research
@@ -80,7 +80,7 @@ We've created **22 downloadable templates** based on common denial patterns foun
 - Objection Letters
 - And 17+ more...
 
-🔗 Download: https://3mpwrapp.ca/research/#templates
+🔗 Download: https://3mpwrapp.ca/research.html#templates
 
 **All templates include:**
 - ✅ Statistical evidence citations
@@ -98,7 +98,7 @@ See how WSIB denial keywords cluster and co-occur across 11,430 cases:
 - **Line thickness** = how often keywords appear together
 - **Interactive filtering** = explore patterns by injury type, denial tactic, or legal test
 
-🔗 Explore: https://3mpwrapp.ca/research/ (scroll to "Interactive Data Visualization")
+🔗 Explore: https://3mpwrapp.ca/research.html (scroll to "Interactive Data Visualization")
 
 **Example insight:** "Obesity" and "pre-existing" appear together 2.27x more than random chance (Lift = 2.27)—showing these denials systematically cluster.
 
@@ -108,7 +108,7 @@ See how WSIB denial keywords cluster and co-occur across 11,430 cases:
 
 We've built a central research page where all of this lives:
 
-🔗 **Main Hub:** https://3mpwrapp.ca/research/
+🔗 **Main Hub:** https://3mpwrapp.ca/research.html
 
 **Includes:**
 - Executive summary of all findings
@@ -166,7 +166,7 @@ Reply to this email or fill out our quick feedback form: [LINK TO GOOGLE FORM]
 
 Know someone fighting a WSIB denial? Forward this email or share the research hub:
 
-🔗 https://3mpwrapp.ca/research/
+🔗 https://3mpwrapp.ca/research.html
 
 **Social media hashtags:** #WSIB #InjuredWorkers #WorkersRights #DisabilityRights #OpenData
 

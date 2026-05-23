@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "WSIB Appeal Gap Analysis: 139,000 Ontario Workers Per Year Do Not Appeal Denials"
 date: 2026-04-30
@@ -202,7 +202,7 @@ We've analyzed thousands of WSIAT decisions to create practical guides:
 - [WSIAT NEL Benefits Guide](/guides/wsiat-nel-benefits-guide.html) - Based on 20,680 cases
 - [Back Injury Appeal Guide](/guides/wsiat-back-injury-guide.html) - Based on 13,407 cases
 - [WSIAT Appeal Templates](/templates/) - Downloadable forms and checklists
-- [Complete WSIAT Guide](/guides/wsiat-complete-guide/) - Step-by-step process
+- [Complete WSIAT Guide](/guides/wsiat-complete-guide) - Step-by-step process
 
 ### ✅ **Action Steps**
 
@@ -295,7 +295,7 @@ Success Rate = Granted ÷ (Granted + Denied) [from classified decisions only]
 ### Download the Data
 
 - [Appeal Gap Analysis (JSON)](/data/tribunal-comprehensive/wsib-suppression-funnel.json)
-- [98,992 WSIAT Decisions Explorer](/research/#wsiat-explorer)
+- [98,992 WSIAT Decisions Explorer](/research.html#wsiat-explorer)
 - [Cross-Tribunal Comparison](/data/tribunal-comprehensive/cross-tribunal-comparison.json)
 
 ---
@@ -339,7 +339,7 @@ This is **Part 1** of our ongoing WSIB research series:
 
 **This is research, not legal advice.** If you've been denied WSIB benefits, consult with a community legal clinic or qualified legal professional.
 
-**About the 73.5% success rate:** This reflects classified decisions only (5.7% of cases in our 2020-2026 CanLII subset). 94.3% of decisions are unresolved (withdrawn, pending, or missing outcomes). Success rates vary by claim type, injury type, and case complexity. See our [Complete WSIAT Guide](/guides/wsiat-complete-guide/) for detailed breakdowns.
+**About the 73.5% success rate:** This reflects classified decisions only (5.7% of cases in our 2020-2026 CanLII subset). 94.3% of decisions are unresolved (withdrawn, pending, or missing outcomes). Success rates vary by claim type, injury type, and case complexity. See our [Complete WSIAT Guide](/guides/wsiat-complete-guide) for detailed breakdowns.
 
 **Appeal volume estimation:** We calculated ~2,475 appeals/year by dividing 98,992 decisions by 40 years (1987-2026). Actual annual volume varies.
 

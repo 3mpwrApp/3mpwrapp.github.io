@@ -1,4 +1,4 @@
-# 🎯 COMPREHENSIVE DATA COLLECTION & ANALYSIS PLAN
+﻿# 🎯 COMPREHENSIVE DATA COLLECTION & ANALYSIS PLAN
 **Date:** April 27, 2026  
 **Status:** IMMEDIATE EXECUTION PHASE  
 **Timeline:** 48 Hours → 3 Months
@@ -313,7 +313,7 @@ node scripts/collect-ultra-slow.js --database=onwsiat --year=2019 --maxCalls=100
 ## ✅ IMMEDIATE NEXT STEPS
 
 **RIGHT NOW:**
-1. Visit https://tribunalsontario.ca/en/about/open-data/
+1. Visit https://tribunalsontario.ca/en/aboutopen-data/
 2. Click "HRTO – Activity report: Decisions Issued"
 3. Download all 39 quarterly reports (Q1 2016-17 to Q3 2025-26)
 

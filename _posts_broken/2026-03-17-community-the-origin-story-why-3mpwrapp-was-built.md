@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "The Origin Story: Why 3mpwrApp Was Built"
 date: 2026-03-17 00:00:00 +0000
@@ -48,5 +48,5 @@ The "3mpwr" in the name is intentional. Not the hollow empowerment that asks dis
 3mpwrApp is built on these principles ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â and built for and with the people who need them most.
 
 - ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¬ [Community Forums](/community/)
-- ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª [Become a Beta Tester](/app-waitlist/)
-- ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬â€œ [Read Our Mission](/about/)
+- ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª [Become a Beta Tester](/app-waitlist)
+- ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬â€œ [Read Our Mission](/about)

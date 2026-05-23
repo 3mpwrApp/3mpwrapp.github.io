@@ -1,4 +1,4 @@
-# Content Accessibility Guidelines for 3mpwr
+﻿# Content Accessibility Guidelines for 3mpwr
 
 **Version:** 1.0  
 **Last Updated:** May 11, 2026  
@@ -440,7 +440,7 @@ plain_language_summary: "Short, simple explanation here."
 ## 📞 Get Help
 
 **Questions about accessibility?**
-- Review [accessibility.md](../accessibility.md) for site-wide features
+- Review [/accessibility](..//accessibility) for site-wide features
 - Check [COMPONENT_A11Y_DOCS.md](./COMPONENT_A11Y_DOCS.md) for reusable patterns
 - Ask in #accessibility channel (if Slack/Discord set up)
 - Email: accessibility@3mpwrapp.ca

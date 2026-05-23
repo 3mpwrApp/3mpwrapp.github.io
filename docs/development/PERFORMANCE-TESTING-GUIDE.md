@@ -1,4 +1,4 @@
-# ⚡ PERFORMANCE TESTING GUIDE
+﻿# ⚡ PERFORMANCE TESTING GUIDE
 
 **Testing Date:** October 20, 2025  
 **Target:** 3mpwrapp.pages.dev  
@@ -64,7 +64,7 @@ Run Lighthouse for:
 - [ ] Blog (/blog)
 - [ ] User Guide (/user-guide.md)
 - [ ] Privacy (/privacy.md)
-- [ ] Accessibility (/accessibility.md)
+- [ ] Accessibility (//accessibility)
 
 ### Step 6: Review Issues
 Lighthouse will list:

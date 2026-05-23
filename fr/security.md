@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Politique de sécurité
 permalink: /fr/security/
@@ -236,5 +236,5 @@ Sujet : "Divulgation de vulnérabilité de sécurité"
 
 **Liens connexes :**
 - [Politique de confidentialité](/fr/privacy/)
-- [Déclaration d'accessibilité](/fr/accessibility/)
+- [Déclaration d'accessibilité](/fr/accessibility)
 - [Conditions d'utilisation](/fr/terms/)

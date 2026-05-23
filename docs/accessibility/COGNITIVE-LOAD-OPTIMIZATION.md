@@ -1,4 +1,4 @@
-# Cognitive Load Optimization Plan
+﻿# Cognitive Load Optimization Plan
 ## 3mpwr App Website Accessibility Analysis
 
 **Date:** January 15, 2026  
@@ -13,7 +13,7 @@
 ### Current Status
 - **Homepage (index.md):** ~2,850 words ❌ (Target: 800)
 - **About (about.md):** ~1,240 words ⚠️ (Target: 1,000)
-- **Accessibility (accessibility.md):** ~2,100 words ❌ (Target: 1,200)
+- **Accessibility (/accessibility):** ~2,100 words ❌ (Target: 1,200)
 - **Features (features/index.md):** ~850 words ✅ (Within target)
 
 ### Critical Findings
@@ -24,7 +24,7 @@
 
 ### Priority Ranking
 1. **CRITICAL:** Homepage (index.md) - Immediate restructuring needed
-2. **HIGH:** Accessibility (accessibility.md) - Progressive disclosure needed
+2. **HIGH:** Accessibility (/accessibility) - Progressive disclosure needed
 3. **MEDIUM:** About (about.md) - Minor optimization
 4. **LOW:** Features (features/index.md) - Maintain current structure
 
@@ -67,7 +67,7 @@
 | Legal & Privacy Links | 60 | ✅ Keep | Required |
 | Latest Blog Posts | 80 | ✅ Keep | Dynamic, scannable |
 | Weekly Updates + Code | 150 | ⚠️ Simplify | Too much JS inline |
-| Meet the Creator | 100 | 💡 Excerpt only | Full bio → `/about/` |
+| Meet the Creator | 100 | 💡 Excerpt only | Full bio → `/about` |
 | Connect With Us | 170 | ✅ Keep | Community building |
 
 ### Recommended Restructuring
@@ -130,7 +130,7 @@
 
 ---
 
-## Page 2: Accessibility (accessibility.md) - HIGH PRIORITY
+## Page 2: Accessibility (/accessibility) - HIGH PRIORITY
 
 ### Current State Analysis
 
@@ -313,7 +313,7 @@ Following our December 2025 demo, American users can now access core 3mpwr featu
 [... rest of content]
 </details>
 
-<a href="/roadmap/#usa-lite">Full USA Lite details →</a>
+<a href="/roadmap#usa-lite">Full USA Lite details →</a>
 ```
 
 **Savings:** 120 words
@@ -827,7 +827,7 @@ document.querySelectorAll('.show-more-btn').forEach(btn => {
 
 ```bash
 # Word count verification
-wc -w index.md about.md accessibility.md
+wc -w index.md about.md /accessibility
 
 # Reading level (Flesch-Kincaid)
 textstat index.md
@@ -1136,7 +1136,7 @@ pa11y https://3mpwrapp.ca/
 | Metric | Current | Target | How to Measure |
 |--------|---------|--------|----------------|
 | Homepage word count | 2,850 | ≤ 800 | `wc -w index.md` |
-| Accessibility word count | 2,100 | ≤ 1,200 | `wc -w accessibility.md` |
+| Accessibility word count | 2,100 | ≤ 1,200 | `wc -w /accessibility` |
 | About word count | 1,240 | ≤ 1,000 | `wc -w about.md` |
 | Avg. reading time (homepage) | 12 min | ≤ 4 min | Analytics |
 | Simple mode adoption | N/A | ≥ 25% | localStorage tracking |
@@ -1192,7 +1192,7 @@ pa11y https://3mpwrapp.ca/
 
 ### Internal Documentation
 - [User Guide - Accessibility Features](/user-guide/#accessibility-features)
-- [Accessibility Statement](/accessibility/)
+- [Accessibility Statement](/accessibility)
 - [Accessibility Settings](/accessibility-settings/)
 - [WCAG Compliance Checklist](/WCAG-COMPLIANCE-CHECKLIST.md)
 
@@ -1207,7 +1207,7 @@ pa11y https://3mpwrapp.ca/
    - Move 2,000+ words to progressive disclosure
    - Create `/homepage-full/` for detailed mode
 
-2. **HIGH - Accessibility (accessibility.md)**
+2. **HIGH - Accessibility (/accessibility)**
    - Reduce from 2,100 to ~1,200 words visible
    - Collapse WCAG checklists by default
    - Add Complexity Mode toggle

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Dev Diary: Why 3mpwrApp Will Always Be Free"
 date: 2026-05-07 00:00:00 +0000
@@ -33,5 +33,5 @@ The "always free" commitment is structural. It is in our founding documents. It 
 ## Follow Our Development
 We believe in building in public a the community we serve has been failed by opaque institutions too many times.
 - a [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
-- Ya [Join Beta Testing](/app-waitlist/)
+- Ya [Join Beta Testing](/app-waitlist)
 - Y [Community Discussion](/community/)

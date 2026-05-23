@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Community
 description: "Join an inclusive, grassroots community of injured workers, persons with disabilities, and allies. Safe spaces for peer support, advocacy, learning, and collective action. Everyone welcome."
@@ -238,7 +238,7 @@ The Disability Bulletin team is so proud to announce the launch of Issue #1 feat
     <h4 style="margin-top: 0; color: var(--warning-text); font-size: 1.1rem;">🔥 Lissa Beaulieu - Founder & Disability Rights Activist</h4>
     <p style="margin: 0.5rem 0; color: var(--text-primary); font-weight: 600;">Founder of 3mpwrApp, Board Member - Thunder Bay & District Injured Workers Support Group</p>
     <p style="margin: 0.5rem 0 1rem; color: var(--text-secondary); font-size: 0.95rem;">Building community tools for disability justice, fighting WSIB injustice, creative activism</p>
-    <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--warning-bg); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow Lissa on X →</a><a href="/about/" style="display: inline-block; background: var(--warning-text); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📖 Learn More →</a>
+    <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--warning-bg); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow Lissa on X →</a><a href="/about" style="display: inline-block; background: var(--warning-text); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📖 Learn More →</a>
   </div>
 
   <div style="border: 2px solid var(--info-border); border-left: 4px solid var(--info-border); padding: 1rem; border-radius: 8px; background: var(--info-bg);">
@@ -290,7 +290,7 @@ The Disability Bulletin team is so proud to announce the launch of Issue #1 feat
 
 <div class="button-group" role="navigation" aria-label="Get started with 3mpwrApp">
   <a href="/beta/" class="btn btn-primary" aria-label="Join our Beta Testing program">Join Beta Testing</a>
-  <a href="/about/" class="btn btn-secondary" aria-label="Learn more about 3mpwrApp mission and values">Learn More About Us</a>
+  <a href="/about" class="btn btn-secondary" aria-label="Learn more about 3mpwrApp mission and values">Learn More About Us</a>
   <a href="/user-guide/" class="btn btn-secondary" aria-label="Read comprehensive user guide">Read User Guide</a>
 </div>
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "What 3mpwr Means: The Philosophy Behind Our Name"
 date: 2026-04-02
@@ -127,8 +127,8 @@ This article is part of a connected series documenting how we're building 3mpwrA
 
 **Get involved:**
 - 💬 [Community Forums](https://3mpwrapp.ca/community/)
-- 🧪 [Become a Beta Tester](https://3mpwrapp.ca/app-waitlist/)
-- 📖 [Read Our Mission](https://3mpwrapp.ca/about/)
+- 🧪 [Become a Beta Tester](https://3mpwrapp.ca/app-waitlist)
+- 📖 [Read Our Mission](https://3mpwrapp.ca/about)
 
 **Follow us:**
 - **Discord:** [https://discord.gg/P2qQyjxV](https://discord.gg/P2qQyjxV)

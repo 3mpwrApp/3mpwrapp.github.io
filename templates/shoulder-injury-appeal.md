@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: "Shoulder Injury WSIAT Appeal Template"
 permalink: /templates/shoulder-injury-appeal/
@@ -604,9 +604,9 @@ Online: www.wsiat.ca
 
 **From 3mpwrApp Research Library:**
 - [Back Injury Appeal Template](/templates/back-injury-appeal/) - For back/spine injuries
-- [Chronic Pain Appeal Template](/templates/chronic-pain-appeal/) - For chronic pain denials
+- [Chronic Pain Appeal Template](/templates/chronic-pain-appeal) - For chronic pain denials
 - [Pre-Existing Condition Appeal Template](/templates/pre-existing-appeal/) - For "pre-existing" denials
-- [WSIAT Complete Guide](/guides/wsiat-complete-guide/) - Comprehensive WSIAT process guide
+- [WSIAT Complete Guide](/guides/wsiat-complete-guide) - Comprehensive WSIAT process guide
 - [Knowledge Base: Shoulder Injuries](/knowledge-base/shoulder-rotator-cuff-claims/) - Detailed injury-specific guidance
 
 ### 4. Review Your Tribunal Case Data

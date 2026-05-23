@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Intersectionality and Disability: Building for the Full Reality"
 date: 2026-05-09 00:00:00 +0000
@@ -31,5 +31,5 @@ When we say intersectional design, we mean: we do not optimize for the easiest u
 ## Join the Community
 3mpwrApp is built on these principles - and built for and with the people who need them most.
 - Y [Community Forums](/community/)
-- Ya [Become a Beta Tester](/app-waitlist/)
-- Y- [Read Our Mission](/about/)
+- Ya [Become a Beta Tester](/app-waitlist)
+- Y- [Read Our Mission](/about)

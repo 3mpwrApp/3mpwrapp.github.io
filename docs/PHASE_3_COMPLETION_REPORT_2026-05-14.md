@@ -1,4 +1,4 @@
-# Phase 3 Completion Report — Ontario Data Quality Plan
+﻿# Phase 3 Completion Report — Ontario Data Quality Plan
 **Completed: May 14, 2026, 12:15 AM**
 
 ---
@@ -14,12 +14,12 @@ Phase 3 (Visualization Verification + Data Integrity Check) is now COMPLETE. All
 ### 1. ✅ All Visualization Files Identified (6 Files)
 
 **Interactive Visualizations:**
-1. [connecting-the-dots-canlii-keyword-visualization-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-canlii-keyword-visualization-network.html)
+1. [connecting-the-dots-canlii-keyword-visualization-network.html](/connecting-the-dots-canlii-keyword-visualization-network.html)
 2. [connecting-the-dots-wsiat-keyword-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-wsiat-keyword-network.html)
 3. [wsib-denial-network-visualization.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\wsib-denial-network-visualization.html)
 4. [employer-safety-heatmap.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\employer-safety-heatmap.html)
 5. [tribunal-decision-heatmap.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\tribunal-decision-heatmap.html)
-6. [cross-tribunal-success-rates.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\cross-tribunal-success-rates.html)
+6. [cross-tribunal-success-rates.html](/cross-tribunal-success-rates.html)
 
 ---
 
@@ -233,12 +233,12 @@ across Ontario's administrative tribunals (1987-2026)</p>
 ## 📝 Files Verified (Phase 3)
 
 ### Visualization Files (6 files):
-1. [connecting-the-dots-canlii-keyword-visualization-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-canlii-keyword-visualization-network.html) — ✅ Data accurate (ONSBT: 13,798, WSIAT: 11,430)
+1. [connecting-the-dots-canlii-keyword-visualization-network.html](/connecting-the-dots-canlii-keyword-visualization-network.html) — ✅ Data accurate (ONSBT: 13,798, WSIAT: 11,430)
 2. [connecting-the-dots-wsiat-keyword-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-wsiat-keyword-network.html) — ✅ Data accurate
 3. [wsib-denial-network-visualization.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\wsib-denial-network-visualization.html) — ✅ Data accurate
 4. [employer-safety-heatmap.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\employer-safety-heatmap.html) — ✅ Data accurate
 5. [tribunal-decision-heatmap.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\tribunal-decision-heatmap.html) — ✅ Data accurate
-6. [cross-tribunal-success-rates.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\cross-tribunal-success-rates.html) — ✅ Data accurate (161,377 historical cases properly labeled)
+6. [cross-tribunal-success-rates.html](/cross-tribunal-success-rates.html) — ✅ Data accurate (161,377 historical cases properly labeled)
 
 ### Knowledge Base Guides (21 files):
 - All 21 guides verified to have:

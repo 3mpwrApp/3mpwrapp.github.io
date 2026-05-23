@@ -1,8 +1,8 @@
----
+﻿---
 layout: default
 title: Liste d'attente de l'application - Rejoignez la bêta de 3mpwrApp
 description: Rejoignez la liste d'attente de l'application mobile 3mpwrApp et soyez parmi les premiers à tester les fonctionnalités révolutionnaires d'accessibilité pour les personnes handicapées au Canada.
-permalink: /fr/app-waitlist/
+permalink: /fr/app-waitlist
 lang: fr
 ---
 
@@ -230,7 +230,7 @@ lang: fr
 - [Toutes les fonctionnalités](/fr/features/)
 - [FAQ complète](/fr/faq/)
 - [Politique de confidentialité](/fr/privacy/)
-- [Déclaration d'accessibilité](/fr/accessibility/)
+- [Déclaration d'accessibilité](/fr/accessibility)
 
 ---
 
@@ -260,4 +260,4 @@ lang: fr
 - [Démonstration interactive](/fr/demo/)
 - [Toutes les fonctionnalités](/fr/features/)
 - [Politique de confidentialité](/fr/privacy/)
-- [Déclaration d'accessibilité](/fr/accessibility/)
+- [Déclaration d'accessibilité](/fr/accessibility)

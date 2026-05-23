@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: 3mpwrApp — Complete User Guide
 description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community.
@@ -3566,7 +3566,7 @@ See full changelog: Settings > About > What's New
 
 Curious about upcoming features and improvements? Check out our comprehensive development roadmap:
 
-**[View Full Roadmap →](/roadmap/)**
+**[View Full Roadmap →](/roadmap)**
 
 Our roadmap includes:
 - ✅ **Next 3-6 Months**: Enhanced cognitive accessibility, dyslexia support, motor disability features

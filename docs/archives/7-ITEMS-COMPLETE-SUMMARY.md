@@ -1,4 +1,4 @@
-# ✅ **ALL 7 ITEMS COMPLETED & DEPLOYED**
+﻿# ✅ **ALL 7 ITEMS COMPLETED & DEPLOYED**
 
 **Status Date:** October 17, 2025  
 **All Changes:** ✅ Committed & Pushed  
@@ -196,7 +196,7 @@ _data/curator.json
 📝 _posts/2025-10-20-3mpwrapp-community.md
 📝 _posts/2025-10-20-3mpwrapp-roundup.md
 📝 _posts/2025-10-22-3mpwrapp-howto.md
-📝 _posts/2025-10-22-3mpwrapp-accessibility.md
+📝 _posts/2025-10-22-3mpwrapp-/accessibility
 📝 _whats_new/2025-10-17-1-dtc-medical-fees-fund-*.md
 📝 _whats_new/2025-10-17-2-ask-an-expert-*.md
 📝 _whats_new/2025-10-17-3-indias-new-*.md

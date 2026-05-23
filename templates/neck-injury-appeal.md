@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: "Neck Injury WSIAT Appeal Template"
 permalink: /templates/neck-injury-appeal/
@@ -342,7 +342,7 @@ Legal Aid Ontario: www.legalaid.on.ca/legal-clinics/ (Injured Workers' Legal Cli
 **More Templates:**
 - [Back Injury Template](/templates/back-injury-appeal/)
 - [Shoulder Injury Template](/templates/shoulder-injury-appeal/)
-- [Chronic Pain Template](/templates/chronic-pain-appeal/)
+- [Chronic Pain Template](/templates/chronic-pain-appeal)
 
 ---
 

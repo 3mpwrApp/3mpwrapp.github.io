@@ -1,4 +1,4 @@
-# File Organization Guide
+﻿# File Organization Guide
 **Where does every new file go?**
 
 ## 🎯 Quick Decision Tree
@@ -22,7 +22,7 @@ Is it documentation (*.md)?
 
 | What is it about? | Folder | Examples |
 |-------------------|--------|----------|
-| **Accessibility** (WCAG, AAA, a11y audits) | `docs/accessibility/` | WCAG audits, a11y implementation, contrast fixes |
+| **Accessibility** (WCAG, AAA, a11y audits) | `docs/accessibility` | WCAG audits, a11y implementation, contrast fixes |
 | **Deployment** (builds, releases, distribution) | `docs/deployment/` | Build guides, EAS setup, store deployment |
 | **Features** (app features, implementations) | `docs/features/` | Feature specs, implementation summaries |
 | **Firebase** (Firestore, Firebase setup) | `docs/firebase/` | Firebase config, Firestore rules, fixes |
@@ -37,7 +37,7 @@ Is it documentation (*.md)?
 [CATEGORY]-[TOPIC]-[TYPE]-[DATE].md
 
 ✅ GOOD:
-- docs/accessibility/WCAG-AAA-AUDIT-MAR2026.md
+- docs/accessibilityWCAG-AAA-AUDIT-MAR2026.md
 - docs/deployment/BETA-DISTRIBUTION-GUIDE.md
 - docs/oauth/GOOGLE-DRIVE-FIX-JAN2026.md
 - docs/features/PDF-EXPORT-IMPLEMENTATION.md

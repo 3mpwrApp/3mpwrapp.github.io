@@ -1,4 +1,4 @@
-# Roadmap Page & Logo Update - Complete Summary
+﻿# Roadmap Page & Logo Update - Complete Summary
 
 **Date**: October 18, 2025  
 **Commit**: e891fe1  
@@ -11,7 +11,7 @@
 ### 1. ✅ Created Dedicated Roadmap Page
 
 **File**: `roadmap.md`  
-**URL**: https://3mpwrapp.ca/roadmap/  
+**URL**: https://3mpwrapp.ca/roadmap  
 **Size**: 400+ lines
 
 **Content Sections**:
@@ -51,7 +51,7 @@
 **Changes**:
 - Removed 200+ line embedded roadmap section
 - Added brief "What's Coming Next" summary
-- Inserted clear link: **[View Full Roadmap →](/roadmap/)**
+- Inserted clear link: **[View Full Roadmap →](/roadmap)**
 - Reduced page length significantly (3318 → ~3100 lines)
 
 **Benefits**:
@@ -198,7 +198,7 @@ node scripts/generate-icons.js
 ✅ **Live on Cloudflare Pages**: https://3mpwrapp.ca
 
 ### Deployment Includes:
-- New roadmap page at `/roadmap/`
+- New roadmap page at `/roadmap`
 - Updated navigation with roadmap link
 - All 12 PWA icons
 - Icon generation automation
@@ -209,7 +209,7 @@ node scripts/generate-icons.js
 ## 🧪 Testing Checklist
 
 ### Roadmap Page
-- [ ] Visit https://3mpwrapp.ca/roadmap/
+- [ ] Visit https://3mpwrapp.ca/roadmap
 - [ ] Verify all sections display correctly
 - [ ] Check progress indicators (40%, 70%)
 - [ ] Test mobile responsiveness
@@ -219,12 +219,12 @@ node scripts/generate-icons.js
 - [ ] Click "Roadmap" in main navigation
 - [ ] Verify active state highlighting
 - [ ] Test on mobile menu
-- [ ] Check French version (/fr/roadmap/)
+- [ ] Check French version (/fr/roadmap)
 
 ### User Guide
 - [ ] Visit user guide page
 - [ ] Find "What's Coming Next" section
-- [ ] Click "[View Full Roadmap →](/roadmap/)" link
+- [ ] Click "[View Full Roadmap →](/roadmap)" link
 - [ ] Verify navigation works
 
 ### PWA Icons
@@ -277,7 +277,7 @@ node scripts/generate-icons.js
 ## 🔮 Future Enhancements
 
 ### Potential Additions:
-1. **French Roadmap Page** (`/fr/roadmap/`)
+1. **French Roadmap Page** (`/fr/roadmap`)
    - Full translation of roadmap content
    - Maintains bilingual parity
    
@@ -307,7 +307,7 @@ node scripts/generate-icons.js
 
 **Questions about the roadmap?**
 - Email: empowrapp08162025@gmail.com
-- Roadmap page: https://3mpwrapp.ca/roadmap/
+- Roadmap page: https://3mpwrapp.ca/roadmap
 - User guide: https://3mpwrapp.ca/user-guide/
 
 **Found an issue?**

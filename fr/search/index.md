@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Recherche
 description: Trouvez rapidement des informations avec des résultats sur la page et un repli DuckDuckGo, limité au site 3mpwrApp.
@@ -265,7 +265,7 @@ Si les résultats sur la page ne sont pas suffisants :
 ### Navigation par menu
 Utilisez notre navigation principale pour trouver rapidement :
 - [Accueil](/fr/) - Page d'accueil
-- [À propos](/fr/about/) - À propos de 3mpwrApp
+- [À propos](/fr/about) - À propos de 3mpwrApp
 - [Fonctionnalités](/fr/features/) - Toutes les fonctionnalités
 - [Guide d'utilisation](/fr/user-guide/) - Guide complet
 - [Blog](/fr/blog/) - Actualités et mises à jour

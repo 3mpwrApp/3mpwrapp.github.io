@@ -1,4 +1,4 @@
-# French Translation Guide - DeepL API
+﻿# French Translation Guide - DeepL API
 
 This guide explains how to translate the entire 3mpwr App website from English to French using the DeepL API.
 
@@ -58,7 +58,7 @@ node scripts/batch-translate.js --skip-existing
 - `index.md` → `fr/index.md` (Homepage)
 - `about.md` → `fr/about.md`
 - `contact.md` → `fr/contact.md`
-- `accessibility.md` → `fr/accessibility.md`
+- `/accessibility` → `fr//accessibility`
 - `privacy.md` → `fr/privacy.md`
 - `faq.md` → `fr/faq.md`
 - `user-guide/index.md` → `fr/user-guide.md`
@@ -119,7 +119,7 @@ fr/
 ├── index.md                 ✅ French homepage
 ├── about.md                 ✅ About page
 ├── contact.md               ✅ Contact page
-├── accessibility.md         ✅ Accessibility info
+├── /accessibility         ✅ Accessibility info
 ├── privacy.md               ✅ Privacy policy
 ├── faq.md                   ✅ FAQ
 ├── roadmap.md               ✅ Roadmap

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Dev Diary: From 0 to 721 Tests: Our TDD Story"
 date: 2026-04-16 00:00:00 +0000
@@ -52,5 +52,5 @@ We chose TDD because this app handles sensitive legal and medical data, crisis s
 We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
 -  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
--  [Join Beta Testing](/app-waitlist/)
+-  [Join Beta Testing](/app-waitlist)
 -  [Community Discussion](/community/)

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "How Accurate Are Outcome Predictions? (79% AI Accuracy Explained)"
 category: Legal Basics
@@ -160,7 +160,7 @@ last_updated: 2026-04-28
 
 - **[Understanding Tribunal Outcomes](/knowledge-base/understanding-tribunal-outcomes/)** - What "Allowed," "Dismissed," etc. mean
 - **[What Affects Your Appeal Outcome?](/knowledge-base/what-affects-appeal-outcome/)** - Evidence factors that predict success
-- **[All Outcome Statistics →](/research/#ai-powered-outcome-predictions)** - Full research methodology
+- **[All Outcome Statistics →](/research.html#ai-powered-outcome-predictions)** - Full research methodology
 
 ---
 

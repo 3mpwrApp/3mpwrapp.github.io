@@ -1,4 +1,4 @@
-# Complete Implementation Summary - October 18, 2025 ✅
+﻿# Complete Implementation Summary - October 18, 2025 ✅
 
 **All Requested Tasks Completed Successfully**
 
@@ -153,7 +153,7 @@ All optimizations from OPTIMIZATION-RECOMMENDATIONS.md Week 2 completed:
 9. `COMPLETE-IMPLEMENTATION-SUMMARY.md` - This file
 
 #### Core Pages (Expanded):
-10. `accessibility.md` - Comprehensive WCAG 2.2 statement
+10. `/accessibility` - Comprehensive WCAG 2.2 statement
 11. `privacy/index.md` - 1200+ word GDPR/PIPEDA policy
 12. `terms/index.md` - 1800+ word comprehensive ToS
 13. `faq/index.md` - 20+ comprehensive questions
@@ -297,7 +297,7 @@ All optimizations from OPTIMIZATION-RECOMMENDATIONS.md Week 2 completed:
 - **What's New**: [/whats-new/](/whats-new/)
 - **Archives**: [/whats-new/archives/](/whats-new/archives/)
 - **Week 2 Summary**: [WEEK-2-OPTIMIZATIONS-COMPLETE.md](/WEEK-2-OPTIMIZATIONS-COMPLETE.md)
-- **Accessibility**: [/accessibility/](/accessibility/)
+- **Accessibility**: [/accessibility](/accessibility)
 - **Privacy**: [/privacy/](/privacy/)
 - **Terms**: [/terms/](/terms/)
 - **FAQ**: [/faq/](/faq/)

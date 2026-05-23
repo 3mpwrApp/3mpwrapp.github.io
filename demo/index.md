@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: 3MPWRAPP Interactive Demo - See It In Action
 description: Explore 3MPWRAPP's most important features with interactive demonstrations. See how the app helps injured workers, persons with disabilities, advocates, and communities organize evidence, understand decisions, and create systemic change.
@@ -1292,7 +1292,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   <div class="feature">
     <h3>🏠 About Us</h3>
     <p>Learn about our mission, the team behind 3MPWRAPP, and why we're building this tool for the disability community.</p>
-    <a href="/about/" style="color: #667eea; text-decoration: none; font-weight: 600;">Read Our Story →</a>
+    <a href="/about" style="color: #667eea; text-decoration: none; font-weight: 600;">Read Our Story →</a>
   </div>
   
   <div class="feature">
@@ -1304,7 +1304,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   <div class="feature">
     <h3>♿ Accessibility</h3>
     <p>Discover our revolutionary accessibility features: spoon counter, emergency simplify mode, dyslexia support, and WCAG AAA compliance.</p>
-    <a href="/accessibility/" style="color: #667eea; text-decoration: none; font-weight: 600;">Explore Accessibility →</a>
+    <a href="/accessibility" style="color: #667eea; text-decoration: none; font-weight: 600;">Explore Accessibility →</a>
   </div>
   
   <div class="feature">

@@ -1,4 +1,4 @@
-# Content Optimization Templates
+﻿# Content Optimization Templates
 
 **Purpose:** Create variety in social media posts to test what resonates, optimize for platform-specific strengths, and avoid repetitive content fatigue.
 
@@ -685,7 +685,7 @@ Spoiler: You can't.
 
 The system is designed to keep people desperate.
 
-Research: https://3mpwrapp.ca/research/onsbt
+Research: https://3mpwrapp.ca/research.htmlonsbt
 
 #ODSPPoverty #DisabilityJustice #HousingCrisis
 ```
@@ -771,7 +771,7 @@ Spoiler: You can't.
 
 The system is designed to keep people desperate.
 
-Research: https://3mpwrapp.ca/research/onsbt
+Research: https://3mpwrapp.ca/research.htmlonsbt
 
 #ODSPPoverty #DisabilityJustice #HousingCrisis
 ```

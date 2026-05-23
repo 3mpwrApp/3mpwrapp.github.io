@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Accessibility Walkthrough & Quick Start
 description: A practical guide to using 3mpwrApp's accessibility features - what's available now and how to enable each feature.
@@ -253,7 +253,7 @@ Use the Settings → Dyslexia screen to configure fonts, spacing, overlays, and 
 ## 11. Related Resources
 
 - **[User Guide](/user-guide/)** - Complete guide to all 3mpwrApp features
-- **[Accessibility Statement](/accessibility/)** - Our commitment to inclusive design
+- **[Accessibility Statement](/accessibility)** - Our commitment to inclusive design
 - **[Accessibility Settings](/accessibility-settings/)** - Website accessibility controls
 
 ---

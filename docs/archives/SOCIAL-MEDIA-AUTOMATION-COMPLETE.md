@@ -1,4 +1,4 @@
-# 📱 Social Media Automation & Content Updates - COMPLETE
+﻿# 📱 Social Media Automation & Content Updates - COMPLETE
 
 **Status:** ✅ **DEPLOYED**  
 **Date:** October 17, 2025  
@@ -283,7 +283,7 @@ https://3mpwrapp.ca/2025-10-20-3mpwrapp-feature/
 1. ✅ `2025-10-20-3mpwrapp-feature.md` - Energy Forecasting (2,847 chars)
 2. ✅ `2025-10-22-3mpwrapp-howto.md` - Disability Wizard Guide (3,204 chars)
 3. ✅ `2025-10-20-3mpwrapp-community.md` - **Phase 1 Beta Testing** (3,142 chars)
-4. ✅ `2025-10-22-3mpwrapp-accessibility.md` - All Disability Types (4,891 chars)
+4. ✅ `2025-10-22-3mpwrapp-/accessibility` - All Disability Types (4,891 chars)
 5. ✅ `2025-10-20-3mpwrapp-roundup.md` - Master Letter Generator (3,456 chars)
 
 **Social Media Files Created:**

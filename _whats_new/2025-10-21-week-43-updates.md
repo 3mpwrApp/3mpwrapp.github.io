@@ -1,4 +1,4 @@
----
+﻿---
 layout: whats_new
 title: Week 43 Updates (2025)
 date: 2025-10-21
@@ -40,13 +40,13 @@ week: 43
 ## 🐛 Bug Fixes
 
 - Add debug logging to dependency installation
-- Replace accessibility.md with minimal clean version to stop corruption
-- Restore corrupted accessibility.md file (again) with clean content
+- Replace /accessibility with minimal clean version to stop corruption
+- Restore corrupted /accessibility file (again) with clean content
 - Add configPath to Lighthouse CI workflow and update URLs to Cloudflare Pages
 - Update logo path to empwrapp-logo.png and reduce header border from 2px to 1px
 - Disable duplicate-id assertion in Lighthouse CI
 - Change duplicate-id assertion from error to warn in Lighthouse CI
-- Restore corrupted accessibility.md page with comprehensive content
+- Restore corrupted /accessibility page with comprehensive content
 - Resolve Jekyll build failure in whats-new.md (Liquid timestamp comparison error)
 - Delete redundant daily-curation.yml - unified into content curator.yml workflow
 - Improve button accessibility with proper color contrast (4.5:1 AA)

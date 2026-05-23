@@ -1,4 +1,4 @@
-# Social Media Link Fixes - Resolved 404 Issues
+﻿# Social Media Link Fixes - Resolved 404 Issues
 
 **Date**: October 28, 2024  
 **Issue**: Social media automated posts were generating invalid 404 links  
@@ -147,7 +147,7 @@ const url = 'https://3mpwrapp.ca/user-guide/';
 
 1. **Always use trailing slashes** for directory-based pages
    - ✅ `/user-guide/` instead of `/user-guide`
-   - ✅ `/about/` instead of `/about`
+   - ✅ `/about` instead of `/about`
    - Reason: Jekyll's `permalink: pretty` setting requires this
 
 2. **Verify URLs exist before using in automation**

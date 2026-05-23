@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: About
 description: Empowering Canada's disability and injured worker community with 100% free advocacy tools, resources, and connection.
@@ -80,7 +80,7 @@ description: Empowering Canada's disability and injured worker community with 10
 
 <div class="button-group">
   <a href="{{ '/beta' | relative_url }}" class="btn btn-primary">Join Beta Testing</a>
-  <a href="{{ '/user-guide' | relative_url }}" class="btn btn-secondary">Learn How It Works</a>
+  <a href="/user-guide" class="btn btn-secondary">Learn How It Works</a>
 </div>
 
 ---
@@ -202,15 +202,15 @@ description: Empowering Canada's disability and injured worker community with 10
 
 <!-- Simple mode gets quick USA Lite mention -->
 <div class="content-simple" data-complexity="simple">
-  <p><strong>🆕 USA Lite now available!</strong> Basic features for American supporters. <a href="/roadmap/#-new-usa-lite---now-available">Learn more →</a></p>
+  <p><strong>🆕 USA Lite now available!</strong> Basic features for American supporters. <a href="/roadmap#-new-usa-lite---now-available">Learn more →</a></p>
 </div>
 
 <!-- Full details for standard/detailed -->
 <div class="content-detailed" data-complexity="detailed">
 
-<p><strong>🆕 December 2025 Update:</strong> Following our successful first demo presentation, we've launched <strong>USA Lite</strong> for American supporters! <a href="/roadmap/#-new-usa-lite---now-available">Learn more →</a></p>
+<p><strong>🆕 December 2025 Update:</strong> Following our successful first demo presentation, we've launched <strong>USA Lite</strong> for American supporters! <a href="/roadmap#-new-usa-lite---now-available">Learn more →</a></p>
 
-<p><strong>What's next?</strong> Check out our <strong><a href="/roadmap/">Roadmap</a></strong> to see our vision for global expansion (2026-2028), including plans to serve 100+ countries and connect disability rights movements internationally. From Canada to the world - building collective power for persons with disabilities, injured workers, and everyone who stands with us.</p>
+<p><strong>What's next?</strong> Check out our <strong><a href="/roadmap">Roadmap</a></strong> to see our vision for global expansion (2026-2028), including plans to serve 100+ countries and connect disability rights movements internationally. From Canada to the world - building collective power for persons with disabilities, injured workers, and everyone who stands with us.</p>
 
 </div>
 <!-- End content-detailed USA Lite section -->
@@ -242,7 +242,7 @@ Following the demo, we're thrilled to welcome American users with **USA Lite** �
 - ✅ **Accessibility** - Full WCAG AAA compliance, Complexity Mode
 - ⚠️ **Canadian-Specific** - Workers' comp & benefit workflows remain Canada-only (full US launch planned 2026)
 
-[Join beta testing →](/beta/) | [See full USA Lite details →](/roadmap/#-new-usa-lite---now-available)
+[Join beta testing →](/beta/) | [See full USA Lite details →](/roadmap#-new-usa-lite---now-available)
 
 ### Why 3mpwrApp is Different
 
@@ -288,7 +288,7 @@ Following the demo, we're thrilled to welcome American users with **USA Lite** �
   </p>
   
   <div class="resource-links">
-    <a href="{{ '/user-guide' | relative_url }}" class="resource-link">
+    <a href="/user-guide" class="resource-link">
       User Guide →
     </a>
     <a href="{{ '/features' | relative_url }}" class="resource-link">

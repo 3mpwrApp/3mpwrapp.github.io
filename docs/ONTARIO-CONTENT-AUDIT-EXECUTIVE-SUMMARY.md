@@ -1,4 +1,4 @@
-# Ontario Tribunal Content Audit - Executive Summary
+﻿# Ontario Tribunal Content Audit - Executive Summary
 **Date:** May 2, 2026  
 **Scope:** WSIAT, ONWSIB, ONSBT, HRTO consistency across all site content
 
@@ -105,8 +105,8 @@
 - AI prediction accuracy reports (not user-facing)
 
 **Broken Internal Links:** 927 total
-- Many to non-existent pages: `/roadmap/`, `/accessibility-settings/`
-- Liquid template syntax in some files: `{{ '/user-guide' | relative_url }}`
+- Many to non-existent pages: `/roadmap`, `/accessibility-settings/`
+- Liquid template syntax in some files: `/user-guide`
 - Internal navigation links that changed during site restructure
 
 **Recommendation:** Address during next internal documentation cleanup phase. Does NOT affect user experience.

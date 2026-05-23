@@ -1,4 +1,4 @@
-# Social Media Launch Posts: WSIAT Research (2020-2026)
+﻿# Social Media Launch Posts: WSIAT Research (2020-2026)
 
 ## Platform-Specific Variants
 
@@ -64,7 +64,7 @@ https://3mpwrapp.ca/blog/2026/04/16/hidden-language-of-denial-wsib-keyword-decod
 ✅ All stats in plain English
 
 Research Hub:
-https://3mpwrapp.ca/research/
+https://3mpwrapp.ca/research.html
 
 Built BY injured workers, FOR injured workers. No paywalls. Ever.
 ```
@@ -82,7 +82,7 @@ Knee injuries denied as "pre-existing" at 20% rate vs. 13.3% baseline
 Based on 11,430 tribunal decisions (2020-2026)
 
 Free appeal templates available:
-https://3mpwrapp.ca/research/
+https://3mpwrapp.ca/research.html
 
 #WSIB #WorkersRights
 ```
@@ -100,7 +100,7 @@ Result: Impossible to track system-wide denial rates
 We estimated 1.14-2.29M workers suppressed (2020-2026)
 
 Full investigation:
-https://3mpwrapp.ca/research/
+https://3mpwrapp.ca/research.html
 
 #WSIB #Transparency
 ```
@@ -119,7 +119,7 @@ We analyzed 11,430 cases and built FREE tools:
 📊 Statistical evidence for YOUR case
 
 All here:
-https://3mpwrapp.ca/research/
+https://3mpwrapp.ca/research.html
 
 Pass it on. 🔄
 ```
@@ -135,7 +135,7 @@ Has WSIB ever denied your claim by calling it "pre-existing"?
 Our research shows this happens in 13.3% of cases—often with body-part-specific bias.
 
 We built free appeal templates with statistical citations:
-https://3mpwrapp.ca/research/
+https://3mpwrapp.ca/research.html
 
 Share your story below 👇
 ```
@@ -236,7 +236,7 @@ FREE TOOLS BUILT:
 ✅ Interactive keyword visualization
 ✅ All statistics explained in plain English
 
-Research Hub: https://3mpwrapp.ca/research/
+Research Hub: https://3mpwrapp.ca/research.html
 
 Built BY injured workers, FOR injured workers. Zero paywalls. Forever.
 
@@ -261,7 +261,7 @@ ALL technical terms explained in plain English (no math degree required).
 Why? Because injured workers deserve PROOF, not anecdotes.
 
 Read the research + download free appeal templates:
-https://3mpwrapp.ca/research/
+https://3mpwrapp.ca/research.html
 
 #OpenData #OpenScience #WSIB #Transparency #WorkersRights
 ```
@@ -281,7 +281,7 @@ We built free tools to fight back:
 📝 Appeal templates with statistical citations
 🕸️ Visualization showing denial keyword patterns
 
-Everything here: https://3mpwrapp.ca/research/
+Everything here: https://3mpwrapp.ca/research.html
 
 Share this with anyone fighting WSIB. Solidarity is our weapon.
 
@@ -328,7 +328,7 @@ We didn't just document what's broken. We built FREE TOOLS to help you fight bac
 
 ---
 
-📚 RESEARCH HUB: https://3mpwrapp.ca/research/
+📚 RESEARCH HUB: https://3mpwrapp.ca/research.html
 
 Everything is 100% free. No paywalls, no premium tiers, no catch.
 
@@ -537,7 +537,7 @@ Beyond academic publication, we created public-facing tools:
 - Interactive keyword network visualization (NetworkX → D3.js)
 - Glossaries translating statistical terms to plain English
 
-All materials available at: https://3mpwrapp.ca/research/
+All materials available at: https://3mpwrapp.ca/research.html
 
 🤝 COLLABORATION OPPORTUNITIES:
 
@@ -569,7 +569,7 @@ All research is Creative Commons licensed. Please share, cite, and build upon th
 ```
 **TL;DR:** Analyzed 11,430 WSIAT tribunal decisions using statistical testing. Found systematic patterns in WSIB denials. Built free knowledge base, templates, and visualization. Everything open-source.
 
-**Research Hub:** https://3mpwrapp.ca/research/
+**Research Hub:** https://3mpwrapp.ca/research.html
 
 ---
 
@@ -696,7 +696,7 @@ I'm an injured worker who got tired of hearing "WSIB is broken" without hard evi
 
 ## Share This
 
-If you know someone fighting WSIB, please share: https://3mpwrapp.ca/research/
+If you know someone fighting WSIB, please share: https://3mpwrapp.ca/research.html
 
 ---
 
@@ -781,7 +781,7 @@ Happy to answer methodology questions, clarify findings, or discuss collaboratio
 
 **Example:**
 ```
-https://3mpwrapp.ca/research/?utm_source=twitter&utm_medium=social&utm_campaign=research_launch_2026
+https://3mpwrapp.ca/research.html?utm_source=twitter&utm_medium=social&utm_campaign=research_launch_2026
 ```
 
 ---
@@ -849,7 +849,7 @@ Thank you! Please share with anyone fighting WSIB—these tools are for everyone
 
 ### **Questions About Methodology:**
 ```
-Great question! All methodology is documented at 3mpwrapp.ca/research/ (scroll to "Statistical Methods"). Scripts will be open-sourced on GitHub soon. Happy to clarify anything specific.
+Great question! All methodology is documented at 3mpwrapp.ca/research.html (scroll to "Statistical Methods"). Scripts will be open-sourced on GitHub soon. Happy to clarify anything specific.
 ```
 
 ### **Success Stories:**
@@ -859,7 +859,7 @@ This is incredible! Would you be comfortable sharing your story (anonymously if 
 
 ### **Requests for Help:**
 ```
-While I can't provide legal advice, our knowledge base + templates may help: 3mpwrapp.ca/research/. Also consider community legal clinics (free): [link to legal clinic directory]
+While I can't provide legal advice, our knowledge base + templates may help: 3mpwrapp.ca/research.html. Also consider community legal clinics (free): [link to legal clinic directory]
 ```
 
 ### **Critique/Skepticism:**

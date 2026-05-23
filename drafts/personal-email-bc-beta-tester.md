@@ -1,4 +1,4 @@
-# Personal Email: BC Beta Tester Thank You
+﻿# Personal Email: BC Beta Tester Thank You
 
 **To:** [BC Beta Tester Email]  
 **From:** 3mpwr Research Team  
@@ -340,7 +340,7 @@ https://3mpwrapp.ca
 
 ---
 
-**P.S.** If you know other injured workers, legal advocates, or researchers in BC who might want to contribute, please share our beta tester signup: https://3mpwrapp.ca/app-waitlist/
+**P.S.** If you know other injured workers, legal advocates, or researchers in BC who might want to contribute, please share our beta tester signup: https://3mpwrapp.ca/app-waitlist
 
 **P.P.S.** Seriously—if there's anything else you want us to build from your research, just say the word. You've earned "request anything" privileges. 😊
 

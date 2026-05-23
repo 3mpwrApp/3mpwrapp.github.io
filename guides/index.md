@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: "WSIAT Appeal Guides - Knowledge Base"
 description: "Evidence-based guides for WSIAT appeals. Based on analysis of 98,992 decisions (1987-2026). NEL, LOE, chronic pain, and more."
@@ -234,7 +234,7 @@ Expect 12-24 month wait for WSIAT hearing in busy years.
 
 **Ontario provides 13.4x more decisions with full transparency.**
 
-[Read full comparison →](/research/tribunal-transparency/wsiat-vs-bc-wcat-transparency-divide/)
+[Read full comparison →](/research.htmltribunal-transparency/wsiat-vs-bc-wcat-transparency-divide/)
 
 ---
 
@@ -250,9 +250,9 @@ Expect 12-24 month wait for WSIAT hearing in busy years.
 ### Data & Research
 - **WSIAT Dataset:** [98,992 decisions organized by year](/data/tribunal-decisions/wsiat/decisions-by-year/)
 - **Pattern Analysis:** [Full report with charts and trends](/docs/WSIAT-PATTERN-ANALYSIS-2026-04-29.html)
-- **Deep Dive Report:** [Advanced patterns, co-occurrence, vice-chair specialization](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html)
+- **Deep Dive Report:** [Advanced patterns, co-occurrence, vice-chair specialization](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29)
 - **Keyword Network Visualization:** [Interactive network graph](/connecting-the-dots-wsiat-keyword-network.html)
-- **Research Tools:** [Interactive visualizations](/research/)
+- **Research Tools:** [Interactive visualizations](/research.html)
 
 ---
 

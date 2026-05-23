@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "How to Use the Evidence Locker Effectively"
 date: 2026-03-14 00:00:00 +0000
@@ -63,5 +63,5 @@ All evidence is encrypted on-device using AES-256-GCM Ã¢â‚¬â€ the sam
 
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
 - Ã°Å¸â€œâ€“ [Full User Guide](/user-guide/)
-- Ã°Å¸Â§Âª [Join the Beta](/app-waitlist/)
+- Ã°Å¸Â§Âª [Join the Beta](/app-waitlist)
 - Ã°Å¸â€™Â¬ [Community Forums](/community/)

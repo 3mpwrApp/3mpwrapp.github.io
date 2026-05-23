@@ -1,4 +1,4 @@
-# Workspace Organization Plan
+﻿# Workspace Organization Plan
 **Created:** March 25, 2026
 **Purpose:** Clean up both empowrapp-site and empowrapp-new repositories + establish ongoing file organization standards
 
@@ -47,7 +47,7 @@ empowrapp-site/
 
 ### File Categorization (empowrapp-site)
 
-#### docs/accessibility/ (60+ files)
+#### docs/accessibility (60+ files)
 - `AAA-*.md` - All AAA compliance docs
 - `WCAG-*.md` - All WCAG docs
 - `ACCESSIBILITY-*.md` - All accessibility implementation docs
@@ -180,7 +180,7 @@ empowrapp-new/
 
 ### File Categorization (empowrapp-new)
 
-#### docs/accessibility/ (10+ files)
+#### docs/accessibility (10+ files)
 - `ACCESSIBILITY-*.md`
 - `WCAG-*.md`
 - `wcag-*.txt` - Audit logs
@@ -272,7 +272,7 @@ Ask yourself: "What is this document primarily about?"
 
 | Category | Goes in... |
 |----------|-----------|
-| Accessibility (WCAG, AAA, a11y) | `docs/accessibility/` |
+| Accessibility (WCAG, AAA, a11y) | `docs/accessibility` |
 | Agent automation, AI agents | `docs/agents/` (site) or `docs/features/` (app) |
 | Deployment, builds, distribution | `docs/deployment/` |
 | Events, calendar, TBDIWSG | `docs/events/` (site only) |
@@ -293,7 +293,7 @@ Ask yourself: "What is this document primarily about?"
 [CATEGORY]-[SPECIFIC-TOPIC]-[TYPE].md
 
 Examples:
-✅ docs/accessibility/WCAG-AAA-AUDIT-FEB2026.md
+✅ docs/accessibilityWCAG-AAA-AUDIT-FEB2026.md
 ✅ docs/deployment/BETA-DISTRIBUTION-GUIDE.md
 ✅ docs/events/TBDIWSG-APRIL-2026-SUMMARY.md
 ✅ docs/oauth/GOOGLE-DRIVE-FIX-MARCH-2026.md
@@ -416,7 +416,7 @@ Commit with clear message: "docs([category]): Add [topic]"
 
 ```bash
 # Accessibility audit report
-✅ docs/accessibility/WCAG-AAA-AUDIT-APR2026.md
+✅ docs/accessibilityWCAG-AAA-AUDIT-APR2026.md
 
 # Deployment checklist
 ✅ docs/deployment/PRODUCTION-DEPLOY-CHECKLIST.md
@@ -477,7 +477,7 @@ After this organization:
 
 | Document Type | Location |
 |--------------|----------|
-| WCAG audit | docs/accessibility/ |
+| WCAG audit | docs/accessibility |
 | Deploy guide | docs/deployment/ |
 | OAuth fix | docs/oauth/ (app) |
 | Event details | docs/events/ (site) |

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Your First Benefits Application: A Complete Walkthrough"
 date: 2026-03-29 00:00:00 +0000
@@ -63,5 +63,5 @@ Deadlines are the hidden killer of disability claims. A reconsideration request 
 
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
 - Ã°Å¸â€œâ€“ [Full User Guide](/user-guide/)
-- Ã°Å¸Â§Âª [Join the Beta](/app-waitlist/)
+- Ã°Å¸Â§Âª [Join the Beta](/app-waitlist)
 - Ã°Å¸â€™Â¬ [Community Forums](/community/)

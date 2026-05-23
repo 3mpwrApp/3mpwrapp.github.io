@@ -1,4 +1,4 @@
-## 🎯 WSIAT Classification Results: 11,430 Decisions Analyzed
+﻿## 🎯 WSIAT Classification Results: 11,430 Decisions Analyzed
 
 **📅 UPDATE: May 1, 2026** - We've completed keyword-based classification of all 11,430 WSIAT tribunal decisions (2020-2026). Here's what the outcomes reveal:
 
@@ -66,9 +66,9 @@ Our classification used keyword pattern matching with three confidence levels:
 ---
 
 **Related Resources:**
-- [WSIAT Appeal Guide](/guides/wsiat-complete-guide/) - Evidence strategies based on classified outcomes
+- [WSIAT Appeal Guide](/guides/wsiat-complete-guide) - Evidence strategies based on classified outcomes
 - [Denial Counter Templates](/_templates/) - 22 fill-in-the-blank appeal templates
-- [Research Hub](/research/) - Interactive visualizations and statistical analysis
+- [Research Hub](/research.html) - Interactive visualizations and statistical analysis
 
 **Data Access:**
 - [Classified Decisions JSON](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/comprehensive-extraction/wsiat-classified.json) (11,430 decisions)

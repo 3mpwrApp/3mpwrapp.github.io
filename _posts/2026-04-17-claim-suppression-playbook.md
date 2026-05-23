@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns"
 date: 2026-04-17
@@ -537,7 +537,7 @@ This section is framed as community-centered pathways for documentation, access,
 - Argue: Exclusion should only apply to generic processes in good faith
 - Argue: Your termination was targeted retaliation, not generic process
 - Argue: Employer acted in bad faith (coercion, intimidation)
-- See our [Labour Relations Exclusion Appeal Template](https://3mpwrapp.ca/research/#templates)
+- See our [Labour Relations Exclusion Appeal Template](https://3mpwrapp.ca/research.html#templates)
 
 **3. Complete-information benchmark**
 - If medical assessor has incomplete information, cite *J.T. v. WCAT* (2024 BCSC 994)
@@ -564,8 +564,8 @@ This section is framed as community-centered pathways for documentation, access,
 - "No suitable work" without engaging proposals = accommodation failure
 
 **3. Connect workers to resources**
-- [3mpwr Knowledge Base](https://3mpwrapp.ca/research/#knowledge-base): Guides on claim suppression, retaliation, privacy rights
-- [3mpwr Templates](https://3mpwrapp.ca/research/#templates): Appeal letters challenging exclusions
+- [3mpwr Knowledge Base](https://3mpwrapp.ca/research.html#knowledge-base): Guides on claim suppression, retaliation, privacy rights
+- [3mpwr Templates](https://3mpwrapp.ca/research.html#templates): Appeal letters challenging exclusions
 - [National Self-Represented Litigants Project](mailto:representingyourself@gmail.com): Support for tribunal navigation
 
 ---
@@ -768,7 +768,7 @@ This section is framed as community-centered pathways for documentation, access,
 2. **Call WSIB** - Confirm received (get claim number)
 3. **Community Legal Clinic** - Free legal help ([Legal Aid Ontario](https://www.legalaid.on.ca))
 4. **WSIB Compliance** - Report suppression anonymously: 1-800-387-0750
-5. **[Claim Suppression Guide](/research/)** - Documentation checklists, complaint templates
+5. **[Claim Suppression Guide](/research.html)** - Documentation checklists, complaint templates
 
 ### 📊 For General Public
 
@@ -818,14 +818,14 @@ That post includes:
 ---
 
 **3mpwr Knowledge Base:**
-- [Claim Suppression & Employer Retaliation Guide](https://3mpwrapp.ca/research/#knowledge-base) - Legal protections, documentation strategies
-- [Pre-Existing Conditions](https://3mpwrapp.ca/research/#knowledge-base) - WSIB's #1 denial tactic
-- [Chronic Pain Claims](https://3mpwrapp.ca/research/#knowledge-base) - Invisible disability patterns
+- [Claim Suppression & Employer Retaliation Guide](https://3mpwrapp.ca/research.html#knowledge-base) - Legal protections, documentation strategies
+- [Pre-Existing Conditions](https://3mpwrapp.ca/research.html#knowledge-base) - WSIB's #1 denial tactic
+- [Chronic Pain Claims](https://3mpwrapp.ca/research.html#knowledge-base) - Invisible disability patterns
 
 **3mpwr Templates:**
-- [Labour Relations Exclusion Appeal](https://3mpwrapp.ca/research/#templates) - Challenge employer retaliation exclusions
-- [Pre-Existing Condition Appeal](https://3mpwrapp.ca/research/#templates) - Statistical evidence citations
-- [Reconsideration Request](https://3mpwrapp.ca/research/#templates) - Request decision review
+- [Labour Relations Exclusion Appeal](https://3mpwrapp.ca/research.html#templates) - Challenge employer retaliation exclusions
+- [Pre-Existing Condition Appeal](https://3mpwrapp.ca/research.html#templates) - Statistical evidence citations
+- [Reconsideration Request](https://3mpwrapp.ca/research.html#templates) - Request decision review
 
 **3mpwr Research:**
 - [WSIB Statistical Pattern Analysis](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 43.9% medical evidence disputes
@@ -853,8 +853,8 @@ Your story helps us document the scope of the problem. Contact us confidentially
 
 **BC & Ontario Cross-Provincial Analysis:**
 - [BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse](/blog/2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns/) - 7,386 BC cases reveal 100% unknown outcomes and systemic claim suppression patterns
-- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.ca/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook documenting BC megaproject claim suppression
-- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.ca/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - How beta tester research exposed WorkSafeBC "second-tier systems"
+- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.ca/research.htmlemployer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook documenting BC megaproject claim suppression
+- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.ca/research.htmlcommunity/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - How beta tester research exposed WorkSafeBC "second-tier systems"
 
 ---
 

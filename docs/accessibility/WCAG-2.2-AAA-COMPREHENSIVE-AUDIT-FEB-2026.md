@@ -1,4 +1,4 @@
-# WCAG 2.2 AAA Comprehensive Accessibility Audit
+﻿# WCAG 2.2 AAA Comprehensive Accessibility Audit
 **3mpwr App Website** | Conducted: February 2, 2026
 
 ---
@@ -10,7 +10,7 @@ This comprehensive audit examines every aspect of the 3mpwr App website against 
 **Overall Status:**
 - ✅ **WCAG 2.2 AA:** Compliant (most criteria met)
 - ⚠️ **WCAG 2.2 AAA:** Partial compliance (violations documented below)
-- 📊 **Current AAA Achievement:** ~82% (per accessibility.md claims)
+- 📊 **Current AAA Achievement:** ~82% (per /accessibility claims)
 
 ---
 
@@ -397,9 +397,9 @@ description: Empowering Canada's disability and injured worker community with 10
 
 ---
 
-#### 2.2 Duplicate Layout Frontmatter (accessibility.md)
+#### 2.2 Duplicate Layout Frontmatter (/accessibility)
 
-**Location:** `accessibility.md` Lines 1-16  
+**Location:** `/accessibility` Lines 1-16  
 **Violation:** 4.1.1 (Parsing)
 
 **Current State:**
@@ -408,7 +408,7 @@ description: Empowering Canada's disability and injured worker community with 10
 layout: default
 title: Accessibility Statement
 description: Our commitment to inclusive accessible design
-permalink: /accessibility/
+permalink: /accessibility
 ---
 
 
@@ -416,7 +416,7 @@ permalink: /accessibility/
 layout: default
 title: Accessibility Statement
 description: Our commitment to inclusive accessible design
-permalink: /accessibility/
+permalink: /accessibility
 ---
 ```
 
@@ -599,7 +599,7 @@ permalink: /accessibility/
 **Priority:** Medium - Affects screen reader navigation
 
 **Action Items:**
-1. Remove duplicate frontmatter from about.md and accessibility.md
+1. Remove duplicate frontmatter from about.md and /accessibility
 2. Audit all pages for heading hierarchy (h1 → h2 → h3, no skips)
 3. Change footer headings to `<h2>` or use aria-labelledby regions
 4. Verify all pages have `<main>` landmark
@@ -1186,7 +1186,7 @@ errorElement.style.display = 'none';
 
 **Current State:**
 ```html
-<a href="/about/" class="homepage-btn-secondary">
+<a href="/about" class="homepage-btn-secondary">
   <span>Learn More</span>
 </a>
 ```
@@ -1199,12 +1199,12 @@ errorElement.style.display = 'none';
 
 **Suggested Code:**
 ```html
-<a href="/about/" class="homepage-btn-secondary">
+<a href="/about" class="homepage-btn-secondary">
   <span>Learn More About 3mpwrApp</span>
 </a>
 
 <!-- Or use aria-label -->
-<a href="/about/" class="homepage-btn-secondary" aria-label="Learn more about 3mpwrApp and our mission">
+<a href="/about" class="homepage-btn-secondary" aria-label="Learn more about 3mpwrApp and our mission">
   <span>Learn More</span>
 </a>
 ```
@@ -1929,7 +1929,7 @@ html {
 
 #### 10.2 Disclosure Widgets (Details/Summary)
 
-**Location:** `about.md` Throughout, `accessibility.md` Throughout  
+**Location:** `about.md` Throughout, `/accessibility` Throughout  
 **Violation:** None (COMPLIANT)
 
 **Current State:**
@@ -2299,7 +2299,7 @@ helpContent.addEventListener('keydown', function(e) {
 ### Medium Priority (User Experience)
 
 8. **Duplicate Frontmatter** (4.1.1)
-   - Remove from about.md and accessibility.md
+   - Remove from about.md and /accessibility
 
 9. **Footer Heading Hierarchy** (1.3.1)
    - Change h3 to h2 or use regions
@@ -2411,7 +2411,7 @@ With the fixes outlined in this audit, the site can achieve **95%+ AAA complianc
 - _layouts/default.html
 - index.md
 - about.md
-- accessibility.md
+- /accessibility
 - assets/css/style.css
 - assets/css/wcag-aaa-colors.css
 - assets/css/aaa-color-fixes.css

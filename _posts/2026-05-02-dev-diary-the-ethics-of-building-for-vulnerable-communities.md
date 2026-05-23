@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Dev Diary: The Ethics of Building for Vulnerable Communities"
 date: 2026-05-02 00:00:00 +0000
@@ -52,5 +52,5 @@ Community co-design is not a checkbox. It is how we figure out what to build in 
 We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
 -  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
--  [Join Beta Testing](/app-waitlist/)
+-  [Join Beta Testing](/app-waitlist)
 -  [Community Discussion](/community/)

@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Community Spotlight
 description: Celebrating our community members, advocates, activists, and allies making a difference for disability rights and injured workers across Canada.
@@ -269,7 +269,7 @@ permalink: /community-spotlight/
     <a href="https://injuredworkersunite.pages.dev/" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline;">
       🔥 Injured Workers Unite
     </a> | 
-    <a href="/about/" style="font-weight: 600; text-decoration: underline;">
+    <a href="/about" style="font-weight: 600; text-decoration: underline;">
       📖 Learn More
     </a>
   </p>

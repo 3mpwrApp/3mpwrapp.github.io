@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: ਮੁੱਖ ਸਫ਼ਾ
 lang: pa
@@ -10,6 +10,6 @@ description: ਕੈਨੇਡਾ ਵਿੱਚ ਘਾਇਲ ਮਜ਼ਦੂਰਾ�
 
 # 3mpwr App
 
-ਸਮੁਦਾਇਕ ਸਹਿਯੋਗ ਅਤੇ ਕਾਰਗਰ ਸਾਧਨ। [ਯੂਜ਼ਰ ਗਾਈਡ]({{ '/user-guide' | relative_url }}) ਅਤੇ [ਨਵੀਂਆਂ ਅਪਡੇਟਾਂ]({{ '/whats-new' | relative_url }}) ਵੇਖੋ।
+ਸਮੁਦਾਇਕ ਸਹਿਯੋਗ ਅਤੇ ਕਾਰਗਰ ਸਾਧਨ। [ਯੂਜ਼ਰ ਗਾਈਡ](/user-guide) ਅਤੇ [ਨਵੀਂਆਂ ਅਪਡੇਟਾਂ]({{ '/whats-new' | relative_url }}) ਵੇਖੋ।
 
 {%- include page-feedback.html -%}

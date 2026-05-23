@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Tracking Symptoms for Doctors and Legal Appointments"
 date: 2026-04-14 00:00:00 +0000
@@ -63,5 +63,5 @@ The export function is specifically formatted for medical appointments. Hand you
 
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
 - ðŸ“– [Full User Guide](/user-guide/)
-- ðŸ§ª [Join the Beta](/app-waitlist/)
+- ðŸ§ª [Join the Beta](/app-waitlist)
 - ðŸ’¬ [Community Forums](/community/)

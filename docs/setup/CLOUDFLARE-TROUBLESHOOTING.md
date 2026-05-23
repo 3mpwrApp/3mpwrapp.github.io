@@ -1,4 +1,4 @@
-# Cloudflare Pages Troubleshooting - Bare Site
+﻿# Cloudflare Pages Troubleshooting - Bare Site
 
 ## Issue: Site loads but appears blank/bare
 
@@ -173,7 +173,7 @@ If auto-deploy doesn't work:
 **Test these URLs after fix:**
 ```
 https://3mpwrapp.ca/          (homepage)
-https://3mpwrapp.ca/about/    (about page)
+https://3mpwrapp.ca/about    (about page)
 https://3mpwrapp.ca/features/ (features)
 ```
 

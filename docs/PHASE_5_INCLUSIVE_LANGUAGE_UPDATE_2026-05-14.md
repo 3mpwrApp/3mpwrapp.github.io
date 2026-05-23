@@ -1,4 +1,4 @@
-# Phase 5 Completion Report — Inclusive Language & Disability Justice Framing
+﻿# Phase 5 Completion Report — Inclusive Language & Disability Justice Framing
 **Completed: May 14, 2026, 1:30 AM**
 
 ---
@@ -53,7 +53,7 @@ All research, knowledge bases, guides, visualizations, and blog posts now consis
 
 **Updated Files:**
 
-#### [connecting-the-dots-canlii-keyword-visualization-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-canlii-keyword-visualization-network.html) ✅
+#### [connecting-the-dots-canlii-keyword-visualization-network.html](/connecting-the-dots-canlii-keyword-visualization-network.html) ✅
 
 **Before:**
 > "Interactive keyword relationship mapping across all four Ontario tribunals"
@@ -63,7 +63,7 @@ All research, knowledge bases, guides, visualizations, and blog posts now consis
 > 
 > *Added note:* "This research serves injured workers navigating workplace injury appeals (WSIAT), people with disabilities fighting benefit eligibility denials (ONSBT), and disability community members challenging discrimination (HRTO). Systemic denial patterns cross tribunal boundaries—this is a disability justice issue."
 
-#### [cross-tribunal-success-rates.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\cross-tribunal-success-rates.html) ✅
+#### [cross-tribunal-success-rates.html](/cross-tribunal-success-rates.html) ✅
 
 **Updated:**
 - Title: "Cross-Tribunal Success Rates Comparison | 3mpwrApp **Disability Justice Research**"
@@ -482,8 +482,8 @@ All research, knowledge bases, guides, visualizations, and blog posts now consis
 *(Note: 15 additional guides follow established patterns and will be updated in batch process)*
 
 ### Visualizations (2 files modified):
-1. [connecting-the-dots-canlii-keyword-visualization-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-canlii-keyword-visualization-network.html) ✅
-2. [cross-tribunal-success-rates.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\cross-tribunal-success-rates.html) ✅
+1. [connecting-the-dots-canlii-keyword-visualization-network.html](/connecting-the-dots-canlii-keyword-visualization-network.html) ✅
+2. [cross-tribunal-success-rates.html](/cross-tribunal-success-rates.html) ✅
 
 ### Blog Posts (2 files modified):
 1. [2026-04-16-wsib-black-box-claim-suppression-outcome-obscurity.md](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\_posts\2026-04-16-wsib-black-box-claim-suppression-outcome-obscurity.md) ✅

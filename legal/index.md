@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Legal Center
 permalink: /legal/
@@ -127,7 +127,7 @@ All legal documents have been updated for the **USA Lite Expansion**:
 ## 📄 Quick Links
 
 - [Privacy Controls](/privacy-controls/) — Manage your privacy settings
-- [Accessibility](/accessibility/) — Our accessibility features
+- [Accessibility](/accessibility) — Our accessibility features
 - [Features](/features/) — All app features
 - [User Guide](/user-guide/) — How to use the app
 - [Contact](/contact/) — Get in touch

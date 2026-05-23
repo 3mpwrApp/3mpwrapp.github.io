@@ -1,4 +1,4 @@
-# Ontario Legal Intelligence System — Complete Status Report
+﻿# Ontario Legal Intelligence System — Complete Status Report
 **Assessment Date:** May 14, 2026  
 **Question:** *"Do we have a good solid base for Ontario?"*  
 **Answer:** ✅ **YES — Production-Ready Foundation**
@@ -74,8 +74,8 @@ You have a **production-ready foundation** for Ontario with:
 
 | Visualization | Status | Data Accuracy | Updates Made |
 |--------------|--------|---------------|--------------|
-| [connecting-the-dots-canlii-keyword-visualization-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-canlii-keyword-visualization-network.html) | ✅ | 34,960 cases (2020-2026) | Added disability justice context |
-| [cross-tribunal-success-rates.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\cross-tribunal-success-rates.html) | ✅ | 161,377 cases (1987-2026) | Updated title & metadata |
+| [connecting-the-dots-canlii-keyword-visualization-network.html](/connecting-the-dots-canlii-keyword-visualization-network.html) | ✅ | 34,960 cases (2020-2026) | Added disability justice context |
+| [cross-tribunal-success-rates.html](/cross-tribunal-success-rates.html) | ✅ | 161,377 cases (1987-2026) | Updated title & metadata |
 | [wsib-denial-network-visualization.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\wsib-denial-network-visualization.html) | ✅ | 11,430 WSIAT cases | Verified accurate |
 | [employer-safety-heatmap.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\employer-safety-heatmap.html) | ✅ | WSIB safety data | Verified accurate |
 | [tribunal-decision-heatmap.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\tribunal-decision-heatmap.html) | ✅ | Multi-tribunal data | Verified accurate |

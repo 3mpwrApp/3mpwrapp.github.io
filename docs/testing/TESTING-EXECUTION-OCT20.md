@@ -1,4 +1,4 @@
-# 🧪 TESTING EXECUTION GUIDE - OCT 20, 2025
+﻿# 🧪 TESTING EXECUTION GUIDE - OCT 20, 2025
 
 **Status:** Ready to Execute  
 **Date:** October 20, 2025  
@@ -37,7 +37,7 @@ Test 7 pages on 5 browsers = **35 tests**
 4. **Blog** - https://3mpwrapp.ca/blog
 5. **User Guide** - https://3mpwrapp.ca/user-guide.md
 6. **Privacy** - https://3mpwrapp.ca/privacy.md
-7. **Accessibility** - https://3mpwrapp.ca/accessibility.md
+7. **Accessibility** - https://3mpwrapp.ca//accessibility
 
 ### 🌐 BROWSERS TO TEST
 1. Chrome (Desktop)
@@ -504,7 +504,7 @@ ADDITIONAL METRICS:
 ### Privacy Page (/privacy.md)
 - [Same format as above]
 
-### Accessibility Page (/accessibility.md)
+### Accessibility Page (//accessibility)
 - [Same format as above]
 
 ## Issues Found

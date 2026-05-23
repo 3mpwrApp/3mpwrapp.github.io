@@ -1,4 +1,4 @@
-# Site-Wide UX/UI Upgrade Complete! 🎉
+﻿# Site-Wide UX/UI Upgrade Complete! 🎉
 
 ## Overview
 All requested pages have been successfully upgraded with consistent, professional UX/UI design while maintaining the Closed Beta Phase 1 context.
@@ -25,7 +25,7 @@ All requested pages have been successfully upgraded with consistent, professiona
   - Copy success notifications
 - **Commit**: 6dc4b63
 
-### 3. **Accessibility Statement Page** (accessibility.md)
+### 3. **Accessibility Statement Page** (/accessibility)
 - **Files Created**: accessibility.css (620 lines), accessibility.js (180 lines)
 - **Key Features**:
   - WCAG 2.2 AA compliance badge

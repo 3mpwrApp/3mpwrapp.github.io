@@ -1,4 +1,4 @@
-# Axe DevTools Installation & Setup Guide
+﻿# Axe DevTools Installation & Setup Guide
 
 ## ✅ Installation Complete
 
@@ -47,7 +47,7 @@ npx axe https://3mpwrapp.ca/
 
 ### Test Specific Page
 ```bash
-npx axe https://3mpwrapp.ca/about/
+npx axe https://3mpwrapp.ca/about
 ```
 
 ### Generate JSON Report
@@ -58,10 +58,10 @@ npx axe https://3mpwrapp.ca/ --json > accessibility-report.json
 ### Test All Key Pages
 ```bash
 npx axe https://3mpwrapp.ca/
-npx axe https://3mpwrapp.ca/about/
+npx axe https://3mpwrapp.ca/about
 npx axe https://3mpwrapp.ca/features/
 npx axe https://3mpwrapp.ca/user-guide/
-npx axe https://3mpwrapp.ca/accessibility/
+npx axe https://3mpwrapp.ca/accessibility
 npx axe https://3mpwrapp.ca/privacy/
 npx axe https://3mpwrapp.ca/terms/
 ```
@@ -155,8 +155,8 @@ Add these scripts to `package.json` for easier testing:
 ```json
 "scripts": {
   "test:accessibility": "axe https://3mpwrapp.ca/",
-  "test:accessibility:about": "axe https://3mpwrapp.ca/about/",
-  "test:accessibility:all": "npm run test:accessibility && npm run test:accessibility:about && axe https://3mpwrapp.ca/features/ && axe https://3mpwrapp.ca/user-guide/ && axe https://3mpwrapp.ca/accessibility/",
+  "test:accessibility:about": "axe https://3mpwrapp.ca/about",
+  "test:accessibility:all": "npm run test:accessibility && npm run test:accessibility:about && axe https://3mpwrapp.ca/features/ && axe https://3mpwrapp.ca/user-guide/ && axe https://3mpwrapp.ca/accessibility",
   "test:accessibility:json": "axe https://3mpwrapp.ca/ --json > accessibility-report.json"
 }
 ```

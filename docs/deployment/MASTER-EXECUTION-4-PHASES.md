@@ -1,4 +1,4 @@
-# 🎯 MASTER EXECUTION GUIDE - 4-PHASE COMPLETION
+﻿# 🎯 MASTER EXECUTION GUIDE - 4-PHASE COMPLETION
 
 **Status:** All 4 phases ready to execute  
 **Timeline:** Oct 20 Morning through Oct 22 End  
@@ -71,7 +71,7 @@
 4. Blog (/blog)
 5. User Guide (/user-guide.md)
 6. Privacy (/privacy.md)
-7. Accessibility (/accessibility.md)
+7. Accessibility (//accessibility)
 
 ### Browsers to Test
 1. Chrome (Desktop)

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Understanding Tribunal Outcomes: What Do They Mean?"
 category: Legal Basics
@@ -176,7 +176,7 @@ Based on our analysis of **137,252 tribunal decisions** (2020-2026):
 - **[How Accurate Are Outcome Predictions?](/knowledge-base/outcome-prediction-accuracy/)** - 79% AI accuracy explained
 - **[What Affects Your Appeal Outcome?](/knowledge-base/what-affects-appeal-outcome/)** - Evidence factors that predict success
 - **[Interpreting Your Case's Outcome Prediction](/knowledge-base/interpreting-outcome-prediction/)** - How to use AI predictions
-- **[All Tribunal Outcome Statistics →](/research/#ai-powered-outcome-predictions)** - Full research data
+- **[All Tribunal Outcome Statistics →](/research.html#ai-powered-outcome-predictions)** - Full research data
 
 ---
 

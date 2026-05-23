@@ -1,4 +1,4 @@
-# Ontario Data Quality & Knowledge Base Expansion Plan
+﻿# Ontario Data Quality & Knowledge Base Expansion Plan
 **3mpwrApp CanLII Intelligence System — Complete Verification & Enhancement**
 
 **Plan Created:** May 13, 2026  
@@ -258,7 +258,7 @@ Every legal principle must cite specific tribunal decisions:
 
 **Files Found:**
 1. [wsib-denial-network-visualization.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\wsib-denial-network-visualization.html)
-2. [connecting-the-dots-canlii-keyword-visualization-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-canlii-keyword-visualization-network.html)
+2. [connecting-the-dots-canlii-keyword-visualization-network.html](/connecting-the-dots-canlii-keyword-visualization-network.html)
 
 **Verification Checklist (Each Visualization):**
 - [ ] Data source accurately cited

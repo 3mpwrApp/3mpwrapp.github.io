@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Setting Up Accessibility for Your Needs"
 date: 2026-05-21 00:00:00 +0000
@@ -39,5 +39,5 @@ Everything you configure saves automatically. Switch between Simple Mode and ful
 ## About 3mpwrApp
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
 - Y- [Full User Guide](/user-guide/)
-- Ya [Join the Beta](/app-waitlist/)
+- Ya [Join the Beta](/app-waitlist)
 - Y [Community Forums](/community/)

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "What 3mpwr Means: The Philosophy Behind Our Name"
 date: 2026-04-02 00:00:00 +0000
@@ -48,5 +48,5 @@ The three in "3mpwr" maps onto three pillars: tools for the individual, tools fo
 3mpwrApp is built on these principles â€” and built for and with the people who need them most.
 
 - ðŸ’¬ [Community Forums](/community/)
-- ðŸ§ª [Become a Beta Tester](/app-waitlist/)
-- ðŸ“– [Read Our Mission](/about/)
+- ðŸ§ª [Become a Beta Tester](/app-waitlist)
+- ðŸ“– [Read Our Mission](/about)

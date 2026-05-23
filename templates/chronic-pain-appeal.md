@@ -1,8 +1,8 @@
----
+﻿---
 layout: page
 title: "Chronic Pain Appeal Template - WSIB/WSIAT"
 description: "Professional fill-in-the-blank appeal letter for chronic pain denials. Based on 7,502 chronic pain cases with 89.1% success rate at WSIAT."
-permalink: /templates/chronic-pain-appeal/
+permalink: /templates/chronic-pain-appeal
 ---
 
 # Chronic Pain Appeal Template
@@ -384,10 +384,10 @@ Based on analysis of 7,502 chronic pain WSIAT decisions, these arguments succeed
 ### Medical Evidence Resources
 - [Chronic Pain Knowledge Base](/knowledge-base/chronic-pain-claims/) - Research on 7,502 chronic pain appeals
 - [Finding a Pain Specialist](/resources/#pain-clinics) - Directory of Ontario pain clinics
-- [Evidence Locker Guide](/guides/wsiat-complete-guide/#evidence-locker) - Organizing medical records
+- [Evidence Locker Guide](/guides/wsiat-complete-guide#evidence-locker) - Organizing medical records
 
 ### Legal Support
-- [WSIAT Complete Guide](/guides/wsiat-complete-guide/) - Full appeal process
+- [WSIAT Complete Guide](/guides/wsiat-complete-guide) - Full appeal process
 - [Community Legal Clinics](/resources/#legal-clinics) - Free legal help by region
 
 ---

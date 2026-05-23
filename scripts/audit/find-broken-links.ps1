@@ -8,11 +8,11 @@ param(
 
 $ErrorActionPreference = 'SilentlyContinue'
 
-Write-Host "🔍 Scanning for broken internal links..." -ForegroundColor Cyan
+Write-Host "Scanning for broken internal links..." -ForegroundColor Cyan
 Write-Host "Max files to scan: $MaxFiles" -ForegroundColor Gray
 Write-Host ""
 
-$rootDir = Split-Path -Parent (Split-Path -Parent $PSCommandPath)
+$rootDir = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $PSCommandPath))
 $brokenLinks = @{}
 $filesScanned = 0
 $totalBrokenLinks = 0
@@ -100,9 +100,9 @@ foreach ($file in $markdownFiles) {
 Write-Progress -Activity "Scanning files" -Completed
 
 # Report results
-Write-Host "═══════════════════════════════════════════════" -ForegroundColor Cyan
-Write-Host "📊 BROKEN LINKS REPORT" -ForegroundColor Yellow
-Write-Host "═══════════════════════════════════════════════" -ForegroundColor Cyan
+Write-Host "===============================================" -ForegroundColor Cyan
+Write-Host "BROKEN LINKS REPORT" -ForegroundColor Yellow
+Write-Host "===============================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Files scanned: $filesScanned" -ForegroundColor Gray
 Write-Host "Total broken links found: $totalBrokenLinks" -ForegroundColor Gray
@@ -110,11 +110,11 @@ Write-Host "Unique broken links: $($brokenLinks.Count)" -ForegroundColor Gray
 Write-Host ""
 
 if ($brokenLinks.Count -eq 0) {
-    Write-Host "✅ No broken links found!" -ForegroundColor Green
+    Write-Host "No broken links found!" -ForegroundColor Green
     exit 0
 }
 
-Write-Host "🔝 TOP 20 MOST FREQUENT BROKEN LINKS:" -ForegroundColor Yellow
+Write-Host "TOP 20 MOST FREQUENT BROKEN LINKS:" -ForegroundColor Yellow
 Write-Host ""
 
 $topBroken = $brokenLinks.GetEnumerator() | 
@@ -124,8 +124,8 @@ $topBroken = $brokenLinks.GetEnumerator() |
 $rank = 1
 foreach ($broken in $topBroken) {
     Write-Host "$rank. $($broken.Key)" -ForegroundColor Red
-    Write-Host "   ❌ Broken in $($broken.Value.Count) file(s)" -ForegroundColor Gray
-    Write-Host "   📄 Files: $($broken.Value.Files[0..2] -join ', ')" -ForegroundColor Gray
+    Write-Host "   Broken in $($broken.Value.Count) file(s)" -ForegroundColor Gray
+    Write-Host "   Files: $($broken.Value.Files[0..2] -join ', ')" -ForegroundColor Gray
     if ($broken.Value.Files.Count -gt 3) {
         Write-Host "      ... and $($broken.Value.Files.Count - 3) more" -ForegroundColor Gray
     }
@@ -136,7 +136,7 @@ foreach ($broken in $topBroken) {
 # Export full report
 $reportPath = Join-Path $rootDir "broken-links-report.json"
 $brokenLinks | ConvertTo-Json -Depth 10 | Out-File $reportPath -Encoding UTF8
-Write-Host "📄 Full report exported to: broken-links-report.json" -ForegroundColor Cyan
+Write-Host "Full report exported to: broken-links-report.json" -ForegroundColor Cyan
 Write-Host ""
 
 # Export CSV for easy editing
@@ -151,13 +151,13 @@ $csvData = $topBroken | ForEach-Object {
     }
 }
 $csvData | Export-Csv $csvPath -NoTypeInformation -Encoding UTF8
-Write-Host "📊 Top 20 exported to CSV: broken-links-top20.csv" -ForegroundColor Cyan
+Write-Host "Top 20 exported to CSV: broken-links-top20.csv" -ForegroundColor Cyan
 Write-Host "   Edit the 'SuggestedFix' column to provide correct paths" -ForegroundColor Gray
 Write-Host ""
 
-Write-Host "═══════════════════════════════════════════════" -ForegroundColor Cyan
+Write-Host "===============================================" -ForegroundColor Cyan
 Write-Host "Next steps:" -ForegroundColor Yellow
 Write-Host "1. Review broken-links-top20.csv" -ForegroundColor Gray
 Write-Host "2. Add correct paths in 'SuggestedFix' column" -ForegroundColor Gray
 Write-Host "3. Run with -FixLinks to apply fixes automatically" -ForegroundColor Gray
-Write-Host "═══════════════════════════════════════════════" -ForegroundColor Cyan
+Write-Host "===============================================" -ForegroundColor Cyan

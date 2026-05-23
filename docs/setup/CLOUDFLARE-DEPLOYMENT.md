@@ -1,4 +1,4 @@
-# Cloudflare Pages Deployment Guide
+﻿# Cloudflare Pages Deployment Guide
 
 ## Step-by-Step Setup (You Already Have Account ✅)
 
@@ -71,7 +71,7 @@ Value: 3.1.0
    - Homepage
    - `/user-guide/`
    - `/features/`
-   - `/about/`
+   - `/about`
 
 ### 7. Verify Security Headers
 

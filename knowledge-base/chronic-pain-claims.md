@@ -1,4 +1,4 @@
-# Chronic Pain: Building Your Case
+﻿# Chronic Pain: Building Your Case
 
 *Based on 186 WSIAT decisions involving chronic pain*
 
@@ -172,7 +172,7 @@ While outcomes aren't clear from metadata alone, patterns suggest these help:
 
 ### 🔄 Knowledge → Templates (Flywheel 2)
 **This guide powered:**
-- [Chronic Pain Appeal Template](/templates/chronic-pain-appeal/) (pre-filled arguments from 186 cases)
+- [Chronic Pain Appeal Template](/templates/chronic-pain-appeal) (pre-filled arguments from 186 cases)
 - Medical evidence checklist (pain diary, functional limitations, specialist opinions)
 - Counter-arguments to "psychosomatic" dismissals
 

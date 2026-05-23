@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Guide d'utilisation
 lang: fr
@@ -38,6 +38,6 @@ Ce guide présente, en texte uniquement, comment utiliser 3mpwr App et personnal
 - Bandeau de cookies avec un consentement explicite
 - Les mesures d’audience (si activées) ne se chargent qu’après consentement
 
-Pour la version anglaise, rendez-vous sur le [User Guide]({{ '/user-guide' | relative_url }}).
+Pour la version anglaise, rendez-vous sur le [User Guide](/user-guide).
 
 {%- include page-feedback.html -%}

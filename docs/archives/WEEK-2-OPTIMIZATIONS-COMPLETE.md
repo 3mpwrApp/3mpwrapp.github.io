@@ -1,4 +1,4 @@
-# Week 2 Optimizations - Complete ✅
+﻿# Week 2 Optimizations - Complete ✅
 
 **Date:** October 18, 2025  
 **Phase:** Performance Optimization & Transparency  
@@ -31,10 +31,10 @@ Week 2 focused on **performance optimization**, **PWA enhancement**, and **trans
 
 **Cached Pages:**
 - Homepage (/, /index.html)
-- Core pages (/about/, /features/, /user-guide/)
-- Legal pages (/faq/, /privacy/, /terms/, /accessibility/)
+- Core pages (/about, /features/, /user-guide/)
+- Legal pages (/faq/, /privacy/, /terms/, /accessibility)
 - Contact page (/contact/)
-- French pages (/fr/, /fr/about/, /fr/features/, /fr/user-guide/, /fr/faq/)
+- French pages (/fr/, /fr/about, /fr/features/, /fr/user-guide/, /fr/faq/)
 - Assets (/manifest.json, logos, CSS)
 
 **Benefits:**

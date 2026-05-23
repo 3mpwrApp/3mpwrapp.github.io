@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: 3mpwrApp - Community Support for Injured Workers & Persons with Disabilities
 description: Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy.
@@ -53,14 +53,14 @@ description: Free community-powered platform connecting injured workers, persons
   </div>
   
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-    <a href="/app-waitlist/" class="homepage-btn-primary">
+    <a href="/app-waitlist" class="homepage-btn-primary">
       <span>Join the Beta</span>
       <span aria-hidden="true">→</span>
     </a>
     <a href="https://www.youtube.com/watch?v=4i6xPpik_6M" class="homepage-btn-secondary" target="_blank" rel="noopener noreferrer">
       <span>📺 Watch Tutorial</span>
     </a>
-    <a href="/about/" class="homepage-btn-secondary">
+    <a href="/about" class="homepage-btn-secondary">
       <span>Learn More</span>
     </a>
   </div>
@@ -101,7 +101,7 @@ description: Free community-powered platform connecting injured workers, persons
         <span>Launch Interactive Visualization</span>
         <span aria-hidden="true">→</span>
       </a>
-      <a href="/research/" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+      <a href="/research.html" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
         <span aria-hidden="true">🔬</span>
         <span>All Research Tools</span>
       </a>
@@ -145,7 +145,7 @@ description: Free community-powered platform connecting injured workers, persons
       <p>
         Created by someone who lived it. Every feature designed with real experiences from injured workers and disabled people.
       </p>
-      <a href="/about/" style="color: #003d7a; text-decoration: none; font-weight: 600;">
+      <a href="/about" style="color: #003d7a; text-decoration: none; font-weight: 600;">
         Learn More About 3mpwrApp →
       </a>
     </div>
@@ -169,7 +169,7 @@ description: Free community-powered platform connecting injured workers, persons
       <p>
         Built for brain fog, chronic pain, and fatigue. Complexity toggle, need-a-break button, and pain flare mode.
       </p>
-      <a href="/accessibility/" style="color: #5a189a; text-decoration: none; font-weight: 600;">
+      <a href="/accessibility" style="color: #5a189a; text-decoration: none; font-weight: 600;">
         Accessibility Features →
       </a>
     </div>
@@ -364,7 +364,7 @@ description: Free community-powered platform connecting injured workers, persons
   </div>
   
   <div class="app-tour-cta">
-    <a href="/app-waitlist/" class="app-tour-cta-button">
+    <a href="/app-waitlist" class="app-tour-cta-button">
       🎯 Get Early Access — Launching Q2 2026
     </a>
     <p class="app-tour-cta-text">
@@ -398,7 +398,7 @@ description: Free community-powered platform connecting injured workers, persons
   <p>
     Be part of building something meaningful. Your voice matters, your experience counts, and you belong here.
   </p>
-  <a href="/app-waitlist/" class="homepage-btn-primary" style="display: inline-block; padding: 18px 40px; font-size: 1.2rem;">
+  <a href="/app-waitlist" class="homepage-btn-primary" style="display: inline-block; padding: 18px 40px; font-size: 1.2rem;">
     Join the Beta Waitlist →
   </a>
   <p style="margin-top: 1.5rem; opacity: 0.9; font-size: 0.95rem;">
@@ -437,7 +437,7 @@ description: Free community-powered platform connecting injured workers, persons
       <ul style="list-style: none; padding: 0; margin: 0;">
         <li style="margin: 0.5rem 0;"><a href="/privacy/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Privacy Policy</a></li>
         <li style="margin: 0.5rem 0;"><a href="/security/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Security</a></li>
-        <li style="margin: 0.5rem 0;"><a href="/accessibility/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Accessibility</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/accessibility" style="color: #003d7a; text-decoration: none; font-weight: 500;">Accessibility</a></li>
         <li style="margin: 0.5rem 0;"><a href="/delete-account.html" style="color: #003d7a; text-decoration: none; font-weight: 500;">Delete Account</a></li>
       </ul>
     </div>
@@ -459,7 +459,7 @@ description: Free community-powered platform connecting injured workers, persons
         <span aria-hidden="true">🔬</span> Research & Data
       </h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="margin: 0.5rem 0;"><a href="/research/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Research Tools</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/research.html" style="color: #003d7a; text-decoration: none; font-weight: 500;">Research Tools</a></li>
         <li style="margin: 0.5rem 0;"><a href="/research-data-sources/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Data Sources</a></li>
         <li style="margin: 0.5rem 0;"><a href="/tribunal-visualizations/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Visualizations</a></li>
         <li style="margin: 0.5rem 0;"><a href="/how-to-use-this-data/" style="color: #003d7a; text-decoration: none; font-weight: 500;">How to Use Data</a></li>

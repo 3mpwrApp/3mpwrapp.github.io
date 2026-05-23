@@ -1,4 +1,4 @@
-# Official Data Sources - Breakthrough Discovery
+﻿# Official Data Sources - Breakthrough Discovery
 
 ## Summary
 Discovered official government/tribunal data sources that bypass CanLII DataDome entirely!
@@ -76,7 +76,7 @@ Discovered official government/tribunal data sources that bypass CanLII DataDome
 
 ## 3. Tribunals Ontario - Open Data
 
-**URL:** https://tribunalsontario.ca/en/about/open-data/
+**URL:** https://tribunalsontario.ca/en/aboutopen-data/
 
 **Status:** ✅ QUARTERLY REPORTS AVAILABLE (CSV/Excel)
 
@@ -98,8 +98,8 @@ Discovered official government/tribunal data sources that bypass CanLII DataDome
 - **Coverage:** 2016-present
 
 ### C. HRTO - Key Performance Indicators
-- **URL:** https://tribunalsontario.ca/en/about/key-performance-indicators/hrto-key-performance-indicators/
-- **Archive:** https://tribunalsontario.ca/en/about/key-performance-indicators/hrto-key-performance-indicators/hrto-key-performance-indicators-archive/
+- **URL:** https://tribunalsontario.ca/en/aboutkey-performance-indicators/hrto-key-performance-indicators/
+- **Archive:** https://tribunalsontario.ca/en/aboutkey-performance-indicators/hrto-key-performance-indicators/hrto-key-performance-indicators-archive/
 - **Content:** Operational metrics, timeliness, outcomes
 
 ### D. SBT - Appeals Received

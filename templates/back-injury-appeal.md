@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: "Back Injury Appeal Template - WSIB/WSIAT"
 description: "Professional fill-in-the-blank appeal letter for back injury denials. Based on 15,177 back/spine injury cases with 89.1% success rate at WSIAT."
@@ -283,12 +283,12 @@ Based on analysis of 15,177 back injury WSIAT decisions, here are the strongest 
 - [WSIB Operational Policy Manual](https://www.wsib.ca/en/operational-policy-manual) - Policy 11-01-02 (Pre-existing conditions)
 
 ### Medical Evidence Resources
-- [Evidence Locker Guide](/guides/wsiat-complete-guide/#evidence-locker) - How to organize medical records
+- [Evidence Locker Guide](/guides/wsiat-complete-guide#evidence-locker) - How to organize medical records
 - [Back Injury Knowledge Base](/knowledge-base/low-back-pain-claims/) - Comprehensive research on back claims
 - [IME Survival Guide](/knowledge-base/ime-tactics/) - How to prepare for independent medical exams
 
 ### Legal Support
-- [WSIAT Complete Guide](/guides/wsiat-complete-guide/) - Full appeal process walkthrough
+- [WSIAT Complete Guide](/guides/wsiat-complete-guide) - Full appeal process walkthrough
 - [Finding a Lawyer](/app/#lawyer-finder) - Directory of WSIAT-experienced lawyers
 - [Free Legal Clinics](/resources/#legal-clinics) - Community legal services by region
 

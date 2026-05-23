@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: "Chronic Pain Guide - WSIAT Appeals Strategy"
 description: "Complete guide to chronic pain claims at WSIAT. Based on analysis of 7,502 decisions (1987-2026) showing chronic pain is 3rd most common appeal issue at 7.6%."
@@ -333,7 +333,7 @@ This guide is based on:
 - Deep-dive co-occurrence analysis: Chronic Pain + NEL (2,101 cases, 2.12%)
 
 **Full analysis:** [WSIAT Pattern Analysis Report](/docs/WSIAT-PATTERN-ANALYSIS-2026-04-29.html)  
-**Deep dive:** [WSIAT Deep Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html)
+**Deep dive:** [WSIAT Deep Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29)
 
 ---
 

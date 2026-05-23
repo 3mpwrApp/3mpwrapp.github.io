@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Privacy Policy
 permalink: /privacy/
@@ -602,7 +602,7 @@ This policy reflects our actual technical implementation. You can verify our pri
 
 - [Data Ownership Statement](/data-ownership/) - Our commitment to 100% user data sovereignty
 - [Terms of Service](/terms/) - Terms and conditions for using our services
-- [Accessibility](/accessibility/) - Our accessibility features and compliance
+- [Accessibility](/accessibility) - Our accessibility features and compliance
 
 ---
 

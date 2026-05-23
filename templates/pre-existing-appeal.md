@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: "Pre-Existing Condition Appeal Template - WSIB/WSIAT"
 description: "Professional fill-in-the-blank appeal letter for pre-existing condition denials. Counter WSIB's most common denial tactic with evidence-based arguments."
@@ -417,7 +417,7 @@ Based on analysis of 11,430 WSIAT decisions (2020-2026), these arguments succeed
 - [Knee Injury Claims](/knowledge-base/knee-injury-claims/) - Arthritis denials
 
 ### Legal Support
-- [WSIAT Complete Guide](/guides/wsiat-complete-guide/) - Full appeal process
+- [WSIAT Complete Guide](/guides/wsiat-complete-guide) - Full appeal process
 - [Community Legal Clinics](/resources/#legal-clinics) - Free legal help
 
 ---

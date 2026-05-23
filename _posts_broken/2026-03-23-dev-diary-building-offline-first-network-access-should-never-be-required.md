@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Dev Diary: Building Offline-First: Network Access Should Never Be Required"
 date: 2026-03-23 00:00:00 +0000
@@ -52,5 +52,5 @@ The offline-first mandate created real technical challenges ÃƒÂ¢Ã¢â€š�
 We believe in building in public ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the community we serve has been failed by opaque institutions too many times.
 
 - ÃƒÂ¢Ã‚Â­Ã‚Â [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
-- ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª [Join Beta Testing](/app-waitlist/)
+- ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª [Join Beta Testing](/app-waitlist)
 - ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¬ [Community Discussion](/community/)

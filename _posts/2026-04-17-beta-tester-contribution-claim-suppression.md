@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "How One Beta Tester Helped Surface Claim Reporting Barriers Across Canada"
 date: 2026-04-17
@@ -429,9 +429,9 @@ If you're willing, we'd love to:
 ### How Data Bridges to Your Case
 
 **Knowledge base guides built from this research:**
-1. **[Claim Suppression Guide](/research/)** - Tactics recognition, documentation checklists
-2. **[Pre-Existing Denials](/research/)** - 20% knee injury bias identified
-3. **[Employer Retaliation](/research/)** - Legal protections, reprisal complaint templates
+1. **[Claim Suppression Guide](/research.html)** - Tactics recognition, documentation checklists
+2. **[Pre-Existing Denials](/research.html)** - 20% knee injury bias identified
+3. **[Employer Retaliation](/research.html)** - Legal protections, reprisal complaint templates
 
 **What to watch for** *(patterns identified in THIS research)*:
 - ❌ "Don't file, we'll handle it" (documented BC tactic)
@@ -524,13 +524,13 @@ More Workers Win → More Contributions → Better Research (CYCLE ACCELERATES)
 
 **BC & Ontario Claim Suppression Research:**
 - [BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse](/blog/2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns/) - 7,386 BC cases with 100% unknown outcomes reveal systemic patterns documented by beta testers
-- [The Claim Suppression Playbook: BC to Ontario Cross-Provincial Analysis](https://3mpwrapp.ca/research/wsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Statistical analysis of 11,430 Ontario WSIAT decisions comparing to BC patterns
-- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.ca/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook based on documented BC megaproject cases
+- [The Claim Suppression Playbook: BC to Ontario Cross-Provincial Analysis](https://3mpwrapp.ca/research.htmlwsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Statistical analysis of 11,430 Ontario WSIAT decisions comparing to BC patterns
+- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.ca/research.htmlemployer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook based on documented BC megaproject cases
 
 ---
 
 **Want to contribute? Email us:** empowrapp08162025@gmail.com 
-**Beta tester signup:** https://3mpwrapp.ca/app-waitlist/
+**Beta tester signup:** https://3mpwrapp.ca/app-waitlist
 
 ---
 

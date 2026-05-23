@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Dev Diary: Why We Chose React Native: Accessibility Over Everything"
 date: 2026-03-15 00:00:00 +0000
@@ -52,5 +52,5 @@ The Expo ecosystem accelerated this enormously. Expo Router's file-based navigat
 We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
 -  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
--  [Join Beta Testing](/app-waitlist/)
+-  [Join Beta Testing](/app-waitlist)
 - ' [Community Discussion](/community/)

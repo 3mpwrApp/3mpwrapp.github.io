@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Dev Diary: Simple Mode: Designing for the Worst Day"
 date: 2026-04-08 00:00:00 +0000
@@ -52,5 +52,5 @@ The five features in Simple Mode - Evidence Locker quick-add, Crisis Resources, 
 We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
 -  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
--  [Join Beta Testing](/app-waitlist/)
+-  [Join Beta Testing](/app-waitlist)
 -  [Community Discussion](/community/)

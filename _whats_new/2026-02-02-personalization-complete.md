@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Comprehensive Personalization System Live!"
 date: 2026-02-02
@@ -111,4 +111,4 @@ Your selections persist across app restarts and sync to your cloud storage (if c
 **Released**: February 2, 2026  
 **Status**: ✅ Live in Preview Branch
 
-[Download 3mpwr App](/app-waitlist/) | [View on GitHub](https://github.com/3mpwr-App/empowrapp-main)
+[Download 3mpwr App](/app-waitlist) | [View on GitHub](https://github.com/3mpwr-App/empowrapp-main)

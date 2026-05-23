@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Building in Public: Why Transparency Is Non-Negotiable for Us"
 date: 2026-04-26 00:00:00 +0000
@@ -48,5 +48,5 @@ This is not just about publishing a roadmap. It means being honest when somethin
 3mpwrApp is built on these principles â€” and built for and with the people who need them most.
 
 - ðŸ’¬ [Community Forums](/community/)
-- ðŸ§ª [Become a Beta Tester](/app-waitlist/)
-- ðŸ“– [Read Our Mission](/about/)
+- ðŸ§ª [Become a Beta Tester](/app-waitlist)
+- ðŸ“– [Read Our Mission](/about)

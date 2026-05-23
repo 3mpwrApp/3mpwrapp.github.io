@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Inicio
 lang: es
@@ -10,6 +10,6 @@ description: Herramientas y comunidad para trabajadores lesionados y personas co
 
 # 3mpwr App
 
-Centro comunitario con recursos prácticos y apoyo. Consulta la [Guía de usuario]({{ '/user-guide' | relative_url }}) y las [Novedades]({{ '/whats-new' | relative_url }}).
+Centro comunitario con recursos prácticos y apoyo. Consulta la [Guía de usuario](/user-guide) y las [Novedades]({{ '/whats-new' | relative_url }}).
 
 {%- include page-feedback.html -%}

@@ -1,4 +1,4 @@
-# Email: Thunder Bay & District Injured Workers Support Group
+﻿# Email: Thunder Bay & District Injured Workers Support Group
 
 **To:** Thunder Bay and District Injured Workers Support Group  
 **From:** 3mpwr Research Team  
@@ -71,7 +71,7 @@ Each guide includes:
 - ✅ Medical evidence strategies your members can use
 - ✅ Common WSIB tactics and how to counter them
 
-🔗 https://3mpwrapp.ca/research/#knowledge-base
+🔗 https://3mpwrapp.ca/research.html#knowledge-base
 
 ---
 
@@ -92,7 +92,7 @@ Downloadable templates based on denial patterns we found in the data:
 
 Perfect for peer supporters helping members draft appeals.
 
-🔗 https://3mpwrapp.ca/research/#templates
+🔗 https://3mpwrapp.ca/research.html#templates
 
 ---
 
@@ -104,7 +104,7 @@ Explore how WSIB denial keywords cluster across 11,430 cases:
 
 Great for workshops or explaining patterns to new members.
 
-🔗 https://3mpwrapp.ca/research/ (scroll to Interactive Visualization)
+🔗 https://3mpwrapp.ca/research.html (scroll to Interactive Visualization)
 
 ---
 
@@ -150,7 +150,7 @@ The research provides evidence-based ammunition for:
 
 ### 🎯 Research Hub: Everything in One Place
 
-🔗 **https://3mpwrapp.ca/research/**
+🔗 **https://3mpwrapp.ca/research.html**
 
 This central page includes:
 - Executive summary of all findings
@@ -192,7 +192,7 @@ We're all in this together—and data is one of our most powerful weapons.
 - Include in your next newsletter
 
 **Social Media Language:**
-> "New research analyzed 11,430 WSIB tribunal cases and found systematic denial patterns—plus built FREE tools to fight back. Knowledge base, 22 appeal templates, and interactive visualization. Check it out: https://3mpwrapp.ca/research/ #WSIB #InjuredWorkers #ThunderBay"
+> "New research analyzed 11,430 WSIB tribunal cases and found systematic denial patterns—plus built FREE tools to fight back. Knowledge base, 22 appeal templates, and interactive visualization. Check it out: https://3mpwrapp.ca/research.html #WSIB #InjuredWorkers #ThunderBay"
 
 ---
 
@@ -237,7 +237,7 @@ The 3mpwr Research Team
 
 📱 **Mobile App Coming Soon:** https://3mpwrapp.ca/app-tour  
 📚 **Research Hub:** https://3mpwrapp.ca/research  
-📊 **Interactive Data:** https://3mpwrapp.ca/research/#visualization  
+📊 **Interactive Data:** https://3mpwrapp.ca/research.html#visualization  
 💬 **Contact:** research@3mpwrapp.ca
 
 **Follow us:**  

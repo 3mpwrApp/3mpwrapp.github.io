@@ -1,8 +1,8 @@
----
+﻿---
 layout: default
 title: Accessibility Statement
 description: Our commitment to inclusive accessible design
-permalink: /accessibility/
+permalink: /accessibility
 ---
 
 
@@ -10,7 +10,7 @@ permalink: /accessibility/
 layout: default
 title: Accessibility Statement
 description: Our commitment to inclusive accessible design
-permalink: /accessibility/
+permalink: /accessibility
 ---
 
 <!-- Complexity Mode Toggle -->
@@ -232,7 +232,7 @@ For detailed documentation of all accessibility features, please see our compreh
 Additional resources:
 - [Accessibility Settings](/accessibility-settings/) - Customize your experience
 - [Accessibility Walkthrough](/accessibility-walkthrough/) - Guided feature tour
-- [Roadmap](/roadmap/) - Planned accessibility improvements
+- [Roadmap](/roadmap) - Planned accessibility improvements
 
 ---
 
@@ -582,7 +582,7 @@ We follow these recognized standards:
 - ✅ Added high contrast and dark mode themes
 
 ### Upcoming Improvements:
-See our **[Roadmap](/roadmap/)** for planned accessibility features including:
+See our **[Roadmap](/roadmap)** for planned accessibility features including:
 - 🔜 Motor disability enhancements (dwell-click, voice commands)
 - 🔜 Enhanced screen reader optimization
 - 🔜 Accessibility hardware support (eye-tracking, switches)
@@ -623,7 +623,7 @@ We also work toward compliance with:
     <span class="link-text">📖 User Guide - Complete documentation</span>
     <span class="link-arrow">→</span>
   </a>
-  <a href="/roadmap/" class="resource-link">
+  <a href="/roadmap" class="resource-link">
     <span class="link-text">🗺️ Roadmap - Planned improvements</span>
     <span class="link-arrow">→</span>
   </a>

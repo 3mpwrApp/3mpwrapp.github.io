@@ -1,8 +1,8 @@
----
+﻿---
 layout: default
 title: Roadmap
 description: Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!
-permalink: /roadmap/
+permalink: /roadmap
 lastUpdated: 2025-12-14
 ---
 
@@ -898,7 +898,7 @@ This roadmap is updated regularly based on:
 - **[User Guide](/user-guide/)** - Learn how to use 3mpwrApp
 - **[Features](/features/)** - See what's available now
 - **[What's New](/whats-new/)** - Recent updates and changes
-- **[Accessibility](/accessibility/)** - Our commitment to inclusive design
+- **[Accessibility](/accessibility)** - Our commitment to inclusive design
 - **[Contact](/contact/)** - Get in touch with us
 
 ### Legal & Privacy

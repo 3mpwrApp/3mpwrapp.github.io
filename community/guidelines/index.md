@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Community Guidelines
 permalink: /community/guidelines/
@@ -264,7 +264,7 @@ We're committed to maintaining a supportive, safe community where everyone feels
 
 - **[Terms of Service](/terms/)** - Terms and conditions for using our services
 - **[Privacy Policy](/privacy/)** - How we handle your data
-- **[Accessibility](/accessibility/)** - Our accessibility features
+- **[Accessibility](/accessibility)** - Our accessibility features
 - **[User Guide](/user-guide/)** - How to use the app
 
 ---

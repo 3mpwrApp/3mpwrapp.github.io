@@ -1,4 +1,4 @@
-# Website Organization Plan
+﻿# Website Organization Plan
 **Date:** October 26, 2025  
 **Purpose:** Better organize all pages across the entire 3mpwrApp website for improved navigation and maintainability
 
@@ -71,7 +71,7 @@
 │   ├── cookies.md                    # Cookie policy
 │   └── delete-account.html           # Account deletion
 │
-├── /accessibility/                   # Accessibility
+├── /accessibility                   # Accessibility
 │   ├── index.md                      # Accessibility statement
 │   ├── settings.md                   # Accessibility settings
 │   ├── walkthrough.md                # Feature walkthrough
@@ -234,8 +234,8 @@ Resources ▼
    - `faq.md`
    - FAQ sections from various pages
    
-2. **Accessibility Pages** → `/accessibility/` folder
-   - `accessibility.md`
+2. **Accessibility Pages** → `/accessibility` folder
+   - `/accessibility`
    - `accessibility-settings.md`
    - `accessibility-walkthrough.md`
    - Keep: `WCAG-2.2-COMPLIANCE-REPORT.md` → Move to `/docs/reports/`

@@ -1,4 +1,4 @@
-# Accessibility Page Fixed - Complete Summary
+﻿# Accessibility Page Fixed - Complete Summary
 
 **Date**: October 18, 2025  
 **Commit**: db95e95  
@@ -10,7 +10,7 @@
 
 > "i checked accessibility page and theres issues: # Page not found"
 
-**URL**: https://3mpwrapp.ca/accessibility/  
+**URL**: https://3mpwrapp.ca/accessibility  
 **Error**: 404 Page Not Found
 
 ---
@@ -19,14 +19,14 @@
 
 ### Problem Discovery
 
-The `accessibility.md` file was **completely corrupted** with:
+The `/accessibility` file was **completely corrupted** with:
 
 1. **Broken YAML Front Matter**:
    ```markdown
    ------
    layout: defaultlayout: default
    title: Accessibility Statementtitle: Accessibility Statement
-   permalink: /accessibility/---
+   permalink: /accessibility---
    ```
 
 2. **Duplicated Content**: Every single line was duplicated
@@ -53,7 +53,7 @@ The `accessibility.md` file was **completely corrupted** with:
 
 ### 1. Removed Corrupted File
 ```powershell
-Remove-Item "accessibility.md" -Force
+Remove-Item "/accessibility" -Force
 ```
 
 ### 2. Created New Comprehensive Accessibility Statement
@@ -157,7 +157,7 @@ The new page includes navigation to:
 1. [User Guide](/user-guide/) - Comprehensive documentation
 2. [Accessibility Settings](/accessibility-settings/) - Customize experience
 3. [Accessibility Walkthrough](/accessibility-walkthrough/) - Feature tutorials
-4. [Roadmap](/roadmap/) - Planned accessibility features
+4. [Roadmap](/roadmap) - Planned accessibility features
 5. [FAQ](/faq/) - Common questions
 6. [Contact](/contact/) - Get in touch
 
@@ -178,7 +178,7 @@ The new page includes navigation to:
 
 ### Immediate Tests:
 - [x] File has valid YAML front matter
-- [x] Permalink `/accessibility/` is correct
+- [x] Permalink `/accessibility` is correct
 - [x] No duplicate content
 - [x] All sections properly formatted
 - [x] Internal links use correct paths
@@ -188,7 +188,7 @@ The new page includes navigation to:
 - [x] Emojis render correctly (✅ ♿ 💚)
 
 ### Deployment Tests (After Push):
-- [ ] Visit https://3mpwrapp.ca/accessibility/
+- [ ] Visit https://3mpwrapp.ca/accessibility
 - [ ] Page loads without 404 error
 - [ ] All internal links work
 - [ ] Footer link to accessibility page works
@@ -204,14 +204,14 @@ The new page includes navigation to:
 ⏳ **Building**: Jekyll workflow running  
 ⏳ **Deploying**: Cloudflare Pages (1-2 minutes)
 
-**Live URL**: https://3mpwrapp.ca/accessibility/
+**Live URL**: https://3mpwrapp.ca/accessibility
 
 ---
 
 ## 📝 Commit Details
 
 **Commit**: db95e95  
-**Message**: "fix: Restore corrupted accessibility.md page with comprehensive content"
+**Message**: "fix: Restore corrupted /accessibility page with comprehensive content"
 
 **Changes**:
 - 1 file changed
@@ -256,7 +256,7 @@ The new page includes navigation to:
 ### 1. Verify the Fix (In 2 Minutes):
 ```
 1. Wait for Cloudflare Pages deployment (~1-2 minutes)
-2. Visit: https://3mpwrapp.ca/accessibility/
+2. Visit: https://3mpwrapp.ca/accessibility
 3. Should see: "Accessibility Statement" page with full content
 4. Click around: All links should work
 ```
@@ -296,7 +296,7 @@ Or: Open incognito/private window
 
 ## 🔍 Related Issues Checked
 
-While fixing accessibility.md, I also checked:
+While fixing /accessibility, I also checked:
 
 - ✅ `accessibility-settings.md` - OK
 - ✅ `accessibility-walkthrough.md` - OK
@@ -347,7 +347,7 @@ While fixing accessibility.md, I also checked:
 
 **Commit**: db95e95  
 **Status**: ✅ DEPLOYED  
-**URL**: https://3mpwrapp.ca/accessibility/  
+**URL**: https://3mpwrapp.ca/accessibility  
 **Time to fix**: ~5 minutes  
 
 **You should see the working page in about 2 minutes!** 🚀

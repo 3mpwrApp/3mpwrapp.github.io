@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "What 11,430 Tribunal Decisions Reveal About WSIB Outcomes"
 date: 2026-04-15
@@ -14,7 +14,7 @@ featured: true
 
 # What 11,430 Tribunal Decisions Reveal About WSIB Outcomes
 
-**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New evidence: Decision complexity analysis shows 19.85% simple (1 issue), 23.01% moderate (2-3 issues), 2.81% complex (4-5 issues). Top co-occurrences: NEL+Permanent Impairment (11,516 cases), LOE+Loss of Earnings (9,167 cases), Pre-existing+SIEF (3,281 cases). Medical specialists: Surgeon mentioned only 195 times (0.20%), Psychiatrist 44 times (0.04%). See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html) | [Evidence-Based Guides](/guides/)
+**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New evidence: Decision complexity analysis shows 19.85% simple (1 issue), 23.01% moderate (2-3 issues), 2.81% complex (4-5 issues). Top co-occurrences: NEL+Permanent Impairment (11,516 cases), LOE+Loss of Earnings (9,167 cases), Pre-existing+SIEF (3,281 cases). Medical specialists: Surgeon mentioned only 195 times (0.20%), Psychiatrist 44 times (0.04%). See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29) | [Evidence-Based Guides](/guides/)
 
 ---
 
@@ -590,7 +590,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 **Data Exports:**
 - [ONWSIAT-DETECTIVE-FINDINGS.json](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Raw anomaly results
 - [ONWSIAT-CO-OCCURRENCE.csv](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Network analysis data
-- [Research Hub](https://3mpwrapp.ca/research/) - Visualization + 16 injury guides + 50+ appeal templates
+- [Research Hub](https://3mpwrapp.ca/research.html) - Visualization + 16 injury guides + 50+ appeal templates
 - [Interactive Keyword Network](https://3mpwrapp.ca/wsib-denial-network-visualization.html) - Explore keyword co-occurrence patterns from CanLII data (ONWSIAT 2020-2026)
 
 **Code transparency:** All scripts open-source on GitHub. Run them yourself to verify findings.
@@ -754,8 +754,8 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 
 **Use these resources built from 11,430 cases:**
 
-1. **[Knowledge Base Guides](/research/)** - Search your injury type to see documented denial patterns
-2. **[Appeal Templates](/research/)** - 50+ fill-in-the-blank letters with statistical evidence sections  
+1. **[Knowledge Base Guides](/research.html)** - Search your injury type to see documented denial patterns
+2. **[Appeal Templates](/research.html)** - 50+ fill-in-the-blank letters with statistical evidence sections  
 3. **[Interactive Visualization](/wsib-denial-network-visualization.html)** - See how denial keywords connect
 4. **Community Legal Clinics** - Free legal help (link to [Legal Aid Ontario](https://www.legalaid.on.ca))
 
@@ -863,7 +863,7 @@ More Cases Analyzed... (CYCLE ACCELERATES)
 
 **Previous 3mpwrApp Research:**
 - [Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built the tribunal decision database
-- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
+- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
 - [3 Flywheels: Thunder Bay Presentation Success](https://3mpwrapp.ca/2026/03/31/3-flywheels-thunder-bay-presentation-success/) - Community impact and grassroots advocacy
 
 **Full Documentation:**
@@ -941,7 +941,7 @@ More Cases Analyzed... (CYCLE ACCELERATES)
 - **Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)
 - **Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)
 - **Full Master Document:** [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
-- **Research Hub:** [All Research Tools](https://3mpwrapp.ca/research/) (visualization, guides, templates)
+- **Research Hub:** [All Research Tools](https://3mpwrapp.ca/research.html) (visualization, guides, templates)
 - **Interactive Visualization:** [WSIB Denial Network](https://3mpwrapp.ca/wsib-denial-network-visualization.html)
 
 ---

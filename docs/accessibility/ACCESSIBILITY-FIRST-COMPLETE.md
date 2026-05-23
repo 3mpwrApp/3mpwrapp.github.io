@@ -1,4 +1,4 @@
-# ✅ Accessibility-First Color System — COMPLETE
+﻿# ✅ Accessibility-First Color System — COMPLETE
 
 **Date:** March 18, 2026  
 **Goal:** Make 3mpwrApp website the #1 standard for accessibility  
@@ -113,7 +113,7 @@
 
 ---
 
-### 4. Accessibility Page (`accessibility.md`)
+### 4. Accessibility Page (`/accessibility`)
 **Violations:** 1 instance → **0** ✅
 
 **What was fixed:**
@@ -281,7 +281,7 @@ var(--border-dark)     /* Dark borders */
 3. **UPDATED:** `index.md` (homepage winner section)
 4. **UPDATED:** `community-spotlight/index.md` (all boxes)
 5. **UPDATED:** `wins/index.md` (all CSS)
-6. **UPDATED:** `accessibility.md` (button)
+6. **UPDATED:** `/accessibility` (button)
 7. **UPDATED:** `app-tour.md` (all colors)
 
 ### Git Commit

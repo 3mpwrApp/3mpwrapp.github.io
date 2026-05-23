@@ -1,4 +1,4 @@
-# Social Share Images - Implementation Guide
+﻿# Social Share Images - Implementation Guide
 
 **Created:** January 15, 2026  
 **Status:** Ready for Design  
@@ -29,7 +29,7 @@
 ### 2. About Page (`social-share-about.png`)
 
 **Dimensions:** 1200×630px  
-**Purpose:** Share image for /about/ page
+**Purpose:** Share image for /about page
 
 **Design Elements:**
 - **Background:** Warm gradient (orange #f97316 → deep orange #ea580c)
@@ -70,7 +70,7 @@
 ### 4. Accessibility Page (`social-share-accessibility.png`)
 
 **Dimensions:** 1200×630px  
-**Purpose:** Share image for /accessibility/ page
+**Purpose:** Share image for /accessibility page
 
 **Design Elements:**
 - **Background:** Professional gradient (dark blue #1e3a8a → purple #6d28d9)
@@ -89,7 +89,7 @@
 ### 5. Beta/Waitlist Page (`social-share-beta.png`)
 
 **Dimensions:** 1200×630px  
-**Purpose:** Share image for /app-waitlist/ and beta-related pages
+**Purpose:** Share image for /app-waitlist and beta-related pages
 
 **Design Elements:**
 - **Background:** Urgent gradient (red #dc2626 → purple #9333ea)

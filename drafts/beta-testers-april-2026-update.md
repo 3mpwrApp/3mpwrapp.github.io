@@ -1,4 +1,4 @@
-# Beta Testers Email: April 2026 Update
+﻿# Beta Testers Email: April 2026 Update
 
 **To:** 3mpwr Beta Testers  
 **From:** 3mpwr Research Team  
@@ -303,12 +303,12 @@ The 3mpwr Research Team
 
 ## Quick Links
 
-📚 **Knowledge Base:** https://3mpwrapp.ca/research/#knowledge-base  
-📝 **Templates (23 now!):** https://3mpwrapp.ca/research/#templates  
+📚 **Knowledge Base:** https://3mpwrapp.ca/research.html#knowledge-base  
+📝 **Templates (23 now!):** https://3mpwrapp.ca/research.html#templates  
 📊 **Blog Posts:** https://3mpwrapp.ca/blog/  
 💻 **Analysis Scripts:** https://github.com/3mpwrapp/scripts/  
 📱 **Mobile App Preview:** https://3mpwrapp.ca/app-tour/  
-🤝 **Beta Tester Portal:** https://3mpwrapp.ca/app-waitlist/  
+🤝 **Beta Tester Portal:** https://3mpwrapp.ca/app-waitlist  
 
 **Follow Progress:**  
 🐦 Twitter/X: @3mpwrapp  

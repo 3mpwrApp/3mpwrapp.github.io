@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Appeal Letter Templates
 description: Fill-in-the-blank WSIB appeal templates built from public Ontario workers' compensation decisions.
@@ -26,7 +26,7 @@ permalink: /templates/
 - Legal argument framework
 - Closing statement
 
-### [Chronic Pain Appeal Letter](/templates/chronic-pain-appeal/)
+### [Chronic Pain Appeal Letter](/templates/chronic-pain-appeal)
 **Time to complete:** 30-45 minutes  
 **Pages:** 7  
 **Best for:** Long-term pain conditions, fibromyalgia, complex regional pain syndrome

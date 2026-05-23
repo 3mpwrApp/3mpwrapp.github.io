@@ -1,4 +1,4 @@
-# Website Update Status - Three Issues Addressed
+﻿# Website Update Status - Three Issues Addressed
 
 **Date**: October 18, 2025  
 **Status**: 2/3 Complete, 1 Requires Logo File
@@ -21,7 +21,7 @@ Content added:
 - Explains understanding of Canadian systems (WSIB, WCB, provincial programs)
 - Mentions Indigenous sovereignty and OCAP principles
 - **Strategy statement**: Perfect Canada first → Expand globally
-- **Link to Roadmap**: Directs users to /roadmap/ page for global expansion vision
+- **Link to Roadmap**: Directs users to /roadmap page for global expansion vision
 - Mentions 2026-2028 timeline for 100+ countries
 
 **Location**: Right after "Built with empathy..." section, before "Why 3mpwrApp is Different"
@@ -95,7 +95,7 @@ Content added:
 1. Hard refresh browser (Ctrl + Shift + R)
 2. Look for navigation menu
 3. Should see "Roadmap" between "User Guide" and "Contact"
-4. Click it → Should go to https://3mpwrapp.ca/roadmap/
+4. Click it → Should go to https://3mpwrapp.ca/roadmap
 
 **The roadmap page exists and is live** - just need to clear your browser cache to see the updated navigation!
 
@@ -184,7 +184,7 @@ git commit -m "feat: Add Canada-wide scope and global roadmap reference to About
 - Explains Canadian focus: persons with disabilities, injured workers, unions
 - References provincial systems (WSIB, WCB), Indigenous OCAP principles
 - Strategy: Perfect Canada first, then expand globally
-- Links to /roadmap/ for global expansion vision (2026-2028)
+- Links to /roadmap for global expansion vision (2026-2028)
 - Mentions 100+ countries target"
 
 git push origin main
@@ -221,15 +221,15 @@ git push origin main
 After committing and clearing cache:
 
 ### About Page
-- [ ] Visit https://3mpwrapp.ca/about/
+- [ ] Visit https://3mpwrapp.ca/about
 - [ ] See "🇨🇦 Currently Serving Canada-Wide" section
-- [ ] Verify link to /roadmap/ works
+- [ ] Verify link to /roadmap works
 - [ ] Check mobile view
 
 ### Navigation
 - [ ] Hard refresh browser (Ctrl + Shift + R)
 - [ ] See "Roadmap" link between User Guide and Contact
-- [ ] Click "Roadmap" → Goes to /roadmap/ page
+- [ ] Click "Roadmap" → Goes to /roadmap page
 - [ ] Verify on mobile menu
 
 ### Logo (After Saving New Image)

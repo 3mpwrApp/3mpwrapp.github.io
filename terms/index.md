@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Terms of Service
 permalink: /terms/
@@ -477,10 +477,10 @@ By accessing or using 3mpwrApp's website, progressive web app, or services, you 
 - Screen reader optimization, high contrast modes, and dyslexia-friendly fonts
 - Motor disability accommodations with voice navigation
 - Cultural accessibility with Indigenous language support
-- See our **[Accessibility](/accessibility/)** page for comprehensive details
+- See our **[Accessibility](/accessibility)** page for comprehensive details
 - Contact us to report accessibility issues—we respond within 48 hours
 
-**[Learn more about Accessibility Features →](/accessibility/)**
+**[Learn more about Accessibility Features →](/accessibility)**
 
 ### 14. International Users
 
@@ -532,7 +532,7 @@ Please send correspondence to the email above with "Legal" in the subject line.
 See our **[Privacy Policy](/privacy/)** or email with "Privacy" in the subject line.
 
 **For accessibility issues**:
-See our **[Accessibility](/accessibility/)** page or email with "Accessibility" in the subject line.
+See our **[Accessibility](/accessibility)** page or email with "Accessibility" in the subject line.
 
 ---
 
@@ -542,7 +542,7 @@ See our **[Accessibility](/accessibility/)** page or email with "Accessibility" 
 - **[Data Ownership Statement](/data-ownership/)** - Your 100% data sovereignty
 - **[Privacy Controls](/privacy-controls/)** - Manage your privacy settings
 - **[Community Guidelines](/community/guidelines/)** - Community standards and moderation
-- **[Accessibility](/accessibility/)** - Our accessibility features and compliance
+- **[Accessibility](/accessibility)** - Our accessibility features and compliance
 - **[Legal Disclaimers](/legal/disclaimers/)** - All disclaimers in one place
 
 ---

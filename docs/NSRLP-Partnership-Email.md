@@ -1,4 +1,4 @@
-# NSRLP Partnership Outreach Email
+﻿# NSRLP Partnership Outreach Email
 
 **To:** representingyourself@gmail.com  
 **From:** [Your contact email]  
@@ -101,7 +101,7 @@ Many workers' compensation claimants are effectively SRLs at tribunals. They fac
 ## Contact & Resources
 
 **Website:** https://3mpwrapp.ca  
-**Research Hub:** https://3mpwrapp.ca/research/  
+**Research Hub:** https://3mpwrapp.ca/research.html  
 **Knowledge Base:** https://3mpwrapp.ca/knowledge-base/  
 **Templates:** https://3mpwrapp.ca/templates/  
 

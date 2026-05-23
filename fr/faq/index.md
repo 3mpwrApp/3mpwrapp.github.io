@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Foire aux questions (FAQ)
 permalink: /fr/faq/
@@ -21,7 +21,7 @@ Vous trouverez ci-dessous des réponses rapides aux questions courantes. Si vous
 ## FAQ du site Web
 
 ### Qu'est-ce que 3mpwrApp ?
-3mpwrApp est une plateforme communautaire soutenant les travailleurs blessés et les personnes handicapées partout au Canada. En savoir plus sur notre page [À propos](/fr/about/).
+3mpwrApp est une plateforme communautaire soutenant les travailleurs blessés et les personnes handicapées partout au Canada. En savoir plus sur notre page [À propos](/fr/about).
 
 ### Où puis-je trouver les mises à jour récentes ?
 Consultez [Quoi de neuf](/fr/whats-new/) pour les derniers changements.
@@ -94,7 +94,7 @@ Oui ! Nous visons la conformité WCAG 2.2 Niveau AA et offrons :
 - Navigation au clavier complète
 - Support des lecteurs d'écran
 - [Paramètres d'accessibilité personnalisables](/fr/accessibility-settings/)
-- Consultez notre [Politique d'accessibilité](/accessibility/)
+- Consultez notre [Politique d'accessibilité](/accessibility)
 
 ### Puis-je utiliser 3mpwrApp sur mon téléphone ?
 Oui ! Notre site Web est entièrement responsive et fonctionne sur :

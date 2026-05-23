@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Wellness
 description: Peer support, self-advocacy tips, and accessibility resources to support your wellbeing.
@@ -56,7 +56,7 @@ Peer support, self-advocacy, and accessibility tips for your wellbeing.
 ## Learn More
 
 - [View All Features]({{ '/features' | relative_url }}) - See the complete feature list
-- [Download User Guide]({{ '/user-guide' | relative_url }}) - Comprehensive documentation
+- [Download User Guide](/user-guide) - Comprehensive documentation
 - [Join Beta Testing]({{ '/beta' | relative_url }}) - Test wellness features
 
 ---

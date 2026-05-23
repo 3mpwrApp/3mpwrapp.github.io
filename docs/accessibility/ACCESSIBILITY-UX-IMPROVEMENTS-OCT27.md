@@ -1,4 +1,4 @@
-# Accessibility & UX Improvements - October 27, 2025
+﻿# Accessibility & UX Improvements - October 27, 2025
 
 ## Overview
 Comprehensive site-wide improvements to enhance readability, accessibility, and user experience while maintaining the modern, calm visual style.
@@ -153,7 +153,7 @@ All changes applied globally through:
 - User Guide (`user-guide/` - now working!)
 - Contact (`contact/`)
 - FAQ (`faq/`)
-- Accessibility (`accessibility.md`)
+- Accessibility (`/accessibility`)
 - Blog posts (`blog/`)
 - All subdirectories and multilingual pages
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: whats_new
 title: 🎉 First Demo Presentation Success & USA Lite Launch!
 date: 2025-12-12
@@ -72,7 +72,7 @@ We're prioritizing these **10 states** for USA Lite development:
 - **Welcome to 3mpwr!** Join our community today
 - **Access core tools** - wellness, advocacy, community
 - **Beta testing available** - help us shape the experience
-- **Full US expansion planned** for 2026 (see [Roadmap](/roadmap/))
+- **Full US expansion planned** for 2026 (see [Roadmap](/roadmap))
 
 ---
 
@@ -103,4 +103,4 @@ We're prioritizing these **10 states** for USA Lite development:
 
 🤝 Ready to join? [Sign up for beta testing](/beta/)
 
-🗺️ See our full plans: [Roadmap](/roadmap/)
+🗺️ See our full plans: [Roadmap](/roadmap)

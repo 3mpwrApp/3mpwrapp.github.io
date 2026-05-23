@@ -1,4 +1,4 @@
-# 🎯 7-Item Enhancement Complete - Automation & Configuration
+﻿# 🎯 7-Item Enhancement Complete - Automation & Configuration
 
 **Date:** October 17, 2025  
 **Status:** ✅ **ALL ITEMS COMPLETED & TESTED**
@@ -177,7 +177,7 @@ Weekly (Friday 9 AM UTC):
 - `_posts/2025-10-20-3mpwrapp-feature.md`
 - `_posts/2025-10-22-3mpwrapp-howto.md`
 - `_posts/2025-10-20-3mpwrapp-community.md`
-- `_posts/2025-10-22-3mpwrapp-accessibility.md`
+- `_posts/2025-10-22-3mpwrapp-/accessibility`
 - `_posts/2025-10-20-3mpwrapp-roundup.md`
 
 ---

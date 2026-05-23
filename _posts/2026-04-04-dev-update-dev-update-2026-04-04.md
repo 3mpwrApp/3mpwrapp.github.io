@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Dev Diary Update: What's Been Happening in 3mpwrApp"
 date: 2026-04-04 00:00:00 +0000
@@ -41,4 +41,4 @@ Transparency is a core operating principle at 3mpwrApp. The community we serve h
 -  [Follow our development on GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
 -  [Subscribe to updates](/newsletter/)
 -  [Join the community](/community/)
--  [Join the beta program](/app-waitlist/)
+-  [Join the beta program](/app-waitlist)

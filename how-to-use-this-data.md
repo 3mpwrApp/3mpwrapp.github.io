@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: "How to Use This Data: A Plain-Language Guide for Injured Workers"
 description: "Simple, accessible guide explaining how to use 3mpwrApp's WSIAT research data for your workplace injury appeal in Ontario."
@@ -207,7 +207,7 @@ We wrote detailed guides for common situations.
 
 ### Main Guides
 
-- **[WSIAT Complete Guide](/guides/wsiat-complete-guide/)** - Everything about WSIAT appeals
+- **[WSIAT Complete Guide](/guides/wsiat-complete-guide)** - Everything about WSIAT appeals
 - **[Back Injury Guide](/guides/wsiat-back-injury-guide/)** - Special guide for #1 most common injury (15.3%)
 - **[Chronic Pain Guide](/guides/wsiat-chronic-pain-guide/)** - For "invisible" injuries (7.6% of appeals)
 
@@ -297,7 +297,7 @@ We wrote detailed guides for common situations.
 
 **Checklist for your appeal:**
 
-- [ ] Read the [WSIAT Complete Guide](/guides/wsiat-complete-guide/)
+- [ ] Read the [WSIAT Complete Guide](/guides/wsiat-complete-guide)
 - [ ] Find your injury type in [our templates](/data/templates/)
 - [ ] Gather your medical evidence (doctor reports, test results)
 - [ ] Calculate your 6-month deadline (from WSIB final decision)

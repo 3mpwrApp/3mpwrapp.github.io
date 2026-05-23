@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Privacy as a Human Right: Not a Feature We Added Later"
 date: 2026-04-10 00:00:00 +0000
@@ -48,5 +48,5 @@ We include this in our philosophy documentation because privacy decisions made a
 3mpwrApp is built on these principles â€” and built for and with the people who need them most.
 
 - ðŸ’¬ [Community Forums](/community/)
-- ðŸ§ª [Become a Beta Tester](/app-waitlist/)
-- ðŸ“– [Read Our Mission](/about/)
+- ðŸ§ª [Become a Beta Tester](/app-waitlist)
+- ðŸ“– [Read Our Mission](/about)

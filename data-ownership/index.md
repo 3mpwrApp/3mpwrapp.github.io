@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Data Ownership Statement
 permalink: /data-ownership/
@@ -311,7 +311,7 @@ For questions about data ownership or to verify these claims:
 
 - [Privacy Policy](/privacy/) - Our comprehensive privacy policy
 - [Terms of Service](/terms/) - Terms and conditions for using our services
-- [Accessibility](/accessibility/) - Our accessibility features and compliance
+- [Accessibility](/accessibility) - Our accessibility features and compliance
 - [Features](/features/) - Complete feature list with privacy details
 
 ---

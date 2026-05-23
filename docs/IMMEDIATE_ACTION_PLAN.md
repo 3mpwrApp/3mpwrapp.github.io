@@ -1,4 +1,4 @@
-# 🎯 IMMEDIATE ACTION PLAN: Data Integration Strategy
+﻿# 🎯 IMMEDIATE ACTION PLAN: Data Integration Strategy
 **Date:** April 27, 2026  
 **Status:** Ready for Execution  
 **Timeline:** Next 48 hours → 6 months
@@ -42,7 +42,7 @@ These are **high-impact, low-complexity** tasks deliverable in 14 total hours:
 ### 2. HRTO Coverage Report (3 hours) 📊
 **Download 39 quarterly reports → Compare against our 9,269 decisions → Generate gap analysis**
 
-- **Data:** https://tribunalsontario.ca/en/about/open-data/
+- **Data:** https://tribunalsontario.ca/en/aboutopen-data/
 - **Output:** "Q3 FY 2024-25: 77.5% coverage, Q2 FY 2020-21: 45% coverage"
 - **Impact:** Identify missing data + prioritize scraping efforts
 
@@ -99,7 +99,7 @@ Contains:
    - CMA characteristics: https://data.ontario.ca/en/dataset/ontario-social-assistance-case-characteristics-by-census-metropolitan-area
    
 2. **Download HRTO quarterly reports** (30 minutes)
-   - 39 CSV/Excel files from https://tribunalsontario.ca/en/about/open-data/
+   - 39 CSV/Excel files from https://tribunalsontario.ca/en/aboutopen-data/
    
 3. **Test WSIAT scraper** (2 hours)
    - Modify `scripts/scrape-wsiat-official-search.js` to target 2020 only

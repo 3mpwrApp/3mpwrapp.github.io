@@ -1,4 +1,4 @@
-# Social Media Shout Out: BC Beta Tester Contribution
+﻿# Social Media Shout Out: BC Beta Tester Contribution
 
 **Date:** April 17, 2026  
 **Campaign:** Thank BC Beta Tester + Promote Claim Suppression Resources  
@@ -63,7 +63,7 @@ Legal cases, denial tactics, regional patterns, partnerships—every contributio
 
 Read how one email created 34,000 words: https://3mpwrapp.ca/blog/2026/04/17/beta-tester-contribution-claim-suppression/
 
-Join: https://3mpwrapp.ca/app-waitlist/
+Join: https://3mpwrapp.ca/app-waitlist
 
 4/4
 ```
@@ -112,7 +112,7 @@ Legal cases → Resources. Denial tactics → Statistical analysis. Partnerships
 
 One email created 34,000 words. What knowledge can you share?
 
-Join beta: https://3mpwrapp.ca/app-waitlist/
+Join beta: https://3mpwrapp.ca/app-waitlist
 ```
 
 ---
@@ -177,7 +177,7 @@ One BC beta tester's email created:
 
 What knowledge can you share?
 
-Join: https://3mpwrapp.ca/app-waitlist/
+Join: https://3mpwrapp.ca/app-waitlist
 
 #BetaTesting #OpenCollaboration #WorkersRights
 ```
@@ -278,7 +278,7 @@ One beta tester created 34,000 words in 72 hours. **What could we build with you
 
 💻 Analysis script: https://github.com/3mpwrapp/scripts/analyze-retaliation-patterns.mjs
 
-**Join beta testing:** https://3mpwrapp.ca/app-waitlist/
+**Join beta testing:** https://3mpwrapp.ca/app-waitlist
 
 ---
 
@@ -634,7 +634,7 @@ If you have knowledge to share—legal cases, investigative journalism, statisti
 
 **Track these metrics:**
 - Click-through rate to blog post
-- Beta tester signups (https://3mpwrapp.ca/app-waitlist/)
+- Beta tester signups (https://3mpwrapp.ca/app-waitlist)
 - Resource downloads (knowledge base, template)
 - NSRLP email opens (if they respond)
 - Engagement (likes, reposts, comments)

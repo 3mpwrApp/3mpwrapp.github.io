@@ -1,4 +1,4 @@
----
+﻿---
 layout: whats_new
 title: Documentation Sync Complete (EN + FR + Legal)
 date: 2026-02-24
@@ -35,7 +35,7 @@ We completed a full documentation synchronization across app and website, includ
 
 ### Additional French public pages aligned {#additional-fr-pages}
 - [Accueil](/fr/)
-- [À propos](/fr/about/)
+- [À propos](/fr/about)
 - [Contact](/fr/contact/)
 - [Paramètres d’accessibilité](/fr/accessibility-settings/)
 - [Recherche](/fr/search/)

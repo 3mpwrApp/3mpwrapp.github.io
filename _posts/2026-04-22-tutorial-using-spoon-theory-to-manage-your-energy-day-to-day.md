@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Using Spoon Theory to Manage Your Energy Day-to-Day"
 date: 2026-04-22 00:00:00 +0000
@@ -63,5 +63,5 @@ The Energy Forecast learns your patterns over time. After a few weeks of trackin
 
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
 - ðŸ“– [Full User Guide](/user-guide/)
-- ðŸ§ª [Join the Beta](/app-waitlist/)
+- ðŸ§ª [Join the Beta](/app-waitlist)
 - ðŸ’¬ [Community Forums](/community/)

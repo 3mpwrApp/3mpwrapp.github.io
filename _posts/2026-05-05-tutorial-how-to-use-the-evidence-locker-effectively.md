@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "How to Use the Evidence Locker Effectively"
 date: 2026-05-05 00:00:00 +0000
@@ -39,5 +39,5 @@ All evidence is encrypted on-device using AES-256-GCM a the same standard used i
 ## About 3mpwrApp
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
 - Y- [Full User Guide](/user-guide/)
-- Ya [Join the Beta](/app-waitlist/)
+- Ya [Join the Beta](/app-waitlist)
 - Y [Community Forums](/community/)

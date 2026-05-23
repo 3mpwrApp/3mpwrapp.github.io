@@ -1,4 +1,4 @@
-# ✅ COMPLETE: Roadmap Enhancement - Canada-First to Global Revolution
+﻿# ✅ COMPLETE: Roadmap Enhancement - Canada-First to Global Revolution
 
 **Date**: October 18, 2025  
 **Commits**: 5361968, 7bcd447  
@@ -222,10 +222,10 @@ These are **WORLD FIRSTS** - features that have never existed in any disability 
 ✅ **Commit 1**: 5361968 (Roadmap enhancement)  
 ✅ **Commit 2**: 7bcd447 (Visual summary)  
 ✅ **Pushed to GitHub**: origin/main  
-✅ **Live on Cloudflare Pages**: https://3mpwrapp.ca/roadmap/
+✅ **Live on Cloudflare Pages**: https://3mpwrapp.ca/roadmap
 
 **View the enhanced roadmap now:**
-👉 https://3mpwrapp.ca/roadmap/
+👉 https://3mpwrapp.ca/roadmap
 
 ---
 
@@ -347,7 +347,7 @@ These are **WORLD FIRSTS** - features that have never existed in any disability 
 
 Email: empowrapp08162025@gmail.com
 
-**Live Roadmap**: https://3mpwrapp.ca/roadmap/
+**Live Roadmap**: https://3mpwrapp.ca/roadmap
 
 ---
 

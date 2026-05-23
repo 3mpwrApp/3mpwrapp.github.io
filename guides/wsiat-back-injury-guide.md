@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: "Back Injury Appeals Guide - WSIAT"
 description: "Complete guide to back injury appeals at WSIAT. Based on 15,177 back injury decisions (15.3% of all appeals) - the #1 most common injury type."
@@ -298,7 +298,7 @@ This guide is based on:
 - Keyword co-occurrence patterns (11,516 NEL + Permanent Impairment, 2,101 Chronic Pain + NEL)
 - Deep-dive analysis generated April 2026
 
-**Full analysis:** [WSIAT Deep Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html)
+**Full analysis:** [WSIAT Deep Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29)
 
 ---
 

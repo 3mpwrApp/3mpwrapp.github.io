@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "The 3 Flywheels of Change: How Collective Action Compounds Over Time"
 date: 2026-03-31 18:00:00 -0400
@@ -407,7 +407,7 @@ One worker's 40-hour struggle becomes 500 workers getting instant answers.
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/)** - Proof the flywheels work: 11,430 cases analyzed, knowledge base articles, appeal templates, and comprehensive guides
+📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html)** - Proof the flywheels work: 11,430 cases analyzed, knowledge base articles, appeal templates, and comprehensive guides
 
 📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The execution: collecting 14,000+ tribunal decisions across Canada (Ontario complete, expanding to all provinces)
 

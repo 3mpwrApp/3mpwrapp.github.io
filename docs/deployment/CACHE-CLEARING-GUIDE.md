@@ -1,4 +1,4 @@
-# Site Still Bare - Cache Clearing Guide
+﻿# Site Still Bare - Cache Clearing Guide
 
 ## The Issue: Cloudflare CDN Cache
 
@@ -104,7 +104,7 @@ The new version IS deployed, just cached globally.
 
 ### Test 3: Test Specific Page
 Try a page that definitely has content:
-- https://3mpwrapp.ca/about/
+- https://3mpwrapp.ca/about
 - https://3mpwrapp.ca/features/
 - https://3mpwrapp.ca/user-guide/
 

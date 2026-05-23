@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Collective Advocacy: Why Individual Coping Is Not Enough"
 date: 2026-05-04 00:00:00 +0000
@@ -48,5 +48,5 @@ When a hundred 3mpwrApp users in the same province log the same employer in thei
 3mpwrApp is built on these principles â€” and built for and with the people who need them most.
 
 - ðŸ’¬ [Community Forums](/community/)
-- ðŸ§ª [Become a Beta Tester](/app-waitlist/)
-- ðŸ“– [Read Our Mission](/about/)
+- ðŸ§ª [Become a Beta Tester](/app-waitlist)
+- ðŸ“– [Read Our Mission](/about)

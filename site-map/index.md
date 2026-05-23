@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Site Map
 description: Human-readable overview of pages available on the site.
@@ -12,7 +12,7 @@ description: Human-readable overview of pages available on the site.
 - [Home]({{ '/' | relative_url }})
 - [About]({{ '/about' | relative_url }})
 - [Features]({{ '/features' | relative_url }})
-- [User Guide]({{ '/user-guide' | relative_url }})
+- [User Guide](/user-guide)
 - [Community]({{ '/community' | relative_url }})
 - [Contact]({{ '/contact' | relative_url }})
 - [Newsletter]({{ '/newsletter' | relative_url }})

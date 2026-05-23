@@ -1,4 +1,4 @@
-# 🚀 PHASE 1 EXECUTION STARTED - October 20, 2025
+﻿# 🚀 PHASE 1 EXECUTION STARTED - October 20, 2025
 
 **Status:** 🟢 EXECUTING  
 **Phase:** 1 - Cross-Browser Testing  
@@ -24,7 +24,7 @@ PAGES TO TEST (7):
 4. Blog             → https://3mpwrapp.ca/blog
 5. User Guide       → https://3mpwrapp.ca/user-guide.md
 6. Privacy          → https://3mpwrapp.ca/privacy.md
-7. Accessibility    → https://3mpwrapp.ca/accessibility.md
+7. Accessibility    → https://3mpwrapp.ca//accessibility
 
 BROWSERS TO TEST (5):
 1. Chrome
@@ -169,7 +169,7 @@ For each page in each browser, verify:
    - https://3mpwrapp.ca/blog
    - https://3mpwrapp.ca/user-guide.md
    - https://3mpwrapp.ca/privacy.md
-   - https://3mpwrapp.ca/accessibility.md
+   - https://3mpwrapp.ca//accessibility
 5. ✅ Have this document open for reference
 
 ### Testing Each Page:

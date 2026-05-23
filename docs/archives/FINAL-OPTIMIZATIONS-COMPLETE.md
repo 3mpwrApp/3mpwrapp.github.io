@@ -1,4 +1,4 @@
-# Final Optimizations Complete ✅
+﻿# Final Optimizations Complete ✅
 
 **Date:** October 18, 2025  
 **Phase:** Workflow Cleanup & Final Optimizations  
@@ -155,7 +155,7 @@ content-curator.yml:
 5. ✅ Created: `scripts/extract-critical-css.js`
 
 ### Core Page Enhancements (4 files):
-6. ✅ Updated: `accessibility.md` (comprehensive WCAG 2.2)
+6. ✅ Updated: `/accessibility` (comprehensive WCAG 2.2)
 7. ✅ Updated: `privacy/index.md` (1200+ words GDPR/PIPEDA)
 8. ✅ Updated: `terms/index.md` (1800+ words comprehensive)
 9. ✅ Updated: `faq/index.md` (20+ questions)

@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Inside 3mpwrApp - Visual Tour
 description: Take a visual tour inside 3mpwrApp. See how our platform empowers the disability community, injured workers, their families, supporters, and allies with AI advocacy tools, wellness tracking, evidence management, research resources, and community support.
@@ -749,31 +749,31 @@ permalink: /app-tour/
   <div class="preview-grid">
     <div class="preview-card">
       <a href="/user-guide/#community-hub?utm_source=app_tour&utm_campaign=visual_refresh" title="Research library">
-        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research/researchtab3mpwrapp.png" alt="Research tab providing access to disability rights research, legal databases, and advocacy resources - 3mpwrApp" loading="lazy">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research.htmlresearchtab3mpwrapp.png" alt="Research tab providing access to disability rights research, legal databases, and advocacy resources - 3mpwrApp" loading="lazy">
       </a>
       <div class="caption">Research Library | <a href="/beta-guide/#original-priority-features">Beta</a></div>
     </div>
     <div class="preview-card">
       <a href="/user-guide/#community-hub?utm_source=app_tour&utm_campaign=visual_refresh" title="External resources">
-        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research/researchtabexternalresources3mpwrapp.png" alt="Research tab external resources linking to disability rights organizations and legal aid - 3mpwrApp research" loading="lazy">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research.htmlresearchtabexternalresources3mpwrapp.png" alt="Research tab external resources linking to disability rights organizations and legal aid - 3mpwrApp research" loading="lazy">
       </a>
       <div class="caption">External Resources | <a href="/user-guide/#community-hub">Resources</a></div>
     </div>
     <div class="preview-card">
       <a href="/user-guide/#community-hub?utm_source=app_tour&utm_campaign=visual_refresh" title="Research index">
-        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research/researchtabmasterresearchindex3mpwrapp.png" alt="Research tab master index organizing legal research by topic and jurisdiction - 3mpwrApp knowledge base" loading="lazy">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research.htmlresearchtabmasterresearchindex3mpwrapp.png" alt="Research tab master index organizing legal research by topic and jurisdiction - 3mpwrApp knowledge base" loading="lazy">
       </a>
       <div class="caption">Master Research Index | <a href="/user-guide/#community-hub">Index</a></div>
     </div>
     <div class="preview-card">
       <a href="/user-guide/#community-hub?utm_source=app_tour&utm_campaign=visual_refresh" title="Research documents">
-        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research/researchtabresearchlibrary3mpwrapp.png" alt="Research library with curated articles, case law, and disability advocacy studies - 3mpwrApp education" loading="lazy">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research.htmlresearchtabresearchlibrary3mpwrapp.png" alt="Research library with curated articles, case law, and disability advocacy studies - 3mpwrApp education" loading="lazy">
       </a>
       <div class="caption">Research Documents | <a href="/user-guide/#community-hub">Library</a></div>
     </div>
     <div class="preview-card">
       <a href="/user-guide/#community-hub?utm_source=app_tour&utm_campaign=visual_refresh" title="UNCRPD framework">
-        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research/researchtabuncrpdframeworknapplicationguide3mpwrapp.png" alt="UN Convention on the Rights of Persons with Disabilities (UNCRPD) framework and application guide - 3mpwrApp international rights" loading="lazy">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/research.htmlresearchtabuncrpdframeworknapplicationguide3mpwrapp.png" alt="UN Convention on the Rights of Persons with Disabilities (UNCRPD) framework and application guide - 3mpwrApp international rights" loading="lazy">
       </a>
       <div class="caption">UNCRPD Guide | <a href="/beta-guide/#original-priority-features">Rights</a></div>
     </div>

@@ -1,4 +1,4 @@
-# WSIAT Deep Dive Analysis Report
+﻿# WSIAT Deep Dive Analysis Report
 ## Super Detective Mode 🕵️ - 98,992 Decisions
 
 **Generated:** 2026-04-30  
@@ -9,8 +9,8 @@
 **Related Resources:**
 - [Evidence-Based Guides](/guides/) - Practical appeal strategies based on this analysis
 - [Interactive Network Visualization](/connecting-the-dots-wsiat-keyword-network.html) - 16 nodes, 50 links
-- [WSIAT vs BC WCAT Comparison](/research/tribunal-transparency/wsiat-vs-bc-wcat-transparency-divide/) - Transparency analysis
-- [Research Tools](/research/) - Interactive data explorer
+- [WSIAT vs BC WCAT Comparison](/research.htmltribunal-transparency/wsiat-vs-bc-wcat-transparency-divide/) - Transparency analysis
+- [Research Tools](/research.html) - Interactive data explorer
 
 ---
 

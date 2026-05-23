@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Home - Simplified
 description: Community support for injured workers and persons with disabilities in Canada.
@@ -37,7 +37,7 @@ We help you:
 **100% Free Forever.** No hidden costs. Built by community members, for community members.
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a href="/app-waitlist/" style="display: inline-block; background: linear-gradient(135deg, #3d4eaa 0%, #4a2867 100%); color: white; padding: 16px 40px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.3rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <a href="/app-waitlist" style="display: inline-block; background: linear-gradient(135deg, #3d4eaa 0%, #4a2867 100%); color: white; padding: 16px 40px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.3rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
     Join the Beta →
   </a>
 </div>
@@ -97,7 +97,7 @@ We help you:
       <li>🥄 <strong>Spoons Tracker</strong> - Energy management</li>
       <li>📖 <strong>Reading Progress</strong> - Never lose your place</li>
     </ul>
-    <a href="/accessibility/" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background: #3d4eaa; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">
+    <a href="/accessibility" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background: #3d4eaa; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">
       All Accessibility Features →
     </a>
   </div>
@@ -126,7 +126,7 @@ We help you:
 **3mpwr App is in public beta.** Join thousands of community members already using the platform.
 
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;">
-  <a href="/app-waitlist/" style="display: inline-block; background: linear-gradient(135deg, #3d4eaa 0%, #4a2867 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
+  <a href="/app-waitlist" style="display: inline-block; background: linear-gradient(135deg, #3d4eaa 0%, #4a2867 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
     Join Beta Program
   </a>
   <a href="/user-guide/" style="display: inline-block; background: white; color: #3d4eaa; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid #3d4eaa;">

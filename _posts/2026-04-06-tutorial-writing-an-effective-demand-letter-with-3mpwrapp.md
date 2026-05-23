@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Writing an Effective Demand Letter with 3mpwrApp"
 date: 2026-04-06 00:00:00 +0000
@@ -63,5 +63,5 @@ Every letter you generate is automatically saved with a timestamp to your Eviden
 
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
 - ðŸ“– [Full User Guide](/user-guide/)
-- ðŸ§ª [Join the Beta](/app-waitlist/)
+- ðŸ§ª [Join the Beta](/app-waitlist)
 - ðŸ’¬ [Community Forums](/community/)

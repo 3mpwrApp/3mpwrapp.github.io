@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Interactive Demos
 description: Try 3mpwr App features right in your browser with our interactive demos
@@ -48,7 +48,7 @@ These demos show just a glimpse of what 3mpwr App can do. Download the full app 
 
 <div class="cta-buttons">
   <a href="{{ '/app-tour' | relative_url }}" class="btn btn-primary">Take the Full Tour →</a>
-  <a href="{{ '/user-guide' | relative_url }}" class="btn btn-secondary">Read User Guide</a>
+  <a href="/user-guide" class="btn btn-secondary">Read User Guide</a>
 </div>
 
 ---

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Six Months, Endless Rebuilds, and Zero Half Measures â€” I Built This App for You"
 date: 2026-02-02
@@ -195,7 +195,7 @@ I built this app for those still trying.
 **â€” Lissa Beaulieu**  
 Founder of 3mpwr App
 
-ðŸ”— [Download the app](/beta/) | [Learn more about our mission](/about/)
+ðŸ”— [Download the app](/beta/) | [Learn more about our mission](/about)
 
 * * *
 

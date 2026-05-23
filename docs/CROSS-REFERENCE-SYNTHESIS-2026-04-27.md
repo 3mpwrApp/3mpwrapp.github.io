@@ -1,4 +1,4 @@
-# Cross-Reference Synthesis: Official Data Sources × 34,928 Tribunal Decisions
+﻿# Cross-Reference Synthesis: Official Data Sources × 34,928 Tribunal Decisions
 **Date:** April 27, 2026  
 **Status:** Strategic Recommendations for Data Integration  
 **Impact:** Transform 34,928 decisions into a comprehensive workers' rights intelligence platform
@@ -424,7 +424,7 @@ ONSBT Appeals (Post-COVID): Jan 2023 - Jun 2025 avg = 210/month
 ### Priority 1: HRTO Quarterly Reports [HIGHEST IMPACT] ⭐⭐⭐
 **Action:** Download all 39 quarterly reports (Q1 2016-17 to Q3 2025-26)
 - **Format**: CSV/Excel files
-- **Location**: https://tribunalsontario.ca/en/about/open-data/
+- **Location**: https://tribunalsontario.ca/en/aboutopen-data/
 - **Time**: <30 minutes (automated download script)
 - **Impact**:
   - Validate coverage of our 9,269 decisions
@@ -491,7 +491,7 @@ ONSBT Appeals (Post-COVID): Jan 2023 - Jun 2025 avg = 210/month
 
 ### Priority 6: HRTO KPI Archives [VALIDATION] ⭐
 **Action:** Download HRTO Key Performance Indicator archives (FY 2022-23, 2023-24, 2024-25)
-- **Source**: https://tribunalsontario.ca/en/about/key-performance-indicators/hrto-key-performance-indicators/hrto-key-performance-indicators-archive/
+- **Source**: https://tribunalsontario.ca/en/aboutkey-performance-indicators/hrto-key-performance-indicators/hrto-key-performance-indicators-archive/
 - **Time**: <15 minutes (3 PDF/HTML reports)
 - **Impact**:
   - Validate decision counts (our 9,269 vs official ~1,911 final merit decisions)

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Dev Diary: Bank-Level Encryption for a Disability App: The Why"
 date: 2026-03-31 00:00:00 +0000
@@ -52,5 +52,5 @@ Our 721 tests include a dedicated security suite that verifies not just "does th
 We believe in building in public - the community we serve has been failed by opaque institutions too many times.
 
 -  [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
--  [Join Beta Testing](/app-waitlist/)
+-  [Join Beta Testing](/app-waitlist)
 - ' [Community Discussion](/community/)

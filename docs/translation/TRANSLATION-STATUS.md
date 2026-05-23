@@ -1,4 +1,4 @@
-# Translation Status Report
+﻿# Translation Status Report
 
 ## 📊 Current Status of French Translations
 
@@ -11,7 +11,7 @@ Generated: $(date)
 | Homepage | `index.md` | `fr/index.md` | 1 | ⚠️ Needs update |
 | About | `about.md` | `fr/about.md` | 1 | ⚠️ Partial |
 | Contact | `contact.md` | `fr/contact.md` | 1 | ⚠️ Partial |
-| Accessibility | `accessibility.md` | `fr/accessibility.md` | 1 | ❌ Missing |
+| Accessibility | `/accessibility` | `fr//accessibility` | 1 | ❌ Missing |
 | Privacy Policy | `privacy.md` | `fr/privacy.md` | 1 | ❌ Missing |
 | FAQ | `faq.md` | `fr/faq.md` | 1 | ✅ Exists (needs verification) |
 | User Guide | `user-guide/index.md` | `fr/user-guide.md` | 1 | ⚠️ Partial |

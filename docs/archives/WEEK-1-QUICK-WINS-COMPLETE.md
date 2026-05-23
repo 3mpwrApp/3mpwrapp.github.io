@@ -1,4 +1,4 @@
-# Week 1 Quick Wins - Implementation Complete ✅
+﻿# Week 1 Quick Wins - Implementation Complete ✅
 
 **Date**: October 19, 2025  
 **Commit**: 96e2ae3  
@@ -228,14 +228,14 @@ ambient-light-sensor=()   # Block ambient light access
 **Example Output**:
 ```html
 <!-- On English page -->
-<link rel="alternate" hreflang="en" href="https://3mpwrapp.ca/about/">
-<link rel="alternate" hreflang="fr" href="https://3mpwrapp.ca/fr/about/">
-<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.ca/about/">
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.ca/about">
+<link rel="alternate" hreflang="fr" href="https://3mpwrapp.ca/fr/about">
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.ca/about">
 
 <!-- On French page -->
-<link rel="alternate" hreflang="en" href="https://3mpwrapp.ca/about/">
-<link rel="alternate" hreflang="fr" href="https://3mpwrapp.ca/fr/about/">
-<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.ca/about/">
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.ca/about">
+<link rel="alternate" hreflang="fr" href="https://3mpwrapp.ca/fr/about">
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.ca/about">
 ```
 
 **SEO Benefits**:

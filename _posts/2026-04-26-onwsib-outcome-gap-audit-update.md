@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "ONWSIB 2020-2026: Outcome Gap Audit and Evidence Limits"
 subtitle: "463 decisions collected quickly, but full-text and disposition fields remain mostly unresolved"
@@ -56,7 +56,7 @@ ONWSIB records collected by year:
 
 **Related Resources:**
 - [**ONWSIB Skip Strategy Guide**](/guides/onwsib-skip-strategy-guide/) - Why many workers skip internal review and go straight to WSIAT
-- [**WSIAT Full Analysis**](/research/tribunal-transparency/wsiat-vs-bc-wcat-transparency-divide/) - The independent appeals tribunal (next step after ONWSIB)
+- [**WSIAT Full Analysis**](/research.htmltribunal-transparency/wsiat-vs-bc-wcat-transparency-divide/) - The independent appeals tribunal (next step after ONWSIB)
 - [**ONWSIB in App**](https://3mpwrapp.ca/resources/onwsib-analysis) - Analyze ONWSIB decisions interactively
 - [**Visualization: ONWSIB vs ONSBT Outcomes**](/data/visualizations/onsbt-onwsib-classification-2020-2026.json) - Classification breakdown
 - [**Interactive Chart: Outcome Tiers**](/data/visualizations/onsbt-onwsib-classification-2020-2026.json) - See Tier A/B/C distribution

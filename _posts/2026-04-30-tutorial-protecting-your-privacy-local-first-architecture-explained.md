@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Protecting Your Privacy: Local-First Architecture Explained"
 date: 2026-04-30 00:00:00 +0000
@@ -63,5 +63,5 @@ When you choose to back things up or sync across devices, you choose. The encryp
 
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
 - ðŸ“– [Full User Guide](/user-guide/)
-- ðŸ§ª [Join the Beta](/app-waitlist/)
+- ðŸ§ª [Join the Beta](/app-waitlist)
 - ðŸ’¬ [Community Forums](/community/)

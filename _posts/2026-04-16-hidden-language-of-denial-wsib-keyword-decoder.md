@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "The Hidden Language of Denial: WSIB Keyword Patterns Revealed in 11,430 Cases"
 date: 2026-04-16
@@ -13,7 +13,7 @@ featured: true
 
 # The Hidden Language of Denial: Understanding WSIB Keyword Patterns
 
-**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New findings show body part patterns across 40 years: Back #1 (13,407 cases, 13.54%), Shoulder #2 (5,295 cases, 5.35%), Neck #3 (3,535 cases, 3.57%), Knee #4 (3,162 cases, 3.19%). Co-occurrence analysis reveals NEL+Permanent Impairment appear together in 11,516 cases (11.63%). See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html) for complete patterns.
+**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New findings show body part patterns across 40 years: Back #1 (13,407 cases, 13.54%), Shoulder #2 (5,295 cases, 5.35%), Neck #3 (3,535 cases, 3.57%), Knee #4 (3,162 cases, 3.19%). Co-occurrence analysis reveals NEL+Permanent Impairment appear together in 11,516 cases (11.63%). See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29) for complete patterns.
 
 ---
 
@@ -741,8 +741,8 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 
 **Use these resources created from 11,430 cases:**
 
-1. **[Knowledge Base Guides](/research/)** - Search your keyword/body part to see documented patterns
-2. **[Appeal Templates](/research/)** - Pre-written sections addressing each keyword pattern
+1. **[Knowledge Base Guides](/research.html)** - Search your keyword/body part to see documented patterns
+2. **[Appeal Templates](/research.html)** - Pre-written sections addressing each keyword pattern
 3. **[Interactive Visualization](/wsib-denial-network-visualization.html)** - Explore keyword co-occurrence networks
 4. **Community Legal Clinics** - Free legal help ([Legal Aid Ontario](https://www.legalaid.on.ca))
 
@@ -790,14 +790,14 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 
 **Previous 3mpwrApp Research:**
 - [WSIB Statistical Pattern Analysis](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Full report with key statistical signals
-- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
+- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
 - [Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Our data collection methodology
 
 **Full Documentation:**
 - [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document with all findings
 
 **Interactive Tools:**
-- [Research Hub](https://3mpwrapp.ca/research/) - Visualization, knowledge base, and appeal templates
+- [Research Hub](https://3mpwrapp.ca/research.html) - Visualization, knowledge base, and appeal templates
 - [WSIB Denial Network Visualization](https://3mpwrapp.ca/wsib-denial-network-visualization.html) - Explore keyword co-occurrence patterns
 
 ---

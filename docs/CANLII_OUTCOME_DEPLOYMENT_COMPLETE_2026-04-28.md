@@ -1,4 +1,4 @@
-# CanLII Outcome Data Deployment - COMPLETE ✅
+﻿# CanLII Outcome Data Deployment - COMPLETE ✅
 
 **Date:** April 28, 2026  
 **Status:** ALL TASKS COMPLETE  
@@ -425,7 +425,7 @@ console.assert(painCases.length === 20);
 **Project Lead:** [Your Name]  
 **Email:** empowrapp08162025@gmail.com  
 **Website:** [https://3mpwrapp.ca](https://3mpwrapp.ca)  
-**Research Page:** [https://3mpwrapp.github.io/research/](https://3mpwrapp.github.io/research/)
+**Research Page:** [https://3mpwrapp.github.io/research.html](https://3mpwrapp.github.io/research.html)
 
 ---
 

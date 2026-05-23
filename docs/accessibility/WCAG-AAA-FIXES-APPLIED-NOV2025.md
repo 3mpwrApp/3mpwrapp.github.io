@@ -1,4 +1,4 @@
-# WCAG 2.2 AAA Fixes Applied - November 5, 2025
+﻿# WCAG 2.2 AAA Fixes Applied - November 5, 2025
 
 ## Overview
 This document tracks all accessibility improvements made to achieve WCAG 2.2 Level AAA compliance.
@@ -279,8 +279,8 @@ All interactive elements meet 44×44 CSS pixel minimum:
 ### Screen Readers
 - [NVDA (Windows, Free)](https://www.nvaccess.org/)
 - [JAWS (Windows, Commercial)](https://www.freedomscientific.com/products/software/jaws/)
-- [VoiceOver (Mac/iOS, Built-in)](https://www.apple.com/accessibility/voiceover/)
-- [TalkBack (Android, Built-in)](https://support.google.com/accessibility/android/answer/6283677)
+- [VoiceOver (Mac/iOS, Built-in)](https://www.apple.com/accessibilityvoiceover/)
+- [TalkBack (Android, Built-in)](https://support.google.com/accessibilityandroid/answer/6283677)
 
 ---
 

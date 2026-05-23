@@ -1,7 +1,7 @@
----
+﻿---
 layout: page
 title: "Chronic Pain Appeal Letter Template"
-permalink: /templates/chronic-pain-appeal/
+permalink: /templates/chronic-pain-appeal
 ---
 
 # Chronic Pain Appeal Letter Template

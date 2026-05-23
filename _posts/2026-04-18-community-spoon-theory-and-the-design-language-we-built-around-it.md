@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Spoon Theory and the Design Language We Built Around It"
 date: 2026-04-18 00:00:00 +0000
@@ -48,5 +48,5 @@ The practical result is an app designed from the lowest-energy end of the spectr
 3mpwrApp is built on these principles â€” and built for and with the people who need them most.
 
 - ðŸ’¬ [Community Forums](/community/)
-- ðŸ§ª [Become a Beta Tester](/app-waitlist/)
-- ðŸ“– [Read Our Mission](/about/)
+- ðŸ§ª [Become a Beta Tester](/app-waitlist)
+- ðŸ“– [Read Our Mission](/about)

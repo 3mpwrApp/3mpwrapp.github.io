@@ -1,4 +1,4 @@
-# Social Share Optimization Plan
+﻿# Social Share Optimization Plan
 **3mpwr App Website - Open Graph & Social Media Strategy**
 
 **Created:** January 15, 2026  
@@ -62,7 +62,7 @@ This document provides a comprehensive plan for implementing custom social share
 1. **Homepage** ([index.md](index.md)) - Has basic title/description, no custom image
 2. **About** ([about.md](about.md)) - Has title/description, no custom image
 3. **Features** ([features/index.md](features/index.md)) - Has title/description, no custom image
-4. **Accessibility** ([accessibility.md](accessibility.md)) - Has title/description, no custom image
+4. **Accessibility** ([/accessibility](/accessibility)) - Has title/description, no custom image
 5. **Beta/Waitlist** ([app-waitlist.md](app-waitlist.md)) - Has title/description, no custom image
 
 **All pages currently:**
@@ -468,14 +468,14 @@ twitter_description: "From Evidence Locker to Crisis Resources—discover the mo
 ---
 ```
 
-#### 3.4 Accessibility Page (accessibility.md)
+#### 3.4 Accessibility Page (/accessibility)
 
 ```yaml
 ---
 layout: default
 title: Accessibility Statement
 description: Our commitment to inclusive accessible design
-permalink: /accessibility/
+permalink: /accessibility
 social_image: /assets/images/social/social-og-accessibility.png
 social_image_alt: "WCAG 2.2 AAA Compliant - 3mpwr App is the most accessible app for persons with disabilities. Screen reader optimized, 13 accessibility tools, pain flare mode, Indigenous languages"
 twitter_title: "WCAG 2.2 AAA Accessibility - 3mpwr App"
@@ -490,7 +490,7 @@ twitter_description: "Screen reader optimized. 13 accessibility tools. Pain flar
 layout: default
 title: App Waitlist - Join 3mpwrApp Beta
 description: Join the 3mpwrApp mobile app waitlist and be among the first to test revolutionary accessibility features for persons with disabilities in Canada.
-permalink: /app-waitlist/
+permalink: /app-waitlist
 social_image: /assets/images/social/social-og-beta.png
 social_image_alt: "Join the 3mpwr App Beta - Be Among the First 10,000. Limited Spots Available"
 twitter_title: "Join 3mpwr App Beta - Limited Spots Available"
@@ -535,8 +535,8 @@ twitter_description: "Be among the first 10,000 to access revolutionary accessib
   - [ ] Homepage: `https://3mpwrapp.ca/`
   - [ ] About: `https://3mpwrapp.ca/about`
   - [ ] Features: `https://3mpwrapp.ca/features/`
-  - [ ] Accessibility: `https://3mpwrapp.ca/accessibility/`
-  - [ ] Beta: `https://3mpwrapp.ca/app-waitlist/`
+  - [ ] Accessibility: `https://3mpwrapp.ca/accessibility`
+  - [ ] Beta: `https://3mpwrapp.ca/app-waitlist`
 - Click "Scrape Again" to clear cache if images don't show
 - Verify image preview displays correctly
 - Check for warnings or errors
@@ -656,7 +656,7 @@ https://www.linkedin.com/sharing/share-offsite/?url=https://3mpwrapp.ca/?utm_sou
    - `index.md`
    - `about.md`
    - `features/index.md`
-   - `accessibility.md`
+   - `/accessibility`
    - `app-waitlist.md`
 6. Build and test locally
 7. Commit changes: `git commit -m "Add custom social share images and enhanced OG tags"`

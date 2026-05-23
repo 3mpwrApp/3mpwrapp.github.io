@@ -1,4 +1,4 @@
-# Free Testing & Monitoring Tools for Zero-Budget Excellence
+﻿# Free Testing & Monitoring Tools for Zero-Budget Excellence
 
 **Total Cost:** $0 (All tools have generous free tiers or are completely free)
 
@@ -51,7 +51,7 @@ jobs:
         with:
           urls: |
             https://3mpwrapp.github.io
-            https://3mpwrapp.github.io/about/
+            https://3mpwrapp.github.io/about
             https://3mpwrapp.github.io/features/
             https://3mpwrapp.github.io/user-guide/
           uploadArtifacts: true
@@ -74,7 +74,7 @@ jobs:
 1. Create account (no credit card)
 2. Add monitors:
    - `https://3mpwrapp.github.io`
-   - `https://3mpwrapp.github.io/about/`
+   - `https://3mpwrapp.github.io/about`
    - `https://3mpwrapp.github.io/features/`
 3. Set alert email
 

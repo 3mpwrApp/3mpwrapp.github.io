@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Blog
 description: Nouvelles, mises à jour et histoires de la communauté 3mpwrApp.
@@ -77,7 +77,7 @@ Ne manquez jamais une mise à jour :
 - 📧 [Abonnez-vous à notre infolettre](/fr/newsletter/)
 - 📱 [Suivez-nous sur les médias sociaux](/fr/#social-links)
 - 🔔 [Activez les notifications RSS](/feed.xml)
-- 💬 [Rejoignez notre communauté](/fr/about/#community)
+- 💬 [Rejoignez notre communauté](/fr/about#community)
 
 ## Contribuer
 

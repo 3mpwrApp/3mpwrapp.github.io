@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Getting Crisis Support Through 3mpwrApp"
 date: 2026-05-04 00:00:00 +0000
@@ -39,5 +39,5 @@ Every crisis resource in the app is pre-loaded to device memory. Network failure
 ## About 3mpwrApp
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
 - Y- [Full User Guide](/user-guide/)
-- Ya [Join the Beta](/app-waitlist/)
+- Ya [Join the Beta](/app-waitlist)
 - Y [Community Forums](/community/)

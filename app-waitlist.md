@@ -1,8 +1,8 @@
----
+﻿---
 layout: default
 title: App Waitlist - Join 3mpwrApp Beta
 description: Join the 3mpwrApp mobile app waitlist and be among the first to test revolutionary accessibility features for persons with disabilities in Canada.
-permalink: /app-waitlist/
+permalink: /app-waitlist
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">

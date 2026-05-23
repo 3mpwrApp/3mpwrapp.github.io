@@ -1,4 +1,4 @@
-# Official Data Sources Download Report
+﻿# Official Data Sources Download Report
 **Date:** April 27, 2026  
 **Status:** Ready for Download
 
@@ -57,7 +57,7 @@ The HRTO section shows multiple report types available quarterly from Q1 2016-17
 6. **Intake Report: Applications Received - Caseload**
    - Overall volume metrics
 
-**Portal:** https://tribunalsontario.ca/en/about/open-data/  
+**Portal:** https://tribunalsontario.ca/en/aboutopen-data/  
 **Note:** Must click on HRTO tab, then each report title to access quarterly downloads
 
 ---
@@ -93,7 +93,7 @@ node scripts/download-official-data-sources.js
 ```
 
 ### Manual Download (HRTO Reports)
-1. Visit https://tribunalsontario.ca/en/about/open-data/
+1. Visit https://tribunalsontario.ca/en/aboutopen-data/
 2. Click "HRTO – Activity report: Decisions Issued"
 3. Download all quarterly reports (Q1 2016-17 to Q3 2025-26)
 

@@ -1,4 +1,4 @@
-# Ontario Tribunal Content Audit Report
+﻿# Ontario Tribunal Content Audit Report
 **Generated:** 2026-05-02T01:31:51.491Z
 
 ## Executive Summary
@@ -27,7 +27,7 @@
 
 - [`blog\2026-04-02-community-what-3mpwr-means.md`](blog\2026-04-02-community-what-3mpwr-means.md) - 2 mentions
 - [`blog\2026-04-08-social-media-posts.md`](blog\2026-04-08-social-media-posts.md) - 7 mentions
-- [`blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md`](blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md) - 5 mentions
+- [`/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns`](/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns) - 5 mentions
 - [`CANADA_WIDE_DATABASE_STATUS.md`](CANADA_WIDE_DATABASE_STATUS.md) - 1 mentions
 - [`CANLII-API-STRATEGY.md`](CANLII-API-STRATEGY.md) - 2 mentions
 - [`CANLII-DATABASES.md`](CANLII-DATABASES.md) - 1 mentions
@@ -41,7 +41,7 @@
 ### ONWSIB: 395 mentions
 
 - [`blog\2026-04-08-social-media-posts.md`](blog\2026-04-08-social-media-posts.md) - 2 mentions
-- [`blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md`](blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md) - 1 mentions
+- [`/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns`](/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns) - 1 mentions
 - [`CANLII-DATABASES.md`](CANLII-DATABASES.md) - 1 mentions
 - [`CONTENT_OPTIMIZATION_TEMPLATES.md`](CONTENT_OPTIMIZATION_TEMPLATES.md) - 14 mentions
 - [`data\appeal-templates\back-injury-appeal.md`](data\appeal-templates\back-injury-appeal.md) - 2 mentions
@@ -55,7 +55,7 @@
 
 ### ONSBT: 947 mentions
 
-- [`blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md`](blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md) - 1 mentions
+- [`/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns`](/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns) - 1 mentions
 - [`CONTENT_OPTIMIZATION_TEMPLATES.md`](CONTENT_OPTIMIZATION_TEMPLATES.md) - 17 mentions
 - [`data\tribunal-decisions\app-export\README.md`](data\tribunal-decisions\app-export\README.md) - 4 mentions
 - [`data-limitations.md`](data-limitations.md) - 1 mentions
@@ -70,7 +70,7 @@
 
 ### HRTO: 1064 mentions
 
-- [`blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md`](blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md) - 7 mentions
+- [`/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns`](/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns) - 7 mentions
 - [`CANADA_WIDE_DATABASE_STATUS.md`](CANADA_WIDE_DATABASE_STATUS.md) - 2 mentions
 - [`CANLII-DATABASES.md`](CANLII-DATABASES.md) - 2 mentions
 - [`content-queue\educational-content-ideas.md`](content-queue\educational-content-ideas.md) - 6 mentions
@@ -86,32 +86,32 @@
 ## ⚠️ Broken Internal Links (927)
 
 ### [`about.md`](about.md) Line 245
-- **Link:** `/roadmap/#-new-usa-lite---now-available`
+- **Link:** `/roadmap#-new-usa-lite---now-available`
 - **Text:** "See full USA Lite details →"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\roadmap\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\roadmap\.md
 
-### [`accessibility.md`](accessibility.md) Line 233
+### [`/accessibility`](/accessibility) Line 233
 - **Link:** `/accessibility-settings/`
 - **Text:** "Accessibility Settings"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\accessibility-settings\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\accessibility-settings\.md
 
-### [`accessibility.md`](accessibility.md) Line 234
+### [`/accessibility`](/accessibility) Line 234
 - **Link:** `/accessibility-walkthrough/`
 - **Text:** "Accessibility Walkthrough"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\accessibility-walkthrough\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\accessibility-walkthrough\.md
 
-### [`accessibility.md`](accessibility.md) Line 235
-- **Link:** `/roadmap/`
+### [`/accessibility`](/accessibility) Line 235
+- **Link:** `/roadmap`
 - **Text:** "Roadmap"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\roadmap\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\roadmap\.md
 
-### [`accessibility.md`](accessibility.md) Line 523
+### [`/accessibility`](/accessibility) Line 523
 - **Link:** `/contact?subject=Accessibility+Barrier`
 - **Text:** "Report Accessibility Barrier →"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\contact?subject=Accessibility+Barrier, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\contact?subject=Accessibility+Barrier.md
 
-### [`accessibility.md`](accessibility.md) Line 585
-- **Link:** `/roadmap/`
+### [`/accessibility`](/accessibility) Line 585
+- **Link:** `/roadmap`
 - **Text:** "Roadmap"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\roadmap\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\roadmap\.md
 
@@ -121,7 +121,7 @@
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\CONTRIBUTING.md, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\CONTRIBUTING.md.md
 
 ### [`ar\index.md`](ar\index.md) Line 13
-- **Link:** `{{ '/user-guide' | relative_url }}`
+- **Link:** `/user-guide`
 - **Text:** "دليل الاستخدام"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\ar\{{ '\user-guide' | relative_url }}, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\ar\{{ '\user-guide' | relative_url }}.md
 
@@ -145,38 +145,38 @@
 - **Text:** "View on GitHub"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\blog\LINK, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\blog\LINK.md
 
-### [`blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md`](blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md) Line 21
+### [`/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated`](/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated) Line 21
 - **Link:** `/2026/03/31/axios-supply-chain-attack-3mpwrapp-safe/`
 - **Text:** "axios supply chain attack"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\03\31\axios-supply-chain-attack-3mpwrapp-safe\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\03\31\axios-supply-chain-attack-3mpwrapp-safe\.md
 
-### [`blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md`](blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md) Line 21
+### [`/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated`](/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated) Line 21
 - **Link:** `/2026/04/01/npm-supply-chain-protection-npmrc-hardening/`
 - **Text:** ".npmrc protection implementation"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\04\01\npm-supply-chain-protection-npmrc-hardening\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\04\01\npm-supply-chain-protection-npmrc-hardening\.md
 
-### [`blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md`](blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md) Line 81
+### [`/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated`](/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated) Line 81
 - **Link:** `/2026/04/01/npm-supply-chain-protection-npmrc-hardening/`
 - **Text:** ".npmrc 7-day release age protection"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\04\01\npm-supply-chain-protection-npmrc-hardening\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\04\01\npm-supply-chain-protection-npmrc-hardening\.md
 
-### [`blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md`](blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md) Line 268
+### [`/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated`](/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated) Line 268
 - **Link:** `/2026/04/01/npm-supply-chain-protection-npmrc-hardening/`
 - **Text:** "npm Supply Chain Protection Added (April 1, 2026)"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\04\01\npm-supply-chain-protection-npmrc-hardening\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\04\01\npm-supply-chain-protection-npmrc-hardening\.md
 
-### [`blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md`](blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md) Line 269
+### [`/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated`](/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated) Line 269
 - **Link:** `/2026/03/31/axios-supply-chain-attack-3mpwrapp-safe/`
 - **Text:** "axios Supply Chain Attack: 3mpwrApp Safe (March 31, 2026)"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\03\31\axios-supply-chain-attack-3mpwrapp-safe\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\03\31\axios-supply-chain-attack-3mpwrapp-safe\.md
 
-### [`blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md`](blog\2026-04-14-security-fortress-complete-24-vulnerabilities-eliminated.md) Line 270
+### [`/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated`](/2026/04/14/security-fortress-complete-24-vulnerabilities-eliminated) Line 270
 - **Link:** `/2026/03/31/security-runbook-how-we-protect-you/`
 - **Text:** "Security Runbook: How We Protect You (March 31, 2026)"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\03\31\security-runbook-how-we-protect-you\, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\2026\03\31\security-runbook-how-we-protect-you\.md
 
-### [`blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md`](blog\2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns.md) Line 420
-- **Link:** `/research/tribunal-outcome-analysis-2026`
+### [`/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns`](/2026/04/29/bc-wcat-data-unknown-outcomes-systemic-patterns) Line 420
+- **Link:** `/research.htmltribunal-outcome-analysis-2026`
 - **Text:** "Cross-Provincial Tribunal Comparison"
 - **Attempted:** D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\research\tribunal-outcome-analysis-2026, D:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\research\tribunal-outcome-analysis-2026.md
 

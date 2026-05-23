@@ -1,4 +1,4 @@
-# Tribunals Ontario Data Discovery - April 29, 2026
+﻿# Tribunals Ontario Data Discovery - April 29, 2026
 
 ## 🎯 Overview
 
@@ -18,7 +18,7 @@ Major data discovery from **Tribunals Ontario Open Data Portal** revealing syste
 ### HRTO Decision Files (39 files)
 **Format:** XLSX (80KB-250KB per file)  
 **Time Range:** Q1 2016 - Q3 2025 (10 years)  
-**Source:** https://tribunalsontario.ca/en/about/open-data/#panel2
+**Source:** https://tribunalsontario.ca/en/aboutopen-data/#panel2
 
 **File Pattern:**
 ```
@@ -38,7 +38,7 @@ Major data discovery from **Tribunals Ontario Open Data Portal** revealing syste
 ### ONSBT Appeals Files (24 files)
 **Format:** XLSX (~14KB per file)  
 **Time Range:** 2012-2026 (14 years)  
-**Source:** https://tribunalsontario.ca/en/about/open-data/#panel13
+**Source:** https://tribunalsontario.ca/en/aboutopen-data/#panel13
 
 **File Pattern:**
 ```
@@ -215,7 +215,7 @@ WSIB Initial Decision (Ontario) or WorkSafeBC (BC)
 ## 📚 Additional Resources Found
 
 ### Archived Reports (2010-2025)
-**Source:** https://tribunalsontario.ca/en/about/governance-and-accountability/archived-reports-plans-and-standards/
+**Source:** https://tribunalsontario.ca/en/aboutgovernance-and-accountability/archived-reports-plans-and-standards/
 
 **Files to Extract:**
 - Annual Reports (2010/11 - 2024/25): Pre-merger HRTO vs. post-merger trends
@@ -227,7 +227,7 @@ WSIB Initial Decision (Ontario) or WorkSafeBC (BC)
 - 2021: Jurisdictional test change (balance of probabilities)
 
 ### KPI Archives
-**Source:** https://tribunalsontario.ca/en/about/key-performance-indicators/hrto-key-performance-indicators/hrto-key-performance-indicators-archive/
+**Source:** https://tribunalsontario.ca/en/aboutkey-performance-indicators/hrto-key-performance-indicators/hrto-key-performance-indicators-archive/
 
 **Metrics Available:**
 - Average days to first hearing
@@ -327,9 +327,9 @@ data/tribunal-decisions/tribunals-ontario/
 ---
 
 **Data Sources:**
-- Tribunals Ontario Open Data Portal: https://tribunalsontario.ca/en/about/open-data/
+- Tribunals Ontario Open Data Portal: https://tribunalsontario.ca/en/aboutopen-data/
 - TribunalWatch Crisis Report: https://tribunalwatch.ca/2024/the-human-rights-tribunal-of-ontario-a-continuing-crisis/
-- Archived Reports: https://tribunalsontario.ca/en/about/governance-and-accountability/archived-reports-plans-and-standards/
+- Archived Reports: https://tribunalsontario.ca/en/aboutgovernance-and-accountability/archived-reports-plans-and-standards/
 - CBA Analysis: https://cba.org/fr-ca/sections/administrative-law/resources/jurisdiction-and-access-to-justice-an-analysis-of-human-rights-tribunal-of-ontario-issued-notices-o/
 
 **Contact:** empowrapp08162025@gmail.com  

@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Legal Compliance & Requirements
 permalink: /legal/requirements/
@@ -149,7 +149,7 @@ USA Lite legal coverage added for **13 US jurisdictions**:
 - **Complexity Mode** (Simple/Standard/Power User)
 - **Bad Day Mode** for reduced cognitive load
 
-**[See full Accessibility Statement →](/accessibility/)**
+**[See full Accessibility Statement →](/accessibility)**
 
 ---
 
@@ -209,7 +209,7 @@ USA Lite legal coverage added for **13 US jurisdictions**:
 - **[Data Ownership Statement](/data-ownership/)** — Your 100% data sovereignty
 - **[All Disclaimers](/legal/disclaimers/)** — Medical, legal, financial, AI disclaimers
 - **[Community Guidelines](/community/guidelines/)** — Community standards
-- **[Accessibility](/accessibility/)** — Our accessibility features and compliance
+- **[Accessibility](/accessibility)** — Our accessibility features and compliance
 - **[Privacy Controls](/privacy-controls/)** — Manage your privacy settings
 
 ---

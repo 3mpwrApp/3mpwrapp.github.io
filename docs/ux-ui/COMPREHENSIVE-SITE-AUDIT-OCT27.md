@@ -1,4 +1,4 @@
-# Comprehensive Site-Wide Accessibility & Clarity Audit
+﻿# Comprehensive Site-Wide Accessibility & Clarity Audit
 ## Final Enhancement Report - October 27, 2025
 
 ### 🎯 Mission: Crystal Clear & Accessible Across Every Page
@@ -272,7 +272,7 @@ box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.15)
 - [x] User Guide (`user-guide/`) **- FIXED**
 - [x] Contact (`contact.md`)
 - [x] FAQ (`faq/`)
-- [x] Accessibility (`accessibility.md`)
+- [x] Accessibility (`/accessibility`)
 - [x] Crisis Resources (`crisis-resources.md`)
 - [x] Privacy (`privacy/`)
 - [x] Roadmap (`roadmap.md`)

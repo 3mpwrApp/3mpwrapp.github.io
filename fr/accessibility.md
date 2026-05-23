@@ -1,8 +1,8 @@
----
+﻿---
 layout: default
 title: Déclaration d'accessibilité
 description: Notre engagement envers la conception accessible et inclusive
-permalink: /fr/accessibility/
+permalink: /fr/accessibility
 lang: fr
 ---
 
@@ -235,7 +235,7 @@ Testée avec les versions actuelles de tous les lecteurs d'écran principaux.
 **Guides utiles :**
 - [Paramètres d'accessibilité](/fr/accessibility-settings/)
 - [Guide pas à pas de l'accessibilité](/fr/accessibility-walkthrough/)
-- [Feuille de route d'accessibilité](/fr/roadmap/)
+- [Feuille de route d'accessibilité](/fr/roadmap)
 
 **Ressources externes :**
 - [WCAG 2.2 (W3C)](https://www.w3.org/TR/WCAG22/)

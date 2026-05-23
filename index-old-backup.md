@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Home
 description: A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.
@@ -745,7 +745,7 @@ if (document.readyState === 'loading') {
           <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: block; background: #f59e0b; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#d97706'" onmouseout="this.style.background='#f59e0b'">
             🐦 Follow on X
           </a>
-          <a href="/about/" class="carousel-secondary-btn" style="display: block; background: #f3f4f6; color: #f59e0b; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #f59e0b; transition: background 0.2s;" onmouseover="this.style.background='#fef3c7'" onmouseout="this.style.background='#f3f4f6'">
+          <a href="/about" class="carousel-secondary-btn" style="display: block; background: #f3f4f6; color: #f59e0b; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #f59e0b; transition: background 0.2s;" onmouseover="this.style.background='#fef3c7'" onmouseout="this.style.background='#f3f4f6'">
             📖 About
           </a>
         </div>
@@ -925,7 +925,7 @@ Ready to join the movement? Here's how you can get started:
   <p style="margin: 1rem 0 0; font-size: 0.9rem; color: white !important;"><a href="{{ '/app-waitlist' | relative_url }}" style="color: white !important; text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="{{ '/beta-guide' | relative_url }}" style="color: white !important; text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
 </div>
 
-- <a href="{{ '/user-guide' | relative_url }}"><strong><span aria-hidden="true">📖</span> Read Our Complete User Guide</strong></a> – **NEW Phase 2!** Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more ([Download PDF](/assets/downloads/3mpwrapp-user-guide-full.pdf))
+- <a href="/user-guide"><strong><span aria-hidden="true">📖</span> Read Our Complete User Guide</strong></a> – **NEW Phase 2!** Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more ([Download PDF](/assets/downloads/3mpwrapp-user-guide-full.pdf))
 - <a href="{{ '/features' | relative_url }}">Explore All Features</a> – Detailed step-by-step guides for every feature
 - <a href="{{ '/newsletter' | relative_url }}">Subscribe to Our Newsletter</a> – Stay updated with the latest news and resources
 - <a href="{{ '/blog' | relative_url }}">Explore Our Blog</a> – Read stories, updates, and important information
@@ -1088,7 +1088,7 @@ Former PSW. Injured worker. Person with disabilities. Now building the tools I w
 
 **From the ashes, we rise. 🔥**
 
-🔗 [Read My Full Story →](/about/#meet-the-founder) | 🌐 [Injured Workers Unite](https://injuredworkersunite.pages.dev/)
+🔗 [Read My Full Story →](/about#meet-the-founder) | 🌐 [Injured Workers Unite](https://injuredworkersunite.pages.dev/)
 
 ---
 

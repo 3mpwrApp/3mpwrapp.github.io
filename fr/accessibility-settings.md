@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Paramètres d'accessibilité
 description: Personnalisez votre expérience de navigation avec les options d'accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.
@@ -298,7 +298,7 @@ Envoyez vos suggestions à [empowrapp08162025@gmail.com](mailto:empowrapp0816202
 ## Ressources supplémentaires
 
 ### Notre engagement
-- [Politique d'accessibilité](/accessibility/) - Notre engagement WCAG 2.2 AA
+- [Politique d'accessibilité](/accessibility) - Notre engagement WCAG 2.2 AA
 - [Guide d'accessibilité](/accessibility-walkthrough/) - Visite guidée des fonctionnalités
 
 ### Outils externes

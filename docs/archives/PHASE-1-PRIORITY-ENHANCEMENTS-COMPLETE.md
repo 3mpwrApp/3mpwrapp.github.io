@@ -1,4 +1,4 @@
-# Phase 1 Priority Enhancements - Implementation Summary
+﻿# Phase 1 Priority Enhancements - Implementation Summary
 
 **Date:** October 26, 2025  
 **Commit:** cc1c225  
@@ -61,7 +61,7 @@
 ### 3. ✅ App Waitlist Page
 
 **File:** `app-waitlist.md` (NEW)  
-**Permalink:** `/app-waitlist/`
+**Permalink:** `/app-waitlist`
 
 **What's Included:**
 - **Phase Status Banner:** "Phase 1 Beta Testing Now Open" prominent CTA
@@ -87,7 +87,7 @@
 
 ### 4. ✅ Enhanced Accessibility Statement
 
-**File:** `accessibility.md`  
+**File:** `/accessibility`  
 **What Changed:**
 
 **Status Update:**
@@ -283,7 +283,7 @@
 | `faq.md` | Modified | Added "Common Concerns & Trust Questions" section (7 Q&A) |
 | `crisis-resources.md` | NEW | Comprehensive crisis support page (1000+ lines) |
 | `app-waitlist.md` | NEW | App waitlist/beta signup page (500+ lines) |
-| `accessibility.md` | Modified | Enhanced with full WCAG 2.2 checklist, updated status, testing details |
+| `/accessibility` | Modified | Enhanced with full WCAG 2.2 checklist, updated status, testing details |
 | `index.md` | Modified | Added app-waitlist link to beta CTA, fixed crisis footer emoji |
 | `public/sitemap.xml` | Modified | Added lastmod dates, 22 blog posts, new pages, updated priorities |
 

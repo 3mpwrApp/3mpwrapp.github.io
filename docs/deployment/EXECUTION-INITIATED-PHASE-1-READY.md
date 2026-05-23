@@ -1,4 +1,4 @@
-# 🎯 EXECUTION INITIATED - PHASE 1 READY
+﻿# 🎯 EXECUTION INITIATED - PHASE 1 READY
 
 **Date:** October 20, 2025  
 **Time:** Execution Started  
@@ -42,7 +42,7 @@ Test 7 pages on 5 browsers = **35 total tests**
 4. Blog → https://3mpwrapp.ca/blog
 5. User Guide → https://3mpwrapp.ca/user-guide.md
 6. Privacy → https://3mpwrapp.ca/privacy.md
-7. Accessibility → https://3mpwrapp.ca/accessibility.md
+7. Accessibility → https://3mpwrapp.ca//accessibility
 
 ### Browsers to Test
 1. Chrome

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Ontario Court of Appeal (ONCA) Precedent Overview: 5,034 Decisions Analyzed"
 date: 2026-05-08 00:00:00 +0000
@@ -398,13 +398,13 @@ ONCA precedents become useful when:
 - [**WSIAT NEL Benefits Guide**](/guides/wsiat-nel-benefits-guide.html) - Based on 20,680 analyzed cases
 - [**Back Injury Appeal Guide**](/guides/wsiat-back-injury-guide.html) - Based on 13,407 analyzed cases
 - [**WSIAT Templates**](/templates/) - Downloadable appeal forms and checklists
-- [**Complete WSIAT Guide**](/guides/wsiat-complete-guide/) - Step-by-step appeal process
+- [**Complete WSIAT Guide**](/guides/wsiat-complete-guide) - Step-by-step appeal process
 
 ### 📊 Data & Visualizations
 
 - [**Appeal Gap Analysis**](/data/tribunal-comprehensive/wsib-suppression-funnel.json) - 139,000 workers/year don't appeal
 - [**Cross-Tribunal Comparison**](/data/tribunal-comprehensive/cross-tribunal-comparison.json) - Compare success rates
-- [**Research Hub**](/research/) - Full knowledge base and decision explorer
+- [**Research Hub**](/research.html) - Full knowledge base and decision explorer
 
 ---
 

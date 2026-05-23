@@ -1,4 +1,4 @@
-# 🎯 FINAL ACTION PLAN - OCTOBER 19-24, 2025
+﻿# 🎯 FINAL ACTION PLAN - OCTOBER 19-24, 2025
 
 **Status:** ✅ **READY TO EXECUTE**  
 **Current Phase:** Oct 18 Complete → Oct 19 Preparation begins  
@@ -128,7 +128,7 @@ firefox --version
    - Blog: https://3mpwrapp.ca/blog
    - User Guide: https://3mpwrapp.ca/user-guide.md
    - Privacy: https://3mpwrapp.ca/privacy.md
-   - Accessibility: https://3mpwrapp.ca/accessibility.md
+   - Accessibility: https://3mpwrapp.ca//accessibility
 
 3. Bookmark testing tools:
    - Google PageSpeed: https://pagespeed.web.dev/
@@ -184,7 +184,7 @@ firefox --version
 4. Blog (/blog)
 5. User Guide (/user-guide.md)
 6. Privacy (/privacy.md)
-7. Accessibility (/accessibility.md)
+7. Accessibility (//accessibility)
 
 **Browsers:** Chrome, Firefox, Safari, Edge, Opera
 

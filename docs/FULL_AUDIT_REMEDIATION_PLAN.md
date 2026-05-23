@@ -1,4 +1,4 @@
-# Full Website Audit Remediation Plan
+﻿# Full Website Audit Remediation Plan
 **Created:** May 22, 2026  
 **Status:** In Progress  
 **Completion Target:** 2-3 weeks
@@ -38,7 +38,7 @@ Comprehensive audit of 1,320 markdown files revealed:
 ### Task 1.3: Critical French Pages (COMPLETE ✅)
 - **Status:** ✅ Complete (5 pages)
 - **Pages Created:**
-  1. fr/accessibility.md - Full WCAG compliance statement
+  1. fr//accessibility - Full WCAG compliance statement
   2. fr/security.md - 8-layer security policy
   3. fr/demo.md - Interactive demo with PWA embed
   4. fr/faq.md - Comprehensive FAQ
@@ -75,7 +75,7 @@ Comprehensive audit of 1,320 markdown files revealed:
 5. ✅ faq.md - Already has metadata
 6. ✅ contact/index.md - Already has metadata
 7. ✅ privacy/index.md - Already has metadata
-8. ✅ accessibility.md - Already has metadata
+8. ✅ /accessibility - Already has metadata
 9. ✅ security.md - Already has metadata
 10. ✅ app-waitlist.md - Already has metadata
 11. roadmap.md
@@ -112,7 +112,7 @@ Comprehensive audit of 1,320 markdown files revealed:
 ## Phase 3: French Translation (WEEKS 2-3)
 
 ### Priority Tier 1: Critical Public Pages (COMPLETE ✅ 5/10)
-1. ✅ fr/accessibility.md
+1. ✅ fr//accessibility
 2. ✅ fr/security.md
 3. ✅ fr/demo.md
 4. ✅ fr/faq.md

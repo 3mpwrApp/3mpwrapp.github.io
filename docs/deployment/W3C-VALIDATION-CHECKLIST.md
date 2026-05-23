@@ -1,4 +1,4 @@
-# W3C HTML5 Validation Checklist - Post-Fix Verification
+﻿# W3C HTML5 Validation Checklist - Post-Fix Verification
 
 ## ✅ Fixes Applied and Verified
 
@@ -68,10 +68,10 @@
   
 - [ ] Test key pages:
   - [ ] `/` (homepage)
-  - [ ] `/about/`
+  - [ ] `/about`
   - [ ] `/features/`
   - [ ] `/user-guide/`
-  - [ ] `/accessibility/`
+  - [ ] `/accessibility`
   - [ ] `/privacy/`
   - [ ] `/terms/`
   - [ ] `/404.html`

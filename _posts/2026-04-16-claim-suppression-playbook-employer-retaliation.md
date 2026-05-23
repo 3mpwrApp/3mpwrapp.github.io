@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Employer Tactics to Suppress Workers' Comp Claims: A Defense Playbook"
 date: 2026-04-16 14:00:00 -0400
@@ -688,7 +688,7 @@ Sign up: https://3mpwrapp.ca/app-waitlist
 - **NEW:** Labour Relations Exclusion Appeal
 
 **Research hub:**  
-https://3mpwrapp.ca/research/
+https://3mpwrapp.ca/research.html
 
 ---
 
@@ -735,7 +735,7 @@ https://3mpwrapp.ca/research/
 - **File Form 6 yourself** (don't trust employer) - 1-800-387-0750
 - **Document everything** - Emails, dates, witnesses
 - **Community Legal Clinic** - Free help ([Legal Aid Ontario](https://www.legalaid.on.ca))
-- **[Claim Suppression Guide](/research/)** - Templates, checklists
+- **[Claim Suppression Guide](/research.html)** - Templates, checklists
 - **WSIB Compliance** - Report suppression: 1-800-387-0750
 
 ### For General Public
@@ -801,13 +801,13 @@ You must:
 ## 📊 Related Research & Analysis
 
 **Statistical Analysis:**
-- [BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns](https://3mpwrapp.ca/research/wsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Ontario WSIAT pattern analysis (11,430 decisions), Pickering v WCB precedent breakdown, cross-provincial comparison methodology
+- [BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns](https://3mpwrapp.ca/research.htmlwsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Ontario WSIAT pattern analysis (11,430 decisions), Pickering v WCB precedent breakdown, cross-provincial comparison methodology
 
 **BC WCAT Data:**
 - [BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse](/blog/2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns/) - 7,386 BC cases reveal 100% unknown outcomes, systemic fraud patterns, and CanLII partnership request
 
 **Community Research:**
-- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.ca/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - How beta tester research exposed WorkSafeBC "second-tier systems" on megaprojects
+- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.ca/research.htmlcommunity/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - How beta tester research exposed WorkSafeBC "second-tier systems" on megaprojects
 
 ---
 

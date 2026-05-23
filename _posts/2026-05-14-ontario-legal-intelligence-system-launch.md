@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Ontario Legal Intelligence System v3.0 Complete: 85.1% Classification Achieved"
 date: 2026-05-15 21:30:00 +0000
@@ -370,14 +370,14 @@ When workers, persons with disabilities, and advocates have access to:
 ### **For Injured Workers & Persons with Disabilities:**
 
 📱 **Use the App:** [3mpwrapp.ca/app](https://3mpwrapp.ca/app/)  
-📊 **Explore Research:** [3mpwrapp.ca/research](https://3mpwrapp.ca/research/)  
+📊 **Explore Research:** [3mpwrapp.ca/research](https://3mpwrapp.ca/research.html)  
 📋 **Download Templates:** [Appeal Templates](/templates/)  
 📖 **Read Knowledge Base:** [Injury-Specific Guides](/knowledge-base/)  
 
 ### **For Advocates & Lawyers:**
 
 📁 **Download Raw Data:** [Research Data Sources](/research-data-sources/)  
-📈 **Use Visualizations:** [Interactive Charts](/research/#data-visualizations)  
+📈 **Use Visualizations:** [Interactive Charts](/research.html#data-visualizations)  
 🤝 **Contribute Outcomes:** Share anonymized case results to improve the dataset  
 
 ### **For Developers & Researchers:**
@@ -423,8 +423,8 @@ This blog will update as each phase completes. Subscribe to our [RSS feed](/feed
 
 ## Related Resources
 
-- [Research Page: 230,392 Records Analyzed](/research/)
-- [WSIAT Complete Appeal Guide](/guides/wsiat-complete-guide/)
+- [Research Page: 230,392 Records Analyzed](/research.html)
+- [WSIAT Complete Appeal Guide](/guides/wsiat-complete-guide)
 - [Ontario Tribunal Data Sources](/research-data-sources/)
 - [Data Improvement Workflow Documentation](/docs/DATA-IMPROVEMENT-WORKFLOW/)
 - [Cross-Tribunal Success Rates](/cross-tribunal-success-rates/)

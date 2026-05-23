@@ -1,4 +1,4 @@
-Subject: Partnership Request: Improving Tribunal Outcome Metadata for Vulnerable Communities
+﻿Subject: Partnership Request: Improving Tribunal Outcome Metadata for Vulnerable Communities
 
 To: feedback@canlii.org
 CC: info@canlii.org
@@ -200,7 +200,7 @@ If CanLII cannot provide bulk data or increased API limits directly, we would ap
 
 **Website:** [https://3mpwrapp.ca](https://3mpwrapp.ca)  
 **GitHub:** [https://github.com/3mpwrApp](https://github.com/3mpwrApp) (planned - code will be published here)  
-**Research Page:** [https://3mpwrapp.github.io/research/](https://3mpwrapp.github.io/research/)
+**Research Page:** [https://3mpwrapp.github.io/research.html](https://3mpwrapp.github.io/research.html)
 
 ## Contact Information
 

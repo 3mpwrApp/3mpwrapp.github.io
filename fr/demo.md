@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Démonstration interactive de 3MPWRAPP
 description: Explorez les fonctionnalités les plus importantes de 3MPWRAPP avec des démonstrations interactives. Voyez comment l'application aide les travailleurs blessés, les personnes handicapées, les défenseurs et les communautés à organiser les preuves, comprendre les décisions et créer un changement systémique.
@@ -317,7 +317,7 @@ lang: fr
   <a href="https://app-3mpwrapp.pages.dev/" target="_blank" rel="noopener noreferrer" class="btn-primary">
     🌐 Lancer l'application Web bêta →
   </a>
-  <a href="/fr/app-waitlist/" class="btn-secondary">
+  <a href="/fr/app-waitlist" class="btn-secondary">
     📱 Rejoindre la liste d'attente mobile
   </a>
 </div>
@@ -351,7 +351,7 @@ Courriel : empowrapp08162025@gmail.com
 **Documentation :**  
 - [Guide complet des fonctionnalités](/fr/features/)
 - [FAQ](/fr/faq/)
-- [Guide d'accessibilité](/fr/accessibility/)
+- [Guide d'accessibilité](/fr/accessibility)
 
 **Communauté :**  
 - [Forums communautaires](https://app-3mpwrapp.pages.dev/community)
@@ -362,5 +362,5 @@ Courriel : empowrapp08162025@gmail.com
 **Liens connexes :**
 - [Toutes les fonctionnalités](/fr/features/)
 - [Politique de confidentialité](/fr/privacy/)
-- [Déclaration d'accessibilité](/fr/accessibility/)
+- [Déclaration d'accessibilité](/fr/accessibility)
 - [Politique de sécurité](/fr/security/)

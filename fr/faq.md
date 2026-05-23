@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: FAQ - Foire aux questions
 permalink: /fr/faq/
@@ -347,7 +347,7 @@ Choisissez votre propre aventure !
 - ✅ Mode sombre complet
 - ✅ Polices adaptées à la dyslexie
 
-**[Voir Déclaration d'accessibilité →](/fr/accessibility/)**
+**[Voir Déclaration d'accessibilité →](/fr/accessibility)**
 
 ---
 
@@ -397,7 +397,7 @@ Choisissez votre propre aventure !
 - [Toutes les fonctionnalités](/fr/features/)
 - [Guides d'utilisation](/fr/user-guide/)
 - [Tutoriels vidéo](https://www.youtube.com/@3mpwrApp)
-- [Déclaration d'accessibilité](/fr/accessibility/)
+- [Déclaration d'accessibilité](/fr/accessibility)
 - [Politique de confidentialité](/fr/privacy/)
 - [Politique de sécurité](/fr/security/)
 
