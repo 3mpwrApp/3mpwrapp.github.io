@@ -40,14 +40,7 @@
     "Setting Up Accessibility for Your Needs"
   ],
   "devDiaries": [
-    "Why We Chose React Native: Accessibility Over Everything",
-    "Building Offline-First: Network Access Should Never Be Required",
-    "Bank-Level Encryption for a Disability App: The Why",
-    "Simple Mode: Designing for the Worst Day",
-    "From 0 to 721 Tests: Our TDD Story",
-    "Building Indigenous Language Support: What We Learned",
-    "The Ethics of Building for Vulnerable Communities",
-    "Why 3mpwrApp Will Always Be Free"
+    "Why We Chose React Native: Accessibility Over Everything"
   ],
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built",
@@ -59,6 +52,6 @@
     "Collective Advocacy: Why Individual Coping Is Not Enough",
     "Intersectionality and Disability: Building for the Full Reality"
   ],
-  "rotationIndex": 3,
+  "rotationIndex": 4,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
