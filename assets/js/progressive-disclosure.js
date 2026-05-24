@@ -157,7 +157,7 @@
     });
   }
 
-  // Add progress indicator to page
+  // Add progress indicator to page (with accessibility)
   function addProgressIndicator() {
     const progress = getProgress();
     const persona = getPersona();
@@ -169,11 +169,14 @@
 
     const indicator = document.createElement('div');
     indicator.className = 'progress-indicator';
+    indicator.setAttribute('role', 'status');
+    indicator.setAttribute('aria-live', 'polite');
+    indicator.setAttribute('aria-label', `Progress: ${progress}% explored`);
     indicator.innerHTML = `
-      <div class="progress-bar">
+      <div class="progress-bar" role="progressbar" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100">
         <div class="progress-fill" style="width: ${progress}%"></div>
       </div>
-      <span class="progress-text">${progress}% explored</span>
+      <span class="progress-text" aria-hidden="true">${progress}% explored</span>
     `;
 
     // Add to page (top right corner)
@@ -218,13 +221,15 @@
     }
   }
 
-  // Show achievement notification
+  // Show achievement notification (with accessibility)
   function showAchievement(title, message) {
     const notification = document.createElement('div');
     notification.className = 'achievement-notification';
+    notification.setAttribute('role', 'alert');
+    notification.setAttribute('aria-live', 'assertive');
     notification.innerHTML = `
       <div class="achievement-content">
-        <span class="achievement-icon">🏆</span>
+        <span class="achievement-icon" aria-hidden="true">🏆</span>
         <div>
           <strong>${title}</strong>
           <p>${message}</p>
@@ -417,19 +422,15 @@
     };
   }
 
-  // Check if first visit - redirect to personalization
-  const visitCount = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || '0', 10);
-  const persona = getPersona();
-  
-  if (visitCount === 0 && !persona && !window.location.pathname.includes('/personalize')) {
-    // First visit - redirect to personalization page
-    window.location.href = '/personalize/';
+  // Initialize progressive disclosure (goal-based-onboarding.js handles first visit)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    // Initialize progressive disclosure
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
+    init();
   }
+
+  // Expose functions for goal-based onboarding integration
+  window.applyPersonaFilter = applyPersonaFilter;
+  window.applyProgressFilter = applyProgressFilter;
+  window.reorderContent = reorderContent;
 })();

@@ -158,9 +158,11 @@
 
     const tooltip = document.createElement('div');
     tooltip.className = 'help-tooltip';
+    tooltip.setAttribute('role', 'tooltip');
+    tooltip.setAttribute('aria-labelledby', `help-title-${helpId}`);
     tooltip.innerHTML = `
       <div class="help-tooltip-header">
-        <h4>${help.title}</h4>
+        <h4 id="help-title-${helpId}">${help.title}</h4>
         <button class="help-close" aria-label="Close help">&times;</button>
       </div>
       <div class="help-tooltip-content">
@@ -217,6 +219,7 @@
       if (element.classList.contains('help-trigger-initialized')) return;
 
       const helpId = element.getAttribute('data-help');
+      const helpItem = HELP_CONTENT[helpId];
       
       // Add help icon
       const icon = document.createElement('span');
@@ -225,6 +228,7 @@
       icon.title = 'Click for help';
       icon.setAttribute('role', 'button');
       icon.setAttribute('tabindex', '0');
+      icon.setAttribute('aria-label', `Get help: ${helpItem ? helpItem.title : 'Click for help'}`);
       
       // Position icon
       if (element.style.position === '' || element.style.position === 'static') {
