@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Sat, 23 May 2026 13:41:17 GMT</lastBuildDate>
-    <pubDate>Sat, 23 May 2026 13:41:17 GMT</pubDate>
+    <lastBuildDate>Sun, 24 May 2026 13:41:08 GMT</lastBuildDate>
+    <pubDate>Sun, 24 May 2026 13:41:08 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,35 +24,7 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Sat, 23 May 2026 13:41:17 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Expands Breast Screening Services to Portage La Prairie</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73939</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73939</guid>
-      <pubDate>Fri, 22 May 2026 15:20:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Elon Musk’s Knife, and the Global Lives Sacrificed</title>
-      <link>https://thetyee.ca/Culture/2026/05/22/Elon-Musk-Knife-Global-Lives-Sacrificed/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Culture/2026/05/22/Elon-Musk-Knife-Global-Lives-Sacrificed/</guid>
-      <description><![CDATA[The shocking insider’s account of who killed America’s international aid program and why.]]></description>
-      <pubDate>Sat, 23 May 2026 00:40:00 GMT</pubDate>
-      <category>High Priority</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Province Further Updates Hepatitis A Vaccine Criteria</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73942</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73942</guid>
-      <pubDate>Fri, 22 May 2026 21:55:00 GMT</pubDate>
+      <pubDate>Sun, 24 May 2026 13:41:08 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
