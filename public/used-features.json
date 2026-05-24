@@ -33,7 +33,8 @@
     "PEI Social Assistance for Persons with Disabilities",
     "Winning Arguments Library: Successful Legal Strategies from Case Law",
     "Northwest Territories Income Assistance",
-    "Manitoba EIA Disability Benefits"
+    "Manitoba EIA Disability Benefits",
+    "Data Portability: Take Your Data Anywhere"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -52,6 +53,6 @@
     "Collective Advocacy: Why Individual Coping Is Not Enough",
     "Intersectionality and Disability: Building for the Full Reality"
   ],
-  "rotationIndex": 4,
+  "rotationIndex": 5,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
