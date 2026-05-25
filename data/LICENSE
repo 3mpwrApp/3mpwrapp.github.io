@@ -1,0 +1,79 @@
+Open Database License (ODbL) v1.0
+https://opendatacommons.org/licenses/odbl/1-0/
+
+Copyright (c) 2026 Lissa Beaulieu, operating as 3mpwrApp (Sole Proprietorship)
+
+=======================================================================
+THE FULL TEXT OF THIS LICENSE IS AVAILABLE AT:
+https://opendatacommons.org/licenses/odbl/1-0/
+=======================================================================
+
+SUMMARY (Human-Readable):
+--------------------------
+You are free to:
+  - SHARE: Copy, distribute, and use the database.
+  - CREATE: Produce works from the database.
+  - ADAPT: Modify, transform, and build upon the database.
+
+As long as you:
+  - ATTRIBUTE: You must attribute any public use of the database, or works
+    produced from the database, in the manner specified in the ODbL.
+    For any use or redistribution of the database, or works produced from it,
+    you must make clear to others the license of the database and keep intact
+    any notices on the original database.
+    Required attribution: "Tribunal decision data processed by 3mpwrApp (https://3mpwrapp.ca)"
+
+  - SHARE-ALIKE: If you publicly use any adapted version of this database, or
+    works produced from an adapted database, you must also offer that adapted
+    database under the ODbL.
+
+  - KEEP OPEN: If you redistribute the database, or an adapted version of it,
+    then you may use technological measures that restrict the work (such as DRM)
+    as long as you also redistribute a version without such measures.
+
+=======================================================================
+ATTRIBUTION REQUIREMENT:
+=======================================================================
+
+Any public use, redistribution, or derivative work using this database MUST
+include the following attribution:
+
+  "Tribunal decision data collected, parsed, and annotated by 3mpwrApp
+   (https://3mpwrapp.ca). Licensed under ODbL 1.0."
+
+=======================================================================
+SCOPE OF THIS LICENSE:
+=======================================================================
+
+This license applies to the following databases contained in this repository:
+  - data/tribunal-decisions/ (Ontario tribunal decisions, 134,000+ records)
+  - data/wsiat/ (WSIAT case data)
+  - data/ (all structured data files)
+
+The tribunal decisions themselves (court/tribunal rulings) are in the public
+domain as government records. This license covers:
+  - The SELECTION of decisions included in this database
+  - The ARRANGEMENT and organization of decisions
+  - The PARSING, TAGGING, and ANNOTATION of decisions
+  - The METADATA and derived analytical fields
+  - The SCRAPING SCRIPTS and processing logic (also covered by AGPL-3.0)
+
+=======================================================================
+COMMERCIAL USE RESTRICTION (Additional Condition):
+=======================================================================
+
+While the ODbL permits commercial use in principle, any commercial use of
+this database that competes directly with 3mpwrApp's mission of providing
+FREE tools to injured workers and persons with disabilities is contrary to
+the spirit of this license.
+
+If you intend to use this database commercially, please contact us:
+  empowrapp08162025@gmail.com
+
+=======================================================================
+
+For the full ODbL v1.0 license text, see:
+https://opendatacommons.org/licenses/odbl/1-0/
+
+Questions? Contact: empowrapp08162025@gmail.com
+Website: https://3mpwrapp.ca

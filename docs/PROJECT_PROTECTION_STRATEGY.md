@@ -228,7 +228,7 @@ Anyone who tries to commercialize, surveil, or exploit this project is violating
 
 ### **Founder (BDFL - Benevolent Dictator For Life)**
 
-**Current Founder:** [Your Name]
+**Current Founder:** Lissa Beaulieu
 
 **Final authority on:**
 - Mission and values (guardian of non-negotiables)
@@ -343,14 +343,14 @@ _[To be established - need 3-5 trusted people from different organizations]_
 
 ### **THIS WEEK (Critical):**
 - [x] Create `GOVERNANCE.md` (use template above)
-- [ ] Add AGPL-3.0 license to GitHub repo (if not already)
-- [ ] Add trademark notice to website footer: "3mpwrApp™ is a trademark of [Your Name]"
+- [x] Add AGPL-3.0 license to GitHub repo — **DONE** (`LICENSE` file present)
+- [x] Add trademark notice to website footer — **DONE** (May 25, 2026 — 3mpwrApp Registered Sole Proprietorship)
 - [ ] Claim social media handles (@3mpwrApp on Twitter, Instagram, TikTok, Reddit)
 
 ### **THIS MONTH (High Priority):**
-- [ ] Add ODbL license to tribunal database (`data/LICENSE`)
-- [ ] Document your first use of "3mpwrApp" name (GitHub commit dates, app store submission)
-- [ ] Create fork policy in README
+- [x] Add ODbL license to tribunal database — **DONE** (`data/LICENSE` created May 25, 2026)
+- [x] Document first use of "3mpwrApp" name — **DONE** (Business registered as Sole Proprietorship, May 2026)
+- [x] Create fork policy in README — **DONE** (May 25, 2026)
 - [ ] Add license headers to all code files
 
 ### **NEXT 3 MONTHS (Medium Priority):**

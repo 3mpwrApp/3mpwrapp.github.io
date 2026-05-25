@@ -17,6 +17,27 @@ This is the official website repository for **3mpwrApp™** — a community‑dr
 
 ---
 
+## ⚖️ Forking Policy
+
+3mpwrApp™ is open source (AGPL-3.0). You are free to fork, **but please read this first**:
+
+**Friendly Forks (Encouraged):**
+- Regional adaptations (e.g., a French-first version for Quebec)
+- Specialized versions for specific communities (e.g., construction workers, nurses)
+- Must use a different name, credit 3mpwrApp as the original, and share all improvements back
+
+**Hostile Forks (Prohibited under AGPL-3.0 + community standards):**
+- Forks that charge fees, sell data, or add paywalls
+- Forks that remove privacy protections or add tracking/surveillance
+- Forks that falsely claim to be "official" 3mpwrApp
+- Forks that exploit injured workers or persons with disabilities for profit
+
+> **Hostile forks will be publicly called out.** The mission of 3mpwrApp is to provide free, community-led tools for injured workers and persons with disabilities — not to create commercial opportunities for bad actors.
+
+Questions about forking? Contact: empowrapp08162025@gmail.com
+
+---
+
 ## 🤝 Contributing
 
 We welcome contributions from the community! See [CONTRIBUTING.md](CONTRIBUTING.md) for:
@@ -27,7 +48,7 @@ We welcome contributions from the community! See [CONTRIBUTING.md](CONTRIBUTING.
 
 **Want to help protect 3mpwrApp™ from exploitation?** See:
 - [GOVERNANCE.md](GOVERNANCE.md) - Decision-making structure and project protection
-- [PROJECT_PROTECTION_STRATEGY.md](docs/PROJECT_PROTECTION_STRATEGY.md) - 5-layer defense against hijacking
+- [docs/PROJECT_PROTECTION_STRATEGY.md](docs/PROJECT_PROTECTION_STRATEGY.md) - 5-layer defense against hijacking
 
 ---
 

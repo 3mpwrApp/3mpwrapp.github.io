@@ -377,14 +377,22 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ site.time | date: '%Y' }} 3mpwrApp — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
+      <p>&copy; {{ site.time | date: '%Y' }} 3mpwrApp™ — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
       <p class="footer-mission">💚 Grassroots & Community-Funded • 100% Free Forever • Mission-Driven, Not Profit-Driven</p>
+      <p class="footer-legal" style="font-size: 0.8rem; opacity: 0.75; margin-top: 0.5rem;">
+        3mpwrApp™ is a trademark of Lissa Beaulieu, operating as 3mpwrApp (Registered Sole Proprietorship). All rights reserved.
+        Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0" target="_blank" rel="noopener noreferrer">AGPL-3.0</a>.
+        Tribunal data licensed under <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener noreferrer">ODbL 1.0</a>.
+      </p>
     </div>
   </footer>
 
   <!-- Skip link and mobile menu functionality -->
   <script src="{{ '/assets/js/skip-links.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/mobile-menu.js' | relative_url }}" defer></script>
+
+  <!-- Header controls (spoon counter + emergency mode) -->
+  <script src="{{ '/assets/js/header-controls.js' | relative_url }}" defer></script>
 
   <!-- Utilities and controls -->
   <script src="{{ '/assets/js/a11y.min.js' | relative_url }}" defer></script>
