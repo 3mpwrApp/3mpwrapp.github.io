@@ -5,8 +5,6 @@ description: Free community-powered platform connecting injured workers, persons
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/accessibility-toolbar.css' | relative_url }}">
-<script src="{{ '/assets/js/accessibility-toolbar.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/header-controls.js' | relative_url }}" defer></script>
 <style>
   /* Hide bulky accessibility toolbar sidebar - controls now in header */
@@ -41,8 +39,6 @@ description: Free community-powered platform connecting injured workers, persons
     --primary-color: #0000ff;
   }
 </style>
-<link rel="stylesheet" href="{{ '/assets/css/accessibility-toolbar.css' | relative_url }}">
-<script src="{{ '/assets/js/accessibility-toolbar.js' | relative_url }}" defer></script>
 {%- include status-banner.html -%}
 {%- include building-public-hero.html -%}
 
