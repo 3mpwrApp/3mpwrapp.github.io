@@ -9,6 +9,13 @@ permalink: /
 <link rel="stylesheet" href="{{ '/assets/css/accessibility-toolbar.css' | relative_url }}">
 <script src="{{ '/assets/js/accessibility-toolbar.js' | relative_url }}" defer></script>
 
+<style>
+  /* Hide sidebar since spoon counter and emergency mode are now in header */
+  .accessibility-toolbar {
+    display: none !important;
+  }
+</style>
+
 {%- include accessibility-toolbar.html -%}
 {%- include status-banner.html -%}
 {%- include building-public-hero.html -%}
@@ -27,7 +34,7 @@ permalink: /
     <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="80" height="80" loading="eager" style="margin-bottom: 1.5rem;">
   </picture>
   
-  <h1>Tools, Support & Community — All in One Place</h1>
+  <h1>Tools, Support & Community ï¿½ All in One Place</h1>
   
   <p class="homepage-hero-subtitle">
     Empowering injured workers, persons with disabilities, and allies across Canada with 100% free resources
@@ -86,7 +93,7 @@ permalink: /
 <section style="max-width: 1200px; margin: 3rem auto; padding: 2rem; background: linear-gradient(135deg, #0066cc 0%, #004d99 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); color: white;">
   <div style="text-align: center;">
     <h2 style="font-size: 2rem; margin-bottom: 1rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
-      <span aria-hidden="true">??</span> NEW: Connecting the Dots — CanLII Keyword Network
+      <span aria-hidden="true">??</span> NEW: Connecting the Dots ï¿½ CanLII Keyword Network
     </h2>
     <p style="font-size: 1.2rem; margin-bottom: 1rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto;">
       Explore 134,920+ tribunal decisions: Live interactive network graph revealing keyword relationships, denial patterns, and the hidden language used in Canadian tribunal decisions.
@@ -126,10 +133,10 @@ permalink: /
   </section>
 
   <!-- Data Download / GitHub Link -->
-  <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: #f5f7fa; border-radius: 12px; border: 2px solid #e0e6ef;">
-    <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #003d7a;">Open Data: Download & Explore</h2>
-    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: #222;">All tribunal and research data is public and open source. Download, analyze, or contribute directly on GitHub.</p>
-    <a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 36px; background: #24292f; color: #fff; border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: background 0.2s;">
+  <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border-color);">
+    <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-color);">Open Data: Download & Explore</h2>
+    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-color); opacity: 0.9;">All tribunal and research data is public and open source. Download, analyze, or contribute directly on GitHub.</p>
+    <a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 36px; background: var(--primary-color, #24292f); color: #fff; border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: background 0.2s;">
       <span aria-hidden="true">??</span> See Data on GitHub
     </a>
   </section>
@@ -366,10 +373,10 @@ permalink: /
   
   <div class="app-tour-cta">
     <a href="/app-waitlist" class="app-tour-cta-button">
-      ?? Get Early Access — Launching Q2 2026
+      ?? Get Early Access ï¿½ Launching Q2 2026
     </a>
     <p class="app-tour-cta-text">
-      <strong>Limited beta spots</strong> • Be among the first 1,000 users
+      <strong>Limited beta spots</strong> ï¿½ Be among the first 1,000 users
     </p>
   </div>
 </section>
@@ -387,7 +394,7 @@ permalink: /
     <span aria-hidden="true">??</span> Listen to Our Anthem
   </a>
   <p class="tagline">
-    This isn't just a song — it's our anthem. <span aria-hidden="true">??</span>
+    This isn't just a song ï¿½ it's our anthem. <span aria-hidden="true">??</span>
   </p>
 </section>
 
@@ -403,7 +410,7 @@ permalink: /
     Join the Beta Waitlist ?
   </a>
   <p style="margin-top: 1.5rem; opacity: 0.9; font-size: 0.95rem;">
-    No credit card required • 100% free forever • Cancel anytime (but there's nothing to cancel!)
+    No credit card required ï¿½ 100% free forever ï¿½ Cancel anytime (but there's nothing to cancel!)
   </p>
 </section>
 
