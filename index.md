@@ -7,8 +7,42 @@ description: Free community-powered platform connecting injured workers, persons
 <link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/accessibility-toolbar.css' | relative_url }}">
 <script src="{{ '/assets/js/accessibility-toolbar.js' | relative_url }}" defer></script>
-
-{%- include accessibility-toolbar.html -%}
+<script src="{{ '/assets/js/header-controls.js' | relative_url }}" defer></script>
+<style>
+  /* Hide bulky accessibility toolbar sidebar - controls now in header */
+  .accessibility-toolbar {
+    display: none !important;
+  }
+  
+  /* CSS Variables for adaptive colors */
+  :root {
+    --card-bg: #f5f7fa;
+    --border-color: #e0e6ef;
+    --primary-color: #003d7a;
+  }
+  
+  /* Dark mode colors */
+  body.dark-mode {
+    --card-bg: #1a1a2e;
+    --border-color: #2d2d44;
+    --primary-color: #667eea;
+  }
+  
+  /* High contrast colors */
+  body.high-contrast {
+    --card-bg: #000;
+    --border-color: #fff;
+    --primary-color: #ffff00;
+  }
+  
+  body.high-contrast.dark-mode {
+    --card-bg: #fff;
+    --border-color: #000;
+    --primary-color: #0000ff;
+  }
+</style>
+<link rel="stylesheet" href="{{ '/assets/css/accessibility-toolbar.css' | relative_url }}">
+<script src="{{ '/assets/js/accessibility-toolbar.js' | relative_url }}" defer></script>
 {%- include status-banner.html -%}
 {%- include building-public-hero.html -%}
 
@@ -125,9 +159,9 @@ description: Free community-powered platform connecting injured workers, persons
   </section>
 
   <!-- Data Download / GitHub Link -->
-  <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: #f5f7fa; border-radius: 12px; border: 2px solid #e0e6ef;">
-    <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #003d7a;">Open Data: Download & Explore</h2>
-    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: #222;">All tribunal and research data is public and open source. Download, analyze, or contribute directly on GitHub.</p>
+  <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border-color); color: var(--text-color);">
+    <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary-color);">Open Data: Download & Explore</h2>
+    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-color);">All tribunal and research data is public and open source. Download, analyze, or contribute directly on GitHub.</p>
     <a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 36px; background: #24292f; color: #fff; border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: background 0.2s;">
       <span aria-hidden="true">📂</span> See Data on GitHub
     </a>

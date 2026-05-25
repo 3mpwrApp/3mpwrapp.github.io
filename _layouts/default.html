@@ -78,7 +78,7 @@
       <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
         <picture>
           <source type="image/webp" srcset="{{ '/assets/empwrapp-logo.webp' | relative_url }}">
-          <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="" width="28" height="28" aria-hidden="true" loading="eager">
+          <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="28" height="28" loading="eager">
         </picture>
         <span>{{ site.title }}</span>
       </a>
@@ -219,6 +219,22 @@
 
     <!-- High contrast + Dark mode toggles + Accessibility Tools -->
     <div class="header-controls" role="group" aria-label="Display settings and accessibility">
+      <!-- Compact Spoon Counter in Header -->
+      <div class="header-spoon-tracker" role="region" aria-label="Energy tracker" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; background: rgba(102, 126, 234, 0.1); border-radius: 8px; font-size: 0.9rem;">
+        <span aria-hidden="true">🥄</span>
+        <span id="header-spoon-count" aria-live="polite" style="font-weight: 600; min-width: 20px;">5</span>
+        <div style="display: flex; gap: 0.25rem;">
+          <button type="button" id="header-spoon-use" aria-label="Use energy, decrease spoon count" style="padding: 2px 6px; font-size: 0.85rem; background: rgba(0,0,0,0.1); border: none; border-radius: 4px; cursor: pointer;">-1</button>
+          <button type="button" id="header-spoon-rest" aria-label="Rest, increase spoon count" style="padding: 2px 6px; font-size: 0.85rem; background: rgba(0,0,0,0.1); border: none; border-radius: 4px; cursor: pointer;">+1</button>
+        </div>
+      </div>
+      
+      <!-- Emergency Simplify in Header -->
+      <button type="button" id="header-emergency-simplify" aria-pressed="false" aria-label="Toggle emergency simplification mode" style="padding: 0.5rem 0.75rem; background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.3); border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+        <span aria-hidden="true">🚨</span>
+        <span>Emergency Mode</span>
+      </button>
+      
       <a href="{{ '/accessibility-settings' | relative_url }}" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
         ♿ Accessibility
       </a>
@@ -281,6 +297,7 @@
   </nav>
 
   <main id="main-content" tabindex="-1">
+    <h1 class="visually-hidden">{{ page.title | default: site.title }}</h1>
     {{ content }}
   </main>
 
@@ -292,13 +309,13 @@
           <source type="image/webp" srcset="{{ '/assets/empwrapp-logo.webp' | relative_url }}">
           <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="64" height="64" loading="lazy" style="margin-bottom: 1rem;">
         </picture>
-        <h3 style="margin-top: 0;">3mpwrApp</h3>
+        <h2 style="margin-top: 0;">3mpwrApp</h2>
         <p style="font-size: 0.9rem; line-height: 1.5;">Community-powered support for injured workers and persons with disabilities across Canada.</p>
       </div>
       
       <!-- About Column -->
       <div class="footer-column">
-        <h3>About</h3>
+        <h2>About</h2>
         <ul>
           <li><a href="{{ '/about' | relative_url }}">Our Mission</a></li>
           <li><a href="{{ '/user-guide' | relative_url }}">User Guide</a></li>
@@ -309,7 +326,7 @@
 
       <!-- Get Started Column -->
       <div class="footer-column">
-        <h3>Get Started</h3>
+        <h2>Get Started</h2>
         <ul>
           <li><a href="{{ '/beta' | relative_url }}">Beta Testing</a></li>
           <li><a href="{{ '/faq' | relative_url }}">FAQ</a></li>
@@ -320,7 +337,7 @@
 
       <!-- Legal Column -->
       <div class="footer-column">
-        <h3>Legal & Privacy</h3>
+        <h2>Legal & Privacy</h2>
         <ul>
           <li><a href="{{ '/privacy' | relative_url }}">Privacy Policy</a></li>
           <li><a href="{{ '/terms' | relative_url }}">Terms of Service</a></li>
@@ -331,7 +348,7 @@
 
       <!-- Support Column -->
       <div class="footer-column">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="https://paypal.me/3mpwrApp" target="_blank" rel="noopener noreferrer" style="color: #0070ba; font-weight: 600;">💙 Donate via PayPal</a></li>
           <li><a href="{{ '/accessibility' | relative_url }}">Accessibility Statement</a></li>
@@ -343,7 +360,7 @@
 
       <!-- Connect Column -->
       <div class="footer-column">
-        <h3>Connect</h3>
+        <h2>Connect</h2>
         <div class="footer-social">
           <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">{%- include social-icons.html name='facebook' -%}<span class="social-label">Facebook</span></a>
           <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" aria-label="3mpwr App Hub Facebook Group">{%- include social-icons.html name='facebook' -%}<span class="social-label">FB Group</span></a>
@@ -403,11 +420,11 @@
       <details style="margin: 0.5rem 0;">
         <summary style="cursor: pointer; user-select: none;">Manage cookie settings</summary>
         <div style="margin: 0.5rem 0; padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 4px;">
-          <label style="display: flex; align-items: center; gap: 0.5rem; margin: 0.25rem 0;">
-            <input type="checkbox" checked disabled aria-disabled="true">
+          <label for="cookie-essential-pref" style="display: flex; align-items: center; gap: 0.5rem; margin: 0.25rem 0;">
+            <input type="checkbox" id="cookie-essential-pref" checked disabled aria-disabled="true">
             <span><strong>Essential cookies</strong> (required) - Necessary for the website to function</span>
           </label>
-          <label style="display: flex; align-items: center; gap: 0.5rem; margin: 0.25rem 0;">
+          <label for="cookie-analytics-pref" style="display: flex; align-items: center; gap: 0.5rem; margin: 0.25rem 0;">
             <input type="checkbox" id="cookie-analytics-pref" aria-describedby="analytics-desc">
             <span><strong>Analytics cookies</strong> (optional) - Help us understand how visitors use our site</span>
           </label>
@@ -538,7 +555,7 @@
         ></iframe>
       </div>
       <div class="modal-footer">
-        <label style="display:flex;align-items:center;gap:0.5rem;">
+        <label for="newsletter-dontshow" style="display:flex;align-items:center;gap:0.5rem;">
           <input type="checkbox" id="newsletter-dontshow" />
           Don’t show again
         </label>

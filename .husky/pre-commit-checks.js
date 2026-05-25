@@ -55,7 +55,7 @@ function validateHTML(file) {
   // Check for common HTML5 errors
   const checks = [
     {
-      pattern: /<img[^>]+(?<!alt=")[^>]*>/gi,
+      pattern: /<img(?![^>]*\salt=)[^>]*>/gi,
       message: 'Image missing alt attribute',
       severity: 'error'
     },
@@ -70,7 +70,7 @@ function validateHTML(file) {
       severity: 'error'
     },
     {
-      pattern: /<label[^>]*(?!for=)[^>]*>/gi,
+      pattern: /<label(?![^>]*\sfor=)[^>]*>/gi,
       message: 'Label without for attribute',
       severity: 'warning'
     },
