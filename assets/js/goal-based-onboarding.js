@@ -280,8 +280,16 @@ function injectGoalStyles() {
       max-height: 90vh;
       overflow-y: auto;
       position: relative;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
       color: var(--text-color);
+      opacity: 1;
+      border: 2px solid var(--border-color);
+    }
+    
+    /* Ensure solid backgrounds for all modal elements */
+    .goal-banner-content,
+    .goal-banner-content * {
+      background-color: inherit;
     }
     
     .goal-banner-close {
