@@ -390,7 +390,7 @@ The remaining 40 states will be added during the 2026 expansion:
 
 ---
 
-### � **Motor Disability Enhancements**
+### ♿ **Motor Disability Enhancements**
 **Who it helps:** People with limited fine motor control, tremors, mobility challenges  
 **Status:** Planning complete, development starting after beta
 
@@ -407,7 +407,7 @@ The remaining 40 states will be added during the 2026 expansion:
 
 ---
 
-### � **Stronger Community Safety**
+### 🛡️ **Stronger Community Safety**
 **Who it helps:** Everyone, especially vulnerable community members  
 **Status:** Planning complete, development during open beta
 
@@ -425,7 +425,7 @@ The remaining 40 states will be added during the 2026 expansion:
 
 ---
 
-### � **Indigenous Cultural Protections**
+### 🪶 **Indigenous Cultural Protections**
 **Who it helps:** Indigenous peoples and communities  
 **Status:** Planning complete, requires Indigenous elder consultation
 
@@ -799,7 +799,7 @@ These are **never-before-seen innovations** designed specifically to advance dis
 
 ---
 
-## � Building a Movement, Not Just an App
+## ✊ Building a Movement, Not Just an App
 
 **3mpwrApp isn't just technology - it's a tool for collective liberation.**
 
@@ -846,7 +846,7 @@ Until then, we build tools for the revolution. 🔥
 
 ---
 
-## �📣 Have Ideas? We Want to Hear!
+## 💡📣 Have Ideas? We Want to Hear!
 
 **Tell us what you need:**
 

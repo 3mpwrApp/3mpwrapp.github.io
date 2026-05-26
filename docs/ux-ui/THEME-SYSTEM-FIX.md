@@ -101,7 +101,7 @@ AXE: https://3mpwrapp.ca/privacy?no-modal=1 - 0 violation(s) ✅
 
 ---
 
-## � Color System (Light Mode - Verified Working)
+## 🎨 Color System (Light Mode - Verified Working)
 
 ### Footer
 | Element | Background | Text | Contrast | Status |

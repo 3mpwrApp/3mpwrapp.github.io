@@ -710,7 +710,7 @@ permalink: /campaigns/
 
 ---
 
-## � Campaign Ideas By Organizer Type
+## 📋 Campaign Ideas By Organizer Type
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
@@ -850,7 +850,7 @@ permalink: /campaigns/
 **Cross-movement solidarity builds power:**
 - 🌈 Intersectional campaigns (disability + race + gender + class)
 - 🏘️ Housing justice with accessibility requirements
-- � Anti-poverty campaigns centered on disabled people
+- 💰 Anti-poverty campaigns centered on disabled people
 - ⚖️ Criminal justice reform for disabled prisoners
 - 🌍 Environmental justice with accessibility focus
 - 📣 Coalition building across movements
@@ -862,7 +862,7 @@ permalink: /campaigns/
 
 ---
 
-## �💡 How to Get Involved
+## 🙌💡 How to Get Involved
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
@@ -964,7 +964,7 @@ permalink: /campaigns/
 📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Event%20Organization)
 
 **Need organizing support?**  
-� Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Organizing%20Support)
+📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Organizing%20Support)
 
 **Partnership inquiries?**  
 📝 Visit our [Connect page](/connect/)

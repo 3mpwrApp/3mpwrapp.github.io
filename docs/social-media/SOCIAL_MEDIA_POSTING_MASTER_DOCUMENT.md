@@ -1188,7 +1188,7 @@ Free tools → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=soc
 
 ---
 
-## � CATEGORY 4: RESOURCES (38 images) - LARGEST CATEGORY
+## 📚 CATEGORY 4: RESOURCES (38 images) - LARGEST CATEGORY
 
 ### Image 29: Resources Tab - PowerTools
 **Filename**: `ResourcesTab1-PowerTools.png`  
@@ -2114,7 +2114,7 @@ Use → https://3mpwrapp.ca/beta-guide/?utm_source=twitter&utm_medium=social&utm
 
 ---
 
-## �📊 POSTING STATISTICS & RECOMMENDATIONS
+## 📈📊 POSTING STATISTICS & RECOMMENDATIONS
 
 ### Optimal Posting Times by Content Type
 

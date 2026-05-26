@@ -1546,7 +1546,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     <li>✅ Check that the calendar is enabled/visible</li>
     <li>✅ Visit the website directly for instant updates (refreshes every 5 minutes)</li>
   </ul>
-  <p style="margin-top: 1rem;"><strong>� Still stuck?</strong> <a href="mailto:empowrapp08162025@gmail.com?subject=Calendar%20Subscription%20Help">Contact us</a> and we'll help you troubleshoot!</p>
+  <p style="margin-top: 1rem;"><strong>❓ Still stuck?</strong> <a href="mailto:empowrapp08162025@gmail.com?subject=Calendar%20Subscription%20Help">Contact us</a> and we'll help you troubleshoot!</p>
 </div>
 
 ---
@@ -1659,12 +1659,12 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 
 ---
 
-## � Quick Reference Card
+## 📋 Quick Reference Card
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 3px solid #0ea5e9; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-  <h3 style="margin-top: 0; text-align: center; color: #0369a1;">� Real-Time Calendar Sync is Live!</h3>
+  <h3 style="margin-top: 0; text-align: center; color: #0369a1;">✅ Real-Time Calendar Sync is Live!</h3>
   
   <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
     <p style="margin: 0 0 0.5rem; font-weight: bold; color: #0369a1;">🔗 Calendar Feed URL:</p>
@@ -1724,7 +1724,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 
 ---
 
-## �📞 Questions About Events?
+## ❓📞 Questions About Events?
 
 **Want to organize an event?**  
 📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Event%20Organization)

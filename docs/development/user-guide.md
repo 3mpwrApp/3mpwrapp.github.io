@@ -223,7 +223,7 @@ See full Privacy Policy at: https://3mpwrapp.ca/privacy
 
 ## 🎯 **Features Overview**
 
-### **� Home Tab**
+### **🏠 Home Tab**
 - Personalized daily suggestions
 - Quick access to AI assistant
 - Beta features announcements
@@ -475,7 +475,7 @@ We've added powerful AI-powered features that learn from your patterns and adapt
 - **Privacy-first** - All predictions happen on your device using your own data (no cloud processing)
 - **Beautiful visualization** - 24-hour energy chart with trend indicators, best/worst time predictions, and recommendations
 
-### � **ML-Powered Personalization** (Phase 6)
+### 🤖 **ML-Powered Personalization** (Phase 6)
 - **Pattern recognition** - App analyzes your activity, energy, mood, recovery, and engagement patterns
 - **Profile editor** - Customize your disability type, accommodations, energy patterns, and preferences
 - **Tool recommendations** - 9 ML-enhanced tools that adapt to your specific needs
@@ -501,14 +501,14 @@ We've added powerful AI-powered features that learn from your patterns and adapt
 - [Your Privacy and Security (Simple Explanation)](#your-privacy-and-security)
 - [How to Navigate the App](#how-to-navigate)
 
-### � **Complete Features Inventory** ✅
+### 📋 **Complete Features Inventory** ✅
 - [All 50+ Features Available](#all-features-available)
 - [Phase 6: ML-Driven Personalization](#phase-6-ml-personalization)
 - [Phase 5.5: Advanced Features](#phase-55-advanced)
 - [Phase 4: Core Tools](#phase-4-core)
 - [Phase 2-3: Community & Legal](#phase-2-3-community)
 
-### �🛠️ Main Features
+### 📖🛠️ Main Features
 - [Disability Wizard](#disability-wizard) **(NEW)** - Personalized recommendations just for you
 - [Advocacy Tools](#advocacy-tools) - Get help with letters, appeals, and legal issues
 - [Legal Workflow Automation](#legal-workflow-automation) **(NEW)** - Automated guidance for legal processes

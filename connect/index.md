@@ -342,8 +342,8 @@ Connect with us about:
 **Connect with us on social:**
 
 - 📘 **Facebook:** [@3mpowrapp](https://www.facebook.com/3mpowrapp/)
-- � **3mpwr App Hub** (Community Group): [Join our Facebook group](https://www.facebook.com/groups/1848263672453552)
-- �🐦 **X (Twitter):** [@3mpowrApp0816](https://x.com/3mpowrapp0816)
+- 👥 **3mpwr App Hub** (Community Group): [Join our Facebook group](https://www.facebook.com/groups/1848263672453552)
+- 🐦 **X (Twitter):** [@3mpowrApp0816](https://x.com/3mpowrapp0816)
 - 📸 **Instagram:** [@3mpwrapp](https://www.instagram.com/3mpwrapp/)
 - 🎥 **YouTube:** [3mpwrApp](https://www.youtube.com/3mpwrApp)
 - 🎵 **TikTok:** [@3mpwrapp](https://www.tiktok.com/@3mpwrapp)

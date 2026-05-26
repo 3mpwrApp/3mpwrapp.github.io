@@ -101,7 +101,7 @@ personalized: true
 <section style="max-width: 1200px; margin: 3rem auto; padding: 2rem; background: var(--hero-gradient-start, linear-gradient(135deg, #0066cc 0%, #004d99 100%)); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); color: var(--text-on-primary, white);">
   <div style="text-align: center;">
     <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-on-primary, white); text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
-      <span aria-hidden="true">??</span> NEW: Connecting the Dots � CanLII Keyword Network
+      <span aria-hidden="true">✨🔍</span> NEW: Connecting the Dots → CanLII Keyword Network
     </h2>
     <p style="font-size: 1.2rem; margin-bottom: 1rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto;">
       Explore 134,920+ tribunal decisions: Live interactive network graph revealing keyword relationships, denial patterns, and the hidden language used in Canadian tribunal decisions.
@@ -381,28 +381,28 @@ personalized: true
   
   <div class="app-tour-cta">
     <a href="/app-waitlist" class="app-tour-cta-button">
-      ?? Get Early Access � Launching Q2 2026
+      🚀 Get Early Access → Launching Q2 2026
     </a>
     <p class="app-tour-cta-text">
-      <strong>Limited beta spots</strong> � Be among the first 1,000 users
+      <strong>Limited beta spots</strong> → Be among the first 1,000 users
     </p>
   </div>
 </section>
 
 <!-- Theme Song Winner Announcement -->
 <section class="theme-song-winner">
-  <div class="trophy">??</div>
+  <div class="trophy">🏆</div>
   <h2>
-    <span aria-hidden="true">??</span> Official 3mpwr Theme Song
+    <span aria-hidden="true">🎶</span> Official 3mpwr Theme Song
   </h2>
   <p class="winner-text">
     Community Vote Winner: Option 1
   </p>
   <a href="https://suno.com/s/enuXDfFsc65WWAMr" target="_blank" rel="noopener noreferrer" class="btn-listen">
-    <span aria-hidden="true">??</span> Listen to Our Anthem
+    <span aria-hidden="true">▶️</span> Listen to Our Anthem
   </a>
   <p class="tagline">
-    This isn't just a song � it's our anthem. <span aria-hidden="true">??</span>
+    This isn't just a song → it's our anthem. <span aria-hidden="true">🔥</span>
   </p>
 </section>
 
@@ -415,10 +415,10 @@ personalized: true
     Be part of building something meaningful. Your voice matters, your experience counts, and you belong here.
   </p>
   <a href="/app-waitlist" class="homepage-btn-primary" style="display: inline-block; padding: 18px 40px; font-size: 1.2rem;">
-    Join the Beta Waitlist ?
+    Join the Beta Waitlist 🚀
   </a>
   <p style="margin-top: 1.5rem; opacity: 0.9; font-size: 0.95rem;">
-    No credit card required � 100% free forever � Cancel anytime (but there's nothing to cancel!)
+    No credit card required • 100% free forever • Cancel anytime (but there's nothing to cancel!)
   </p>
 </section>
 
