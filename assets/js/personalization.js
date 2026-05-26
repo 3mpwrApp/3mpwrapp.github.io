@@ -256,7 +256,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.85);
         z-index: 9998;
         display: none;
         animation: fadeIn 0.3s ease-out;
@@ -387,6 +387,17 @@
           font-size: 0.9rem;
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
           animation: fadeIn 0.3s ease-out;
+          background: #ffffff;
+          color: #111111;
+          border: 2px solid #d1d5db;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .personalization-badge {
+            background: #1a2332;
+            color: #ffffff;
+            border: 2px solid #374151;
+          }
         }
 
         @keyframes fadeIn {
