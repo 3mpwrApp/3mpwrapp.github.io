@@ -256,7 +256,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.85);
+        background: rgba(0, 0, 0, 0.95);
         z-index: 9998;
         display: none;
         animation: fadeIn 0.3s ease-out;
@@ -272,18 +272,26 @@
         position: fixed;
         top: 80px;
         right: 20px;
-        background: var(--card-bg, #f8f9fa);
-        border: 2px solid var(--border-color, #e0e0e0);
+        background: #ffffff;
+        border: 2px solid #d1d5db;
         border-radius: 8px;
         padding: 0.75rem 1rem;
         display: flex;
         align-items: center;
         gap: 0.75rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         z-index: 9999;
         font-size: 0.875rem;
-        color: var(--text-color, #333);
+        color: #111111;
         animation: slideIn 0.3s ease-out;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .personalization-badge {
+          background: #1a2332;
+          color: #ffffff;
+          border: 2px solid #374151;
+        }
       }
 
       @keyframes slideIn {
@@ -325,7 +333,13 @@
       }
 
       .badge-text strong {
-        color: var(--link-color, #0066cc);
+        color: #0066cc;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .badge-text strong {
+          color: #60a5fa;
+        }
       }
 
       .badge-actions {
@@ -334,19 +348,33 @@
       }
 
       .badge-reset {
-        background: var(--button-bg, #f5f5f5);
-        border: 1px solid var(--border-color, #d1d5db);
+        background: #f5f5f5;
+        border: 1px solid #d1d5db;
         border-radius: 4px;
         padding: 0.25rem 0.75rem;
         cursor: pointer;
         font-size: 0.8rem;
-        color: var(--text-color, #333);
+        color: #111111;
         transition: all 0.2s;
         white-space: nowrap;
       }
 
+      @media (prefers-color-scheme: dark) {
+        .badge-reset {
+          background: #374151;
+          color: #ffffff;
+          border: 1px solid #4b5563;
+        }
+      }
+
       .badge-reset:hover {
-        background: var(--button-hover-bg, #e0e0e0);
+        background: #e0e0e0;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .badge-reset:hover {
+          background: #4b5563;
+        }
       }
 
       .badge-dismiss {
@@ -355,7 +383,7 @@
         cursor: pointer;
         font-size: 1.5rem;
         line-height: 1;
-        color: var(--text-color, #666);
+        color: #666666;
         padding: 0;
         width: 24px;
         height: 24px;
@@ -366,9 +394,21 @@
         order: -1;
       }
 
+      @media (prefers-color-scheme: dark) {
+        .badge-dismiss {
+          color: #9ca3af;
+        }
+      }
+
       .badge-dismiss:hover {
-        color: var(--error-color, #dc2626);
+        color: #dc2626;
         transform: scale(1.2);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .badge-dismiss:hover {
+          color: #ef4444;
+        }
       }
 
       @media (max-width: 768px) {
@@ -385,18 +425,18 @@
           align-items: stretch;
           padding: 1rem;
           font-size: 0.9rem;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
           animation: fadeIn 0.3s ease-out;
           background: #ffffff;
           color: #111111;
-          border: 2px solid #d1d5db;
+          border: 3px solid #d1d5db;
         }
 
         @media (prefers-color-scheme: dark) {
           .personalization-badge {
             background: #1a2332;
             color: #ffffff;
-            border: 2px solid #374151;
+            border: 3px solid #374151;
           }
         }
 
