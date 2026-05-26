@@ -1,4 +1,10 @@
 /**
+ * 3mpwrApp™ - Goal-Based Onboarding System
+ * Copyright (c) 2025-2026 Lissa Beaulieu, operating as 3mpwrApp (Sole Proprietorship)
+ * 
+ * This file is part of 3mpwrApp™.
+ * Licensed under AGPL-3.0. See LICENSE file in the project root.
+ * 
  * Goal-Based Onboarding System
  * "What do you need right now?" approach
  * Replaces generic persona selection with specific goal-driven paths
@@ -66,20 +72,38 @@ const GOALS = {
  * Initialize goal-based onboarding
  */
 function initGoalOnboarding() {
-  // Check if user already has a goal or persona
-  const savedGoal = localStorage.getItem('3mpwrapp_goal');
-  const savedPersona = localStorage.getItem('3mpwrapp_persona');
-  
-  if (savedGoal || savedPersona) {
-    // Already onboarded, apply their saved preferences
-    return;
-  }
-  
-  // First visit - show goal selection (with delay for non-intrusive UX)
-  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-    setTimeout(() => {
-      showGoalSelector();
-    }, 1000); // 1 second delay so they see the homepage first
+  try {
+    // Check if localStorage is available
+    if (typeof localStorage === 'undefined') {
+      console.warn('localStorage not available - onboarding disabled');
+      return;
+    }
+    
+    // Check if user already has a goal, persona, or dismissed this session
+    const savedGoal = localStorage.getItem('3mpwrapp_goal');
+    const savedPersona = localStorage.getItem('3mpwrapp_persona');
+    const dismissed = sessionStorage.getItem('3mpwrapp_goalDismissed');
+    
+    if (savedGoal || savedPersona || dismissed) {
+      // Already onboarded or dismissed this session
+      return;
+    }
+    
+    // Match homepage with any variation (/, /index, /index.html, /index/)
+    const path = window.location.pathname;
+    const isHomepage = path === '/' || 
+                       path === '/index' || 
+                       path === '/index.html' || 
+                       path === '/index/' ||
+                       path.endsWith('/index.html');
+    
+    if (isHomepage) {
+      setTimeout(() => {
+        showGoalSelector();
+      }, 1000); // 1 second delay so they see the homepage first
+    }
+  } catch (error) {
+    console.error('Goal onboarding initialization failed:', error);
   }
 }
 
@@ -93,12 +117,12 @@ function showGoalSelector() {
   banner.setAttribute('aria-labelledby', 'goal-selector-title');
   banner.innerHTML = `
     <div class="goal-banner-content">
-      <button class="goal-banner-close" aria-label="Close" onclick="dismissGoalSelector()">×</button>
+      <button class="goal-banner-close" aria-label="Close" data-action="dismiss">×</button>
       <h2 id="goal-selector-title">👋 Welcome! What brings you here today?</h2>
       <p>Help us show you the most relevant resources first</p>
       <div class="goal-options">
         ${Object.entries(GOALS).map(([key, goal]) => `
-          <button class="goal-option" data-goal="${key}" onclick="selectGoal('${key}')">
+          <button class="goal-option" data-goal="${key}" data-action="select-goal">
             <span class="goal-icon">${goal.icon}</span>
             <span class="goal-title">${goal.title}</span>
             <span class="goal-desc">${goal.description}</span>
@@ -106,7 +130,7 @@ function showGoalSelector() {
         `).join('')}
       </div>
       <div class="goal-banner-footer">
-        <button class="goal-skip-button" onclick="skipGoalSelection()">
+        <button class="goal-skip-button" data-action="skip">
           Skip for now - I'll browse on my own
         </button>
       </div>
@@ -115,6 +139,21 @@ function showGoalSelector() {
   
   document.body.appendChild(banner);
   injectGoalStyles();
+  
+  // Event delegation for all buttons
+  banner.addEventListener('click', (e) => {
+    const button = e.target.closest('[data-action]');
+    if (!button) return;
+    
+    const action = button.dataset.action;
+    if (action === 'dismiss') {
+      dismissGoalSelector();
+    } else if (action === 'select-goal') {
+      selectGoal(button.dataset.goal);
+    } else if (action === 'skip') {
+      skipGoalSelection();
+    }
+  });
   
   // Focus management for accessibility
   setTimeout(() => {
@@ -374,10 +413,7 @@ function injectGoalStyles() {
   document.head.appendChild(styles);
 }
 
-// Expose functions globally
-window.selectGoal = selectGoal;
-window.dismissGoalSelector = dismissGoalSelector;
-window.skipGoalSelection = skipGoalSelection;
+// Expose resetGoal globally (for settings/debug use)
 window.resetGoal = resetGoal;
 
 // Initialize on page load

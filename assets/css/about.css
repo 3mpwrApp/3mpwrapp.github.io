@@ -12,12 +12,12 @@
 }
 
 .funding-card {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--card-bg, white);
   padding: 2rem;
   border-radius: 12px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 2px solid transparent;
+  border: 2px solid var(--border-color, transparent);
 }
 
 .funding-card:hover {
@@ -26,19 +26,19 @@
 }
 
 .funding-card.highlight {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-color: #667eea;
+  background: var(--highlight-gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+  color: var(--text-on-primary, white);
+  border-color: var(--primary-color, #667eea);
 }
 
 .funding-card.highlight h4,
 .funding-card.highlight p {
-  color: white;
+  color: var(--text-on-primary, white);
 }
 
 .funding-card.reject {
-  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
-  border-color: #dc3545;
+  background: var(--error-bg, #f8d7da);
+  border-color: var(--error-color, #dc3545);
 }
 
 .funding-icon {
@@ -51,21 +51,21 @@
   margin: 0 0 0.75rem 0;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--text-color, #2c3e50);
   text-align: center;
 }
 
 .funding-card p {
   margin: 0;
   font-size: 1rem;
-  color: #34495e;
+  color: var(--text-secondary, #34495e);
   line-height: 1.6;
   text-align: left;
 }
 
 .mission-statement {
-  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
-  color: white;
+  background: var(--success-gradient, linear-gradient(135deg, #4caf50 0%, #45a049 100%));
+  color: var(--text-on-primary, white);
   padding: 1.5rem 2rem;
   border-radius: 8px;
   text-align: center;
@@ -83,10 +83,10 @@
 }
 
 .difference-card {
-  background: white;
+  background: var(--card-bg, white);
   padding: 2rem;
   border-radius: 12px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--primary-color, #667eea);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
@@ -107,32 +107,32 @@
   margin: 0 0 0.75rem 0;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--text-color, #2c3e50);
   text-align: left;
 }
 
 .difference-card p {
   margin: 0;
   font-size: 1rem;
-  color: #34495e;
+  color: var(--text-secondary, #34495e);
   line-height: 1.6;
   text-align: left;
 }
 
 /* Mission Box */
 .mission-box {
-  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  background: var(--info-bg, #e3f2fd);
   padding: 2.5rem;
   border-radius: 12px;
   margin: 2rem 0;
   box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
-  border: 2px solid #2196f3;
+  border: 2px solid var(--info-border, #2196f3);
 }
 
 .mission-text {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #1565c0;
+  color: var(--info-text, #1565c0);
   margin: 0 0 2rem 0;
   text-align: center;
   font-weight: 500;
@@ -140,7 +140,7 @@
 
 /* Privacy Highlights */
 .privacy-highlights {
-  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  background: var(--privacy-bg, #f3e5f5);
   padding: 2.5rem;
   border-radius: 12px;
   margin: 2rem 0;
@@ -151,7 +151,7 @@
   text-align: center;
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background: white;
+  background: var(--card-bg, white);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -159,11 +159,11 @@
 .privacy-guarantee h3 {
   margin: 0;
   font-size: 1.75rem;
-  color: #6a1b9a;
+  color: var(--privacy-text, #6a1b9a);
 }
 
 .privacy-guarantee strong {
-  color: #4a148c;
+  color: var(--privacy-text-strong, #4a148c);
   font-size: 2rem;
 }
 

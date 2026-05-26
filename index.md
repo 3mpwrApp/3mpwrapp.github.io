@@ -73,7 +73,7 @@ permalink: /
     </a>
   </div>
     <div style="margin: 1.5rem 0;">
-    <a href="https://www.youtube.com/@3mpwrApp" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #FF0000; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s;" onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FF0000'">
+    <a href="https://www.youtube.com/@3mpwrApp" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--youtube-red, #FF0000); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
       <span aria-hidden="true">??</span>
       <span>Subscribe on YouTube</span>
     </a>
@@ -90,9 +90,9 @@ permalink: /
 </section>
 
 <!-- CanLII Research Banner -->
-<section style="max-width: 1200px; margin: 3rem auto; padding: 2rem; background: linear-gradient(135deg, #0066cc 0%, #004d99 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); color: white;">
+<section style="max-width: 1200px; margin: 3rem auto; padding: 2rem; background: var(--hero-gradient-start, linear-gradient(135deg, #0066cc 0%, #004d99 100%)); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); color: var(--text-on-primary, white);">
   <div style="text-align: center;">
-    <h2 style="font-size: 2rem; margin-bottom: 1rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-on-primary, white); text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
       <span aria-hidden="true">??</span> NEW: Connecting the Dots � CanLII Keyword Network
     </h2>
     <p style="font-size: 1.2rem; margin-bottom: 1rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -104,12 +104,12 @@ permalink: /
       </p>
     </div>
     <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="/connecting-the-dots-canlii-keyword-visualization-network.html" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: white; color: #0066cc; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.2)'">
+      <a href="/connecting-the-dots-canlii-keyword-visualization-network.html" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: var(--card-bg, white); color: var(--primary-color, #0066cc); border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.2)'">
         <span aria-hidden="true">??</span>
         <span>Launch Interactive Visualization</span>
         <span aria-hidden="true">?</span>
       </a>
-      <a href="/research.html" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+      <a href="/research.html" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: rgba(255,255,255,0.15); color: var(--text-on-primary, white); border: 2px solid var(--text-on-primary, white); border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
         <span aria-hidden="true">??</span>
         <span>All Research Tools</span>
       </a>
@@ -124,10 +124,10 @@ permalink: /
 <section class="value-props" style="margin-bottom: 4rem;">
 
   <!-- AI Interactive Demo -->
-  <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);">
-    <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #fff;">?? See 3MPWRAPP In Action</h2>
-    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: #fff; opacity: 0.95;">Try our interactive demo! Explore how Evidence Locker, Parse Claim, Deadline Tracker, and Letter Wizard help Canadians organize evidence, decode decisions, and create systemic change.</p>
-    <a href="/demo/" style="display: inline-block; padding: 16px 36px; background: #fff; color: #667eea; border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+  <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: var(--demo-gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%)); border-radius: 12px; box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);">
+    <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-on-primary, #fff);">?? See 3MPWRAPP In Action</h2>
+    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-on-primary, #fff); opacity: 0.95;">Try our interactive demo! Explore how Evidence Locker, Parse Claim, Deadline Tracker, and Letter Wizard help Canadians organize evidence, decode decisions, and create systemic change.</p>
+    <a href="/demo/" style="display: inline-block; padding: 16px 36px; background: var(--card-bg, #fff); color: var(--demo-button-text, #667eea); border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
       <span aria-hidden="true">??</span> Launch Interactive Demo
     </a>
   </section>
@@ -153,7 +153,7 @@ permalink: /
       <p>
         Created by someone who lived it. Every feature designed with real experiences from injured workers and disabled people.
       </p>
-      <a href="/about" style="color: #003d7a; text-decoration: none; font-weight: 600;">
+      <a href="/about" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 600;">
         Learn More About 3mpwrApp ?
       </a>
     </div>
@@ -165,7 +165,7 @@ permalink: /
       <p>
         Evidence locker, pain tracker, medication manager, legal resources, and more. Everything you need in one place.
       </p>
-      <a href="/features/" style="color: #005a00; text-decoration: none; font-weight: 600;">
+      <a href="/features/" style="color: var(--link-color, #005a00); text-decoration: none; font-weight: 600;">
         Explore All Features ?
       </a>
     </div>
@@ -177,7 +177,7 @@ permalink: /
       <p>
         Built for brain fog, chronic pain, and fatigue. Complexity toggle, need-a-break button, and pain flare mode.
       </p>
-      <a href="/accessibility" style="color: #5a189a; text-decoration: none; font-weight: 600;">
+      <a href="/accessibility" style="color: var(--link-color, #5a189a); text-decoration: none; font-weight: 600;">
         Accessibility Features ?
       </a>
     </div>
@@ -286,7 +286,7 @@ permalink: /
   </div>
   
   <div style="text-align: center; margin-top: 2.5rem;">
-    <a href="/features/" style="display: inline-block; padding: 14px 32px; background: #3d4eaa; color: white; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(61, 78, 170, 0.2);">
+    <a href="/features/" style="display: inline-block; padding: 14px 32px; background: var(--button-primary-bg, #3d4eaa); color: var(--button-primary-text, white); border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(61, 78, 170, 0.2);">
       See All 60+ Revolutionary Features ?
     </a>
   </div>
@@ -426,38 +426,38 @@ permalink: /
   </h2>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto;">
     
-    <div style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #3d4eaa;">
-      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: #3d4eaa;">
+    <div style="padding: 1.5rem; background: var(--card-bg, white); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid var(--accent-blue, #3d4eaa);">
+      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--accent-blue, #3d4eaa);">
         <span aria-hidden="true">??</span> Documentation
       </h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="margin: 0.5rem 0;"><a href="/user-guide/" style="color: #003d7a; text-decoration: none; font-weight: 500;">User Guide</a></li>
-        <li style="margin: 0.5rem 0;"><a href="/faq/" style="color: #003d7a; text-decoration: none; font-weight: 500;">FAQ</a></li>
-        <li style="margin: 0.5rem 0;"><a href="/app-tour/" style="color: #003d7a; text-decoration: none; font-weight: 500;">App Tour</a></li>
-        <li style="margin: 0.5rem 0;"><a href="/whats-new/" style="color: #003d7a; text-decoration: none; font-weight: 500;">What's New</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/user-guide/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">User Guide</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/faq/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">FAQ</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/app-tour/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">App Tour</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/whats-new/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">What's New</a></li>
       </ul>
     </div>
     
-    <div style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #10b981;">
-      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: #10b981;">
+    <div style="padding: 1.5rem; background: var(--card-bg, white); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid var(--accent-green, #10b981);">
+      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--accent-green, #10b981);">
         <span aria-hidden="true">???</span> Privacy & Security
       </h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="margin: 0.5rem 0;"><a href="/privacy/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Privacy Policy</a></li>
-        <li style="margin: 0.5rem 0;"><a href="/security/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Security</a></li>
-        <li style="margin: 0.5rem 0;"><a href="/accessibility" style="color: #003d7a; text-decoration: none; font-weight: 500;">Accessibility</a></li>
-        <li style="margin: 0.5rem 0;"><a href="/delete-account.html" style="color: #003d7a; text-decoration: none; font-weight: 500;">Delete Account</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/privacy/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">Privacy Policy</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/security/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">Security</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/accessibility" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">Accessibility</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/delete-account.html" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">Delete Account</a></li>
       </ul>
     </div>
     
-    <div style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #f59e0b;">
-      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: #f59e0b;">
+    <div style="padding: 1.5rem; background: var(--card-bg, white); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid var(--accent-orange, #f59e0b);">
+      <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--accent-orange, #f59e0b);">
         <span aria-hidden="true">??</span> Community & Support
       </h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="margin: 0.5rem 0;"><a href="/community/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Community Hub</a></li>
-        <li style="margin: 0.5rem 0;"><a href="/community/guidelines/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Community Guidelines</a></li>
-        <li style="margin: 0.5rem 0;"><a href="/contact/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Contact Us</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/community/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">Community Hub</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/community/guidelines/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">Community Guidelines</a></li>
+        <li style="margin: 0.5rem 0;"><a href="/contact/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">Contact Us</a></li>
         <li style="margin: 0.5rem 0;"><a href="/crisis-resources/" style="color: #003d7a; text-decoration: none; font-weight: 500;">Crisis Resources</a></li>
       </ul>
     </div>

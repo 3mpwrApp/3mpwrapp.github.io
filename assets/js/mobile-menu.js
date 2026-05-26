@@ -1,4 +1,10 @@
 /**
+ * 3mpwrApp™ - Mobile Menu Toggle
+ * Copyright (c) 2025-2026 Lissa Beaulieu, operating as 3mpwrApp (Sole Proprietorship)
+ * 
+ * This file is part of 3mpwrApp™.
+ * Licensed under AGPL-3.0. See LICENSE file in the project root.
+ * 
  * Mobile Menu Toggle
  * Accessible mobile navigation with keyboard support and focus management
  * 
