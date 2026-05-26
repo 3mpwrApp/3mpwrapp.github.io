@@ -3,7 +3,15 @@ layout: default
 title: 3mpwrApp - Community Support for Injured Workers & Persons with Disabilities
 description: Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy.
 permalink: /
+personalized: true
 ---
+
+<script>
+  // Mark body as personalized on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.setAttribute('data-personalized', 'true');
+  });
+</script>
 
 <link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/accessibility-toolbar.css' | relative_url }}">

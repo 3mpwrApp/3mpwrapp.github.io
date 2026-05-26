@@ -1,0 +1,314 @@
+/**
+ * 3mpwrApp™ - Content Personalization Engine
+ * Copyright (c) 2025-2026 Lissa Beaulieu, operating as 3mpwrApp (Sole Proprietorship)
+ * Licensed under AGPL-3.0. See LICENSE file in the project root.
+ * First Use: 2026
+ * 
+ * Personalizes website content based on user's goal selection
+ */
+
+(function() {
+  'use strict';
+
+  // Feature visibility rules for each persona
+  const PERSONA_FEATURES = {
+    'injured-worker': {
+      show: ['.claim-filing', '.evidence-management', '.tribunal-prep', '.community-support', '.crisis-resources'],
+      hide: ['.legal-only', '.advocate-only'],
+      priority: ['claim-filing', 'evidence-management', 'tribunal-prep']
+    },
+    'advocate': {
+      show: ['.advocate-tools', '.partnership-info', '.research-database', '.community-support'],
+      hide: ['.legal-only'],
+      priority: ['advocate-tools', 'partnerships', 'research-database']
+    },
+    'legal': {
+      show: ['.research-advanced', '.analytics-dashboard', '.case-comparison', '.ai-analysis'],
+      hide: ['.beginner-only'],
+      priority: ['research-database', 'ai-assistant', 'analytics']
+    },
+    'explorer': {
+      show: [], // Show everything
+      hide: [],
+      priority: []
+    }
+  };
+
+  // Progress-based feature visibility
+  const PROGRESS_THRESHOLDS = {
+    beginner: 0,   // 0-15%
+    intermediate: 15, // 15-40%
+    advanced: 40   // 40%+
+  };
+
+  /**
+   * Apply persona-based filtering to page content
+   */
+  window.applyPersonaFilter = function() {
+    try {
+      const persona = localStorage.getItem('3mpwrapp_persona');
+      if (!persona || persona === 'explorer') {
+        // Show everything for explorers or if no persona set
+        return;
+      }
+
+      const rules = PERSONA_FEATURES[persona];
+      if (!rules) return;
+
+      // Hide persona-specific sections
+      rules.hide.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+          el.style.display = 'none';
+          el.setAttribute('aria-hidden', 'true');
+        });
+      });
+
+      // Ensure relevant sections are visible
+      rules.show.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+          el.style.display = '';
+          el.removeAttribute('aria-hidden');
+        });
+      });
+
+      console.log(`[Personalization] Applied persona filter: ${persona}`);
+    } catch (error) {
+      console.error('[Personalization] Error applying persona filter:', error);
+    }
+  };
+
+  /**
+   * Apply progress-based filtering (hide advanced features for beginners)
+   */
+  window.applyProgressFilter = function() {
+    try {
+      const progress = parseInt(localStorage.getItem('3mpwrapp_progress') || '0', 10);
+      
+      let level = 'beginner';
+      if (progress >= PROGRESS_THRESHOLDS.advanced) {
+        level = 'advanced';
+      } else if (progress >= PROGRESS_THRESHOLDS.intermediate) {
+        level = 'intermediate';
+      }
+
+      // Hide content above user's level
+      if (level === 'beginner') {
+        document.querySelectorAll('.advanced-only, .intermediate-only').forEach(el => {
+          el.style.display = 'none';
+          el.setAttribute('aria-hidden', 'true');
+        });
+      } else if (level === 'intermediate') {
+        document.querySelectorAll('.advanced-only').forEach(el => {
+          el.style.display = 'none';
+          el.setAttribute('aria-hidden', 'true');
+        });
+      }
+
+      console.log(`[Personalization] Applied progress filter: ${level} (${progress}%)`);
+    } catch (error) {
+      console.error('[Personalization] Error applying progress filter:', error);
+    }
+  };
+
+  /**
+   * Reorder content sections based on user's help priorities
+   */
+  window.reorderContent = function() {
+    try {
+      const helpPriorityStr = localStorage.getItem('3mpwrapp_helpPriority');
+      if (!helpPriorityStr) return;
+
+      const helpPriority = JSON.parse(helpPriorityStr);
+      
+      // Find content containers with data-feature attributes
+      const containers = document.querySelectorAll('[data-feature]');
+      const parent = containers[0]?.parentElement;
+      
+      if (!parent || containers.length === 0) return;
+
+      // Create array of [element, priority] pairs
+      const prioritized = Array.from(containers).map(el => {
+        const feature = el.getAttribute('data-feature');
+        const priority = helpPriority.indexOf(feature);
+        return { element: el, priority: priority === -1 ? 999 : priority };
+      });
+
+      // Sort by priority (lower number = higher priority)
+      prioritized.sort((a, b) => a.priority - b.priority);
+
+      // Re-append in new order
+      prioritized.forEach(item => {
+        parent.appendChild(item.element);
+      });
+
+      console.log(`[Personalization] Reordered content based on priorities:`, helpPriority);
+    } catch (error) {
+      console.error('[Personalization] Error reordering content:', error);
+    }
+  };
+
+  /**
+   * Add personalization badge to show active goal
+   */
+  function showPersonalizationBadge() {
+    try {
+      const goal = localStorage.getItem('3mpwrapp_goal');
+      if (!goal || goal === 'exploring') return;
+
+      const badge = document.createElement('div');
+      badge.id = 'personalization-badge';
+      badge.className = 'personalization-badge';
+      badge.innerHTML = `
+        <span class="badge-text">✨ Personalized for: <strong>${getGoalTitle(goal)}</strong></span>
+        <button class="badge-reset" onclick="resetPersonalization()" aria-label="Reset personalization">
+          Change
+        </button>
+      `;
+      
+      document.body.appendChild(badge);
+      injectBadgeStyles();
+    } catch (error) {
+      console.error('[Personalization] Error showing badge:', error);
+    }
+  }
+
+  /**
+   * Get human-readable goal title
+   */
+  function getGoalTitle(goalKey) {
+    const titles = {
+      'filing-claim': 'Filing a Claim',
+      'hearing-prep': 'Hearing Prep',
+      'just-injured': 'Getting Started',
+      'supporting-someone': 'Supporting Someone',
+      'legal-professional': 'Legal Research',
+      'exploring': 'Exploring'
+    };
+    return titles[goalKey] || 'Unknown';
+  }
+
+  /**
+   * Reset personalization (allow user to choose again)
+   */
+  window.resetPersonalization = function() {
+    localStorage.removeItem('3mpwrapp_goal');
+    localStorage.removeItem('3mpwrapp_persona');
+    localStorage.removeItem('3mpwrapp_progress');
+    localStorage.removeItem('3mpwrapp_features');
+    localStorage.removeItem('3mpwrapp_helpPriority');
+    sessionStorage.removeItem('3mpwrapp_goalDismissed');
+    
+    location.reload();
+  };
+
+  /**
+   * Inject CSS for personalization badge
+   */
+  function injectBadgeStyles() {
+    if (document.getElementById('personalization-badge-styles')) return;
+
+    const styles = document.createElement('style');
+    styles.id = 'personalization-badge-styles';
+    styles.textContent = `
+      .personalization-badge {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: var(--card-bg, #f8f9fa);
+        border: 2px solid var(--border-color, #e0e0e0);
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        font-size: 0.875rem;
+        color: var(--text-color, #333);
+        animation: slideIn 0.3s ease-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .badge-text {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .badge-text strong {
+        color: var(--link-color, #0066cc);
+      }
+
+      .badge-reset {
+        background: var(--button-bg, #f5f5f5);
+        border: 1px solid var(--border-color, #d1d5db);
+        border-radius: 4px;
+        padding: 0.25rem 0.75rem;
+        cursor: pointer;
+        font-size: 0.8rem;
+        color: var(--text-color, #333);
+        transition: all 0.2s;
+      }
+
+      .badge-reset:hover {
+        background: var(--button-hover-bg, #e0e0e0);
+      }
+
+      @media (max-width: 768px) {
+        .personalization-badge {
+          top: auto;
+          bottom: 20px;
+          right: 10px;
+          left: 10px;
+          font-size: 0.8rem;
+          padding: 0.5rem 0.75rem;
+        }
+      }
+    `;
+
+    document.head.appendChild(styles);
+  }
+
+  /**
+   * Initialize personalization on page load
+   */
+  function initPersonalization() {
+    // Only apply on pages that opt-in with data-personalized attribute
+    if (!document.body.hasAttribute('data-personalized')) {
+      console.log('[Personalization] Page not marked for personalization');
+      return;
+    }
+
+    const goal = localStorage.getItem('3mpwrapp_goal');
+    if (!goal) {
+      console.log('[Personalization] No goal set, skipping personalization');
+      return;
+    }
+
+    console.log('[Personalization] Initializing for goal:', goal);
+
+    // Apply all personalization filters
+    applyPersonaFilter();
+    applyProgressFilter();
+    reorderContent();
+    showPersonalizationBadge();
+  }
+
+  // Run on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPersonalization);
+  } else {
+    initPersonalization();
+  }
+
+})();
