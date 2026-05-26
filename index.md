@@ -42,7 +42,7 @@ personalized: true
     <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="80" height="80" loading="eager" style="margin-bottom: 1.5rem;">
   </picture>
   
-  <h1>Tools, Support & Community � All in One Place</h1>
+  <h1>Tools, Support &amp; Community — All in One Place</h1>
   
   <p class="homepage-hero-subtitle">
     Empowering injured workers, persons with disabilities, and allies across Canada with 100% free resources
@@ -71,10 +71,10 @@ personalized: true
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="/app-waitlist" class="homepage-btn-primary">
       <span>Join the Beta</span>
-      <span aria-hidden="true">?</span>
+      <span aria-hidden="true">▶</span>
     </a>
     <a href="https://www.youtube.com/watch?v=4i6xPpik_6M" class="homepage-btn-secondary" target="_blank" rel="noopener noreferrer">
-      <span>?? Watch Tutorial</span>
+      <span>📺 Watch Tutorial</span>
     </a>
     <a href="/about" class="homepage-btn-secondary">
       <span>Learn More</span>
@@ -82,17 +82,17 @@ personalized: true
   </div>
     <div style="margin: 1.5rem 0;">
     <a href="https://www.youtube.com/@3mpwrApp" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--youtube-red, #FF0000); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
-      <span aria-hidden="true">??</span>
+      <span aria-hidden="true">▶</span>
       <span>Subscribe on YouTube</span>
     </a>
   </div>
     <div class="homepage-badge">
     <p>
-      <span aria-hidden="true">??</span> Privacy Focused
+      <span aria-hidden="true">🔒</span> Privacy Focused
       <span style="margin: 0 1rem; opacity: 0.5;">|</span>
-      <span aria-hidden="true">??</span> Community Powered
+      <span aria-hidden="true">👥</span> Community Powered
       <span style="margin: 0 1rem; opacity: 0.5;">|</span>
-      <span aria-hidden="true">?</span> No Corporate Control
+      <span aria-hidden="true">🛡️</span> No Corporate Control
     </p>
   </div>
 </section>

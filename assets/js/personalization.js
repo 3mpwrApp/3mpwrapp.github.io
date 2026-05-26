@@ -155,14 +155,23 @@
       const goal = localStorage.getItem('3mpwrapp_goal');
       if (!goal || goal === 'exploring') return;
 
+      // Check if user dismissed the badge this session
+      const dismissed = sessionStorage.getItem('3mpwrapp_badgeDismissed');
+      if (dismissed) return;
+
       const badge = document.createElement('div');
       badge.id = 'personalization-badge';
       badge.className = 'personalization-badge';
       badge.innerHTML = `
-        <span class="badge-text">✨ Personalized for: <strong>${getGoalTitle(goal)}</strong></span>
-        <button class="badge-reset" onclick="resetPersonalization()" aria-label="Reset personalization">
-          Change
+        <button class="badge-dismiss" onclick="dismissPersonalizationBadge()" aria-label="Dismiss personalization notice">
+          &times;
         </button>
+        <span class="badge-text">✨ Personalized for: <strong>${getGoalTitle(goal)}</strong></span>
+        <div class="badge-actions">
+          <button class="badge-reset" onclick="resetPersonalization()" aria-label="Reset personalization">
+            Change
+          </button>
+        </div>
       `;
       
       document.body.appendChild(badge);
@@ -171,6 +180,22 @@
       console.error('[Personalization] Error showing badge:', error);
     }
   }
+
+  /**
+   * Dismiss personalization badge for this session
+   */
+  window.dismissPersonalizationBadge = function() {
+    try {
+      sessionStorage.setItem('3mpwrapp_badgeDismissed', 'true');
+      const badge = document.getElementById('personalization-badge');
+      if (badge) {
+        badge.style.animation = 'slideOut 0.3s ease-out';
+        setTimeout(() => badge.remove(), 300);
+      }
+    } catch (error) {
+      console.error('[Personalization] Error dismissing badge:', error);
+    }
+  };
 
   /**
    * Get human-readable goal title
@@ -239,14 +264,31 @@
         }
       }
 
+      @keyframes slideOut {
+        from {
+          opacity: 1;
+          transform: scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+      }
+
       .badge-text {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        flex: 1;
       }
 
       .badge-text strong {
         color: var(--link-color, #0066cc);
+      }
+
+      .badge-actions {
+        display: flex;
+        gap: 0.5rem;
       }
 
       .badge-reset {
@@ -258,20 +300,87 @@
         font-size: 0.8rem;
         color: var(--text-color, #333);
         transition: all 0.2s;
+        white-space: nowrap;
       }
 
       .badge-reset:hover {
         background: var(--button-hover-bg, #e0e0e0);
       }
 
+      .badge-dismiss {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        line-height: 1;
+        color: var(--text-color, #666);
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        order: -1;
+      }
+
+      .badge-dismiss:hover {
+        color: var(--error-color, #dc2626);
+        transform: scale(1.2);
+      }
+
       @media (max-width: 768px) {
         .personalization-badge {
-          top: auto;
-          bottom: 20px;
-          right: 10px;
-          left: 10px;
-          font-size: 0.8rem;
-          padding: 0.5rem 0.75rem;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          right: auto;
+          bottom: auto;
+          transform: translate(-50%, -50%);
+          max-width: calc(100vw - 40px);
+          width: auto;
+          flex-direction: column;
+          align-items: stretch;
+          padding: 1rem;
+          font-size: 0.9rem;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+
+        .badge-dismiss {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+          order: 0;
+        }
+
+        .badge-text {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.25rem;
+          padding-right: 2rem;
+        }
+
+        .badge-actions {
+          width: 100%;
+          margin-top: 0.5rem;
+        }
+
+        .badge-reset {
+          width: 100%;
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
         }
       }
     `;

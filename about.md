@@ -365,7 +365,7 @@ Beyond 3mpwrApp, I run **[Injured Workers Unite](https://injuredworkersunite.pag
 🔗 [Visit Injured Workers Unite →](https://injuredworkersunite.pages.dev/)  
 
 🐦 [Follow @PhoenixRizin09 on X →](https://x.com/PhoenixRizin09)  
-�📚 [Find me on Goodreads →](https://www.goodreads.com/user/show/1581978-lissa)
+📚 [Find me on Goodreads →](https://www.goodreads.com/user/show/1581978-lissa)
 
 **From the ashes, we rise. 🔥**
 
