@@ -135,9 +135,14 @@ personalized: true
   <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: var(--demo-gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%)); border-radius: 12px; box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);">
     <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-on-primary, #fff);">🎯 See 3MPWRAPP In Action</h2>
     <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-on-primary, #fff); opacity: 0.95;">Try our interactive demo! Explore how Evidence Locker, Parse Claim, Deadline Tracker, and Letter Wizard help Canadians organize evidence, decode decisions, and create systemic change.</p>
-    <a href="/demo/" style="display: inline-block; padding: 16px 36px; background: var(--card-bg, #fff); color: var(--demo-button-text, #667eea); border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-      <span aria-hidden="true">🚀</span> Launch Interactive Demo
-    </a>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="/demo/" style="display: inline-block; padding: 16px 36px; background: var(--card-bg, #fff); color: var(--demo-button-text, #667eea); border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+        <span aria-hidden="true">🚀</span> Launch Interactive Demo
+      </a>
+      <a href="/app-tour/" style="display: inline-block; padding: 16px 36px; background: rgba(255,255,255,0.2); color: #fff; border: 2px solid rgba(255,255,255,0.4); border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: all 0.2s;">
+        <span aria-hidden="true">📱</span> View App Screenshots
+      </a>
+    </div>
   </section>
 
   <!-- Data Download / GitHub Link -->
@@ -300,94 +305,7 @@ personalized: true
   </div>
 </section>
 
-<!-- App Tour with Real Screenshots -->
-<!-- App Tour with Real Screenshots -->
-<section class="app-tour-section">
-  <h2 class="app-tour-heading">
-    See the App in Action
-  </h2>
-  <p class="app-tour-intro">
-    Real screenshots from the 3mpwr App. <strong>Available Q2 2026</strong> for iOS and Android.
-  </p>
-  
-  <div class="app-tour-grid">
-    
-    <!-- Home Screen Tab 1 -->
-    <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeScreenTab1.png' | relative_url }}" 
-           alt="3mpwrApp home dashboard with personalized widgets, quick actions, and AI assistant for disability rights advocacy" 
-           loading="lazy">
-      <div class="app-tour-card-content">
-        <h3 class="app-tour-card-title">Home Dashboard</h3>
-        <p class="app-tour-card-description">Personalized widgets, quick actions, and AI assistant for your advocacy journey</p>
-      </div>
-    </div>
-    
-    <!-- AI Assistant -->    <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/AIAssistantTab1-YouNext3Steps-RecommendedTools.png' | relative_url }}" 
-           alt="AI Assistant showing personalized next steps and recommended tools for disability advocacy - 3mpwrApp home dashboard" 
-           loading="lazy">
-      <div class="app-tour-card-content">
-        <h3 class="app-tour-card-title">AI Assistant</h3>
-        <p class="app-tour-card-description">Personalized next steps and recommended tools for your advocacy needs</p>
-      </div>
-    </div>
-    
-    <!-- Evidence Command Center -->
-    <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeEvidenceVault-EvidenceCommandCenter.png' | relative_url }}" 
-           alt="Quick access to Evidence Command Center from home - encrypted document storage for workers compensation cases - 3mpwrApp" 
-           loading="lazy">
-      <div class="app-tour-card-content">
-        <h3 class="app-tour-card-title">Evidence Command Center</h3>
-        <p class="app-tour-card-description">Encrypted document storage and timeline builder for your legal case</p>
-      </div>
-    </div>
-    
-    <!-- Wellness Hub -->
-    <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeWellnessCommand.png' | relative_url }}" 
-           alt="Wellness Hub quick access with health tracking, mood logging, and energy management tools - 3mpwrApp" 
-           loading="lazy">
-      <div class="app-tour-card-content">
-        <h3 class="app-tour-card-title">Wellness Hub</h3>
-        <p class="app-tour-card-description">Health tracking, mood logging, and energy management tools</p>
-      </div>
-    </div>
-    
-    <!-- Getting Started Tutorial -->
-    <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/Step1-StartYourFirstCase.png' | relative_url }}" 
-           alt="Start your first workers compensation case - guided onboarding tutorial - 3mpwrApp beta" 
-           loading="lazy">
-      <div class="app-tour-card-content">
-        <h3 class="app-tour-card-title">Getting Started</h3>
-        <p class="app-tour-card-description">Guided walkthrough to start your first workers compensation case</p>
-      </div>
-    </div>
-    
-    <!-- Community Hub -->
-    <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/Step3-FindYourPeople-CommunityHub.png' | relative_url }}" 
-           alt="Find your support community - join 24 disability support groups - 3mpwrApp community" 
-           loading="lazy">
-      <div class="app-tour-card-content">
-        <h3 class="app-tour-card-title">Community Hub</h3>
-        <p class="app-tour-card-description">Find your support community and join 24 disability support groups</p>
-      </div>
-    </div>
-    
-  </div>
-  
-  <div class="app-tour-cta">
-    <a href="/app-waitlist" class="app-tour-cta-button">
-      🚀 Get Early Access → Launching Q2 2026
-    </a>
-    <p class="app-tour-cta-text">
-      <strong>Limited beta spots</strong> → Be among the first 1,000 users
-    </p>
-  </div>
-</section>
+
 
 <!-- Theme Song Winner Announcement -->
 <section class="theme-song-winner">
