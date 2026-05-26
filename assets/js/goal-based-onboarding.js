@@ -258,7 +258,7 @@ function injectGoalStyles() {
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.8);
+      background: var(--modal-overlay);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -273,7 +273,7 @@ function injectGoalStyles() {
     }
     
     .goal-banner-content {
-      background: white;
+      background: var(--modal-bg);
       border-radius: 12px;
       padding: 2rem;
       max-width: 900px;
@@ -281,6 +281,7 @@ function injectGoalStyles() {
       overflow-y: auto;
       position: relative;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      color: var(--text-color);
     }
     
     .goal-banner-close {
@@ -291,7 +292,7 @@ function injectGoalStyles() {
       border: none;
       font-size: 2rem;
       cursor: pointer;
-      color: #666;
+      color: var(--text-secondary);
       width: 40px;
       height: 40px;
       display: flex;
@@ -301,18 +302,18 @@ function injectGoalStyles() {
     }
     
     .goal-banner-close:hover {
-      background: #f0f0f0;
-      color: #000;
+      background: var(--button-hover-bg);
+      color: var(--text-color);
     }
     
     #goal-selector-title {
       margin: 0 0 0.5rem 0;
       font-size: 1.75rem;
-      color: #333;
+      color: var(--text-color);
     }
     
     .goal-banner-content > p {
-      color: #666;
+      color: var(--text-secondary);
       margin-bottom: 1.5rem;
     }
     
@@ -324,8 +325,8 @@ function injectGoalStyles() {
     }
     
     .goal-option {
-      background: #f8f9fa;
-      border: 2px solid transparent;
+      background: var(--card-bg);
+      border: 2px solid var(--card-border);
       border-radius: 8px;
       padding: 1.25rem;
       text-align: left;
@@ -338,8 +339,8 @@ function injectGoalStyles() {
     
     .goal-option:hover,
     .goal-option:focus {
-      border-color: #0066cc;
-      background: #f0f7ff;
+      border-color: var(--link-color);
+      background: var(--card-hover-bg);
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
     }
@@ -352,13 +353,13 @@ function injectGoalStyles() {
     .goal-title {
       font-weight: 600;
       font-size: 1rem;
-      color: #333;
+      color: var(--text-color);
       display: block;
     }
     
     .goal-desc {
       font-size: 0.875rem;
-      color: #666;
+      color: var(--text-secondary);
       display: block;
       line-height: 1.4;
     }
@@ -366,20 +367,20 @@ function injectGoalStyles() {
     .goal-banner-footer {
       text-align: center;
       padding-top: 1rem;
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid var(--border-color);
     }
     
     .goal-skip-button {
       background: none;
       border: none;
-      color: #666;
+      color: var(--text-secondary);
       cursor: pointer;
       font-size: 0.875rem;
       text-decoration: underline;
     }
     
     .goal-skip-button:hover {
-      color: #333;
+      color: var(--text-color);
     }
     
     .goal-confirmation {
@@ -399,7 +400,7 @@ function injectGoalStyles() {
     
     .goal-confirm-hint {
       font-size: 0.875rem;
-      color: #999;
+      color: var(--text-secondary);
       margin-top: 1rem;
     }
     

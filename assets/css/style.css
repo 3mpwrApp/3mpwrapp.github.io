@@ -24,6 +24,18 @@
   --border-color: #355c7d;
   --focus-outline: #FFC107; /* Amber for dark mode - 3:1+ contrast on dark backgrounds */
   --focus-ring-width: 3px;
+  
+  /* Card/Modal colors for dark mode */
+  --card-bg: #1a2332;
+  --card-border: #355c7d;
+  --card-hover-bg: #243447;
+  --modal-bg: #1a2332;
+  --modal-overlay: rgba(0, 0, 0, 0.85);
+  --button-bg: #2c3e50;
+  --button-text: #ffffff;
+  --button-hover-bg: #34495e;
+  --input-bg: #243447;
+  --input-border: #355c7d;
 }
 
 /* Light Mode Override */
@@ -39,6 +51,18 @@
     --nav-hover: #285e93;
     --border-color: #d1d5db;
     --focus-outline: #0066CC; /* Blue focus for light mode - 3:1+ contrast */
+    
+    /* Card/Modal colors for light mode */
+    --card-bg: #f8f9fa;
+    --card-border: #e0e0e0;
+    --card-hover-bg: #f0f7ff;
+    --modal-bg: #ffffff;
+    --modal-overlay: rgba(0, 0, 0, 0.8);
+    --button-bg: #f5f5f5;
+    --button-text: #333333;
+    --button-hover-bg: #e0e0e0;
+    --input-bg: #ffffff;
+    --input-border: #d1d5db;
   }
 }
 
