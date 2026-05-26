@@ -256,7 +256,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(0, 0, 0, 0.5);
         z-index: 9998;
         display: none;
         animation: fadeIn 0.3s ease-out;
@@ -322,6 +322,17 @@
         }
         to {
           opacity: 0;
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
 
@@ -414,19 +425,18 @@
       @media (max-width: 768px) {
         .personalization-badge {
           position: fixed;
-          top: 50%;
-          left: 50%;
-          right: auto;
-          bottom: auto;
-          transform: translate(-50%, -50%);
-          max-width: calc(100vw - 40px);
+          top: 120px;
+          left: 10px;
+          right: 10px;
+          transform: none;
+          max-width: none;
           width: auto;
           flex-direction: column;
           align-items: stretch;
           padding: 1rem;
           font-size: 0.9rem;
           box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-          animation: fadeIn 0.3s ease-out;
+          animation: slideDown 0.3s ease-out;
           background: #ffffff;
           color: #111111;
           border: 3px solid #d1d5db;

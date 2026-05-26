@@ -82,6 +82,13 @@
         </picture>
         <span>{{ site.title }}</span>
       </a>
+      
+      <!-- Complexity Mode Toggle in Header -->
+      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode" style="padding: 0.5rem 0.75rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; margin-left: auto;">
+        <span class="complexity-icon" aria-hidden="true">📖</span>
+        <span class="complexity-label">Standard View</span>
+      </button>
+      
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
   {%- assign current = page.url | default: '/' -%}
   {%- assign lang_code = page.lang | default: 'en' -%}
@@ -238,13 +245,6 @@
       <a href="{{ '/accessibility-settings' | relative_url }}" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
         ♿ Accessibility
       </a>
-      
-      <!-- Complexity Mode Toggle -->
-      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode">
-        <span class="complexity-icon" aria-hidden="true">📖</span>
-        <span class="complexity-label">Standard View</span>
-        <span class="complexity-hint">Click for Simple Language</span>
-      </button>
       
       <button
         id="contrast-toggle"
