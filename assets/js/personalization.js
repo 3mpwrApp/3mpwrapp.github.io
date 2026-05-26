@@ -159,6 +159,14 @@
       const dismissed = sessionStorage.getItem('3mpwrapp_badgeDismissed');
       if (dismissed) return;
 
+      // Add backdrop for mobile
+      const backdrop = document.createElement('div');
+      backdrop.id = 'personalization-backdrop';
+      backdrop.className = 'personalization-backdrop';
+      backdrop.onclick = dismissPersonalizationBadge;
+      backdrop.setAttribute('aria-label', 'Close personalization');
+      document.body.appendChild(backdrop);
+
       const badge = document.createElement('div');
       badge.id = 'personalization-badge';
       badge.className = 'personalization-badge';
@@ -188,9 +196,16 @@
     try {
       sessionStorage.setItem('3mpwrapp_badgeDismissed', 'true');
       const badge = document.getElementById('personalization-badge');
+      const backdrop = document.getElementById('personalization-backdrop');
+      
       if (badge) {
         badge.style.animation = 'slideOut 0.3s ease-out';
         setTimeout(() => badge.remove(), 300);
+      }
+      
+      if (backdrop) {
+        backdrop.style.animation = 'fadeOut 0.3s ease-out';
+        setTimeout(() => backdrop.remove(), 300);
       }
     } catch (error) {
       console.error('[Personalization] Error dismissing badge:', error);
@@ -235,6 +250,24 @@
     const styles = document.createElement('style');
     styles.id = 'personalization-badge-styles';
     styles.textContent = `
+      .personalization-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9998;
+        display: none;
+        animation: fadeIn 0.3s ease-out;
+      }
+
+      @media (max-width: 768px) {
+        .personalization-backdrop {
+          display: block;
+        }
+      }
+
       .personalization-badge {
         position: fixed;
         top: 80px;
@@ -272,6 +305,15 @@
         to {
           opacity: 0;
           transform: scale(0.8);
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
         }
       }
 
