@@ -108,17 +108,17 @@ personalized: true
     </p>
     <div style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; display: inline-block;">
       <p style="margin: 0; font-weight: 600; font-size: 1.1rem;">
-        <span aria-hidden="true">??</span> 134,920 cases analyzed (98,992 WSIAT + 35,928 other tribunals) &nbsp;|&nbsp; <span aria-hidden="true">??</span> 500+ keyword patterns &nbsp;|&nbsp; <span aria-hidden="true">???</span> Live interactive D3.js network
+        <span aria-hidden="true">🚀</span> 134,920 cases analyzed (98,992 WSIAT + 35,928 other tribunals) &nbsp;|&nbsp; <span aria-hidden="true">📊</span> 500+ keyword patterns &nbsp;|&nbsp; <span aria-hidden="true">🔗</span> Live interactive D3.js network
       </p>
     </div>
     <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a href="/connecting-the-dots-canlii-keyword-visualization-network.html" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: var(--card-bg, white); color: var(--primary-color, #0066cc); border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.2)'">
-        <span aria-hidden="true">??</span>
+        <span aria-hidden="true">🔍</span>
         <span>Launch Interactive Visualization</span>
-        <span aria-hidden="true">?</span>
+        <span aria-hidden="true">→</span>
       </a>
       <a href="/research.html" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: rgba(255,255,255,0.15); color: var(--text-on-primary, white); border: 2px solid var(--text-on-primary, white); border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
-        <span aria-hidden="true">??</span>
+        <span aria-hidden="true">📊</span>
         <span>All Research Tools</span>
       </a>
     </div>
@@ -133,10 +133,10 @@ personalized: true
 
   <!-- AI Interactive Demo -->
   <section style="max-width: 900px; margin: 2rem auto 2rem; text-align: center; padding: 2rem 1rem; background: var(--demo-gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%)); border-radius: 12px; box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);">
-    <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-on-primary, #fff);">?? See 3MPWRAPP In Action</h2>
+    <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-on-primary, #fff);">🎯 See 3MPWRAPP In Action</h2>
     <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-on-primary, #fff); opacity: 0.95;">Try our interactive demo! Explore how Evidence Locker, Parse Claim, Deadline Tracker, and Letter Wizard help Canadians organize evidence, decode decisions, and create systemic change.</p>
     <a href="/demo/" style="display: inline-block; padding: 16px 36px; background: var(--card-bg, #fff); color: var(--demo-button-text, #667eea); border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-      <span aria-hidden="true">??</span> Launch Interactive Demo
+      <span aria-hidden="true">🚀</span> Launch Interactive Demo
     </a>
   </section>
 
@@ -145,7 +145,7 @@ personalized: true
     <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-color);">Open Data: Download & Explore</h2>
     <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-color); opacity: 0.9;">All tribunal and research data is public and open source. Download, analyze, or contribute directly on GitHub.</p>
     <a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 36px; background: var(--primary-color, #24292f); color: #fff; border-radius: 8px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: background 0.2s;">
-      <span aria-hidden="true">??</span> See Data on GitHub
+      <span aria-hidden="true">📂</span> See Data on GitHub
     </a>
   </section>
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2.5rem; color: var(--text-color);">
@@ -156,37 +156,37 @@ personalized: true
     
     <!-- Card 1: Community -->
     <div class="homepage-value-card">
-      <div style="font-size: 3rem; margin-bottom: 1rem;">??</div>
+      <div style="font-size: 3rem; margin-bottom: 1rem;">👥</div>
       <h3>Built BY Community, FOR Community</h3>
       <p>
         Created by someone who lived it. Every feature designed with real experiences from injured workers and disabled people.
       </p>
       <a href="/about" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 600;">
-        Learn More About 3mpwrApp ?
+        Learn More About 3mpwrApp →
       </a>
     </div>
     
     <!-- Card 2: Tools -->
     <div class="homepage-value-card">
-      <div style="font-size: 3rem; margin-bottom: 1rem;">???</div>
+      <div style="font-size: 3rem; margin-bottom: 1rem;">🛠️</div>
       <h3>60+ Practical Tools</h3>
       <p>
         Evidence locker, pain tracker, medication manager, legal resources, and more. Everything you need in one place.
       </p>
       <a href="/features/" style="color: var(--link-color, #005a00); text-decoration: none; font-weight: 600;">
-        Explore All Features ?
+        Explore All Features →
       </a>
     </div>
     
     <!-- Card 3: Accessibility -->
     <div class="homepage-value-card">
-      <div style="font-size: 3rem; margin-bottom: 1rem;">?</div>
+      <div style="font-size: 3rem; margin-bottom: 1rem;">♿</div>
       <h3>Revolutionary Accessibility</h3>
       <p>
         Built for brain fog, chronic pain, and fatigue. Complexity toggle, need-a-break button, and pain flare mode.
       </p>
       <a href="/accessibility" style="color: var(--link-color, #5a189a); text-decoration: none; font-weight: 600;">
-        Accessibility Features ?
+        Accessibility Features →
       </a>
     </div>
     
@@ -200,7 +200,7 @@ personalized: true
     <!-- Events Column -->
     <div class="homepage-events-box">
       <h2>
-        <span aria-hidden="true">??</span> This Week's Events
+        <span aria-hidden="true">📅</span> This Week's Events
       </h2>
       <p style="opacity: 0.9; margin-bottom: 1.5rem;">Community meetups, support groups, and advocacy gatherings</p>
       
@@ -209,14 +209,14 @@ personalized: true
       </div>
       
       <a href="/events/" class="homepage-box-link">
-        View Full Community Events Calendar ?
+        View Full Community Events Calendar →
       </a>
     </div>
     
     <!-- Campaigns Column -->
     <div class="homepage-campaigns-box">
       <h2>
-        <span aria-hidden="true">?</span> Active Campaigns
+        <span aria-hidden="true">📢</span> Active Campaigns
       </h2>
       <p style="opacity: 0.9; margin-bottom: 1.5rem;">Join us in advocating for disability rights and policy change</p>
       
@@ -225,7 +225,7 @@ personalized: true
       </div>
       
       <a href="/campaigns/" class="homepage-box-link">
-        View All Advocacy Campaigns ?
+        View All Advocacy Campaigns →
       </a>
     </div>
     
@@ -244,7 +244,7 @@ personalized: true
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto;">
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">??</div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🔒</div>
       <h3>Evidence Locker</h3>
       <p>
         <strong>COLLECTIVE POWER:</strong> Photo your documents, AI extracts text, community validates - crowdsourced justice that gets stronger with every upload
@@ -252,7 +252,7 @@ personalized: true
     </div>
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">??</div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🤝</div>
       <h3>Community & Campaigns</h3>
       <p>
         <strong>NETWORK STRENGTH:</strong> Together we organize, advocate, and win - more voices mean more power for real systemic change
@@ -260,7 +260,7 @@ personalized: true
     </div>
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">??</div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⚖️</div>
       <h3>Legal & Knowledge Sharing</h3>
       <p>
         <strong>SHARED WISDOM:</strong> Shared legal strategies, winning patterns, resources - every case we track helps everyone else win
@@ -268,7 +268,7 @@ personalized: true
     </div>
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">??</div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📋</div>
       <h3>Appeal Command Center</h3>
       <p>
         <strong>STRATEGIC POWER:</strong> Deadline tracking, document management, tribunal prep - everything you need to fight back and win your appeal
@@ -276,7 +276,7 @@ personalized: true
     </div>
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">??</div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">💰</div>
       <h3>Financial Safety Net</h3>
       <p>
         <strong>SURVIVAL TOOLS:</strong> Budget tracking, benefit calculators, emergency resources - manage finances when every dollar counts
@@ -284,7 +284,7 @@ personalized: true
     </div>
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">??</div>
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">❤️</div>
       <h3>Wellness Hub</h3>
       <p>
         <strong>HOLISTIC CARE:</strong> Pain tracking, symptom journals, exercise routines, meditation - tools for managing your health day by day
@@ -295,7 +295,7 @@ personalized: true
   
   <div style="text-align: center; margin-top: 2.5rem;">
     <a href="/features/" style="display: inline-block; padding: 14px 32px; background: var(--button-primary-bg, #3d4eaa); color: var(--button-primary-text, white); border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(61, 78, 170, 0.2);">
-      See All 60+ Revolutionary Features ?
+      See All 60+ Revolutionary Features →
     </a>
   </div>
 </section>

@@ -280,16 +280,12 @@ function injectGoalStyles() {
       max-height: 90vh;
       overflow-y: auto;
       position: relative;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
       color: var(--text-color);
-      opacity: 1;
-      border: 2px solid var(--border-color);
-    }
-    
-    /* Ensure solid backgrounds for all modal elements */
-    .goal-banner-content,
-    .goal-banner-content * {
-      background-color: inherit;
+      opacity: 1 !important;
+      border: 3px solid var(--border-color);
+      will-change: transform;
+      backface-visibility: hidden;
     }
     
     .goal-banner-close {
@@ -413,8 +409,28 @@ function injectGoalStyles() {
     }
     
     @media (max-width: 768px) {
+      #goal-selector-banner {
+        padding: 0.5rem;
+      }
+      
+      .goal-banner-content {
+        padding: 1.5rem;
+        max-width: 100%;
+        max-height: 95vh;
+        border-radius: 8px;
+      }
+      
+      #goal-selector-title {
+        font-size: 1.5rem;
+      }
+      
       .goal-options {
         grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+      
+      .goal-option {
+        padding: 1rem;
       }
     }
   `;

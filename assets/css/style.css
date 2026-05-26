@@ -36,6 +36,10 @@
   --button-hover-bg: #34495e;
   --input-bg: #243447;
   --input-border: #355c7d;
+  
+  /* Ensure proper contrast for text on backgrounds */
+  --text-on-dark: #ffffff;
+  --text-on-light: #111111;
 }
 
 /* Light Mode Override */
@@ -45,6 +49,7 @@
     --text-color: #111111;
     --text-secondary: #4b5563;
     --header-bg: #183c65;
+    --header-text: #ffffff;
     --main-bg: #ffffff;
     --link-color: #003d7a;
     --link-hover: #002d5c;
@@ -63,6 +68,10 @@
     --button-hover-bg: #e0e0e0;
     --input-bg: #ffffff;
     --input-border: #d1d5db;
+    
+    /* Ensure proper contrast for text on backgrounds */
+    --text-on-dark: #ffffff;
+    --text-on-light: #111111;
   }
 }
 
