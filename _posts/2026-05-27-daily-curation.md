@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Daily News Curation - 2026-05-27"
+date: 2026-05-27
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-05-27
+
+Curated 6 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Manitoba Government Invests $100,000 to Expand Affordable Year-Round Recreation in Winnipeg
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73977)
+**Score:** 9.50
+
+### 2. Fighter jets or affordable food  – are public grocery stores really a thing!
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/columnists/fighter-jets-or-affordable-food-are-public-grocery-stores-really-a-thing/)
+**Score:** 5.00
+
+### 3. Alberta Is Spending $5 Million to Win BC Indigenous Pipeline Support
+Well-connected lobbyists and consultants have been given contracts to smooth the way.
+[Source](https://thetyee.ca/News/2026/05/27/Alberta-Spending-BC-Indigenous-Pipeline-Support/)
+**Score:** 5.90
+
+### 4. Five Canadian artists who play the music of social change
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/arts/five-canadian-artists-who-play-the-music-of-social-change/)
+**Score:** 4.90
+
+### 5. Mark Carney favours the wealthy and privileged over working-class Canadians
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/politics/canadian-politics/mark-carney-favours-the-wealthy-and-privileged-over-working-class-canadians/)
+**Score:** 3.90
+
