@@ -571,7 +571,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
 </style>
 
 <div class="hero">
-  <h1>🚀 3MPWRAPP Interactive Demo</h1>
+  <h1>🚀 3MPWRAPP Interactive Demo <span class="badge" style="background: #ff6b6b; vertical-align: middle;">BETA</span></h1>
   <p class="subtitle">See how Canadians are organizing evidence, understanding decisions, and creating systemic change</p>
   <p>Explore 3MPWRAPP's most important features. Coast-to-coast-to-coast, from the disability community, for the disability community.</p>
 </div>
@@ -587,10 +587,10 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
     
     <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
       <a href="https://app-3mpwrapp.pages.dev/" target="_blank" class="cta-button" style="background: #667eea; color: white !important; text-decoration: none;">
-        🚀 Open Full App (New Tab)
+        🚀 Open Full App (New Tab) <span class="badge" style="background: #ff6b6b; margin-left: 8px;">BETA</span>
       </a>
       <a href="https://app.3mpwrapp.ca" target="_blank" class="cta-button" style="background: #764ba2; color: white !important; text-decoration: none;">
-        ✨ Official PWA (app.3mpwrapp.ca)
+        ✨ Official PWA (app.3mpwrapp.ca) <span class="badge" style="background: #ff6b6b; margin-left: 8px;">BETA</span>
       </a>
     </div>
   </div>
