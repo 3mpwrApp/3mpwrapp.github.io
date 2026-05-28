@@ -586,7 +586,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
     <p style="font-size: 1.2rem; color: #333; max-width: 800px; margin: 0 auto 20px auto;">Experience the full app right in your browser. No installation required. Works on desktop, tablet, and mobile.</p>
     
     <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
-      <a href="https://app-3mpwrapp.pages.dev/" target="_blank" class="cta-button" style="background: #667eea; color: white !important; text-decoration: none;">
+      <a href="https://app.3mpwrapp.ca" target="_blank" class="cta-button" style="background: #667eea; color: white !important; text-decoration: none;">
         🚀 Open Full App (New Tab) <span class="badge" style="background: #ff6b6b; margin-left: 8px;">BETA</span>
       </a>
       <a href="https://app.3mpwrapp.ca" target="_blank" class="cta-button" style="background: #764ba2; color: white !important; text-decoration: none;">
@@ -598,7 +598,7 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   <!-- Embedded PWA -->
   <div class="video-container" style="padding-bottom: 75%; border: 3px solid #667eea; box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);">
     <iframe 
-      src="https://app-3mpwrapp.pages.dev/" 
+      src="https://app.3mpwrapp.ca" 
       title="3MPWRAPP Live Demo" 
       style="border: none;"
       allow="accelerometer; camera; geolocation; microphone"
@@ -691,6 +691,185 @@ description: Explore 3MPWRAPP's most important features with interactive demonst
   </div>
   
   <p><strong>Why it matters:</strong> Injured workers and disabled Canadians often lose critical evidence. Evidence Locker means nothing gets lost. Everything stays encrypted and ready when you need it.</p>
+  
+  <!-- Interactive Document Stamping Demo -->
+  <h3 style="color: #667eea; margin-top: 40px;">🏷️ Try Document Stamping Now</h3>
+  <p>See how 3MPWRAPP automatically stamps your documents with metadata. Click the buttons below to add stamps to the sample document.</p>
+  
+  <div id="stamp-demo" style="margin: 30px 0; padding: 30px; background: #f8f9fa; border-radius: 12px; border: 2px solid #667eea;">
+    <div style="display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+      <button onclick="addStamp('date')" style="padding: 12px 24px; background: #667eea; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: all 0.2s;">
+        📅 Add Date Stamp
+      </button>
+      <button onclick="addStamp('case')" style="padding: 12px 24px; background: #28a745; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: all 0.2s;">
+        📋 Add Case Number
+      </button>
+      <button onclick="addStamp('type')" style="padding: 12px 24px; background: #ff6b6b; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: all 0.2s;">
+        📄 Add Document Type
+      </button>
+      <button onclick="clearStamps()" style="padding: 12px 24px; background: #6c757d; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: all 0.2s;">
+        🔄 Clear All
+      </button>
+    </div>
+    
+    <div id="document-canvas" style="position: relative; background: white; border: 2px solid #ddd; border-radius: 8px; padding: 40px; min-height: 400px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <!-- Sample Document -->
+      <div style="font-family: 'Times New Roman', serif; line-height: 1.8; color: #333;">
+        <div style="text-align: center; margin-bottom: 30px; border-bottom: 3px solid #333; padding-bottom: 16px;">
+          <h3 style="margin: 0; font-size: 1.5rem; font-weight: bold;">WORKPLACE SAFETY AND INSURANCE BOARD</h3>
+          <p style="margin: 8px 0 0 0; font-size: 0.95rem;">Decision Notice</p>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+          <p style="margin: 8px 0;"><strong>To:</strong> [Worker Name]</p>
+          <p style="margin: 8px 0;"><strong>From:</strong> Claims Adjudication Services</p>
+          <p style="margin: 8px 0;"><strong>Re:</strong> Claim Decision - File #2024-05428</p>
+        </div>
+        
+        <p style="margin: 16px 0; text-align: justify;">This letter is to inform you of the decision regarding your workers' compensation claim filed on January 15, 2024, for a workplace injury sustained on January 10, 2024...</p>
+        
+        <p style="margin: 16px 0; text-align: justify; color: #999;">[Additional decision content continues...]</p>
+        
+        <div style="margin-top: 30px; padding-top: 16px; border-top: 1px solid #ddd;">
+          <p style="margin: 4px 0; font-size: 0.9rem;"><strong>Important:</strong> You have 30 days from the date of this decision to file an appeal.</p>
+        </div>
+      </div>
+      
+      <!-- Stamps will be added here dynamically -->
+      <div id="stamps-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+        <!-- Dynamic stamps appear here -->
+      </div>
+    </div>
+    
+    <div id="stamp-log" style="margin-top: 20px; padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #667eea;">
+      <h4 style="margin: 0 0 12px 0; color: #667eea;">📋 Stamp Log</h4>
+      <div id="log-entries" style="font-size: 0.9rem; color: #666;">
+        <p style="margin: 0; font-style: italic;">No stamps added yet. Click the buttons above to stamp this document.</p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let stampCount = 0;
+    const stampLog = [];
+    
+    function addStamp(type) {
+      stampCount++;
+      const stampsContainer = document.getElementById('stamps-container');
+      const logEntries = document.getElementById('log-entries');
+      
+      // Create stamp element
+      const stamp = document.createElement('div');
+      stamp.className = 'stamp-element';
+      
+      // Random position for visual variety
+      const top = Math.random() * 60 + 10; // 10-70%
+      const left = Math.random() * 60 + 20; // 20-80%
+      
+      let stampText = '';
+      let stampColor = '';
+      let logText = '';
+      
+      switch(type) {
+        case 'date':
+          const now = new Date();
+          stampText = `RECEIVED<br>${now.toLocaleDateString('en-CA')}`;
+          stampColor = '#667eea';
+          logText = `📅 Date stamp added: Received ${now.toLocaleDateString('en-CA')}`;
+          break;
+        case 'case':
+          stampText = `CASE #<br>2024-05428`;
+          stampColor = '#28a745';
+          logText = `📋 Case number stamp added: #2024-05428`;
+          break;
+        case 'type':
+          stampText = `WSIB<br>DECISION`;
+          stampColor = '#ff6b6b';
+          logText = `📄 Document type stamp added: WSIB Decision`;
+          break;
+      }
+      
+      stamp.innerHTML = stampText;
+      stamp.style.cssText = `
+        position: absolute;
+        top: ${top}%;
+        left: ${left}%;
+        transform: rotate(${Math.random() * 20 - 10}deg);
+        padding: 12px 20px;
+        border: 3px solid ${stampColor};
+        border-radius: 8px;
+        color: ${stampColor};
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.4;
+        opacity: 0.7;
+        font-family: 'Courier New', monospace;
+        animation: stampAppear 0.3s ease-out;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      `;
+      
+      stampsContainer.appendChild(stamp);
+      
+      // Add to log
+      stampLog.push(logText);
+      updateLog();
+      
+      // Animate button
+      const buttons = document.querySelectorAll('#stamp-demo button');
+      buttons.forEach(btn => {
+        if (btn.onclick && btn.onclick.toString().includes(type)) {
+          btn.style.transform = 'scale(0.95)';
+          setTimeout(() => btn.style.transform = 'scale(1)', 100);
+        }
+      });
+    }
+    
+    function clearStamps() {
+      const stampsContainer = document.getElementById('stamps-container');
+      stampsContainer.innerHTML = '';
+      stampCount = 0;
+      stampLog.length = 0;
+      updateLog();
+    }
+    
+    function updateLog() {
+      const logEntries = document.getElementById('log-entries');
+      if (stampLog.length === 0) {
+        logEntries.innerHTML = '<p style="margin: 0; font-style: italic;">No stamps added yet. Click the buttons above to stamp this document.</p>';
+      } else {
+        logEntries.innerHTML = stampLog.map((log, i) => 
+          `<p style="margin: 4px 0; padding: 8px; background: #f8f9fa; border-radius: 4px;">${i + 1}. ${log}</p>`
+        ).join('');
+      }
+    }
+    
+    // Add CSS animation
+    if (!document.getElementById('stamp-animation-style')) {
+      const style = document.createElement('style');
+      style.id = 'stamp-animation-style';
+      style.textContent = `
+        @keyframes stampAppear {
+          from {
+            transform: scale(0) rotate(0deg);
+            opacity: 0;
+          }
+          to {
+            transform: scale(1) rotate(${Math.random() * 20 - 10}deg);
+            opacity: 0.7;
+          }
+        }
+        #stamp-demo button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        #stamp-demo button:active {
+          transform: translateY(0);
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  </script>
   
   <div class="use-cases">
     <div class="use-case">

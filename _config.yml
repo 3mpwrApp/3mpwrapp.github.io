@@ -115,7 +115,49 @@ exclude:
   - README.md
   - CONTRIBUTING.md
   - ACTIVATION.md
+  - ACTIVATION_COMPLETE.md
+  - ACTIVATION_SUMMARY.md
   - HOW_TO_ACTIVATE.md
+  - BETA_TESTERS_March31_ProductionCommitment_EMAIL.md
+  - CANADA_WIDE_DATABASE_STATUS.md
+  - CANLII-API-STRATEGY.md
+  - CANLII-COLLECTION-GUIDE.md
+  - CANLII-DATABASES.md
+  - CANLII-DISCOVERY-SUMMARY.md
+  - COMMUNITY_ENGAGEMENT_STRATEGY.md
+  - CONTENT_OPTIMIZATION_TEMPLATES.md
+  - DOMAIN-MIGRATION-COMPLETE.md
+  - ENGAGEMENT_TRACKING_WORKFLOW.md
+  - GOVERNANCE.md
+  - HEARTBEAT.md
+  - MEMORY.md
+  - NEXT-STEPS-OCT-19-24.md
+  - ONSBT-2020-2026-ANALYSIS-SUMMARY.md
+  - ONSBT-COMPLETENESS-ANALYSIS.md
+  - ONSBT-SUMMARY.md
+  - QUICK-REFERENCE.md
+  - QUICK-START-LAUNCH.md
+  - QUICK_START_CHECKLIST.md
+  - README-AGENTS.md
+  - REMINDERS.md
+  - SITE-HEALTH-CHECK.md
+  - SOCIAL-SHARE-IMAGES-SPECS.md
+  - SOCIAL-SHARING-IMPLEMENTATION.md
+  - SOCIAL_AUTOMATION_COMPLETE.md
+  - SOUL.md
+  - SUBMISSIONS-API-SETUP.md
+  - TOOLS.md
+  - USER.md
+  - YOUR-WEBSITE-URLS.md
+  - app-tour.md
+  - app-waitlist.md
+  - chronic-pain-appeal.md
+  - chronic-pain-claims.md
+  - how-to-use-this-data.md
+  - research-backup-20260430210529.md
+  - roadmap.md
+  - "2025-*.md"
+  - "2026-*.md"
   - .github
   - Gemfile
   - Gemfile.lock
