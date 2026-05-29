@@ -59,13 +59,52 @@ permalink: /demo/
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     border: 2px solid var(--homepage-feature-border);
-    background: var(--homepage-card-bg);
+    background: #ffffff;
   }
   
   .demo-iframe-container iframe {
     width: 100%;
     height: 100%;
     border: none;
+    background: #ffffff;
+  }
+  
+  .demo-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    z-index: 1;
+  }
+  
+  .demo-iframe-container iframe[data-loaded] + .demo-loading {
+    display: none;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .demo-iframe-container {
+      background: #1a1a1a;
+      border-color: #444;
+    }
+    .demo-iframe-container iframe {
+      background: #1a1a1a;
+    }
+    .demo-loading {
+      color: #ccc;
+    }
+  }
+  
+  @media (prefers-contrast: more) {
+    .demo-iframe-container {
+      border: 3px solid #000;
+    }
+    .demo-loading {
+      color: #000;
+      font-weight: bold;
+    }
   }
   
   .demo-info {
@@ -202,11 +241,15 @@ permalink: /demo/
 <!-- Embedded App Demo -->
 <div class="demo-app-frame">
   <div class="demo-iframe-container">
+    <div class="demo-loading" aria-live="polite">
+      Loading interactive demo...
+    </div>
     <iframe 
-      src="https://3mpwrapp-beta.pages.dev/"
+      src="https://18f4689f.3mpwrapp-beta.pages.dev/"
       title="3MPWRAPP Interactive Demo - Try the full app features"
       allow="clipboard-read; clipboard-write"
       loading="lazy"
+      onload="this.setAttribute('data-loaded', 'true')"
     ></iframe>
   </div>
 </div>
