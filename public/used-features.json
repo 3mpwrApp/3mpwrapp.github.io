@@ -36,7 +36,8 @@
     "Manitoba EIA Disability Benefits",
     "Data Portability: Take Your Data Anywhere",
     "Duty to Accommodate Reminder Letter",
-    "Yukon Disability Benefits: Northern Territory"
+    "Yukon Disability Benefits: Northern Territory",
+    "Anxiety Tracker with CBT Tools:Monitor Patterns, Challenge Thoughts"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -49,6 +50,6 @@
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built"
   ],
-  "rotationIndex": 2,
+  "rotationIndex": 3,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
