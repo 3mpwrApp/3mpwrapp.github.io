@@ -45,11 +45,12 @@
     "Your First Benefits Application: A Complete Walkthrough"
   ],
   "devDiaries": [
-    "Why We Chose React Native: Accessibility Over Everything"
+    "Why We Chose React Native: Accessibility Over Everything",
+    "Building Offline-First: Network Access Should Never Be Required"
   ],
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built"
   ],
-  "rotationIndex": 3,
+  "rotationIndex": 4,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
