@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Daily News Curation - 2026-06-04"
+date: 2026-06-04
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-06-04
+
+Curated 4 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Five of Canada’s most groundbreaking disability advocates and influencers
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/human-rights/five-of-canadas-most-groundbreaking-disability-advocates-and-influencers/)
+**Score:** 26.50
+
+### 2. Manitoba Government Invests $100,000 to Expand Affordable Year-Round Recreation in Winnipeg
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73977)
+**Score:** 9.50
+
+### 3. Manitoba Senior Representative to the U.S. Hosts First-Ever Trade Meeting Between Manitoba Businesses and U.S. Trade Representatives
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74045)
+**Score:** 4.50
+
