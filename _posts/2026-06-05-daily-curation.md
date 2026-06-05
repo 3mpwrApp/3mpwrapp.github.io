@@ -1,0 +1,58 @@
+---
+layout: post
+title: "Daily News Curation - 2026-06-05"
+date: 2026-06-05
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-06-05
+
+Curated 8 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. What Will Canada’s AI Strategy Mean for Jobs and Safety?
+MP Taleeb Noormohamed, parliamentary secretary to the AI minister, answers questions about AI safety and data centre pushback. A Tyee Q&A.
+[Source](https://thetyee.ca/News/2026/06/05/What-Will-Canada-AI-Strategy-Mean-Jobs-Safety/)
+**Score:** 11.50
+
+### 2. Manitoba Government Passes Nurse-to-Patient Ratios Legislation, Releases Recommendations
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74057)
+**Score:** 10.50
+
+### 3. Why Hasn’t Alberta Been Calculating the Cost of Separation?
+Six months before a referendum, the UCP still hasn’t provided an analysis.
+[Source](https://thetyee.ca/News/2026/06/05/Alberta-Cost-Separation/)
+**Score:** 5.90
+
+### 4. Manitoba Government Improves 19 Recreational Trails and Opens New Backcountry Sites
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74058)
+**Score:** 7.50
+
+### 5. Manitoba Government Welcomes Arrival of New Fire Truck for Rural Municipality of Gimli
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73997)
+**Score:** 7.50
+
+### 6. Here are five Canadian 2SLGBTQIA+ books to celebrate Pride Month.
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/lgbtiq/here-are-five-canadian-2slgbtqia-books-to-celebrate-pride-month/)
+**Score:** 3.60
+
+### 7. An Open Letter to Albertans on Division and Dignity
+And why we need to reject Danielle Smith’s referendum questions.
+[Source](https://thetyee.ca/Opinion/2026/06/04/Open-Letter-Alberta-Referendum-Division-Dignity/)
+**Score:** 3.90
+

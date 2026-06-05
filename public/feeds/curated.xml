@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Thu, 04 Jun 2026 15:21:08 GMT</lastBuildDate>
-    <pubDate>Thu, 04 Jun 2026 15:21:08 GMT</pubDate>
+    <lastBuildDate>Fri, 05 Jun 2026 14:56:45 GMT</lastBuildDate>
+    <pubDate>Fri, 05 Jun 2026 14:56:45 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,35 +24,74 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Thu, 04 Jun 2026 15:21:08 GMT</pubDate>
+      <pubDate>Fri, 05 Jun 2026 14:56:45 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Five of Canada’s most groundbreaking disability advocates and influencers</title>
-      <link>https://rabble.ca/human-rights/five-of-canadas-most-groundbreaking-disability-advocates-and-influencers/</link>
-      <guid isPermaLink="true">https://rabble.ca/human-rights/five-of-canadas-most-groundbreaking-disability-advocates-and-influencers/</guid>
-      <pubDate>Wed, 03 Jun 2026 20:15:01 GMT</pubDate>
+      <title>What Will Canada’s AI Strategy Mean for Jobs and Safety?</title>
+      <link>https://thetyee.ca/News/2026/06/05/What-Will-Canada-AI-Strategy-Mean-Jobs-Safety/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/06/05/What-Will-Canada-AI-Strategy-Mean-Jobs-Safety/</guid>
+      <description><![CDATA[MP Taleeb Noormohamed, parliamentary secretary to the AI minister, answers questions about AI safety and data centre pushback. A Tyee Q&A.]]></description>
+      <pubDate>Fri, 05 Jun 2026 07:20:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Invests $100,000 to Expand Affordable Year-Round Recreation in Winnipeg</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73977</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73977</guid>
-      <pubDate>Tue, 26 May 2026 18:00:00 GMT</pubDate>
+      <title>Manitoba Government Passes Nurse-to-Patient Ratios Legislation, Releases Recommendations</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74057</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74057</guid>
+      <pubDate>Fri, 05 Jun 2026 13:00:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Senior Representative to the U.S. Hosts First-Ever Trade Meeting Between Manitoba Businesses and U.S. Trade Representatives</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74045</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74045</guid>
-      <pubDate>Wed, 03 Jun 2026 19:10:00 GMT</pubDate>
+      <title>Why Hasn’t Alberta Been Calculating the Cost of Separation?</title>
+      <link>https://thetyee.ca/News/2026/06/05/Alberta-Cost-Separation/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/06/05/Alberta-Cost-Separation/</guid>
+      <description><![CDATA[Six months before a referendum, the UCP still hasn’t provided an analysis.]]></description>
+      <pubDate>Fri, 05 Jun 2026 07:10:00 GMT</pubDate>
       <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Improves 19 Recreational Trails and Opens New Backcountry Sites</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74058</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74058</guid>
+      <pubDate>Fri, 05 Jun 2026 15:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Welcomes Arrival of New Fire Truck for Rural Municipality of Gimli</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=73997</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73997</guid>
+      <pubDate>Wed, 27 May 2026 18:45:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Here are five Canadian 2SLGBTQIA+ books to celebrate Pride Month.</title>
+      <link>https://rabble.ca/lgbtiq/here-are-five-canadian-2slgbtqia-books-to-celebrate-pride-month/</link>
+      <guid isPermaLink="true">https://rabble.ca/lgbtiq/here-are-five-canadian-2slgbtqia-books-to-celebrate-pride-month/</guid>
+      <pubDate>Thu, 04 Jun 2026 17:48:10 GMT</pubDate>
+      <category>High Priority</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>An Open Letter to Albertans on Division and Dignity</title>
+      <link>https://thetyee.ca/Opinion/2026/06/04/Open-Letter-Alberta-Referendum-Division-Dignity/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/06/04/Open-Letter-Alberta-Referendum-Division-Dignity/</guid>
+      <description><![CDATA[And why we need to reject Danielle Smith’s referendum questions.]]></description>
+      <pubDate>Thu, 04 Jun 2026 19:12:00 GMT</pubDate>
+      <category>High Priority</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
