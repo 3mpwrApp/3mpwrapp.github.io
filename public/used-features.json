@@ -45,7 +45,8 @@
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
     "Setting Up Accessibility for Your Needs",
-    "Your First Benefits Application: A Complete Walkthrough"
+    "Your First Benefits Application: A Complete Walkthrough",
+    "Writing an Effective Demand Letter with 3mpwrApp"
   ],
   "devDiaries": [
     "Why We Chose React Native: Accessibility Over Everything",
@@ -55,6 +56,6 @@
     "The Origin Story: Why 3mpwrApp Was Built",
     "Disability Justice vs Disability Charity: Our Operating Principle"
   ],
-  "rotationIndex": 1,
+  "rotationIndex": 2,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
