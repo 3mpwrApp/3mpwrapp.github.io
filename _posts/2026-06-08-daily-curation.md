@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Daily News Curation - 2026-06-08"
+date: 2026-06-08
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-06-08
+
+Curated 3 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. LNG Exports May Expose BC to Legal Risk
+A growing body of climate lawsuits poses a threat to oil and gas aims of the province and Canada, a new report suggests.
+[Source](https://thetyee.ca/News/2026/06/08/Could-LNG-Exports-Expose-BC-Legal-Risk/)
+**Score:** 18.50
+
+### 2. Preston Manning’s Not-So-Secret Game Plan
+The separatist threat will bring endless, changing demands to increase Alberta’s power.
+[Source](https://thetyee.ca/Opinion/2026/06/08/Preston-Manning-Not-So-Secret-Game-Plan/)
+**Score:** 3.90
+

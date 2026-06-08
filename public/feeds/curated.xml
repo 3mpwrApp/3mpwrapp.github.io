@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 07 Jun 2026 13:58:57 GMT</lastBuildDate>
-    <pubDate>Sun, 07 Jun 2026 13:58:57 GMT</pubDate>
+    <lastBuildDate>Mon, 08 Jun 2026 15:57:38 GMT</lastBuildDate>
+    <pubDate>Mon, 08 Jun 2026 15:57:38 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,8 +24,28 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Sun, 07 Jun 2026 13:58:57 GMT</pubDate>
+      <pubDate>Mon, 08 Jun 2026 15:57:38 GMT</pubDate>
       <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>LNG Exports May Expose BC to Legal Risk</title>
+      <link>https://thetyee.ca/News/2026/06/08/Could-LNG-Exports-Expose-BC-Legal-Risk/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/06/08/Could-LNG-Exports-Expose-BC-Legal-Risk/</guid>
+      <description><![CDATA[A growing body of climate lawsuits poses a threat to oil and gas aims of the province and Canada, a new report suggests.]]></description>
+      <pubDate>Mon, 08 Jun 2026 07:10:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Preston Manning’s Not-So-Secret Game Plan</title>
+      <link>https://thetyee.ca/Opinion/2026/06/08/Preston-Manning-Not-So-Secret-Game-Plan/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/06/08/Preston-Manning-Not-So-Secret-Game-Plan/</guid>
+      <description><![CDATA[The separatist threat will bring endless, changing demands to increase Alberta’s power.]]></description>
+      <pubDate>Mon, 08 Jun 2026 07:20:00 GMT</pubDate>
+      <category>High Priority</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
