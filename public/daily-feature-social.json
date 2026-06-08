@@ -1,9 +1,9 @@
 {
-  "feature": "Pattern Detection Flywheel: Turning Data Into Systemic Evidence",
-  "contentType": "feature",
-  "date": "2026-06-07",
-  "shortPost": "Feature Spotlight: Pattern Detection Flywheel: Turning Data Into Systemic Evidence\nDesigned to aggregate anonymized data revealing discrimination patterns invisible to individuals - intended to power legal challenges and policy reform\nRead article: https://3mpwrapp.ca/features/2026/06/07/feature-spotlight-pattern-detection-flywheel-turning-data-into-systemic-evidence/",
-  "longPost": "Feature Spotlight: Pattern Detection Flywheel: Turning Data Into Systemic Evidence\nDesigned to aggregate anonymized data revealing discrimination patterns invisible to individuals - intended to power legal challenges and policy reform\nRead article: https://3mpwrapp.ca/features/2026/06/07/feature-spotlight-pattern-detection-flywheel-turning-data-into-systemic-evidence/",
-  "url": "https://3mpwrapp.ca/features/2026/06/07/feature-spotlight-pattern-detection-flywheel-turning-data-into-systemic-evidence/",
-  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-06-07-feature-spotlight-pattern-detection-flywheel-turning-data-into-systemic-evidence.md"
+  "feature": "Bank-Level Encryption for a Disability App: The Why",
+  "contentType": "devDiary",
+  "date": "2026-06-08",
+  "shortPost": "Dev Diary: Bank-Level Encryption for a Disability App: The Why\nThe reasoning behind implementing AES-256-GCM encryption in 3mpwrApp and what it took to verify it works correctly\nRead article: https://3mpwrapp.ca/dev-diary/2026/06/08/dev-diary-bank-level-encryption-for-a-disability-app-the-why/",
+  "longPost": "Dev Diary: Bank-Level Encryption for a Disability App: The Why\nThe reasoning behind implementing AES-256-GCM encryption in 3mpwrApp and what it took to verify it works correctly\nRead article: https://3mpwrapp.ca/dev-diary/2026/06/08/dev-diary-bank-level-encryption-for-a-disability-app-the-why/",
+  "url": "https://3mpwrapp.ca/dev-diary/2026/06/08/dev-diary-bank-level-encryption-for-a-disability-app-the-why/",
+  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-06-08-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md"
 }
