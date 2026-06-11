@@ -121,11 +121,18 @@
 
             } catch (error) {
                 console.error('Redirect error:', error);
-                messageEl.innerHTML =
-                    '<div class="error">' +
-                    '<strong>Error:</strong> ' + error.message + '<br><br>' +
-                    'Please try connecting again from the app.' +
-                    '</div>';
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error';
+                const strong = document.createElement('strong');
+                strong.textContent = 'Error:';
+                errorDiv.appendChild(strong);
+                errorDiv.appendChild(document.createTextNode(' '));
+                errorDiv.appendChild(document.createTextNode(error.message));
+                errorDiv.appendChild(document.createElement('br'));
+                errorDiv.appendChild(document.createElement('br'));
+                errorDiv.appendChild(document.createTextNode('Please try connecting again from the app.'));
+                messageEl.textContent = '';
+                messageEl.appendChild(errorDiv);
             }
         })();
     </script>

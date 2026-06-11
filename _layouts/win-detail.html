@@ -183,8 +183,9 @@
         'other': 'Other Win'
       };
       
+      const safeWinType = escapeHtml(win.winType);
       const content = `
-        <div class="win-badge ${win.winType}">${winTypeLabels[win.winType]}</div>
+        <div class="win-badge ${safeWinType}">${escapeHtml(winTypeLabels[win.winType] || 'Win')}</div>
         ${win.privacy === 'anonymous' ? '<span class="anonymous-badge">Anonymous</span>' : ''}
         
         <h1>${escapeHtml(win.title)}</h1>
@@ -207,15 +208,15 @@
         
         <div class="win-metrics">
           <div class="metric">
-            <span class="metric-value">${win.metrics.helpfulVotes}</span>
+            <span class="metric-value">${escapeHtml(String(win.metrics.helpfulVotes))}</span>
             <span class="metric-label">Helpful</span>
           </div>
           <div class="metric">
-            <span class="metric-value">${win.metrics.inspiredCount}</span>
+            <span class="metric-value">${escapeHtml(String(win.metrics.inspiredCount))}</span>
             <span class="metric-label">Inspired</span>
           </div>
           <div class="metric">
-            <span class="metric-value">${win.metrics.shares}</span>
+            <span class="metric-value">${escapeHtml(String(win.metrics.shares))}</span>
             <span class="metric-label">Shares</span>
           </div>
         </div>
@@ -239,8 +240,8 @@
         const wins = await response.json();
         
         const html = wins.map(w => `
-          <a href="{{ site.baseurl }}/wins/${w.id}" class="related-win-card">
-            <div class="win-badge ${w.winType}">${getWinTypeLabel(w.winType)}</div>
+          <a href="{{ site.baseurl }}/wins/${encodeURIComponent(w.id)}" class="related-win-card">
+            <div class="win-badge ${escapeHtml(w.winType)}">${escapeHtml(getWinTypeLabel(w.winType))}</div>
             <h4>${escapeHtml(w.title)}</h4>
             <p>${escapeHtml(w.description.substring(0, 100))}...</p>
           </a>

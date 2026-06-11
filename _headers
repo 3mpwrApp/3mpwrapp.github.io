@@ -64,17 +64,7 @@
   Cross-Origin-Embedder-Policy: unsafe-none
   Cache-Control: no-cache, no-store, must-revalidate
 
-/gdrive-callback/
-  Cross-Origin-Opener-Policy: unsafe-none
-  Cross-Origin-Embedder-Policy: unsafe-none
-  Cache-Control: no-cache, no-store, must-revalidate
-
 /gdrive-callback/*
-  Cross-Origin-Opener-Policy: unsafe-none
-  Cross-Origin-Embedder-Policy: unsafe-none
-  Cache-Control: no-cache, no-store, must-revalidate
-
-/gdrive-callback.html
   Cross-Origin-Opener-Policy: unsafe-none
   Cross-Origin-Embedder-Policy: unsafe-none
   Cache-Control: no-cache, no-store, must-revalidate
