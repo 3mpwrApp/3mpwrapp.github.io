@@ -143,6 +143,22 @@
   {% include footer.html %}
   
   <script>
+    // Allowlist of valid win types - used to prevent CSS class injection
+    const WIN_TYPE_LABELS = {
+      'accommodation': 'Workplace Accommodation',
+      'appeal_won': 'Appeal Won',
+      'settlement': 'Legal Settlement',
+      'policy_change': 'Policy Change',
+      'benefit_approved': 'Benefits Approved',
+      'access_granted': 'Access Granted',
+      'other': 'Other Win'
+    };
+
+    // Returns a safe win type validated against the allowlist
+    function getSafeWinType(winType) {
+      return Object.prototype.hasOwnProperty.call(WIN_TYPE_LABELS, winType) ? winType : 'other';
+    }
+
     // Get win ID from URL
     const winId = window.location.pathname.split('/').filter(Boolean).pop();
     
@@ -173,20 +189,10 @@
     }
     
     function renderWin(win) {
-      const winTypeLabels = {
-        'accommodation': 'Workplace Accommodation',
-        'appeal_won': 'Appeal Won',
-        'settlement': 'Legal Settlement',
-        'policy_change': 'Policy Change',
-        'benefit_approved': 'Benefits Approved',
-        'access_granted': 'Access Granted',
-        'other': 'Other Win'
-      };
-      
       // Validate winType against allowlist to prevent CSS class injection
-      const safeWinType = Object.prototype.hasOwnProperty.call(winTypeLabels, win.winType) ? win.winType : 'other';
+      const safeWinType = getSafeWinType(win.winType);
       const content = `
-        <div class="win-badge ${safeWinType}">${escapeHtml(winTypeLabels[safeWinType])}</div>
+        <div class="win-badge ${safeWinType}">${escapeHtml(WIN_TYPE_LABELS[safeWinType])}</div>
         ${win.privacy === 'anonymous' ? '<span class="anonymous-badge">Anonymous</span>' : ''}
         
         <h1>${escapeHtml(win.title)}</h1>
@@ -241,10 +247,7 @@
         const wins = await response.json();
         
         const html = wins.map(w => {
-          const safeType = Object.prototype.hasOwnProperty.call({
-            'accommodation': 1, 'appeal_won': 1, 'settlement': 1,
-            'policy_change': 1, 'benefit_approved': 1, 'access_granted': 1, 'other': 1
-          }, w.winType) ? w.winType : 'other';
+          const safeType = getSafeWinType(w.winType);
           return `
           <a href="{{ site.baseurl }}/wins/${encodeURIComponent(w.id)}" class="related-win-card">
             <div class="win-badge ${safeType}">${escapeHtml(getWinTypeLabel(w.winType))}</div>
@@ -261,16 +264,7 @@
     }
     
     function getWinTypeLabel(type) {
-      const labels = {
-        'accommodation': 'Workplace Accommodation',
-        'appeal_won': 'Appeal Won',
-        'settlement': 'Legal Settlement',
-        'policy_change': 'Policy Change',
-        'benefit_approved': 'Benefits Approved',
-        'access_granted': 'Access Granted',
-        'other': 'Other Win'
-      };
-      return labels[type] || 'Win';
+      return WIN_TYPE_LABELS[type] || 'Win';
     }
     
     function generateEmbedCode(winId) {
