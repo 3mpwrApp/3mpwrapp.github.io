@@ -1,0 +1,58 @@
+---
+layout: post
+title: "Daily News Curation - 2026-06-11"
+date: 2026-06-11
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-06-11
+
+Curated 8 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Mark Carney Adviser Says AI Data Centres ‘Provide Markets’ for Gas
+Boosting energy production is one of the top ‘public policy benefits to Canada’ of data centres, says internal government document.
+[Source](https://thetyee.ca/News/2026/06/11/Mark-Carney-Adviser-AI-Data-Centres/)
+**Score:** 21.50
+
+### 2. Manitoba Government Invests $1 Million to Combat Overdose Crisis
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74043)
+**Score:** 14.50
+
+### 3. Manitoba Government Starts Construction on New Kindergarten to Grade 8 School and Child-Care Facility in Devonshire Park
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74041)
+**Score:** 9.50
+
+### 4. On AI Safety Concerns, Mark Carney Is Out of Step with Canadians
+The public is right to be concerned about AI. But Carney and his ministers have framed our reluctance as ignorance.
+[Source](https://thetyee.ca/Opinion/2026/06/11/AI-Safety-Concerns-Mark-Carney/)
+**Score:** 6.60
+
+### 5. Manitoba Government Invests $21.2 Million in Infrastructure Improvements in Interlake Region
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74177)
+**Score:** 7.50
+
+### 6. Manitoba Government Invests $650,000 in Wildlife Haven Rehabilitation Centre
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74044)
+**Score:** 7.50
+
+### 7. Province Provides Hantavirus Update
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74042)
+**Score:** 4.50
+
