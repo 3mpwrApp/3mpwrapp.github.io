@@ -183,9 +183,10 @@
         'other': 'Other Win'
       };
       
-      const safeWinType = escapeHtml(win.winType);
+      // Validate winType against allowlist to prevent CSS class injection
+      const safeWinType = Object.prototype.hasOwnProperty.call(winTypeLabels, win.winType) ? win.winType : 'other';
       const content = `
-        <div class="win-badge ${safeWinType}">${escapeHtml(winTypeLabels[win.winType] || 'Win')}</div>
+        <div class="win-badge ${safeWinType}">${escapeHtml(winTypeLabels[safeWinType])}</div>
         ${win.privacy === 'anonymous' ? '<span class="anonymous-badge">Anonymous</span>' : ''}
         
         <h1>${escapeHtml(win.title)}</h1>
@@ -239,13 +240,19 @@
         const response = await fetch(`{{ site.baseurl }}/api/wins?type=${winType}&limit=3`);
         const wins = await response.json();
         
-        const html = wins.map(w => `
+        const html = wins.map(w => {
+          const safeType = Object.prototype.hasOwnProperty.call({
+            'accommodation': 1, 'appeal_won': 1, 'settlement': 1,
+            'policy_change': 1, 'benefit_approved': 1, 'access_granted': 1, 'other': 1
+          }, w.winType) ? w.winType : 'other';
+          return `
           <a href="{{ site.baseurl }}/wins/${encodeURIComponent(w.id)}" class="related-win-card">
-            <div class="win-badge ${escapeHtml(w.winType)}">${escapeHtml(getWinTypeLabel(w.winType))}</div>
+            <div class="win-badge ${safeType}">${escapeHtml(getWinTypeLabel(w.winType))}</div>
             <h4>${escapeHtml(w.title)}</h4>
             <p>${escapeHtml(w.description.substring(0, 100))}...</p>
           </a>
-        `).join('');
+        `;
+        }).join('');
         
         document.getElementById('related-wins-list').innerHTML = html;
       } catch (error) {
