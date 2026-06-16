@@ -57,13 +57,14 @@
   "devDiaries": [
     "Why We Chose React Native: Accessibility Over Everything",
     "Building Offline-First: Network Access Should Never Be Required",
-    "Bank-Level Encryption for a Disability App: The Why"
+    "Bank-Level Encryption for a Disability App: The Why",
+    "Simple Mode: Designing for the Worst Day"
   ],
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built",
     "Disability Justice vs Disability Charity: Our Operating Principle",
     "What 3mpwr Means: The Philosophy Behind Our Name"
   ],
-  "rotationIndex": 3,
+  "rotationIndex": 4,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
