@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Daily News Curation - 2026-06-16"
+date: 2026-06-16
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-06-16
+
+Curated 6 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. UCP’s ‘independent advisory panel’ on Alberta secession costs is likely to defend Canada on separatist terms
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/politics/canadian-politics/ucps-independent-advisory-panel-on-alberta-secession-costs-is-likely-to-defend-canada-on-separatist-terms/)
+**Score:** 16.40
+
+### 2. What Scotland Can Teach Canada About Fixing Its Doctor Shortage
+It’s time to end the independent contractor model, according to a new report.
+[Source](https://thetyee.ca/News/2026/06/16/What-Scotland-Can-Teach-Canada-Doctor-Shortage/)
+**Score:** 14.10
+
+### 3. Manitoba Government Announces 26 New Transitional Housing Units for Women and Children Escaping Gender-Based Violence
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74237)
+**Score:** 9.50
+
+### 4. What’s Next for Lytton? Look to Its History
+In the context of millennia, five hard years doesn’t seem so long. A Tyee special report.
+[Source](https://thetyee.ca/News/2026/06/16/What-Next-Lytton-Look-History/)
+**Score:** 3.60
+
+### 5. Good News for a ‘Herd of Dinosaurs’ Under the Sea
+Scientists believe ancient glass sponge reefs can grow back. If humans let them.
+[Source](https://thetyee.ca/News/2026/06/16/Good-News-Herd-Dinosaurs-Under-Sea/)
+**Score:** 4.50
+

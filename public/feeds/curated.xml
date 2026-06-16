@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Mon, 15 Jun 2026 17:18:02 GMT</lastBuildDate>
-    <pubDate>Mon, 15 Jun 2026 17:18:02 GMT</pubDate>
+    <lastBuildDate>Tue, 16 Jun 2026 16:59:12 GMT</lastBuildDate>
+    <pubDate>Tue, 16 Jun 2026 16:59:12 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,7 +24,55 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Mon, 15 Jun 2026 17:18:02 GMT</pubDate>
+      <pubDate>Tue, 16 Jun 2026 16:59:12 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>UCP’s ‘independent advisory panel’ on Alberta secession costs is likely to defend Canada on separatist terms</title>
+      <link>https://rabble.ca/politics/canadian-politics/ucps-independent-advisory-panel-on-alberta-secession-costs-is-likely-to-defend-canada-on-separatist-terms/</link>
+      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/ucps-independent-advisory-panel-on-alberta-secession-costs-is-likely-to-defend-canada-on-separatist-terms/</guid>
+      <pubDate>Mon, 15 Jun 2026 19:58:21 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>What Scotland Can Teach Canada About Fixing Its Doctor Shortage</title>
+      <link>https://thetyee.ca/News/2026/06/16/What-Scotland-Can-Teach-Canada-Doctor-Shortage/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/06/16/What-Scotland-Can-Teach-Canada-Doctor-Shortage/</guid>
+      <description><![CDATA[It’s time to end the independent contractor model, according to a new report.]]></description>
+      <pubDate>Tue, 16 Jun 2026 07:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Announces 26 New Transitional Housing Units for Women and Children Escaping Gender-Based Violence</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74237</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74237</guid>
+      <pubDate>Mon, 15 Jun 2026 17:27:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>What’s Next for Lytton? Look to Its History</title>
+      <link>https://thetyee.ca/News/2026/06/16/What-Next-Lytton-Look-History/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/06/16/What-Next-Lytton-Look-History/</guid>
+      <description><![CDATA[In the context of millennia, five hard years doesn’t seem so long. A Tyee special report.]]></description>
+      <pubDate>Tue, 16 Jun 2026 07:40:00 GMT</pubDate>
+      <category>High Priority</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Good News for a ‘Herd of Dinosaurs’ Under the Sea</title>
+      <link>https://thetyee.ca/News/2026/06/16/Good-News-Herd-Dinosaurs-Under-Sea/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/06/16/Good-News-Herd-Dinosaurs-Under-Sea/</guid>
+      <description><![CDATA[Scientists believe ancient glass sponge reefs can grow back. If humans let them.]]></description>
+      <pubDate>Tue, 16 Jun 2026 07:10:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
