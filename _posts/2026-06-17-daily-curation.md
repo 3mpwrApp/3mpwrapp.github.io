@@ -1,0 +1,63 @@
+---
+layout: post
+title: "Daily News Curation - 2026-06-17"
+date: 2026-06-17
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-06-17
+
+Curated 9 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. The Iran War Pumps Up Oil and Gas Profits. Tax Them
+Canada could use the money to fund public services and support the most vulnerable.
+[Source](https://thetyee.ca/Opinion/2026/06/17/Iran-War-Oil-Gas-Profits/)
+**Score:** 18.50
+
+### 2. A Big Award and So Many New Tyee Members!
+As our ranks of supporting Builders grew, Tyler Olsen nabbed a prestigious prize for political reporting.
+[Source](https://thetyee.ca/Tyeenews/2026/06/17/Big-Award-New-Tyee-Members/)
+**Score:** 5.90
+
+### 3. Manitoba Government Expands High-Speed Internet Access Across Northern Communities
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74259)
+**Score:** 7.50
+
+### 4. Manitoba Government Implements Interim Safety Measures at Provincial Trunk Highway 110 and Richmond Avenue in Brandon
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74258)
+**Score:** 7.50
+
+### 5. Manitoba Government Announces Free Provincial Park Access and Recreational Fishing, June 12 Through June 14
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74119)
+**Score:** 7.50
+
+### 6. Manitoba Government Invests $4.3 Million to Expand Water and Wastewater Infrastructure Across Rural Manitoba
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74118)
+**Score:** 7.50
+
+### 7. Manitoba Government Celebrates Brandon Pride
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74117)
+**Score:** 7.50
+
+### 8. Manitobans Invited to Vote on New Provincial Park Licence Plate Design
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74137)
+**Score:** 4.50
+
