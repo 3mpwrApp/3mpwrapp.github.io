@@ -45,7 +45,8 @@
     "Collective Action Flywheel: Organized Evidence Drives Policy Change",
     "Ontario ODSP Navigator: Eligibility, Application & Appeals",
     "CPP-D Application Support Letter",
-    "Human Rights Complaint Letter"
+    "Human Rights Complaint Letter",
+    "WSIB Appeal Letter Template"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -65,6 +66,6 @@
     "Disability Justice vs Disability Charity: Our Operating Principle",
     "What 3mpwr Means: The Philosophy Behind Our Name"
   ],
-  "rotationIndex": 4,
+  "rotationIndex": 5,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
