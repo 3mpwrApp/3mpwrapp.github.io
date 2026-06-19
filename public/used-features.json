@@ -46,7 +46,8 @@
     "Ontario ODSP Navigator: Eligibility, Application & Appeals",
     "CPP-D Application Support Letter",
     "Human Rights Complaint Letter",
-    "WSIB Appeal Letter Template"
+    "WSIB Appeal Letter Template",
+    "Simple Mode: 3mpwrApp for Your Worst Day"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -67,6 +68,6 @@
     "What 3mpwr Means: The Philosophy Behind Our Name",
     "Privacy as a Human Right: Not a Feature We Added Later"
   ],
-  "rotationIndex": 6,
+  "rotationIndex": 7,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
