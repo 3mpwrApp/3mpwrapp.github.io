@@ -48,7 +48,8 @@
     "Human Rights Complaint Letter",
     "WSIB Appeal Letter Template",
     "Simple Mode: 3mpwrApp for Your Worst Day",
-    "Nunavut Social Assistance: Disability"
+    "Nunavut Social Assistance: Disability",
+    "Cognitive Load Reducer: Simplify Complex Information"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -70,6 +71,6 @@
     "What 3mpwr Means: The Philosophy Behind Our Name",
     "Privacy as a Human Right: Not a Feature We Added Later"
   ],
-  "rotationIndex": 2,
+  "rotationIndex": 3,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
