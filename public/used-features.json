@@ -63,7 +63,8 @@
     "Why We Chose React Native: Accessibility Over Everything",
     "Building Offline-First: Network Access Should Never Be Required",
     "Bank-Level Encryption for a Disability App: The Why",
-    "Simple Mode: Designing for the Worst Day"
+    "Simple Mode: Designing for the Worst Day",
+    "From 0 to 721 Tests: Our TDD Story"
   ],
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built",
@@ -71,6 +72,6 @@
     "What 3mpwr Means: The Philosophy Behind Our Name",
     "Privacy as a Human Right: Not a Feature We Added Later"
   ],
-  "rotationIndex": 3,
+  "rotationIndex": 4,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
