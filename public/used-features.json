@@ -49,7 +49,8 @@
     "WSIB Appeal Letter Template",
     "Simple Mode: 3mpwrApp for Your Worst Day",
     "Nunavut Social Assistance: Disability",
-    "Cognitive Load Reducer: Simplify Complex Information"
+    "Cognitive Load Reducer: Simplify Complex Information",
+    "The 3 Flywheels of Change: Turning Lived Experience Into Power"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -72,6 +73,6 @@
     "What 3mpwr Means: The Philosophy Behind Our Name",
     "Privacy as a Human Right: Not a Feature We Added Later"
   ],
-  "rotationIndex": 4,
+  "rotationIndex": 5,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
