@@ -50,7 +50,8 @@
     "Simple Mode: 3mpwrApp for Your Worst Day",
     "Nunavut Social Assistance: Disability",
     "Cognitive Load Reducer: Simplify Complex Information",
-    "The 3 Flywheels of Change: Turning Lived Experience Into Power"
+    "The 3 Flywheels of Change: Turning Lived Experience Into Power",
+    "Saskatchewan SIS: Disability Income Support"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -74,6 +75,6 @@
     "Privacy as a Human Right: Not a Feature We Added Later",
     "Spoon Theory and the Design Language We Built Around It"
   ],
-  "rotationIndex": 6,
+  "rotationIndex": 7,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
