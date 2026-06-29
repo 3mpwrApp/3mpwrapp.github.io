@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Daily News Curation - 2026-06-29"
+date: 2026-06-29
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-06-29
+
+Curated 3 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Is BC’s New Disability Funding Putting Some Kids at Risk?
+The Children's Ministry says no child will be left without services. But parents worry kids’ needs won’t be met, to their detriment.
+[Source](https://thetyee.ca/News/2026/06/29/BC-New-Disability-Funding-Kids-Risk/)
+**Score:** 12.60
+
+### 2. A New Recovery Resource Centre Opens in the Downtown Eastside
+The Ashtrey, named after the late Trey Helten, offers low-barrier supports towards sobriety.
+[Source](https://thetyee.ca/News/2026/06/29/New-Recovery-Resource-Centre-Downtown-Eastside/)
+**Score:** 5.00
+
