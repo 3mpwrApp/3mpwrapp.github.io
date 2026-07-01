@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 30 Jun 2026 14:24:16 GMT</lastBuildDate>
-    <pubDate>Tue, 30 Jun 2026 14:24:16 GMT</pubDate>
+    <lastBuildDate>Wed, 01 Jul 2026 14:41:51 GMT</lastBuildDate>
+    <pubDate>Wed, 01 Jul 2026 14:41:51 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -23,37 +23,102 @@
       <title>The Disability Bulletin</title>
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
-      <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Tue, 30 Jun 2026 14:24:16 GMT</pubDate>
+      <description><![CDATA[The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.]]></description>
+      <pubDate>Wed, 01 Jul 2026 14:41:51 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Releases Grocery Price Study</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74337</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74337</guid>
-      <pubDate>Mon, 22 Jun 2026 16:09:00 GMT</pubDate>
+      <title>Manitoba Government Opens New Huddle Youth Hub for Mental Health and Wellness</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74338</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74338</guid>
+      <pubDate>Mon, 22 Jun 2026 17:49:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Using Salmon Guts to Map Forage Fish Populations</title>
-      <link>https://thetyee.ca/News/2026/06/30/Using-Salmon-Guts-Map-Forage-Fish/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2026/06/30/Using-Salmon-Guts-Map-Forage-Fish/</guid>
-      <description><![CDATA[A new study examined thousands of chinook stomachs to track a vital and often overlooked part of the Salish Sea’s food chain.]]></description>
-      <pubDate>Tue, 30 Jun 2026 07:20:00 GMT</pubDate>
+      <title>The Vancouver Company Working with Trump to Mine the Deep Sea</title>
+      <link>https://thetyee.ca/News/2026/07/01/Vancouver-Company-Working-Trump-Mine-Deep-Sea/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/01/Vancouver-Company-Working-Trump-Mine-Deep-Sea/</guid>
+      <description><![CDATA[As the US snubs international law, experts say Canada has a duty to step in. A Tyee special report.]]></description>
+      <pubDate>Wed, 01 Jul 2026 07:40:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Exposing Alberta’s Wilful Blindness to AI Centre Harms</title>
-      <link>https://thetyee.ca/Analysis/2026/06/30/Alberta-Wilful-Blindness-AI-Centre-Harms/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Analysis/2026/06/30/Alberta-Wilful-Blindness-AI-Centre-Harms/</guid>
-      <description><![CDATA[The UCP refuses to tally risks to nature and people. This expert did it for them.]]></description>
-      <pubDate>Tue, 30 Jun 2026 07:10:00 GMT</pubDate>
+      <title>Manitoba Government Supports Expansion of Youth Football Program in Winnipeg</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74339</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74339</guid>
+      <pubDate>Mon, 22 Jun 2026 21:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Alberta’s All-in-One ID Card Heightens Privacy Risks</title>
+      <link>https://thetyee.ca/Opinion/2026/06/30/Alberta-ID-Card-Heightens-Privacy-Risks/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/06/30/Alberta-ID-Card-Heightens-Privacy-Risks/</guid>
+      <description><![CDATA[Based on groundless fraud fears, it will create headaches for seniors and families.]]></description>
+      <pubDate>Tue, 30 Jun 2026 19:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Supports The Pas Community Renewal Corporation</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74343</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74343</guid>
+      <pubDate>Mon, 22 Jun 2026 22:03:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government to Name New Primary Health-Care Clinic in Honour of Amanda Lathlin</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74340</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74340</guid>
+      <pubDate>Mon, 22 Jun 2026 19:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government to Support Major Expansion at 17 Wing Winnipeg</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74342</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74342</guid>
+      <pubDate>Mon, 22 Jun 2026 21:54:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Invests in Northern Roads</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74341</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74341</guid>
+      <pubDate>Mon, 22 Jun 2026 21:23:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Two Powerful First Nations Relive a Key Victory</title>
+      <link>https://thetyee.ca/Culture/2026/07/01/Two-Powerful-First-Nations-Relive-Key-Victory/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Culture/2026/07/01/Two-Powerful-First-Nations-Relive-Key-Victory/</guid>
+      <description><![CDATA[Facing new fights over land and water, Nuu-chah-nulth and Haida members met in celebratory solidarity.]]></description>
+      <pubDate>Wed, 01 Jul 2026 07:20:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>‘I Don’t Want Lytton to Be Forgotten’</title>
+      <link>https://thetyee.ca/News/2026/07/01/Lytton-Fire-Testimony/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/01/Lytton-Fire-Testimony/</guid>
+      <description><![CDATA[The village’s mayor remembers the day fire changed everything. And shares her hope for what lies ahead.]]></description>
+      <pubDate>Wed, 01 Jul 2026 07:10:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
