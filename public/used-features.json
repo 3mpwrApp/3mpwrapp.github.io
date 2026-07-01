@@ -52,7 +52,8 @@
     "Cognitive Load Reducer: Simplify Complex Information",
     "The 3 Flywheels of Change: Turning Lived Experience Into Power",
     "Saskatchewan SIS: Disability Income Support",
-    "Contact Manager: Track Your Support Team"
+    "Contact Manager: Track Your Support Team",
+    "Notes & Journal: Document Your Journey"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -77,6 +78,6 @@
     "Privacy as a Human Right: Not a Feature We Added Later",
     "Spoon Theory and the Design Language We Built Around It"
   ],
-  "rotationIndex": 2,
+  "rotationIndex": 3,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
