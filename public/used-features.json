@@ -69,7 +69,8 @@
     "Building Offline-First: Network Access Should Never Be Required",
     "Bank-Level Encryption for a Disability App: The Why",
     "Simple Mode: Designing for the Worst Day",
-    "From 0 to 721 Tests: Our TDD Story"
+    "From 0 to 721 Tests: Our TDD Story",
+    "Building Indigenous Language Support: What We Learned"
   ],
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built",
@@ -78,6 +79,6 @@
     "Privacy as a Human Right: Not a Feature We Added Later",
     "Spoon Theory and the Design Language We Built Around It"
   ],
-  "rotationIndex": 3,
+  "rotationIndex": 4,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
