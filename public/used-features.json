@@ -55,7 +55,8 @@
     "Contact Manager: Track Your Support Team",
     "Notes & Journal: Document Your Journey",
     "Independent Medical Examination (IME) Letter",
-    "New Brunswick Disability Support Program"
+    "New Brunswick Disability Support Program",
+    "Daily Check-In: Quick Wellness Snapshot"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -82,6 +83,6 @@
     "Spoon Theory and the Design Language We Built Around It",
     "Building in Public: Why Transparency Is Non-Negotiable for Us"
   ],
-  "rotationIndex": 8,
+  "rotationIndex": 1,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
