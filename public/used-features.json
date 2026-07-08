@@ -65,7 +65,8 @@
     "Writing an Effective Demand Letter with 3mpwrApp",
     "Tracking Symptoms for Doctors and Legal Appointments",
     "Using Spoon Theory to Manage Your Energy Day-to-Day",
-    "Protecting Your Privacy: Local-First Architecture Explained"
+    "Protecting Your Privacy: Local-First Architecture Explained",
+    "Getting Crisis Support Through 3mpwrApp"
   ],
   "devDiaries": [
     "Why We Chose React Native: Accessibility Over Everything",
@@ -83,6 +84,6 @@
     "Spoon Theory and the Design Language We Built Around It",
     "Building in Public: Why Transparency Is Non-Negotiable for Us"
   ],
-  "rotationIndex": 1,
+  "rotationIndex": 2,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
