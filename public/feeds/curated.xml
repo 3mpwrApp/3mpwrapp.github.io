@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 07 Jul 2026 14:40:31 GMT</lastBuildDate>
-    <pubDate>Tue, 07 Jul 2026 14:40:31 GMT</pubDate>
+    <lastBuildDate>Wed, 08 Jul 2026 14:16:56 GMT</lastBuildDate>
+    <pubDate>Wed, 08 Jul 2026 14:16:56 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -23,18 +23,36 @@
       <title>The Disability Bulletin</title>
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
-      <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Tue, 07 Jul 2026 14:40:31 GMT</pubDate>
+      <description><![CDATA[The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.]]></description>
+      <pubDate>Wed, 08 Jul 2026 14:16:56 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>B.C. Set to Lose 3,500 Affordable Homes Because of Budget Cuts: Report</title>
-      <link>https://thetyee.ca/News/2026/07/07/BC-Affordable-Homes-Budget-Cuts/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/07/BC-Affordable-Homes-Budget-Cuts/</guid>
-      <description><![CDATA[Metro Vancouver is warning that thousands of planned units won’t get built.]]></description>
-      <pubDate>Tue, 07 Jul 2026 07:10:00 GMT</pubDate>
+      <title>Manitoba Government Releases Grocery Price Study</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74337</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74337</guid>
+      <pubDate>Mon, 22 Jun 2026 16:09:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>BC Healthcare Professionals Demand Release of Dr. Hussam Abu Safiya and other Palestinian Healthcare Workers Unlawfully Detained in Israeli Prisons</title>
+      <link>https://rabble.ca/human-rights/bc-healthcare-professionals-demand-release-of-dr-hussam-abu-safiya-and-other-palestinian-healthcare-workers-unlawfully-detained-in-israeli-prisons/</link>
+      <guid isPermaLink="true">https://rabble.ca/human-rights/bc-healthcare-professionals-demand-release-of-dr-hussam-abu-safiya-and-other-palestinian-healthcare-workers-unlawfully-detained-in-israeli-prisons/</guid>
+      <pubDate>Tue, 07 Jul 2026 15:15:47 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Inquest Paused after Mother Receives Shocking News About Her Daughter</title>
+      <link>https://thetyee.ca/News/2026/07/07/Tatyanna-Harrison-Buried-Without-Family-Knowledge-Inquest-Paused/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/07/Tatyanna-Harrison-Buried-Without-Family-Knowledge-Inquest-Paused/</guid>
+      <description><![CDATA[Natasha Harrison learned during testimony her daughter Tatyanna was buried without her knowledge.]]></description>
+      <pubDate>Tue, 07 Jul 2026 21:21:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
