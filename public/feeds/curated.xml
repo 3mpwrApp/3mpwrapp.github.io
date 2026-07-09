@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Wed, 08 Jul 2026 14:16:56 GMT</lastBuildDate>
-    <pubDate>Wed, 08 Jul 2026 14:16:56 GMT</pubDate>
+    <lastBuildDate>Thu, 09 Jul 2026 15:15:01 GMT</lastBuildDate>
+    <pubDate>Thu, 09 Jul 2026 15:15:01 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -23,36 +23,100 @@
       <title>The Disability Bulletin</title>
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
-      <description><![CDATA[The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.]]></description>
-      <pubDate>Wed, 08 Jul 2026 14:16:56 GMT</pubDate>
+      <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
+      <pubDate>Thu, 09 Jul 2026 15:15:01 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Releases Grocery Price Study</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74337</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74337</guid>
-      <pubDate>Mon, 22 Jun 2026 16:09:00 GMT</pubDate>
+      <title>Manitoba Government Opens New Huddle Youth Hub for Mental Health and Wellness</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74338</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74338</guid>
+      <pubDate>Mon, 22 Jun 2026 17:49:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>BC Healthcare Professionals Demand Release of Dr. Hussam Abu Safiya and other Palestinian Healthcare Workers Unlawfully Detained in Israeli Prisons</title>
-      <link>https://rabble.ca/human-rights/bc-healthcare-professionals-demand-release-of-dr-hussam-abu-safiya-and-other-palestinian-healthcare-workers-unlawfully-detained-in-israeli-prisons/</link>
-      <guid isPermaLink="true">https://rabble.ca/human-rights/bc-healthcare-professionals-demand-release-of-dr-hussam-abu-safiya-and-other-palestinian-healthcare-workers-unlawfully-detained-in-israeli-prisons/</guid>
-      <pubDate>Tue, 07 Jul 2026 15:15:47 GMT</pubDate>
+      <title>Manitoba Government Supports Expansion of Youth Football Program in Winnipeg</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74339</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74339</guid>
+      <pubDate>Mon, 22 Jun 2026 21:00:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Inquest Paused after Mother Receives Shocking News About Her Daughter</title>
-      <link>https://thetyee.ca/News/2026/07/07/Tatyanna-Harrison-Buried-Without-Family-Knowledge-Inquest-Paused/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/07/Tatyanna-Harrison-Buried-Without-Family-Knowledge-Inquest-Paused/</guid>
-      <description><![CDATA[Natasha Harrison learned during testimony her daughter Tatyanna was buried without her knowledge.]]></description>
-      <pubDate>Tue, 07 Jul 2026 21:21:00 GMT</pubDate>
+      <title>Canada joins US (and Israel) in Pacific war preparations</title>
+      <link>https://rabble.ca/politics/canadian-politics/canada-joins-us-and-israel-in-pacific-war-preparations/</link>
+      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/canada-joins-us-and-israel-in-pacific-war-preparations/</guid>
+      <pubDate>Wed, 08 Jul 2026 21:13:37 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Supports The Pas Community Renewal Corporation</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74343</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74343</guid>
+      <pubDate>Mon, 22 Jun 2026 22:03:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government to Name New Primary Health-Care Clinic in Honour of Amanda Lathlin</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74340</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74340</guid>
+      <pubDate>Mon, 22 Jun 2026 19:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government to Support Major Expansion at 17 Wing Winnipeg</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74342</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74342</guid>
+      <pubDate>Mon, 22 Jun 2026 21:54:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>How Has the World Cup Affected the Downtown Eastside?</title>
+      <link>https://thetyee.ca/News/2026/07/09/How-World-Cup-Affect-Downtown-Eastside/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/09/How-World-Cup-Affect-Downtown-Eastside/</guid>
+      <description><![CDATA[Government, police and residents disagree on whether street sweeps are happening and housing is coming.]]></description>
+      <pubDate>Thu, 09 Jul 2026 20:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Invests in Northern Roads</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74341</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74341</guid>
+      <pubDate>Mon, 22 Jun 2026 21:23:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Human rights absent from Carney’s middle power agenda, six months on from Davos</title>
+      <link>https://rabble.ca/politics/canadian-politics/human-rights-absent-from-carneys-middle-power-agenda-six-months-on-from-davos/</link>
+      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/human-rights-absent-from-carneys-middle-power-agenda-six-months-on-from-davos/</guid>
+      <pubDate>Wed, 08 Jul 2026 15:05:43 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>BC Isn’t Ready for the Next Heat Wave, Doctors Say</title>
+      <link>https://thetyee.ca/News/2026/07/09/BC-Not-Ready-Next-Heat-Wave-Doctors-Say/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/09/BC-Not-Ready-Next-Heat-Wave-Doctors-Say/</guid>
+      <description><![CDATA[Poor, senior and disabled people are being left behind. And the province hasn’t divested from fossil fuels yet.]]></description>
+      <pubDate>Thu, 09 Jul 2026 20:34:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
