@@ -75,7 +75,8 @@
     "Bank-Level Encryption for a Disability App: The Why",
     "Simple Mode: Designing for the Worst Day",
     "From 0 to 721 Tests: Our TDD Story",
-    "Building Indigenous Language Support: What We Learned"
+    "Building Indigenous Language Support: What We Learned",
+    "The Ethics of Building for Vulnerable Communities"
   ],
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built",
@@ -85,6 +86,6 @@
     "Spoon Theory and the Design Language We Built Around It",
     "Building in Public: Why Transparency Is Non-Negotiable for Us"
   ],
-  "rotationIndex": 3,
+  "rotationIndex": 4,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
