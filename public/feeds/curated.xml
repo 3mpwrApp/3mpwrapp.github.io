@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Sat, 11 Jul 2026 13:24:26 GMT</lastBuildDate>
-    <pubDate>Sat, 11 Jul 2026 13:24:26 GMT</pubDate>
+    <lastBuildDate>Sun, 12 Jul 2026 13:24:36 GMT</lastBuildDate>
+    <pubDate>Sun, 12 Jul 2026 13:24:36 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,25 +24,34 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Sat, 11 Jul 2026 13:24:26 GMT</pubDate>
+      <pubDate>Sun, 12 Jul 2026 13:24:36 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Meta announcement shows Alberta’s determination to welcome AI data centres</title>
-      <link>https://rabble.ca/politics/canadian-politics/meta-announcement-shows-albertas-determination-to-welcome-ai-data-centres/</link>
-      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/meta-announcement-shows-albertas-determination-to-welcome-ai-data-centres/</guid>
-      <pubDate>Fri, 10 Jul 2026 18:23:22 GMT</pubDate>
+      <title>Province Announces Updated Eligibility for Free Hepatitis A Vaccine Ahead of 2026 Manitoba Indigenous Summer Games</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74420</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74420</guid>
+      <pubDate>Fri, 03 Jul 2026 21:06:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Measles Update #113</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74417</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74417</guid>
-      <pubDate>Thu, 02 Jul 2026 20:34:00 GMT</pubDate>
+      <title>Manitoba Justice Reports In-Custody Death</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74419</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74419</guid>
+      <pubDate>Fri, 03 Jul 2026 18:54:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitobans Encouraged to Take Precautions Against Lyme Disease, West Nile Virus</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74357</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74357</guid>
+      <pubDate>Thu, 25 Jun 2026 19:57:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>

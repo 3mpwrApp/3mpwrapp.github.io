@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Daily News Curation - 2026-07-12"
+date: 2026-07-12
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-07-12
+
+Curated 4 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Province Announces Updated Eligibility for Free Hepatitis A Vaccine Ahead of 2026 Manitoba Indigenous Summer Games
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74420)
+**Score:** 13.00
+
+### 2. Manitoba Justice Reports In-Custody Death
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74419)
+**Score:** 8.10
+
+### 3. Manitobans Encouraged to Take Precautions Against Lyme Disease, West Nile Virus
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74357)
+**Score:** 4.50
+
