@@ -58,7 +58,8 @@
     "New Brunswick Disability Support Program",
     "Daily Check-In: Quick Wellness Snapshot",
     "Voice Memo Evidence Logger: Document Incidents Hands-Free",
-    "Colorblind-Friendly Mode: Visual Accessibility for 350M People"
+    "Colorblind-Friendly Mode: Visual Accessibility for 350M People",
+    "Newfoundland & Labrador Income Support"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -88,6 +89,6 @@
     "Building in Public: Why Transparency Is Non-Negotiable for Us",
     "Collective Advocacy: Why Individual Coping Is Not Enough"
   ],
-  "rotationIndex": 6,
+  "rotationIndex": 7,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
