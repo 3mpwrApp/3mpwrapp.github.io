@@ -1,8 +1,180 @@
 ---
 layout: default
-title: Privacy Policy (duplicate)
-description: Duplicate privacy page retained for history. The live page is at /privacy/.
-published: false
+title: Privacy Policy
+description: How 3mpwrApp collects, protects, and respects your data — built on 100% user data ownership.
+permalink: /privacy
 ---
 
-This is a duplicate of the Privacy Policy. Please see the canonical page at /privacy/.
+<!-- Complexity Mode Toggle -->
+{%- include complexity-toggle.html -%}
+
+{%- include status-banner.html -%}
+
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+
+# 🔐 Privacy Policy
+
+**Last updated: October 12, 2025**
+
+This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and protects information in the 3mpwr App mobile application and web experience. By using the app, you agree to these practices.
+
+## 🔐 100% User Data Ownership Guarantee
+
+**Your data belongs entirely to you.** 3mpwr App is built on the fundamental principle of complete user data sovereignty:
+
+- **🏠 100% User Ownership:** All data created in 3mpwr App belongs entirely to you. We never own, claim, or retain your personal information.
+- **🔒 Local-First & Air-Gapped:** All processing happens on your device. Data stays in your possession unless you choose to sync to your own cloud.
+- **☁️ Your Cloud, Your Control:** Optional sync connects only to your chosen services (Google Drive, iCloud, WebDAV, Dropbox, OneDrive, AWS S3). No data passes through our servers.
+- **🚫 Zero Tracking:** No embedded analytics, trackers, or third-party data collection without your explicit consent.
+- **🛡️ Military-Grade Security:** AES-256 encryption, hardware-backed key storage, TLS 1.3 network security, and anti-tampering protection.
+- **🔍 Verifiable Privacy:** Our codebase contains no hidden data-logging functions. You can inspect and verify our claims.
+
+### Technical Implementation:
+
+- **BYOC Strict Mode:** When enabled, completely disables Firebase and all cloud storage, allowing you to connect ANY cloud provider you want
+- **Session-Only Credentials:** Your storage credentials are never saved by the app
+- **Hardware Security:** Encryption keys stored in your device's secure enclave
+- **Network Protection:** Certificate pinning and encrypted connections for all network traffic
+- **Tamper Detection:** Real-time monitoring for unauthorized modifications
+- **Air-Gapped Operation:** Works 100% offline with no mandatory internet connections
+
+## 📋 Privacy Summary
+
+- **🏠 Local-first architecture:** All data stored on your device by default with optional user-controlled sync
+- **☁️ BYOC support:** Connect ANY storage provider you want for 100% user-owned data persistence
+- **🔒 Data minimization:** We store only what's necessary and most preferences stay on your device
+- **💰 No data sales:** We do not sell personal data under any circumstances
+- **👤 Guest Mode:** Use without creating an account (limited features available)
+- **⚙️ Full control:** You control notifications, analytics, and all data sharing in Settings
+- **🔄 Data portability:** Request access, correction, or deletion of your data anytime
+
+## 📊 Information We Collect
+
+### 1) Information you provide:
+
+- **Account information** (if you create one): name, email, and basic identifiers
+  *Guest Mode collects no account identifiers*
+- **Preferences and settings:** accessibility options, quiet hours, language, high contrast mode
+- **Community contributions** (if enabled): messages, posts, uploaded media, reactions, profile details
+- **Contact messages:** support requests via About/Contact form or email
+- **Evidence Locker notes:** stored locally on your device unless you explicitly export or share them
+
+> ⚠️ **Privacy tip:** Avoid storing personal identifiers in notes where possible.
+
+### 2) Information collected automatically:
+
+- **App diagnostics:** app version, device OS version, basic capabilities, crash/error logs (when enabled)
+- **Analytics events:** pseudonymous identifiers to improve features and reliability (opt-out available)
+- **Push notification token:** required only if you enable notifications
+- **Network status:** for community features and offline indicators
+- **Security monitoring:** device integrity checks, tamper detection events
+
+### 3) Information from third parties:
+
+- **Content metadata:** YouTube API (video information), Advocate Directory API (professional listings)
+  *We receive only public metadata, never your account data from these providers*
+- **Cloud storage:** When you connect your own cloud storage, we interact only with files you explicitly choose to sync
+
+> ⚠️ **Important:** We do not intentionally collect sensitive categories of data unless you directly provide them. Do not include sensitive personal identifiers in free-text fields where not required.
+
+## 🔧 How We Use Information
+
+We use your information only to:
+
+- **Provide core functionality:** navigation, saved items, localization, accessibility features
+- **Deliver optional features:** voice navigation, quiet hours, wellness tracking, advocacy tools
+- **Send chosen notifications:** reminders, updates (you control all notification settings)
+- **Maintain security:** app integrity, fraud prevention, security monitoring
+- **Improve the app:** aggregated analytics and diagnostics (with your consent)
+- **Comply with laws:** legal obligations and terms enforcement
+
+## ⚖️ Legal Bases (EEA/UK where applicable)
+
+- **Contract:** To provide services you request
+- **Legitimate interests:** To improve and secure the app without overriding your rights
+- **Consent:** For optional features like notifications or analytics (withdraw anytime in Settings)
+
+## 🤝 Sharing and Disclosure
+
+**We do not sell personal data.** We share limited information only with service providers necessary to operate the app:
+
+- **Push Notifications:** Expo Notifications to deliver messages to your device
+- **Cloud Services:** Google Firebase (Authentication, Firestore/Storage) for optional account and community features
+- **Error Monitoring:** Sentry for crash logs and errors (when enabled)
+- **Content Integrations:** YouTube API, Advocate Directory API (public metadata only)
+- **Web Hosting:** CDN providers for web app delivery
+
+All service providers:
+
+- Process data on our behalf under strict contracts
+- Required to maintain confidentiality and appropriate security
+- Cannot use your data for their own purposes
+
+## 🎛️ Your Choices and Rights
+
+### Privacy Controls:
+
+- **Notifications:** Enable/disable push notifications and choose categories in Settings
+- **Quiet Hours:** Silence notifications during specified times
+- **Accessibility:** Adjust text size, contrast, and language preferences
+- **Analytics:** Opt out of analytics collection in Settings
+- **High Contrast Mode:** Enhanced accessibility with improved color contrast
+- **Guest Mode:** Use core features without creating an account
+
+### Data Rights:
+
+Contact us at **empowrapp08162025@gmail.com** to request:
+
+- **Access:** View what data we have about you
+- **Correction:** Fix inaccurate information
+- **Deletion:** Remove your data from our systems
+- **Portability:** Export your data in a standard format
+
+## 🔐 Security Measures
+
+### Technical Safeguards:
+
+- **AES-256 encryption** for data protection
+- **Hardware-backed key storage** in your device's secure enclave
+- **TLS 1.3 network encryption** with certificate pinning
+- **Real-time tamper detection** and integrity monitoring
+- **Input validation** preventing injection attacks
+- **Device security validation** (root/jailbreak detection)
+
+### Operational Safeguards:
+
+- **Access controls** limiting who can access data
+- **Security monitoring** with automated threat detection
+- **Regular security testing** including OWASP Mobile Top 10 compliance
+- **Incident response procedures** for security events
+
+> ⚠️ **Remember:** No system is 100% secure. Protect your device with a passcode and avoid storing unnecessary identifiers in free-text notes.
+
+## 👶 Children's Privacy
+
+The app is not directed to children under 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us personal information, contact us immediately to request deletion.
+
+## 🔄 Changes to This Policy
+
+We may update this policy to reflect changes to our practices, new features, legal requirements, or user feedback.
+
+### Notification process:
+
+- Updated policy posted with new "Last updated" date
+- Material changes communicated within the app
+- Major changes may be sent via email or notification
+
+## 📞 Contact Us
+
+**3mpwr App Privacy Team**
+
+- **Email:** empowrapp08162025@gmail.com
+- **Organization:** 3mpwr App
+- **Location:** Toronto, ON, Canada
+- **Website:** https://empowr.app
+
+For privacy-related questions, data requests, or security concerns, please contact us using the email above. We respond to all privacy inquiries within 48 hours and data rights requests within 30 days (or as required by applicable law).
+
+---
+
+> 🔒 **Privacy Verification:** This policy reflects our actual technical implementation. You can verify our privacy claims through code inspection, network monitoring, and our published verification guides. Your privacy and data ownership are not just promises—they're technically guaranteed by our architecture.
