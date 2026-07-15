@@ -59,7 +59,8 @@
     "Daily Check-In: Quick Wellness Snapshot",
     "Voice Memo Evidence Logger: Document Incidents Hands-Free",
     "Colorblind-Friendly Mode: Visual Accessibility for 350M People",
-    "Newfoundland & Labrador Income Support"
+    "Newfoundland & Labrador Income Support",
+    "British Columbia PWD Program: Application to Approval"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -89,6 +90,6 @@
     "Building in Public: Why Transparency Is Non-Negotiable for Us",
     "Collective Advocacy: Why Individual Coping Is Not Enough"
   ],
-  "rotationIndex": 8,
+  "rotationIndex": 1,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
