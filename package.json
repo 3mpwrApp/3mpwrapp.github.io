@@ -4,6 +4,7 @@
   "description": "Fully autonomous content system with 4 AI agents",
   "main": "scripts/agent-orchestrator.js",
   "scripts": {
+    "preinstall": "node -e \"if(process.env.CF_PAGES) process.env.PUPPETEER_SKIP_DOWNLOAD='true'\"",
     "deploy": "node deploy.js",
     "deploy:cloudflare": "bundle exec jekyll build && wrangler pages deploy _site --project-name=3mpwrapp --branch=main",
     "deploy:agents": "node scripts/agent-orchestrator.js deploy",
