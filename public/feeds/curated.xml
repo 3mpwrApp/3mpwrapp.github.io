@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Wed, 15 Jul 2026 13:47:40 GMT</lastBuildDate>
-    <pubDate>Wed, 15 Jul 2026 13:47:40 GMT</pubDate>
+    <lastBuildDate>Thu, 16 Jul 2026 13:57:31 GMT</lastBuildDate>
+    <pubDate>Thu, 16 Jul 2026 13:57:31 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -23,18 +23,46 @@
       <title>The Disability Bulletin</title>
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
-      <description><![CDATA[The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.]]></description>
-      <pubDate>Wed, 15 Jul 2026 13:47:40 GMT</pubDate>
+      <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
+      <pubDate>Thu, 16 Jul 2026 13:57:31 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>People Subject to BC Birth Alerts Can Now Apply for Compensation</title>
-      <link>https://thetyee.ca/News/2026/07/15/People-Subject-BC-Birth-Alerts-Compensation/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/15/People-Subject-BC-Birth-Alerts-Compensation/</guid>
-      <description><![CDATA[The class-action lawsuit against the province has reached a proposed settlement of $66 million.]]></description>
-      <pubDate>Wed, 15 Jul 2026 07:10:00 GMT</pubDate>
+      <title>Manitoba Government Releases Grocery Price Study</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74337</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74337</guid>
+      <pubDate>Mon, 22 Jun 2026 16:09:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>A Vancouver Teen’s Mission to Bring Endometriosis Education to Schools</title>
+      <link>https://thetyee.ca/News/2026/07/16/Vancouver-Teen-Mission-Endometriosis-Education/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/16/Vancouver-Teen-Mission-Endometriosis-Education/</guid>
+      <description><![CDATA[The condition is common and painful. Many Canadians know little about it.]]></description>
+      <pubDate>Thu, 16 Jul 2026 07:20:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Faith Meets Flood on the Prairie</title>
+      <link>https://thetyee.ca/News/2026/07/16/Faith-Meets-Flood-Prairie/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/16/Faith-Meets-Flood-Prairie/</guid>
+      <description><![CDATA[I arrived in Brandon, Manitoba, as the river was rising. So is church-based climate activism.]]></description>
+      <pubDate>Thu, 16 Jul 2026 07:10:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Measles Update #114</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74517</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74517</guid>
+      <pubDate>Wed, 15 Jul 2026 14:55:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>

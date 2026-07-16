@@ -1,0 +1,43 @@
+---
+layout: post
+title: "Daily News Curation - 2026-07-16"
+date: 2026-07-16
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-07-16
+
+Curated 5 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Manitoba Government Releases Grocery Price Study
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74337)
+**Score:** 7.90
+
+### 2. A Vancouver Teen’s Mission to Bring Endometriosis Education to Schools
+The condition is common and painful. Many Canadians know little about it.
+[Source](https://thetyee.ca/News/2026/07/16/Vancouver-Teen-Mission-Endometriosis-Education/)
+**Score:** 5.00
+
+### 3. Faith Meets Flood on the Prairie
+I arrived in Brandon, Manitoba, as the river was rising. So is church-based climate activism.
+[Source](https://thetyee.ca/News/2026/07/16/Faith-Meets-Flood-Prairie/)
+**Score:** 4.50
+
+### 4. Measles Update #114
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74517)
+**Score:** 4.50
+
