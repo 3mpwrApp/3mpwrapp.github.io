@@ -63,14 +63,7 @@
     "British Columbia PWD Program: Application to Approval"
   ],
   "tutorials": [
-    "How to Use the Evidence Locker Effectively",
-    "Setting Up Accessibility for Your Needs",
-    "Your First Benefits Application: A Complete Walkthrough",
-    "Writing an Effective Demand Letter with 3mpwrApp",
-    "Tracking Symptoms for Doctors and Legal Appointments",
-    "Using Spoon Theory to Manage Your Energy Day-to-Day",
-    "Protecting Your Privacy: Local-First Architecture Explained",
-    "Getting Crisis Support Through 3mpwrApp"
+    "How to Use the Evidence Locker Effectively"
   ],
   "devDiaries": [
     "Why We Chose React Native: Accessibility Over Everything",
@@ -90,6 +83,6 @@
     "Building in Public: Why Transparency Is Non-Negotiable for Us",
     "Collective Advocacy: Why Individual Coping Is Not Enough"
   ],
-  "rotationIndex": 1,
+  "rotationIndex": 2,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
