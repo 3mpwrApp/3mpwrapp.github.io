@@ -12,6 +12,8 @@ image_alt: "HRTO case abandonment analysis showing correlation between email iss
 toc: true
 ---
 
+> **📋 ACCURACY AUDIT — 2026-07-20 (post laptop-failure recovery).** Reviewed against the recovered Ontario scrape. Outcome/grant/success rates are **keyword-inferred** (CanLII API lacks structured outcome labels) unless a tribunal open-data portal is cited. BC WCAT collection was **interrupted by the 2026-07 laptop failure** and is not complete. Cross-post success-rate figures were found inconsistent and are treated as exploratory. Counts are raw decision records, not deduplicated or classified outcomes. The 73.5% abandonment / 0.7% victory figures are for the **detected-outcome subset only** (keyword-inferred), not a merits census — as disclosed in this post's tiered-evidence update.
+
 # HRTO Case Abandonment Analysis: 73.5% Abandonment Rate and Email Delivery Correlation
 
 **Advanced pattern analysis of 3,186 HRTO decisions (2020-2026) reveals significant correlation between email notification issues and case abandonments: 36.6% of all cases cite undeliverable emails in CanLII keywords, 70.1% of abandoned cases involve email delivery issues, and 73.5% of detected outcomes are abandonments. Analysis based on CanLII keyword data; complete tribunal notification procedures not captured in dataset.**

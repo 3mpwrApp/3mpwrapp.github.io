@@ -9,6 +9,8 @@ tags: [onsbt, outcome-classification, confidence-intervals, data-transparency, r
 toc: true
 ---
 
+> **📋 ACCURACY AUDIT — 2026-07-20 (post laptop-failure recovery).** Reviewed against the recovered Ontario scrape. Outcome/grant/success rates are **keyword-inferred** (CanLII API lacks structured outcome labels) unless a tribunal open-data portal is cited. BC WCAT collection was **interrupted by the 2026-07 laptop failure** and is not complete. Cross-post success-rate figures were found inconsistent and are treated as exploratory. Counts are raw decision records, not deduplicated or classified outcomes.
+
 # ONSBT Outcome Classification Update (2020-2026)
 
 This update reports outcome classification under a strict tiered framework designed for transparency and uncertainty reporting.

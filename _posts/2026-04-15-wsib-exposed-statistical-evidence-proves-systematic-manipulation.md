@@ -1,20 +1,22 @@
 ﻿---
 layout: post
-title: "What 11,430 Tribunal Decisions Reveal About WSIB Outcomes"
+title: "What 98,992 Tribunal Decisions Reveal About WSIB Outcomes"
 date: 2026-04-15
 categories: [advocacy, research, transparency, wsib]
 tags: [wsib, advocacy, data-analysis, injured-workers, research, transparency]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/
-excerpt: "We analyzed 11,430 WSIB tribunal decisions from 2020-2026 using statistical methods. FACTS: 43.9% (95% CI: 42.3-45.6%) of 2024 decisions are missing from the public record (1,545 cases). Reconsideration adds about 1.5 years of delay. 20% (95% CI: 17.3-22.7%) of knee injuries cite 'pre-existing' vs 13.3% (95% CI: 12.7-13.9%) baseline. INTERPRETATION: Patterns are consistent with system-level process variation. Alternative explanations acknowledged. Full methodology included."
+excerpt: "We analyzed 98,992 WSIB tribunal decisions (1987-2026) using statistical methods. FACTS: 43.9% (95% CI: 42.3-45.6%) of 2024 decisions are missing from the public record (1,545 cases). Reconsideration adds about 1.5 years of delay. 20% (95% CI: 17.3-22.7%) of knee injuries cite 'pre-existing' vs 13.3% (95% CI: 12.7-13.9%) baseline. INTERPRETATION: Patterns are consistent with system-level process variation. Alternative explanations acknowledged. Full methodology included."
 image: /assets/images/wsib-detective-analysis-2026-04-15.png
-image_alt: "Statistical analysis visualization showing WSIB tribunal decision patterns and outcome clarity metrics from 11,430 cases"
+image_alt: "Statistical analysis visualization showing WSIB tribunal decision patterns and outcome clarity metrics from 98,992 cases"
 featured: true
 ---
 
-# What 11,430 Tribunal Decisions Reveal About WSIB Outcomes
+# What 98,992 Tribunal Decisions Reveal About WSIB Outcomes
 
 **📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New evidence: Decision complexity analysis shows 19.85% simple (1 issue), 23.01% moderate (2-3 issues), 2.81% complex (4-5 issues). Top co-occurrences: NEL+Permanent Impairment (11,516 cases), LOE+Loss of Earnings (9,167 cases), Pre-existing+SIEF (3,281 cases). Medical specialists: Surgeon mentioned only 195 times (0.20%), Psychiatrist 44 times (0.04%). See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29) | [Evidence-Based Guides](/guides/)
+
+> **📋 ACCURACY AUDIT — 2026-07-20:** Original title "11,430" referred to an earlier WSIAT subset; analysis later enhanced with the 98,992-decision WSIAT Open Data Portal export. All outcome/grant rates on this page are keyword-inferred unless sourced to the Portal. The knee pre-existing stat (line above) is computed from Portal keyword co-occurrence, not the CanLII scrape.
 
 ---
 
@@ -27,7 +29,7 @@ featured: true
 
 **⏰ Reconsideration adds 1.5 years of delay** vs. 0.5 years for direct appeals (4x longer)
 
-**🦵 Knee injuries flagged as "pre-existing" 20% of the time** vs. 13.3% baseline (χ² = 32.7, p < 0.001)
+**🦵 Knee injuries flagged as "pre-existing" 20% of the time** vs. 13.3% baseline (χ² = 32.7, p < 0.001) — *computed from WSIAT Open Data Portal keyword co-occurrence (98,992 export), NOT the CanLII scrape; the CanLII scrape cannot reproduce this stat.*
 
 **📉 July 2023: Only 39 decisions published** vs. 154 average (99.7% certain NOT random)
 

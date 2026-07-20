@@ -18,6 +18,8 @@ excerpt: "Comprehensive analysis of 13,798 ONSBT tribunal decisions over seven y
 
 ---
 
+> **📋 ACCURACY AUDIT — 2026-07-20 (post laptop-failure recovery).** Reviewed against the recovered Ontario scrape. Outcome/grant/success rates are **keyword-inferred** (CanLII API lacks structured outcome labels) unless a tribunal open-data portal is cited. BC WCAT collection was **interrupted by the 2026-07 laptop failure** and is not complete. Cross-post success-rate figures were found inconsistent and are treated as exploratory. Counts are raw decision records, not deduplicated or classified outcomes. ONSBT's own 67.4% success figure (this post) differs from the 47.2% cited in the ONCA post — the ONCA cross-citation has been retracted as definitive (see ONCA post audit note).
+
 ## Overview: The Data Landscape
 
 From 2020 through 2026, the Ontario Social Benefits Tribunal (ONSBT) recorded **13,798 published decisions** across disability eligibility appeals, overpayment disputes, and regulatory compliance matters. This analysis examines what that dataset reveals—and, critically, what it obscures—about access to justice for people with disabilities navigating Ontario's social benefits system.

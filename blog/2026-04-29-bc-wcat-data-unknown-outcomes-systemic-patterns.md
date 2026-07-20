@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: "BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse"
+title: "BC WCAT Data Collection Interrupted: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse (laptop failure 2026-07)"
 date: 2026-04-29
 categories: [data-collection, workers-rights, transparency, research]
 author: 3mpwrApp Research Team
@@ -9,9 +9,13 @@ excerpt: "We've collected 7,386 BC Workers' Compensation Appeal Tribunal decisio
 image: /assets/images/bc-wcat-unknown-outcomes-2026-04-29.png
 ---
 
-# BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse
+> **📋 ACCURACY AUDIT — 2026-07-20 (post laptop-failure recovery).** Reviewed against the recovered Ontario scrape. Outcome/grant/success rates are **keyword-inferred** (CanLII API lacks structured outcome labels) unless a tribunal open-data portal is cited. BC WCAT collection was **interrupted by the 2026-07 laptop failure** and is not complete. Cross-post success-rate figures were found inconsistent and are treated as exploratory. Counts are raw decision records, not deduplicated or classified outcomes.
+
+# BC WCAT Data Collection Interrupted: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse
 
 **TL;DR:** We scraped 7,386 BC WCAT decisions and found **100% have unknown outcomes** - worse than Ontario's WSIAT (91.8%). Our beta testers are identifying patterns that suggest systemic fraud and claim suppression. We've asked CanLII for help to expose these abuses.
+
+**⚠️ Status note (2026-07-20):** BC collection was **interrupted by the laptop failure** (2026-07). The 7,386 cases were collected but not all committed to the repository; BC WCAT remains **incomplete**, not "complete" as originally posted. Ontario scraping was finished before the failure.
 
 ---
 

@@ -254,12 +254,14 @@ While **zero direct workplace injury appeals** (WSIAT → Divisional Court → O
 
 ### 📊 Context: ONCA vs. Tribunals
 
-| Source | Cases | Success Rate Context |
+| Source | Cases | Context (see each tribunal's post) |
 |--------|-------|---------------------|
-| **ONCA** | 5,034 | 13.2% appeal success (upper appellate layer) |
-| **WSIAT** | 98,992 | 73.5% grant rate in classified decisions (tribunal layer) |
-| **HRTO** | 62,093 | 12.7% success rate (tribunal layer) |
-| **ONSBT** | 11,752 | 47.2% grant rate (tribunal layer) |
+| **ONCA** | 5,034 | 13.2% appeal success (upper appellate layer) — keyword-inferred |
+| **WSIAT** | 98,992 | Outcome rates are keyword-inferred; see WSIAT post. (Prior cross-post figures of "73.5% grant" were inconsistent with HRTO's own WSIAT comparison and are retracted as definitive.) |
+| **HRTO** | 62,093 (3,186 deep-analyzed) | 0.7% applicant victory / 73.5% abandonment **among detected outcomes** (keyword-inferred, not a merits census) |
+| **ONSBT** | 13,798 | 67.4% success among classified appeals (keyword-inferred) |
+
+> **📋 ACCURACY AUDIT — 2026-07-20:** The original success-rate cross-table (WSIAT 73.5% / HRTO 12.7% / ONSBT 47.2%) contained figures that contradict each tribunal's own post and were computed from keyword-inferred outcomes. They are replaced above with each tribunal's own reported, disclosed figures and labeled exploratory. Do not cite cross-post success rates as definitive.
 
 **Key difference:** ONCA is the layer ABOVE tribunals. If you lose at WSIAT, you might appeal to Divisional Court, then to ONCA. The 13.2% success rate reflects how difficult it is to overturn a lower court or tribunal decision at the appellate level.
 
@@ -389,9 +391,9 @@ ONCA precedents become useful when:
 
 ### ⚖️ Tribunal-Level Analysis (Start Here for Success Rates)
 
-- [**WSIAT Analysis**](/blog/2026/04/30/suppression-gap.html) - 98,992 decisions, 73.5% grant rate in classified cases
-- [**HRTO Analysis**](/blog/2026/04/20/hrto-email-crisis-abandonment-epidemic/) - 62,093 decisions, 12.7% success rate
-- [**ONSBT Analysis**](/blog/2026/04/26/onsbt-2020-2026-comprehensive-analysis/) - 11,752 decisions, 47.2% grant rate
+- [**WSIAT Analysis**](/blog/2026/04/30/suppression-gap.html) - 98,992 decisions (outcome rates keyword-inferred)
+- [**HRTO Analysis**](/blog/2026/04/20/hrto-email-crisis-abandonment-epidemic/) - 62,093 decisions (0.7% applicant victory among detected outcomes)
+- [**ONSBT Analysis**](/blog/2026/04/26/onsbt-2020-2026-comprehensive-analysis/) - 13,798 decisions (67.4% success among classified)
 
 ### 🔧 Practical Guides
 
