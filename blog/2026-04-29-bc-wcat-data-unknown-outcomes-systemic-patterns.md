@@ -15,7 +15,7 @@ image: /assets/images/bc-wcat-unknown-outcomes-2026-04-29.png
 
 **TL;DR:** We scraped 7,386 BC WCAT decisions and found **100% have unknown outcomes** - worse than Ontario's WSIAT (91.8%). Our beta testers are identifying patterns that suggest systemic fraud and claim suppression. We've asked CanLII for help to expose these abuses.
 
-**⚠️ Status note (2026-07-20):** BC collection was **interrupted by the laptop failure** (2026-07). The 7,386 cases were collected but not all committed to the repository; BC WCAT remains **incomplete**, not "complete" as originally posted. Ontario scraping was finished before the failure.
+**⚠️ Status note (2026-07-20):** BC collection was **interrupted by the laptop failure** (2026-07). The blog originally reported **7,386 BC WCAT decisions collected**, but this count is **not present in the committed repository** (only 313 PDF reports/statistics — not decisions — exist under `data/worksafebc/`) and could not be verified after the failure. The linked `bcwcat-scraping-summary.json` does not exist. BC WCAT remains **incomplete and unverified**; Ontario scraping was finished before the failure.
 
 ---
 

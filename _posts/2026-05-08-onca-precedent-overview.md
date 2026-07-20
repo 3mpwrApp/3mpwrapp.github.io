@@ -58,7 +58,7 @@ The Ontario Court of Appeal is **not** a tribunal success-rate dataset. It's a *
 
 | Outcome Type | Cases | % of Total | What It Means |
 |--------------|-------|------------|---------------|
-| **Unknown/Procedural** | 2,926 | 58.1% | Outcome not classified or procedural only |
+| **Unknown/Procedural** | 2,926 | 58.1% | Other/unspecified outcomes — residual bucket (not a measured "unknown" classification; actual outcome field: Unknown 560 / Procedural 269) |
 | **Appeal Dismissed** | 1,023 | 20.3% | Lower court/tribunal decision upheld |
 | **Costs Decision** | 590 | 11.7% | Decisions about who pays legal fees |
 | **Appeal Allowed** | 156 | 3.1% | Lower court/tribunal decision overturned |
@@ -332,7 +332,7 @@ ONCA precedents become useful when:
 
 1. **ONCA is a precedent engine, not a success-rate database**
    - Zero direct workplace injury appeals in 5,034 decisions
-   - 58.1% of outcomes are unknown/procedural
+   - 58.1% of outcomes are other/unspecified (residual bucket of outcomes not in the named categories above; the actual outcome field shows Unknown 11.1% / Procedural 5.3% — the 58.1% is a catch-all, not a measured "unknown" rate)
    - 13.2% appeal success rate (among classified decisions)
 
 2. **Use ONCA for legal standards, not tribunal outcomes**
