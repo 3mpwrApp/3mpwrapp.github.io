@@ -252,6 +252,18 @@ function injectGoalStyles() {
   const styles = document.createElement('style');
   styles.id = 'goal-onboarding-styles';
   styles.textContent = `
+    :root {
+      --modal-overlay: rgba(0,0,0,0.7);
+      --modal-bg: #1a1a1a;
+      --text-color: #f5f5f5;
+      --text-secondary: #b0b0b0;
+      --border-color: #444;
+      --card-bg: #262626;
+      --card-border: #555;
+      --link-color: #4da3ff;
+      --button-hover-bg: rgba(255,255,255,0.1);
+      --card-hover-bg: rgba(255,255,255,0.05);
+    }
     #goal-selector-banner {
       position: fixed;
       top: 0;
