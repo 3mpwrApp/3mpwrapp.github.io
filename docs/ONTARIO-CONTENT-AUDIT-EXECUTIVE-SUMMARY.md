@@ -54,13 +54,13 @@
 - ✅ **WSIAT Complete Guide:** 89.1% (correct - 4 mentions)
 - ✅ **ONSBT Complete Guide:** 98.9% (FIXED from 40-60%)
 - ✅ **HRTO Complete Guide:** 12.7% (FIXED from 2.66%)
-- ✅ **WSIAT Back Injury Guide:** References 11,430 decisions correctly
+- ✅ **WSIAT Back Injury Guide:** References 98,992 decisions correctly
 - ✅ **WSIAT Chronic Pain Guide:** References correct data
 - ✅ **WSIAT NEL Benefits Guide:** Accurate
-- ✅ **Industry Guides (Healthcare, Construction, Manufacturing):** All reference 11,430 WSIAT decisions correctly
+- ✅ **Industry Guides (Healthcare, Construction, Manufacturing):** All reference 98,992 WSIAT decisions correctly
 
 #### Knowledge Base - ALL VERIFIED ✅
-- ✅ All 20 KB articles reference "11,430 ONWSIAT decisions (2020-2026)" correctly
+- ✅ All 20 KB articles reference "98,992 ONWSIAT decisions (2020-2026)" correctly
 - ✅ No incorrect statistics found in public KB content
 - ✅ WSIAT precedent citations accurate (Decision No. 2157/09, etc.)
 
@@ -75,7 +75,7 @@
 
 | Tribunal | Win Rate | Total Decisions | Abandonment | Source |
 |----------|----------|----------------|-------------|--------|
-| **WSIAT** | **89.1%** | 11,430 | N/A | CanLII subset 2020-2026 |
+| **WSIAT** | **89.1%** | 98,992 | N/A | CanLII subset 2020-2026 |
 | **ONWSIB** | **89.5%*** | 463 | **95.7% unresolved** | CanLII 2020-2026 |
 | **ONSBT** | **98.9%** | 14,298 | Low | CanLII 2020-2026 |
 | **HRTO** | **12.7%** | 9,268 | **43.9%** | CanLII 2020-2026 |
@@ -245,7 +245,7 @@
 **Audit conducted by:** Ontario Content Audit Script v1.0  
 **Report generated:** May 2, 2026 01:31 UTC  
 **Classification data sources:**
-- WSIAT: 11,430 decisions (CanLII 2020-2026)
+- WSIAT: 98,992 decisions (CanLII 2020-2026)
 - ONSBT: 14,298 decisions (CanLII 2020-2026)
 - ONWSIB: 463 decisions (CanLII 2020-2026), with 95.7% unresolved public outcomes
 - HRTO: 9,268 decisions (CanLII 2020-2026)

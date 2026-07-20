@@ -80,7 +80,7 @@ Two workers' compensation reform bills have been introduced in Ontario's 44th Pa
 
 ### Reform Area #3: Mental Stress "Labour Relations Exclusion"
 
-**Background:** WSIA s. 13(5) excludes mental stress arising from "decisions or actions of the employer relating to hiring, discipline, termination, demotion, workplace change, or other employment-related decisions." Analysis of 11,430 WSIAT decisions found 723 cases (6.33%) affected by this exclusion.
+**Background:** WSIA s. 13(5) excludes mental stress arising from "decisions or actions of the employer relating to hiring, discipline, termination, demotion, workplace change, or other employment-related decisions." Analysis of 98,992 WSIAT decisions found 723 cases (6.33%) affected by this exclusion.
 
 | **Factor** | **Bill 86** | **Bill 105** | **Current Law** |
 |-----------|------------|-------------|----------------|
@@ -112,7 +112,7 @@ Two workers' compensation reform bills have been introduced in Ontario's 44th Pa
 | **Duration** | "Until pain, suffering or loss ceases" (potentially lifetime) | N/A | NEL award exhausted after 2-3 years |
 | **Calculation method** | "Proportionate to degree of loss or suffering" | N/A | Fixed impairment rating (e.g., 30% = $84,000) |
 | **Quality of life factors** | ✅ Includes "social or contextual factors" | N/A | Limited to measurable physical impairment |
-| **Evidence base** | Zero ongoing pain compensation found in 11,430 cases | N/A | Gap documented in tribunal decisions |
+| **Evidence base** | Zero ongoing pain compensation found in 98,992 cases | N/A | Gap documented in tribunal decisions |
 
 **Example comparison:**
 
@@ -137,7 +137,7 @@ Two workers' compensation reform bills have been introduced in Ontario's 44th Pa
 
 ### Reform Area #5: Employment Protection (Post-Claim Terminations)
 
-**Background:** Analysis of 11,430 WSIAT decisions documented at least 71 cases (0.62%, conservative estimate) where workers were terminated shortly after filing WSIB claims.
+**Background:** Analysis of 98,992 WSIAT decisions documented at least 71 cases (0.62%, conservative estimate) where workers were terminated shortly after filing WSIB claims.
 
 | **Factor** | **Bill 86** | **Bill 105** | **Current Law** |
 |-----------|------------|-------------|----------------|
@@ -272,7 +272,7 @@ Two workers' compensation reform bills have been introduced in Ontario's 44th Pa
 - 72-month lock-in (maintains it - considered good policy)
 - Construction labour relations (out of scope)
 
-**TOTAL: 7 major reforms addressing 6 documented system gaps from 11,430-case analysis**
+**TOTAL: 7 major reforms addressing 6 documented system gaps from 98,992-case analysis**
 
 ---
 
@@ -317,7 +317,7 @@ Two workers' compensation reform bills have been introduced in Ontario's 44th Pa
 3. **Lack of consultation:** Introduced without pre-consultation with WSIB or employers
 4. **Political timing:** Introduced December 2025, did not proceed April 2026, government had different priorities
 
-**Legacy:** Bill 86's evidence-based analysis (11,430 WSIAT decisions) provided empirical foundation for reform discussions, influencing Bill 105's age/wage provisions
+**Legacy:** Bill 86's evidence-based analysis (98,992 WSIAT decisions) provided empirical foundation for reform discussions, influencing Bill 105's age/wage provisions
 
 ---
 
@@ -393,7 +393,7 @@ Two workers' compensation reform bills have been introduced in Ontario's 44th Pa
 
 ## Chart: Reform Coverage Comparison
 
-### System Gaps Documented in 11,430 WSIAT Decisions (2020-2026)
+### System Gaps Documented in 98,992 WSIAT Decisions (2020-2026)
 
 | **Gap** | **Documented Prevalence** | **Bill 86 Addresses?** | **Bill 105 Addresses?** |
 |---------|-------------------------|---------------------|---------------------|
@@ -514,7 +514,7 @@ Two workers' compensation reform bills have been introduced in Ontario's 44th Pa
 - 3 opposition MPPs (NDP) introduced as private member's bill
 - Goal: Put government on record opposing worker protections
 - Strategy: Comprehensive reform forces government to explain opposition to EACH provision
-- Outcome: Bill failed, BUT created public record of documented system gaps (11,430-case analysis)
+- Outcome: Bill failed, BUT created public record of documented system gaps (98,992-case analysis)
 
 **Strengths:**
 - Evidence-based (empirical data from tribunal decisions)
@@ -666,7 +666,7 @@ Two workers' compensation reform bills have been introduced in Ontario's 44th Pa
 - Outcome: Failed (no government support)
 
 **Legacy:**
-- Created empirical foundation (11,430-case analysis)
+- Created empirical foundation (98,992-case analysis)
 - Demonstrated legislative awareness of system gaps
 - Influenced Bill 105's age/wage provisions
 
@@ -754,6 +754,6 @@ Two workers' compensation reform bills have been introduced in Ontario's 44th Pa
 *Published: May 11, 2026*  
 *Bill 86 status: Did not proceed (April 2026)*  
 *Bill 105 status: Second Reading (proceeding)*  
-*Analysis based on: Bill 86 text, Bill 105 text, 11,430 WSIAT decisions (2020-2026), stakeholder submissions*
+*Analysis based on: Bill 86 text, Bill 105 text, 98,992 WSIAT decisions (2020-2026), stakeholder submissions*
 
 **Contact:** empowrapp08162025@gmail.com

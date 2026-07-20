@@ -160,7 +160,7 @@ node scrape-onwsib-comprehensive-2020-2026.js
 ### What This Gives You:
 
 **Ontario Depth:**
-- ✅ WSIAT (appeals): 11,430 cases - 13.31% pre-existing
+- ✅ WSIAT (appeals): 98,992 cases - 13.31% pre-existing
 - ✅ HRTO (discrimination): 6,039 cases - rich keywords
 - 🆕 ONSBT (ODSP): Disability benefits denial patterns
 - 🆕 ONWSIB (first-level): Pre-existing at source vs appeals

@@ -116,7 +116,7 @@ NotebookLM identified several "hidden" outcome indicators:
 
 #### **ONWSIB (WSIB Internal Reviews):**
 - **Critical Discovery:** Uses administrative language, NOT tribunal language
-- **Problem:** Only 463 public decisions vs. 11,430 WSIAT cases
+- **Problem:** Only 463 public decisions vs. 98,992 WSIAT cases
 - **Limitation:** 95.7% Unknown likely to remain ~70% due to limited public data
 - **Pattern:** "Upon review, the board finds...", "original decision is maintained..."
 

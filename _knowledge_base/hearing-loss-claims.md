@@ -8,7 +8,7 @@ permalink: /knowledge-base/hearing-loss-claims/
 
 > **⚠️ STATISTICAL ALERT:** Occupational hearing loss cases represent only **38 documented cases (0.3%)** of all WSIB tribunal decisions (2020-2026). This DRAMATIC UNDERREPRESENTATION reveals systematic suppression of occupational disease claims despite thousands of Ontario workers exposed to hazardous noise levels daily.
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ---
 
@@ -16,7 +16,7 @@ permalink: /knowledge-base/hearing-loss-claims/
 
 ### By The Numbers - And What They HIDE
 
-From our analysis of 11,430 tribunal decisions (2020-2026):
+From our analysis of 98,992 tribunal decisions (2020-2026):
 
 - **Only 38 hearing loss cases reached tribunal** (0.3% of all decisions)
 - **Expected based on occupational exposure:** 2,000-3,000 cases (minimum)
@@ -433,5 +433,5 @@ Questions to ask:
 **Questions? Need help?**
 📧 empowrapp08162025@gmail.com
 
-*Last updated: April 15, 2026 | Based on 11,430 ONWSIAT decisions (2020-2026)*
+*Last updated: April 15, 2026 | Based on 98,992 ONWSIAT decisions (2020-2026)*
 

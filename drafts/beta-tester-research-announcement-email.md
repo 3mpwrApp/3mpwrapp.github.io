@@ -1,7 +1,7 @@
 ﻿# Beta Tester Email: Research Launch Announcement
 
 **Subject Line Options:**
-1. 🔬 We analyzed 11,430 WSIAT cases—here's what we found (and what you can use)
+1. 🔬 We analyzed 98,992 WSIAT cases—here's what we found (and what you can use)
 2. New Research: Statistical Evidence of WSIB Patterns (2020-2026) + Free Tools for Your Appeals
 3. From the 3mpwr Research Team: Knowledge Base, Templates & Visualization Now Live
 
@@ -15,7 +15,7 @@
 Hi [First Name],
 
 **Opening Hook:**
-Over the past months, our research team analyzed **11,430 WSIAT tribunal decisions** from 2020-2026. What we found confirms what many injured workers already suspected: systematic patterns in how claims are denied.
+Over the past months, our research team analyzed **98,992 WSIAT tribunal decisions** from 2020-2026. What we found confirms what many injured workers already suspected: systematic patterns in how claims are denied.
 
 But here's the important part: **we've built free tools to help you fight back.**
 
@@ -92,7 +92,7 @@ We've created **22 downloadable templates** based on common denial patterns foun
 
 ### 🕸️ Interactive Visualization: CanLII Keyword Network
 
-See how WSIB denial keywords cluster and co-occur across 11,430 cases:
+See how WSIB denial keywords cluster and co-occur across 98,992 cases:
 
 - **Node size** = keyword frequency
 - **Line thickness** = how often keywords appear together
@@ -133,7 +133,7 @@ We've built a central research page where all of this lives:
 4. **Reference our research** in your appeal (all data is public, transparent, and court-admissible)
 
 **Example citation:**
-> "Statistical analysis of 11,430 WSIAT decisions (2020-2026) reveals that 'pre-existing condition' appears in 13.3% (95% CI: 12.7-13.9%) of cases, with knee injuries disproportionately denied at 20.0% rate (χ² = 32.7, p < 0.001). This demonstrates systematic application of pre-existing bias beyond case-by-case medical merits. Source: 3mpwrapp.ca/research"
+> "Statistical analysis of 98,992 WSIAT decisions (2020-2026) reveals that 'pre-existing condition' appears in 13.3% (95% CI: 12.7-13.9%) of cases, with knee injuries disproportionately denied at 20.0% rate (χ² = 32.7, p < 0.001). This demonstrates systematic application of pre-existing bias beyond case-by-case medical merits. Source: 3mpwrapp.ca/research"
 
 ---
 

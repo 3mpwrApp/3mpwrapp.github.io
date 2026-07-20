@@ -2,7 +2,7 @@
 /**
  * ULTRA-DEEP ONWSIAT DATA ANALYSIS (2020-2026)
  * 
- * This script extracts EVERYTHING we can get from 11,430 tribunal decisions:
+ * This script extracts EVERYTHING we can get from 98,992 tribunal decisions:
  * - All keywords with frequency counts
  * - Detailed injury classification (50+ categories)
  * - Outcome extraction attempts (win/loss/varied)

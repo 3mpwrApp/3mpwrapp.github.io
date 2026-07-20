@@ -13,7 +13,7 @@
 
 | Tribunal | Win Rate | Total Decisions | Source |
 |----------|----------|----------------|--------|
-| WSIAT | **89.1%** | 11,430 | CanLII subset 2020-2026 |
+| WSIAT | **89.1%** | 98,992 | CanLII subset 2020-2026 |
 | ONWSIB | **89.5%*** | 463 | CanLII 2020-2026 |
 | ONSBT | **98.9%** | 14,298 | CanLII 2020-2026 |
 | HRTO | **12.7%** | 9,268 | CanLII 2020-2026 |
@@ -317,7 +317,7 @@
 - **Expected:** 89.1%
 - **Found:** 14%
 - **Difference:** 75.1%
-- **Context:** "**Evidence:** - Historical WSIAT file (4,006 predictions) achieved 99.9% high confidence with 86% Allowed / 14% Dismissed distribution - Ultra-slow files (11,430 predictions) ALL defaulted to "Grant"
+- **Context:** "**Evidence:** - Historical WSIAT file (4,006 predictions) achieved 99.9% high confidence with 86% Allowed / 14% Dismissed distribution - Ultra-slow files (98,992 predictions) ALL defaulted to "Grant"
 
 ### [`docs\NLP_OUTCOME_PREDICTION_RESULTS_2026-04-27.md`](docs\NLP_OUTCOME_PREDICTION_RESULTS_2026-04-27.md) Line 86
 - **Tribunal:** ONWSIB
@@ -353,7 +353,7 @@
 
 1. Review broken links and update file paths
 2. Update all statistics to match classified data:
-   - WSIAT: 89.1% (11,430 decisions)
+   - WSIAT: 89.1% (98,992 decisions)
    - ONSBT: 98.9% (14,298 decisions)
    - ONWSIB: 463 decisions with 95.7% unresolved public outcomes; only the visible classified subset yields an 89.5% snapshot
    - HRTO: 12.7% (9,268 decisions)

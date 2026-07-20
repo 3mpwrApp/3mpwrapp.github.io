@@ -69,7 +69,7 @@ Every component must be accurate and authentic to maintain trust and effectivene
    - [x] Data snapshot date added (May 13 fix)
    - [x] Methodology disclaimer added (May 13 fix)
    - [ ] **Voice check:** Does it speak as injured worker, not academic researcher?
-   - [ ] **Stats accuracy:** Verify 11,430 cases, 77% unclear, 89.1% win rate
+   - [ ] **Stats accuracy:** Verify 98,992 cases, 77% unclear, 89.1% win rate
    - [ ] **Citation check:** Link to source files, methodology docs
 
 2. **ONSBT/ONWSIB Blog** ([ontario-social-tribunals-blog-snippet.md](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\docs\ontario-social-tribunals-blog-snippet.md))
@@ -110,8 +110,8 @@ Every component must be accurate and authentic to maintain trust and effectivene
 - ❌ **DON'T:** Hide limitations or oversell data quality
 
 **Example Voice Transformation:**
-❌ Before: "Analysis of 11,430 WSIAT tribunal decisions reveals outcome classification challenges."  
-✅ After: "We analyzed 11,430 WSIAT decisions hoping to help injured workers understand their chances. What we found: 77% of decisions are so unclear even *we* can't tell who won. This isn't a data problem — it's what injured workers face every day trying to understand tribunal precedents."
+❌ Before: "Analysis of 98,992 WSIAT tribunal decisions reveals outcome classification challenges."  
+✅ After: "We analyzed 98,992 WSIAT decisions hoping to help injured workers understand their chances. What we found: 77% of decisions are so unclear even *we* can't tell who won. This isn't a data problem — it's what injured workers face every day trying to understand tribunal precedents."
 
 ---
 
@@ -139,7 +139,7 @@ Every component must be accurate and authentic to maintain trust and effectivene
 **For Each Guide Entry:**
 1. Read markdown file to extract:
    - Case count mentioned in content
-   - Prevalence calculation (cases / 11,430 WSIAT total)
+   - Prevalence calculation (cases / 98,992 WSIAT total)
    - Difficulty assessment (easy/moderate/hard/very-hard)
    - Common denial reasons listed
    - Key topics covered
@@ -174,7 +174,7 @@ Every component must be accurate and authentic to maintain trust and effectivene
    - [ ] Update if discrepancy found (like low-back-pain 62% → 3.4% error)
 
 2. **Statistics Disclosure**
-   - [ ] Every guide header includes: "Based on [X] cases from 11,430 WSIAT decisions"
+   - [ ] Every guide header includes: "Based on [X] cases from 98,992 WSIAT decisions"
    - [ ] Every guide includes: "⚠️ Outcome classification based on keyword analysis. 77% of tribunal decisions have unclear outcomes."
    - [ ] No false prevalence claims (check every percentage)
 
@@ -214,7 +214,7 @@ Every component must be accurate and authentic to maintain trust and effectivene
 Every numerical claim must cite data source:
 
 ```markdown
-**Low back pain appears in 390 WSIAT decisions (3.4% of 11,430 analyzed cases).**
+**Low back pain appears in 390 WSIAT decisions (3.4% of 98,992 analyzed cases).**
 *Source: CanLII WSIAT keyword analysis, 2020-2026 decisions, analyzed April 2026*
 ```
 
@@ -425,7 +425,7 @@ Every legal principle must cite specific tribunal decisions:
 ✅ "I've been through four WSIB denials. So has my friend with the crushed hand. And the guy I met at physio with the destroyed back. We all won our appeals eventually — but only after learning what WSIAT really looks for."
 
 **Data Presentation:**
-✅ "We analyzed 11,430 tribunal decisions hoping to find patterns that could help other injured workers. The results surprised us: 77% of decisions are so unclear we couldn't tell who won. If *we* can't figure it out with spreadsheets and scripts, how is an exhausted worker supposed to know?"
+✅ "We analyzed 98,992 tribunal decisions hoping to find patterns that could help other injured workers. The results surprised us: 77% of decisions are so unclear we couldn't tell who won. If *we* can't figure it out with spreadsheets and scripts, how is an exhausted worker supposed to know?"
 
 **Limitation Disclosure:**
 ✅ "Full disclosure: This analysis is based on keywords from CanLII, not full text. We're missing details. But even with limitations, this is the most comprehensive outcome analysis of recent WSIAT decisions available to injured workers."

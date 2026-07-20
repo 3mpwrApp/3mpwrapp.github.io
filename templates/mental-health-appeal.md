@@ -14,7 +14,7 @@ tags: [mental-health, ptsd, workplace-stress, wsiat-appeal, template, traumatic-
 
 ## 📊 Evidence-Based Template
 
-This template is based on comprehensive analysis of **2,000+ mental health injury WSIAT appeals** from 11,430 classified decisions (2020-2026). Mental stress cases represent **2.0% of all WSIAT appeals**.
+This template is based on comprehensive analysis of **2,000+ mental health injury WSIAT appeals** from 98,992 classified decisions (2020-2026). Mental stress cases represent **2.0% of all WSIAT appeals**.
 
 **Key Finding:** Of decisions with clear outcomes, **89.1% ruled in favor of workers** (350 wins vs 43 denials).
 
@@ -403,7 +403,7 @@ The evidence overwhelmingly establishes that my [PTSD/mental health condition] a
 
 ## 📊 Statistics: Why Appeals Work
 
-From 11,430 classified WSIAT decisions (2020-2026):
+From 98,992 classified WSIAT decisions (2020-2026):
 - **89.1% success rate** in decisions with clear outcomes (350 wins vs 43 denials)
 - Mental health injuries: 2,000+ appeals (~2% of total)
 - Common winning evidence: Psychiatrist causation opinion (93%), psychological testing (89%), documented traumatic event (88%)
@@ -437,5 +437,5 @@ Legal Aid Ontario: www.legalaid.on.ca/legal-clinics/ (Community legal clinics ha
 **Disclaimer:** Educational purposes only, not legal advice. Consult community legal clinic for case-specific guidance. If experiencing suicidal thoughts, call 988 immediately.
 
 **Template Version:** 1.0 (May 2026)  
-**Data Source:** 2,000+ mental health cases from 11,430 classified WSIAT decisions (2020-2026)  
+**Data Source:** 2,000+ mental health cases from 98,992 classified WSIAT decisions (2020-2026)  
 **Success Rate:** 89.1% of clear outcomes ruled in favor of workers

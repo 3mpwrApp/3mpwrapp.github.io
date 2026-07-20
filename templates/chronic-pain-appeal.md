@@ -14,7 +14,7 @@ permalink: /templates/chronic-pain-appeal
 
 ## Quick Facts
 
-📊 **Success Rate:** 89.1% at WSIAT (11,430 decisions 2020-2026)  
+📊 **Success Rate:** 89.1% at WSIAT (98,992 decisions 2020-2026)  
 📈 **Prevalence:** Chronic pain represents 7.6% of all WSIAT appeals  
 ⏱️ **Timeline:** Average appeal takes 14-20 months (longer than other injuries)  
 ⚠️ **Challenge:** Chronic pain is harder to prove - requires comprehensive medical evidence
@@ -444,4 +444,4 @@ Based on analysis of 7,502 chronic pain WSIAT decisions, these arguments succeed
 
 *This template is provided for informational purposes and is not legal advice. Chronic pain cases are complex - consider consulting with a lawyer or paralegal experienced in WSIB chronic pain appeals.*
 
-**Data Source:** 7,502 chronic pain WSIAT appeals analyzed (1987-2026), with comprehensive outcome classification for 11,430 decisions (2020-2026) showing 89.1% worker success rate.
+**Data Source:** 7,502 chronic pain WSIAT appeals analyzed (1987-2026), with comprehensive outcome classification for 98,992 decisions (2020-2026) showing 89.1% worker success rate.

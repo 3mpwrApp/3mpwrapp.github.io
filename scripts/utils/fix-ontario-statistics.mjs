@@ -22,7 +22,7 @@ const SITE_ROOT = path.join(__dirname, '..');
 const CORRECT_STATS = {
   WSIAT: {
     winRate: '89.1%',
-    total: '11,430',
+    total: '98,992',
     source: 'CanLII subset 2020-2026',
     context: 'workplace injury appeals'
   },
@@ -152,7 +152,7 @@ function generateReport() {
 
 | Tribunal | Win Rate | Total Decisions | Source |
 |----------|----------|----------------|--------|
-| WSIAT | 89.1% | 11,430 | CanLII subset 2020-2026 |
+| WSIAT | 89.1% | 98,992 | CanLII subset 2020-2026 |
 | ONWSIB | 83.3% | 431 | CanLII 2020-2026 |
 | ONSBT | 98.9% | 14,298 | CanLII 2020-2026 |
 | HRTO | 12.7% | 9,268 | CanLII 2020-2026 |

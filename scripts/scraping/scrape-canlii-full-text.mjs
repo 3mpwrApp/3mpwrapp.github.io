@@ -13,7 +13,7 @@
  * 
  * RATE LIMITING:
  * - CanLII API is free but requires respectful usage
- * - 1 request per second = ~3 hours for 11,430 decisions
+ * - 1 request per second = ~3 hours for 98,992 decisions
  * - Saves progress every 100 decisions (resume capability)
  * 
  * OUTPUT:
@@ -234,7 +234,7 @@ async function main() {
     console.log(`📍 Resuming from decision ${startIndex + 1} (last: ${progress.lastCaseId})\n`);
   }
   
-  console.log('⏱️  Rate limit: 1 request/second (~3 hours for all 11,430)\n');
+  console.log('⏱️  Rate limit: 1 request/second (~3 hours for all 98,992)\n');
   console.log('🚀 Starting scrape...\n');
   
   const startTime = Date.now();

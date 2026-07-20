@@ -58,7 +58,7 @@ empowrapp-new/
         │   ├── top-issues.json             # Worker 80%, work-related injury 12.1%
         │   └── three-stage-system.json     # WSIB→ONWSIB→WSIAT pathway
         ├── wsiat/
-        │   ├── summary.json                # 11,430 decisions, 65-73% worker success
+        │   ├── summary.json                # 98,992 decisions, 65-73% worker success
         │   └── top-issues.json             # Pre-existing 13.3%, chronic pain patterns
         └── hrto/
             ├── summary.json                # 9,269 decisions, 73.5% abandonment
@@ -121,7 +121,7 @@ empowrapp-new/app/(tabs)/resources/
 ├── tribunal-comparison.tsx        # Cross-tribunal comparison (replaces old WSIB-only)
 ├── onsbt-analysis.tsx             # ONSBT 13,798 decisions + ODSP poverty
 ├── onwsib-analysis.tsx            # ONWSIB 463 decisions + 3-stage system
-├── wsiat-analysis.tsx             # WSIAT 11,430 decisions (UPDATE existing)
+├── wsiat-analysis.tsx             # WSIAT 98,992 decisions (UPDATE existing)
 └── hrto-analysis.tsx              # HRTO 9,269 decisions + email crisis
 ```
 
@@ -129,7 +129,7 @@ empowrapp-new/app/(tabs)/resources/
 ```typescript
 // empowrapp-new/app/(tabs)/resources/wsib-appeals.tsx
 // OLD: "Evidence-based guides from 1,204 real Ontario tribunal decisions"
-// NEW: "Evidence-based guides from 11,430 WSIAT decisions (2020-2026)"
+// NEW: "Evidence-based guides from 98,992 WSIAT decisions (2020-2026)"
 //      Plus cross-tribunal analysis of 35,928 decisions across WSIAT/HRTO/ONSBT/ONWSIB
 ```
 
@@ -225,7 +225,7 @@ export default function TribunalNetworkScreen() {
 - [ ] Create `tribunal-research.tsx` (main hub)
 - [ ] Create `onsbt-analysis.tsx` (13,798 decisions)
 - [ ] Create `onwsib-analysis.tsx` (463 decisions)
-- [ ] Update `wsib-appeals.tsx` (11,430 not 1,204)
+- [ ] Update `wsib-appeals.tsx` (98,992 not 1,204)
 - [ ] Create `hrto-analysis.tsx` (9,269 decisions)
 - [ ] Create `tribunal-comparison.tsx` (cross-tribunal)
 - [ ] Update `resources/index.tsx` navigation cards
@@ -234,7 +234,7 @@ export default function TribunalNetworkScreen() {
 **Content Layer:**
 - [ ] Write tribunal-specific KB articles (6-8 articles)
 - [ ] Update `data/research-master-index.json` with tribunal links
-- [ ] Update `data/wsibKnowledgeBase.ts` to reference 11,430 cases
+- [ ] Update `data/wsibKnowledgeBase.ts` to reference 98,992 cases
 
 **Testing:**
 - [ ] Test all new screens on iOS

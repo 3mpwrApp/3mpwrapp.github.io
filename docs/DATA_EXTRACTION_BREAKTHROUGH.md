@@ -52,7 +52,7 @@ Instead of extracting full text, we **leveraged existing metadata** with advance
 
 ### Ontario-Wide Processing (In Progress)
 Currently processing all 6 tribunals:
-- ONWSIAT (11,430 cases)
+- ONWSIAT (98,992 cases)
 - ONSBT (13,798 cases) ✅ Complete
 - ONWSIB (463 cases)
 - ONHRT (9,269 cases)

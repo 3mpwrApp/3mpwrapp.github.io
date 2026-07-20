@@ -1,7 +1,7 @@
 # 🎯 OUTCOME DETECTION STRATEGY - COMPREHENSIVE SOLUTIONS
 **Date:** April 27, 2026  
 **Problem:** 99.5% of decisions have "Unknown" outcome  
-**Goal:** Get outcomes for 11,430 WSIAT + 9,269 HRTO + 13,798 ONSBT + 431 WSIB decisions
+**Goal:** Get outcomes for 98,992 WSIAT + 9,269 HRTO + 13,798 ONSBT + 431 WSIB decisions
 
 ---
 
@@ -72,7 +72,7 @@ Your CanLII decisions have decision numbers:
 **Expected Success Rate:** 80-90% (most CanLII decisions are in official database)
 
 **Timeline:**
-- 11,430 decisions × 3 seconds/search = **9.5 hours automated**
+- 98,992 decisions × 3 seconds/search = **9.5 hours automated**
 - Can run overnight, monitor progress
 - Resume capability built-in
 
@@ -92,7 +92,7 @@ Subject: Research Request - WSIAT Decision Outcomes Data
 Hi WSIAT Team,
 
 I'm building a public-interest tool (3mpwrapp.ca) helping injured 
-workers understand appeal outcomes. I have metadata for 11,430 WSIAT 
+workers understand appeal outcomes. I have metadata for 98,992 WSIAT 
 decisions from CanLII, but need outcome data to show workers "can I win?"
 
 Could you provide a CSV export with:
@@ -130,7 +130,7 @@ I'm building 3mpwrapp.ca, a free public-interest tool helping injured
 workers understand tribunal outcomes. I've collected metadata for 
 34,928 tribunal decisions via your API:
 
-- WSIAT: 11,430 decisions (2020-2026)
+- WSIAT: 98,992 decisions (2020-2026)
 - HRTO: 9,269 decisions (2020-2026)  
 - ONSBT: 13,798 decisions (2020-2026)
 - WSIB: 431 decisions (2021-2025)
@@ -201,7 +201,7 @@ Community Impact:
 
 **Expected Results:**
 - 100 active users × 10 tags/user/week = 1,000 decisions tagged/week
-- 11,430 decisions ÷ 1,000/week = **11 weeks to complete** (via community)
+- 98,992 decisions ÷ 1,000/week = **11 weeks to complete** (via community)
 - Zero cost, builds engagement, users WANT this feature
 
 ---
@@ -275,7 +275,7 @@ confidence = model.predict_proba(new_decision_features)
 **WEEK 1: Build Cross-Reference Scraper**
 - Target WSIAT official database
 - Extract outcomes from summaries
-- Run on 11,430 WSIAT decisions (9.5 hours automated)
+- Run on 98,992 WSIAT decisions (9.5 hours automated)
 - Expected: 80-90% success rate = 9,144-10,287 outcomes
 
 **WEEK 2: Build Crowdsource Feature**
@@ -297,12 +297,12 @@ confidence = model.predict_proba(new_decision_features)
 ### Expected Final Results
 
 ```
-WSIAT (11,430 decisions):
+WSIAT (98,992 decisions):
   Cross-reference:     9,144 outcomes (80% coverage) ✅
   Crowdsource:        +1,500 outcomes (community fills gaps)
   NLP:                   +786 outcomes (remaining unknowns)
   ────────────────────────────────────────
-  TOTAL:              11,430 outcomes (100% coverage) 🎯
+  TOTAL:              98,992 outcomes (100% coverage) 🎯
 
 HRTO (9,269 decisions):
   Crowdsource:         1,000 outcomes (community contribution)

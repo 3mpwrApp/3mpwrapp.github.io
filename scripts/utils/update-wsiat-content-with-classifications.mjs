@@ -2,7 +2,7 @@
  * Update WSIAT Content with Classification Results
  * 
  * Updates blog posts, knowledge base, guides, and templates with outcome data
- * from 11,430 classified WSIAT decisions.
+ * from 98,992 classified WSIAT decisions.
  * 
  * Usage: node scripts/update-wsiat-content-with-classifications.mjs
  */
@@ -234,7 +234,7 @@ function generateBlogPostSnippet(stats) {
 
   return `## 🎯 WSIAT Classification Results: ${stats.total.toLocaleString()} Decisions Analyzed
 
-**📅 UPDATE: May 1, 2026** - We've completed keyword-based classification of all 11,430 WSIAT tribunal decisions (2020-2026). Here's what the outcomes reveal:
+**📅 UPDATE: May 1, 2026** - We've completed keyword-based classification of all 98,992 WSIAT tribunal decisions (2020-2026). Here's what the outcomes reveal:
 
 ### Outcome Distribution
 
@@ -286,7 +286,7 @@ ${Object.entries(stats.byConfidence)
 - [Research Hub](/research/) - Interactive visualizations and statistical analysis
 
 **Data Access:**
-- [Classified Decisions JSON](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/comprehensive-extraction/wsiat-classified.json) (11,430 decisions)
+- [Classified Decisions JSON](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/comprehensive-extraction/wsiat-classified.json) (98,992 decisions)
 - [Classification Scripts](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/scripts) (Open source methodology)
 - [Progress Tracking](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/comprehensive-extraction/ai-progress.json) (45 batches completed)
 `;

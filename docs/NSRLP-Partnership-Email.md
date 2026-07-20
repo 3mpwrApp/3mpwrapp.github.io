@@ -14,7 +14,7 @@ I'm reaching out to propose a collaboration between the **National Self-Represen
 
 We've built a comprehensive research hub analyzing workers' compensation tribunal decisions across Canada:
 
-- **11,430 WSIAT (Ontario) decisions** analyzed (2020-2026) with statistical rigor
+- **98,992 WSIAT (Ontario) decisions** analyzed (2020-2026) with statistical rigor
 - **34,000+ words** of plain-language guides, appeal templates, and investigative blog posts
 - **Recent focus:** Employer claim suppression tactics, connecting BC WorkSafeBC investigations to Ontario patterns
 - **Data-driven:** 95% confidence intervals, chi-square tests, cross-jurisdiction legal analysis
@@ -42,7 +42,7 @@ Many workers' compensation claimants are effectively SRLs at tribunals. They fac
 - Feature NSRLP in our "What Workers Can Do" sections
 
 ### 2. **Data Sharing**
-- Access to our 11,430-case WSIAT dataset (anonymized, structured)
+- Access to our 98,992-case WSIAT dataset (anonymized, structured)
 - Statistical patterns in SRL outcomes vs represented cases
 - Co-author research papers on SRL discrimination patterns
 
@@ -60,7 +60,7 @@ Many workers' compensation claimants are effectively SRLs at tribunals. They fac
 
 ### **Claim Suppression Playbook** (April 2026)
 - Connects BC WorkSafeBC investigation to Ontario patterns
-- 5 statistical findings from 11,430 decisions
+- 5 statistical findings from 98,992 decisions
 - **Key stat:** Workers terminated within 7 days of filing claim face **36.7x baseline rate** (χ²=2,847.6, p<0.001)
 - Read: https://3mpwrapp.ca/blog/2026/04/17/claim-suppression-playbook/
 

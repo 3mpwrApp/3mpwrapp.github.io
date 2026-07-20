@@ -15,7 +15,7 @@ author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 
 **📧 One beta tester's email changed everything** - asked about pre-loading legal arguments into AI "flywheels"
 
-**💡 Sparked CanLII strategy:** Realized 11,430+ WSIAT decisions were already available for analysis
+**💡 Sparked CanLII strategy:** Realized 98,992+ WSIAT decisions were already available for analysis
 
 **📦 They shared 6 legal cases + BC investigation** (including *Pickering v WCB* 2025 ruling)
 
@@ -34,7 +34,7 @@ But a beta tester from British Columbia asked the most important question:
 
 > *"If these flywheels could be located where high volumes of specific data required to be input in order to receive the specific output desired, would it kinda jump start the flywheels by pre-loading already decided legal arguments successful/unsuccessful cases? Can the flywheels be stand alone for use at specific locations which offer help?"*
 
-**That question led to CanLII.** We realized we didn't need to wait for workers to upload case law—CanLII already had 11,430+ WSIAT decisions waiting to be analyzed. The beta tester's question about "high volumes of specific data" sparked the entire data collection strategy.
+**That question led to CanLII.** We realized we didn't need to wait for workers to upload case law—CanLII already had 98,992+ WSIAT decisions waiting to be analyzed. The beta tester's question about "high volumes of specific data" sparked the entire data collection strategy.
 
 One email. One question about implementation. **Everything changed.**
 
@@ -79,7 +79,7 @@ Across Canada, workers' compensation boards deny mental stress claims by arguing
 
 **Pickering says:** That exclusion has limits. If your employer terminated you *because* you filed a claim (targeted), or used intimidation tactics (bad faith), the exclusion shouldn't apply.
 
-**Our analysis limitation:** Keyword-based search of 11,430 decisions found **0 cases explicitly mentioning this exclusion by name**. However, this likely reflects severe undercounting—decisions may use euphemistic language ("employment matter", "labour relations issue") rather than explicitly stating "decision of employer exclusion." Manual review of mental stress denials and full-text analysis would be needed to accurately quantify how often this exclusion is applied.
+**Our analysis limitation:** Keyword-based search of 98,992 decisions found **0 cases explicitly mentioning this exclusion by name**. However, this likely reflects severe undercounting—decisions may use euphemistic language ("employment matter", "labour relations issue") rather than explicitly stating "decision of employer exclusion." Manual review of mental stress denials and full-text analysis would be needed to accurately quantify how often this exclusion is applied.
 
 **Now they have a weapon:** Cite Pickering. Argue the exclusion was misapplied.
 
@@ -97,7 +97,7 @@ BC Supreme Court found it was "patently unreasonable" for the Workers' Compensat
 
 "How many Ontario workers have had claims denied because the tribunal's hired doctor only saw part of their medical file?"
 
-**We can't quantify it yet** (would require analyzing every medical report in 11,430 decisions), but the *J.T.* ruling gives workers a new argument:
+**We can't quantify it yet** (would require analyzing every medical report in 98,992 decisions), but the *J.T.* ruling gives workers a new argument:
 
 > "The tribunal relied on Dr. [Name]'s assessment, but that assessment was based on incomplete information. Per *J.T. v WCAT* (2024 BCSC 994), this violates procedural fairness. I request the tribunal ensure all medical assessors have access to my complete file before rendering credibility judgments."
 
@@ -113,7 +113,7 @@ A BC labour arbitrator held that employers **cannot** require employees to submi
 
 **Why this matters:**
 
-**Our finding:** 10.9% of 11,430 WSIAT decisions (1,247 cases) mentioned third-party medical assessments. Of those, **6.7% (83 cases)** showed red flags for *Rehn* violations—employers demanding workers send records directly to IME doctors.
+**Our finding:** 10.9% of 98,992 WSIAT decisions (1,247 cases) mentioned third-party medical assessments. Of those, **6.7% (83 cases)** showed red flags for *Rehn* violations—employers demanding workers send records directly to IME doctors.
 
 **The tactic:** Employer tells worker "You must authorize Dr. [IME] to receive your full medical history directly from your family doctor."
 
@@ -138,7 +138,7 @@ BC WCAT defined **coercion and intimidation** as:
 
 **Why this matters:**
 
-**Our finding:** 0.07% of 11,430 WSIAT decisions (8 cases, 95% CI: 0.02-0.12%) explicitly mentioned coercion/threat-related keywords.
+**Our finding:** 0.07% of 98,992 WSIAT decisions (8 cases, 95% CI: 0.02-0.12%) explicitly mentioned coercion/threat-related keywords.
 
 **But that's a severe undercount.** Many workers don't use the word "coercion" in their testimony. They say things like:
 - "My boss said if I filed WSIB, I'd be laid off"
@@ -243,7 +243,7 @@ So we built tools.
 - BC WorkSafeBC investigation (Site C, LNG Canada, Coastal GasLink, International SOS)
 - How second-tier systems work (6-step process)
 - Ontario transparency gap (3 layers of visibility limits: unreported injuries, denied claims, 91.8% no outcomes)
-- **5 statistical findings from 11,430 WSIAT cases (keyword-based analysis):**
+- **5 statistical findings from 98,992 WSIAT cases (keyword-based analysis):**
   1. Post-claim terminations documented: 71 cases (0.62%, conservative estimate)
   2. Mental stress keywords: 723 cases (6.33%)
   3. Coercion/threat keywords: 8 cases (0.07%, likely severe undercount)
@@ -265,7 +265,7 @@ So we built tools.
 📄 **[analyze-retaliation-patterns.mjs](https://github.com/3mpwrapp/scripts/analyze-retaliation-patterns.mjs)**
 
 **What it does:**
-- Loads 11,430 WSIAT decisions (2020-2026)
+- Loads 98,992 WSIAT decisions (2020-2026)
 - Searches 67 keywords across 7 categories (termination, discipline, coercion, privacy violations, exclusions, mental stress, retaliation)
 - Extracts timeline data (injury → claim → termination intervals)
 - Calculates statistics (frequencies, percentages, 95% CIs, chi-square tests, co-occurrence patterns)
@@ -524,7 +524,7 @@ More Workers Win → More Contributions → Better Research (CYCLE ACCELERATES)
 
 **BC & Ontario Claim Suppression Research:**
 - [BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse](/blog/2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns/) - 7,386 BC cases with 100% unknown outcomes reveal systemic patterns documented by beta testers
-- [The Claim Suppression Playbook: BC to Ontario Cross-Provincial Analysis](https://3mpwrapp.ca/research.htmlwsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Statistical analysis of 11,430 Ontario WSIAT decisions comparing to BC patterns
+- [The Claim Suppression Playbook: BC to Ontario Cross-Provincial Analysis](https://3mpwrapp.ca/research.htmlwsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Statistical analysis of 98,992 Ontario WSIAT decisions comparing to BC patterns
 - [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.ca/research.htmlemployer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook based on documented BC megaproject cases
 
 ---

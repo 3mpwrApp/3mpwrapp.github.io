@@ -339,7 +339,7 @@ function generateReport(summary) {
 
 | Tribunal | Win Rate | Total Decisions | Source |
 |----------|----------|----------------|--------|
-| WSIAT | **89.1%** | 11,430 | CanLII subset 2020-2026 |
+| WSIAT | **89.1%** | 98,992 | CanLII subset 2020-2026 |
 | ONWSIB | **83.3%** | 431 | CanLII 2020-2026 |
 | ONSBT | **98.9%** | 14,298 | CanLII 2020-2026 |
 | HRTO | **12.7%** | 9,268 | CanLII 2020-2026 |
@@ -418,7 +418,7 @@ function generateReport(summary) {
   report += `\n## Next Steps\n\n`;
   report += `1. Review broken links and update file paths\n`;
   report += `2. Update all statistics to match classified data:\n`;
-  report += `   - WSIAT: 89.1% (11,430 decisions)\n`;
+  report += `   - WSIAT: 89.1% (98,992 decisions)\n`;
   report += `   - ONSBT: 98.9% (14,298 decisions)\n`;
   report += `   - ONWSIB: 83.3% (431 decisions)\n`;
   report += `   - HRTO: 12.7% (9,268 decisions)\n`;

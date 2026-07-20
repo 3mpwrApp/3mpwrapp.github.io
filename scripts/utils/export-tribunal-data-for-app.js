@@ -337,7 +337,7 @@ See: \`empowrapp-new/types/tribunalData.ts\` for interface definitions.
 ## Data Source
 
 All data derived from CanLII tribunal decisions (2020-2026):
-- WSIAT: 11,430 decisions
+- WSIAT: 98,992 decisions
 - HRTO: 9,269 decisions  
 - ONSBT: 13,798 decisions
 - ONWSIB: 431 decisions

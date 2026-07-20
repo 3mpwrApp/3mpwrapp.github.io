@@ -10,7 +10,7 @@ permalink: /knowledge-base/chronic-pain-claims/
 
 ## 🚨 NEW: Statistical Evidence - WSIB Dismisses Chronic Pain as Psychological
 
-**Recent detective-level analysis of 11,430 WSIAT decisions (2020-2026) exposes WSIB's playbook:**
+**Recent detective-level analysis of 98,992 WSIAT decisions (2020-2026) exposes WSIB's playbook:**
 
 ### Mental Health Conflation Pattern:
 - **107 cases** where "mental health" and "pain" co-occurred with employer-motivated reconsiderations

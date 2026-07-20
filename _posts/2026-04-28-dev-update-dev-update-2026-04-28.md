@@ -18,7 +18,7 @@ We believe in building in public. Here's a look at what our team has been workin
 - Deploy 25,213 AI-predicted tribunal outcomes with 79% accuracy
 - Complete 4-tribunal collection analysis via subagents
 - Complete Phase 1 data collection + pipeline infographic
-- BREAKTHROUGH - Official data sources bypass DataDome! WSIAT scraper for 95,298 decisions (vs 11,430 on CanLII). Includes Puppeteer fallback + full documentation of Tribunals Ontario open data.
+- BREAKTHROUGH - Official data sources bypass DataDome! WSIAT scraper for 95,298 decisions (vs 98,992 on CanLII). Includes Puppeteer fallback + full documentation of Tribunals Ontario open data.
 - Add Tier C text enrichment pipeline and official tribunal scraper - target 25,895 unresolved cases with full text NLP + direct tribunal site scraping to improve outcome detection from 5-50% across all tribunals
 - Add 4 major enhancements to keyword network visualization - individual tribunal views (WSIAT/HRTO/ONSBT/ONWSIB), zoom controls (in/out/reset), comprehensive keyword focus list with case counts, all Canadian provinces marked as coming soon
 

@@ -112,7 +112,7 @@ Every feature in 3mpwrApp maps to one (or more) of these pillars:
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html)** - See the philosophy in action: knowledge base, appeal templates, and comprehensive guides from 11,430 tribunal cases
+📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html)** - See the philosophy in action: knowledge base, appeal templates, and comprehensive guides from 98,992 tribunal cases
 
 📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The journey from zero to 1,500+ Ontario cases (transparency on successes and failures)
 

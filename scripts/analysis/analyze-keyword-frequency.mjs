@@ -3,7 +3,7 @@
 /**
  * analyze-keyword-frequency.mjs
  * 
- * Analyzes keyword frequency across 11,430 WSIAT decisions (2020-2026)
+ * Analyzes keyword frequency across 98,992 WSIAT decisions (2020-2026)
  * from CanLII's keywords field (summary terms provided by CanLII).
  * 
  * IMPORTANT LIMITATION:

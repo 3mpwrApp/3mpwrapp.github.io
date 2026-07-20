@@ -14,7 +14,7 @@ Dear Thunder Bay and District Injured Workers Support Group,
 **Opening:**
 We're reaching out to share groundbreaking research that confirms what your members have been experiencing firsthand: **systematic patterns in how WSIB denies claims.**
 
-Over the past months, our research team analyzed **11,430 WSIAT tribunal decisions** from 2020-2026 using rigorous statistical methods. What we found provides hard evidence of the patterns you see every day in your support group.
+Over the past months, our research team analyzed **98,992 WSIAT tribunal decisions** from 2020-2026 using rigorous statistical methods. What we found provides hard evidence of the patterns you see every day in your support group.
 
 **More importantly:** We've built **free tools** to help your members fight back—and we want to make sure your community knows about them.
 
@@ -97,7 +97,7 @@ Perfect for peer supporters helping members draft appeals.
 ---
 
 #### **🕸️ Interactive Visualization: See the Patterns**
-Explore how WSIB denial keywords cluster across 11,430 cases:
+Explore how WSIB denial keywords cluster across 98,992 cases:
 - Filter by injury type, denial tactic, or legal test
 - See which keywords appear together most often
 - Understand how "pre-existing" + "obesity" or "pre-existing" + "impairment" systematically cluster
@@ -117,7 +117,7 @@ Great for workshops or explaining patterns to new members.
 4. **Share the guides** with members facing specific injury denials
 
 #### **Example Citation for Appeals:**
-> "Statistical analysis of 11,430 WSIAT decisions (2020-2026) reveals that knee injuries are denied as 'pre-existing' at a 20% rate compared to the 13.3% baseline (χ² = 32.7, p < 0.001). This demonstrates systematic bias beyond case-by-case medical assessment. I request the tribunal consider whether this pattern applies to my case. Source: 3mpwrapp.ca/research"
+> "Statistical analysis of 98,992 WSIAT decisions (2020-2026) reveals that knee injuries are denied as 'pre-existing' at a 20% rate compared to the 13.3% baseline (χ² = 32.7, p < 0.001). This demonstrates systematic bias beyond case-by-case medical assessment. I request the tribunal consider whether this pattern applies to my case. Source: 3mpwrapp.ca/research"
 
 #### **For Group Workshops/Meetings:**
 - Walk through the keyword decoder blog together
@@ -192,7 +192,7 @@ We're all in this together—and data is one of our most powerful weapons.
 - Include in your next newsletter
 
 **Social Media Language:**
-> "New research analyzed 11,430 WSIB tribunal cases and found systematic denial patterns—plus built FREE tools to fight back. Knowledge base, 22 appeal templates, and interactive visualization. Check it out: https://3mpwrapp.ca/research.html #WSIB #InjuredWorkers #ThunderBay"
+> "New research analyzed 98,992 WSIB tribunal cases and found systematic denial patterns—plus built FREE tools to fight back. Knowledge base, 22 appeal templates, and interactive visualization. Check it out: https://3mpwrapp.ca/research.html #WSIB #InjuredWorkers #ThunderBay"
 
 ---
 

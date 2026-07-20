@@ -30,7 +30,7 @@ Bill 86 was a Private Member's Bill that would have completely overhauled Ontari
 
 ### **Our CanLII Analysis Shows the Problem**
 
-From **11,430 WSIAT decisions (2020-2026)**, 3mpwrApp's research revealed patterns Bill 86 was designed to fix:
+From **98,992 WSIAT decisions (2020-2026)**, 3mpwrApp's research revealed patterns Bill 86 was designed to fix:
 
 | Problem | Current Reality (CanLII Data) | Bill 86's Solution |
 |---------|------------------------------|-------------------|
@@ -294,7 +294,7 @@ Commission MUST report to police if reasonable grounds to believe employer viola
 ### **What Our CanLII Data Shows:**
 Bill 86 wasn't "too ambitious" - it addressed **documented systemic failures**:
 
-| Bill 86 Provision | Problem It Fixes | Proof from 11,430 WSIAT Cases |
+| Bill 86 Provision | Problem It Fixes | Proof from 98,992 WSIAT Cases |
 |------------------|------------------|-------------------------------|
 | Security of employment (s. 16) | Post-claim terminations | At least 71 documented cases (0.62%) |
 | Privacy protections (s. 29) | IME privacy violations | 83 cases with Rehn red flags |
@@ -317,7 +317,7 @@ Even though Bill 86 didn't pass, its provisions demonstrate **legislative recogn
 ### **2. Pressure Your MPP to Reintroduce Bill 86**
 
 **CanLII data provides the evidence:**
-- "11,430 WSIAT decisions show 723 mental stress cases (6.33%) likely denied via labour relations exclusion"
+- "98,992 WSIAT decisions show 723 mental stress cases (6.33%) likely denied via labour relations exclusion"
 - "At least 71 documented termination cases found via keyword analysis (0.62%, conservative minimum estimate)"
 - "Bill 86's security of employment provision (Section 16) would have prevented this"
 
@@ -326,7 +326,7 @@ Even though Bill 86 didn't pass, its provisions demonstrate **legislative recogn
 >
 > Dear [MPP Name],
 >
-> Analysis of 11,430 WSIAT tribunal decisions (2020-2026) reveals systematic failures Bill 86 was designed to fix:
+> Analysis of 98,992 WSIAT tribunal decisions (2020-2026) reveals systematic failures Bill 86 was designed to fix:
 > - 0.62% of cases (at least 71 workers) involved documented post-claim terminations (keyword analysis - likely severe undercount)
 > - 6.33% (723 cases) involved mental stress, many denied via labour relations exclusion
 > - Zero compensation for pain & suffering despite permanent injuries
@@ -342,7 +342,7 @@ Even though Bill 86 didn't pass, its provisions demonstrate **legislative recogn
 **Social media template:**
 > 🚨 Why was Bill 86 shut down?
 >
-> Our analysis of 11,430 WSIAT cases shows:
+> Our analysis of 98,992 WSIAT cases shows:
 > ✅ At least 71 documented post-claim terminations (0.62%, conservative estimate)
 > ✅ 723 mental stress cases (6.33%) denied via "labour relations exclusion"
 > ✅ 0 compensation for pain & suffering
@@ -394,7 +394,7 @@ Even though Bill 86 didn't pass, you can cite it to show:
 - [Bill 86 Full Text (Ontario Legislature)](https://www.ola.org/en/legislative-business/bills/parliament-44/session-1/bill-86)
 - [Thunder Bay Injured Workers Support Group](https://thunderbayinjuredworkers.com)
 - [Office of the Worker Adviser](https://www.ontario.ca/page/office-worker-adviser)
-- [3mpwrApp CanLII Analysis](https://3mpwrapp.ca/blog/wsiat-analysis) - Full breakdown of 11,430 cases
+- [3mpwrApp CanLII Analysis](https://3mpwrapp.ca/blog/wsiat-analysis) - Full breakdown of 98,992 cases
 
 ---
 
@@ -430,5 +430,5 @@ Even though Bill 86 didn't pass, you can cite it to show:
 
 *Last updated: April 17, 2026*  
 *Bill 86 status confirmed: Shut down at 2nd Reading, December 2025*  
-*CanLII analysis based on 11,430 WSIAT decisions (2020-2026)*
+*CanLII analysis based on 98,992 WSIAT decisions (2020-2026)*
 

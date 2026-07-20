@@ -206,7 +206,7 @@ They challenged us: "Everything you can."
 ✅ 8,000-word knowledge base guide (Claim Suppression & Employer Retaliation)
 ✅ 15,000-word appeal template (Labour Relations Exclusion using Pickering 2025 ruling)
 ✅ 11,000-word investigative blog post (The Claim Suppression Playbook)
-✅ Statistical analysis script (Extract retaliation patterns from 11,430 WSIAT cases)
+✅ Statistical analysis script (Extract retaliation patterns from 98,992 WSIAT cases)
 ✅ NSRLP partnership email (Connecting 354+ self-represented litigants to resources)
 
 **Total: 34,000+ words of high-quality legal resources. All from one beta tester's contribution.**
@@ -217,7 +217,7 @@ They challenged us: "Everything you can."
 
 This BC beta tester shared cutting-edge BC Supreme Court rulings (Pickering 2025, J.T. v WCAT 2024) that most people think only apply in British Columbia.
 
-But we connected them to our Ontario data: 11,430 WSIAT tribunal decisions from 2020-2026.
+But we connected them to our Ontario data: 98,992 WSIAT tribunal decisions from 2020-2026.
 
 **The results:**
 
@@ -310,7 +310,7 @@ Swipe to see what we built ➡️
 
 ---
 
-This BC beta tester shared cutting-edge legal research. We connected it to 11,430 Ontario tribunal decisions. Result:
+This BC beta tester shared cutting-edge legal research. We connected it to 98,992 Ontario tribunal decisions. Result:
 
 ✅ 468 workers with new legal framework to cite
 ✅ 83 workers with privacy violation defenses
@@ -482,7 +482,7 @@ Plus a challenge: *"What can you do with all of this? Do everything you can."*
 
 **Process:**
 1. Reviewed all 6 legal cases for applicability to Ontario jurisdiction
-2. Connected BC Supreme Court rulings (persuasive authority) to our 11,430-case WSIAT dataset
+2. Connected BC Supreme Court rulings (persuasive authority) to our 98,992-case WSIAT dataset
 3. Ran statistical analysis: termination patterns, timeline correlations, chi-square tests
 4. Built plain-language resources with cross-jurisdictional legal frameworks
 5. Drafted partnership outreach to NSRLP (co-promotion, data sharing, SRL support)

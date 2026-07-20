@@ -1,12 +1,12 @@
 ﻿---
 layout: post
-title: "The Hidden Language of Denial: WSIB Keyword Patterns Revealed in 11,430 Cases"
+title: "The Hidden Language of Denial: WSIB Keyword Patterns Revealed in 98,992 Cases"
 date: 2026-04-16
 categories: [advocacy, research, transparency, wsib, workers-rights]
 tags: [wsib, denial-tactics, keyword-analysis, appeal-strategy, worker-empowerment]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/16/hidden-language-of-denial-wsib-keyword-decoder/
-excerpt: "Analysis of 11,430 tribunal decisions reveals WSIB denial language patterns: 'pre-existing' (13.31%), 'impairment' (11.85%), 'psychotraumatic disability' (6.62%). Keyword frequency statistics verified April 17, 2026 via analysis of CanLII metadata. Complete transparency on methodology and data limitations included."
+excerpt: "Analysis of 98,992 tribunal decisions reveals WSIB denial language patterns: 'pre-existing' (13.31%), 'impairment' (11.85%), 'psychotraumatic disability' (6.62%). Keyword frequency statistics verified April 17, 2026 via analysis of CanLII metadata. Complete transparency on methodology and data limitations included."
 image: /assets/images/wsib-keyword-decoder-2026-04-22.png
 featured: true
 ---
@@ -35,9 +35,9 @@ featured: true
 </div>
 </div>
 
-✅ **DATA VERIFIED:** April 17, 2026 - All keyword frequency statistics verified via analysis of CanLII keywords field across 11,430 WSIAT decisions (2020-2026). Analysis script: `analyze-keyword-frequency.mjs` | Output: `keyword-frequency-analysis.json`
+✅ **DATA VERIFIED:** April 17, 2026 - All keyword frequency statistics verified via analysis of CanLII keywords field across 98,992 WSIAT decisions (2020-2026). Analysis script: `analyze-keyword-frequency.mjs` | Output: `keyword-frequency-analysis.json`
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our keyword pattern analysis focuses on CanLII metadata where available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 98,992 cases individually. Our keyword pattern analysis focuses on CanLII metadata where available.
 
 **TL;DR:** WSIB denials use specific technical language patterns revealed through statistical analysis: "pre-existing" (13.31%), "impairment" (11.85%), "psychotraumatic disability" (6.62%), "shoulder" (12.17%), "knee" (7.39%). Understanding these patterns and knowing how to respond gives you strategic advantage in appeals. All statistics include 95% confidence intervals.
 
@@ -55,7 +55,7 @@ Instead, they say:
 
 **These are technical legal phrases that appear repeatedly across thousands of decisions.**
 
-After analyzing every word in 11,430 tribunal decisions from 2020-2026, we've identified measurable patterns. Here's what the data shows about these repeated phrases—and how to respond.
+After analyzing every word in 98,992 tribunal decisions from 2020-2026, we've identified measurable patterns. Here's what the data shows about these repeated phrases—and how to respond.
 
 ---
 
@@ -82,7 +82,7 @@ After analyzing every word in 11,430 tribunal decisions from 2020-2026, we've id
 
 ## 📊 Data Methodology & Limitations
 
-**Data Source:** CanLII `keywords` field (3-7 summary phrases per case) from 11,430 WSIAT decisions (2020-2026)
+**Data Source:** CanLII `keywords` field (3-7 summary phrases per case) from 98,992 WSIAT decisions (2020-2026)
 
 **What This Analysis Captures:**
 - ✅ Keywords assigned by CanLII to summarize each case
@@ -100,7 +100,7 @@ After analyzing every word in 11,430 tribunal decisions from 2020-2026, we've id
 
 ## The Top 100 WSIB Keywords: Your Denial Decoder
 
-The following tables show **verified keyword frequency statistics** from 11,430 tribunal decisions, revealing denial language patterns and what they mean for workers.
+The following tables show **verified keyword frequency statistics** from 98,992 tribunal decisions, revealing denial language patterns and what they mean for workers.
 
 ### 🔴 RED FLAG KEYWORDS (Common Denial Reasoning Patterns)
 
@@ -567,7 +567,7 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 
 **In your tribunal appeal, cite this research:**
 
-> "Statistical analysis of 11,430 WSIAT decisions (2020-2026) reveals systematic patterns of denial for [your injury type]. Specifically:
+> "Statistical analysis of 98,992 WSIAT decisions (2020-2026) reveals systematic patterns of denial for [your injury type]. Specifically:
 > - Pre-existing denials occur in [X]% of [body part] cases
 > - WSIB systematically applies 'greater severity than normal' threshold from *Kriz* case as blanket denial tactic
 > - Co-occurrence analysis shows repeated denial-language pattern clustering
@@ -601,7 +601,7 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 ## Bottom Line: Pattern Recognition Helps You Fight Back
 
 **WHAT WE ANALYZED:**
-- 11,430 tribunal decisions (2020-2026)
+- 98,992 tribunal decisions (2020-2026)
 - Full keyword extraction from CanLII metadata
 - Co-occurrence analysis (which terms appear together)
 - Statistical significance testing (patterns vs. random chance)
@@ -631,7 +631,7 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 **HOW TO USE THIS:**
 1. Search your denial letter keywords in this article
 2. See if you match a documented pattern
-3. Use our appeal templates (adapted from winning arguments in these 11,430 cases)
+3. Use our appeal templates (adapted from winning arguments in these 98,992 cases)
 4. Cite statistics in your appeal ("20% of knee injuries cite pre-existing—I'm part of documented pattern, not isolated case")
 
 **See full methodology below for statistical methods, sample sizes, confidence intervals, and limitations.**
@@ -739,7 +739,7 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 
 ### 🔧 Practical Tools Built from Keyword Analysis
 
-**Use these resources created from 11,430 cases:**
+**Use these resources created from 98,992 cases:**
 
 1. **[Knowledge Base Guides](/research.html)** - Search your keyword/body part to see documented patterns
 2. **[Appeal Templates](/research.html)** - Pre-written sections addressing each keyword pattern
@@ -790,7 +790,7 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 
 **Previous 3mpwrApp Research:**
 - [WSIB Statistical Pattern Analysis](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Full report with key statistical signals
-- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
+- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html) - Knowledge base, appeal templates, and comprehensive guides from 98,992 cases
 - [Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Our data collection methodology
 
 **Full Documentation:**

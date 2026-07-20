@@ -14,7 +14,7 @@ permalink: /templates/back-injury-appeal/
 
 ## Quick Facts
 
-📊 **Success Rate:** 89.1% at WSIAT (11,430 decisions 2020-2026)  
+📊 **Success Rate:** 89.1% at WSIAT (98,992 decisions 2020-2026)  
 📈 **Prevalence:** Back injuries represent 15.3% of all WSIAT appeals  
 ⏱️ **Timeline:** Average appeal takes 12-18 months  
 💼 **Representation:** Legal representation strongly correlated with success
@@ -317,4 +317,4 @@ Based on analysis of 15,177 back injury WSIAT decisions, here are the strongest 
 
 *This template is provided for informational purposes and is not legal advice. Consider consulting with a lawyer or paralegal experienced in WSIB appeals.*
 
-**Data Source:** 15,177 back/spine injury WSIAT appeals analyzed (1987-2026), with comprehensive outcome classification for 11,430 decisions (2020-2026) showing 89.1% worker success rate.
+**Data Source:** 15,177 back/spine injury WSIAT appeals analyzed (1987-2026), with comprehensive outcome classification for 98,992 decisions (2020-2026) showing 89.1% worker success rate.

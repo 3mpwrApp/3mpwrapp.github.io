@@ -8,7 +8,7 @@
 
 ### By The Numbers
 
-From our analysis of 11,430 ONWSIAT (Ontario Workplace Safety & Insurance Appeals Tribunal) decisions (2020-2026):
+From our analysis of 98,992 ONWSIAT (Ontario Workplace Safety & Insurance Appeals Tribunal) decisions (2020-2026):
 
 - **1,391 shoulder injury cases reached tribunal** (12.2% of all decisions)
 - **#1 most litigated body part** (more than back, knee, or any other injury)
@@ -382,7 +382,7 @@ From our analysis of 11,430 ONWSIAT (Ontario Workplace Safety & Insurance Appeal
 - Success rate: **Unknown** (91.8% of outcomes hidden, but tribunal exists because workers win enough to justify it)
 
 **Why Skip Reconsideration:**
-- From our 11,430-case analysis: Reconsideration adds 1.5 years with minimal benefit
+- From our 98,992-case analysis: Reconsideration adds 1.5 years with minimal benefit
 - WSIB rarely reverses own decisions (institutional bias)
 - Tribunal is independent—better chance of fair hearing
 
@@ -620,7 +620,7 @@ A: **Limited options:**
 - [Shoulder Injury Appeal Template](../templates/shoulder-injury-appeal.md) - Fill-in-blank letter
 
 **Research & Advocacy:**
-- [WSIB Exposed: Statistical Evidence](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 8 smoking guns from 11,430 cases
+- [WSIB Exposed: Statistical Evidence](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 8 smoking guns from 98,992 cases
 - [WSIB Keyword Decoder](https://3mpwrapp.ca/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode denial letters
 - [Full WSIB System Analysis](https://3mpwrapp.ca/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026) - 45,000-word master document
 
@@ -642,4 +642,4 @@ A: **Limited options:**
 **Questions? Need help?**
 📧 empowrapp08162025@gmail.com
 
-*Last updated: April 15, 2026 | Based on 11,430 ONWSIAT decisions (2020-2026)*
+*Last updated: April 15, 2026 | Based on 98,992 ONWSIAT decisions (2020-2026)*

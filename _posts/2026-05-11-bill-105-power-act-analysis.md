@@ -293,7 +293,7 @@ Both Bill 105 and Bill 86 (introduced December 2025, did not proceed April 2026)
 
 ### What Bill 105 Does NOT Address
 
-Bill 86 identified six major system gaps (based on 11,430 WSIAT decisions analysis):
+Bill 86 identified six major system gaps (based on 98,992 WSIAT decisions analysis):
 1. ✅ **Age 65 cutoff** - Bill 105 addresses (via individual determination process)
 2. ✅ **Wage replacement** - Bill 105 addresses (90% rate)
 3. ❌ **Mental stress denials** (723 cases/6.33%) - Bill 105 does NOT reform labour relations exclusion

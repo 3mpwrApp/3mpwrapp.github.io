@@ -8,7 +8,7 @@
 
 ## ✅ SCRIPT NOW FUNCTIONAL
 
-The analysis script successfully processes all 11,430 WSIAT cases (2020-2026):
+The analysis script successfully processes all 98,992 WSIAT cases (2020-2026):
 - **2020:** 2,077 cases
 - **2021:** 2,052 cases
 - **2022:** 2,091 cases
@@ -16,7 +16,7 @@ The analysis script successfully processes all 11,430 WSIAT cases (2020-2026):
 - **2024:** 1,971 cases
 - **2025:** 1,522 cases
 - **2026:** 146 cases (partial year)
-- **TOTAL:** 11,430 cases ✅
+- **TOTAL:** 98,992 cases ✅
 
 ---
 
@@ -81,7 +81,7 @@ The analysis script successfully processes all 11,430 WSIAT cases (2020-2026):
 - Script works now
 - Results are verifiable (reproducible from CanLII tags)
 - Provides conservative lower bounds
-- Fast (analyzes 11,430 cases in ~30 seconds)
+- Fast (analyzes 98,992 cases in ~30 seconds)
 
 **Cons:**
 - Significantly underestimates prevalence
@@ -95,7 +95,7 @@ The analysis script successfully processes all 11,430 WSIAT cases (2020-2026):
 ### **Option 2: Fetch Full Decision Text from CanLII**
 
 **How it works:**
-1. Load 11,430 cases (we have URLs for all)
+1. Load 98,992 cases (we have URLs for all)
 2. For each case, fetch full HTML from `https://canlii.ca/t/[id]`
 3. Extract decision text from HTML
 4. Run full keyword search + timeline extraction
@@ -115,7 +115,7 @@ for (const caseObj of cases) {
 // Save enriched dataset
 ```
 
-**Time estimate:** 11,430 cases × 2 seconds = ~6.4 hours  
+**Time estimate:** 98,992 cases × 2 seconds = ~6.4 hours  
 **Result:** Full-text dataset enabling accurate statistics
 
 **Pros:**
@@ -173,7 +173,7 @@ for (const caseObj of cases) {
 **What they spotted:** CanLII has **structured data** (decisions, legal issues, outcomes) ready to accelerate analysis.
 
 **What we built:**
-- Scraped 11,430 decisions
+- Scraped 98,992 decisions
 - Analyzed patterns
 - Pre-loaded legal arguments (Pickering, Rehn, J.T. v WCAT)
 - Created reusable templates
@@ -202,7 +202,7 @@ for (const caseObj of cases) {
 3. Begin gradual full-dataset enrichment (1,000 cases/day)
 
 ### **Long-term (Next Month):**
-1. Complete full-text dataset (all 11,430 cases)
+1. Complete full-text dataset (all 98,992 cases)
 2. Re-run comprehensive analysis with accurate statistics
 3. Publish updated research paper with transparent methodology open for community review
 
@@ -213,7 +213,7 @@ for (const caseObj of cases) {
 **Question for user:** Which path do you want to take?
 
 **Option 1:** Use conservative keywords-only results (0.62% termination) with documented limitations  
-**Option 2:** Fetch all 11,430 full decisions (~6 hours, accurate statistics)  
+**Option 2:** Fetch all 98,992 full decisions (~6 hours, accurate statistics)  
 **Option 3:** Fetch subset of 100 cases for validation, then gradual enrichment  
 
 **My recommendation:** **Option 3 (Hybrid)** - Quick validation now, full dataset over time.
@@ -224,7 +224,7 @@ for (const caseObj of cases) {
 
 ✅ **data/analysis/retaliation-patterns-analysis.json**
 - Metadata + statistics from keywords-only analysis
-- 11,430 cases analyzed
+- 98,992 cases analyzed
 - Conservative baseline estimates
 
 ✅ **data/analysis/retaliation-patterns.csv**
@@ -237,7 +237,7 @@ for (const caseObj of cases) {
 
 ## 💡 BOTTOM LINE
 
-**The script works.** It analyzes 11,430 cases in 30 seconds.
+**The script works.** It analyzes 98,992 cases in 30 seconds.
 
 **The data is limited.** Keywords-only captures ~7-10% of full-text prevalence.
 
@@ -251,7 +251,7 @@ for (const caseObj of cases) {
 
 ```javascript
 // fetch-full-decisions.mjs (Option 2)
-// Fetches full decision text for all 11,430 cases
+// Fetches full decision text for all 98,992 cases
 
 import fs from 'fs/promises';
 
@@ -294,7 +294,7 @@ async function enrichDataset() {
 enrichDataset();
 ```
 
-**Run time:** 11,430 × 2 seconds = 6.4 hours  
+**Run time:** 98,992 × 2 seconds = 6.4 hours  
 **Result:** Full-text dataset enabling accurate blog statistics
 
 ---

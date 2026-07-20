@@ -7,7 +7,7 @@
 All comprehensive, user-facing guides currently exist as markdown pages:
 
 ### Tribunal-Specific Guides (3)
-1. `wsiat-complete-guide.md` - Complete WSIAT appeals guide (89.1% success rate, 11,430 cases)
+1. `wsiat-complete-guide.md` - Complete WSIAT appeals guide (89.1% success rate, 98,992 cases)
 2. `hrto-complete-guide.md` - Complete HRTO guide (12.7% success, 43.9% abandonment, 9,268 cases)
 3. `onsbt-complete-guide.md` - Complete ONSBT guide (98.9% success, 14,298 cases)
 
@@ -210,7 +210,7 @@ Each JSON file contains 50-500 case templates with:
 
 ## 📊 Most Common Injury Types (By Tribunal Volume)
 
-From 11,430 WSIAT decisions (2020-2026):
+From 98,992 WSIAT decisions (2020-2026):
 
 | Rank | Injury Type | Cases | % of Total | Template Status |
 |------|-------------|-------|------------|-----------------|

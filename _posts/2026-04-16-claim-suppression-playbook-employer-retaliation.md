@@ -132,7 +132,7 @@ These megaprojects reported injury rates significantly below industry averages f
 
 While BC investigated megaprojects, Ontario has its own claim suppression patterns:
 
-**From our WSIAT analysis (11,430 cases, 2020-2026):**
+**From our WSIAT analysis (98,992 cases, 2020-2026):**
 
 - **In CanLII keyword/API records, 91.8% of tribunal decisions** do not include explicit outcome-labeled keywords (metadata limitation)
 - **1.14-2.29 million estimated suppressed workers** (never filed claims despite injuries)
@@ -333,7 +333,7 @@ If YES to any of these → **Cite *Pickering* in your appeal and argue exclusion
 
 ## 📈 Data: Employer Retaliation Patterns in WSIAT Cases
 
-**Methodology:** Analysis of 11,430 WSIAT tribunal decisions (2020-2026) searching for keywords:
+**Methodology:** Analysis of 98,992 WSIAT tribunal decisions (2020-2026) searching for keywords:
 
 - "termination"
 - "discipline"
@@ -343,7 +343,7 @@ If YES to any of these → **Cite *Pickering* in your appeal and argue exclusion
 
 ### Preliminary Findings
 
-**[NOTE: Based on keyword analysis of 11,430 WSIAT decisions, 2020-2026]**
+**[NOTE: Based on keyword analysis of 98,992 WSIAT decisions, 2020-2026]**
 
 **Keyword frequency (conservative minimum estimates):**
 
@@ -496,7 +496,7 @@ If YES to any of these → **Cite *Pickering* in your appeal and argue exclusion
 
 ### Employer Retaliation Analysis (Launching May 2026)
 
-We're re-analyzing our WSIAT dataset (11,430 cases) specifically for employer retaliation patterns:
+We're re-analyzing our WSIAT dataset (98,992 cases) specifically for employer retaliation patterns:
 
 **Research questions:**
 1. What % of cases mention termination/discipline?
@@ -801,7 +801,7 @@ You must:
 ## 📊 Related Research & Analysis
 
 **Statistical Analysis:**
-- [BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns](https://3mpwrapp.ca/research.htmlwsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Ontario WSIAT pattern analysis (11,430 decisions), Pickering v WCB precedent breakdown, cross-provincial comparison methodology
+- [BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns](https://3mpwrapp.ca/research.htmlwsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Ontario WSIAT pattern analysis (98,992 decisions), Pickering v WCB precedent breakdown, cross-provincial comparison methodology
 
 **BC WCAT Data:**
 - [BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse](/blog/2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns/) - 7,386 BC cases reveal 100% unknown outcomes, systemic fraud patterns, and CanLII partnership request

@@ -166,7 +166,7 @@ function generateBlogSnippet(onsbtStats, onwsibStats) {
   md += `### Cross-Tribunal Comparison\n\n`;
   md += `| Tribunal | Total Decisions | Clear Outcomes | Win Rate | Unclear Rate |\n`;
   md += `|----------|----------------|----------------|----------|-------------|\n`;
-  md += `| WSIAT | 11,430 | 393 (3.4%) | 89.1% | 77.0% |\n`;
+  md += `| WSIAT | 98,992 | 393 (3.4%) | 89.1% | 77.0% |\n`;
   md += `| ONSBT | ${onsbtTotal.toLocaleString()} | ${onsbtStats.clearOutcomes.toLocaleString()} (${pct(onsbtStats.clearOutcomes, onsbtTotal)}%) | ${onsbtStats.winRate}% | ${pct(onsbtStats.outcomes.unclear, onsbtTotal)}% |\n`;
   md += `| ONWSIB | ${onwsibTotal.toLocaleString()} | ${onwsibStats.clearOutcomes.toLocaleString()} (${pct(onwsibStats.clearOutcomes, onwsibTotal)}%) | ${onwsibStats.winRate}% | ${pct(onwsibStats.outcomes.unclear, onwsibTotal)}% |\n\n`;
   

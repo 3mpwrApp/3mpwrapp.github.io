@@ -25,7 +25,7 @@
 ### 2. Data Accuracy ✅
 - **WSIAT Statistics:** ALL FIXED
   - ❌ Old: "68.7% success rate" → ✅ New: "89.1% success rate"
-  - ❌ Old: "65-73% worker success rates" → ✅ New: "89.1% worker success rate (11,430 decisions 2020-2026)"
+  - ❌ Old: "65-73% worker success rates" → ✅ New: "89.1% worker success rate (98,992 decisions 2020-2026)"
   - ℹ️ Kept: "100% in predictive model" with disclaimer explaining it's a data limitation + added correct 89.1% stat
 
 - **ONSBT Statistics:** Already correct (98.9%)
@@ -88,7 +88,7 @@
 2. **Line 1382** - WSIAT AI prediction context
    ```diff
    - Official WSIAT stats show 65-73% worker success rates.
-   + Comprehensive classification of 11,430 WSIAT decisions (2020-2026) shows 89.1% worker success rate.
+   + Comprehensive classification of 98,992 WSIAT decisions (2020-2026) shows 89.1% worker success rate.
    ```
 
 3. **Line 1623** - WSIAT win chance
@@ -117,7 +117,7 @@
 
 | Tribunal | Win Rate | Total Decisions | Source |
 |----------|----------|----------------|--------|
-| **WSIAT** | **89.1%** | 11,430 | CanLII 2020-2026 (classified) |
+| **WSIAT** | **89.1%** | 98,992 | CanLII 2020-2026 (classified) |
 | **ONWSIB** | **89.5%*** | 463 | CanLII 2020-2026 (classified-only subset; 95.7% unresolved) |
 | **ONSBT** | **98.9%** | 14,298 | CanLII 2020-2026 (classified) |
 | **HRTO** | **12.7%** | 9,268 | CanLII 2020-2026 (classified) |
@@ -134,7 +134,7 @@
 3. Tribunal comparison tables - ✅ Correct
 4. AI predictions section - ✅ Now shows both AI model (100% with disclaimer) + real data (89.1%)
 5. Feedback loop section - ✅ Fixed to 89.1%
-6. Knowledge Base guides description - ✅ Correct (references 11,430 decisions)
+6. Knowledge Base guides description - ✅ Correct (references 98,992 decisions)
 
 ---
 

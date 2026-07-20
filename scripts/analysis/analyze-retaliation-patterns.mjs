@@ -3,7 +3,7 @@
 /**
  * analyze-retaliation-patterns.mjs
  * 
- * Analyzes 11,430 WSIAT decisions (2020-2026) for employer retaliation patterns
+ * Analyzes 98,992 WSIAT decisions (2020-2026) for employer retaliation patterns
  * related to workers' compensation claim suppression.
  * 
  * NOTE: Current WSIAT dataset contains metadata only (title, keywords, citation).

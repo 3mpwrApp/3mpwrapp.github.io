@@ -2,7 +2,7 @@
 
 > **⚠️ STATISTICAL ALERT:** Ankle injuries (sprains, fractures, Achilles tendinitis, chronic instability) represent **272 cases (2.4%)** of all WSIB tribunal decisions (2020-2026). WSIB systematically denies ankle claims as "minor sprains, healed" despite chronic instability and long-term complications.
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ---
 
@@ -10,7 +10,7 @@
 
 ### By The Numbers
 
-From our analysis of 11,430 tribunal decisions (2020-2026):
+From our analysis of 98,992 tribunal decisions (2020-2026):
 
 - **272 ankle injury cases reached tribunal** (2.4% of all decisions)
 - **Primary denial:** "Minor sprain, MRI shows no tear, fully healed"
@@ -518,4 +518,4 @@ From our analysis of 11,430 tribunal decisions (2020-2026):
 **Questions? Need help?**
 📧 empowrapp08162025@gmail.com
 
-*Last updated: April 15, 2026 | Based on 11,430 ONWSIAT decisions (2020-2026)*
+*Last updated: April 15, 2026 | Based on 98,992 ONWSIAT decisions (2020-2026)*

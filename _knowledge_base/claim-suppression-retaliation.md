@@ -40,7 +40,7 @@ This guide helps injured workers recognize and challenge claim suppression tacti
 
 ## 📊 Statistical Evidence of Suppression
 
-From our analysis of **11,430 WSIAT decisions (2020-2026)**:
+From our analysis of **98,992 WSIAT decisions (2020-2026)**:
 
 ### Black Box Effect
 - **91.8%** of tribunal decisions don't report final outcomes

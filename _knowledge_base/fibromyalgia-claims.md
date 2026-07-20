@@ -8,7 +8,7 @@ permalink: /knowledge-base/fibromyalgia-claims/
 
 > **⚠️ STATISTICAL ALERT:** Fibromyalgia appears in **88 cases (0.8%)** of all WSIB tribunal decisions (2020-2026). This represents ~54% increase from previous analysis, suggesting growing recognition but continued systematic denial of chronic pain conditions.
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ## The Challenge
 

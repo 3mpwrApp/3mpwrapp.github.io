@@ -6,9 +6,9 @@ categories: [advocacy, research, transparency, wsib, systemic-analysis]
 tags: [wsib, claim-reporting-gap, outcome-obscurity, transparency, data-analysis, workers-rights]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/16/wsib-black-box-claim-suppression-outcome-obscurity/
-excerpt: "Analysis of 11,430 WSIAT decisions (2020-2026) reveals only 1,905 cases reach tribunal annually—representing less than 2% of Ontario's estimated 100,000-200,000 workplace injuries per year. Applying Institute for Work & Health research on unreported injuries and denied claims, we estimate 1.14-2.29 million workers never reached tribunal-level adjudication during this period. Meanwhile, 91.8% of tribunal decisions have no public outcome data—hiding whether workers won or lost."
+excerpt: "Analysis of 98,992 WSIAT decisions (2020-2026) reveals only 1,905 cases reach tribunal annually—representing less than 2% of Ontario's estimated 100,000-200,000 workplace injuries per year. Applying Institute for Work & Health research on unreported injuries and denied claims, we estimate 1.14-2.29 million workers never reached tribunal-level adjudication during this period. Meanwhile, 91.8% of tribunal decisions have no public outcome data—hiding whether workers won or lost."
 image: /assets/images/wsib-suppression-pyramid-2026-05-01.png
-image_alt: "Pyramid diagram showing the claim suppression funnel from 1.14-2.29 million injured workers down to 11,430 tribunal decisions"
+image_alt: "Pyramid diagram showing the claim suppression funnel from 1.14-2.29 million injured workers down to 98,992 tribunal decisions"
 featured: true
 ---
 
@@ -23,7 +23,7 @@ featured: true
 
 <div style="font-size: 18px; line-height: 1.8; color: #1a1a1a;">
 
-**📊 91.8% of tribunal decisions have no public outcome data** — We can't tell if workers won or lost in 10,491 of 11,430 cases analyzed (2020-2026)
+**📊 91.8% of tribunal decisions have no public outcome data** — We can't tell if workers won or lost in 10,491 of 98,992 cases analyzed (2020-2026)
 
 **🔢 Only 1,905 cases reach tribunal annually** — Out of an estimated 100,000-200,000 workplace injuries in Ontario each year
 
@@ -46,14 +46,14 @@ featured: true
 *Claim suppression and outcome obscurity are not just injured worker issues—they're disability justice and social justice issues affecting vulnerable communities across benefit systems.*
 
 **What we analyzed:**
-- **11,430 WSIAT tribunal decisions** (2020-2026) from CanLII
+- **98,992 WSIAT tribunal decisions** (2020-2026) from CanLII
 - **Institute for Work & Health peer-reviewed research** on injury under-reporting (15-50% of workplace injuries never reported to employers)
 - **Public Health Ontario workplace injury rates** (1 in 20 workers injured annually)
 - **Tribunal outcome data** extracted from decision keywords (where available)
 
 **What we estimate:** Using IWH research rates applied to Ontario's 7.5 million workers, we estimate 1.14-2.29 million injured workers between 2020-2026 never reached tribunal. The range reflects uncertainty in under-reporting rates documented in research literature.
 
-**Data transparency:** Tribunal case counts (11,430) are directly measured. The 91.8% outcome obscurity rate is measured from CanLII metadata. The 1.14-2.29 million estimate applies peer-reviewed research to Ontario's population. We explain our methodology fully below, including alternative estimates and limitations.
+**Data transparency:** Tribunal case counts (98,992) are directly measured. The 91.8% outcome obscurity rate is measured from CanLII metadata. The 1.14-2.29 million estimate applies peer-reviewed research to Ontario's population. We explain our methodology fully below, including alternative estimates and limitations.
 
 ---
 
@@ -61,7 +61,7 @@ featured: true
 
 Throughout this analysis, you'll see two types of data:
 
-**Direct measurements** — Numbers we counted from tribunal decisions (e.g., "11,430 cases" or "91.8% have no outcome data"). These come directly from CanLII's database of published decisions.
+**Direct measurements** — Numbers we counted from tribunal decisions (e.g., "98,992 cases" or "91.8% have no outcome data"). These come directly from CanLII's database of published decisions.
 
 **Research-based estimates** — Numbers we calculated by applying peer-reviewed research to Ontario's population (e.g., "1.14-2.29 million workers estimated not to reach tribunal"). These use Institute for Work & Health findings on injury under-reporting combined with Public Health Ontario workplace injury rates.
 
@@ -73,7 +73,7 @@ Throughout this analysis, you'll see two types of data:
 
 ## The Attrition Funnel: Where Workers Disappear
 
-Imagine a massive funnel. At the top: **every workplace injury in Ontario (2020-2026)**. At the bottom: the 11,430 tribunal decisions we analyzed.
+Imagine a massive funnel. At the top: **every workplace injury in Ontario (2020-2026)**. At the bottom: the 98,992 tribunal decisions we analyzed.
 
 **KEY:** 📊 = MEASURED (from data) | 🧮 = ESTIMATED (from IWH research applied to Ontario)
 
@@ -105,12 +105,12 @@ Here's what the evidence shows:
 **The Math:**
 - **🧮 ESTIMATED starting point:** 100,000-200,000 injuries/year × 6 years = **600,000-1,200,000 total injuries** (range shows uncertainty)
 - **🧮 ESTIMATED attrition cascade:** Applying IWH rates (15-50% unreported + 30% unclaimed + 75% don't appeal) = **~95% not reaching tribunal**
-- **📊 MEASURED tribunal volume:** 11,430 cases over 6 years = **1,905/year average (provable)**
+- **📊 MEASURED tribunal volume:** 98,992 cases over 6 years = **1,905/year average (provable)**
 - **🧮 ESTIMATED attrition ratio:** For every 1 tribunal case, **52-100 workers estimated not reaching tribunal at earlier stages**
 
 **What This Suggests: Between 1.14-2.29 MILLION Ontario workers are estimated to have been injured at work (2020-2026) without reaching tribunal.**
 
-**⚠️ CRITICAL CAVEAT:** The 1.14-2.29M estimate is extrapolated from peer-reviewed IWH research applied to Ontario's workforce. The tribunal volume (11,430) is directly measured. If the extrapolation is materially off, the estimate range would shift accordingly.
+**⚠️ CRITICAL CAVEAT:** The 1.14-2.29M estimate is extrapolated from peer-reviewed IWH research applied to Ontario's workforce. The tribunal volume (98,992) is directly measured. If the extrapolation is materially off, the estimate range would shift accordingly.
 
 ---
 
@@ -118,7 +118,7 @@ Here's what the evidence shows:
 
 ### What We Found
 
-Of 11,430 tribunal decisions analyzed:
+Of 98,992 tribunal decisions analyzed:
 - **939 cases (8.2%)** have explicit outcome-labeled keywords in CanLII metadata
 - **10,491 cases (91.8%)** do not include explicit outcome-labeled keywords
 
@@ -126,7 +126,7 @@ Of 11,430 tribunal decisions analyzed:
 
 ### The Outcomes We DO Have (8.2% Sample)
 
-| Outcome Category | Count | % of 939 | % of Total 11,430 | What It Means |
+| Outcome Category | Count | % of 939 | % of Total 98,992 | What It Means |
 |-----------------|-------|----------|-------------------|---------------|
 | **Reconsideration** | 522 | 55.6% | 4.6% | Internal WSIB review (not tribunal victory) |
 | **Varied** | 161 | 17.1% | 1.4% | Partial changes (unclear if favorable) |
@@ -136,7 +136,7 @@ Of 11,430 tribunal decisions analyzed:
 
 **What This Data Reveals:**
 
-Only 93 of 11,430 cases (0.8%) show clear worker victories in CanLII metadata. This doesn't mean workers only win 0.8% of the time—it means CanLII's keyword/API data for WSIAT decisions often lacks explicit outcome labels.
+Only 93 of 98,992 cases (0.8%) show clear worker victories in CanLII metadata. This doesn't mean workers only win 0.8% of the time—it means CanLII's keyword/API data for WSIAT decisions often lacks explicit outcome labels.
 
 **Why the outcome data gap matters:** We can't determine success rates, identify patterns, or hold the system accountable when 91.8% of decisions have no outcome information publicly available. Other Ontario tribunals (Landlord-Tenant Board, Human Rights Tribunal, Employment Standards) provide comprehensive outcome data. WSIAT decisions uploaded to CanLII do not.
 
@@ -269,13 +269,13 @@ Only 93 of 11,430 cases (0.8%) show clear worker victories in CanLII metadata. T
 
 **🧮 ESTIMATED using Public Health Ontario baseline (375K/year):**
 - Estimated injuries: 375,000/year × 6 = **2,250,000 workers**
-- 📊 Reached tribunal (MEASURED): 11,430
+- 📊 Reached tribunal (MEASURED): 98,992
 - **🧮 Estimated suppression rate: 99.49%**
 - **🧮 Estimated suppressed: 2,238,570 workers**
 
 **🧮 CONSERVATIVE estimate (using 250K injuries/year from WSIB claims data):**
 - 250,000 × 6 = **1,500,000 injuries**
-- 📊 Reached tribunal (MEASURED): 11,430
+- 📊 Reached tribunal (MEASURED): 98,992
 - **🧮 Estimated suppression: 1,488,570 workers (99.24%)**
 
 **⚠️ CONFIDENCE INTERVALS:**
@@ -286,7 +286,7 @@ Only 93 of 11,430 cases (0.8%) show clear worker victories in CanLII metadata. T
 **What This Shows:** Even at the most conservative estimate (1.14M), the analysis indicates a large access-to-justice gap. Whether the true number is 1 million or 2 million, both estimates indicate substantial under-compensation.
 
 **What We Measured vs. Estimated:**
-- 📊 **MEASURED:** 11,430 tribunal cases (provable from CanLII)
+- 📊 **MEASURED:** 98,992 tribunal cases (provable from CanLII)
 - 🧮 **ESTIMATED:** 1.14-2.29M not reaching tribunal-level adjudication (extrapolated from IWH + Public Health Ontario research)
 - **❌ CANNOT PROVE:** Exact suppression count (would require tracking every injury that never gets reported)
 
@@ -636,7 +636,7 @@ This analysis has been shared with Thunder Bay & District Injured Workers Suppor
    - Identify statistically significant geographic outcome differences
 
 5. **Adjudicator Consistency Analysis**
-   - Analyze all 11,430 decisions by adjudicator name
+   - Analyze all 98,992 decisions by adjudicator name
    - Calculate allow/dismiss rates per adjudicator
    - Test for statistical significance of inter-adjudicator variance
    - Identify outlier adjudicators (systematically lenient or harsh)
@@ -645,7 +645,7 @@ This analysis has been shared with Thunder Bay & District Injured Workers Suppor
 
 ## Bottom Line: Scale Estimates and Evidence Quality
 
-**WHAT WE CAN PROVE DIRECTLY (from our 11,430-case analysis):**
+**WHAT WE CAN PROVE DIRECTLY (from our 98,992-case analysis):**
 ✅ In CanLII keyword/API data, 91.8% of tribunal cases (10,491) do not include explicit outcome-labeled keywords
 ✅ Only 1,905 tribunal decisions/year average (2020-2026)
 ✅ Reconsideration adds 1.5-2.0 years of delay (505 cases measured)
@@ -734,7 +734,7 @@ This can supplement official reporting and improve public visibility.
 - **Political advocacy:** Email MPP with evidence package ("2.24 million estimated injuries not reaching tribunal-level adjudication")
 
 **Example template excerpt:**
-> "Statistical analysis of 11,430 tribunal decisions shows that in CanLII keyword/API data, 91.8% do not include explicit outcome-labeled keywords. Published research-based extrapolation suggests 1.14-2.29 million workplace injuries may not reach tribunal-level adjudication (2020-2026). This indicates a data-visibility gap that may warrant policy reform."
+> "Statistical analysis of 98,992 tribunal decisions shows that in CanLII keyword/API data, 91.8% do not include explicit outcome-labeled keywords. Published research-based extrapolation suggests 1.14-2.29 million workplace injuries may not reach tribunal-level adjudication (2020-2026). This indicates a data-visibility gap that may warrant policy reform."
 
 ### 🔄 Flywheel 3: Transparency Gap → Community Intelligence
 **EVERY missing outcome is an opportunity for WORKERS to fill the gap:**
@@ -785,10 +785,10 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 ## Related Reading
 
 **Previous 3mpwrApp Research:**
-- [WSIB Statistical Pattern Analysis](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Pattern findings from 11,430 cases
+- [WSIB Statistical Pattern Analysis](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Pattern findings from 98,992 cases
 - [The Hidden Language of Denial: WSIB Keyword Decoder](https://3mpwrapp.ca/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode your denial letter
 - [Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built this database
-- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
+- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html) - Knowledge base, appeal templates, and comprehensive guides from 98,992 cases
 
 **Full Documentation:**
 - [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document
@@ -838,7 +838,7 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 ### 📌 What to Watch For
 
 1. **Your decision missing from CanLII after 6+ months**
-   - ➡️ **Data shows:** In CanLII keyword/API data, 91.8% of decisions have no explicit outcome-labeled keyword (10,491 of 11,430 decisions)
+   - ➡️ **Data shows:** In CanLII keyword/API data, 91.8% of decisions have no explicit outcome-labeled keyword (10,491 of 98,992 decisions)
    - ➡️ **Pattern identified:** Metadata-only analysis cannot determine complete outcome rates
    - ➡️ **Your action:** Request your decision be published to CanLII (FOI request)  - ➡️ **Why it matters:** Creates public record, prevents suppression
 

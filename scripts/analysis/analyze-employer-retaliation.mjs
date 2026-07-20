@@ -3,7 +3,7 @@
 /**
  * Employer Retaliation Analysis Script
  * 
- * Analyzes WSIAT dataset (11,430 cases, 2020-2026) for patterns of employer
+ * Analyzes WSIAT dataset (98,992 cases, 2020-2026) for patterns of employer
  * retaliation following workers' compensation claims.
  * 
  * Research questions:

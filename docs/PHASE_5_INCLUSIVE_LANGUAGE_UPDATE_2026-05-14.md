@@ -59,7 +59,7 @@ All research, knowledge bases, guides, visualizations, and blog posts now consis
 > "Interactive keyword relationship mapping across all four Ontario tribunals"
 
 **After:**
-> "Interactive keyword relationship mapping across all four Ontario tribunals serving **injured workers, people with disabilities, and vulnerable communities**: WSIAT (11,430 workplace injury appeals), HRTO (9,269 human rights & discrimination claims), ONSBT (13,798 disability benefit appeals), ONWSIB (463 internal reviews)."
+> "Interactive keyword relationship mapping across all four Ontario tribunals serving **injured workers, people with disabilities, and vulnerable communities**: WSIAT (98,992 workplace injury appeals), HRTO (9,269 human rights & discrimination claims), ONSBT (13,798 disability benefit appeals), ONWSIB (463 internal reviews)."
 > 
 > *Added note:* "This research serves injured workers navigating workplace injury appeals (WSIAT), people with disabilities fighting benefit eligibility denials (ONSBT), and disability community members challenging discrimination (HRTO). Systemic denial patterns cross tribunal boundaries—this is a disability justice issue."
 
@@ -108,7 +108,7 @@ All research, knowledge bases, guides, visualizations, and blog posts now consis
 | Tribunal | Cases | % of Data | Audience Served | Now Acknowledged? |
 |----------|-------|-----------|----------------|-------------------|
 | **ONSBT** | 13,798 | 34.5% | **Disability community** (ODSP/OW) | ✅ YES |
-| **WSIAT** | 11,430 | 28.6% | Injured workers | ✅ YES |
+| **WSIAT** | 98,992 | 28.6% | Injured workers | ✅ YES |
 | **HRTO** | 9,269 | 23.2% | **Disability community** (discrimination) | ✅ YES |
 | **ONCA** | 5,034 | 12.6% | Both (appellate) | ✅ YES |
 | **ONWSIB** | 463 | 1.2% | Injured workers | ✅ YES |
@@ -159,7 +159,7 @@ All research, knowledge bases, guides, visualizations, and blog posts now consis
 ### Pattern 3: Tribunal Audience Clarification
 
 **Template:**
-> "WSIAT (11,430 **workplace injury appeals**), HRTO (9,269 **human rights & discrimination claims**), ONSBT (13,798 **disability benefit appeals**), ONWSIB (463 **internal reviews**)"
+> "WSIAT (98,992 **workplace injury appeals**), HRTO (9,269 **human rights & discrimination claims**), ONSBT (13,798 **disability benefit appeals**), ONWSIB (463 **internal reviews**)"
 
 **Used In:**
 - Visualization descriptions
@@ -282,10 +282,10 @@ All research, knowledge bases, guides, visualizations, and blog posts now consis
 ### Example 3: Keyword Network Visualization
 
 **Before:**
-> "Interactive keyword relationship mapping across all four Ontario tribunals: WSIAT (11,430 cases), HRTO (9,269 cases), ONSBT (13,798 cases), ONWSIB (463 cases)."
+> "Interactive keyword relationship mapping across all four Ontario tribunals: WSIAT (98,992 cases), HRTO (9,269 cases), ONSBT (13,798 cases), ONWSIB (463 cases)."
 
 **After:**
-> "Interactive keyword relationship mapping across all four Ontario tribunals serving **injured workers, people with disabilities, and vulnerable communities**: WSIAT (11,430 workplace injury appeals), HRTO (9,269 human rights & discrimination claims), ONSBT (13,798 disability benefit appeals), ONWSIB (463 internal reviews).
+> "Interactive keyword relationship mapping across all four Ontario tribunals serving **injured workers, people with disabilities, and vulnerable communities**: WSIAT (98,992 workplace injury appeals), HRTO (9,269 human rights & discrimination claims), ONSBT (13,798 disability benefit appeals), ONWSIB (463 internal reviews).
 > 
 > *This research serves injured workers navigating workplace injury appeals (WSIAT), people with disabilities fighting benefit eligibility denials (ONSBT), and disability community members challenging discrimination (HRTO). Systemic denial patterns cross tribunal boundaries—this is a disability justice issue.*"
 

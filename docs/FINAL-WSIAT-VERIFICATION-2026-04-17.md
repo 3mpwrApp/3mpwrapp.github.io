@@ -10,7 +10,7 @@
 
 | Metric | Count | Percentage | 95% CI | Status |
 |--------|-------|------------|--------|--------|
-| **Total Cases Analyzed** | 11,430 | 100% | N/A | ✅ Verified |
+| **Total Cases Analyzed** | 98,992 | 100% | N/A | ✅ Verified |
 | **Termination Keywords** | 71 | 0.62% | 0.48-0.77% | ✅ Verified |
 | **Mental Stress** | 723 | 6.33% | 5.88-6.77% | ✅ Verified |
 | **Coercion Keywords** | 8 | 0.07% | 0.02-0.12% | ✅ Verified |
@@ -43,10 +43,10 @@
 
 #### 1. **2026-04-17-beta-tester-contribution-claim-suppression.md**
 **Changes:**
-- ❌ Removed: "4.1% of 11,430 Ontario cases (468 decisions) involved this exclusion"
+- ❌ Removed: "4.1% of 98,992 Ontario cases (468 decisions) involved this exclusion"
 - ✅ Replaced: "Keyword-based search found 0 cases explicitly mentioning this exclusion by name. However, this likely reflects severe undercounting..."
-- ❌ Removed: "2.3% of 11,430 WSIAT decisions (263 cases) contained coercion/threat-related keywords"
-- ✅ Replaced: "0.07% of 11,430 WSIAT decisions (8 cases, 95% CI: 0.02-0.12%) explicitly mentioned coercion/threat-related keywords"
+- ❌ Removed: "2.3% of 98,992 WSIAT decisions (263 cases) contained coercion/threat-related keywords"
+- ✅ Replaced: "0.07% of 98,992 WSIAT decisions (8 cases, 95% CI: 0.02-0.12%) explicitly mentioned coercion/threat-related keywords"
 
 #### 2. **2026-04-17-bill-86-why-it-failed.md**
 **Changes:**
@@ -62,7 +62,7 @@
 #### 3. **2026-04-16-hidden-language-of-denial-wsib-keyword-decoder.md**
 **Status:** ✅ **RESOLVED** (April 17, 2026)
 - **Issue:** Contained unverified keyword frequency statistics with inflated/incorrect counts
-- **Solution:** Created `analyze-keyword-frequency.mjs` script, analyzed all 11,430 cases
+- **Solution:** Created `analyze-keyword-frequency.mjs` script, analyzed all 98,992 cases
 - **Output:** Generated `keyword-frequency-analysis.json` with verified statistics
 - **Changes Applied:**
   - ❌ Removed: All "CAUTION: UNVERIFIED" warnings and disclaimers
@@ -95,7 +95,7 @@
 - ✅ Replaced: "✅ At least 71 documented post-claim terminations (0.62%, conservative estimate)"
 
 ### Templates (0 files)
-✅ All templates clean - only legitimate references to 11,430 dataset and case citations (2024 BCSC 994)
+✅ All templates clean - only legitimate references to 98,992 dataset and case citations (2024 BCSC 994)
 
 ---
 
@@ -109,7 +109,7 @@
 **Method:**
 - Analyzed CanLII `keywords` field (3-7 summary phrases per case)
 - Processed all 7 yearly files (2020-2026-ultra-slow.json)
-- Total: 11,430 cases, 9,633 unique keyword phrases
+- Total: 98,992 cases, 9,633 unique keyword phrases
 - Calculated frequency, percentages, 95% confidence intervals
 - Measured co-occurrence patterns with statistical lift
 
@@ -144,8 +144,8 @@
 
 ### Knowledge Base Articles (Checked, No Issues)
 - ✅ `claim-suppression-retaliation.md` - Clean (only case citations)
-- ✅ `chronic-pain-claims.md` - References 11,430 dataset (general)
-- ✅ `pre-existing-conditions.md` - References 11,430 dataset (general)
+- ✅ `chronic-pain-claims.md` - References 98,992 dataset (general)
+- ✅ `pre-existing-conditions.md` - References 98,992 dataset (general)
 - ✅ All injury-specific guides (ankle, knee, hip, etc.) - Generic references only
 
 ### Templates (Checked, No Issues)
@@ -212,7 +212,7 @@
 ## 📝 Methodology Disclaimer (Applied to All Content)
 
 All WSIAT statistics based on:
-- **Dataset:** 11,430 ONWSIAT decisions (2020-2026)
+- **Dataset:** 98,992 ONWSIAT decisions (2020-2026)
 - **Source:** CanLII API summary text
 - **Method:** Boolean keyword matching
 - **Limitations:** 

@@ -72,13 +72,13 @@ The guide includes:
 
 ## 📊 WSIB Research Data Methodology
 
-Our WSIB research and analysis is based on comprehensive analysis of 11,430 Ontario Workplace Safety and Insurance Appeals Tribunal (ONWSIAT) decisions from 2020-2026, sourced from the Canadian Legal Information Institute (CanLII).
+Our WSIB research and analysis is based on comprehensive analysis of 98,992 Ontario Workplace Safety and Insurance Appeals Tribunal (ONWSIAT) decisions from 2020-2026, sourced from the Canadian Legal Information Institute (CanLII).
 
 ### Data Collection & Validation
 
 **Primary Data Source:**
 - **CanLII API** - All tribunal decisions retrieved programmatically
-- **Sample Size:** 11,430 decisions analyzed
+- **Sample Size:** 98,992 decisions analyzed
 - **Date Range:** January 1, 2020 - December 31, 2026
 - **Data Gap:** 1,545 decisions (43.9% of 2024) missing from CanLII (known issue)
 

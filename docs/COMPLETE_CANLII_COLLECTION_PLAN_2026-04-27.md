@@ -11,7 +11,7 @@
 
 | Tribunal | You Have | CanLII Total | Missing | % Complete | Priority |
 |----------|----------|--------------|---------|------------|----------|
-| **WSIAT** | 11,430 (2020-2026) | 94,628 (1986-2026) | **83,198** | **12%** | 🔴 **CRITICAL** |
+| **WSIAT** | 98,992 (2020-2026) | 94,628 (1986-2026) | **83,198** | **12%** | 🔴 **CRITICAL** |
 | **HRTO** | 9,269 (2020-2026) | ~12,000 (2008-2026)* | **~3,000** | **77%** | 🟡 **HIGH** |
 | **WSIB** | 431 (2021-2025) | 1,043 (2009-2026) | **612** | **41%** | 🟢 **MEDIUM** |
 | **ONSBT** | 13,798 (2020-2026) | 13,798 (2020-2026) | **0** | **100%** | ✅ **COMPLETE** |
@@ -77,14 +77,14 @@ Week 17: 2019-1986 complete → 🎉 "COMPLETE 40-YEAR DATABASE"
 ```
 
 **Technical Details:**
-- API calls needed: ~108,000 (120,000 ID scan - 11,430 existing)
+- API calls needed: ~108,000 (120,000 ID scan - 98,992 existing)
 - CanLII quota: 1,000 calls/day
 - Math: 108,000 ÷ 1,000 = 108 days + buffer = **110-120 days**
 - Storage: ~200 MB total (all 94,628 decisions)
 - Script: Modify existing `collect-ultra-slow.js` to target historical years
 
 **Validation:**
-- Total should equal 94,628 (11,430 existing + 83,198 new)
+- Total should equal 94,628 (98,992 existing + 83,198 new)
 - Spot-check against official WSIAT database (76,197 decisions - CanLII has MORE)
 - Verify year distribution shows growth from ~1,500/year (1986) → ~3,000/year (2019)
 
@@ -95,7 +95,7 @@ Week 17: 2019-1986 complete → 🎉 "COMPLETE 40-YEAR DATABASE"
 2006-2015 (Peak):      ~20,000 decisions - Metadata quality: 85/100
 2016-2019 (Recent):    ~10,500 decisions - Metadata quality: 85/100
 ─────────────────────────────────────────────────────────────────
-2020-2026 (Current):   11,430 decisions - Metadata quality: 90/100 ✅ Already have
+2020-2026 (Current):   98,992 decisions - Metadata quality: 90/100 ✅ Already have
 
 TOTAL 1986-2026:       ~62,000 expected
 ACTUAL CanLII Total:   94,628 decisions (50% MORE than estimated!)
@@ -112,7 +112,7 @@ ACTUAL CanLII Total:   94,628 decisions (50% MORE than estimated!)
 node scripts/collect-ultra-slow.js --database=onwsiat --startID=1 --endID=120000 --skipExisting=true --delay=3000
 
 # Script will:
-# 1. Load existing 11,430 decisions (skip those IDs)
+# 1. Load existing 98,992 decisions (skip those IDs)
 # 2. Scan IDs 1-120,000 for new decisions
 # 3. Save progress every 100 decisions (resume capability)
 # 4. Respect 1,000 calls/day CanLII quota
@@ -217,7 +217,7 @@ Scenario D: CanLII has 2000-2019 (OPTIMISTIC)
 - ❌ WSIB decisions are first-level reviews (not final appeal authority)
 - ❌ 95.4% have unknown outcomes (metadata-only)
 - ❌ Small sample size (~55 decisions/year = weak statistical power)
-- ❌ WSIAT data MORE valuable (11,430 appeal decisions already collected)
+- ❌ WSIAT data MORE valuable (98,992 appeal decisions already collected)
 - ✅ Only collect if time/resources available after WSIAT + HRTO
 
 **Alternative Approach:** 
@@ -321,7 +321,7 @@ data/official-sources/onsbt-ow-monthly-caseload-2019-2025.csv
 
 ### Collection Completeness
 ```
-WSIAT:  11,430 → 94,628 decisions (+723% expansion) ✅ TARGET
+WSIAT:  98,992 → 94,628 decisions (+723% expansion) ✅ TARGET
 HRTO:    9,269 → ~12,900 decisions (+39% expansion) ✅ TARGET
 WSIB:      431 → 1,043 decisions (+142% expansion) ⏸️ OPTIONAL
 ONSBT:  13,798 → 13,798 decisions (100% complete) ✅ COMPLETE
@@ -444,7 +444,7 @@ TOTAL: ~255 MB (compressed: ~60 MB)
 - **Mitigation:** 1-hour discovery phase confirms before committing to full collection
 
 ### Risk 5: Analysis Paralysis (Too Much Data)
-- **Likelihood:** LOW (scripts handle 11,430 easily, 94,628 = 8.3x)
+- **Likelihood:** LOW (scripts handle 98,992 easily, 94,628 = 8.3x)
 - **Impact:** MEDIUM (slower queries, larger file loads)
 - **Mitigation:**
   - Create SQLite database for indexed queries (<100ms response)

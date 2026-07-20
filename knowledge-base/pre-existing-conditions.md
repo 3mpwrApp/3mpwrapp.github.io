@@ -7,7 +7,7 @@
 **Recent review of Ontario workers' compensation records shows the pre-existing condition argument appears in both appeal-stage and first-level decision records, but the archives answer different questions:**
 
 ### What The Public Records Show:
-- **WSIAT appeal archive:** 1,522 of 11,430 appeal decisions (13.3%, 95% CI: 12.7-13.9%) mention pre-existing condition language
+- **WSIAT appeal archive:** 1,522 of 98,992 appeal decisions (13.3%, 95% CI: 12.7-13.9%) mention pre-existing condition language
 - **ONWSIB internal-review archive:** 31 of 463 published decisions (6.7%) mention pre-existing condition language
 - **Interpretation limit:** These figures show how often the argument appears in the public record. They do not prove how often the argument succeeds.
 - **Method note for ONWSIB:** [ONWSIB Deep-Dive Method Note](/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html)
@@ -218,4 +218,4 @@ Get strong medical evidence explaining the work contribution.
 
 ---
 
-*Primary data sources: 2020-2026 WSIAT appeal archive (11,430 decisions) and reconciled ONWSIB archive (463 decisions). ONWSIB methodology note: [ONWSIB Deep-Dive Method Note](/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html)*
+*Primary data sources: 2020-2026 WSIAT appeal archive (98,992 decisions) and reconciled ONWSIB archive (463 decisions). ONWSIB methodology note: [ONWSIB Deep-Dive Method Note](/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html)*

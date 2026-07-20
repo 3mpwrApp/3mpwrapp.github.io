@@ -34,7 +34,7 @@ When we first analyzed **50,161 tribunal decisions** across Ontario, we faced a 
 
 | Tribunal | Total Cases | Baseline Unknown | v3.0 Final Unknown | Improvement |
 |----------|-------------|------------------|--------------------|--------------|
-| **ONWSIAT** (WSIAT Appeals) | 11,430 | 99.2% | **16.6%** | ✅ **-82.6%** |
+| **ONWSIAT** (WSIAT Appeals) | 98,992 | 99.2% | **16.6%** | ✅ **-82.6%** |
 | **ONSBT** (Social Benefits) | 13,798 | 91.3% | **5.3%** | ✅ **-86.0%** |
 | **ONWSIB** (WSIB Initial) | 463 | 98.1% | **54.4%** | ✅ -43.7% |
 | **ONHRT** (Human Rights) | 9,269 | 64.7% | **13.6%** | ✅ **-51.1%** |
@@ -217,7 +217,7 @@ As extraction completes, **all content updates automatically**:
 **The data tells the story:**
 - **Largest dataset:** 50,161 tribunal decisions (84% of our total data)
 - **Six major tribunals** operating independently:
-  - **ONWSIAT** - Workplace Safety & Insurance Appeals Tribunal (11,430 workplace injury appeals)
+  - **ONWSIAT** - Workplace Safety & Insurance Appeals Tribunal (98,992 workplace injury appeals)
   - **ONSBT** - Ontario Social Benefits Tribunal (13,798 social assistance appeals)
   - **ONWSIB** - Workplace Safety & Insurance Board (463 initial workplace injury claims)
   - **ONHRT** - Ontario Human Rights Tribunal (9,269 discrimination & human rights cases)

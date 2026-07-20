@@ -2,7 +2,7 @@
 
 > **⚠️ STATISTICAL ALERT:** Wrist injuries (carpal tunnel syndrome, wrist fractures, de Quervain's tenosynovitis, TFCC tears) represent **376 cases (3.3%)** of all WSIB tribunal decisions (2020-2026). WSIB systematically denies these claims as "gradual onset, not workplace accidents" despite clear occupational causation.
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ---
 
@@ -10,7 +10,7 @@
 
 ### By The Numbers
 
-From our analysis of 11,430 tribunal decisions (2020-2026):
+From our analysis of 98,992 tribunal decisions (2020-2026):
 
 - **376 wrist injury cases reached tribunal** (3.3% of all decisions)
 - **Primary denial:** "Gradual onset, no specific workplace accident"
@@ -504,4 +504,4 @@ Document ALL repetitive wrist activities:
 **Questions? Need help?**
 📧 empowrapp08162025@gmail.com
 
-*Last updated: April 15, 2026 | Based on 11,430 ONWSIAT decisions (2020-2026)*
+*Last updated: April 15, 2026 | Based on 98,992 ONWSIAT decisions (2020-2026)*

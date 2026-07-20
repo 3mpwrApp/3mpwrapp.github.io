@@ -12,7 +12,7 @@
 
 #### 🔴 CRITICAL DISCOVERY: WSIAT Historical Gap!
 - **CanLII Total:** 94,628 WSIAT decisions (1986-2026)
-- **Your Collection:** 11,430 decisions (2020-2026 only)
+- **Your Collection:** 98,992 decisions (2020-2026 only)
 - **MISSING:** 83,198 historical decisions (88% of available data!)
 - **Verdict:** CanLII has 24% MORE than official WSIAT database (76,197)
 - **Action Required:** Scrape CanLII historical (13-week automated collection)
@@ -160,7 +160,7 @@ Start automation + build features:
 - ✅ ONSBT caseload: 4 files, 57 years (COMPLETE)
 - ✅ AWCBC statistics: 2024 data (COMPLETE)
 - ⏳ HRTO quarterly reports: 0/39 files (manual download needed)
-- ⏳ WSIAT historical: 11,430/94,628 decisions (12% complete)
+- ⏳ WSIAT historical: 98,992/94,628 decisions (12% complete)
 
 ### Visualizations
 - ✅ Pipeline infographic (COMPLETE)

@@ -7,7 +7,7 @@
 
 ## 🎯 OVERALL GRADE: **B+ / A-**
 
-Your ONWSIAT 2020-2026 research (11,430 cases) is **statistically sound, methodologically transparent, and defensible** for grassroots advocacy and media outreach (with minor improvements).
+Your ONWSIAT 2020-2026 research (98,992 cases) is **statistically sound, methodologically transparent, and defensible** for grassroots advocacy and media outreach (with minor improvements).
 
 ---
 
@@ -16,7 +16,7 @@ Your ONWSIAT 2020-2026 research (11,430 cases) is **statistically sound, methodo
 ### Data Quality (A-)
 - ✅ **Source credibility:** CanLII official database (authoritative, public)
 - ✅ **Completeness documented:** 1,545 missing decisions explicitly acknowledged (43.9%)
-- ✅ **Temporal coverage:** 6 full years, 11,430 cases (census, not sample)
+- ✅ **Temporal coverage:** 6 full years, 98,992 cases (census, not sample)
 - ✅ **Numbering gaps analyzed:** Mathematical proof of suppression/incompetence
 - ✅ **Data extraction verified:** 100 random cases spot-checked
 
@@ -84,7 +84,7 @@ Your ONWSIAT 2020-2026 research (11,430 cases) is **statistically sound, methodo
 
 **Key Findings:**
 - **Q1 fiscal spike IS statistically significant:** χ² = 105.7 (critical value = 7.815, p < 0.001)
-- **Sample size adequate:** 11,430 cases = excellent statistical power
+- **Sample size adequate:** 98,992 cases = excellent statistical power
 - **Action needed:** Apply chi-square tests to body-part bias using detective data
 
 ### 2. Sensitivity Analysis ✅

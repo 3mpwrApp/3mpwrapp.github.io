@@ -10,7 +10,7 @@
 ### What We Discovered
 All subagents have completed comprehensive analysis of **10+ official data sources** across 4 Ontario tribunals. Key discoveries:
 
-1. **95,298 WSIAT decisions** available (vs 11,430 in CanLII) = **8.3x expansion** 🚀
+1. **95,298 WSIAT decisions** available (vs 98,992 in CanLII) = **8.3x expansion** 🚀
 2. **57 years of social assistance data** (1969-2025) enabling appeal rate calculations
 3. **39 quarterly HRTO reports** (2016-2026) for validation of 9,269 decisions
 4. **71,781 workplace injury claims** (2024) revealing **7% appeal to WSIAT**
@@ -194,7 +194,7 @@ Contains:
 ## 📊 KEY METRICS TO TRACK
 
 ### Data Coverage
-- **WSIAT**: 11,430 → **95,298 decisions** (+733%)
+- **WSIAT**: 98,992 → **95,298 decisions** (+733%)
 - **HRTO**: 9,269 decisions → **validated against 39 quarterly reports**
 - **ONSBT**: 13,798 decisions → **enriched with 57 years of caseload context**
 - **ONWSIB**: 463 decisions (maintain current level, low priority)

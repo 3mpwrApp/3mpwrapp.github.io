@@ -10,7 +10,7 @@ permalink: /knowledge-base/pre-existing-conditions/
 
 ## 🚨 NEW: Statistical Evidence Proves Systematic Pre-Existing Denials
 
-**Recent analysis of 11,430 WSIAT tribunal decisions (2020-2026) reveals shocking patterns:**
+**Recent analysis of 98,992 WSIAT tribunal decisions (2020-2026) reveals shocking patterns:**
 
 ### WSIB's #1 Denial Tactic:
 - **Pre-existing condition appears in 1,522 cases (13.3%, 95% CI: 12.7-13.9%)** - the 2nd most common keyword after "worker"

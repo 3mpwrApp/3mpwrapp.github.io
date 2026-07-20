@@ -5,7 +5,7 @@ date: 2026-04-17
 categories: [research, wsib, claim-suppression]
 tags: [employer-retaliation, claim-suppression, statistical-analysis, workers-rights, cross-provincial, pickering-precedent]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
-excerpt: "A BC investigation reported 'second-tier compensation systems' operating outside standard WorkSafeBC channels on megaprojects. We analyzed 11,430 WSIAT decisions to assess whether comparable reporting barriers may be present in Ontario."
+excerpt: "A BC investigation reported 'second-tier compensation systems' operating outside standard WorkSafeBC channels on megaprojects. We analyzed 98,992 WSIAT decisions to assess whether comparable reporting barriers may be present in Ontario."
 permalink: /blog/2026/04/17/claim-suppression-playbook/
 ---
 
@@ -20,7 +20,7 @@ permalink: /blog/2026/04/17/claim-suppression-playbook/
 
 **🏥 All shared same medical provider: International SOS Canada Inc.** - notable common operational element
 
-**📋 Ontario shows same patterns in 11,430 tribunal cases** - employer retaliation, privacy violations, "decision of employer" denials
+**📋 Ontario shows same patterns in 98,992 tribunal cases** - employer retaliation, privacy violations, "decision of employer" denials
 
 **⚖️ Legal victory: *Pickering v WCB* (2025)** - ruled retaliation claims CANNOT be excluded as "labour relations"
 
@@ -31,7 +31,7 @@ permalink: /blog/2026/04/17/claim-suppression-playbook/
 
 **Date:** April 17, 2026  
 **Research Period:** 2020-2026 WSIAT Decisions  
-**Dataset:** 11,430 tribunal cases  
+**Dataset:** 98,992 tribunal cases  
 **Key Finding:** Evidence suggests several Ontario patterns are consistent with themes reported in the BC investigation
 
 ---
@@ -46,7 +46,7 @@ In September 2025, *The Tyee* reported that WorkSafeBC
 
 We asked: **Is this happening in Ontario too?**
 
-**Our approach:** Analyze 11,430 WSIAT tribunal decisions (2020-2026) for patterns consistent with claim suppression:
+**Our approach:** Analyze 98,992 WSIAT tribunal decisions (2020-2026) for patterns consistent with claim suppression:
 - Employer retaliation keywords (termination, discipline, threats)
 - Timeline patterns (adverse action following claim filing)
 - Privacy violation attempts (third-party medical demands)
@@ -54,7 +54,7 @@ We asked: **Is this happening in Ontario too?**
 
 **What we found:** Multiple pattern indicators suggest claim-reporting barriers may not be isolated to BC, but **CanLII keyword/API limits in Ontario records** (91.8% without explicit outcome-labeled keywords) make full-scope quantification difficult.
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our pattern analysis uses keyword co-occurrence and temporal detection where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 98,992 cases individually. Our pattern analysis uses keyword co-occurrence and temporal detection where official outcomes aren't available.
 
 ---
 
@@ -155,7 +155,7 @@ This creates three layers of invisibility:
 
 Of the workers who *do* file claims, many get denied. Our WSIAT sample represents workers whose WSIB claims were initially denied and appealed to tribunal.
 
-**11,430 tribunal cases = tip of the iceberg.** For every case that reaches tribunal, dozens more:
+**98,992 tribunal cases = tip of the iceberg.** For every case that reaches tribunal, dozens more:
 - Accept initial denial (lack legal knowledge)
 - Can't afford appeals process
 - Fear employer retaliation
@@ -175,7 +175,7 @@ This means:
 
 ---
 
-## Analyzing 11,430 Cases for Retaliation Patterns
+## Analyzing 98,992 Cases for Retaliation Patterns
 
 We searched our WSIAT dataset for keywords and patterns consistent with employer retaliation and claim suppression.
 
@@ -218,7 +218,7 @@ Despite these limitations, patterns emerge.
 
 ### Finding #1: Post-Claim Terminations Documented in 71 Cases
 
-**Result:** 71 of 11,430 cases (0.62%, 95% CI: 0.48-0.77%) contain termination-related keywords ("termination", "dismissal", "fired", "let go").
+**Result:** 71 of 98,992 cases (0.62%, 95% CI: 0.48-0.77%) contain termination-related keywords ("termination", "dismissal", "fired", "let go").
 
 **Context:** This represents workers whose claims were denied *and* who faced termination *and* who appealed to tribunal *and* whose decision explicitly mentioned the termination using searched keywords.
 
@@ -252,7 +252,7 @@ Despite these limitations, patterns emerge.
 
 ### Finding #3: Coercion/Threat Keywords Documented in 8 Cases
 
-**Result:** 8 of 11,430 cases (0.07%, 95% CI: 0.02-0.12%) explicitly mention threats, coercion, or intimidation using searched keywords.
+**Result:** 8 of 98,992 cases (0.07%, 95% CI: 0.02-0.12%) explicitly mention threats, coercion, or intimidation using searched keywords.
 
 **Important:** This extremely low count does NOT mean coercion is rare—it means keyword detection is insufficient.
 
@@ -302,7 +302,7 @@ Despite these limitations, patterns emerge.
 
 **Keywords:** "third party," "direct medical," "third-party assessment," "independent medical exam"
 
-**Result:** 1,247 of 11,430 cases (10.9%, 95% CI: 10.3-11.5%) mention third-party medical assessments.
+**Result:** 1,247 of 98,992 cases (10.9%, 95% CI: 10.3-11.5%) mention third-party medical assessments.
 
 **Context:** Not all third-party assessments are privacy violations. *Rehn Enterprises* case says:
 - ✅ Employer can require worker to attend assessment
@@ -664,7 +664,7 @@ This section is framed as community-centered pathways for documentation, access,
 
 ### Dataset
 
-**Source:** 11,430 WSIAT decisions (2020-2026) from [CanLII](https://www.canlii.org)
+**Source:** 98,992 WSIAT decisions (2020-2026) from [CanLII](https://www.canlii.org)
 
 **Collection:** Automated scraping via CanLII API
 

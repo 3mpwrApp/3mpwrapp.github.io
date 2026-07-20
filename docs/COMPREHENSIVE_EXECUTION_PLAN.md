@@ -9,7 +9,7 @@
 
 ### 1. WSIAT - MASSIVE HISTORICAL GAP!
 - **CanLII Total:** 94,628 decisions (1986-2026)
-- **Your Collection:** 11,430 decisions (2020-2026 only)  
+- **Your Collection:** 98,992 decisions (2020-2026 only)  
 - **MISSING:** 83,198 historical decisions (1986-2019) = **88% of data!**
 - **Official WSIAT:** Only 76,197 decisions (CanLII has 24% MORE!)
 
@@ -137,7 +137,7 @@
 
 **Decision:** If successful → Queue 13-week collection (1986-2018)
 
-**Impact:** 8.3x WSIAT coverage expansion (11,430 → 94,628)
+**Impact:** 8.3x WSIAT coverage expansion (98,992 → 94,628)
 
 ---
 

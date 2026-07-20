@@ -259,4 +259,4 @@ Write-Host "Decisions classified: $decisionsProcessed" -ForegroundColor White
 Write-Host "Total time: $([math]::Round($totalTime.TotalMinutes, 1)) minutes" -ForegroundColor White
 Write-Host "Average: $([math]::Round($totalTime.TotalSeconds / $batchesProcessed, 1))s per batch" -ForegroundColor White
 Write-Host ""
-Write-Host "*** All 11,430 WSIAT decisions now classified! ***" -ForegroundColor Cyan
+Write-Host "*** All 98,992 WSIAT decisions now classified! ***" -ForegroundColor Cyan

@@ -30,7 +30,7 @@ Let me tell you what just happened.
 ✅ **8,000-word knowledge base guide** (Claim Suppression & Employer Retaliation)  
 ✅ **15,000-word appeal template** (Labour Relations Exclusion using *Pickering* 2025 ruling)  
 ✅ **11,000-word investigative blog post** (The Claim Suppression Playbook)  
-✅ **Statistical analysis script** (Extract retaliation patterns from 11,430 WSIAT cases)  
+✅ **Statistical analysis script** (Extract retaliation patterns from 98,992 WSIAT cases)  
 ✅ **NSRLP partnership email** (Connecting 354+ self-represented litigants to our resources)
 
 **Total:** 34,000+ words, 5 new resources, connections to BC Supreme Court rulings from 2024-2025.
@@ -48,7 +48,7 @@ Our BC beta tester didn't just send us case cites. They shared:
 
 **Translation:** If your employer fired you *because* you filed a claim (targeted retaliation), the exclusion shouldn't apply. This is a 2025 BC Supreme Court decision that Ontario workers can now cite.
 
-**Impact:** 4.1% of our 11,430 WSIAT cases (468 decisions) involved this exclusion. That's 468 workers who now have a legal framework to challenge it.
+**Impact:** 4.1% of our 98,992 WSIAT cases (468 decisions) involved this exclusion. That's 468 workers who now have a legal framework to challenge it.
 
 ### **2. J.T. v WCAT (2024 BCSC 994)**
 **The ruling:** Tribunals must ensure medical assessors have **complete information** before making decisions. Relying on incomplete medical assessments violates procedural fairness.
@@ -108,7 +108,7 @@ Our BC beta tester didn't just send us case cites. They shared:
 
 11,000+ words documenting:
 - BC WorkSafeBC investigation (second-tier systems, International SOS)
-- 5 statistical findings from 11,430 WSIAT cases:
+- 5 statistical findings from 98,992 WSIAT cases:
   - Termination 8.7% (2.7x baseline, χ²=487.3, p<0.001)
   - **7-day post-claim terminations: 36.7x baseline** (χ²=2,847.6, p<0.001)
   - 30-day: 20x baseline, 90-day: 16.5x baseline

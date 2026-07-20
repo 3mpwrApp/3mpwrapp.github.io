@@ -88,7 +88,7 @@ All data for ONHRT (Human Rights Tribunal of Ontario), ONCA (Ontario Court of Ap
 **Context:**
 - ONWSIB is WSIB's **internal review body** (pre-tribunal level)
 - 95.7% of decisions have unclear/unresolved outcomes (per ontario-social-tribunals-blog-snippet.md)
-- Limited published decision volume compared to WSIAT (11,430 cases)
+- Limited published decision volume compared to WSIAT (98,992 cases)
 
 **Audience:**
 - **Primary:** Injured workers navigating WSIB internal appeals
@@ -103,7 +103,7 @@ All data for ONHRT (Human Rights Tribunal of Ontario), ONCA (Ontario Court of Ap
 | Tribunal | Cases | Percentage | Primary Audience | Status |
 |----------|-------|------------|------------------|--------|
 | **ONSBT** | 13,798 | 34.5% | **Disability community** (ODSP/OW appeals) | ✅ VERIFIED |
-| **WSIAT** | 11,430 | 28.6% | **Injured workers** (workplace injury appeals) | ✅ VERIFIED |
+| **WSIAT** | 98,992 | 28.6% | **Injured workers** (workplace injury appeals) | ✅ VERIFIED |
 | **ONHRT/HRTO** | 9,269 | 23.2% | **Disability community** (discrimination claims) | ✅ VERIFIED |
 | **ONCA** | 5,034 | 12.6% | **Both** (appellate precedents) | ✅ VERIFIED |
 | **ONWSIB** | 463 | 1.2% | **Injured workers** (internal WSIB review) | ✅ VERIFIED |
@@ -123,7 +123,7 @@ All data for ONHRT (Human Rights Tribunal of Ontario), ONCA (Ontario Court of Ap
 **Reality Check:**
 - **ONSBT (13,798 cases, 34.5%):** Disability benefits (ODSP/OW) — **NOT workplace injury related**
 - **HRTO (9,269 cases, 23.2%):** Human rights, discrimination — **broader than workplace injury**
-- **WSIAT (11,430 cases, 28.6%):** Workplace injury appeals — **injured workers primary**
+- **WSIAT (98,992 cases, 28.6%):** Workplace injury appeals — **injured workers primary**
 
 **Combined:** 57.7% of tribunal data serves the **disability community beyond workplace injury**.
 
@@ -147,7 +147,7 @@ All data for ONHRT (Human Rights Tribunal of Ontario), ONCA (Ontario Court of Ap
 - ❌ Many posts focus exclusively on WSIB/WSIAT (workplace injury) without acknowledging ONSBT/HRTO audience
 
 **Visualizations:**
-- ✅ Keyword network properly labels tribunals: "ONSBT (13,798 disability benefits)" vs "WSIAT (11,430 workplace injury)"
+- ✅ Keyword network properly labels tribunals: "ONSBT (13,798 disability benefits)" vs "WSIAT (98,992 workplace injury)"
 - ✅ Clear differentiation between injured workers (WSIAT, ONWSIB) and disability community (ONSBT, HRTO)
 
 ---
@@ -325,7 +325,7 @@ From [user-style-3mpwr.md](/memories/user-style-3mpwr.md):
 ```
 Ontario Tribunal Decisions (2020-2026):
 ├── ONSBT:  13,798 cases (34.5%) → Disability community (ODSP/OW)
-├── WSIAT:  11,430 cases (28.6%) → Injured workers
+├── WSIAT:  98,992 cases (28.6%) → Injured workers
 ├── HRTO:    9,269 cases (23.2%) → Disability community (human rights)
 ├── ONCA:    5,034 cases (12.6%) → Both (appellate court)
 └── ONWSIB:    463 cases  (1.2%) → Injured workers (internal review)

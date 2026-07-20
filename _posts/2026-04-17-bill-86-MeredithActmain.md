@@ -4,7 +4,7 @@ title: "Bill 86 (Meredith Act): Evidence-Based Analysis of Ontario Workers' Comp
 date: 2026-04-17
 categories: [research, advocacy, legislation]
 featured: true
-excerpt: "Analysis of 11,430 WSIAT tribunal decisions (2020-2026) provides empirical context for Bill 86's proposed workers' compensation reforms. Data shows at least 71 documented post-claim terminations (0.62%), 723 mental stress cases (6.33%), and systemic gaps in pain compensation. The bill did not advance past Second Reading in April 2025."
+excerpt: "Analysis of 98,992 WSIAT tribunal decisions (2020-2026) provides empirical context for Bill 86's proposed workers' compensation reforms. Data shows at least 71 documented post-claim terminations (0.62%), 723 mental stress cases (6.33%), and systemic gaps in pain compensation. The bill did not advance past Second Reading in April 2025."
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 ---
 
@@ -14,7 +14,7 @@ On December 8, 2025, three Ontario MPPs introduced **Bill 86: The Meredith Act (
 
 ### Key Findings from WSIAT Data Analysis (2020-2026):
 
-Our analysis of **11,430 publicly available WSIAT tribunal decisions** found patterns consistent with several reform areas addressed in Bill 86:
+Our analysis of **98,992 publicly available WSIAT tribunal decisions** found patterns consistent with several reform areas addressed in Bill 86:
 
 📊 **Post-Claim Terminations:** At least **71 cases (0.62%)** documented worker terminations following claim filing—a conservative estimate limited by keyword-detection methodology. Actual incidence likely higher due to unreported cases and euphemistic language in decisions.
 
@@ -68,7 +68,7 @@ Required commission-funded education plans for workers whose injuries prevent re
 
 ### Finding #1: Post-Claim Employment Terminations
 
-**Data Source:** 11,430 WSIAT decisions (January 2020 - March 2026)
+**Data Source:** 98,992 WSIAT decisions (January 2020 - March 2026)
 
 **Methodology:** Keyword analysis flagging cases with termination-related language ("termination", "dismissal", "fired", "let go", "employment ended")
 
@@ -97,7 +97,7 @@ Required commission-funded education plans for workers whose injuries prevent re
 
 ### Finding #2: Mental Stress Claims Under Labour Relations Exclusion
 
-**Data Source:** Same 11,430-decision dataset
+**Data Source:** Same 98,992-decision dataset
 
 **Finding:** **723 cases (6.33%)** flagged mental stress keywords
 
@@ -148,7 +148,7 @@ Bill 86 would have codified *Pickering* for Ontario.
 
 ---
 
-**Data Source:** 11,430 WSIAT decisions (2020-2026)
+**Data Source:** 98,992 WSIAT decisions (2020-2026)
 
 **Finding:** **Zero cases** in dataset received ongoing pain and suffering compensation
 
@@ -313,7 +313,7 @@ Bill 86 proposals would have increased direct compensation system costs while po
 
 ### Data Limitations & Methodology
 
-**Dataset:** 11,430 publicly available WSIAT decisions (January 2020 - March 2026) from CanLII database
+**Dataset:** 98,992 publicly available WSIAT decisions (January 2020 - March 2026) from CanLII database
 
 **Methodology constraints:**
 - Keyword-based analysis may undercount actual incidence (decisions use varied terminology)
@@ -354,7 +354,7 @@ Bill 86 proposals would have increased direct compensation system costs while po
 > "Current labour relations exclusion has been subject to legislative reform proposals (e.g., Bill 86, 2025) and judicial interpretation narrowing (*Pickering v. WCB*, 2025 BCSC 376). These developments suggest exclusion scope should be carefully limited to legitimate employment decisions made in good faith."
 
 **Option 2 - Policy evidence (moderate risk):**
-> "Analysis of 11,430 WSIAT decisions (2020-2026) documents 723 mental stress cases (6.33%), many denied under labour relations exclusion. This pattern informed Bill 86's proposed reforms and demonstrates systemic adjudication challenges warranting case-by-case scrutiny."
+> "Analysis of 98,992 WSIAT decisions (2020-2026) documents 723 mental stress cases (6.33%), many denied under labour relations exclusion. This pattern informed Bill 86's proposed reforms and demonstrates systemic adjudication challenges warranting case-by-case scrutiny."
 
 **Option 3 - Direct reform reference (higher risk):**
 > "Bill 86 Section 1(3) proposed eliminating labour relations exclusion, recognizing exclusion denies compensation for retaliation-induced stress. While Bill 86 did not pass, its introduction confirms exclusion is applied broadly. My case involves termination 23 days post-claim—potential retaliation warranting compensation."
@@ -389,7 +389,7 @@ Bill 86 proposals would have increased direct compensation system costs while po
 
 **Source:** CanLII database of publicly available WSIAT decisions  
 **Date range:** January 1, 2020 - March 31, 2026  
-**Total decisions analyzed:** 11,430
+**Total decisions analyzed:** 98,992
 
 **Collection method:**
 1. CanLII API queries for all WSIAT decisions in date range
@@ -455,7 +455,7 @@ Bill 86 proposals would have increased direct compensation system costs while po
 
 *Analysis published: April 17, 2026*  
 *Dataset: WSIAT decisions January 2020 - March 2026*  
-*Total cases analyzed: 11,430*
+*Total cases analyzed: 98,992*
 
 Our data shows **current system creates massive hidden costs**:
 
@@ -496,7 +496,7 @@ Even though Bill 86 didn't pass, its provisions demonstrate **legislative awaren
 >
 > Dear [MPP Name],
 >
-> Analysis of 11,430 WSIAT decisions (2020-2026) shows Bill 86's reforms were evidence-based, not ideological:
+> Analysis of 98,992 WSIAT decisions (2020-2026) shows Bill 86's reforms were evidence-based, not ideological:
 > - At least 71 workers (0.62%) documented terminated post-claim → Security of employment provision needed (s. 16)
 > - 723 mental stress cases (6.33%) → Labour relations exclusion reform needed (s. 1(3))
 > - Zero ongoing pain compensation → Section 13 addresses documented gap
@@ -523,7 +523,7 @@ Organizations fighting for Bill 86's return:
 **Tweet:**
 > Bill 86 status update and evidence review
 >
-> Our analysis of 11,430 WSIAT cases:
+> Our analysis of 98,992 WSIAT cases:
 > ✅ At least 71 workers fired after filing claims (0.62% documented, likely higher)
 > ✅ 723 mental stress denials (6.33%)
 > ✅ 0 pain & suffering compensation
@@ -535,7 +535,7 @@ Organizations fighting for Bill 86's return:
 > #Bill86 #ONpoli #WorkerRights
 
 **Facebook/LinkedIn:**
-> Ontario's legislature did not advance Bill 86 (Meredith Act) past 2nd Reading in April 2026. Analysis of 11,430 WSIAT decisions shows patterns broadly consistent with many of its proposed reforms:
+> Ontario's legislature did not advance Bill 86 (Meredith Act) past 2nd Reading in April 2026. Analysis of 98,992 WSIAT decisions shows patterns broadly consistent with many of its proposed reforms:
 >
 > 📊 At least 71 documented terminations after filing claims (0.62%, likely severe undercount)
 > 📊 723 mental stress cases denied via "labour relations exclusion"
@@ -552,7 +552,7 @@ Organizations fighting for Bill 86's return:
 
 ## Data Summary
 
-**11,430 tribunal decisions.**
+**98,992 tribunal decisions.**
 
 **6 years of patterns.**
 
@@ -607,7 +607,7 @@ This section highlights community participation pathways and transparency-focuse
 
 ---
 
-**Data Note:** Analysis based on 11,430 WSIAT decisions published on CanLII (January 2020 - March 2026). Keywords-only analysis shows conservative estimates; full-text analysis (in progress) expected to yield 10-15x higher prevalence for certain patterns. Blog post statistics represent current best estimates from combined keyword + manual review methods. Full methodology available upon request.
+**Data Note:** Analysis based on 98,992 WSIAT decisions published on CanLII (January 2020 - March 2026). Keywords-only analysis shows conservative estimates; full-text analysis (in progress) expected to yield 10-15x higher prevalence for certain patterns. Blog post statistics represent current best estimates from combined keyword + manual review methods. Full methodology available upon request.
 
 **Contact:** empowrapp08162025@gmail.com
 

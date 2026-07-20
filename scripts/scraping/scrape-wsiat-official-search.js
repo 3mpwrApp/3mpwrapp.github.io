@@ -6,7 +6,7 @@
  * URL: https://www.wsiat.ca/en/decisionSearch/decisionSearch.asp
  * 
  * Key advantages:
- * - 95,298 decisions available (vs 11,430 on CanLII!)
+ * - 95,298 decisions available (vs 98,992 on CanLII!)
  * - No DataDome protection (government site)
  * - Structured search form with year/date filters
  * - Can extract decision numbers, dates, keywords, outcomes

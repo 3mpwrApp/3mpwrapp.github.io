@@ -141,7 +141,7 @@ That's 3mpwrApp.
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html)** - Proof of concept: see the 3 flywheels in action with 11,430 cases analyzed, knowledge base articles, and appeal templates
+📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html)** - Proof of concept: see the 3 flywheels in action with 98,992 cases analyzed, knowledge base articles, and appeal templates
 
 📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.ca/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The journey: collecting 14,000+ tribunal decisions across all of Canada (complete transparency on process)
 

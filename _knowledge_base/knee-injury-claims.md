@@ -14,7 +14,7 @@ permalink: /knowledge-base/knee-injury-claims/
 
 ### By The Numbers
 
-From our analysis of 11,430 ONWSIAT (Ontario Workplace Safety & Insurance Appeals Tribunal) decisions (2020-2026):
+From our analysis of 98,992 ONWSIAT (Ontario Workplace Safety & Insurance Appeals Tribunal) decisions (2020-2026):
 
 - **845 knee injury cases reached tribunal** (7.4% of all decisions)
 - **#2 body part by volume** (after shoulder's 1,391 cases)
@@ -661,5 +661,5 @@ A: **NO.** Employer can dispute, but WSIB makes the decision (not employer). Emp
 **Questions? Need help?**
 📧 empowrapp08162025@gmail.com
 
-*Last updated: April 15, 2026 | Based on 11,430 ONWSIAT decisions (2020-2026)*
+*Last updated: April 15, 2026 | Based on 98,992 ONWSIAT decisions (2020-2026)*
 

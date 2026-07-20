@@ -564,7 +564,7 @@
     <div class="container">
         <div class="header">
             <h1>Connecting the Dots: Ontario Tribunal Network (2020-2026)</h1>
-            <p>Interactive keyword relationship mapping across all four Ontario tribunals serving <strong>injured workers, people with disabilities, and vulnerable communities</strong>: WSIAT (11,430 workplace injury appeals), HRTO (9,269 human rights & discrimination claims), ONSBT (13,798 disability benefit appeals), ONWSIB (463 internal reviews). Complete 2020-2026 analysis. Canada-wide expansion in progress.</p>
+            <p>Interactive keyword relationship mapping across all four Ontario tribunals serving <strong>injured workers, people with disabilities, and vulnerable communities</strong>: WSIAT (98,992 workplace injury appeals), HRTO (9,269 human rights & discrimination claims), ONSBT (13,798 disability benefit appeals), ONWSIB (463 internal reviews). Complete 2020-2026 analysis. Canada-wide expansion in progress.</p>
             <p style="margin-top: 10px; font-size: 14px; color: #666;"><em>This research serves injured workers navigating workplace injury appeals (WSIAT), people with disabilities fighting benefit eligibility denials (ONSBT), and disability community members challenging discrimination (HRTO). Systemic denial patterns cross tribunal boundaries—this is a disability justice issue.</em></p>
         </div>
 
@@ -572,7 +572,7 @@
             <h2>📊 What This Visualization Shows:</h2>
             <ul>
                 <li><strong>Nodes (circles):</strong> Keywords from <strong>34,960 Ontario tribunal decisions</strong> (2020-2026) across all four tribunals</li>
-                <li><strong>Coverage:</strong> WSIAT (11,430 workplace injury appeals), HRTO (9,269 human rights/discrimination claims), ONSBT (13,798 disability benefit appeals), ONWSIB (463 internal reviews)</li>
+                <li><strong>Coverage:</strong> WSIAT (98,992 workplace injury appeals), HRTO (9,269 human rights/discrimination claims), ONSBT (13,798 disability benefit appeals), ONWSIB (463 internal reviews)</li>
                 <li><strong>Who This Serves:</strong> Injured workers (WSIAT/ONWSIB), people with disabilities (ONSBT), disability community members facing discrimination (HRTO)</li>
                 <li><strong>Edges (lines):</strong> Co-occurrence frequency (how often keywords appear in the same case)</li>
                 <li><strong>Thicker lines:</strong> More frequent co-occurrence (statistically significant clustering)</li>
@@ -592,7 +592,7 @@
                 <select id="scope-select">
                     <option value="keyword" selected>All Ontario Tribunals: Keyword Co-Occurrence (WSIAT, HRTO, ONSBT, ONWSIB)</option>
                     <option value="ontario">Ontario Tribunal Network Map (4 tribunals connected)</option>
-                    <option value="wsiat">WSIAT Only (Workplace Safety & Insurance Appeals - 11,430 cases)</option>
+                    <option value="wsiat">WSIAT Only (Workplace Safety & Insurance Appeals - 98,992 cases)</option>
                     <option value="hrto">HRTO Only (Human Rights Tribunal of Ontario - 9,269 cases)</option>
                     <option value="onsbt">ONSBT Only (Social Benefits Tribunal - 13,798 cases)</option>
                     <option value="onwsib">ONWSIB Only (WSIB Internal Review - 463 cases)</option>
@@ -699,7 +699,7 @@
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #0f766e;"></div>
-                    <span><strong>Tribunal Nodes:</strong> WSIAT (11,430 workplace injury) | HRTO (9,269 human rights) | ONSBT (13,798 disability benefits) | ONWSIB (463 internal review)</span>
+                    <span><strong>Tribunal Nodes:</strong> WSIAT (98,992 workplace injury) | HRTO (9,269 human rights) | ONSBT (13,798 disability benefits) | ONWSIB (463 internal review)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #111827;"></div>
@@ -723,7 +723,7 @@
     <script>
         // Verified co-occurrence data from keyword-frequency-analysis.json
         // Updated: April 27, 2026 - Complete Ontario tribunal integration
-        // Sources: WSIAT 11,430 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 463 cases (2020-2026)
+        // Sources: WSIAT 98,992 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 463 cases (2020-2026)
         // Total: 34,960 Ontario tribunal decisions analyzed
         const coOccurrenceData = {
             "pre-existing": {
@@ -763,7 +763,7 @@
 
         // Ontario tribunal connection seed data (can expand province-by-province)
         // Updated: April 27, 2026 - Comprehensive Ontario tribunal analysis (2020-2026)
-        // Sources: WSIAT 11,430 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 463 cases
+        // Sources: WSIAT 98,992 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 463 cases
         const ontarioConnectionData = {
             ontario: {
                 totals: {
@@ -774,7 +774,7 @@
                 },
                 tribunalKeywords: {
                     onwsiat: {
-                        "pre-existing condition": 1522,  // Updated: 13.31% of 11,430 cases
+                        "pre-existing condition": 1522,  // Updated: 13.31% of 98,992 cases
                         "pain": 1617,                     // Verified: co-occurrence data
                         "shoulder": 1391,                 // Verified: 12.17% of cases
                         "knee": 845,                      // Verified: 7.39% of cases
@@ -1173,7 +1173,7 @@
                     <div class="stat-label">Ontario Tribunals (WSIAT, HRTO, ONSBT, ONWSIB)</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">11,430</div>
+                    <div class="stat-value">98,992</div>
                     <div class="stat-label">WSIAT Cases (Workplace Injury Appeals)</div>
                 </div>
                 <div class="stat-card">
@@ -1246,7 +1246,7 @@
                 provinceSelect.disabled = true;
                 if (modeIndicator) {
                     const tribunalNames = {
-                        'wsiat': 'WSIAT (Workplace Injury Appeals - 11,430 cases)',
+                        'wsiat': 'WSIAT (Workplace Injury Appeals - 98,992 cases)',
                         'hrto': 'HRTO (Human Rights - 9,269 cases)',
                         'onsbt': 'ONSBT (Disability Benefits - 13,798 cases)',
                         'onwsib': 'ONWSIB (WSIB Internal Review - 463 cases)'

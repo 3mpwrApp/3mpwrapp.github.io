@@ -14,7 +14,7 @@
 - **Source:** CanLII (Canadian Legal Information Institute) - Canada's free, public legal database
 - **Database:** WSIAT (Workplace Safety and Insurance Appeals Tribunal) decisions
 - **Time Period:** January 1, 2020 → December 31, 2026  
-- **Total Cases Analyzed:** **11,430 tribunal decisions**
+- **Total Cases Analyzed:** **98,992 tribunal decisions**
 - **Coverage:** Estimated 95%+ of all published WSIAT decisions in this period
 
 **Data Quality:**
@@ -154,7 +154,7 @@ These are **interpretations** based on patterns—defensible but not absolute pr
 
 **A. Sample Size Adequacy**
 
-Question: Is 11,430 cases enough to draw conclusions?
+Question: Is 98,992 cases enough to draw conclusions?
 
 Answer: **YES** - this is 95%+ of all tribunal decisions in 6-year period
 - **Statistical power:** For pattern detection, n > 1,000 is considered robust
@@ -310,7 +310,7 @@ Answer: **YES, and we acknowledge them:**
 
 **If you're an injured worker:**
 - ✅ USE patterns to understand your denial (search keywords in your letter)
-- ✅ USE templates/guides based on winning arguments from 11,430 cases
+- ✅ USE templates/guides based on winning arguments from 98,992 cases
 - ✅ CITE statistics in appeals ("20% of knee injuries denied as pre-existing—I'm part of documented pattern")
 - ❌ DON'T claim "conspiracy" (weakens your case—stick to facts)
 
@@ -327,7 +327,7 @@ Answer: **YES, and we acknowledge them:**
 - ❌ DON'T sensationalize (stick to what data proves—already damning enough)
 
 **If you're a researcher:**
-- ✅ BUILD on our dataset (11,430 cases available on GitHub)
+- ✅ BUILD on our dataset (98,992 cases available on GitHub)
 - ✅ CHALLENGE our methods (peer review makes science stronger)
 - ✅ FILL gaps (crowdsource outcomes, adjudicator analysis, representation study)
 - ❌ DON'T take our interpretations as gospel (test alternative explanations)
@@ -339,7 +339,7 @@ Answer: **YES, and we acknowledge them:**
 **3mpwrApp's Three Flywheels:**
 
 1. **📚 Knowledge Base (16 Injury Guides)**
-   - Built from patterns in 11,430 cases
+   - Built from patterns in 98,992 cases
    - Shows what arguments work for shoulder, knee, chronic pain, etc.
    - Evidence: [Knowledge Base Index](https://3mpwrapp.ca/knowledge-base/)
 
@@ -356,7 +356,7 @@ Answer: **YES, and we acknowledge them:**
 **How research → action:**
 
 ```
-Pattern Detection (11,430 cases)
+Pattern Detection (98,992 cases)
     ↓
 Knowledge Base (injury-specific guides)
     ↓

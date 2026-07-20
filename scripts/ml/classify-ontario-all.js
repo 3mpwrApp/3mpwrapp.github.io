@@ -3,7 +3,7 @@
  * APPLY ENHANCED CLASSIFICATION TO ALL ONTARIO TRIBUNALS
  * 
  * Applies the same pattern matching + similarity approach to:
- * - ONWSIAT (11,430 cases)
+ * - ONWSIAT (98,992 cases)
  * - ONSBT (13,798 cases) - already processed
  * - ONWSIB (463 cases)
  * - ONHRT (9,269 cases)

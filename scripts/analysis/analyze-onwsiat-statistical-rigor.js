@@ -62,8 +62,8 @@ const bodyParts = {
   elbow: { total: 219, preExisting: 25, rate: 11.4 }
 };
 
-// Calculate baseline (overall pre-existing rate across all 11,430 cases)
-// Total pre-existing mentions: 1,522 out of 11,430 cases = 13.3%
+// Calculate baseline (overall pre-existing rate across all 98,992 cases)
+// Total pre-existing mentions: 1,522 out of 98,992 cases = 13.3%
 const baselineTotal = 11430;
 const baselinePreExisting = 1522;
 const baselineRate = (baselinePreExisting / baselineTotal) * 100;

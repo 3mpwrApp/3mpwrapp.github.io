@@ -132,7 +132,7 @@ Based on ONWSIB findings:
 | **Permanent impairment** | 818 | 7.2% | ✅ `permanent-impairment-rating.md` | Complete (based on 74 cases) |
 | **Fibromyalgia** | ~88 | 0.8% | ✅ `fibromyalgia-claims.md` | Complete (based on 68 cases) |
 
-**Total Covered: ~3,601 cases (31.5% of 11,430)**
+**Total Covered: ~3,601 cases (31.5% of 98,992)**
 
 ---
 
@@ -152,7 +152,7 @@ Based on ONWSIB findings:
 | **Hearing loss** | 38 | 0.3% | 🟢 Low | Occupational noise exposure |
 | **Occupational disease (general)** | 15 | 0.1% | 🟠 High | Cancer, respiratory, systematic suppression |
 
-**Total Missing: ~4,134 cases (36.2% of 11,430)**
+**Total Missing: ~4,134 cases (36.2% of 98,992)**
 
 ---
 
@@ -258,14 +258,14 @@ Based on ONWSIB findings:
 16. **Create hip injury knowledge base** (124 cases)
 17. **Create hearing loss knowledge base** (38 cases)
 18. **Create employer cost relief challenge letter** (97 co-occurrences with pre-existing)
-19. **Update all existing KB articles with NEW 11,430-case statistics** (currently based on older 1,204-case dataset)
+19. **Update all existing KB articles with NEW 98,992-case statistics** (currently based on older 1,204-case dataset)
 
 ---
 
 ## Statistics Update Needed
 
 **Problem:** Existing knowledge base articles cite OLD 2025-2026 data (1,204 cases)  
-**Solution:** Update ALL articles with NEW 2020-2026 data (11,430 cases)
+**Solution:** Update ALL articles with NEW 2020-2026 data (98,992 cases)
 
 **Example Updates Needed:**
 
@@ -273,7 +273,7 @@ Based on ONWSIB findings:
 > "Low back pain appears in 194 cases, based on 1,204 tribunal decisions analyzed."
 
 **New (should be):**
-> "Low back pain appears in 390 cases (3.4%), based on 11,430 tribunal decisions (2020-2026). Recent detective-mode analysis reveals back injuries have 19% pre-existing denial rate—proving systematic bias."
+> "Low back pain appears in 390 cases (3.4%), based on 98,992 tribunal decisions (2020-2026). Recent detective-mode analysis reveals back injuries have 19% pre-existing denial rate—proving systematic bias."
 
 **Files Needing Updates:**
 - [ ] `low-back-pain-claims.md` - Update case counts, add 19% pre-existing rate
@@ -319,7 +319,7 @@ Based on ONWSIB findings:
 **Action Required:**
 1. Create 2 critical KB articles (shoulder, knee) immediately
 2. Create 2 critical appeal templates (shoulder, knee)
-3. Update all 6 existing KB articles with new 11,430-case statistics
+3. Update all 6 existing KB articles with new 98,992-case statistics
 4. Sync templates to website `data/templates/` folder
 5. Create 8 additional KB articles for high-volume injuries
 6. Create 3 additional specialized appeal templates

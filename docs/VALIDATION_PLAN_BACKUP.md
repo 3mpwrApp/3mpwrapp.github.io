@@ -16,7 +16,7 @@
 
 | Tribunal | Total Cases | Classified | Unknown | Unknown Rate |
 |----------|-------------|------------|---------|--------------|
-| ONWSIAT  | 11,430      | 9,536      | 1,894   | **16.6%**    |
+| ONWSIAT  | 98,992      | 9,536      | 1,894   | **16.6%**    |
 | ONSBT    | 13,798      | 13,064     | 734     | **5.3%**     |
 | ONWSIB   | 463         | 211        | 252     | **54.4%**    |
 | ONHRT    | 9,269       | 8,013      | 1,256   | **13.6%**    |
@@ -77,7 +77,7 @@
 - Emphasize ML/keyword-based methodology
 
 ### WSIAT Posts (10 files)
-1. `2024-11-20-wsiat-chronic-pain-trends.md` - Add last_updated, v3.0 stats (11,430 cases, 83.4% classified)
+1. `2024-11-20-wsiat-chronic-pain-trends.md` - Add last_updated, v3.0 stats (98,992 cases, 83.4% classified)
 2. `2024-11-25-wsiat-mental-health-claims.md` - Same updates
 3. `2024-12-01-wsiat-successful-appeals.md` - Same updates
 4. (... 7 more WSIAT posts)
@@ -106,7 +106,7 @@
 
 ## Phase 2: Guides (12 files) - 🔜 AWAITING VALIDATION
 
-7. **WSIAT Guides (4 files)** - Update with 11,430 cases, 83.4% classified
+7. **WSIAT Guides (4 files)** - Update with 98,992 cases, 83.4% classified
    - `guides/wsiat-complete-guide.md` ✅ ALREADY UPDATED
    - `guides/wsiat-chronic-pain-guide.md` ✅ ALREADY UPDATED
    - `guides/wsiat-mental-health-guide.md`

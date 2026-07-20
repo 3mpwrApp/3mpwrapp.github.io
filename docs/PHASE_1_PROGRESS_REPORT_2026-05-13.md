@@ -45,7 +45,7 @@ Phase 1 (Data Verification & Blog Audit) is now COMPLETE ahead of schedule. All 
 **Total Knowledge Base:** Now 21 guides in TypeScript (was 12) — 75% increase
 
 ### 4. ✅ Data Verification Findings
-- **WSIAT:** Confirmed 11,430 records across 7 yearly files (blog claim ACCURATE)
+- **WSIAT:** Confirmed 98,992 records across 7 yearly files (blog claim ACCURATE)
 - **ONSBT:** Confirmed 13,798 records (blog claim was 500 records off — NOW FIXED)
 - **WSIAT Historical:** 4,232 records repaired May 13 (URLs/dates fixed)
 - **Shoulder Cases:** Verified 1,486 cases (was claimed 1,391 in markdown — data shows higher)

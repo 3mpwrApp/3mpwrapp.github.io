@@ -30,7 +30,7 @@ We have analyzed **42,314 tribunal decisions** from your API and discovered a **
 
 | Tribunal | Province | Cases | Unknown Outcomes | Rate |
 |----------|----------|-------|------------------|------|
-| **WSIAT** | Ontario | 11,430 | 10,491 | **91.8%** |
+| **WSIAT** | Ontario | 98,992 | 10,491 | **91.8%** |
 | **BC WCAT** | British Columbia | 7,386 | 7,386 | **100.0%** |
 | **ONWSIB** | Ontario | 120 | 112 | **93.3%** |
 | **ONSBT** | Ontario | 818 | 780 | **95.4%** |

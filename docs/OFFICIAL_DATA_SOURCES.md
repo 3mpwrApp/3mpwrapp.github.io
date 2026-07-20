@@ -3,7 +3,7 @@
 ## Summary
 Discovered official government/tribunal data sources that bypass CanLII DataDome entirely!
 
-**Impact:** Can access 95,298+ WSIAT decisions (vs 11,430 on CanLII) + structured datasets for all tribunals
+**Impact:** Can access 95,298+ WSIAT decisions (vs 98,992 on CanLII) + structured datasets for all tribunals
 
 ---
 
@@ -134,7 +134,7 @@ Discovered official government/tribunal data sources that bypass CanLII DataDome
 
 | Source | WSIAT | HRTO | ONSBT | ONWSIB |
 |--------|-------|------|-------|--------|
-| **CanLII** | 11,430 | 9,269 | 13,798 | 431 |
+| **CanLII** | 98,992 | 9,269 | 13,798 | 431 |
 | **Official** | 95,298 🎯 | Quarterly stats | Quarterly stats | Claim data (restricted) |
 | **Improvement** | **+733%** | Statistical reports | Statistical reports | N/A |
 
@@ -178,7 +178,7 @@ Discovered official government/tribunal data sources that bypass CanLII DataDome
 ## Why This Is Better Than CanLII
 
 1. **No DataDome Protection** - Government sites don't use enterprise bot detection
-2. **More Complete Data** - 95,298 WSIAT decisions vs 11,430 on CanLII
+2. **More Complete Data** - 95,298 WSIAT decisions vs 98,992 on CanLII
 3. **Structured Metadata** - Search forms provide clean data extraction
 4. **Official Source** - First-party data directly from tribunals
 5. **Statistical Context** - Quarterly reports provide trends and patterns

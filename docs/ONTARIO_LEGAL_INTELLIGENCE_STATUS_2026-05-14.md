@@ -31,7 +31,7 @@ You have a **production-ready foundation** for Ontario with:
 | Tribunal | Decisions | % of Total | Audience Served | Status |
 |----------|-----------|------------|-----------------|--------|
 | **ONSBT** | 13,798 | 34.5% | Disability benefits (ODSP/OW) | ✅ Verified |
-| **WSIAT** | 11,430 | 28.6% | Workplace injury appeals | ✅ Verified |
+| **WSIAT** | 98,992 | 28.6% | Workplace injury appeals | ✅ Verified |
 | **ONHRT** | 9,269 | 23.2% | Human rights & discrimination | ✅ Verified |
 | **ONCA** | 5,034 | 12.6% | Appellate decisions (mixed) | ✅ Verified |
 | **ONWSIB** | 463 | 1.2% | WSIB internal reviews | ✅ Verified |
@@ -76,10 +76,10 @@ You have a **production-ready foundation** for Ontario with:
 |--------------|--------|---------------|--------------|
 | [connecting-the-dots-canlii-keyword-visualization-network.html](/connecting-the-dots-canlii-keyword-visualization-network.html) | ✅ | 34,960 cases (2020-2026) | Added disability justice context |
 | [cross-tribunal-success-rates.html](/cross-tribunal-success-rates.html) | ✅ | 161,377 cases (1987-2026) | Updated title & metadata |
-| [wsib-denial-network-visualization.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\wsib-denial-network-visualization.html) | ✅ | 11,430 WSIAT cases | Verified accurate |
+| [wsib-denial-network-visualization.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\wsib-denial-network-visualization.html) | ✅ | 98,992 WSIAT cases | Verified accurate |
 | [employer-safety-heatmap.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\employer-safety-heatmap.html) | ✅ | WSIB safety data | Verified accurate |
 | [tribunal-decision-heatmap.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\tribunal-decision-heatmap.html) | ✅ | Multi-tribunal data | Verified accurate |
-| [connecting-the-dots-wsiat-keyword-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-wsiat-keyword-network.html) | ✅ | 11,430 WSIAT cases | Verified accurate |
+| [connecting-the-dots-wsiat-keyword-network.html](d:\1-EmpowrApp\empowrapp-site\3mpwrapp.github.io-main\3mpwrapp.github.io-main\connecting-the-dots-wsiat-keyword-network.html) | ✅ | 98,992 WSIAT cases | Verified accurate |
 
 **Key Achievements:**
 - ✅ Data scopes properly labeled (Recent 2020-2026 vs Historical 1987-2026)

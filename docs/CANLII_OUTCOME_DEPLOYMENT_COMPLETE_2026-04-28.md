@@ -182,7 +182,7 @@ Key winning factors: specialist confirmation, imaging evidence, functional limit
 **File:** [docs/WSIAT_BULK_EXPORT_REQUEST_EMAIL_2026-04-28.md](docs/WSIAT_BULK_EXPORT_REQUEST_EMAIL_2026-04-28.md)
 
 **Email Content:**
-- Professional request for bulk decision outcome export (2020-2026, ~11,430 decisions)
+- Professional request for bulk decision outcome export (2020-2026, ~98,992 decisions)
 - Requested fields: Decision Number, Decision Date, Outcome, Panel Members (optional), Issue Type (optional)
 - Public benefit justification: transparency, evidence-based decision-making, academic research, legal AI training
 - Precedents: CanLII open data, WSIAT annual reports, Ontario Open Data Directive
@@ -246,7 +246,7 @@ console.assert(painCases.length === 20);
 - **Decisions with outcome predictions:** 137,252 (100%)
 - **High-confidence predictions (≥80%):** 25,213 (18.4%)
 - **Medium-confidence predictions (60-79%):** Data varies by tribunal
-- **Low-confidence predictions (<60%):** 11,430 (flagged for WSIAT official data request)
+- **Low-confidence predictions (<60%):** 98,992 (flagged for WSIAT official data request)
 
 ### Outcome Distribution
 | Outcome | Count | Percentage |
@@ -343,7 +343,7 @@ console.assert(painCases.length === 20);
 
 ### High Priority
 1. **Execute Firestore import** - Core feature blocked until data is in database
-2. **Official WSIAT data request** - Send email to improve 11,430 low-confidence predictions
+2. **Official WSIAT data request** - Send email to improve 98,992 low-confidence predictions
 3. **End-to-end testing** - Validate accuracy before announcing feature
 
 ### Medium Priority

@@ -32,7 +32,7 @@ This document provides complete transparency about data quality, limitations, an
 
 | Tribunal | Records | Data Integrity Score | Status | Known Limitations |
 |----------|---------|---------------------|--------|-------------------|
-| **WSIAT** | 11,430 | 95/100 (after May 13 fix) | ✅ READY | Outcomes: 77% unclear from keyword analysis |
+| **WSIAT** | 98,992 | 95/100 (after May 13 fix) | ✅ READY | Outcomes: 77% unclear from keyword analysis |
 | **ONSBT** | 13,798 | 95/100 | ✅ READY | Outcomes: 34.3% unclear |
 | **HRTO** | 7 years | 75/100 | ⚠️ PARTIAL | Outcomes: 95%+ unclear (aggregate stats only) |
 | **ONCA** | 7 years | 72/100 | ⚠️ PARTIAL | Outcomes: 95%+ unclear |
@@ -53,7 +53,7 @@ This document provides complete transparency about data quality, limitations, an
 
 ### WSIAT Outcome Accuracy
 
-**From 11,430 analyzed cases (2020-2026):**
+**From 98,992 analyzed cases (2020-2026):**
 - **Clear Outcomes:** 393 cases (3.4%)
   - Allowed: 285 (2.5%)
   - Partial: 65 (0.6%)
@@ -70,7 +70,7 @@ This document provides complete transparency about data quality, limitations, an
 
 **Success Rate Calculation:**
 - Knowledge base claims: Based on 393 clear cases only (89.1% win rate)
-- Does NOT represent all 11,430 cases
+- Does NOT represent all 98,992 cases
 - Actual WSIAT system-wide success rate unknown from this data
 
 ### ONSBT Outcome Accuracy
@@ -107,7 +107,7 @@ This document provides complete transparency about data quality, limitations, an
 
 **Previous Error (Corrected May 13):**
 - ❌ Low back pain was incorrectly claimed as "62% of appeals" → **False by 1,821%**
-- ✅ Corrected to 3.4% (390 of 11,430 cases)
+- ✅ Corrected to 3.4% (390 of 98,992 cases)
 
 ### Citation Traceability
 

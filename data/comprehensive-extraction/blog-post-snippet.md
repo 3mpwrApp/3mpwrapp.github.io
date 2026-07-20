@@ -1,6 +1,6 @@
-﻿## 🎯 WSIAT Classification Results: 11,430 Decisions Analyzed
+﻿## 🎯 WSIAT Classification Results: 98,992 Decisions Analyzed
 
-**📅 UPDATE: May 1, 2026** - We've completed keyword-based classification of all 11,430 WSIAT tribunal decisions (2020-2026). Here's what the outcomes reveal:
+**📅 UPDATE: May 1, 2026** - We've completed keyword-based classification of all 98,992 WSIAT tribunal decisions (2020-2026). Here's what the outcomes reveal:
 
 **⚠️ METHODOLOGY DISCLOSURE:** Outcome classification based on keyword pattern analysis of CanLII API metadata. 77% of cases have unclear outcomes due to ambiguous tribunal language. Success rates calculated from keyword-classified subset (393 cases) only.
 
@@ -16,7 +16,7 @@
 | Remitted | 80 | 0.7% |
 | Partial | 65 | 0.6% |
 | Denied | 43 | 0.4% |
-| **TOTAL** | **11,430** | **100%** |
+| **TOTAL** | **98,992** | **100%** |
 
 ### What This Tells Us
 
@@ -71,6 +71,6 @@ Our classification used keyword pattern matching with three confidence levels:
 - [Research Hub](/research.html) - Interactive visualizations and statistical analysis
 
 **Data Access:**
-- [Classified Decisions JSON](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/comprehensive-extraction/wsiat-classified.json) (11,430 decisions)
+- [Classified Decisions JSON](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/comprehensive-extraction/wsiat-classified.json) (98,992 decisions)
 - [Classification Scripts](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/scripts) (Open source methodology)
 - [Progress Tracking](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/comprehensive-extraction/ai-progress.json) (45 batches completed)

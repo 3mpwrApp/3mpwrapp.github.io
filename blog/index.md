@@ -22,7 +22,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 - [💬 Community Updates](#blog-posts) - Announcements and stories
 
 **Other Resources:**
-- [📚 Research Hub]({{ '/research' | relative_url }}) - Knowledge base, appeal templates, and comprehensive guides from 11,430 tribunal cases
+- [📚 Research Hub]({{ '/research' | relative_url }}) - Knowledge base, appeal templates, and comprehensive guides from 98,992 tribunal cases
 - [Subscribe via RSS]({{ '/feed.xml' | relative_url }}) | [Newsletter]({{ '/newsletter' | relative_url }})
 - [What's New]({{ '/whats-new' | relative_url }}) - Detailed changelog
 - [App Tour]({{ '/app-tour' | relative_url }}) - Complete feature walkthrough

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WSIAT Outcome Timeline (2020-2026) | 3mpwrApp Disability Justice Research</title>
-    <meta name="description" content="Interactive timeline visualizing WSIAT tribunal decision patterns across 7 years (2020-2026, 11,430 workplace injury appeals) serving injured workers, people with disabilities, and vulnerable communities.">
+    <meta name="description" content="Interactive timeline visualizing WSIAT tribunal decision patterns across 7 years (2020-2026, 98,992 workplace injury appeals) serving injured workers, people with disabilities, and vulnerable communities.">
     <meta name="keywords" content="WSIAT, tribunal outcomes, workplace injury, Ontario, disability justice, injured workers">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
@@ -140,7 +140,7 @@
     <div class="container">
         <h1>WSIAT Outcome Timeline (2020-2026)</h1>
         <div class="subtitle">
-            <strong>11,430 workplace injury appeals</strong> from the Workplace Safety and Insurance Appeals Tribunal (WSIAT) analyzed to reveal outcome clarity patterns serving <strong>injured workers, people with disabilities, and vulnerable communities</strong>.
+            <strong>98,992 workplace injury appeals</strong> from the Workplace Safety and Insurance Appeals Tribunal (WSIAT) analyzed to reveal outcome clarity patterns serving <strong>injured workers, people with disabilities, and vulnerable communities</strong>.
         </div>
 
         <div class="context-box">
@@ -181,7 +181,7 @@
 
         <div class="methodology">
             <h2>📊 Data & Methodology</h2>
-            <p><strong>Data Source:</strong> 11,430 WSIAT decisions from CanLII (2020-2026), analyzed April 2026</p>
+            <p><strong>Data Source:</strong> 98,992 WSIAT decisions from CanLII (2020-2026), analyzed April 2026</p>
             <p><strong>Outcome Classification Method:</strong> Keyword-based inference from decision text. "Clear outcome" = decision text contains outcome indicators ("allowed," "dismissed," "granted," "denied"). "Unclear outcome" = no standard outcome language found (77% of all decisions).</p>
             <p><strong>Limitation:</strong> CanLII API responses do not include standardized structured outcome labels for these decisions. Keyword-based classification is approximate. To get 100% accurate outcomes, would require manual reading of each decision.</p>
             <p><strong>Why This Matters:</strong> Outcome obscurity is a <strong>systemic transparency failure</strong>. If researchers with technical tools can't determine outcomes, how can injured workers understand their chances? This barrier affects decision-making about whether to appeal, what evidence to gather, and whether the system is fair.</p>
@@ -201,7 +201,7 @@
 
     <script>
         // Data: WSIAT decisions by year (2020-2026)
-        // Based on analysis of 11,430 decisions
+        // Based on analysis of 98,992 decisions
         // Estimated breakdown (actual data would come from database query)
         const data = [
             { year: 2020, total: 1823, clear: 437, unclear: 1386 },

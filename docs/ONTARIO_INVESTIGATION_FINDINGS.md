@@ -40,7 +40,7 @@ ONWSIAT files use **nested JSON structure** incompatible with classification scr
 ### Impact
 - **Classifier can't access data** (it's nested inside `data` field)
 - Reports "0 new classifications, 0% unknown" (false positive)
-- **11,430 ONWSIAT cases unprocessed**
+- **98,992 ONWSIAT cases unprocessed**
 - Keywords are in `data.keywords` (string), not `keywords_api` (array)
 
 ### Solution Required
@@ -77,14 +77,14 @@ ONWSIAT files use **nested JSON structure** incompatible with classification scr
 **Deprioritize ONWSIB:**
 - Focus classification efforts on **ONWSIAT (appeals tribunal)**
 - ONWSIB outcomes less predictive (internal decisions vary widely)
-- 463 cases vs 11,430 ONWSIAT cases - much smaller dataset
+- 463 cases vs 98,992 ONWSIAT cases - much smaller dataset
 
 ---
 
 ## ❌ Uncollected Ontario Tribunals (CanLII Available)
 
 ### Currently Collected (6 tribunals)
-✅ **onwsiat** - Workplace Safety & Insurance Appeals Tribunal (11,430 cases)  
+✅ **onwsiat** - Workplace Safety & Insurance Appeals Tribunal (98,992 cases)  
 ✅ **onsbt** - Ontario Social Benefits Tribunal (13,798 cases)  
 ✅ **onhrt** - Human Rights Tribunal of Ontario (9,269 cases)  
 ✅ **onlrb** - Ontario Labour Relations Board (10,167 cases)  
@@ -146,7 +146,7 @@ Need to check CanLII for:
 1. Create transformation script: `scripts/transform-onwsiat-structure.js`
 2. Transform all 7 ONWSIAT files to flat structure
 3. Re-run Super Enhanced v2.0 on transformed files
-4. Expected: **8,500+ new classifications** (11,430 cases → 15-25% unknown)
+4. Expected: **8,500+ new classifications** (98,992 cases → 15-25% unknown)
 
 ### Priority 2: Complete Current Classification
 1. Wait for ONLRB processing to finish (~10 min)
@@ -173,7 +173,7 @@ Start **oncfsrb** (Criminal Injuries Compensation Board):
 ### After ONWSIAT Fix
 | Tribunal | Cases | Current Unknown | Projected Unknown | New Classifications |
 |----------|-------|-----------------|-------------------|---------------------|
-| ONWSIAT | 11,430 | 99.2% (11,338) | **20%** (2,286) | **~9,000** |
+| ONWSIAT | 98,992 | 99.2% (11,338) | **20%** (2,286) | **~9,000** |
 | ONSBT | 13,798 | 6.0% (824) | 6.0% | 0 (done) |
 | ONHRT | 9,269 | 16.5% (1,532) | 16.5% | 0 (done) |
 | ONLRB | 10,167 | Processing... | **~30%** | **~900** |

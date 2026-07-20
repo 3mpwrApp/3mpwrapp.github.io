@@ -8,7 +8,7 @@
 
 ### **Post 1: Main Announcement (Thread Starter)**
 ```
-🔬 NEW RESEARCH: We analyzed 11,430 WSIAT decisions (2020-2026)
+🔬 NEW RESEARCH: We analyzed 98,992 WSIAT decisions (2020-2026)
 
 Found: Systematic patterns in how WSIB denies claims
 
@@ -79,7 +79,7 @@ Knee injuries denied as "pre-existing" at 20% rate vs. 13.3% baseline
 
 χ² = 32.7, p < 0.001 (99.9% certain NOT random)
 
-Based on 11,430 tribunal decisions (2020-2026)
+Based on 98,992 tribunal decisions (2020-2026)
 
 Free appeal templates available:
 https://3mpwrapp.ca/research.html
@@ -111,7 +111,7 @@ https://3mpwrapp.ca/research.html
 ```
 Know someone fighting a WSIB denial?
 
-We analyzed 11,430 cases and built FREE tools:
+We analyzed 98,992 cases and built FREE tools:
 
 📚 Injury-specific guides
 📝 22 downloadable appeal templates
@@ -146,7 +146,7 @@ Share your story below 👇
 
 ### **Post 1: Main Announcement**
 ```
-🔬 NEW: We analyzed 11,430 WSIAT tribunal decisions (2020-2026) and found systematic denial patterns
+🔬 NEW: We analyzed 98,992 WSIAT tribunal decisions (2020-2026) and found systematic denial patterns
 
 Built free tools for injured workers:
 📚 Knowledge base
@@ -170,7 +170,7 @@ Baseline across all injuries: 13.3%
 
 χ² = 32.7, p < 0.001 = 99.9% certain this is NOT random
 
-Based on 11,430 cases (2020-2026)
+Based on 98,992 cases (2020-2026)
 
 All research + free appeals templates:
 3mpwrapp.ca/research
@@ -200,7 +200,7 @@ Full analysis with peer-reviewable data:
 
 ### **Post 4: Tools & Empowerment**
 ```
-Fighting a WSIB denial? We built free tools based on 11,430 case analysis:
+Fighting a WSIB denial? We built free tools based on 98,992 case analysis:
 
 ✅ Injury-specific guides (knee, back, shoulder, chronic pain)
 ✅ 22 downloadable appeal templates
@@ -221,7 +221,7 @@ Built by injured workers, for injured workers.
 
 ### **Post 1: Comprehensive Announcement**
 ```
-🔬 NEW RESEARCH: Statistical Analysis of 11,430 WSIAT Decisions (2020-2026)
+🔬 NEW RESEARCH: Statistical Analysis of 98,992 WSIAT Decisions (2020-2026)
 
 KEY FINDINGS:
 📊 43.9% of cases involve "medical evidence" disputes (WSIB's #1 weapon)
@@ -249,7 +249,7 @@ Built BY injured workers, FOR injured workers. Zero paywalls. Forever.
 ```
 🔬 Open Science for Workers' Rights:
 
-We analyzed 11,430 WSIAT tribunal decisions using rigorous statistical methods:
+We analyzed 98,992 WSIAT tribunal decisions using rigorous statistical methods:
 • 95% confidence intervals
 • Chi-square tests
 • P-values & effect sizes
@@ -298,7 +298,7 @@ Share this with anyone fighting WSIB. Solidarity is our weapon.
 ```
 🔬 MAJOR RESEARCH RELEASE: WSIB System Analysis (2020-2026)
 
-Over the past months, our research team analyzed 11,430 WSIAT tribunal decisions to understand how and why injured workers' claims get denied.
+Over the past months, our research team analyzed 98,992 WSIAT tribunal decisions to understand how and why injured workers' claims get denied.
 
 What we found confirms what many of you already suspected: systematic patterns.
 
@@ -352,7 +352,7 @@ Knowledge is power. And this research is for ALL of us.
 
 **Suggested Image/Graphic:**
 [Create a visual showing:
-- "11,430 Cases Analyzed"
+- "98,992 Cases Analyzed"
 - "1.14-2.29M Workers Suppressed"  
 - "13.3% Pre-Existing Denials"
 - "91.8% Outcomes Hidden"
@@ -367,7 +367,7 @@ Knowledge is power. And this research is for ALL of us.
 
 **Slide 1:**
 ```
-🔬 WE ANALYZED 11,430 WSIB CASES
+🔬 WE ANALYZED 98,992 WSIB CASES
 
 Here's what we found (and what you can use)
 
@@ -477,7 +477,7 @@ Built by injured workers, for injured workers.
 
 **Instagram Caption:**
 ```
-🔬 We analyzed 11,430 WSIAT tribunal decisions (2020-2026) and found systematic denial patterns.
+🔬 We analyzed 98,992 WSIAT tribunal decisions (2020-2026) and found systematic denial patterns.
 
 Then we built FREE tools to help you fight back.
 
@@ -508,7 +508,7 @@ Tag someone fighting a WSIB claim 👇
 ```
 📊 NEW RESEARCH: Quantitative Analysis of WSIAT Tribunal Decisions (2020-2026)
 
-I'm pleased to share comprehensive research analyzing 11,430 Workplace Safety and Insurance Appeals Tribunal (WSIAT) decisions from 2020-2026.
+I'm pleased to share comprehensive research analyzing 98,992 Workplace Safety and Insurance Appeals Tribunal (WSIAT) decisions from 2020-2026.
 
 🔬 METHODOLOGY:
 - Quantitative content analysis using Python (pandas, spaCy, NetworkX)
@@ -562,12 +562,12 @@ All research is Creative Commons licensed. Please share, cite, and build upon th
 
 ### **Post Title:**
 ```
-[Ontario] I analyzed 11,430 WSIAT decisions (2020-2026) and documented systematic denial patterns. Here's the data + free appeal tools.
+[Ontario] I analyzed 98,992 WSIAT decisions (2020-2026) and documented systematic denial patterns. Here's the data + free appeal tools.
 ```
 
 ### **Post Body:**
 ```
-**TL;DR:** Analyzed 11,430 WSIAT tribunal decisions using statistical testing. Found systematic patterns in WSIB denials. Built free knowledge base, templates, and visualization. Everything open-source.
+**TL;DR:** Analyzed 98,992 WSIAT tribunal decisions using statistical testing. Found systematic patterns in WSIB denials. Built free knowledge base, templates, and visualization. Everything open-source.
 
 **Research Hub:** https://3mpwrapp.ca/research.html
 
@@ -636,7 +636,7 @@ I'm an injured worker who got tired of hearing "WSIB is broken" without hard evi
 **4. Interactive Keyword Network Visualization**
    - See how denial keywords cluster
    - Filter by injury type, denial tactic, legal test
-   - Based on co-occurrence analysis (11,430 cases)
+   - Based on co-occurrence analysis (98,992 cases)
 
 **5. Research Methodology Documentation**
    - Statistical formulas
@@ -653,7 +653,7 @@ I'm an injured worker who got tired of hearing "WSIB is broken" without hard evi
 3. Cite the statistical evidence in your appeal
 
 **Example citation:**
-> "Statistical analysis of 11,430 WSIAT decisions (2020-2026) reveals that knee injuries are denied as 'pre-existing' at a 20.0% rate compared to the 13.3% baseline (χ² = 32.7, p < 0.001), demonstrating systematic bias beyond case-by-case medical assessment. Source: 3mpwrapp.ca/research"
+> "Statistical analysis of 98,992 WSIAT decisions (2020-2026) reveals that knee injuries are denied as 'pre-existing' at a 20.0% rate compared to the 13.3% baseline (χ² = 32.7, p < 0.001), demonstrating systematic bias beyond case-by-case medical assessment. Source: 3mpwrapp.ca/research"
 
 ---
 
@@ -662,7 +662,7 @@ I'm an injured worker who got tired of hearing "WSIB is broken" without hard evi
 **Data Collection:**
 - Scraped CanLII API: `/en/on/onwsiat/` jurisdiction
 - Date range: 2020-01-01 to 2026-04-15
-- Total: 11,430 decisions
+- Total: 98,992 decisions
 
 **Analysis Tools:**
 - Python 3.x
@@ -717,7 +717,7 @@ Happy to answer methodology questions, clarify findings, or discuss collaboratio
 
 **[0-3s] HOOK:**
 ```
-[Text overlay: "I analyzed 11,430 WSIB cases. Here's what they don't want you to know."]
+[Text overlay: "I analyzed 98,992 WSIB cases. Here's what they don't want you to know."]
 [Voiceover: "I spent months analyzing every WSIB tribunal decision from 2020 to 2026..."]
 ```
 

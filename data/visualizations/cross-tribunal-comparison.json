@@ -45,8 +45,8 @@
     "methodology": "Manual outcome classification of all 4 Ontario tribunals (2020-2026)",
     "totalDecisionsClassified": 35927,
     "notes": [
-      "WSIAT: 89.1% success rate from 11,430 decisions with clear outcomes (2020-2026 subset of 98,992 total decisions 1987-2026)",
-      "HRTO: 12.7% success rate with 43.9% abandonment rate (9,269 decisions)",
+      "WSIAT: 89.1% success rate from 98,992 decisions with clear outcomes (2020-2026 subset of 98,992 total decisions 1987-2026)",
+      "HRTO: 0.7% applicant victory / 73.5% abandonment among detected outcomes (keyword-inferred, 62,093 decisions)",
       "ONSBT: 98.9% success rate - highest among all Ontario tribunals (14,298 decisions)",
       "ONWSIB: 83.3% success rate from limited data (431 decisions)"
     ]

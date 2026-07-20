@@ -8,7 +8,7 @@ permalink: /knowledge-base/concussion-tbi-claims/
 
 > **⚠️ STATISTICAL ALERT:** Concussion and traumatic brain injury (TBI) cases represent **183 cases (1.6%)** of all WSIB tribunal decisions (2020-2026). WSIB systematically denies these claims as "subjective symptoms, no objective evidence" and conflates concussion with "psychological injury" to avoid covering brain injuries.
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ---
 
@@ -16,7 +16,7 @@ permalink: /knowledge-base/concussion-tbi-claims/
 
 ### By The Numbers
 
-From our analysis of 11,430 tribunal decisions (2020-2026):
+From our analysis of 98,992 tribunal decisions (2020-2026):
 
 - **183 concussion/TBI cases reached tribunal** (1.6% of all decisions)
 - **Primary denial:** "Subjective symptoms only, no objective evidence of brain injury"
@@ -458,5 +458,5 @@ From our analysis of 11,430 tribunal decisions (2020-2026):
 **Questions? Need help?**
 📧 empowrapp08162025@gmail.com
 
-*Last updated: April 15, 2026 | Based on 11,430 ONWSIAT decisions (2020-2026)*
+*Last updated: April 15, 2026 | Based on 98,992 ONWSIAT decisions (2020-2026)*
 

@@ -8,7 +8,7 @@ permalink: /knowledge-base/psychotraumatic-disability/
 
 > **⚠️ STATISTICAL ALERT:** Mental health injuries (psychotraumatic disability, PTSD, anxiety, depression) represent **611 cases (5.3%)** of all WSIB tribunal decisions (2020-2026). Analysis reveals systematic "conflation bias": WSIB denies mental health claims by claiming they're "really chronic pain" (107 documented cases of this tactic).
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ## What is Psychotraumatic Disability?
 

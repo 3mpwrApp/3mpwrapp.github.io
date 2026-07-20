@@ -14,7 +14,7 @@ tags: [shoulder-injury, rotator-cuff, wsiat-appeal, template, workers-comp]
 
 ## 📊 Evidence-Based Template
 
-This template is based on comprehensive analysis of **5,295 shoulder injury WSIAT appeals** from the full dataset of 11,430 classified decisions (2020-2026). Shoulder injuries represent **5.4% of all WSIAT appeals**, making them the **#2 most common injury type** after back/spine injuries.
+This template is based on comprehensive analysis of **5,295 shoulder injury WSIAT appeals** from the full dataset of 98,992 classified decisions (2020-2026). Shoulder injuries represent **5.4% of all WSIAT appeals**, making them the **#2 most common injury type** after back/spine injuries.
 
 **Key Finding:** Of the 393 WSIAT decisions with clear outcomes, **89.1% ruled in favor of workers** (350 wins vs 43 denials). This template incorporates winning strategies from successful shoulder injury appeals.
 
@@ -547,7 +547,7 @@ I swear this statement is true to the best of my knowledge.
 
 ### Evidence-Based Success Rates:
 
-From comprehensive analysis of **11,430 WSIAT decisions (2020-2026)**:
+From comprehensive analysis of **98,992 WSIAT decisions (2020-2026)**:
 
 - **89.1% of decisions with clear outcomes ruled in favor of workers** (350 wins vs 43 denials)
 - Shoulder injuries represented **5.4% of all appeals** (5,295 cases)
@@ -632,7 +632,7 @@ Online: www.wsiat.ca
 **Disclaimer:** This template is for educational purposes and does not constitute legal advice. Consult with a community legal clinic or qualified legal professional for advice specific to your situation. Statistics are based on analysis of publicly available WSIAT decisions and represent historical outcomes, not guaranteed results.
 
 **Template Version:** 1.0 (May 2026)  
-**Data Source:** 5,295 shoulder injury cases from 11,430 classified WSIAT decisions (2020-2026)  
+**Data Source:** 5,295 shoulder injury cases from 98,992 classified WSIAT decisions (2020-2026)  
 **Success Rate:** 89.1% of decisions with clear outcomes ruled in favor of workers  
 **License:** Creative Commons BY-NC-SA 4.0 (free for personal use, attribution required)
 

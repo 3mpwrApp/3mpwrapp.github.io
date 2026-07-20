@@ -20,7 +20,7 @@ const SITE_ROOT = path.join(__dirname, '..');
 
 // Correct tribunal statistics
 const CORRECT_STATS = {
-  WSIAT: { winRate: '89.1%', total: '11,430', source: 'CanLII 2020-2026' },
+  WSIAT: { winRate: '89.1%', total: '98,992', source: 'CanLII 2020-2026' },
   ONWSIB: { winRate: '83.3%', total: '431', source: 'CanLII 2020-2026' },
   ONSBT: { winRate: '98.9%', total: '14,298', source: 'CanLII 2020-2026' },
   HRTO: { winRate: '12.7%', abandonment: '43.9%', total: '9,268', source: 'CanLII 2020-2026' }
@@ -341,7 +341,7 @@ function generateReport() {
 
 | Tribunal | Win Rate | Total Decisions | Source |
 |----------|----------|----------------|--------|
-| WSIAT | **89.1%** | 11,430 | CanLII 2020-2026 |
+| WSIAT | **89.1%** | 98,992 | CanLII 2020-2026 |
 | ONWSIB | **83.3%** | 431 | CanLII 2020-2026 |
 | ONSBT | **98.9%** | 14,298 | CanLII 2020-2026 |
 | HRTO | **12.7%** | 9,268 | CanLII 2020-2026 |

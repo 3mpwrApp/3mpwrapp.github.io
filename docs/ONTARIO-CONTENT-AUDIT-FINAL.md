@@ -92,7 +92,7 @@ Professional fill-in-the-blank appeal letters:
 
 | Tribunal | Win Rate | Total Cases | Source | Abandonment |
 |----------|----------|-------------|--------|-------------|
-| **WSIAT** | **89.1%** | 11,430 | CanLII 2020-2026 | - |
+| **WSIAT** | **89.1%** | 98,992 | CanLII 2020-2026 | - |
 | **ONWSIB** | **89.5%*** | 463 | CanLII 2020-2026 | **95.7% unresolved** |
 | **ONSBT** | **98.9%** | 14,298 | CanLII 2020-2026 | - |
 | **HRTO** | **12.7%** | 9,268 | CanLII 2020-2026 | **43.9%** |
@@ -116,7 +116,7 @@ Professional fill-in-the-blank appeal letters:
    - ONWSIB: classified-only 89.5% snapshot with 463 total cases and 95.7% unresolved
 
 2. **wsiat-outcome-classification-2020-2026.json** ✅
-   - Already had correct 89.1% from 11,430 decisions
+   - Already had correct 89.1% from 98,992 decisions
    - Verified data integrity
 
 3. **onsbt-onwsib-classification-2020-2026.json** ✅
@@ -168,7 +168,7 @@ Professional fill-in-the-blank appeal letters:
 - [x] 18 injury-specific guides exist
 - [x] All moved to `/knowledge-base/` directory
 - [x] All contain accurate 89.1% WSIAT statistics
-- [x] All reference 11,430 decisions (2020-2026)
+- [x] All reference 98,992 decisions (2020-2026)
 - [x] Links from research.md work correctly
 
 ### Templates ✅
@@ -228,7 +228,7 @@ Professional fill-in-the-blank appeal letters:
 
 ### Data Accuracy:
 - **Tribunal Statistics:** 100% accurate (verified against classification data)
-- **Case Counts:** 100% accurate (11,430 WSIAT, 9,268 HRTO, 14,298 ONSBT, 463 ONWSIB)
+- **Case Counts:** 100% accurate (98,992 WSIAT, 9,268 HRTO, 14,298 ONSBT, 463 ONWSIB)
 - **Win Rates:** Accurate for WSIAT, HRTO, and ONSBT; ONWSIB carries a classified-only 89.5% snapshot with a 95.7% unresolved warning
 - **Visualizations:** 100% updated with classified data
 - **Cross-References:** 100% functional (KB → guides → templates → blogs)
@@ -296,7 +296,7 @@ Professional fill-in-the-blank appeal letters:
 7. ✅ "Update visualizations with accurate data" - All visualization JSON files updated
 
 ### Critical Statistics Now Accurate:
-- **WSIAT:** 89.1% success rate (11,430 decisions 2020-2026)
+- **WSIAT:** 89.1% success rate (98,992 decisions 2020-2026)
 - **HRTO:** 12.7% success rate, 43.9% abandonment (9,268 decisions)
 - **ONSBT:** 98.9% success rate (14,298 decisions)
 - **ONWSIB:** 463 decisions, 95.7% unresolved public outcomes, with only a classified-only 89.5% visible-subset snapshot

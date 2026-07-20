@@ -485,7 +485,7 @@ That's what we're building. That's the mission.
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html)** - The results: 11,430 cases analyzed, knowledge base articles, appeal templates, comprehensive guides (complete transparency on process, failures, and pivots)
+📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.ca/research.html)** - The results: 98,992 cases analyzed, knowledge base articles, appeal templates, comprehensive guides (complete transparency on process, failures, and pivots)
 
 📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.ca/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - The presentation that validated this approach with Thunder Bay's injured worker community
 

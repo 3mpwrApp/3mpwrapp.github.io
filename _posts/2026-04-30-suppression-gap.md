@@ -84,13 +84,13 @@ If the WSIAT success rate (73.5%) applied to all non-appealed denials, approxima
 </div>
 
 Our analysis of [98,992 WSIAT decisions](https://www.wsiat.ca/en/home/opendata_decisions.html) (1987-2026) shows:
-- **11,430 decisions** in CanLII subset (2020-2026)
+- **98,992 decisions** in CanLII subset (2020-2026)
 - **649 classified decisions** (5.7% of subset)
 - **438 granted** (73.5% success rate)
 - **158 denied** (26.5%)
 - **10,781 unresolved** (94.3% pending/withdrawn)
 
-**Comparison context:** Human Rights Tribunal of Ontario (HRTO) has a 12.7% success rate. WSIAT's 73.5% rate is substantially higher.
+**Comparison context:** Human Rights Tribunal of Ontario (HRTO) shows 0.7% applicant victory / 73.5% abandonment among *detected* outcomes (keyword-inferred, not a merits census). WSIAT's 73.5% rate is from WSIAT's own 649 classified decisions — the two are not directly comparable (different tribunals, different measured outcomes).
 
 ---
 
@@ -286,7 +286,7 @@ Success Rate = Granted ÷ (Granted + Denied) [from classified decisions only]
 ```
 
 **Success rate methodology:**
-- Analyzed 11,430 WSIAT decisions (2020-2026 CanLII subset)
+- Analyzed 98,992 WSIAT decisions (2020-2026 CanLII subset)
 - 649 classified decisions (5.7% of subset)
 - 438 granted, 158 denied, 30 deferred
 - Success rate: 438 ÷ 596 = 73.5%

@@ -63,7 +63,7 @@ const dataQuality = {
     {
       check: 'Temporal coverage',
       status: '✅ PASS',
-      evidence: '6 full years (2020-2026), 11,430 cases',
+      evidence: '6 full years (2020-2026), 98,992 cases',
       confidence: 'HIGH'
     },
     {
@@ -110,7 +110,7 @@ const statisticalRigor = {
     {
       check: 'Sample size adequacy',
       status: '✅ PASS',
-      evidence: '11,430 cases (large n, adequate power)',
+      evidence: '98,992 cases (large n, adequate power)',
       confidence: 'HIGH'
     },
     {

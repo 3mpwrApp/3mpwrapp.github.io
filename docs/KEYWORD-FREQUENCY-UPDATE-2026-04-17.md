@@ -157,14 +157,14 @@ All content across blogs, knowledge base, guides, templates, and visualization h
 **Features:**
 - Loads all 7 yearly WSIAT files (2020-2026-ultra-slow.json)
 - Analyzes CanLII `keywords` field (3-7 summary phrases per case)
-- Counts phrase frequencies across 11,430 cases
+- Counts phrase frequencies across 98,992 cases
 - Searches for specific important terms
 - Calculates co-occurrence patterns with statistical lift
 - Outputs JSON with 95% confidence intervals
 
 **Execution Results:**
 ```
-✓ Total cases loaded: 11,430
+✓ Total cases loaded: 98,992
 ✓ Found 9,633 unique keyword phrases
 ✓ Analysis complete!
 📄 Output saved to: data\analysis\keyword-frequency-analysis.json
@@ -237,7 +237,7 @@ All content across blogs, knowledge base, guides, templates, and visualization h
 
 ### Why Full-Text Analysis Not Performed
 - CanLII has CAPTCHA protection for web scraping
-- Would require manual solving for 11,430 cases
+- Would require manual solving for 98,992 cases
 - Playwright automation abandoned due to rate limits
 - Keyword-based analysis provides defensible minimum estimates
 
@@ -275,4 +275,4 @@ All content across blogs, knowledge base, guides, templates, and visualization h
 
 **Date Completed:** April 17, 2026
 **Verified By:** Statistical analysis via `analyze-keyword-frequency.mjs`
-**Source Data:** 11,430 WSIAT decisions (CanLII API, 2020-2026)
+**Source Data:** 98,992 WSIAT decisions (CanLII API, 2020-2026)

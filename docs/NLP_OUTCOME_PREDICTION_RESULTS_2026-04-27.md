@@ -80,7 +80,7 @@ All predictions: **100% "Granted"** with **100% low confidence (<60%)**
 - onwsiat-2025-ultra-slow.json: 1,522 predicted → All "Granted" (LOW confidence)
 - onwsiat-2026-ultra-slow.json: 146 predicted → All "Granted" (LOW confidence)
 
-**WSIAT Ultra-Slow Total:** 11,430 predictions (ALL low confidence) ⚠️
+**WSIAT Ultra-Slow Total:** 98,992 predictions (ALL low confidence) ⚠️
 
 #### WSIB Files (First-Level Appeals)
 All predictions: **100% "Granted"** with **100% low confidence**
@@ -108,7 +108,7 @@ All predictions: **100% "Granted"** with **100% low confidence**
 
 **Evidence:**
 - Historical WSIAT file (4,006 predictions) achieved 99.9% high confidence with 86% Allowed / 14% Dismissed distribution
-- Ultra-slow files (11,430 predictions) ALL defaulted to "Granted" with low confidence
+- Ultra-slow files (98,992 predictions) ALL defaulted to "Granted" with low confidence
 - This suggests ultra-slow files have even sparser metadata than historical file
 
 ---
@@ -129,7 +129,7 @@ All predictions: **100% "Granted"** with **100% low confidence**
 
 ### SHORT-TERM (Next Week)
 3. **Hybrid Approach for WSIAT**
-   - Run cross-reference scraper for 11,430 ultra-slow decisions (9.5 hours)
+   - Run cross-reference scraper for 98,992 ultra-slow decisions (9.5 hours)
    - Replace low-confidence NLP predictions with official database outcomes
    - Expected improvement: 0% → 80-90% accuracy
 
@@ -164,7 +164,7 @@ All predictions: **100% "Granted"** with **100% low confidence**
 
 ### After Hybrid Approach (Next Week)
 - **High-Confidence Predictions:** 25,213 (72%)
-- **Cross-Referenced WSIAT:** 9,144-10,287 (80-90% of 11,430)
+- **Cross-Referenced WSIAT:** 9,144-10,287 (80-90% of 98,992)
 - **Total Known Outcomes:** ~34,500 (99% of database!) 🎯
 
 ---

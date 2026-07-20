@@ -8,7 +8,7 @@
 ## Executive Summary
 
 We have **34,928 tribunal decisions** from CanLII. We've now discovered **official data sources** that can:
-1. **8.3x expand WSIAT coverage** (11,430 → 95,298 decisions)
+1. **8.3x expand WSIAT coverage** (98,992 → 95,298 decisions)
 2. **Validate existing classifications** using official KPI reports
 3. **Calculate appeal rates** using social assistance caseload data
 4. **Add workplace injury context** using AWCBC/WSIB statistics
@@ -95,10 +95,10 @@ We have **34,928 tribunal decisions** from CanLII. We've now discovered **offici
 
 ---
 
-### 1.3 WSIAT (11,430 Decisions in CanLII)
+### 1.3 WSIAT (98,992 Decisions in CanLII)
 
 **Official Data Available:**
-- ✅ **WSIAT Official Search Database**: 95,298 decisions (vs. 11,430 in CanLII)
+- ✅ **WSIAT Official Search Database**: 95,298 decisions (vs. 98,992 in CanLII)
 - ✅ **AWCBC Statistics**: 71,781 lost-time claims (2024), 320 fatalities
 - ⚠️ **WSIB Summarized Claim Data**: 2002-2025 aggregated statistics (check if publicly downloadable)
 - 🚫 **WSIB Individual Claim Data**: RESTRICTED (privacy exemption)
@@ -107,7 +107,7 @@ We have **34,928 tribunal decisions** from CanLII. We've now discovered **offici
 **Validation Pathways:**
 
 #### A. Massive Coverage Expansion
-- **Current**: 11,430 decisions (5.7% classified = 649 with known outcomes)
+- **Current**: 98,992 decisions (5.7% classified = 649 with known outcomes)
 - **New source**: 95,298 decisions from Tribunals Ontario official search
 - **Action**: Scrape WSIAT official database → Compare decision numbers → Identify **83,868 missing decisions**
 - **Classification opportunity**: Re-run outcome detection on 83,868 new decisions
@@ -136,7 +136,7 @@ We have **34,928 tribunal decisions** from CanLII. We've now discovered **offici
   - Example: Keyword "dismissed" → High confidence outcome = "Denied"
 - **Expected improvement**: Classification rate from 5.7% → **25%+** using official metadata
 
-**Immediate Win:** Test WSIAT official search scraper on single year (2020) → Verify metadata quality → If successful, queue scraping for 2020-2026 (7 years) → Extract decision numbers + keywords → Match against our 11,430 decisions → Identify missing 83,868 decisions.
+**Immediate Win:** Test WSIAT official search scraper on single year (2020) → Verify metadata quality → If successful, queue scraping for 2020-2026 (7 years) → Extract decision numbers + keywords → Match against our 98,992 decisions → Identify missing 83,868 decisions.
 
 ---
 
@@ -454,7 +454,7 @@ ONSBT Appeals (Post-COVID): Jan 2023 - Jun 2025 avg = 210/month
 - **Source**: https://www.wsiat.ca/en/decisionSearch/decisionSearch.asp
 - **Time**: Test (1 hour) + Full scrape (2-3 days for 95,298 decisions)
 - **Impact**:
-  - Expand from 11,430 → **95,298 decisions** (+8.3x coverage)
+  - Expand from 98,992 → **95,298 decisions** (+8.3x coverage)
   - Add official keywords, summaries, neutral citations
   - Boost classification rate from 5.7% → **25%+** (using official metadata)
   - Identify 83,868 missing decisions from CanLII
@@ -872,7 +872,7 @@ ONSBT Appeals (Post-COVID): Jan 2023 - Jun 2025 avg = 210/month
 ## 8. SUCCESS METRICS
 
 ### Data Quality Metrics
-- **Coverage**: WSIAT 11,430 → 95,298 decisions (**+733%**)
+- **Coverage**: WSIAT 98,992 → 95,298 decisions (**+733%**)
 - **Classification Rate**: 
   - WSIAT: 5.7% → **25%+** (using official metadata)
   - HRTO: 49.8% → **65%+** (using decision type filtering)
@@ -906,7 +906,7 @@ ONSBT Appeals (Post-COVID): Jan 2023 - Jun 2025 avg = 210/month
   - Respectful scraping (1-2 second delays, off-peak hours)
   - User-agent identification (clearly state purpose: "3mpwr Public Interest Data Collection")
   - Fallback: Manual data entry for subset, FOI request for bulk data
-  - Alternative: Focus on enriching existing 11,430 decisions with official metadata
+  - Alternative: Focus on enriching existing 98,992 decisions with official metadata
 
 ### Risk #2: Data Access Requests Denied
 - **Probability**: Medium-High (privacy concerns, bureaucratic delays)
@@ -948,7 +948,7 @@ ONSBT Appeals (Post-COVID): Jan 2023 - Jun 2025 avg = 210/month
 ### What We've Achieved
 We've transformed a **35,000-decision CanLII dataset** into a **strategic roadmap for a comprehensive workers' rights intelligence platform**. By integrating official data sources (AWCBC, WSIB, ONSBT, HRTO, WSIAT), we can now:
 
-1. **8.3x expand coverage** (11,430 → 95,298 WSIAT decisions)
+1. **8.3x expand coverage** (98,992 → 95,298 WSIAT decisions)
 2. **Validate classifications** (boost HRTO from 49.8% → 65%+ accuracy)
 3. **Calculate appeal rates** (7% of workplace injuries reach WSIAT)
 4. **Map geographic hotspots** (London CMA = highest ONSBT appeal rate)

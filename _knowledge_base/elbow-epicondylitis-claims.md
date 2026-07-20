@@ -8,7 +8,7 @@ permalink: /knowledge-base/elbow-epicondylitis-claims/
 
 > **⚠️ STATISTICAL ALERT:** Elbow injuries (lateral epicondylitis/tennis elbow, medial epicondylitis/golfer's elbow, olecranon bursitis, biceps tendon tears) represent **219 cases (1.9%)** of all WSIB tribunal decisions (2020-2026). WSIB systematically denies these claims as "degenerative tendinopathy, gradual onset, not workplace accidents."
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ---
 
@@ -16,7 +16,7 @@ permalink: /knowledge-base/elbow-epicondylitis-claims/
 
 ### By The Numbers
 
-From our analysis of 11,430 tribunal decisions (2020-2026):
+From our analysis of 98,992 tribunal decisions (2020-2026):
 
 - **219 elbow injury cases reached tribunal** (1.9% of all decisions)
 - **Primary denial:** "Degenerative tendinopathy, not acute injury"
@@ -499,5 +499,5 @@ Document repetitive motions:
 **Questions? Need help?**
 📧 empowrapp08162025@gmail.com
 
-*Last updated: April 15, 2026 | Based on 11,430 ONWSIAT decisions (2020-2026)*
+*Last updated: April 15, 2026 | Based on 98,992 ONWSIAT decisions (2020-2026)*
 

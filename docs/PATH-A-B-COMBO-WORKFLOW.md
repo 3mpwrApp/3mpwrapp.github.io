@@ -1,9 +1,9 @@
 # Path A+B Combo Workflow
 ## FREE Classification + CanLII Scraper
 
-**Goal:** Classify 11,430 WSIAT decisions without spending $742 on OpenAI API
+**Goal:** Classify 98,992 WSIAT decisions without spending $742 on OpenAI API
 
-**Current Progress:** 50/11,430 (0.4%) - 228 batches remaining
+**Current Progress:** 50/98,992 (0.4%) - 228 batches remaining
 
 ---
 
@@ -48,7 +48,7 @@
 ## 🚀 Path B: CanLII Scraper (Better Accuracy)
 
 **Why:** Get full decision text for 70-80% high confidence classification  
-**Time:** ~3 hours to scrape all 11,430 decisions (1 req/sec rate limit)  
+**Time:** ~3 hours to scrape all 98,992 decisions (1 req/sec rate limit)  
 **Cost:** $0 (CanLII API is free)  
 **Benefit:** Can re-classify with much higher accuracy
 
@@ -88,7 +88,7 @@
   
 - **Background:** Run CanLII scraper overnight
   - Let it run for 3 hours unattended
-  - 11,430 decisions fully scraped
+  - 98,992 decisions fully scraped
 
 ### Week 3-4: Continue + Re-classify
 - **Manual:** Continue classifying remaining batches (198 left)
@@ -101,8 +101,8 @@
   - 70-80% will upgrade to high confidence
 
 ### Result:
-- ✅ 11,430 decisions classified (keyword-based, 60% low confidence)
-- ✅ 11,430 full text files scraped (enable future high-accuracy)
+- ✅ 98,992 decisions classified (keyword-based, 60% low confidence)
+- ✅ 98,992 full text files scraped (enable future high-accuracy)
 - ✅ Can update statistics when ready
 - ✅ Total cost: $0 (vs $742 OpenAI API)
 
@@ -112,7 +112,7 @@
 
 | Metric | Value |
 |--------|-------|
-| Total Decisions | 11,430 |
+| Total Decisions | 98,992 |
 | Classified (Batch 1) | 50 (0.4%) |
 | Remaining Batches | 228 |
 | Batch 2 Status | ✅ READY |
@@ -205,7 +205,7 @@ After classifying all decisions, compare stats:
 - Visualization updates: Replace "Estimated" with "Classified"
 
 Success metrics:
-- 11,430 decisions classified ✓
+- 98,992 decisions classified ✓
 - Full text archived for future analysis ✓
 - $0 spent (vs $742 OpenAI) ✓
 - Research credibility maintained ✓

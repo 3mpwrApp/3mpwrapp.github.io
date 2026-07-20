@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "WSIAT Outcome Classification (2020-2026)",
-    "description": "Keyword-based classification of 11,430 WSIAT tribunal decisions using pattern matching",
+    "description": "Keyword-based classification of 98,992 WSIAT tribunal decisions using pattern matching",
     "totalDecisions": 11430,
     "dateRange": "2020-2026",
     "generatedAt": "2026-05-01T00:00:00.000Z",

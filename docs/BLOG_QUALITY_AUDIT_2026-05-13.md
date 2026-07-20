@@ -24,13 +24,13 @@
 **Strengths:**
 - ✅ Data verified stamp: "✅ DATA VERIFIED: April 17, 2026"
 - ✅ Comprehensive disclaimer about CanLII API limitations
-- ✅ Professional advocacy voice ("we analyzed 11,430 decisions hoping to help...")
+- ✅ Professional advocacy voice ("we analyzed 98,992 decisions hoping to help...")
 - ✅ Clear methodology disclosure
 - ✅ Updated April 29 with full WSIAT dataset context (98,992 decisions)
 - ✅ Citations to source data files
 
 **Voice Sample:**
-> "We analyzed 11,430 WSIAT decisions hoping to help injured workers understand their chances. What we found: 77% of decisions are so unclear even *we* can't tell who won."
+> "We analyzed 98,992 WSIAT decisions hoping to help injured workers understand their chances. What we found: 77% of decisions are so unclear even *we* can't tell who won."
 
 **Recommendation:** NO CHANGES NEEDED ✓
 
@@ -63,7 +63,7 @@
 - ✅ Transparent about limitations ("conservative estimate")
 
 **Voice Sample:**
-> "Our analysis of **11,430 publicly available WSIAT tribunal decisions** found patterns consistent with several reform areas addressed in Bill 86..."
+> "Our analysis of **98,992 publicly available WSIAT tribunal decisions** found patterns consistent with several reform areas addressed in Bill 86..."
 
 **Recommendation:** NO CHANGES NEEDED ✓
 
@@ -195,7 +195,7 @@
 - ✅ BC investigation context clear
 
 **Recommendations:**
-1. Add case count callout box: "From 11,430 WSIAT decisions: 71 documented post-claim terminations (0.62%)"
+1. Add case count callout box: "From 98,992 WSIAT decisions: 71 documented post-claim terminations (0.62%)"
 2. Add 2-3 exemplar WSIAT case citations with quotes
 3. Link to IWH claim suppression research (15-50% unreported)
 
@@ -221,7 +221,7 @@
 
 **Recommendations:**
 1. Add opening paragraph: "As injured workers analyzing Bill 105, we asked: Does this help us?"
-2. Link each provision to tribunal data (e.g., "From our analysis of 11,430 WSIAT cases, we found X workers affected by age 65 cutoff")
+2. Link each provision to tribunal data (e.g., "From our analysis of 98,992 WSIAT cases, we found X workers affected by age 65 cutoff")
 3. Add call-out box: "What This Means for You" sections
 
 **Priority:** MEDIUM
@@ -247,9 +247,9 @@
 **Priority:** HIGH — This post needs voice/tone revision
 
 **Example Voice Transformation:**
-❌ Before: "FACTS: 11,430 tribunal decisions analyzed, and in CanLII keyword/API data 91.8% do not include explicit outcome-labeled keywords"
+❌ Before: "FACTS: 98,992 tribunal decisions analyzed, and in CanLII keyword/API data 91.8% do not include explicit outcome-labeled keywords"
 
-✅ After: "We analyzed 11,430 tribunal decisions hoping to measure success rates. What we found: 91.8% of decisions in CanLII's public database don't include clear outcome language. This isn't a data problem — it's a transparency problem."
+✅ After: "We analyzed 98,992 tribunal decisions hoping to measure success rates. What we found: 91.8% of decisions in CanLII's public database don't include clear outcome language. This isn't a data problem — it's a transparency problem."
 
 ---
 
@@ -278,7 +278,7 @@
 > "Seven years of ONSBT decisions reveal structural barriers to disability benefits that disproportionately affect people with cognitive disabilities, mental health conditions, precarious housing, and racialized communities—barriers embedded not in case law, but in the appellate process itself."
 
 **From Hidden Language of Denial:**
-> "We analyzed 11,430 WSIAT decisions hoping to help injured workers understand their chances. What we found: 77% of decisions are so unclear even *we* can't tell who won."
+> "We analyzed 98,992 WSIAT decisions hoping to help injured workers understand their chances. What we found: 77% of decisions are so unclear even *we* can't tell who won."
 
 **From ONSBT Outcome Classification:**
 > "The Math Doesn't Work: ODSP recipients receive $1,368/month but need $2,200+ for rent alone."
@@ -308,7 +308,7 @@
 
 ### Current Citation Standards (What's Working)
 
-✅ **Data Source Citations:** Almost all posts cite "11,430 WSIAT decisions (2020-2026)" or specific tribunal datasets  
+✅ **Data Source Citations:** Almost all posts cite "98,992 WSIAT decisions (2020-2026)" or specific tribunal datasets  
 ✅ **Methodology Disclosure:** Posts consistently explain keyword analysis limitations  
 ✅ **Research Links:** IWH, Public Health Ontario, CanLII sources linked where used  
 ✅ **Update Stamps:** Many posts show "Updated April 29" with new dataset context  
@@ -327,7 +327,7 @@ Current (60% citation):
 > "Pre-existing conditions appear in 13.31% of decisions"
 
 Target (90% citation):
-> "Pre-existing conditions appear in 1,522 of 11,430 decisions (13.31%).  
+> "Pre-existing conditions appear in 1,522 of 98,992 decisions (13.31%).  
 > *Source: CanLII WSIAT keyword analysis, pattern matching via `analyze-keyword-frequency.mjs`, April 2026*  
 > *See: Decision No. 1067/25 (2026 ONWSIAT 88) for typical 'pre-existing degenerative condition' denial pattern*  
 > [View decision →](https://canlii.ca/t/kk30q)"
@@ -340,7 +340,7 @@ Target (90% citation):
 
 | Claim | Verified | Source |
 |-------|----------|--------|
-| 11,430 WSIAT decisions | ✅ YES | Yearly files sum to 11,430 |
+| 98,992 WSIAT decisions | ✅ YES | Yearly files sum to 98,992 |
 | 13,798 ONSBT decisions | ✅ YES | File count confirmed (was 14,298 - now corrected) |
 | 4,232 WSIAT historical | ✅ YES | Post-fix count accurate |
 | 463 ONWSIB decisions | ✅ YES | CanLII subset |

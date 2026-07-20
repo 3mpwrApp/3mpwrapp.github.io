@@ -180,7 +180,7 @@ Data Sources Distinguished:
 
 **Status**: ⏳ REVIEWED - POTENTIAL MINOR UPDATE
 
-**Current Content**: Statistical analysis of 11,430 tribunal decisions revealing manipulation patterns. Focuses on denial patterns and statistical anomalies.
+**Current Content**: Statistical analysis of 98,992 tribunal decisions revealing manipulation patterns. Focuses on denial patterns and statistical anomalies.
 
 **Recommendation**: Could add reference to official WSIAT success rate as positive context showing appeals ARE worth pursuing, but current content doesn't conflict with official data.
 

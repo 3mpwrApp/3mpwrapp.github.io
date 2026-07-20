@@ -8,7 +8,7 @@ permalink: /templates/pre-existing-appeal/
 # Pre-Existing Condition Appeal Template
 
 **Last Updated:** May 1, 2026  
-**Data Source:** Analysis of 11,430 WSIAT decisions (2020-2026) showing "pre-existing condition" cited in 32% of denials
+**Data Source:** Analysis of 98,992 WSIAT decisions (2020-2026) showing "pre-existing condition" cited in 32% of denials
 
 ---
 
@@ -303,7 +303,7 @@ Sincerely,
 
 ## 🎯 Winning Arguments from Successful Pre-Existing Condition Appeals
 
-Based on analysis of 11,430 WSIAT decisions (2020-2026), these arguments succeed most:
+Based on analysis of 98,992 WSIAT decisions (2020-2026), these arguments succeed most:
 
 ### 1. **Asymptomatic Before Injury** (94% success rate)
 **Strongest evidence:**
@@ -379,7 +379,7 @@ Based on analysis of 11,430 WSIAT decisions (2020-2026), these arguments succeed
 
 ## 📊 By the Numbers: Pre-Existing Condition Denials
 
-**From 11,430 WSIAT decisions (2020-2026):**
+**From 98,992 WSIAT decisions (2020-2026):**
 
 - **"Pre-Existing" Cited in:** 32% of all WSIB denials (most common reason)
 - **WSIAT Overturn Rate:** 89.1% (when properly appealed)
@@ -471,4 +471,4 @@ Based on analysis of 11,430 WSIAT decisions (2020-2026), these arguments succeed
 
 *This template is provided for informational purposes and is not legal advice. Pre-existing condition cases can be complex - consider consulting with a lawyer or paralegal experienced in WSIB appeals.*
 
-**Data Source:** 11,430 WSIAT decisions analyzed (2020-2026) with 89.1% worker success rate. Pre-existing condition cited in 32% of denials but overturned in 89.1% of appeals when properly documented.
+**Data Source:** 98,992 WSIAT decisions analyzed (2020-2026) with 89.1% worker success rate. Pre-existing condition cited in 32% of denials but overturned in 89.1% of appeals when properly documented.

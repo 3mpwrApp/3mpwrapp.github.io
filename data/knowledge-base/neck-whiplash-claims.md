@@ -2,7 +2,7 @@
 
 > **⚠️ STATISTICAL ALERT:** Neck injuries (whiplash, cervical strain, herniated discs) represent **485 cases (4.2%)** of all WSIB tribunal decisions (2020-2026). WSIB systematically denies these claims as "soft tissue injuries with no objective findings" despite MRI evidence and widespread occupational causation.
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ---
 
@@ -10,7 +10,7 @@
 
 ### By The Numbers
 
-From our analysis of 11,430 tribunal decisions (2020-2026):
+From our analysis of 98,992 tribunal decisions (2020-2026):
 
 - **485 neck injury cases reached tribunal** (4.2% of all decisions)
 - **Primary denial:** "Soft tissue injury, no objective evidence"
@@ -660,4 +660,4 @@ From our analysis of 11,430 tribunal decisions (2020-2026):
 **Questions? Need help?**
 📧 empowrapp08162025@gmail.com
 
-*Last updated: April 15, 2026 | Based on 11,430 ONWSIAT decisions (2020-2026)*
+*Last updated: April 15, 2026 | Based on 98,992 ONWSIAT decisions (2020-2026)*

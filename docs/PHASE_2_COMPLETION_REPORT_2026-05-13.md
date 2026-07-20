@@ -76,15 +76,15 @@ Phase 2 (Citation Infrastructure Expansion + Blog Voice Revisions) is now COMPLE
 **What We Changed:**
 
 **Before (Defensive Voice):**
-- Title: "WSIB/WSIAT Transparency Gap: **FACTS:** 11,430 tribunal decisions... **EXTRAPOLATION:** Institute for Work & Health... **CONFIDENCE:** Ranges show uncertainty..."
+- Title: "WSIB/WSIAT Transparency Gap: **FACTS:** 98,992 tribunal decisions... **EXTRAPOLATION:** Institute for Work & Health... **CONFIDENCE:** Ranges show uncertainty..."
 - TL;DR: "**PROVABLE FACTS:** ... **EXTRAPOLATION FROM PEER-REVIEWED RESEARCH:** ... **CONFIDENCE INTERVALS:** ... **WHAT'S PROVABLE:** ... **WHAT'S EXTRAPOLATED:** ..."
-- Data Limitations: "⚠️ Data Limitations: ... We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting)... To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually."
+- Data Limitations: "⚠️ Data Limitations: ... We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting)... To get 100% accurate outcomes, we'd need to manually read each of 98,992 cases individually."
 - Stats Guide: "📊 = MEASURED: ... 🧮 = ESTIMATED: ..."
 
 **After (Empowering Voice):**
 - Title: "**Ontario's Workers' Compensation Black Box: Where 1.14-2.29 Million Injured Workers Disappear**"
 - Intro: "**Why This Matters:** Every year, tens of thousands of Ontario workers get hurt at work. Most never file claims. Of those who do, many get denied. Of those who appeal, most give up before tribunal..."
-- Data Transparency: "**What we analyzed:** ... **What we estimate:** ... **Data transparency:** Tribunal case counts (11,430) are directly measured. The 91.8% outcome obscurity rate is measured from CanLII metadata. The 1.14-2.29 million estimate applies peer-reviewed research to Ontario's population. We explain our methodology fully below, including alternative estimates and limitations."
+- Data Transparency: "**What we analyzed:** ... **What we estimate:** ... **Data transparency:** Tribunal case counts (98,992) are directly measured. The 91.8% outcome obscurity rate is measured from CanLII metadata. The 1.14-2.29 million estimate applies peer-reviewed research to Ontario's population. We explain our methodology fully below, including alternative estimates and limitations."
 - Stats Guide: "**Direct measurements** — Numbers we counted from tribunal decisions... **Research-based estimates** — Numbers we calculated by applying peer-reviewed research to Ontario's population..."
 
 **Key Voice Improvements:**
@@ -134,11 +134,11 @@ Phase 2 (Citation Infrastructure Expansion + Blog Voice Revisions) is now COMPLE
 ### Example 1: Shoulder Guide
 
 **Before:**
-> "From our analysis of 11,430 ONWSIAT decisions (2020-2026):
+> "From our analysis of 98,992 ONWSIAT decisions (2020-2026):
 > - 1,391 shoulder injury cases reached tribunal (12.2% of all decisions)"
 
 **After:**
-> "From our analysis of 11,430 ONWSIAT decisions (2020-2026):
+> "From our analysis of 98,992 ONWSIAT decisions (2020-2026):
 > - 1,391 shoulder injury cases reached tribunal (12.2% of all decisions)
 > 
 > **The Truth:**
@@ -153,7 +153,7 @@ Phase 2 (Citation Infrastructure Expansion + Blog Voice Revisions) is now COMPLE
 > ## 📚 Data Sources & Methodology
 > 
 > **Statistical Analysis:**
-> - **Dataset:** 11,430 ONWSIAT decisions, 2020-2026
+> - **Dataset:** 98,992 ONWSIAT decisions, 2020-2026
 > - **Shoulder injury cases:** 1,486 cases (13.0% of all tribunal decisions)
 > - **Data source:** [CanLII WSIAT keyword analysis](https://3mpwrapp.pages.dev/docs/data-quality-disclosure/)
 > - **Methodology:** Keyword searches for \"shoulder,\" \"rotator cuff,\" \"supraspinatus,\" \"infraspinatus,\" \"teres,\" \"subscapularis\"
@@ -197,7 +197,7 @@ Phase 2 (Citation Infrastructure Expansion + Blog Voice Revisions) is now COMPLE
 > ## 📚 Data Sources & Methodology
 > 
 > **Statistical Analysis:**
-> - **Dataset:** 11,430 ONWSIAT decisions, 2020-2026
+> - **Dataset:** 98,992 ONWSIAT decisions, 2020-2026
 > - **Pre-existing condition cases:** 1,520 cases (13.3%, 95% CI: 12.7-13.9%)
 > - **Data source:** [CanLII WSIAT keyword analysis](https://3mpwrapp.pages.dev/docs/data-quality-disclosure/)
 > 

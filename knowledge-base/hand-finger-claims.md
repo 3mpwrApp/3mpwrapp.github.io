@@ -2,7 +2,7 @@
 
 > **⚠️ STATISTICAL ALERT:** Hand and finger injuries (lacerations, fractures, amputations, trigger finger, nerve injuries, crush injuries) represent **186 cases (1.6%)** of all WSIB tribunal decisions (2020-2026). WSIB systematically denies these claims as "minor injuries, healed" despite permanent functional loss and disfigurement.
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ---
 
@@ -10,7 +10,7 @@
 
 ### By The Numbers
 
-From our analysis of 11,430 tribunal decisions (2020-2026):
+From our analysis of 98,992 tribunal decisions (2020-2026):
 
 - **186 hand and finger injury cases reached tribunal** (1.6% of all decisions)
 - **Primary denial:** "Minor laceration/fracture, fully healed, no permanent impairment"
@@ -467,4 +467,4 @@ From our analysis of 11,430 tribunal decisions (2020-2026):
 **Questions? Need help?**
 📧 empowrapp08162025@gmail.com
 
-*Last updated: April 15, 2026 | Based on 11,430 ONWSIAT decisions (2020-2026)*
+*Last updated: April 15, 2026 | Based on 98,992 ONWSIAT decisions (2020-2026)*

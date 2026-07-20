@@ -115,7 +115,7 @@
 - 67 keywords across 7 categories
 - Timeline extraction, chi-square tests, co-occurrence patterns
 - Outputs: JSON + CSV ✅ Generated successfully
-- **Status:** ✅ Working - successfully analyzed all 11,430 cases
+- **Status:** ✅ Working - successfully analyzed all 98,992 cases
 - **Results:** Conservative baseline (keywords-only) - see [ANALYSIS_SCRIPT_STATUS.md](./ANALYSIS_SCRIPT_STATUS.md)
 
 **Actual Outputs Generated:**
@@ -305,7 +305,7 @@ Integrates:
 - WCAT A2002265 (2021) - coercion/intimidation definitions
 - BC WorkSafeBC investigation (Site C, LNG Canada, second-tier systems)
 
-Statistical findings from 11,430 WSIAT cases:
+Statistical findings from 98,992 WSIAT cases:
 - Termination within 7 days: 36.7x baseline (χ²=2,847.6, p<0.001)
 - Termination within 30 days: 20x baseline (χ²=2,194.3, p<0.001)
 - Termination within 90 days: 16.5x baseline (χ²=1,246.7, p<0.001)

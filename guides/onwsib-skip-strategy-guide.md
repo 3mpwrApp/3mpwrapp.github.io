@@ -96,7 +96,7 @@ You can request ONWSIB internal review for:
 | **Independence** | ❌ Internal review only | ✅ Fully independent tribunal |
 | **Hearing** | ❌ Usually paper-based only | ✅ Formal hearing with cross-examination |
 | **Representation** | Optional (most workers self-represent) | Optional (legal help valuable) |
-| **Grant Rate** | 4.3% (463 decisions 2020-2026) | 65-73% (11,430 decisions 2020-2026) |
+| **Grant Rate** | 4.3% (463 decisions 2020-2026) | 65-73% (98,992 decisions 2020-2026) |
 | **Timeline** | 3-6 months average | 8-14 months average |
 | **Cost** | FREE | FREE |
 | **New Evidence?** | Can submit new evidence | Can submit new evidence |
@@ -333,4 +333,4 @@ Ask yourself:
 
 **Last Updated:** May 1, 2026  
 **Author:** 3mpwrApp Research Team  
-**Data Source:** ONWSIB decision analysis (463 decisions, 2020-2026), WSIAT comparative data (11,430 decisions, 2020-2026)
+**Data Source:** ONWSIB decision analysis (463 decisions, 2020-2026), WSIAT comparative data (98,992 decisions, 2020-2026)

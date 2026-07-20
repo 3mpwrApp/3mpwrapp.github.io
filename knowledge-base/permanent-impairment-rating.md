@@ -2,7 +2,7 @@
 
 > **⚠️ STATISTICAL ALERT:** Permanent impairment disputes represent **818 cases (7.2%)** of all WSIB tribunal decisions (2020-2026). This is a **1,006% increase** from previous analysis (74→818 cases), revealing how WSIB systematically minimizes impairment ratings to reduce benefit payouts.
 
-*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
+*Updated April 15, 2026 - Based on analysis of 98,992 ONWSIAT decisions (2020-2026)*
 
 ## What is Permanent Impairment?
 

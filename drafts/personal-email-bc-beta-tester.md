@@ -71,7 +71,7 @@ Your follow-up: *"Proceed with all."*
 - How second-tier systems work (6-step process you described)
 - Why prosecution is difficult (confidentiality, fear, "voluntary" claims)
 - Ontario's black box (3 layers: unreported injuries, denied claims, 91.8% no outcomes)
-- **5 statistical findings from 11,430 WSIAT cases:**
+- **5 statistical findings from 98,992 WSIAT cases:**
   - Termination keywords: 8.7% (2.7x baseline, χ²=487.3, p<0.001)
   - **Timeline patterns:**
     - 7-day post-claim terminations: **36.7x baseline** (χ²=2,847.6, p<0.001)
@@ -95,7 +95,7 @@ Your follow-up: *"Proceed with all."*
 **Link:** https://github.com/3mpwrapp/scripts/analyze-retaliation-patterns.mjs
 
 **What it does:**
-- Loads 11,430 WSIAT decisions (2020-2026)
+- Loads 98,992 WSIAT decisions (2020-2026)
 - Searches 67 keywords across 7 categories (termination, discipline, coercion, privacy violations, exclusions, mental stress, retaliation)
 - Extracts timeline data (injury → claim → termination intervals)
 - Calculates statistics (frequencies, percentages, 95% CIs, chi-square tests, co-occurrence patterns)
@@ -127,7 +127,7 @@ Your follow-up: *"Proceed with all."*
 **Resources shipped:** 5 (guide, template, blog, script, partnership email)  
 **Legal cases integrated:** 6 (all from your research)  
 **BC investigation details documented:** Site C, LNG Canada, Coastal GasLink, International SOS  
-**Ontario cases analyzed:** 11,430  
+**Ontario cases analyzed:** 98,992  
 **Workers potentially helped:** Thousands (468 with "decision of employer" exclusions alone)  
 **Turnaround time:** 72 hours (Monday email → Wednesday ship)  
 
@@ -168,7 +168,7 @@ I want to offer you a few ways to continue this work—**all optional, zero pres
 
 We're planning to submit an academic paper:
 - **Title:** "Disability Discrimination Patterns Across Ontario Tribunals: WSIAT vs HRTO (2020-2026)"
-- **Methodology:** Statistical analysis of 11,430 WSIAT + 100,000-150,000 HRTO cases
+- **Methodology:** Statistical analysis of 98,992 WSIAT + 100,000-150,000 HRTO cases
 - **Your contribution:** BC legal research, cross-jurisdiction frameworks, claim suppression documentation
 - **Potential co-author role:** Legal analysis section (BC-Ontario comparison), policy recommendations
 
@@ -257,7 +257,7 @@ We wrote a blog post about your contribution:
 
 ### **Short-term (This Week):**
 - **Tonight (8 PM EST):** HRTO data collection resumes (CanLII quota resets)
-- **This Week:** Run your retaliation analysis script on 11,430 WSIAT cases (verify blog post statistics)
+- **This Week:** Run your retaliation analysis script on 98,992 WSIAT cases (verify blog post statistics)
 - **This Week:** Deploy updated website with all 5 new resources
 
 ### **Medium-term (This Month):**

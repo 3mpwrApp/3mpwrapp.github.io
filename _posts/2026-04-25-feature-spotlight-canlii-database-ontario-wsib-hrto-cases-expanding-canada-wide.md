@@ -40,7 +40,7 @@ CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) is designed t
 - Database continuously improving with daily additions
 - Eventually covers all provinces and territories --- ## YZ NEW: AI-Powered Outcome Predictions **We analyzed 137,252 tribunal decisions using natural language processing and produced directional model estimates. These outputs should be interpreted as exploratory, not official adjudicative rates.** ### The Numbers That Matter | Tribunal | Cases Analyzed | Win Rate | Key Finding |
 |----------|----------------|----------|-------------|
-| **WSIAT** (Ontario) | 11,430 | **73.5%*** | 73.5% from 649 classified decisions (438 granted, 158 denied a 2020-2026 CanLII subset) |
+| **WSIAT** (Ontario) | 98,992 | **73.5%*** | 73.5% from 649 classified decisions (438 granted, 158 denied a 2020-2026 CanLII subset) |
 | **ONSBT** (Ontario Benefits) | 13,798 | **67.4%** | 67.4% in classified cases (Tier A+B); 72.9% remain unresolved in public metadata |
 | **ONWSIB** (WSIB Internal) | 463 | not reliable | 95.7% unresolved in public records; local deep-dive found 12 high-confidence reads |
 | **BCWCAT** (BC) | 7,916 | **86.4%** | Strong odds with proper medical evidence |

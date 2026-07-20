@@ -9,13 +9,13 @@ layout: guide
 
 # Complete Guide to WSIAT Appeals: Data-Driven Success Strategies
 
-*Based on comprehensive analysis of 11,430 WSIAT decisions (2020-2026) with v3.0 ML classification*
+*Based on comprehensive analysis of 98,992 WSIAT decisions (2020-2026) with v3.0 ML classification*
 
 ## Executive Summary
 
 **✨ v3.0 Classification Update (May 15, 2026):** 83.4% of WSIAT decisions now classified (16.6% unknown, down from 52.7%)
 
-- **Total Cases Analyzed:** 11,430 decisions (2020-2026)
+- **Total Cases Analyzed:** 98,992 decisions (2020-2026)
 - **Classification Rate:** 83.4% (9,536 cases with determined outcomes)
 - **Unknown:** 16.6% (1,894 cases remain unclear)
 - **Major Breakthrough:** Multi-pass machine learning with cross-tribunal similarity matching reduced unknown outcomes from 52.7% → 16.6%
@@ -55,7 +55,7 @@ The **Workplace Safety and Insurance Appeals Tribunal (WSIAT)** is Ontario's fin
 - **Authority:** Can overturn WSIB decisions based on merits of evidence
 - **Cost:** **FREE** - no filing fees, legal aid available
 - **Success Rate:** **89.1% worker wins** from 393 clear outcomes (2020-2026 classified data) - **appeals demonstrably work**
-- **Data Note:** 77% of decisions have unclear outcomes in keyword analysis, but classification of 11,430 recent decisions shows consistent 85-95% yearly win rates
+- **Data Note:** 77% of decisions have unclear outcomes in keyword analysis, but classification of 98,992 recent decisions shows consistent 85-95% yearly win rates
 
 ### What Can Be Appealed?
 
