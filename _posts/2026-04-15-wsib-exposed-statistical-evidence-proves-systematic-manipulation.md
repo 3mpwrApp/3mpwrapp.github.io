@@ -14,9 +14,9 @@ featured: true
 
 # What 98,992 Tribunal Decisions Reveal About WSIB Outcomes
 
-**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New evidence: Decision complexity analysis shows 19.85% simple (1 issue), 23.01% moderate (2-3 issues), 2.81% complex (4-5 issues). Top co-occurrences: NEL+Permanent Impairment (11,516 cases), LOE+Loss of Earnings (9,167 cases), Pre-existing+SIEF (3,281 cases). Medical specialists: Surgeon mentioned only 195 times (0.20%), Psychiatrist 44 times (0.04%). See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29) | [Evidence-Based Guides](/guides/)
+**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New evidence: Decision complexity analysis shows 19.85% simple (1 issue), 23.01% moderate (2-3 issues), 2.81% complex (4-5 issues). Top co-occurrences: NEL+Permanent Impairment (11,516 cases), LOE+Loss of Earnings (9,167 cases), Pre-existing+SIEF (295 cases — corrected 2026-07-20; prior 3,281 was in error vs. committed data). Medical specialists: Surgeon mentioned only 195 times (0.20%), Psychiatrist 44 times (0.04%). See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29) | [Evidence-Based Guides](/guides/)
 
-> **📋 ACCURACY AUDIT — 2026-07-20:** Original title "98,992" referred to an earlier WSIAT subset; analysis later enhanced with the 98,992-decision WSIAT Open Data Portal export. All outcome/grant rates on this page are keyword-inferred unless sourced to the Portal. The knee pre-existing stat (line above) is computed from Portal keyword co-occurrence, not the CanLII scrape.
+> **📋 ACCURACY AUDIT — 2026-07-20:** Original title "98,992" referred to an earlier WSIAT subset; analysis later enhanced with the 98,992-decision WSIAT Open Data Portal export. All outcome/grant rates on this page are keyword-inferred unless sourced to the Portal. The knee pre-existing stat (line above) is computed from Portal keyword co-occurrence, not the CanLII scrape. **Committed WSIAT records = 99,036 (metadata asserts 98,992; 44-record discrepancy).** The pre-existing+SIEF co-occurrence was corrected from 3,281 to 295 (committed data). July 2023 "39" reflects CanLII *publication* count, not WSIAT volume (~140 that month); reframed as a publication gap.
 
 ---
 
@@ -31,7 +31,7 @@ featured: true
 
 **🦵 Knee injuries flagged as "pre-existing" 20% of the time** vs. 13.3% baseline (χ² = 32.7, p < 0.001) — *computed from WSIAT Open Data Portal keyword co-occurrence (98,992 export), NOT the CanLII scrape; the CanLII scrape cannot reproduce this stat.*
 
-**📉 July 2023: Only 39 decisions published** vs. 154 average (99.7% certain NOT random)
+**📉 July 2023: Only 39 of ~140 WSIAT decisions published on CanLII** (~72% publication gap vs. the ~154/mo CanLII norm)
 
 **💡 What This Means:** Statistical patterns indicate repeat process variation across 98,992 cases spanning 6 years
 
@@ -65,7 +65,7 @@ You'll see these terms throughout this investigation. Here's what they mean in p
 **Z-score / Standard Deviation (σ):** How "weird" a number is compared to normal.
 - **Z = -2.0** means "2 standard deviations below average" = Very unusual (only happens 2.3% of the time)
 - **Z = -3.0** means "3 standard deviations below average" = Extremely unusual (only happens 0.3% of the time)
-- **Example:** July 2023 had 39 decisions vs. 154 average (Z = -2.94) → 99.7% certain NOT normal
+- **Example:** July 2023 had only **39 of ~140 WSIAT decisions published on CanLII** (Z = -2.94 on publication volume) → 99.7% certain NOT random
 
 **Baseline Rate:** The normal/average percentage across ALL cases. We compare specific groups (like knee injuries) to this baseline to see if they're treated differently.
 
@@ -207,10 +207,10 @@ Using **anomaly detection** (measuring how far monthly volumes deviate from aver
 | Month | Decisions | Statistical Deviation | Probability This Is Random |
 |-------|-----------|----------------------|---------------------------|
 | June 2023 | 59 | **-2.43σ** | **1.5%** (98.5% certain NOT random) |
-| July 2023 | 39 | **-2.94σ** | **0.3%** (99.7% certain NOT random) |
+| July 2023 (CanLII-published) | 39 of ~140 | **-2.94σ** | **0.3%** publication-gap (99.7% certain NOT random) |
 | August 2023 | 58 | **-2.45σ** | **1.4%** (98.6% certain NOT random) |
 
-**Plain English:** July 2023 had **39 decisions** vs. the **154 average**. The probability this happened by chance is **0.3%** (1 in 333). **This was the lowest month ever recorded.**
+**Plain English:** July 2023 had only **39 of ~140 WSIAT decisions published on CanLII** vs. the **~154/mo CanLII norm**. The probability this publication gap happened by chance is **0.3%** (1 in 333). **This was the lowest publication month ever recorded.**
 
 **What Happened in Summer 2023?**
 

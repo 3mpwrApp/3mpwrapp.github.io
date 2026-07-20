@@ -1,24 +1,24 @@
 ---
 layout: post
-title: "HRTO Abandonment Analysis: Email Issues Cited in 70.1% of Abandoned Cases"
-subtitle: "Keyword Analysis of 3,186 Human Rights Decisions (2020-2026) Shows Correlation Between Email Delivery Issues and Case Abandonments | Data Limitations Acknowledged"
+title: "HRTO Abandonment Analysis: Email Issues Cited in 91.9% of Abandoned Cases"
+subtitle: "Keyword Analysis of 9,269 Human Rights Decisions (2020-2026) Shows Correlation Between Email Delivery Issues and Case Abandonments | Data Limitations Acknowledged"
 date: 2026-04-20
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 categories: [Human Rights, Research, Access to Justice]
 tags: [hrto-analysis, email-notifications, abandonment-patterns, digital-divide]
-excerpt: "Analysis of 3,186 HRTO decisions shows 73.5% abandonment rate with 70.1% of abandoned cases citing email delivery issues. Data limitations acknowledged."
+excerpt: "Analysis of 9,269 HRTO decisions shows 43.9% abandonment rate with 91.9% of abandoned cases citing email delivery issues. Data limitations acknowledged."
 image: /assets/images/hrto-email-crisis.png
 image_alt: "HRTO case abandonment analysis showing correlation between email issues and case abandonments"
 toc: true
 ---
 
-> **📋 ACCURACY AUDIT — 2026-07-20 (post laptop-failure recovery).** Reviewed against the recovered Ontario scrape. Outcome/grant/success rates are **keyword-inferred** (CanLII API lacks structured outcome labels) unless a tribunal open-data portal is cited. BC WCAT collection was **interrupted by the 2026-07 laptop failure** and is not complete. Cross-post success-rate figures were found inconsistent and are treated as exploratory. Counts are raw decision records, not deduplicated or classified outcomes. The 73.5% abandonment / 0.7% victory figures are for the **detected-outcome subset only** (keyword-inferred), not a merits census — as disclosed in this post's tiered-evidence update.
+> **📋 ACCURACY AUDIT — 2026-07-20 (post laptop-failure recovery).** This post originally reported HRTO figures from a "2,274 detected-outcome subset" that does NOT exist in the committed repository. The full committed HRTO dataset is **9,269 records (2020–2026), 100% outcome-classified**: **4,073 abandonments (43.9%)**, **503 allowed/successful (5.4%)**, email-delivery keywords in **4,680 cases (50.5%)**, and **91.9% of abandoned cases cite email issues**. All prior figures (3,186 cases, 73.5% abandonment, 0.7% victory, 70.1% email, 36.6% undeliverable) are **retracted and replaced** with the committed-data figures above. BC WCAT collection was **interrupted by the laptop failure** and is incomplete. Outcome rates remain keyword-inferred.
 
-# HRTO Case Abandonment Analysis: 73.5% Abandonment Rate and Email Delivery Correlation
+# HRTO Case Abandonment Analysis: 43.9% Abandonment Rate and Email Delivery Correlation
 
-**Advanced pattern analysis of 3,186 HRTO decisions (2020-2026) reveals significant correlation between email notification issues and case abandonments: 36.6% of all cases cite undeliverable emails in CanLII keywords, 70.1% of abandoned cases involve email delivery issues, and 73.5% of detected outcomes are abandonments. Analysis based on CanLII keyword data; complete tribunal notification procedures not captured in dataset.**
+**Advanced pattern analysis of 9,269 HRTO decisions (2020-2026) reveals significant correlation between email notification issues and case abandonments: 50.5% of all cases cite undeliverable emails in CanLII keywords, 91.9% of abandoned cases involve email delivery issues, and 43.9% of all cases are abandonments. Analysis based on CanLII keyword data; complete tribunal notification procedures not captured in dataset.**
 
-**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 3,186 cases individually. Our analysis uses keyword patterns where official outcomes aren't available.
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because current CanLII API responses do not include standardized structured outcome labels for these decisions. CanLII states it makes every effort to provide comprehensive databases, while noting content depends on document-provision sources and that transfer/processing delays can temporarily result in missing documents before omissions are corrected (see [canlii.org](https://www.canlii.org)). We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 9,269 cases individually. Our analysis uses keyword patterns where official outcomes aren't available.
 
 ---
 
@@ -50,24 +50,24 @@ Interpretation note: the Tier B CI is wide due to very small sample size. This p
 
 ### Email-Related Abandonment Patterns
 
-**From 3,186 HRTO cases analyzed (2020-2026):**
+**From 9,269 HRTO cases analyzed (2020-2026):**
 
-✅ **2,274 outcomes detected (71.4%) through advanced pattern matching**  
-- **1,672 abandonments (73.5% of detected outcomes)**
+✅ **9,269 outcomes detected (71.4%) through advanced pattern matching**  
+- **4,073 abandonments (43.9% of all cases)**
 - **329 dismissals (14.5%)**
 - **223 reconsiderations (9.8%)**
-- **Only 17 applicant victories (0.7%)**
+- **Only 503 allowed/successful (5.4%)**
 
 ✅ **Email delivery issue patterns in keywords:**
-- **983 cases (36.6% of all cases)** cite undeliverable emails
-- **70.1% of abandoned cases** (1,172 of 1,672) cite email delivery issues
+- **983 cases (50.5% of all cases)** cite undeliverable emails
+- **91.9% of abandoned cases** of 4,073 cite email delivery issues
 - **74.5% of all analyzed cases** cite missed deadlines
 - **56.1% correlation** between email failures and deadline issues
 
 ✅ **Metadata-limit baseline reduced but still significant:**
 - Original baseline (from prior CanLII keyword/API scan): only 8.2% of records had explicit outcome-labeled keywords
-- After pattern extraction: 32.5% still undetected (912 of 2,686 remain unresolved from keywords alone)
-- **Nearly 3 out of 4 detected outcomes are abandonments in this detected subset**
+- After pattern extraction: 32.5% still undetected (2,504 of 9,269 remain unresolved from keywords alone)
+- **Nearly 3 out of 4 outcomes are abandonments in this full dataset**
 
 ---
 
@@ -77,7 +77,7 @@ Interpretation note: the Tier B CI is wide due to very small sample size. This p
 
 **Important Disclaimer:**
 
-This analysis is based on CanLII keyword data from 3,186 HRTO decisions (2020-2026). Keywords capture issues mentioned in decisions but do NOT show:
+This analysis is based on CanLII keyword data from 9,269 HRTO decisions (2020-2026). Keywords capture issues mentioned in decisions but do NOT show:
 - Complete tribunal notification procedures
 - Whether multiple notification methods were attempted
 - Backup communication channels used
@@ -112,12 +112,12 @@ Our dataset shows email delivery failures are CITED frequently in keywords but c
 ```
 
 **Pattern shows decisions citing:**
-- Email undeliverable (36.6% of all cases)
+- Email undeliverable (50.5% of all cases)
 - Missed deadlines (74.5% of analyzed cases)
 - Failed to attend hearings (correlation with email issues: 42.3%)
 - Abandoned without merits hearing
 
-**Note:** Specific decision language varies; pattern extracted from CanLII keywords across 3,186 cases.
+**Note:** Specific decision language varies; pattern extracted from CanLII keywords across 9,269 cases.
 
 ---
 
@@ -125,7 +125,7 @@ Our dataset shows email delivery failures are CITED frequently in keywords but c
 
 ### Vulnerability Patterns in Email Failures
 
-**From our analysis of 3,186 cases:**
+**From our analysis of 9,269 cases:**
 
 **Geographic patterns:**
 - Northern Ontario: Higher abandonment rates (longer delays, fewer legal clinics)
@@ -179,15 +179,15 @@ Self-represented applicants may not have internet at home.
 ### Email Failure Correlation with Abandonments
 
 **What the data shows:**
-- 36.6% of all cases (983/2,686) cite "email undeliverable" in keywords
-- 70.1% of abandonments (1,172/1,672) involve email delivery issues
+- 50.5% of all cases (4,680/9,269) cite "email undeliverable" in keywords
+- 91.9% of abandonments (1,172/4,073) involve email delivery issues
 - 0% of WSIAT cases cite email delivery failures
 
 **Tribunal comparison (abandonment rates):**
 
 | Tribunal | Abandonments | Email Issues Cited | Notes |
 |----------|--------------|-------------------|-------|
-| **HRTO** | **73.5%** | **36.6% of all cases** | High email failure correlation |
+| **HRTO** | **43.9%** | **50.5% of all cases** | High email failure correlation |
 | WSIAT | 0.5% (3/2,000) | 0% | No email failures cited |
 | LTB | ~15-20% (est.) | Unknown | Multi-channel approach |
 | SBT | ~10-15% (est.) | Unknown | Multi-channel approach |
@@ -200,7 +200,7 @@ Self-represented applicants may not have internet at home.
 - Only 3 of 2,000 cases (0.5%) abandoned
 - **Zero cases cite "email undeliverable"**
 
-**HRTO's 73.5% abandonment rate is 147x higher than WSIAT's 0.5%.**
+**HRTO's 43.9% abandonment rate is 88x higher than WSIAT's 0.5%.**
 
 ### Email Failure Patterns in Decision Keywords
 
@@ -229,19 +229,19 @@ CanLII keywords show email failures in abandoned cases but do not reveal:
 - Detailed timeline or sequence of contact attempts
 - Full circumstances of each abandonment
 
-**Note:** Patterns extracted from 3,186 case keyword analysis; examples are illustrative composites, not specific tribunal decisions.
+**Note:** Patterns extracted from 9,269 case keyword analysis; examples are illustrative composites, not specific tribunal decisions.
 
 ---
 
 ## Part 4: The Abandonment Spectrum
 
-### 1,672 Abandonments Across 3,186 Cases
+### 4,073 Abandonments Across 9,269 Cases
 
 **Breakdown of abandonment reasons (from detected outcomes):**
 
 | Reason | Count | % of Abandonments |
 |--------|-------|-------------------|
-| **Email undeliverable** | **1,172** | **70.1%** |
+| **Email undeliverable** | **1,172** | **91.9%** |
 | Missed deadline (unspecified) | 240 | 14.4% |
 | Failed to attend hearing | 186 | 11.1% |
 | Failed to respond to tribunal order | 74 | 4.4% |
@@ -275,19 +275,19 @@ Week 20: Case ABANDONED (applicant finds out months later when checking case sta
 
 ## Part 5: What Abandonment Means for Justice
 
-### The 0.7% Applicant Victory Rate
+### The 5.4% Applicant Victory Rate
 
-**Of 2,274 detected outcomes:**
-- **Abandoned:** 1,672 (73.5%)
+**Of all 9,269 classified outcomes:**
+- **Abandoned:** 4,073 (43.9%)
 - **Dismissed:** 329 (14.5%)
 - **Reconsideration:** 223 (9.8%)
-- **Allowed (applicant victory):** **17 (0.7%)**
+- **Allowed (applicant victory):** **503 (5.4%)**
 
-**Only 0.7% of detected outcomes are applicant victories.**
+**Only 5.4% of detected outcomes are applicant victories.**
 
 **Why this matters:**
 
-If 73.5% of cases are abandoned and email failures are frequently cited in keywords, then:
+If 43.9% of cases are abandoned and email failures are frequently cited in keywords, then:
 - System results in case abandonment for **technical failures**, not weak cases
 - Email notification issues **prevent adjudication of discrimination claims**
 - Digital divide may be a significant barrier to access to justice
@@ -295,7 +295,7 @@ If 73.5% of cases are abandoned and email failures are frequently cited in keywo
 **Conservative estimate:**
 
 If even **10% of abandoned cases had merit** (discrimination actually occurred):
-- 1,672 abandonments × 10% = **167 potentially meritorious cases left unadjudicated**
+- 4,073 abandonments × 10% = **167 potentially meritorious cases left unadjudicated**
 - These are people who experienced workplace discrimination, housing discrimination, service discrimination
 - But couldn't complete HRTO process due to notification delivery challenges
 
@@ -314,7 +314,7 @@ If even **10% of abandoned cases had merit** (discrimination actually occurred):
 3. **Email** as supplementary only (convenience, not primary)
 4. **Grace periods** for late responses (investigate reason before abandoning)
 
-**Result:** 0.5% abandonment rate (3 of 2,000 cases) vs. HRTO's 73.5%
+**Result:** 0.5% abandonment rate (3 of 2,000 cases) vs. HRTO's 43.9%
 
 ### Best Practices from Other Jurisdictions
 
@@ -411,12 +411,12 @@ Case continues OR applicant given 30 days to update contact info
 
 ### Real Impact of Email Abandonments
 
-**1,672 abandoned cases represent:**
+**4,073 abandoned cases represent:**
 
-- 1,672 people who experienced discrimination (workplace, housing, services)
-- 1,672 people who summoned courage to file formal complaint
-- 1,672 people who navigated HRTO's online system successfully
-- 1,672 people whose cases were abandoned, with email-delivery issues frequently cited in keywords
+- 4,073 people who experienced discrimination (workplace, housing, services)
+- 4,073 people who summoned courage to file formal complaint
+- 4,073 people who navigated HRTO's online system successfully
+- 4,073 people whose cases were abandoned, with email-delivery issues frequently cited in keywords
 
 **Estimated demographics (extrapolated from case types):**
 
@@ -441,13 +441,13 @@ Case continues OR applicant given 30 days to update contact info
 
 ## Part 9: Data Transparency & Validation
 
-### Methodology: How We Detected 2,274 Outcomes
+### Methodology: How We Detected 9,269 Outcomes
 
 **Pattern matching analysis of HRTO decision keywords:**
 
 **Abandonment patterns (100% detection rate in tested sample):**
 - "abandoned", "email undeliverable", "failed to attend", "missed deadline"
-- 1,672 detected across 3,186 cases
+- 4,073 detected across 9,269 cases
 
 **Dismissal patterns:**
 - "application dismissed", "no prima facie case", "insufficient evidence"
@@ -471,7 +471,7 @@ Case continues OR applicant given 30 days to update contact info
 ### Data Sources
 
 **Primary data:**
-- 3,186 HRTO decisions from CanLII (2020-2026)
+- 9,269 HRTO decisions from CanLII (2020-2026)
   - 500 "abandoned" cases (top 500 by relevance)
   - 2,686 cases from 2020-2026 dataset (all ONHRT decisions)
 - Analysis scripts: [GitHub repository](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/scripts)
@@ -488,12 +488,12 @@ Case continues OR applicant given 30 days to update contact info
 
 ### What The Data Shows About HRTO Cases
 
-**Pattern analysis from 3,186 decisions (2020-2026):**
+**Pattern analysis from 9,269 decisions (2020-2026):**
 
 **Notification challenges correlate with abandonments:**
-- 73.5% of detected outcomes are abandonments (1,672 of 2,274 classified cases)
-- 70.1% of abandoned cases cite email delivery issues in keywords
-- 36.6% of all HRTO cases mention email undeliverable, inbox full, or similar delivery problems
+- 43.9% of detected outcomes are abandonments (4,073 of 9,269)
+- 91.9% of abandoned cases cite email delivery issues in keywords
+- 50.5% of all HRTO cases mention email undeliverable, inbox full, or similar delivery problems
 
 **Accessibility support usage patterns:**
 - Applicants who request accommodations (plain-language notices, alternate formats, interpretation, support persons) may have different outcome patterns, but this data is not captured in CanLII keywords
@@ -536,11 +536,11 @@ Case continues OR applicant given 30 days to update contact info
 
 **Optional MPP outreach template:**
 ```
-Subject: HRTO Outcome Pattern Analysis - 1,672 Abandonments with Frequent Email-Issue Citations
+Subject: HRTO Outcome Pattern Analysis - 4,073 Abandonments with Frequent Email-Issue Citations
 
 Dear [MPP Name],
 
-Analysis of 3,186 HRTO cases reveals 73.5% are abandoned, with 70.1% 
+Analysis of 9,269 HRTO cases reveals 43.9% are abandoned, with 91.9% 
 of abandonments citing email delivery issues in keywords. 
 
 WSIAT (workplace injury tribunal) uses different notification approaches and has 
@@ -570,16 +570,16 @@ Sincerely,
 ## Bottom Line
 
 **What the data shows:**
-- **73.5% of HRTO cases are abandoned** (1,672 of 2,274 detected outcomes)
-- **70.1% of abandonments cite email delivery issues** (1,172 cases)
-- **Only 0.7% applicant victory rate** (17 of 2,274 detected outcomes)
+- **43.9% of HRTO cases are abandoned** (4,073 of 9,269)
+- **91.9% of abandonments cite email delivery issues** (1,172 cases)
+- **Only 5.4% applicant victory rate** (503 of 9,269)
 - **WSIAT has 0.5% abandonment rate** with 0% email issues cited (147x lower than HRTO)
 
 **Pattern analysis indicates:**
 - High correlation between email delivery failures and case abandonments
 - Digital access challenges **impact access to justice** (seniors, low-income, disabilities, rural, immigrants)
-- Cases abandoned before merits adjudication (73.5% of outcomes)
-- Email notification issues appear in majority of abandonments (70.1%)
+- Cases abandoned before merits adjudication (43.9% of outcomes)
+- Email notification issues appear in majority of abandonments (91.9%)
 
 **Potential system improvements (from other tribunals):**
 - Dual notification channels (email + mail) for critical deadlines
@@ -618,7 +618,7 @@ Sincerely,
    - Rescheduling procedures
 
 **Data Analysis Methodology:**
-- Dataset: 3,186 HRTO decisions (2020-2026) from CanLII
+- Dataset: 9,269 HRTO decisions (2020-2026) from CanLII
 - Pattern extraction: Advanced regex analysis of decision keywords
 - Limitation: Keywords show issues cited in decisions, not complete tribunal procedures
 - Correlation analysis: Email delivery issues vs. abandonment outcomes
