@@ -63,7 +63,8 @@
     "British Columbia PWD Program: Application to Approval",
     "Benefits Appeal Letter Template",
     "Workplace Discrimination Documentation Letter",
-    "Workplace Accommodation Request Letter"
+    "Workplace Accommodation Request Letter",
+    "Document Scanner with OCR: Paper to Searchable Text"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively"
@@ -88,6 +89,6 @@
     "Collective Advocacy: Why Individual Coping Is Not Enough",
     "Intersectionality and Disability: Building for the Full Reality"
   ],
-  "rotationIndex": 8,
+  "rotationIndex": 1,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
