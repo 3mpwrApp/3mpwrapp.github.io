@@ -1,0 +1,63 @@
+---
+layout: post
+title: "Daily News Curation - 2026-07-24"
+date: 2026-07-24
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-07-24
+
+Curated 9 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Planned changes to Ottawa’s Canada Health Transfer could slash more than $50B from public health care over a decade
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/politics/canadian-politics/planned-changes-to-ottawas-canada-health-transfer-could-slash-more-than-50b-from-public-health-care-over-a-decade/)
+**Score:** 18.40
+
+### 2. Governments of Canada and Manitoba Provide Flood Recovery Support for Producers Through AgriStability
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74577)
+**Score:** 19.60
+
+### 3. Six months after Davos: Carney, Canada, and (racial) capitalism
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/politics/canadian-politics/six-months-after-davos-carney-canada-and-racial-capitalism/)
+**Score:** 10.50
+
+### 4. How Powell River Became Ground Zero for Canada’s Electricity Future
+Mark Carney’s old company wants an unprecedented right to sell power to the US.
+[Source](https://thetyee.ca/Opinion/2026/07/24/Powell-River-Canada-Electricity-Future/)
+**Score:** 10.50
+
+### 5. Manitoba Government Announces New Name for Winnipeg Personal Care Home
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74578)
+**Score:** 9.10
+
+### 6. Bard on the Beach’s ‘Antigone’ Gives New Voice to the Women
+In this contemporary adaptation of Sophocles’ tragedy, playwright Kate Besworth focuses on family, inheritance and the choices we make.
+[Source](https://thetyee.ca/Presents/2026/07/24/Bard-on-the-Beach-Antigone/)
+**Score:** 6.00
+
+### 7. Manitoba Government Expands Economic Presence in Europe and Mexico with Regional Trade Representatives
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74579)
+**Score:** 7.10
+
+### 8. Measles Update #114
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74517)
+**Score:** 4.50
+
