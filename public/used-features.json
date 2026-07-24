@@ -67,7 +67,8 @@
     "Document Scanner with OCR: Paper to Searchable Text"
   ],
   "tutorials": [
-    "How to Use the Evidence Locker Effectively"
+    "How to Use the Evidence Locker Effectively",
+    "Setting Up Accessibility for Your Needs"
   ],
   "devDiaries": [
     "Why We Chose React Native: Accessibility Over Everything",
@@ -89,6 +90,6 @@
     "Collective Advocacy: Why Individual Coping Is Not Enough",
     "Intersectionality and Disability: Building for the Full Reality"
   ],
-  "rotationIndex": 1,
+  "rotationIndex": 2,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
