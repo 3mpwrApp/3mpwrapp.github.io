@@ -1,220 +1,206 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-25T13:38:53.716Z",
+  "lastUpdated": "2026-07-26T13:27:12.287Z",
   "keywords": {
     "government": {
       "totalMentions": 1859,
-      "recentMentions": 9.470060344722615,
+      "recentMentions": 8.530347680324649,
       "firstSeen": "2025-10-21T20:00:36.099Z",
       "lastSeen": "2026-07-25T13:38:53.715Z",
       "peakMentions": 260.05867811573466
     },
     "manitoba": {
       "totalMentions": 3359,
-      "recentMentions": 21.422747330419753,
+      "recentMentions": 19.296971333246546,
       "firstSeen": "2025-10-21T20:00:36.099Z",
       "lastSeen": "2026-07-25T13:38:53.715Z",
       "peakMentions": 468.1590217848548
     },
     "ADA": {
-      "totalMentions": 3015,
-      "recentMentions": 38.69738288370871,
+      "totalMentions": 3017,
+      "recentMentions": 36.85744739743243,
       "firstSeen": "2025-10-21T20:00:36.099Z",
-      "lastSeen": "2026-07-25T13:38:53.715Z",
+      "lastSeen": "2026-07-26T13:27:12.287Z",
       "peakMentions": 385.1800150883065
     },
     "canada": {
-      "totalMentions": 2800,
-      "recentMentions": 36.719164257900786,
+      "totalMentions": 2802,
+      "recentMentions": 35.07552710848311,
       "firstSeen": "2025-10-21T20:00:36.099Z",
-      "lastSeen": "2026-07-25T13:38:53.715Z",
+      "lastSeen": "2026-07-26T13:27:12.287Z",
       "peakMentions": 362.22243063764097
     },
     "community": {
-      "totalMentions": 522,
-      "recentMentions": 11.382207153946101,
+      "totalMentions": 523,
+      "recentMentions": 11.252752449116807,
       "firstSeen": "2025-10-21T20:00:36.099Z",
-      "lastSeen": "2026-07-25T13:38:53.715Z",
+      "lastSeen": "2026-07-26T13:27:12.287Z",
       "peakMentions": 38.497704201580135
     },
     "disability": {
-      "totalMentions": 466,
-      "recentMentions": 20.0426403820116,
+      "totalMentions": 468,
+      "recentMentions": 20.053812189861148,
       "firstSeen": "2026-01-25T21:52:32.020Z",
-      "lastSeen": "2026-07-25T13:38:53.715Z",
+      "lastSeen": "2026-07-26T13:27:12.287Z",
       "peakMentions": 53.84437346241021
     },
     "advocacy": {
-      "totalMentions": 229,
-      "recentMentions": 9.951295176816425,
+      "totalMentions": 230,
+      "recentMentions": 9.963829652372535,
       "firstSeen": "2026-01-25T21:52:32.020Z",
-      "lastSeen": "2026-07-25T13:38:53.715Z",
+      "lastSeen": "2026-07-26T13:27:12.287Z",
       "peakMentions": 27.06372376707232
     },
     "disability rights": {
-      "totalMentions": 229,
-      "recentMentions": 9.951295176816425,
+      "totalMentions": 230,
+      "recentMentions": 9.963829652372535,
       "firstSeen": "2026-01-25T21:52:32.020Z",
-      "lastSeen": "2026-07-25T13:38:53.715Z",
+      "lastSeen": "2026-07-26T13:27:12.287Z",
       "peakMentions": 27.06372376707232
     },
     "update": {
-      "totalMentions": 894,
-      "recentMentions": 28.38713681495267,
+      "totalMentions": 896,
+      "recentMentions": 27.570285496167315,
       "firstSeen": "2026-01-25T21:52:32.020Z",
-      "lastSeen": "2026-07-25T13:38:53.715Z",
+      "lastSeen": "2026-07-26T13:27:12.287Z",
       "peakMentions": 115.08233365952402
     },
     "news": {
-      "totalMentions": 502,
-      "recentMentions": 21.156076154000345,
+      "totalMentions": 504,
+      "recentMentions": 21.05676189757527,
       "firstSeen": "2026-01-25T21:52:32.020Z",
-      "lastSeen": "2026-07-25T13:38:53.715Z",
+      "lastSeen": "2026-07-26T13:27:12.287Z",
       "peakMentions": 56.44954545842147
     },
     "alberta": {
       "totalMentions": 92,
-      "recentMentions": 8.221919806510835,
+      "recentMentions": 7.4060599400899925,
       "firstSeen": "2026-05-04T14:08:03.016Z",
       "lastSeen": "2026-07-25T13:38:53.715Z",
       "peakMentions": 16.105997270432315
     },
     "health": {
       "totalMentions": 36,
-      "recentMentions": 2.0803032840347093,
+      "recentMentions": 1.6877808276468727,
       "firstSeen": "2026-06-20T14:09:10.225Z",
       "lastSeen": "2026-07-24T13:49:22.300Z",
       "peakMentions": 9.743927799301343
     },
     "report": {
       "totalMentions": 14,
-      "recentMentions": 0.43851601263120465,
+      "recentMentions": 0.23378054090777176,
       "firstSeen": "2026-07-01T14:41:51.808Z",
       "lastSeen": "2026-07-20T14:10:15.075Z",
       "peakMentions": 5.295139414051127
     },
     "SAID": {
       "totalMentions": 9,
-      "recentMentions": 1.6662488958592283,
+      "recentMentions": 1.0959303726483611,
       "firstSeen": "2026-07-13T14:39:01.965Z",
       "lastSeen": "2026-07-22T14:00:58.438Z",
       "peakMentions": 5.709912557686035
     },
     "canadian": {
       "totalMentions": 4,
-      "recentMentions": 1.5395730347962837,
+      "recentMentions": 1.1255358323675468,
       "firstSeen": "2026-07-16T13:57:31.794Z",
       "lastSeen": "2026-07-23T14:05:57.627Z",
       "peakMentions": 2.1051624609320614
     },
     "program": {
       "totalMentions": 8,
-      "recentMentions": 2.06884289442945,
+      "recentMentions": 1.2242383744599534,
       "firstSeen": "2026-07-17T13:42:59.795Z",
       "lastSeen": "2026-07-21T13:56:20.641Z",
       "peakMentions": 5.928967988784136
     },
     "support": {
       "totalMentions": 6,
-      "recentMentions": 2.977980611176763,
+      "recentMentions": 2.682476042801558,
       "firstSeen": "2026-07-17T13:42:59.795Z",
       "lastSeen": "2026-07-25T13:38:53.715Z",
       "peakMentions": 3
     },
     "human rights": {
       "totalMentions": 2,
-      "recentMentions": 0.8111344298353843,
+      "recentMentions": 0.5929961391974806,
       "firstSeen": "2026-07-17T13:42:59.795Z",
       "lastSeen": "2026-07-23T14:05:57.627Z",
       "peakMentions": 1.1091190309688217
     },
     "tool": {
       "totalMentions": 2,
-      "recentMentions": 0.3172895744756779,
+      "recentMentions": 0.1691526106429856,
       "firstSeen": "2026-07-17T13:42:59.795Z",
       "lastSeen": "2026-07-20T14:10:15.075Z",
       "peakMentions": 1.5320934815809726
     },
     "crisis": {
       "totalMentions": 4,
-      "recentMentions": 2.102971334885749,
+      "recentMentions": 1.8942938054590959,
       "firstSeen": "2026-07-18T13:20:01.523Z",
       "lastSeen": "2026-07-25T13:38:53.715Z",
       "peakMentions": 2.102971334885749
     },
-    "announcement": {
-      "totalMentions": 1,
-      "recentMentions": 0.10774952342083974,
-      "firstSeen": "2026-07-19T13:21:56.590Z",
-      "lastSeen": "2026-07-19T13:21:56.590Z",
-      "peakMentions": 1
-    },
-    "data": {
-      "totalMentions": 1,
-      "recentMentions": 0.10774952342083974,
-      "firstSeen": "2026-07-19T13:21:56.590Z",
-      "lastSeen": "2026-07-19T13:21:56.590Z",
-      "peakMentions": 1
-    },
     "recovery": {
       "totalMentions": 3,
-      "recentMentions": 1.7257550972677724,
+      "recentMentions": 1.4001306389966803,
       "firstSeen": "2026-07-19T13:21:56.590Z",
       "lastSeen": "2026-07-24T13:49:22.300Z",
       "peakMentions": 1.916036404580007
     },
     "eligibility": {
       "totalMentions": 2,
-      "recentMentions": 1.2070954405133725,
+      "recentMentions": 1.0873155414106617,
       "firstSeen": "2026-07-20T14:10:15.075Z",
       "lastSeen": "2026-07-25T13:38:53.715Z",
       "peakMentions": 1.2070954405133725
     },
     "public": {
       "totalMentions": 12,
-      "recentMentions": 10.198825038678777,
+      "recentMentions": 9.18679716325279,
       "firstSeen": "2026-07-21T13:56:20.641Z",
       "lastSeen": "2026-07-25T13:38:53.715Z",
       "peakMentions": 10.198825038678777
     },
     "information": {
       "totalMentions": 1,
-      "recentMentions": 0.34893811171574746,
+      "recentMentions": 0.2064842274027878,
       "firstSeen": "2026-07-21T13:56:20.641Z",
       "lastSeen": "2026-07-21T13:56:20.641Z",
       "peakMentions": 1
     },
     "service": {
       "totalMentions": 4,
-      "recentMentions": 3.0651158581543827,
+      "recentMentions": 2.7609648723203977,
       "firstSeen": "2026-07-22T14:00:58.438Z",
       "lastSeen": "2026-07-25T13:38:53.715Z",
       "peakMentions": 3.0651158581543827
     },
     "resource": {
       "totalMentions": 1,
-      "recentMentions": 0.5325579290771915,
+      "recentMentions": 0.3502756467661088,
       "firstSeen": "2026-07-22T14:00:58.438Z",
       "lastSeen": "2026-07-22T14:00:58.438Z",
       "peakMentions": 1
     },
     "care": {
       "totalMentions": 2,
-      "recentMentions": 1.8013802797719347,
+      "recentMentions": 1.4614864682632034,
       "firstSeen": "2026-07-24T13:49:22.300Z",
       "lastSeen": "2026-07-24T13:49:22.300Z",
       "peakMentions": 2
     },
     "economic": {
       "totalMentions": 1,
-      "recentMentions": 0.9006901398859674,
+      "recentMentions": 0.7307432341316017,
       "firstSeen": "2026-07-24T13:49:22.300Z",
       "lastSeen": "2026-07-24T13:49:22.300Z",
       "peakMentions": 1
     },
     "homelessness": {
       "totalMentions": 1,
-      "recentMentions": 1,
+      "recentMentions": 0.9007701503273271,
       "firstSeen": "2026-07-25T13:38:53.715Z",
       "lastSeen": "2026-07-25T13:38:53.715Z",
       "peakMentions": 1
@@ -223,43 +209,38 @@
   "currentTrending": [
     {
       "keyword": "ADA",
-      "mentions": 38.7,
+      "mentions": 36.9,
       "velocity": "declining"
     },
     {
       "keyword": "canada",
-      "mentions": 36.7,
+      "mentions": 35.1,
       "velocity": "declining"
     },
     {
       "keyword": "update",
-      "mentions": 28.4,
-      "velocity": "declining"
-    },
-    {
-      "keyword": "manitoba",
-      "mentions": 21.4,
+      "mentions": 27.6,
       "velocity": "declining"
     },
     {
       "keyword": "news",
-      "mentions": 21.2,
+      "mentions": 21.1,
       "velocity": "declining"
     },
     {
       "keyword": "disability",
-      "mentions": 20,
+      "mentions": 20.1,
+      "velocity": "declining"
+    },
+    {
+      "keyword": "manitoba",
+      "mentions": 19.3,
       "velocity": "declining"
     },
     {
       "keyword": "community",
-      "mentions": 11.4,
+      "mentions": 11.3,
       "velocity": "declining"
-    },
-    {
-      "keyword": "public",
-      "mentions": 10.2,
-      "velocity": "rising"
     },
     {
       "keyword": "advocacy",
@@ -272,19 +253,19 @@
       "velocity": "declining"
     },
     {
+      "keyword": "public",
+      "mentions": 9.2,
+      "velocity": "rising"
+    },
+    {
       "keyword": "government",
-      "mentions": 9.5,
+      "mentions": 8.5,
       "velocity": "declining"
     },
     {
       "keyword": "alberta",
-      "mentions": 8.2,
+      "mentions": 7.4,
       "velocity": "declining"
-    },
-    {
-      "keyword": "service",
-      "mentions": 3.1,
-      "velocity": "rising"
     }
   ]
 }
