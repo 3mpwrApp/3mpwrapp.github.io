@@ -65,7 +65,8 @@
     "Workplace Discrimination Documentation Letter",
     "Workplace Accommodation Request Letter",
     "Document Scanner with OCR: Paper to Searchable Text",
-    "Offline Mode: Full Functionality Without Internet"
+    "Offline Mode: Full Functionality Without Internet",
+    "Case Law Summarizer: Legal Decisions in Plain Language"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -84,6 +85,6 @@
     "Collective Advocacy: Why Individual Coping Is Not Enough",
     "Intersectionality and Disability: Building for the Full Reality"
   ],
-  "rotationIndex": 4,
+  "rotationIndex": 5,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
