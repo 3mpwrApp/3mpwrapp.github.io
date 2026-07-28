@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Mon, 27 Jul 2026 14:39:48 GMT</lastBuildDate>
-    <pubDate>Mon, 27 Jul 2026 14:39:48 GMT</pubDate>
+    <lastBuildDate>Tue, 28 Jul 2026 14:11:46 GMT</lastBuildDate>
+    <pubDate>Tue, 28 Jul 2026 14:11:46 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,46 +24,63 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Mon, 27 Jul 2026 14:39:48 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 14:11:46 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Calling Carney’s Carbon Capture Bluff</title>
-      <link>https://thetyee.ca/Analysis/2026/07/27/Calling-Carney-Carbon-Capture-Bluff/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Analysis/2026/07/27/Calling-Carney-Carbon-Capture-Bluff/</guid>
-      <description><![CDATA[He pretends the technology is a serious response to the climate crisis. Here’s the reality.]]></description>
-      <pubDate>Mon, 27 Jul 2026 07:40:00 GMT</pubDate>
+      <title>Province Announces Updated Eligibility for Free Hepatitis A Vaccine Ahead of 2026 Manitoba Indigenous Summer Games</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74420</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74420</guid>
+      <pubDate>Fri, 03 Jul 2026 21:06:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Investing in Safe, Supportive Housing for Women and Gender-Diverse People in Winnipeg&apos;s North End</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74598</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74598</guid>
+      <pubDate>Mon, 27 Jul 2026 16:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Expands Flood Recovery Program to Include Additional Hard-Hit Communities</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74597</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74597</guid>
+      <pubDate>Mon, 27 Jul 2026 14:48:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Basic Income and solving the polycrisis</title>
+      <link>https://rabble.ca/economy/basic-income-and-solving-the-polycrisis/</link>
+      <guid isPermaLink="true">https://rabble.ca/economy/basic-income-and-solving-the-polycrisis/</guid>
+      <pubDate>Mon, 27 Jul 2026 20:47:31 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
       <title>Manitoba Justice Reports In-Custody Death</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74585</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74585</guid>
-      <pubDate>Sun, 26 Jul 2026 19:22:00 GMT</pubDate>
+      <link>https://news.gov.mb.ca/news/index.html?item=74419</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74419</guid>
+      <pubDate>Fri, 03 Jul 2026 18:54:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Don’t Call It a Condo Bailout. It’s Rent-to-Own and It Can Work</title>
-      <link>https://thetyee.ca/Opinion/2026/07/27/Rent-to-Own-Can-Work/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/07/27/Rent-to-Own-Can-Work/</guid>
-      <description><![CDATA[If it’s done right, BC’s government can play a key role in helping working people afford a home.]]></description>
-      <pubDate>Mon, 27 Jul 2026 07:20:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Measles Update #113</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74417</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74417</guid>
-      <pubDate>Thu, 02 Jul 2026 20:34:00 GMT</pubDate>
-      <category>Critical</category>
+      <title>BC Needs to Be More Proactive About Highway Closure Warnings</title>
+      <link>https://thetyee.ca/Opinion/2026/07/28/BC-Highway-Closure-Warnings/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/07/28/BC-Highway-Closure-Warnings/</guid>
+      <description><![CDATA[If the government wants people to rely on official channels instead of Facebook, it needs to offer more information, faster.]]></description>
+      <pubDate>Tue, 28 Jul 2026 07:10:00 GMT</pubDate>
+      <category>High Priority</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
