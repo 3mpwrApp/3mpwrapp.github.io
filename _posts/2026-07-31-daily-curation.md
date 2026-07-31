@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Daily News Curation - 2026-07-31"
+date: 2026-07-31
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-07-31
+
+Curated 4 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Manitoba Government Invests $42,000 to Support Rural Municipality of St. Clements Recreation Master Plan
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74618)
+**Score:** 9.50
+
+### 2. Manitoba Government Awards Construction Management Contract for New CancerCare Manitoba Facility
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74617)
+**Score:** 9.50
+
+### 3. Public Safety Minister Won’t Comment on Tatyanna Harrison Inquest
+After problems with BC’s death investigation system were shown, there’s no reason to wait to act, says lawyer.
+[Source](https://thetyee.ca/News/2026/07/31/Public-Safety-Minister-Tatyanna-Harrison-Inquest/)
+**Score:** 3.90
+
