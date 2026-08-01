@@ -72,7 +72,8 @@
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
-    "Setting Up Accessibility for Your Needs"
+    "Setting Up Accessibility for Your Needs",
+    "Your First Benefits Application: A Complete Walkthrough"
   ],
   "devDiaries": [
     "Why We Chose React Native: Accessibility Over Everything"
@@ -80,6 +81,6 @@
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built"
   ],
-  "rotationIndex": 1,
+  "rotationIndex": 2,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
