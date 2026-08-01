@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Fri, 31 Jul 2026 14:11:58 GMT</lastBuildDate>
-    <pubDate>Fri, 31 Jul 2026 14:11:58 GMT</pubDate>
+    <lastBuildDate>Sat, 01 Aug 2026 13:25:43 GMT</lastBuildDate>
+    <pubDate>Sat, 01 Aug 2026 13:25:43 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,36 +24,72 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Fri, 31 Jul 2026 14:11:58 GMT</pubDate>
+      <pubDate>Sat, 01 Aug 2026 13:25:43 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Invests $42,000 to Support Rural Municipality of St. Clements Recreation Master Plan</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74618</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74618</guid>
-      <pubDate>Thu, 30 Jul 2026 20:30:00 GMT</pubDate>
+      <title>Governments of Canada and Manitoba Provide Flood Recovery Support for Producers Through AgriStability</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74577</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74577</guid>
+      <pubDate>Thu, 23 Jul 2026 18:30:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Awards Construction Management Contract for New CancerCare Manitoba Facility</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74617</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74617</guid>
-      <pubDate>Thu, 30 Jul 2026 18:36:00 GMT</pubDate>
+      <title>Six months after Davos: Carney, Canada, and (racial) capitalism</title>
+      <link>https://rabble.ca/politics/canadian-politics/six-months-after-davos-carney-canada-and-racial-capitalism/</link>
+      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/six-months-after-davos-carney-canada-and-racial-capitalism/</guid>
+      <pubDate>Thu, 23 Jul 2026 21:20:17 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Public Safety Minister Won’t Comment on Tatyanna Harrison Inquest</title>
-      <link>https://thetyee.ca/News/2026/07/31/Public-Safety-Minister-Tatyanna-Harrison-Inquest/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2026/07/31/Public-Safety-Minister-Tatyanna-Harrison-Inquest/</guid>
-      <description><![CDATA[After problems with BC’s death investigation system were shown, there’s no reason to wait to act, says lawyer.]]></description>
-      <pubDate>Fri, 31 Jul 2026 07:40:00 GMT</pubDate>
+      <title>Manitoba Government Announces New Name for Winnipeg Personal Care Home</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74578</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74578</guid>
+      <pubDate>Thu, 23 Jul 2026 19:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government, GlobalMedic Provide Free Fire Skids to Manitoba Fire Departments</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74621</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74621</guid>
+      <pubDate>Fri, 31 Jul 2026 18:14:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Expands Economic Presence in Europe and Mexico with Regional Trade Representatives</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74579</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74579</guid>
+      <pubDate>Thu, 23 Jul 2026 20:04:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>A Case for Teaching the Bible in Public School</title>
+      <link>https://thetyee.ca/Culture/2026/07/31/Teaching-Bible-Public-School/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Culture/2026/07/31/Teaching-Bible-Public-School/</guid>
+      <description><![CDATA[Students could benefit from reading excerpts as literature, not doctrine.]]></description>
+      <pubDate>Sat, 01 Aug 2026 00:30:00 GMT</pubDate>
       <category>High Priority</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Measles Update #114</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74517</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74517</guid>
+      <pubDate>Wed, 15 Jul 2026 14:55:00 GMT</pubDate>
+      <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
