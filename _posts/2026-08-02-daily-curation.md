@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Daily News Curation - 2026-08-02"
+date: 2026-08-02
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-08-02
+
+Curated 6 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Wildfire crisis worsened by public service cuts, unions say
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/labour/wildfire-crisis-worsened-by-public-service-cuts-unions-say/)
+**Score:** 13.90
+
+### 2. Manitoba Government Announces Significant Progress on Plan to End Chronic Homelessness
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74582)
+**Score:** 11.50
+
+### 3. Province Announces Updated Eligibility for Free Hepatitis A Vaccine
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74583)
+**Score:** 8.50
+
+### 4. Manitoba Government Supports Upgrades to Ralph Cantafio Soccer Complex
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74580)
+**Score:** 9.90
+
+### 5. Manitoba Government Invests $3 Million in Playgrounds Provincewide
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74581)
+**Score:** 7.50
+
