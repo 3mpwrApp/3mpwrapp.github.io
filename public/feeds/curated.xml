@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Mon, 03 Aug 2026 14:43:14 GMT</lastBuildDate>
-    <pubDate>Mon, 03 Aug 2026 14:43:14 GMT</pubDate>
+    <lastBuildDate>Tue, 04 Aug 2026 14:20:09 GMT</lastBuildDate>
+    <pubDate>Tue, 04 Aug 2026 14:20:09 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,7 +24,27 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Mon, 03 Aug 2026 14:43:14 GMT</pubDate>
+      <pubDate>Tue, 04 Aug 2026 14:20:09 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>BC’s Involuntary Care Practices Are Unconstitutional, Court Rules</title>
+      <link>https://thetyee.ca/News/2026/08/04/BC-Involuntary-Care-Practices-Unconstitutional/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/08/04/BC-Involuntary-Care-Practices-Unconstitutional/</guid>
+      <description><![CDATA[The province is an outlier when it comes to how it treats people involuntarily detained for mental health treatment.]]></description>
+      <pubDate>Tue, 04 Aug 2026 07:10:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Abuse Calls from Women Spiked During World Cup. Officials Were Warned</title>
+      <link>https://thetyee.ca/News/2026/08/04/Abuse-Calls-Women-Spiked-World-Cup/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/08/04/Abuse-Calls-Women-Spiked-World-Cup/</guid>
+      <description><![CDATA[Vancouver’s Battered Women’s Support Services, which tracked the rise, says government didn't properly plan.]]></description>
+      <pubDate>Tue, 04 Aug 2026 07:20:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
