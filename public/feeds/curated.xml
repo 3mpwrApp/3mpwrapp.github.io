@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 04 Aug 2026 14:20:09 GMT</lastBuildDate>
-    <pubDate>Tue, 04 Aug 2026 14:20:09 GMT</pubDate>
+    <lastBuildDate>Wed, 05 Aug 2026 14:12:55 GMT</lastBuildDate>
+    <pubDate>Wed, 05 Aug 2026 14:12:55 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -23,28 +23,82 @@
       <title>The Disability Bulletin</title>
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
-      <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Tue, 04 Aug 2026 14:20:09 GMT</pubDate>
+      <description><![CDATA[The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.]]></description>
+      <pubDate>Wed, 05 Aug 2026 14:12:55 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>BC’s Involuntary Care Practices Are Unconstitutional, Court Rules</title>
-      <link>https://thetyee.ca/News/2026/08/04/BC-Involuntary-Care-Practices-Unconstitutional/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2026/08/04/BC-Involuntary-Care-Practices-Unconstitutional/</guid>
-      <description><![CDATA[The province is an outlier when it comes to how it treats people involuntarily detained for mental health treatment.]]></description>
-      <pubDate>Tue, 04 Aug 2026 07:10:00 GMT</pubDate>
+      <title>Can Canada and the US Still Row Together?</title>
+      <link>https://thetyee.ca/Analysis/2026/08/05/Can-Canada-US-Still-Row-Together/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Analysis/2026/08/05/Can-Canada-US-Still-Row-Together/</guid>
+      <description><![CDATA[For 75 years this dory race marked a friendly rivalry. Would the mood hold this year?]]></description>
+      <pubDate>Wed, 05 Aug 2026 07:20:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Abuse Calls from Women Spiked During World Cup. Officials Were Warned</title>
-      <link>https://thetyee.ca/News/2026/08/04/Abuse-Calls-Women-Spiked-World-Cup/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2026/08/04/Abuse-Calls-Women-Spiked-World-Cup/</guid>
-      <description><![CDATA[Vancouver’s Battered Women’s Support Services, which tracked the rise, says government didn't properly plan.]]></description>
-      <pubDate>Tue, 04 Aug 2026 07:20:00 GMT</pubDate>
+      <title>Manitoba Government Investing in Safe, Supportive Housing for Women and Gender-Diverse People in Winnipeg&apos;s North End</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74598</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74598</guid>
+      <pubDate>Mon, 27 Jul 2026 16:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Alberta’s Propaganda Push to Sell the Public on Data Centres</title>
+      <link>https://thetyee.ca/Opinion/2026/08/04/Alberta-Propaganda-Push-Data-Centres/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/08/04/Alberta-Propaganda-Push-Data-Centres/</guid>
+      <description><![CDATA[‘Don’t worry, folks. Just think of them as ‘digital refineries.’]]></description>
+      <pubDate>Tue, 04 Aug 2026 19:36:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Expands Flood Recovery Program to Include Additional Hard-Hit Communities</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74597</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74597</guid>
+      <pubDate>Mon, 27 Jul 2026 14:48:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Breaking down the cost of AI on energy and the environment</title>
+      <link>https://rabble.ca/technology/breaking-down-the-cost-of-ai-on-energy-and-the-environment/</link>
+      <guid isPermaLink="true">https://rabble.ca/technology/breaking-down-the-cost-of-ai-on-energy-and-the-environment/</guid>
+      <pubDate>Tue, 04 Aug 2026 20:41:30 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Basic Income and solving the polycrisis</title>
+      <link>https://rabble.ca/economy/basic-income-and-solving-the-polycrisis/</link>
+      <guid isPermaLink="true">https://rabble.ca/economy/basic-income-and-solving-the-polycrisis/</guid>
+      <pubDate>Mon, 27 Jul 2026 20:47:31 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Alberta government publishes pro data centre propaganda</title>
+      <link>https://rabble.ca/politics/canadian-politics/alberta-government-publishes-pro-data-centre-propaganda/</link>
+      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/alberta-government-publishes-pro-data-centre-propaganda/</guid>
+      <pubDate>Tue, 04 Aug 2026 20:35:15 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Funding Francophone Projects Under Manitoba-New Brunswick Bilateral Agreement</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74637</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74637</guid>
+      <pubDate>Tue, 04 Aug 2026 21:34:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
