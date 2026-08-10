@@ -1,0 +1,53 @@
+---
+layout: post
+title: "Daily News Curation - 2026-08-10"
+date: 2026-08-10
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-08-10
+
+Curated 7 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. For Canada’s ‘Major Projects,’ Consultation Is Theatre
+A summer info session on Alberta’s pipeline left a chill in the room for First Nations.
+[Source](https://thetyee.ca/Opinion/2026/08/10/Canada-Major-Projects-Consultation-Theatre/)
+**Score:** 15.40
+
+### 2. Manitoba Government Announces Significant Progress on Plan to End Chronic Homelessness
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74582)
+**Score:** 11.50
+
+### 3. Manitoba Government Provides $100,000 to ISKCON Manitoba for New Community Kitchen
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74698)
+**Score:** 10.50
+
+### 4. Province Announces Updated Eligibility for Free Hepatitis A Vaccine
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74583)
+**Score:** 8.50
+
+### 5. Manitoba Government Supports Upgrades to Ralph Cantafio Soccer Complex
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74580)
+**Score:** 9.90
+
+### 6. Manitoba Government Invests $3 Million in Playgrounds Provincewide
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74581)
+**Score:** 7.50
+
