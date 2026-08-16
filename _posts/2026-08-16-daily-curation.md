@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Daily News Curation - 2026-08-16"
+date: 2026-08-16
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-08-16
+
+Curated 6 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Labour Force Survey Shows Strong Manitoba Job Growth, Lowest Unemployment in Canada
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74717)
+**Score:** 16.00
+
+### 2. Manitoba Government Invests $42,000 to Support Rural Municipality of St. Clements Recreation Master Plan
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74618)
+**Score:** 9.90
+
+### 3. Manitoba Government Awards Construction Management Contract for New CancerCare Manitoba Facility
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74617)
+**Score:** 9.50
+
+### 4. Manitoba Government Provides $80,000 for Multi-Field Soccer Pitch in Northern Winnipeg
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74838)
+**Score:** 7.50
+
+### 5. Manitoba Government Expands Pharmacists' Scope of Practice to Improve Access to Birth Control
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74699)
+**Score:** 7.50
+
