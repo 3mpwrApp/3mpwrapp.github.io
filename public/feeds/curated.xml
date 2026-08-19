@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 18 Aug 2026 12:50:31 GMT</lastBuildDate>
-    <pubDate>Tue, 18 Aug 2026 12:50:31 GMT</pubDate>
+    <lastBuildDate>Wed, 19 Aug 2026 12:50:51 GMT</lastBuildDate>
+    <pubDate>Wed, 19 Aug 2026 12:50:51 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -23,73 +23,45 @@
       <title>The Disability Bulletin</title>
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
-      <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Tue, 18 Aug 2026 12:50:31 GMT</pubDate>
+      <description><![CDATA[The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.]]></description>
+      <pubDate>Wed, 19 Aug 2026 12:50:51 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Governments of Canada and Manitoba Announce New Child-Care Centre at the Saul and Claribel Simkin Centre</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74857</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74857</guid>
-      <pubDate>Mon, 17 Aug 2026 15:00:00 GMT</pubDate>
+      <title>Manitoba Government Adds 4,725 Net New Health-Care Workers Since 2023</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74881</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74881</guid>
+      <pubDate>Tue, 18 Aug 2026 19:30:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Provides $100,000 to ISKCON Manitoba for New Community Kitchen</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74698</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74698</guid>
-      <pubDate>Sun, 09 Aug 2026 23:00:00 GMT</pubDate>
+      <title>Manitoba Government Invests $97,000 to Expand Northern Healthy Food Initiative</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74878</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74878</guid>
+      <pubDate>Tue, 18 Aug 2026 16:18:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Province Announces Updated Eligibility for Free Hepatitis A Vaccine</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74583</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74583</guid>
-      <pubDate>Fri, 24 Jul 2026 18:11:00 GMT</pubDate>
+      <title>Manitoba Government Invests $165,550 Toward Stony Mountain Community Centre Roof Restoration</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74737</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74737</guid>
+      <pubDate>Mon, 10 Aug 2026 19:33:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Supports Upgrades to Ralph Cantafio Soccer Complex</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74580</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74580</guid>
-      <pubDate>Fri, 24 Jul 2026 17:00:00 GMT</pubDate>
+      <title>Manitoba Government Invests $286,000 for Recreation and Active Living Projects in Seven Northern Affairs Communities</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74877</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74877</guid>
+      <pubDate>Tue, 18 Aug 2026 16:12:00 GMT</pubDate>
       <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Invests $3 Million in Playgrounds Provincewide</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74581</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74581</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Preston Manning, 84, turns up with yet another ‘assembly’ to polish Alberta’s tarnished separation referendum</title>
-      <link>https://rabble.ca/politics/canadian-politics/preston-manning-84-turns-up-with-yet-another-assembly-to-polish-albertas-tarnished-separation-referendum/</link>
-      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/preston-manning-84-turns-up-with-yet-another-assembly-to-polish-albertas-tarnished-separation-referendum/</guid>
-      <pubDate>Mon, 17 Aug 2026 20:03:26 GMT</pubDate>
-      <category>High Priority</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Preston Manning Recruits Gordon Campbell to Boost Danielle Smith</title>
-      <link>https://thetyee.ca/Opinion/2026/08/18/Preston-Manning-Recruits-Gordon-Campbell/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/08/18/Preston-Manning-Recruits-Gordon-Campbell/</guid>
-      <description><![CDATA[The former BC premier will buff the Alberta premier’s tarnished separation referendum by co-hosting a confab.]]></description>
-      <pubDate>Tue, 18 Aug 2026 07:30:00 GMT</pubDate>
-      <category>High Priority</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
