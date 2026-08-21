@@ -1,0 +1,68 @@
+---
+layout: post
+title: "Daily News Curation - 2026-08-21"
+date: 2026-08-21
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-08-21
+
+Curated 10 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Solidarity in action:  The Canada line workers story
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/books/solidarity-in-action-the-canada-line-workers-story/)
+**Score:** 14.50
+
+### 2. Manitoba Government Investing in Safe, Supportive Housing for Women and Gender-Diverse People in Winnipeg's North End
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74598)
+**Score:** 11.90
+
+### 3. Manitoba Government Invests $100,000 in Norberry-Glenlee Community Centre Playground Upgrades
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74897)
+**Score:** 10.50
+
+### 4. Here’s the Latest Attack on BC Government Accountability
+After almost a century, a directory of public sector staff is stamped ‘secret.’
+[Source](https://thetyee.ca/Opinion/2026/08/21/Latest-Attack-BC-Government-Accountability/)
+**Score:** 7.00
+
+### 5. Manitoba Government Funding Francophone Projects Under Manitoba-New Brunswick Bilateral Agreement
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74637)
+**Score:** 8.50
+
+### 6. Manitoba Government Announces Potential Corridor for Winnipeg Rail Network Relocation
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=74777)
+**Score:** 7.50
+
+### 7. Lights! Camera! Action! Roll the Data Centre Sell Job!
+Notes on Premier Smith’s video attempt to reassure Albertans that AI tycoons are everybody’s friends.
+[Source](https://thetyee.ca/Opinion/2026/08/21/Data-Centre-Sell-Job/)
+**Score:** 5.50
+
+### 8. The Tyee Podcast: We Have Got to Stop Talking About Alberta Separatism
+As the province slouches towards a referendum, Nate Pike of ‘The Breakdown’ says it’s time to turn off the firehose of BS.
+[Source](https://thetyee.ca/Tyeenews/2026/08/21/Tyee-Podcast-Alberta-Separatism/)
+**Score:** 4.50
+
+### 9. After the Fire Comes the Rotting Meat. The Province No Longer Helps
+BC stopped paying to dispose of freezers after long-term evacuations. That brings health concerns.
+[Source](https://thetyee.ca/News/2026/08/17/After-Fire-Comes-Rotting-Meat/)
+**Score:** 3.50
+

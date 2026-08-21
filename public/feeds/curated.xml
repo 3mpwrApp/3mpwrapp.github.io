@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Thu, 20 Aug 2026 12:53:10 GMT</lastBuildDate>
-    <pubDate>Thu, 20 Aug 2026 12:53:10 GMT</pubDate>
+    <lastBuildDate>Fri, 21 Aug 2026 12:51:46 GMT</lastBuildDate>
+    <pubDate>Fri, 21 Aug 2026 12:51:46 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,46 +24,93 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Thu, 20 Aug 2026 12:53:10 GMT</pubDate>
+      <pubDate>Fri, 21 Aug 2026 12:51:46 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Danielle Smith&apos;s red tape will make it easier for Albertans to lose their health care</title>
-      <link>https://rabble.ca/politics/canadian-politics/danielle-smiths-red-tape-will-make-it-easier-for-albertans-to-lose-their-health-care/</link>
-      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/danielle-smiths-red-tape-will-make-it-easier-for-albertans-to-lose-their-health-care/</guid>
-      <pubDate>Wed, 19 Aug 2026 20:25:18 GMT</pubDate>
+      <title>Solidarity in action:  The Canada line workers story</title>
+      <link>https://rabble.ca/books/solidarity-in-action-the-canada-line-workers-story/</link>
+      <guid isPermaLink="true">https://rabble.ca/books/solidarity-in-action-the-canada-line-workers-story/</guid>
+      <pubDate>Thu, 20 Aug 2026 15:26:16 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Alberta’s Stealth Plan to Bring in Two-Tier Health Care</title>
-      <link>https://thetyee.ca/Opinion/2026/08/19/Alberta-Allows-Private-Pay-Testing-Two-Tier-Health-Care/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/08/19/Alberta-Allows-Private-Pay-Testing-Two-Tier-Health-Care/</guid>
-      <description><![CDATA[The province now allows private-pay testing that lets the wealthy jump the line.]]></description>
-      <pubDate>Wed, 19 Aug 2026 19:46:00 GMT</pubDate>
+      <title>Manitoba Government Investing in Safe, Supportive Housing for Women and Gender-Diverse People in Winnipeg&apos;s North End</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74598</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74598</guid>
+      <pubDate>Mon, 27 Jul 2026 16:30:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government and City of Winnipeg Invest $1.4 Million to Support Downtown Businesses</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74757</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74757</guid>
-      <pubDate>Tue, 11 Aug 2026 16:00:00 GMT</pubDate>
+      <title>Manitoba Government Invests $100,000 in Norberry-Glenlee Community Centre Playground Upgrades</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74897</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74897</guid>
+      <pubDate>Thu, 20 Aug 2026 16:00:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>The UCP’s Phoney Claim About Alberta’s ‘Distinct Legal Tradition’</title>
-      <link>https://thetyee.ca/Opinion/2026/08/20/UCP-Phoney-Claim-Alberta-Distinct-Legal-Tradition/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/08/20/UCP-Phoney-Claim-Alberta-Distinct-Legal-Tradition/</guid>
-      <description><![CDATA[Danielle Smith’s referendum questions are based on false comparisons with Quebec.]]></description>
-      <pubDate>Thu, 20 Aug 2026 07:10:00 GMT</pubDate>
+      <title>Here’s the Latest Attack on BC Government Accountability</title>
+      <link>https://thetyee.ca/Opinion/2026/08/21/Latest-Attack-BC-Government-Accountability/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/08/21/Latest-Attack-BC-Government-Accountability/</guid>
+      <description><![CDATA[After almost a century, a directory of public sector staff is stamped ‘secret.’]]></description>
+      <pubDate>Fri, 21 Aug 2026 07:30:00 GMT</pubDate>
       <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Funding Francophone Projects Under Manitoba-New Brunswick Bilateral Agreement</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74637</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74637</guid>
+      <pubDate>Tue, 04 Aug 2026 21:34:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Announces Potential Corridor for Winnipeg Rail Network Relocation</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74777</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74777</guid>
+      <pubDate>Wed, 12 Aug 2026 19:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Lights! Camera! Action! Roll the Data Centre Sell Job!</title>
+      <link>https://thetyee.ca/Opinion/2026/08/21/Data-Centre-Sell-Job/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/08/21/Data-Centre-Sell-Job/</guid>
+      <description><![CDATA[Notes on Premier Smith’s video attempt to reassure Albertans that AI tycoons are everybody’s friends.]]></description>
+      <pubDate>Fri, 21 Aug 2026 07:40:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>The Tyee Podcast: We Have Got to Stop Talking About Alberta Separatism</title>
+      <link>https://thetyee.ca/Tyeenews/2026/08/21/Tyee-Podcast-Alberta-Separatism/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Tyeenews/2026/08/21/Tyee-Podcast-Alberta-Separatism/</guid>
+      <description><![CDATA[As the province slouches towards a referendum, Nate Pike of ‘The Breakdown’ says it’s time to turn off the firehose of BS.]]></description>
+      <pubDate>Fri, 21 Aug 2026 07:10:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>After the Fire Comes the Rotting Meat. The Province No Longer Helps</title>
+      <link>https://thetyee.ca/News/2026/08/17/After-Fire-Comes-Rotting-Meat/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/08/17/After-Fire-Comes-Rotting-Meat/</guid>
+      <description><![CDATA[BC stopped paying to dispose of freezers after long-term evacuations. That brings health concerns.]]></description>
+      <pubDate>Mon, 17 Aug 2026 07:30:00 GMT</pubDate>
+      <category>High Priority</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
