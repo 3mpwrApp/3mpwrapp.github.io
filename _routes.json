@@ -1,7 +1,28 @@
 {
   "version": 1,
   "include": [
-    "/gdrive-callback"
+    "/gdrive-callback",
+    "/",
+    "/about/",
+    "/accessibility/",
+    "/accessibility-settings/",
+    "/accessibility-walkthrough/",
+    "/app-tour/",
+    "/app-waitlist/",
+    "/contact/",
+    "/crisis-resources/",
+    "/feedback/",
+    "/help-system/",
+    "/privacy/",
+    "/privacy-policy/",
+    "/research/",
+    "/roadmap/",
+    "/security/",
+    "/support/",
+    "/user-guide/",
+    "/whats-new/",
+    "/whats-new/feed.xml",
+    "/fr/"
   ],
   "exclude": []
 }
