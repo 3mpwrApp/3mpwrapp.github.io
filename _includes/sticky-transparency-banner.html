@@ -4,7 +4,8 @@
     <span class="sticky-emoji">🚧</span>
     <span class="sticky-text">
       <strong>We're building in public!</strong>
-      <span id="sticky-update-count">Loading...</span> updates this week
+      <noscript>Follow our progress</noscript>
+      <span id="sticky-update-count-wrap" style="display:none"><span id="sticky-update-count">Loading...</span> updates this week</span>
     </span>
     <a href="{{ '/whats-new/' | relative_url }}" class="sticky-link">What's New →</a>
     <button type="button" class="sticky-dismiss" aria-label="Dismiss banner" onclick="dismissStickyBanner()">×</button>
@@ -141,6 +142,8 @@
       const weeklyCount = data.entries.filter(e => new Date(e.date) >= sevenDaysAgo).length;
       
       document.getElementById('sticky-update-count').textContent = `${weeklyCount}`;
+      const w = document.getElementById('sticky-update-count-wrap');
+      if (w) w.style.display = 'inline';
     } else {
       document.getElementById('sticky-update-count').textContent = 'several';
     }

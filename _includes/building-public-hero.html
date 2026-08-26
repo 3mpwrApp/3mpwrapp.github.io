@@ -5,8 +5,9 @@
     <div class="building-public-text">
       <h2 class="building-public-title"> Building in Public - See Every Change</h2>
       <p class="building-public-subtitle">
-        <strong id="hero-total-updates">Loading...</strong> updates since October 2025. 
-        <strong id="hero-weekly-updates">Loading...</strong> improvements this week.
+        <strong id="hero-total-updates">4,600+</strong> updates since October 2025.
+        <noscript><strong>Many</strong> improvements this week.</noscript>
+        <span id="hero-weekly-updates-wrap" style="display:none"><strong id="hero-weekly-updates">Loading...</strong> improvements this week.</span>
         Every commit, every fix, every feature—shared openly with our community.
       </p>
     </div>
@@ -189,6 +190,8 @@
       
       document.getElementById('hero-total-updates').textContent = `${totalCount.toLocaleString()}`;
       document.getElementById('hero-weekly-updates').textContent = `${weeklyCount}`;
+      const w = document.getElementById('hero-weekly-updates-wrap');
+      if (w) w.style.display = 'inline';
     } else {
       document.getElementById('hero-total-updates').textContent = '4,600+';
       document.getElementById('hero-weekly-updates').textContent = 'Many';

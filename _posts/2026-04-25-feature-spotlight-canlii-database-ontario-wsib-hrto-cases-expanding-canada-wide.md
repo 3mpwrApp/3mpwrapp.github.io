@@ -67,5 +67,5 @@ CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) is designed t
 - AA aaTM Privacy-first (local-first architecture)
 - AA aA AA aA Canadian-focused (all provinces/territories)
 - AA AA Culturally inclusive (Indigenous languages supported) --- ## Questions or Feedback? **?? Email:** empowrapp08162025@gmail.com
-**?? Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)
-**?? Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)
+**🐘 Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)
+**☁️ Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)

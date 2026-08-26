@@ -348,13 +348,13 @@ personalized: true
 <!-- Learn More Section -->
 <section style="margin-bottom: 4rem; padding: 2.5rem; background: linear-gradient(135deg, rgba(61, 78, 170, 0.08) 0%, rgba(61, 78, 170, 0.03) 100%); border-radius: 12px; border: 2px solid rgba(61, 78, 170, 0.15);">
   <h2 style="text-align: center; font-size: 1.9rem; margin-bottom: 2rem; color: var(--text-color);">
-    <span aria-hidden="true">??</span> Learn More About 3mpwrApp
+    <span aria-hidden="true">→</span> Learn More About 3mpwrApp
   </h2>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto;">
     
     <div style="padding: 1.5rem; background: var(--card-bg, white); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid var(--accent-blue, #3d4eaa);">
       <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--accent-blue, #3d4eaa);">
-        <span aria-hidden="true">??</span> Documentation
+        <span aria-hidden="true">→</span> Documentation
       </h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
         <li style="margin: 0.5rem 0;"><a href="/user-guide/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">User Guide</a></li>
@@ -366,7 +366,7 @@ personalized: true
     
     <div style="padding: 1.5rem; background: var(--card-bg, white); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid var(--accent-green, #10b981);">
       <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--accent-green, #10b981);">
-        <span aria-hidden="true">???</span> Privacy & Security
+        <span aria-hidden="true">•</span> Privacy & Security
       </h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
         <li style="margin: 0.5rem 0;"><a href="/privacy/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">Privacy Policy</a></li>
@@ -378,7 +378,7 @@ personalized: true
     
     <div style="padding: 1.5rem; background: var(--card-bg, white); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid var(--accent-orange, #f59e0b);">
       <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--accent-orange, #f59e0b);">
-        <span aria-hidden="true">??</span> Community & Support
+        <span aria-hidden="true">→</span> Community & Support
       </h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
         <li style="margin: 0.5rem 0;"><a href="/community/" style="color: var(--link-color, #003d7a); text-decoration: none; font-weight: 500;">Community Hub</a></li>
@@ -390,7 +390,7 @@ personalized: true
     
     <div style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #dc2626;">
       <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: #dc2626;">
-        <span aria-hidden="true">??</span> Research & Data
+        <span aria-hidden="true">→</span> Research & Data
       </h3>
       <ul style="list-style: none; padding: 0; margin: 0;">
         <li style="margin: 0.5rem 0;"><a href="/research.html" style="color: #003d7a; text-decoration: none; font-weight: 500;">Research Tools</a></li>
@@ -408,11 +408,11 @@ personalized: true
   <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--text-color);">Stay Connected</h2>
   <p style="margin-bottom: 1.5rem; opacity: 0.9;">Follow us on social media for daily updates, community stories, and transparency reports</p>
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
-    <a href="https://discord.gg/P2qQyjxV" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #5865F2; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">?? Discord</a>
-    <a href="https://x.com/3mpwrApp0816" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #000000; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">?? X/Twitter</a>
-    <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #1877F2; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">?? Facebook</a>
-    <a href="https://mastodon.social/@3mpwrapp" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #6364FF; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">?? Mastodon</a>
-    <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #1285FE; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">?? Bluesky</a>
+    <a href="https://discord.gg/P2qQyjxV" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #5865F2; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">💬 Discord</a>
+    <a href="https://x.com/3mpwrApp0816" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #000000; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">🐦 X/Twitter</a>
+    <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #1877F2; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">→ Facebook</a>
+    <a href="https://mastodon.social/@3mpwrapp" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #6364FF; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">🐘 Mastodon</a>
+    <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #1285FE; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">☁️ Bluesky</a>
   </div>
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Email: <a href="mailto:empowrapp08162025@gmail.com" style="color: #003d7a;">empowrapp08162025@gmail.com</a></p>
 </section>
@@ -487,7 +487,7 @@ async function loadSimpleEvents() {
     const upcomingEvents = events
       .filter(e => {
         const eventDate = new Date(e.date);
-        return eventDate >= now && eventDate <= sevenDaysFromNow;
+        return eventDate >= now && eventDate <= sevenDaysFromNow && !String(e.id||'').startsWith('health-');
       })
       .sort((a, b) => new Date(a.date) - new Date(b.date))
       .slice(0, 5);
@@ -505,7 +505,7 @@ async function loadSimpleEvents() {
       return `
         <div class="homepage-event-item">
           <div class="event-title">${e.title}</div>
-          <div class="event-meta">?? ${dateStr} at ${timeStr}</div>
+          <div class="event-meta">→ ${dateStr} at ${timeStr}</div>
         </div>
       `;
     }).join('');

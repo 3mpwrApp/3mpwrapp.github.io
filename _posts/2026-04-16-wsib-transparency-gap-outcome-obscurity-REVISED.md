@@ -355,10 +355,10 @@ Worker wins: 63.1%   | VARIED: 17 (2.6%)
 **Success Rates by Injury Type (What We CANNOT Calculate Due to 67.5% Obscurity):**
 ```
 Injury Type     | Appeals | Allowed | Success Rate
-Back injury     | ???     | ???     | UNKNOWN (obscured)
-Chronic pain    | ???     | ???     | UNKNOWN
-Mental health   | ???     | ???     | UNKNOWN
-RSI/Carpal      | ???     | ???     | UNKNOWN
+Back injury     | •     | •     | UNKNOWN (obscured)
+Chronic pain    | •     | •     | UNKNOWN
+Mental health   | •     | •     | UNKNOWN
+RSI/Carpal      | •     | •     | UNKNOWN
 ```
 
 **We found 328 disability-related cases (16.4% of 2,000) but cannot calculate disability-specific victory rates due to outcome obscurity.**

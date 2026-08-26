@@ -670,7 +670,7 @@ Every morning:
 
 **Example:**
 ```
-?? Ontario Disability Math (2025)
+→ Ontario Disability Math (2025)
 
 ODSP single person: $1,368/month
 Average 1-BR rent: $2,200+/month
@@ -727,7 +727,7 @@ ONSBT appeal guide: https://3mpwrapp.ca/knowledge-base/onsbt
 
 **Example:**
 ```
-??? ONWSIB Internal Review Snapshot (Ontario)
+• ONWSIB Internal Review Snapshot (Ontario)
 
 DATASET: 463 decisions (2020-2026)
 PUBLIC RECORD: 95.7% unresolved
@@ -735,10 +735,10 @@ LOCAL DEEP-DIVE: 12 high-confidence reads
 MANUAL REVIEW: 6 more files queued
 
 WHAT TO SAVE NOW:
-?? Written reasons
-?? Medical reports and timelines
-?? Employer and WSIB correspondence
-?? Deadline notes for every step
+→ Written reasons
+→ Medical reports and timelines
+→ Employer and WSIB correspondence
+→ Deadline notes for every step
 
 Method note: https://3mpwrapp.ca/docs/ONWSIB-DEEP-DIVE-METHODOLOGY-2026-05-08.html
 
