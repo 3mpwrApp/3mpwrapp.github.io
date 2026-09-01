@@ -63,7 +63,7 @@
     "linkinator": "^7.3.0",
     "pa11y-ci": "^4.1.1",
     "pdf-parse": "^1.1.1",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.25",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.1.1",
     "puppeteer": "^23.11.1",
