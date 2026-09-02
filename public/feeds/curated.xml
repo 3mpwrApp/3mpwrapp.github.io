@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 01 Sep 2026 16:15:15 GMT</lastBuildDate>
-    <pubDate>Tue, 01 Sep 2026 16:15:15 GMT</pubDate>
+    <lastBuildDate>Wed, 02 Sep 2026 16:10:51 GMT</lastBuildDate>
+    <pubDate>Wed, 02 Sep 2026 16:10:51 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -23,35 +23,64 @@
       <title>The Disability Bulletin</title>
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
-      <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Tue, 01 Sep 2026 16:15:15 GMT</pubDate>
+      <description><![CDATA[The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.]]></description>
+      <pubDate>Wed, 02 Sep 2026 16:10:51 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Announces Emergency Department in Dauphin to Reopen on Labour Day</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=75079</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=75079</guid>
-      <pubDate>Mon, 31 Aug 2026 19:46:00 GMT</pubDate>
+      <title>New Meta Data Centre Could Cost Albertans $460 a Year</title>
+      <link>https://thetyee.ca/Opinion/2026/09/02/New-Meta-Data-Centre-Cost-Albertans/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/09/02/New-Meta-Data-Centre-Cost-Albertans/</guid>
+      <description><![CDATA[A Pembina Institute study found the megaproject will increase electricity costs for other users.]]></description>
+      <pubDate>Wed, 02 Sep 2026 07:40:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Provides $80,000 for Multi-Field Soccer Pitch in Northern Winnipeg</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=74838</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74838</guid>
-      <pubDate>Sat, 15 Aug 2026 15:00:00 GMT</pubDate>
+      <title>Manitoba Government Makes Child Care Free for 4,100 Children</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=75117</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=75117</guid>
+      <pubDate>Wed, 02 Sep 2026 15:30:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Pembina Institute says Alberta data centre could add up to $460 to electricity bills</title>
-      <link>https://rabble.ca/politics/canadian-politics/pembina-institute-says-alberta-data-centre-could-add-up-to-460-to-electricity-bills/</link>
-      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/pembina-institute-says-alberta-data-centre-could-add-up-to-460-to-electricity-bills/</guid>
-      <pubDate>Mon, 31 Aug 2026 20:07:53 GMT</pubDate>
+      <title>Manitoba Government Provides Manigotagan $100,000 Grant to Renovate Community Hall</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74921</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74921</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>OneBC’s Dallas Brodie Sues Fired Staffer over Online Posts</title>
+      <link>https://thetyee.ca/News/2026/09/02/OneBC-Dallas-Brodie-Sues-Fired-Staffer/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/09/02/OneBC-Dallas-Brodie-Sues-Fired-Staffer/</guid>
+      <description><![CDATA[The lawsuit alleges Othman Mekhloufi’s comments defamed the party leader.]]></description>
+      <pubDate>Wed, 02 Sep 2026 07:20:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Convenes U.S. Trade Council Following Latest Tariffs</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74957</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74957</guid>
+      <pubDate>Mon, 24 Aug 2026 20:57:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Invests $100,000 in Lavallee School Playground Project</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=74937</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=74937</guid>
+      <pubDate>Mon, 24 Aug 2026 16:13:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
